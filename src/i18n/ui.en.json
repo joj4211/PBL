@@ -1,0 +1,164 @@
+{
+  "phases": {
+    "intro": {
+      "label": "Start",
+      "shortLabel": "Start"
+    },
+    "preTest": {
+      "label": "Pre-Test",
+      "shortLabel": "Pre"
+    },
+    "chiefComplaint": {
+      "label": "History",
+      "shortLabel": "Hx"
+    },
+    "physicalExam": {
+      "label": "Physical Exam",
+      "shortLabel": "PE"
+    },
+    "workup": {
+      "label": "Workup",
+      "shortLabel": "Work"
+    },
+    "management": {
+      "label": "Management",
+      "shortLabel": "Mgmt"
+    },
+    "interactive": {
+      "label": "Interactive",
+      "shortLabel": "Q&A"
+    },
+    "postTest": {
+      "label": "Post-Test",
+      "shortLabel": "Post"
+    },
+    "analytics": {
+      "label": "Analytics",
+      "shortLabel": "Stats"
+    }
+  },
+  "common": {
+    "confirm": "Confirm Answer",
+    "next": "Next",
+    "revealAnswer": "Reveal correct answer",
+    "viewAnswer": "View answer",
+    "viewResult": "View result",
+    "stage": "Stage"
+  },
+  "intro": {
+    "badge": "Medical PBL Interactive Learning",
+    "beginCase": "Begin Case",
+    "quietSpace": "Find a quiet space and allow yourself enough time to read carefully.",
+    "features": [
+      {
+        "label": "Chief Complaint",
+        "desc": "History taking & reasoning"
+      },
+      {
+        "label": "Physical Exam",
+        "desc": "HINTS exam step-by-step"
+      },
+      {
+        "label": "Vestibular Workup",
+        "desc": "PTA, Caloric, VEMP"
+      },
+      {
+        "label": "Management",
+        "desc": "Clinical decision tree"
+      }
+    ]
+  },
+  "preTest": {
+    "title": "Pre-Test Assessment",
+    "questionLabel": "Question",
+    "correct": "✓ Correct",
+    "incorrect": "✗ Incorrect — correct answer: ",
+    "viewResult": "View Result",
+    "complete": "Pre-Test Complete",
+    "baselineResult": "Here is your baseline result",
+    "dontWorry": "Don't worry about the score — this is just your starting point.",
+    "enterCase": "Enter Clinical Case",
+    "correctLabel": "Correct",
+    "scoreLabel": "Score",
+    "totalLabel": "Total"
+  },
+  "chiefComplaint": {
+    "sectionLabel": "Chief Complaint & Clinical History",
+    "title": "Chief Complaint & Clinical History",
+    "subtitle": "Read the case carefully, then explore the history-taking questions below.",
+    "readyToProceed": "Ready to proceed to the physical examination?",
+    "proceed": "Proceed to Physical Exam"
+  },
+  "physicalExam": {
+    "subtitle": "Work through each component of the HINTS exam systematically.",
+    "revealAnswer": "Reveal correct answer",
+    "clinicalDecision": "Clinical Decision",
+    "answer": "Answer",
+    "proceed": "Proceed to Vestibular Workup"
+  },
+  "workup": {
+    "subtitle": "Expand each investigation to interpret the data.",
+    "observationLabel": "Observation",
+    "taskPrefix": "Task: ",
+    "inputPlaceholder": "Enter your calculation or reasoning…",
+    "viewAnswer": "View answer",
+    "viewResult": "View result",
+    "thinkingTask": "Thinking Task",
+    "colorCodeHint": "Apply the color code above to the image and form your interpretation.",
+    "proceed": "Proceed to Management"
+  },
+  "management": {
+    "subtitle": "Select the best treatment option for each stage.",
+    "stageLabel": "Stage",
+    "proceed": "View Key Learning Pearls"
+  },
+  "interactive": {
+    "title": "Interactive Q&A",
+    "progressLabel": "Progress",
+    "viewSummary": "View Summary",
+    "complete": "Interactive Session Complete",
+    "completeSubtitle": "You've answered all interactive questions. Proceed to the post-test.",
+    "correctLabel": "Correct",
+    "totalLabel": "Total",
+    "feedbackNote": "Feedback has been recorded.\nThe post-test will assess your knowledge growth after this case.",
+    "proceed": "Proceed to Post-Test"
+  },
+  "postTest": {
+    "title": "Post-Test Assessment",
+    "viewResult": "View Post-Test Result",
+    "complete": "Post-Test Complete",
+    "congratulations": "Congratulations on completing all assessments for this case!",
+    "preLabel": "Pre-Test",
+    "postLabel": "Post-Test",
+    "proceed": "View Learning Report"
+  },
+  "analytics": {
+    "title": "Learning Report",
+    "subtitle": "Here is your overall performance after completing this case",
+    "chartTitle": "Score Comparison by Phase",
+    "insightTitle": "Learning Insight",
+    "learningPointsTitle": "Core Learning Points",
+    "restart": "Restart Case",
+    "preLabel": "Pre-Test",
+    "interactiveLabel": "Interactive",
+    "postLabel": "Post-Test",
+    "insights": {
+      "excellent": "Your knowledge improved by {delta}%! The case study had a significant effect — keep up this learning momentum.",
+      "good": "Post-test improved by {delta}%, showing concrete gains from the case. Deeper review can push the score higher.",
+      "steady": "Performance was steady (+{delta}%). You had strong baseline knowledge — consider a more advanced case next.",
+      "reflect": "The case gave you new perspectives and clinical frameworks. Mastering clinical reasoning takes time — review the key learning points."
+    }
+  },
+  "questionCard": {
+    "questionLabel": "Question",
+    "correct": "✓ Correct",
+    "close": "→ Close",
+    "review": "● Review",
+    "explanationLabel": "Explanation",
+    "feedbackExcellent": "Excellent clinical reasoning!",
+    "feedbackGood": "Good direction — keep developing",
+    "feedbackHint": "Hint",
+    "submitButton": "Submit Answer",
+    "placeholder": "Enter your thoughts here…"
+  }
+}

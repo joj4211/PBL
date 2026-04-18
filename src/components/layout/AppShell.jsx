@@ -1,4 +1,17 @@
-export default function AppShell({ children }) {
+import { useLanguage } from '../../contexts/LanguageContext';
+
+export default function AppShell({
+  children,
+  showCaseControls = false,
+  showBackControl = true,
+  onBack,
+  onExit,
+}) {
+  const { lang, setLang } = useLanguage();
+  const navLabels = lang === 'zh'
+    ? { back: '上一頁', exit: '退出' }
+    : { back: 'Back', exit: 'Exit' };
+
   return (
     <div
       className="min-h-screen relative overflow-hidden"
@@ -23,6 +36,36 @@ export default function AppShell({ children }) {
           animationDelay: '4s',
         }}
       />
+
+      {/* Case navigation */}
+      {showCaseControls && (
+        <div className="absolute top-4 left-4 z-20 flex items-center gap-2">
+          {showBackControl && (
+            <button
+              onClick={onBack}
+              className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200"
+            >
+              {navLabels.back}
+            </button>
+          )}
+          <button
+            onClick={onExit}
+            className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200"
+          >
+            {navLabels.exit}
+          </button>
+        </div>
+      )}
+
+      {/* Language toggle */}
+      <div className="absolute top-4 right-4 z-20">
+        <button
+          onClick={() => setLang(lang === 'zh' ? 'en' : 'zh')}
+          className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200"
+        >
+          {lang === 'zh' ? 'EN' : '中文'}
+        </button>
+      </div>
 
       <div className="relative z-10 min-h-screen flex flex-col">
         {children}

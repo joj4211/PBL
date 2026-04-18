@@ -1,52 +1,77 @@
 import { useState, useCallback } from 'react';
-import { PHASES, getNextPhase } from '../logic/stateMachine';
+import { PHASES, getNextPhase, getPrevPhase } from '../logic/stateMachine';
 import { scoreMultipleChoice, scoreTextInput } from '../logic/scoring';
-import { cases, defaultCaseId } from '../config/casesConfig';
+import { getCase, defaultCaseId } from '../cases/index';
 
-export const useCase = (caseId = defaultCaseId) => {
-  const caseData = cases.find((c) => c.id === caseId) ?? cases[0];
+export const useCase = (caseId = defaultCaseId, lang = 'zh') => {
+  const caseData = getCase(caseId, lang);
 
   const [currentPhase, setCurrentPhase] = useState(PHASES.INTRO);
-  const [answers, setAnswers] = useState({
-    preTest: {},
-    interactive: {},
-    postTest: {},
-  });
+  const [preTestAnswer, setPreTestAnswer] = useState(null);
+  const [answersByPhase, setAnswersByPhase] = useState({});
 
   const advancePhase = useCallback(() => {
     setCurrentPhase((prev) => getNextPhase(prev) ?? prev);
   }, []);
 
-  const submitAnswer = useCallback((phase, question, value) => {
-    let result;
-    if (question.type === 'multiple-choice') {
-      result = scoreMultipleChoice(question, value);
-    } else if (question.type === 'text-input') {
-      result = scoreTextInput(question, value);
-    }
+  const goBackPhase = useCallback(() => {
+    setCurrentPhase((prev) => getPrevPhase(prev) ?? prev);
+  }, []);
 
-    if (result) {
-      setAnswers((prev) => ({
-        ...prev,
-        [phase]: { ...prev[phase], [question.id]: result },
-      }));
+  const exitToIntro = useCallback(() => {
+    setCurrentPhase(PHASES.INTRO);
+    setPreTestAnswer(null);
+    setAnswersByPhase({});
+  }, []);
+
+  const submitAnswer = useCallback((phaseId, question, value) => {
+    const result =
+      question.type === 'text-input'
+        ? scoreTextInput(question, value)
+        : scoreMultipleChoice(question, value);
+
+    setAnswersByPhase((prev) => ({
+      ...prev,
+      [phaseId]: {
+        ...(prev[phaseId] ?? {}),
+        [question.id]: result,
+      },
+    }));
+
+    if (phaseId === 'preTest') {
+      setPreTestAnswer(result);
     }
 
     return result;
   }, []);
 
-  const getPhaseAnswers = useCallback(
-    (phase) => answers[phase] ?? {},
-    [answers]
+  const submitPreTest = useCallback(
+    (question, selectedId) => submitAnswer('preTest', question, selectedId),
+    [submitAnswer]
   );
+
+  const getPhaseAnswers = useCallback(
+    (phaseId) => answersByPhase[phaseId] ?? {},
+    [answersByPhase]
+  );
+
+  const restart = useCallback(() => {
+    setCurrentPhase(PHASES.INTRO);
+    setPreTestAnswer(null);
+    setAnswersByPhase({});
+  }, []);
 
   return {
     caseData,
     currentPhase,
-    answers,
+    preTestAnswer,
     advancePhase,
+    goBackPhase,
+    exitToIntro,
     submitAnswer,
+    submitPreTest,
     getPhaseAnswers,
     setCurrentPhase,
+    restart,
   };
 };

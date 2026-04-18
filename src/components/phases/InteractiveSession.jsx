@@ -5,17 +5,23 @@ import PhaseTransition from '../ui/PhaseTransition';
 import ProgressIndicator from '../ui/ProgressIndicator';
 import QuestionCard from '../ui/QuestionCard';
 import Button from '../ui/Button';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 export default function InteractiveSession({
   caseData,
   currentPhase,
   submitAnswer,
+  getPhaseAnswers,
   advancePhase,
 }) {
+  const { ui } = useLanguage();
   const questions = caseData.interactive.questions;
+  const savedResults = getPhaseAnswers('interactive');
   const [qIndex, setQIndex] = useState(0);
-  const [results, setResults] = useState({});
-  const [showSummary, setShowSummary] = useState(false);
+  const [results, setResults] = useState(savedResults);
+  const [showSummary, setShowSummary] = useState(
+    () => Object.keys(savedResults).length === questions.length
+  );
 
   const currentQuestion = questions[qIndex];
   const isLastQuestion = qIndex === questions.length - 1;
@@ -51,7 +57,7 @@ export default function InteractiveSession({
             <MessageSquare className="w-6 h-6 text-warm-500" />
           </div>
           <div>
-            <h2 className="text-2xl font-bold text-warm-900 font-serif">互動問答</h2>
+            <h2 className="text-2xl font-bold text-warm-900 font-serif">{ui.interactive.title}</h2>
             <p className="text-warm-500 text-sm mt-1 leading-relaxed whitespace-pre-line">
               {caseData.interactive.instructions}
             </p>
@@ -61,7 +67,7 @@ export default function InteractiveSession({
         {/* Session progress bar */}
         <div className="mb-6">
           <div className="flex justify-between text-xs text-warm-400 mb-1.5">
-            <span>問答進度</span>
+            <span>{ui.interactive.progressLabel}</span>
             <span>{answeredCount} / {questions.length}</span>
           </div>
           <div className="h-1.5 bg-warm-100 rounded-full overflow-hidden">
@@ -100,7 +106,7 @@ export default function InteractiveSession({
                   className="mt-4 flex justify-end"
                 >
                   <Button onClick={handleNext} variant="primary">
-                    {isLastQuestion ? '查看問答總結' : '下一題'}
+                    {isLastQuestion ? ui.interactive.viewSummary : ui.common.next}
                     <ChevronRight className="inline ml-1 w-4 h-4" />
                   </Button>
                 </motion.div>
@@ -118,31 +124,28 @@ export default function InteractiveSession({
                 <CheckCircle className="w-8 h-8 text-sage-500" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-warm-900 font-serif">問答完成</h3>
-                <p className="text-warm-400 text-sm mt-1">
-                  您已完成所有互動題目，繼續進行後測評估
-                </p>
+                <h3 className="text-2xl font-bold text-warm-900 font-serif">{ui.interactive.complete}</h3>
+                <p className="text-warm-400 text-sm mt-1">{ui.interactive.completeSubtitle}</p>
               </div>
 
               <div className="flex justify-center gap-8">
                 <div className="text-center">
                   <div className="text-4xl font-bold text-sage-600">{correctCount}</div>
-                  <div className="text-xs text-warm-400 mt-1">正確回答</div>
+                  <div className="text-xs text-warm-400 mt-1">{ui.interactive.correctLabel}</div>
                 </div>
                 <div className="w-px bg-warm-200" />
                 <div className="text-center">
                   <div className="text-4xl font-bold text-warm-600">{questions.length}</div>
-                  <div className="text-xs text-warm-400 mt-1">總題數</div>
+                  <div className="text-xs text-warm-400 mt-1">{ui.interactive.totalLabel}</div>
                 </div>
               </div>
 
-              <p className="text-warm-500 text-sm italic leading-relaxed max-w-md mx-auto">
-                回饋已整合到您的學習記錄中。<br />
-                接下來的後測將評估您在案例學習後的知識成長。
+              <p className="text-warm-500 text-sm italic leading-relaxed max-w-md mx-auto whitespace-pre-line">
+                {ui.interactive.feedbackNote}
               </p>
 
               <Button onClick={advancePhase} size="lg">
-                進入後測評估
+                {ui.interactive.proceed}
                 <ChevronRight className="inline ml-1.5 w-4 h-4" />
               </Button>
             </motion.div>

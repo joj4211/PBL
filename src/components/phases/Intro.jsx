@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
-import { BookOpen, Clock, Stethoscope, Brain, Tag, Timer } from 'lucide-react';
+import { Stethoscope, Search, FlaskConical, Pill, Tag, Timer } from 'lucide-react';
 import Button from '../ui/Button';
 import PhaseTransition from '../ui/PhaseTransition';
+import { useLanguage } from '../../contexts/LanguageContext';
+
+const featureIcons = [Search, Stethoscope, FlaskConical, Pill];
 
 const stagger = {
   animate: { transition: { staggerChildren: 0.15 } },
@@ -11,14 +14,10 @@ const fadeUp = {
   animate: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
 };
 
-const features = [
-  { icon: Clock, label: '前測評估', desc: '了解初始知識基礎' },
-  { icon: BookOpen, label: '臨床案例', desc: '沉浸式敘事呈現' },
-  { icon: Stethoscope, label: '互動問答', desc: '即時引導式回饋' },
-  { icon: Brain, label: '學習成效', desc: '前後測對比分析' },
-];
-
 export default function Intro({ caseData, advancePhase }) {
+  const { ui } = useLanguage();
+  const features = ui.intro.features;
+
   return (
     <PhaseTransition>
       <div className="min-h-screen flex flex-col items-center justify-center px-4 py-16">
@@ -31,22 +30,22 @@ export default function Intro({ caseData, advancePhase }) {
           {/* Badge */}
           <motion.div variants={fadeUp}>
             <span className="text-xs font-semibold tracking-widest uppercase text-sage-600 bg-sage-50 border border-sage-200 px-4 py-1.5 rounded-full">
-              醫學 PBL 互動學習系統
+              {ui.intro.badge}
             </span>
           </motion.div>
 
           {/* Title */}
           <motion.div variants={fadeUp}>
-            <h1 className="text-5xl sm:text-6xl font-bold text-warm-900 font-serif leading-tight">
+            <h1 className="text-4xl sm:text-5xl font-bold text-warm-900 font-serif leading-tight">
               {caseData.title}
             </h1>
-            <p className="mt-3 text-xl text-warm-600 font-light">{caseData.subtitle}</p>
+            <p className="mt-3 text-lg text-warm-600 font-light">{caseData.subtitle}</p>
           </motion.div>
 
-          {/* Cover description */}
+          {/* Description */}
           <motion.p
             variants={fadeUp}
-            className="text-warm-500 italic max-w-md leading-relaxed whitespace-pre-line"
+            className="text-warm-500 text-sm text-left max-w-lg leading-relaxed bg-white/40 backdrop-blur-sm border border-white/60 rounded-2xl px-5 py-4 whitespace-pre-line"
           >
             {caseData.coverDescription}
           </motion.p>
@@ -73,33 +72,33 @@ export default function Intro({ caseData, advancePhase }) {
           {/* Feature grid */}
           <motion.div
             variants={fadeUp}
-            className="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full mt-2"
+            className="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full"
           >
-            {features.map(({ icon: Icon, label, desc }) => (
-              <div
-                key={label}
-                className="glass-card p-4 text-center flex flex-col items-center gap-2"
-              >
-                <div className="w-10 h-10 rounded-xl bg-sage-100 flex items-center justify-center">
-                  <Icon className="w-5 h-5 text-sage-500" />
+            {features.map(({ label, desc }, idx) => {
+              const Icon = featureIcons[idx];
+              return (
+                <div
+                  key={label}
+                  className="glass-card p-4 text-center flex flex-col items-center gap-2"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-sage-100 flex items-center justify-center">
+                    <Icon className="w-5 h-5 text-sage-500" />
+                  </div>
+                  <div className="text-sm font-semibold text-warm-800">{label}</div>
+                  <div className="text-xs text-warm-400 leading-snug">{desc}</div>
                 </div>
-                <div className="text-sm font-semibold text-warm-800">{label}</div>
-                <div className="text-xs text-warm-400 leading-snug">{desc}</div>
-              </div>
-            ))}
+              );
+            })}
           </motion.div>
 
-          {/* Divider */}
           <motion.div variants={fadeUp} className="w-20 h-px bg-warm-200" />
 
           {/* CTA */}
           <motion.div variants={fadeUp} className="flex flex-col items-center gap-3">
             <Button onClick={advancePhase} size="lg" variant="primary">
-              開始案例學習
+              {ui.intro.beginCase}
             </Button>
-            <p className="text-xs text-warm-400">
-              建議在安靜的環境下進行，預留充足時間細讀案例
-            </p>
+            <p className="text-xs text-warm-400">{ui.intro.quietSpace}</p>
           </motion.div>
         </motion.div>
       </div>

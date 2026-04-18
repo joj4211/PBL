@@ -14,6 +14,7 @@ import PhaseTransition from '../ui/PhaseTransition';
 import ProgressIndicator from '../ui/ProgressIndicator';
 import Button from '../ui/Button';
 import { calculatePhaseScore, getPerformanceInsight } from '../../logic/scoring';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const stagger = {
   animate: { transition: { staggerChildren: 0.12, delayChildren: 0.2 } },
@@ -39,6 +40,7 @@ export default function Analytics({
   getPhaseAnswers,
   setCurrentPhase,
 }) {
+  const { ui } = useLanguage();
   const preAnswers = getPhaseAnswers('preTest');
   const postAnswers = getPhaseAnswers('postTest');
   const interactiveAnswers = getPhaseAnswers('interactive');
@@ -51,11 +53,15 @@ export default function Analytics({
   );
 
   const insight = getPerformanceInsight(preScore.percentage, postScore.percentage);
+  const insightMessage = ui.analytics.insights[insight.level].replace(
+    '{delta}',
+    Math.abs(insight.delta)
+  );
 
   const chartData = [
-    { name: '前測', score: preScore.percentage, color: '#CEB07A' },
-    { name: '互動問答', score: interactiveScore.percentage, color: '#95B880' },
-    { name: '後測', score: postScore.percentage, color: '#5E8847' },
+    { name: ui.analytics.preLabel,         score: preScore.percentage,         color: '#CEB07A', scoreObj: preScore },
+    { name: ui.analytics.interactiveLabel, score: interactiveScore.percentage, color: '#95B880', scoreObj: interactiveScore },
+    { name: ui.analytics.postLabel,        score: postScore.percentage,        color: '#5E8847', scoreObj: postScore },
   ];
 
   const insightStyles = {
@@ -79,15 +85,15 @@ export default function Analytics({
             <BarChart2 className="w-6 h-6 text-sage-500" />
           </div>
           <div>
-            <h2 className="text-2xl font-bold text-warm-900 font-serif">學習成效報告</h2>
-            <p className="text-warm-400 text-sm mt-1">以下是您完成本案例後的整體表現分析</p>
+            <h2 className="text-2xl font-bold text-warm-900 font-serif">{ui.analytics.title}</h2>
+            <p className="text-warm-400 text-sm mt-1">{ui.analytics.subtitle}</p>
           </div>
         </motion.div>
 
         <motion.div variants={stagger} initial="initial" animate="animate" className="space-y-5">
           {/* Score overview cards */}
           <motion.div variants={fadeUp} className="grid grid-cols-3 gap-3">
-            {chartData.map(({ name, score, color }) => (
+            {chartData.map(({ name, score, color, scoreObj }) => (
               <div key={name} className="glass-card p-4 text-center">
                 <div className="text-xs font-semibold text-warm-400 mb-2">{name}</div>
                 <div
@@ -97,11 +103,7 @@ export default function Analytics({
                   {score}%
                 </div>
                 <div className="text-xs text-warm-300 mt-1">
-                  {name === '前測'
-                    ? `${preScore.correct}/${preScore.total}`
-                    : name === '互動問答'
-                    ? `${interactiveScore.correct}/${interactiveScore.total}`
-                    : `${postScore.correct}/${postScore.total}`}
+                  {scoreObj.correct}/{scoreObj.total}
                 </div>
               </div>
             ))}
@@ -111,7 +113,7 @@ export default function Analytics({
           <motion.div variants={fadeUp} className="glass-card p-6">
             <h3 className="text-sm font-semibold text-warm-600 mb-5 flex items-center gap-2">
               <BarChart2 className="w-4 h-4 text-sage-400" />
-              各階段得分對比
+              {ui.analytics.chartTitle}
             </h3>
             <ResponsiveContainer width="100%" height={200}>
               <BarChart data={chartData} barSize={40} margin={{ top: 5, right: 10, bottom: 5, left: -20 }}>
@@ -143,9 +145,9 @@ export default function Analytics({
           <motion.div variants={fadeUp}>
             <div className={`rounded-2xl border-2 p-5 ${insightStyles[insight.level]}`}>
               <p className="text-xs font-semibold uppercase tracking-wider mb-2 opacity-70">
-                學習洞察
+                {ui.analytics.insightTitle}
               </p>
-              <p className="text-sm leading-relaxed">{insight.message}</p>
+              <p className="text-sm leading-relaxed">{insightMessage}</p>
             </div>
           </motion.div>
 
@@ -155,7 +157,7 @@ export default function Analytics({
               <div className="flex items-center gap-2 mb-4">
                 <BookMarked className="w-4 h-4 text-sage-500" />
                 <h3 className="text-sm font-semibold text-warm-700 uppercase tracking-wider">
-                  本案例核心學習點
+                  {ui.analytics.learningPointsTitle}
                 </h3>
               </div>
               <ul className="space-y-2.5">
@@ -183,7 +185,7 @@ export default function Analytics({
               size="md"
             >
               <RefreshCw className="w-4 h-4 mr-2 inline" />
-              重新開始案例
+              {ui.analytics.restart}
             </Button>
           </motion.div>
         </motion.div>

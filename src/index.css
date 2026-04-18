@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-warm-50 text-warm-900 antialiased;
+    font-family: 'Noto Sans TC', 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/40 backdrop-blur-md border border-white/60 rounded-2xl shadow-lg;
+  }
+
+  .glass-card-warm {
+    background: rgba(255, 253, 208, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    @apply border border-white/70 rounded-2xl shadow-lg;
+  }
+
+  .glass-card-sage {
+    background: rgba(135, 174, 115, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    @apply border border-sage-200/60 rounded-2xl shadow-md;
+  }
+
+  .option-card {
+    @apply relative w-full text-left px-5 py-4 rounded-xl border-2 transition-all duration-200 cursor-pointer;
+    @apply border-warm-200 bg-white/30 hover:bg-white/60 hover:border-sage-300 hover:shadow-md;
+  }
+
+  .option-card-selected {
+    @apply border-sage-400 bg-sage-50/60 shadow-md;
+  }
+
+  .option-card-correct {
+    @apply border-sage-500 bg-sage-50/80;
+  }
+
+  .option-card-incorrect {
+    @apply border-red-300 bg-red-50/60;
+  }
+
+  .narrative-text {
+    @apply text-warm-800 leading-relaxed font-serif;
+  }
+
+  .phase-tag {
+    @apply text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded-full;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-warm-300 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-warm-400;
+}

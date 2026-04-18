@@ -1,15 +1,41 @@
 {
   "phases": {
-    "intro":           { "label": "Start",        "shortLabel": "Start" },
-    "preTest":         { "label": "Pre-Test",      "shortLabel": "Pre" },
-    "chiefComplaint":  { "label": "History",       "shortLabel": "Hx" },
-    "physicalExam":    { "label": "Physical Exam", "shortLabel": "PE" },
-    "workup":          { "label": "Workup",        "shortLabel": "Work" },
-    "management":      { "label": "Management",    "shortLabel": "Mgmt" },
-    "interactive":     { "label": "Interactive",   "shortLabel": "Q&A" },
-    "postTest":        { "label": "Post-Test",     "shortLabel": "Post" },
-    "analytics":       { "label": "Analytics",     "shortLabel": "Stats" },
-    "postPearls":      { "label": "Pearls",        "shortLabel": "Pearls" }
+    "intro": {
+      "label": "Start",
+      "shortLabel": "Start"
+    },
+    "preTest": {
+      "label": "Pre-Test",
+      "shortLabel": "Pre"
+    },
+    "chiefComplaint": {
+      "label": "History",
+      "shortLabel": "Hx"
+    },
+    "physicalExam": {
+      "label": "Physical Exam",
+      "shortLabel": "PE"
+    },
+    "workup": {
+      "label": "Workup",
+      "shortLabel": "Work"
+    },
+    "management": {
+      "label": "Management",
+      "shortLabel": "Mgmt"
+    },
+    "interactive": {
+      "label": "Interactive",
+      "shortLabel": "Q&A"
+    },
+    "postTest": {
+      "label": "Post-Test",
+      "shortLabel": "Post"
+    },
+    "analytics": {
+      "label": "Analytics",
+      "shortLabel": "Stats"
+    }
   },
   "common": {
     "confirm": "Confirm Answer",
@@ -24,10 +50,22 @@
     "beginCase": "Begin Case",
     "quietSpace": "Find a quiet space and allow yourself enough time to read carefully.",
     "features": [
-      { "label": "Chief Complaint",    "desc": "History taking & reasoning" },
-      { "label": "Physical Exam",      "desc": "HINTS exam step-by-step" },
-      { "label": "Vestibular Workup",  "desc": "PTA, Caloric, VEMP" },
-      { "label": "Management",         "desc": "Clinical decision tree" }
+      {
+        "label": "Chief Complaint",
+        "desc": "History taking & reasoning"
+      },
+      {
+        "label": "Physical Exam",
+        "desc": "HINTS exam step-by-step"
+      },
+      {
+        "label": "Vestibular Workup",
+        "desc": "PTA, Caloric, VEMP"
+      },
+      {
+        "label": "Management",
+        "desc": "Clinical decision tree"
+      }
     ]
   },
   "preTest": {
@@ -110,11 +148,6 @@
       "steady": "Performance was steady (+{delta}%). You had strong baseline knowledge — consider a more advanced case next.",
       "reflect": "The case gave you new perspectives and clinical frameworks. Mastering clinical reasoning takes time — review the key learning points."
     }
-  },
-  "postPearls": {
-    "subtitle": "Consolidate what you've learned from this case.",
-    "caseComplete": "Case Complete",
-    "restart": "Restart Case"
   },
   "questionCard": {
     "questionLabel": "Question",

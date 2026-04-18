@@ -20,9 +20,9 @@ export default function ProgressIndicator({ currentPhase }) {
           const meta = ui.phases[phase];
 
           return (
-            <div key={phase} className="flex items-center gap-0.5 sm:gap-1">
+            <div key={phase} className="flex items-start gap-0.5 sm:gap-1">
               {/* Step */}
-              <div className="flex flex-col items-center gap-1">
+              <div className="flex flex-col items-center gap-1 w-7">
                 <motion.div
                   initial={false}
                   animate={{
@@ -47,7 +47,7 @@ export default function ProgressIndicator({ currentPhase }) {
               {/* Connector */}
               {i < visiblePhases.length - 1 && (
                 <motion.div
-                  className="h-0.5 w-4 sm:w-7 rounded-full mb-4 sm:mb-5"
+                  className="h-0.5 w-4 sm:w-7 rounded-full mt-3 sm:mt-3.5"
                   initial={false}
                   animate={{ backgroundColor: isDone ? '#87AE73' : '#EDE0C4' }}
                   transition={{ duration: 0.4, delay: 0.1 }}

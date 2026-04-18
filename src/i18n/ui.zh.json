@@ -1,15 +1,41 @@
 {
   "phases": {
-    "intro":           { "label": "開始",    "shortLabel": "開始" },
-    "preTest":         { "label": "前測評估", "shortLabel": "前測" },
-    "chiefComplaint":  { "label": "病史詢問", "shortLabel": "病史" },
-    "physicalExam":    { "label": "理學檢查", "shortLabel": "理學" },
-    "workup":          { "label": "檢查判讀", "shortLabel": "檢查" },
-    "management":      { "label": "治療決策", "shortLabel": "治療" },
-    "interactive":     { "label": "互動問答", "shortLabel": "問答" },
-    "postTest":        { "label": "後測評估", "shortLabel": "後測" },
-    "analytics":       { "label": "成效分析", "shortLabel": "分析" },
-    "postPearls":      { "label": "學習精華", "shortLabel": "精華" }
+    "intro": {
+      "label": "開始",
+      "shortLabel": "開始"
+    },
+    "preTest": {
+      "label": "前測評估",
+      "shortLabel": "前測"
+    },
+    "chiefComplaint": {
+      "label": "病史詢問",
+      "shortLabel": "病史"
+    },
+    "physicalExam": {
+      "label": "理學檢查",
+      "shortLabel": "理學檢查"
+    },
+    "workup": {
+      "label": "檢查判讀",
+      "shortLabel": "檢查"
+    },
+    "management": {
+      "label": "治療決策",
+      "shortLabel": "治療"
+    },
+    "interactive": {
+      "label": "互動問答",
+      "shortLabel": "問答"
+    },
+    "postTest": {
+      "label": "後測評估",
+      "shortLabel": "後測"
+    },
+    "analytics": {
+      "label": "成效分析",
+      "shortLabel": "能力評估"
+    }
   },
   "common": {
     "confirm": "確認答案",
@@ -24,10 +50,22 @@
     "beginCase": "開始案例",
     "quietSpace": "請找一個安靜的地方，給自己足夠的時間仔細閱讀。",
     "features": [
-      { "label": "病史詢問",     "desc": "病史蒐集與臨床推理" },
-      { "label": "理學檢查",     "desc": "HINTS 檢查步驟詳解" },
-      { "label": "前庭功能檢查", "desc": "PTA、冷熱試驗、VEMP" },
-      { "label": "治療決策",     "desc": "臨床決策樹" }
+      {
+        "label": "病史詢問",
+        "desc": "病史蒐集與臨床推理"
+      },
+      {
+        "label": "理學檢查",
+        "desc": "HINTS 檢查步驟詳解"
+      },
+      {
+        "label": "前庭功能檢查",
+        "desc": "PTA、冷熱試驗、VEMP"
+      },
+      {
+        "label": "治療決策",
+        "desc": "臨床決策樹"
+      }
     ]
   },
   "preTest": {
@@ -110,11 +148,6 @@
       "steady": "前後測表現穩定（+{delta}%）。您原本就有一定的基礎知識，可以嘗試更深入的案例挑戰。",
       "reflect": "案例為您帶來了新的視角和思考框架。臨床思維的培養需要時間，建議複習本案例的關鍵學習點。"
     }
-  },
-  "postPearls": {
-    "subtitle": "整合您從此案例中學到的知識。",
-    "caseComplete": "案例完成",
-    "restart": "重新開始案例"
   },
   "questionCard": {
     "questionLabel": "問題",

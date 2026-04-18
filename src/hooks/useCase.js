@@ -20,6 +20,8 @@ export const useCase = (caseId = defaultCaseId, lang = 'zh') => {
 
   const exitToIntro = useCallback(() => {
     setCurrentPhase(PHASES.INTRO);
+    setPreTestAnswer(null);
+    setAnswersByPhase({});
   }, []);
 
   const submitAnswer = useCallback((phaseId, question, value) => {

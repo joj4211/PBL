@@ -78,7 +78,7 @@ function AppContent() {
 
   return (
     <AppShell
-      showCaseControls={currentPhase !== PHASES.INTRO}
+      showCaseControls={true}
       showBackControl={currentPhase !== PHASES.PRE_TEST}
       onBack={goBackPhase}
       onExit={handleExitCase}

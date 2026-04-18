@@ -4,7 +4,6 @@ import { ClipboardList, ChevronRight, CheckCircle } from 'lucide-react';
 import PhaseTransition from '../ui/PhaseTransition';
 import ProgressIndicator from '../ui/ProgressIndicator';
 import Button from '../ui/Button';
-import { scoreMultipleChoice } from '../../logic/scoring';
 
 // ── Single MC Question ────────────────────────────────────────
 
@@ -19,9 +18,8 @@ function MCQuestion({ question, onDone }) {
 
   const handleConfirm = () => {
     if (!selected || result) return;
-    const r = scoreMultipleChoice(question, selected);
+    const r = onDone(selected);
     setResult(r);
-    onDone(r);
   };
 
   const optionClass = (optId) => {
@@ -75,7 +73,7 @@ function MCQuestion({ question, onDone }) {
 
 // ── PreTest Phase ─────────────────────────────────────────────
 
-export default function PreTest({ caseData, currentPhase, advancePhase }) {
+export default function PreTest({ caseData, currentPhase, advancePhase, submitAnswer }) {
   const questions = caseData.preTest.questions;
   const [qIndex, setQIndex] = useState(0);
   const [doneAnswers, setDoneAnswers] = useState([]);
@@ -85,12 +83,14 @@ export default function PreTest({ caseData, currentPhase, advancePhase }) {
   const isLastQuestion = qIndex === questions.length - 1;
   const currentAnswered = doneAnswers[qIndex] != null;
 
-  const handleDone = (result) => {
+  const handleDone = (selectedId) => {
+    const result = submitAnswer('preTest', questions[qIndex], selectedId);
     setDoneAnswers((prev) => {
       const next = [...prev];
       next[qIndex] = result;
       return next;
     });
+    return result;
   };
 
   const handleNext = () => {

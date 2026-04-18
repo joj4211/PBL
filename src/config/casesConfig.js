@@ -161,7 +161,84 @@ const case_01 = {
     ],
   },
 
+  // ── INTERACTIVE SESSION ────────────────────────────────────
+  interactive: {
+    instructions:
+      'Use the case data to explain your clinical reasoning. Focus on peripheral vs central clues.',
+    questions: [
+      {
+        id: 'interactive-q1',
+        type: 'text-input',
+        text: 'Which HINTS findings in this case support a peripheral vestibular lesion?',
+        keywords: ['head impulse', 'catch-up', 'skew', 'direction'],
+        hint: 'Think about HIT, skew deviation, and nystagmus direction.',
+        feedbackTemplate: {
+          excellent:
+            'Good reasoning. You connected key HINTS clues such as {keyword} with a peripheral vestibular pattern.',
+          good:
+            'Good start. You identified {keyword}; add the other HINTS components to make the argument stronger.',
+          hint:
+            'Review the HINTS findings: abnormal HIT, no skew deviation, and unidirectional horizontal-torsional nystagmus support a peripheral lesion.',
+        },
+      },
+      {
+        id: 'interactive-q2',
+        type: 'text-input',
+        text: 'Why does normal hearing make vestibular neuritis more likely than labyrinthitis?',
+        keywords: ['hearing', 'labyrinthitis', 'neuritis', 'cochlear'],
+        hint: 'Compare vestibular-only symptoms with cochlear involvement.',
+        feedbackTemplate: {
+          excellent:
+            'Exactly. Mentioning {keyword} shows you understand that labyrinthitis usually includes cochlear involvement.',
+          good:
+            'Good direction with {keyword}. Make the contrast explicit: neuritis affects vestibular function without hearing loss.',
+          hint:
+            'Vestibular neuritis causes vertigo without hearing loss; labyrinthitis usually includes hearing symptoms because the cochlea is involved.',
+        },
+      },
+    ],
+  },
+
   // ── POST-TEST & KEY LEARNING PEARLS ────────────────────────
+  postTest: {
+    instructions:
+      'Answer these questions after completing the case. They revisit the most important learning points.',
+    questions: [
+      {
+        id: 'post-q1',
+        type: 'multiple-choice',
+        text: 'In acute vestibular syndrome, which HINTS pattern is most consistent with a peripheral lesion?',
+        options: [
+          { id: 'A', text: '(A) Normal head impulse test, direction-changing nystagmus, and skew deviation.' },
+          { id: 'B', text: '(B) Abnormal head impulse test, unidirectional nystagmus, and no skew deviation.', correct: true },
+          { id: 'C', text: '(C) Vertical nystagmus with severe headache.' },
+          { id: 'D', text: '(D) New focal weakness with normal vestibular testing.' },
+        ],
+        explanation:
+          'A peripheral HINTS pattern includes an abnormal head impulse test, unidirectional nystagmus, and absent skew deviation.',
+      },
+      {
+        id: 'post-q2',
+        type: 'multiple-choice',
+        text: 'Which finding would shift the diagnosis away from vestibular neuritis and toward labyrinthitis?',
+        options: [
+          { id: 'A', text: '(A) Recent upper respiratory infection.' },
+          { id: 'B', text: '(B) Nausea and vomiting.' },
+          { id: 'C', text: '(C) Hearing loss or tinnitus.', correct: true },
+          { id: 'D', text: '(D) Right canal paresis on caloric testing.' },
+        ],
+        explanation:
+          'Labyrinthitis involves the inner ear labyrinth and commonly includes cochlear symptoms such as hearing loss or tinnitus.',
+      },
+    ],
+  },
+
+  learningPoints: [
+    'Use HINTS to separate peripheral vestibular neuritis from central causes in acute vestibular syndrome.',
+    'Normal hearing supports vestibular neuritis over labyrinthitis.',
+    'Caloric weakness and VEMP findings help localize vestibular nerve involvement.',
+  ],
+
   postPearls: {
     title: 'Post-Test & Key Learning Pearls',
     finalReview: [
@@ -182,10 +259,13 @@ const case_placeholder = {
   difficulty: '—',
   tags: [],
   preTest: { instructions: '', questions: [] },
+  interactive: { instructions: '', questions: [] },
+  postTest: { instructions: '', questions: [] },
   chiefComplaint: { slides: [] },
   physicalExam: { title: '', steps: [], clinicalDecision: {} },
   workup: { title: '', investigations: [] },
   management: { title: '', clinicalDecisionTree: [] },
+  learningPoints: [],
   postPearls: { title: '', finalReview: [] },
 };
 

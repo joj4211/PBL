@@ -7,6 +7,9 @@ export const PHASES = {
   PHYSICAL_EXAM: 'physicalExam',
   WORKUP: 'workup',
   MANAGEMENT: 'management',
+  INTERACTIVE: 'interactive',
+  POST_TEST: 'postTest',
+  ANALYTICS: 'analytics',
   POST_PEARLS: 'postPearls',
 };
 
@@ -17,6 +20,9 @@ export const PHASE_ORDER = [
   PHASES.PHYSICAL_EXAM,
   PHASES.WORKUP,
   PHASES.MANAGEMENT,
+  PHASES.INTERACTIVE,
+  PHASES.POST_TEST,
+  PHASES.ANALYTICS,
   PHASES.POST_PEARLS,
 ];
 
@@ -27,6 +33,9 @@ export const PHASE_META = {
   [PHASES.PHYSICAL_EXAM]:   { label: '理學檢查', shortLabel: '理學' },
   [PHASES.WORKUP]:          { label: '檢查判讀', shortLabel: '檢查' },
   [PHASES.MANAGEMENT]:      { label: '治療決策', shortLabel: '治療' },
+  [PHASES.INTERACTIVE]:     { label: '互動問答', shortLabel: '問答' },
+  [PHASES.POST_TEST]:       { label: '後測評估', shortLabel: '後測' },
+  [PHASES.ANALYTICS]:       { label: '成效分析', shortLabel: '分析' },
   [PHASES.POST_PEARLS]:     { label: '學習精華', shortLabel: '精華' },
 };
 

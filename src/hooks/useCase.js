@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import { PHASES, getNextPhase } from '../logic/stateMachine';
-import { scoreMultipleChoice } from '../logic/scoring';
+import { scoreMultipleChoice, scoreTextInput } from '../logic/scoring';
 import { cases, defaultCaseId } from '../config/casesConfig';
 
 export const useCase = (caseId = defaultCaseId) => {
@@ -8,20 +8,47 @@ export const useCase = (caseId = defaultCaseId) => {
 
   const [currentPhase, setCurrentPhase] = useState(PHASES.INTRO);
   const [preTestAnswer, setPreTestAnswer] = useState(null);
+  const [answersByPhase, setAnswersByPhase] = useState({});
 
   const advancePhase = useCallback(() => {
     setCurrentPhase((prev) => getNextPhase(prev) ?? prev);
   }, []);
 
-  const submitPreTest = useCallback((question, selectedId) => {
-    const result = scoreMultipleChoice(question, selectedId);
-    setPreTestAnswer(result);
+  const submitAnswer = useCallback((phaseId, question, value) => {
+    const result =
+      question.type === 'text-input'
+        ? scoreTextInput(question, value)
+        : scoreMultipleChoice(question, value);
+
+    setAnswersByPhase((prev) => ({
+      ...prev,
+      [phaseId]: {
+        ...(prev[phaseId] ?? {}),
+        [question.id]: result,
+      },
+    }));
+
+    if (phaseId === 'preTest') {
+      setPreTestAnswer(result);
+    }
+
     return result;
   }, []);
+
+  const submitPreTest = useCallback(
+    (question, selectedId) => submitAnswer('preTest', question, selectedId),
+    [submitAnswer]
+  );
+
+  const getPhaseAnswers = useCallback(
+    (phaseId) => answersByPhase[phaseId] ?? {},
+    [answersByPhase]
+  );
 
   const restart = useCallback(() => {
     setCurrentPhase(PHASES.INTRO);
     setPreTestAnswer(null);
+    setAnswersByPhase({});
   }, []);
 
   return {
@@ -29,7 +56,9 @@ export const useCase = (caseId = defaultCaseId) => {
     currentPhase,
     preTestAnswer,
     advancePhase,
+    submitAnswer,
     submitPreTest,
+    getPhaseAnswers,
     setCurrentPhase,
     restart,
   };

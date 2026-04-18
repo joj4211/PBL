@@ -4,10 +4,12 @@ import { ClipboardList, ChevronRight, CheckCircle } from 'lucide-react';
 import PhaseTransition from '../ui/PhaseTransition';
 import ProgressIndicator from '../ui/ProgressIndicator';
 import Button from '../ui/Button';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 // ── Single MC Question ────────────────────────────────────────
 
 function MCQuestion({ question, onDone }) {
+  const { ui } = useLanguage();
   const [selected, setSelected] = useState(null);
   const [result, setResult] = useState(null);
 
@@ -45,7 +47,7 @@ function MCQuestion({ question, onDone }) {
       {!result && (
         <div className="pt-2 flex justify-end">
           <Button onClick={handleConfirm} disabled={!selected}>
-            確認答案
+            {ui.common.confirm}
           </Button>
         </div>
       )}
@@ -62,7 +64,7 @@ function MCQuestion({ question, onDone }) {
                 ? 'bg-sage-50 border-sage-300 text-sage-700'
                 : 'bg-red-50 border-red-200 text-red-600'
             }`}>
-              {result.isCorrect ? '✓ Correct' : `✗ Incorrect — correct answer: ${result.correctId}`}
+              {result.isCorrect ? ui.preTest.correct : `${ui.preTest.incorrect}${result.correctId}`}
             </div>
           </motion.div>
         )}
@@ -74,6 +76,7 @@ function MCQuestion({ question, onDone }) {
 // ── PreTest Phase ─────────────────────────────────────────────
 
 export default function PreTest({ caseData, currentPhase, advancePhase, submitAnswer }) {
+  const { ui } = useLanguage();
   const questions = caseData.preTest.questions;
   const [qIndex, setQIndex] = useState(0);
   const [doneAnswers, setDoneAnswers] = useState([]);
@@ -117,7 +120,7 @@ export default function PreTest({ caseData, currentPhase, advancePhase, submitAn
             <ClipboardList className="w-6 h-6 text-warm-500" />
           </div>
           <div>
-            <h2 className="text-2xl font-bold text-warm-900 font-serif">Pre-Test Assessment</h2>
+            <h2 className="text-2xl font-bold text-warm-900 font-serif">{ui.preTest.title}</h2>
             <p className="text-warm-500 text-sm mt-1 leading-relaxed">
               {caseData.preTest.instructions}
             </p>
@@ -137,7 +140,7 @@ export default function PreTest({ caseData, currentPhase, advancePhase, submitAn
             >
               <div className="flex items-center justify-between">
                 <span className="phase-tag bg-sage-100 text-sage-600">
-                  Question {qIndex + 1} / {total}
+                  {ui.preTest.questionLabel} {qIndex + 1} / {total}
                 </span>
               </div>
 
@@ -158,7 +161,7 @@ export default function PreTest({ caseData, currentPhase, advancePhase, submitAn
                   className="flex justify-end pt-2"
                 >
                   <Button onClick={handleNext}>
-                    {isLastQuestion ? 'View Result' : 'Next'}
+                    {isLastQuestion ? ui.preTest.viewResult : ui.common.next}
                     <ChevronRight className="inline ml-1 w-4 h-4" />
                   </Button>
                 </motion.div>
@@ -176,33 +179,31 @@ export default function PreTest({ caseData, currentPhase, advancePhase, submitAn
                 <CheckCircle className="w-8 h-8 text-sage-500" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-warm-900 font-serif">Pre-Test Complete</h3>
-                <p className="text-warm-500 text-sm mt-1">Here is your baseline result</p>
+                <h3 className="text-2xl font-bold text-warm-900 font-serif">{ui.preTest.complete}</h3>
+                <p className="text-warm-500 text-sm mt-1">{ui.preTest.baselineResult}</p>
               </div>
 
               <div className="flex justify-center gap-8">
                 <div className="text-center">
                   <div className="text-4xl font-bold text-warm-700">{correct}</div>
-                  <div className="text-xs text-warm-400 mt-1">Correct</div>
+                  <div className="text-xs text-warm-400 mt-1">{ui.preTest.correctLabel}</div>
                 </div>
                 <div className="w-px bg-warm-200" />
                 <div className="text-center">
                   <div className="text-4xl font-bold text-sage-600">{pct}%</div>
-                  <div className="text-xs text-warm-400 mt-1">Score</div>
+                  <div className="text-xs text-warm-400 mt-1">{ui.preTest.scoreLabel}</div>
                 </div>
                 <div className="w-px bg-warm-200" />
                 <div className="text-center">
                   <div className="text-4xl font-bold text-warm-400">{total}</div>
-                  <div className="text-xs text-warm-400 mt-1">Total</div>
+                  <div className="text-xs text-warm-400 mt-1">{ui.preTest.totalLabel}</div>
                 </div>
               </div>
 
-              <p className="text-warm-500 text-sm italic">
-                Don't worry about the score — this is just your starting point.
-              </p>
+              <p className="text-warm-500 text-sm italic">{ui.preTest.dontWorry}</p>
 
               <Button onClick={advancePhase} size="lg">
-                Enter Clinical Case
+                {ui.preTest.enterCase}
                 <ChevronRight className="inline ml-1.5 w-4 h-4" />
               </Button>
             </motion.div>

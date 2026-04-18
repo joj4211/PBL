@@ -1,0 +1,131 @@
+{
+  "phases": {
+    "intro":           { "label": "開始",    "shortLabel": "開始" },
+    "preTest":         { "label": "前測評估", "shortLabel": "前測" },
+    "chiefComplaint":  { "label": "病史詢問", "shortLabel": "病史" },
+    "physicalExam":    { "label": "理學檢查", "shortLabel": "理學" },
+    "workup":          { "label": "檢查判讀", "shortLabel": "檢查" },
+    "management":      { "label": "治療決策", "shortLabel": "治療" },
+    "interactive":     { "label": "互動問答", "shortLabel": "問答" },
+    "postTest":        { "label": "後測評估", "shortLabel": "後測" },
+    "analytics":       { "label": "成效分析", "shortLabel": "分析" },
+    "postPearls":      { "label": "學習精華", "shortLabel": "精華" }
+  },
+  "common": {
+    "confirm": "確認答案",
+    "next": "下一題",
+    "revealAnswer": "顯示正確答案",
+    "viewAnswer": "查看答案",
+    "viewResult": "查看結果",
+    "stage": "階段"
+  },
+  "intro": {
+    "badge": "醫學 PBL 互動學習",
+    "beginCase": "開始案例",
+    "quietSpace": "請找一個安靜的地方，給自己足夠的時間仔細閱讀。",
+    "features": [
+      { "label": "病史詢問",     "desc": "病史蒐集與臨床推理" },
+      { "label": "理學檢查",     "desc": "HINTS 檢查步驟詳解" },
+      { "label": "前庭功能檢查", "desc": "PTA、冷熱試驗、VEMP" },
+      { "label": "治療決策",     "desc": "臨床決策樹" }
+    ]
+  },
+  "preTest": {
+    "title": "前測評估",
+    "questionLabel": "題目",
+    "correct": "✓ 正確",
+    "incorrect": "✗ 錯誤 — 正確答案：",
+    "viewResult": "查看結果",
+    "complete": "前測完成",
+    "baselineResult": "以下是您的基準結果",
+    "dontWorry": "不用擔心分數 — 這只是您的起點。",
+    "enterCase": "進入臨床案例",
+    "correctLabel": "答對",
+    "scoreLabel": "得分",
+    "totalLabel": "總題數"
+  },
+  "chiefComplaint": {
+    "sectionLabel": "主訴與病史",
+    "title": "主訴與病史詢問",
+    "subtitle": "仔細閱讀案例，並探索以下病史詢問問題。",
+    "readyToProceed": "準備好進行理學檢查了嗎？",
+    "proceed": "繼續進行理學檢查"
+  },
+  "physicalExam": {
+    "subtitle": "系統性地完成 HINTS 檢查的每個步驟。",
+    "revealAnswer": "顯示正確答案",
+    "clinicalDecision": "臨床決策",
+    "answer": "答案",
+    "proceed": "繼續進行前庭功能檢查"
+  },
+  "workup": {
+    "subtitle": "展開各項檢查以判讀數據。",
+    "observationLabel": "觀察結果",
+    "taskPrefix": "任務：",
+    "inputPlaceholder": "輸入您的計算或推理過程…",
+    "viewAnswer": "查看答案",
+    "viewResult": "查看結果",
+    "thinkingTask": "思考任務",
+    "colorCodeHint": "套用上方的顏色規則到影像中，形成您的判讀。",
+    "proceed": "繼續進行治療決策"
+  },
+  "management": {
+    "subtitle": "為每個階段選擇最佳治療方案。",
+    "stageLabel": "階段",
+    "proceed": "查看關鍵學習精華"
+  },
+  "interactive": {
+    "title": "互動問答",
+    "progressLabel": "問答進度",
+    "viewSummary": "查看問答總結",
+    "complete": "問答完成",
+    "completeSubtitle": "您已完成所有互動題目，繼續進行後測評估",
+    "correctLabel": "正確回答",
+    "totalLabel": "總題數",
+    "feedbackNote": "回饋已整合到您的學習記錄中。\n接下來的後測將評估您在案例學習後的知識成長。",
+    "proceed": "進入後測評估"
+  },
+  "postTest": {
+    "title": "後測評估",
+    "viewResult": "查看後測結果",
+    "complete": "後測完成",
+    "congratulations": "恭喜完成本案例的所有評估！",
+    "preLabel": "前測",
+    "postLabel": "後測",
+    "proceed": "查看學習成效報告"
+  },
+  "analytics": {
+    "title": "學習成效報告",
+    "subtitle": "以下是您完成本案例後的整體表現分析",
+    "chartTitle": "各階段得分對比",
+    "insightTitle": "學習洞察",
+    "learningPointsTitle": "本案例核心學習點",
+    "restart": "重新開始案例",
+    "preLabel": "前測",
+    "interactiveLabel": "互動問答",
+    "postLabel": "後測",
+    "insights": {
+      "excellent": "您的知識提升了 {delta}%！案例學習發揮了顯著效果，繼續保持這種學習狀態。",
+      "good": "後測提升了 {delta}%，顯示您從案例中獲得了具體收穫。深化理解後，分數還能更高。",
+      "steady": "前後測表現穩定（+{delta}%）。您原本就有一定的基礎知識，可以嘗試更深入的案例挑戰。",
+      "reflect": "案例為您帶來了新的視角和思考框架。臨床思維的培養需要時間，建議複習本案例的關鍵學習點。"
+    }
+  },
+  "postPearls": {
+    "subtitle": "整合您從此案例中學到的知識。",
+    "caseComplete": "案例完成",
+    "restart": "重新開始案例"
+  },
+  "questionCard": {
+    "questionLabel": "問題",
+    "correct": "✓ 正確",
+    "close": "→ 接近",
+    "review": "● 複習",
+    "explanationLabel": "解析",
+    "feedbackExcellent": "優秀的臨床推理！",
+    "feedbackGood": "方向正確，繼續深化",
+    "feedbackHint": "提示",
+    "submitButton": "提交答案",
+    "placeholder": "在此輸入您的想法…"
+  }
+}

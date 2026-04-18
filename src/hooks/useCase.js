@@ -1,10 +1,10 @@
 import { useState, useCallback } from 'react';
 import { PHASES, getNextPhase } from '../logic/stateMachine';
 import { scoreMultipleChoice, scoreTextInput } from '../logic/scoring';
-import { cases, defaultCaseId } from '../config/casesConfig';
+import { getCase, defaultCaseId } from '../cases/index';
 
-export const useCase = (caseId = defaultCaseId) => {
-  const caseData = cases.find((c) => c.id === caseId) ?? cases[0];
+export const useCase = (caseId = defaultCaseId, lang = 'zh') => {
+  const caseData = getCase(caseId, lang);
 
   const [currentPhase, setCurrentPhase] = useState(PHASES.INTRO);
   const [preTestAnswer, setPreTestAnswer] = useState(null);

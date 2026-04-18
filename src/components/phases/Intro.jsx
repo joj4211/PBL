@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
-import { Stethoscope, Search, FlaskConical, Pill, Star, Tag, Timer } from 'lucide-react';
+import { Stethoscope, Search, FlaskConical, Pill, Tag, Timer } from 'lucide-react';
 import Button from '../ui/Button';
 import PhaseTransition from '../ui/PhaseTransition';
+import { useLanguage } from '../../contexts/LanguageContext';
+
+const featureIcons = [Search, Stethoscope, FlaskConical, Pill];
 
 const stagger = {
   animate: { transition: { staggerChildren: 0.15 } },
@@ -11,14 +14,10 @@ const fadeUp = {
   animate: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
 };
 
-const features = [
-  { icon: Search,      label: 'Chief Complaint',    desc: 'History taking & reasoning' },
-  { icon: Stethoscope, label: 'Physical Exam',       desc: 'HINTS exam step-by-step' },
-  { icon: FlaskConical,label: 'Vestibular Workup',   desc: 'PTA, Caloric, VEMP' },
-  { icon: Pill,        label: 'Management',          desc: 'Clinical decision tree' },
-];
-
 export default function Intro({ caseData, advancePhase }) {
+  const { ui } = useLanguage();
+  const features = ui.intro.features;
+
   return (
     <PhaseTransition>
       <div className="min-h-screen flex flex-col items-center justify-center px-4 py-16">
@@ -31,7 +30,7 @@ export default function Intro({ caseData, advancePhase }) {
           {/* Badge */}
           <motion.div variants={fadeUp}>
             <span className="text-xs font-semibold tracking-widest uppercase text-sage-600 bg-sage-50 border border-sage-200 px-4 py-1.5 rounded-full">
-              Medical PBL Interactive Learning
+              {ui.intro.badge}
             </span>
           </motion.div>
 
@@ -75,18 +74,21 @@ export default function Intro({ caseData, advancePhase }) {
             variants={fadeUp}
             className="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full"
           >
-            {features.map(({ icon: Icon, label, desc }) => (
-              <div
-                key={label}
-                className="glass-card p-4 text-center flex flex-col items-center gap-2"
-              >
-                <div className="w-10 h-10 rounded-xl bg-sage-100 flex items-center justify-center">
-                  <Icon className="w-5 h-5 text-sage-500" />
+            {features.map(({ label, desc }, idx) => {
+              const Icon = featureIcons[idx];
+              return (
+                <div
+                  key={label}
+                  className="glass-card p-4 text-center flex flex-col items-center gap-2"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-sage-100 flex items-center justify-center">
+                    <Icon className="w-5 h-5 text-sage-500" />
+                  </div>
+                  <div className="text-sm font-semibold text-warm-800">{label}</div>
+                  <div className="text-xs text-warm-400 leading-snug">{desc}</div>
                 </div>
-                <div className="text-sm font-semibold text-warm-800">{label}</div>
-                <div className="text-xs text-warm-400 leading-snug">{desc}</div>
-              </div>
-            ))}
+              );
+            })}
           </motion.div>
 
           <motion.div variants={fadeUp} className="w-20 h-px bg-warm-200" />
@@ -94,11 +96,9 @@ export default function Intro({ caseData, advancePhase }) {
           {/* CTA */}
           <motion.div variants={fadeUp} className="flex flex-col items-center gap-3">
             <Button onClick={advancePhase} size="lg" variant="primary">
-              Begin Case
+              {ui.intro.beginCase}
             </Button>
-            <p className="text-xs text-warm-400">
-              Find a quiet space and allow yourself enough time to read carefully.
-            </p>
+            <p className="text-xs text-warm-400">{ui.intro.quietSpace}</p>
           </motion.div>
         </motion.div>
       </div>

@@ -5,10 +5,12 @@ import PhaseTransition from '../ui/PhaseTransition';
 import ProgressIndicator from '../ui/ProgressIndicator';
 import ImagePlaceholder from '../ui/ImagePlaceholder';
 import Button from '../ui/Button';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 // ── Step Card ─────────────────────────────────────────────────
 
 function StepCard({ step, stepIdx }) {
+  const { ui } = useLanguage();
   const [revealed, setRevealed] = useState(false);
 
   return (
@@ -48,7 +50,7 @@ function StepCard({ step, stepIdx }) {
               onClick={() => setRevealed(true)}
               className="text-xs font-semibold text-sage-600 hover:text-sage-700 underline underline-offset-2 transition-colors"
             >
-              Reveal correct answer
+              {ui.physicalExam.revealAnswer}
             </button>
           ) : (
             <motion.div
@@ -69,6 +71,7 @@ function StepCard({ step, stepIdx }) {
 // ── Clinical Decision ─────────────────────────────────────────
 
 function ClinicalDecision({ decision }) {
+  const { ui } = useLanguage();
   const [selected, setSelected] = useState(null);
 
   const isCorrect = (choice) => choice === decision.answer;
@@ -81,7 +84,7 @@ function ClinicalDecision({ decision }) {
       className="glass-card p-5 sm:p-6 space-y-4"
     >
       <div className="flex items-center gap-2">
-        <span className="phase-tag bg-warm-100 text-warm-600">Clinical Decision</span>
+        <span className="phase-tag bg-warm-100 text-warm-600">{ui.physicalExam.clinicalDecision}</span>
       </div>
       <p className="font-semibold text-warm-900 text-base">{decision.question}</p>
 
@@ -109,7 +112,7 @@ function ClinicalDecision({ decision }) {
             className="overflow-hidden"
           >
             <div className="glass-card-sage p-4 space-y-1">
-              <p className="text-xs font-semibold text-sage-600 uppercase tracking-wider">Answer</p>
+              <p className="text-xs font-semibold text-sage-600 uppercase tracking-wider">{ui.physicalExam.answer}</p>
               <p className="text-sm font-bold text-sage-700">{decision.answer}</p>
               <p className="text-sm text-warm-700 leading-relaxed">{decision.reasoning}</p>
             </div>
@@ -123,6 +126,7 @@ function ClinicalDecision({ decision }) {
 // ── Main Component ────────────────────────────────────────────
 
 export default function PhysicalExam({ caseData, currentPhase, advancePhase }) {
+  const { ui } = useLanguage();
   const { title, videoPlaceholder, steps, clinicalDecision } = caseData.physicalExam;
 
   return (
@@ -140,9 +144,7 @@ export default function PhysicalExam({ caseData, currentPhase, advancePhase }) {
           </div>
           <div>
             <h2 className="text-2xl font-bold text-warm-900 font-serif">{title}</h2>
-            <p className="text-warm-400 text-sm mt-1">
-              Work through each component of the HINTS exam systematically.
-            </p>
+            <p className="text-warm-400 text-sm mt-1">{ui.physicalExam.subtitle}</p>
           </div>
         </motion.div>
 
@@ -179,7 +181,7 @@ export default function PhysicalExam({ caseData, currentPhase, advancePhase }) {
           className="flex flex-col items-center gap-3 pb-12"
         >
           <Button onClick={advancePhase} size="lg">
-            Proceed to Vestibular Workup
+            {ui.physicalExam.proceed}
             <ChevronRight className="inline ml-1.5 w-4 h-4" />
           </Button>
         </motion.div>

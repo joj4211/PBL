@@ -4,6 +4,7 @@ import { User, ChevronRight, ChevronDown, CheckCircle2 } from 'lucide-react';
 import PhaseTransition from '../ui/PhaseTransition';
 import ProgressIndicator from '../ui/ProgressIndicator';
 import Button from '../ui/Button';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const stagger = {
   animate: { transition: { staggerChildren: 0.7, delayChildren: 0.3 } },
@@ -14,12 +15,13 @@ const fadeUp = {
 };
 
 function NarrativeSlide({ slide }) {
+  const { ui } = useLanguage();
   return (
     <motion.div variants={fadeUp} className="glass-card-warm p-6 sm:p-8">
       <div className="flex items-center gap-2 mb-4">
         <User className="w-4 h-4 text-warm-500" />
         <span className="text-xs font-semibold text-warm-500 uppercase tracking-wider">
-          Chief Complaint & Clinical History
+          {ui.chiefComplaint.sectionLabel}
         </span>
       </div>
       <p className="narrative-text text-base sm:text-lg leading-loose">{slide.content}</p>
@@ -95,6 +97,7 @@ function HistoryTakingSlide({ slide }) {
 }
 
 export default function ChiefComplaint({ caseData, currentPhase, advancePhase }) {
+  const { ui } = useLanguage();
   const { slides } = caseData.chiefComplaint;
   const [done, setDone] = useState(false);
 
@@ -113,11 +116,9 @@ export default function ChiefComplaint({ caseData, currentPhase, advancePhase })
           </div>
           <div>
             <h2 className="text-2xl font-bold text-warm-900 font-serif">
-              Chief Complaint & Clinical History
+              {ui.chiefComplaint.title}
             </h2>
-            <p className="text-warm-400 text-sm mt-1">
-              Read the case carefully, then explore the history-taking questions below.
-            </p>
+            <p className="text-warm-400 text-sm mt-1">{ui.chiefComplaint.subtitle}</p>
           </div>
         </motion.div>
 
@@ -147,10 +148,10 @@ export default function ChiefComplaint({ caseData, currentPhase, advancePhase })
               className="flex flex-col items-center gap-3 pb-12"
             >
               <p className="text-warm-400 text-sm italic text-center">
-                Ready to proceed to the physical examination?
+                {ui.chiefComplaint.readyToProceed}
               </p>
               <Button onClick={advancePhase} size="lg">
-                Proceed to Physical Exam
+                {ui.chiefComplaint.proceed}
                 <ChevronRight className="inline ml-1.5 w-4 h-4" />
               </Button>
             </motion.div>

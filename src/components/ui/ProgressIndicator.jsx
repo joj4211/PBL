@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
-import { PHASE_ORDER, PHASE_META, PHASES, getPhaseIndex } from '../../logic/stateMachine';
+import { PHASE_ORDER, PHASES, getPhaseIndex } from '../../logic/stateMachine';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const visiblePhases = PHASE_ORDER.filter((p) => p !== PHASES.INTRO);
 
 export default function ProgressIndicator({ currentPhase }) {
+  const { ui } = useLanguage();
   const currentIndex = getPhaseIndex(currentPhase);
 
   if (currentPhase === PHASES.INTRO) return null;
@@ -15,7 +17,7 @@ export default function ProgressIndicator({ currentPhase }) {
           const phaseIndex = getPhaseIndex(phase);
           const isDone = phaseIndex < currentIndex;
           const isCurrent = phase === currentPhase;
-          const meta = PHASE_META[phase];
+          const meta = ui.phases[phase];
 
           return (
             <div key={phase} className="flex items-center gap-0.5 sm:gap-1">

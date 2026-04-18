@@ -4,24 +4,22 @@ import { Pill, ChevronRight, CheckCircle2, XCircle } from 'lucide-react';
 import PhaseTransition from '../ui/PhaseTransition';
 import ProgressIndicator from '../ui/ProgressIndicator';
 import Button from '../ui/Button';
-
-const isCorrectFeedback = (feedback) =>
-  feedback.includes('Correct!') && !feedback.includes('Incorrect');
+import { useLanguage } from '../../contexts/LanguageContext';
 
 function DecisionStage({ stage, stageIdx, onComplete }) {
+  const { ui } = useLanguage();
   const [selected, setSelected] = useState(null);
 
   const handleSelect = (opt) => {
     if (selected) return;
     setSelected(opt);
-    // Notify parent after a short delay so user can read feedback
     setTimeout(() => onComplete(), 1200);
   };
 
   const getOptionStyle = (opt) => {
     if (!selected) return 'option-card';
     if (opt.id === selected.id) {
-      return isCorrectFeedback(opt.feedback)
+      return opt.correct
         ? 'option-card option-card-correct'
         : 'option-card option-card-incorrect';
     }
@@ -37,7 +35,7 @@ function DecisionStage({ stage, stageIdx, onComplete }) {
     >
       {/* Stage label */}
       <div className="flex items-center gap-2">
-        <span className="phase-tag bg-warm-100 text-warm-600">Stage {stageIdx + 1}</span>
+        <span className="phase-tag bg-warm-100 text-warm-600">{ui.management.stageLabel} {stageIdx + 1}</span>
         <span className="font-semibold text-warm-800">{stage.stage}</span>
       </div>
 
@@ -54,10 +52,10 @@ function DecisionStage({ stage, stageIdx, onComplete }) {
                 {opt.id}
               </span>
               <span className="text-warm-800 text-sm leading-snug flex-1">{opt.text}</span>
-              {selected?.id === opt.id && isCorrectFeedback(opt.feedback) && (
+              {selected?.id === opt.id && opt.correct && (
                 <CheckCircle2 className="flex-shrink-0 w-5 h-5 text-sage-500" />
               )}
-              {selected?.id === opt.id && !isCorrectFeedback(opt.feedback) && (
+              {selected?.id === opt.id && !opt.correct && (
                 <XCircle className="flex-shrink-0 w-5 h-5 text-red-400" />
               )}
             </div>
@@ -76,7 +74,7 @@ function DecisionStage({ stage, stageIdx, onComplete }) {
           >
             <div
               className={`rounded-xl border-2 px-4 py-3 text-sm leading-relaxed font-medium ${
-                isCorrectFeedback(selected.feedback)
+                selected.correct
                   ? 'bg-sage-50/80 border-sage-300 text-sage-700'
                   : 'bg-red-50/60 border-red-200 text-red-700'
               }`}
@@ -91,6 +89,7 @@ function DecisionStage({ stage, stageIdx, onComplete }) {
 }
 
 export default function Management({ caseData, currentPhase, advancePhase }) {
+  const { ui } = useLanguage();
   const { title, clinicalDecisionTree } = caseData.management;
   const [completedStages, setCompletedStages] = useState(0);
   const [activeStage, setActiveStage] = useState(0);
@@ -120,9 +119,7 @@ export default function Management({ caseData, currentPhase, advancePhase }) {
           </div>
           <div>
             <h2 className="text-2xl font-bold text-warm-900 font-serif">{title}</h2>
-            <p className="text-warm-400 text-sm mt-1">
-              Select the best treatment option for each stage.
-            </p>
+            <p className="text-warm-400 text-sm mt-1">{ui.management.subtitle}</p>
           </div>
         </motion.div>
 
@@ -150,7 +147,7 @@ export default function Management({ caseData, currentPhase, advancePhase }) {
               className="flex flex-col items-center gap-3 pb-12"
             >
               <Button onClick={advancePhase} size="lg">
-                View Key Learning Pearls
+                {ui.management.proceed}
                 <ChevronRight className="inline ml-1.5 w-4 h-4" />
               </Button>
             </motion.div>

@@ -6,6 +6,7 @@ import ProgressIndicator from '../ui/ProgressIndicator';
 import QuestionCard from '../ui/QuestionCard';
 import Button from '../ui/Button';
 import { calculatePhaseScore } from '../../logic/scoring';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 export default function PostTest({
   caseData,
@@ -14,6 +15,7 @@ export default function PostTest({
   getPhaseAnswers,
   advancePhase,
 }) {
+  const { ui } = useLanguage();
   const questions = caseData.postTest.questions;
   const [qIndex, setQIndex] = useState(0);
   const [phaseAnswers, setPhaseAnswers] = useState({});
@@ -52,7 +54,7 @@ export default function PostTest({
             <CheckSquare className="w-6 h-6 text-sage-500" />
           </div>
           <div>
-            <h2 className="text-2xl font-bold text-warm-900 font-serif">後測評估</h2>
+            <h2 className="text-2xl font-bold text-warm-900 font-serif">{ui.postTest.title}</h2>
             <p className="text-warm-500 text-sm mt-1 leading-relaxed whitespace-pre-line">
               {caseData.postTest.instructions}
             </p>
@@ -84,7 +86,7 @@ export default function PostTest({
                   className="mt-4 flex justify-end"
                 >
                   <Button onClick={handleNext}>
-                    {isLastQuestion ? '查看後測結果' : '下一題'}
+                    {isLastQuestion ? ui.postTest.viewResult : ui.common.next}
                     <ChevronRight className="inline ml-1 w-4 h-4" />
                   </Button>
                 </motion.div>
@@ -104,14 +106,14 @@ export default function PostTest({
                   <TrendingUp className="w-8 h-8 text-sage-500" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-warm-900 font-serif">後測完成</h3>
-                  <p className="text-warm-400 text-sm mt-1">恭喜完成本案例的所有評估！</p>
+                  <h3 className="text-2xl font-bold text-warm-900 font-serif">{ui.postTest.complete}</h3>
+                  <p className="text-warm-400 text-sm mt-1">{ui.postTest.congratulations}</p>
                 </div>
 
                 {/* Score comparison */}
                 <div className="flex justify-center gap-8">
                   <div className="text-center">
-                    <div className="text-xs font-semibold text-warm-400 mb-2">前測</div>
+                    <div className="text-xs font-semibold text-warm-400 mb-2">{ui.postTest.preLabel}</div>
                     <div className="text-4xl font-bold text-warm-500">{preScore.percentage}%</div>
                   </div>
                   <div className="flex flex-col items-center justify-center gap-1">
@@ -125,13 +127,13 @@ export default function PostTest({
                     </span>
                   </div>
                   <div className="text-center">
-                    <div className="text-xs font-semibold text-sage-500 mb-2">後測</div>
+                    <div className="text-xs font-semibold text-sage-500 mb-2">{ui.postTest.postLabel}</div>
                     <div className="text-4xl font-bold text-sage-600">{score.percentage}%</div>
                   </div>
                 </div>
 
                 <Button onClick={advancePhase} size="lg">
-                  查看學習成效報告
+                  {ui.postTest.proceed}
                   <ChevronRight className="inline ml-1.5 w-4 h-4" />
                 </Button>
               </div>

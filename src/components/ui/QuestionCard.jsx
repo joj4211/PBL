@@ -2,10 +2,12 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle2, XCircle, Lightbulb, Send } from 'lucide-react';
 import Button from './Button';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 // ── Multiple Choice ───────────────────────────────────────────
 
 function MultipleChoiceQuestion({ question, onSubmit, submitted, result }) {
+  const { ui } = useLanguage();
   const [selected, setSelected] = useState(null);
 
   const handleSelect = (id) => {
@@ -53,7 +55,7 @@ function MultipleChoiceQuestion({ question, onSubmit, submitted, result }) {
       {!submitted && (
         <div className="pt-2 flex justify-end">
           <Button onClick={handleSubmit} disabled={!selected}>
-            確認答案
+            {ui.common.confirm}
           </Button>
         </div>
       )}
@@ -72,7 +74,7 @@ function MultipleChoiceQuestion({ question, onSubmit, submitted, result }) {
               <div className="flex items-start gap-2">
                 <Lightbulb className="flex-shrink-0 w-4 h-4 text-sage-500 mt-0.5" />
                 <div>
-                  <p className="text-xs font-semibold text-sage-600 mb-1">解析</p>
+                  <p className="text-xs font-semibold text-sage-600 mb-1">{ui.questionCard.explanationLabel}</p>
                   <p className="text-sm text-warm-700 leading-relaxed">{result.explanation}</p>
                 </div>
               </div>
@@ -87,6 +89,7 @@ function MultipleChoiceQuestion({ question, onSubmit, submitted, result }) {
 // ── Text Input ────────────────────────────────────────────────
 
 function TextInputQuestion({ question, onSubmit, submitted, result }) {
+  const { ui } = useLanguage();
   const [text, setText] = useState('');
 
   const handleSubmit = () => {
@@ -107,9 +110,9 @@ function TextInputQuestion({ question, onSubmit, submitted, result }) {
   };
 
   const feedbackLabels = {
-    excellent: '優秀的臨床推理！',
-    good: '方向正確，繼續深化',
-    hint: '提示',
+    excellent: ui.questionCard.feedbackExcellent,
+    good: ui.questionCard.feedbackGood,
+    hint: ui.questionCard.feedbackHint,
   };
 
   return (
@@ -125,7 +128,7 @@ function TextInputQuestion({ question, onSubmit, submitted, result }) {
         value={text}
         onChange={(e) => setText(e.target.value)}
         disabled={submitted}
-        placeholder={question.placeholder ?? '在此輸入您的想法…'}
+        placeholder={question.placeholder ?? ui.questionCard.placeholder}
         rows={4}
         className="w-full px-4 py-3 rounded-xl border-2 border-warm-200 bg-white/50
           text-warm-800 text-sm leading-relaxed placeholder:text-warm-300
@@ -138,7 +141,7 @@ function TextInputQuestion({ question, onSubmit, submitted, result }) {
         <div className="flex justify-end">
           <Button onClick={handleSubmit} disabled={!text.trim()}>
             <Send className="w-4 h-4 mr-1.5 inline" />
-            提交答案
+            {ui.questionCard.submitButton}
           </Button>
         </div>
       )}
@@ -182,6 +185,7 @@ export default function QuestionCard({
   onSubmit,
   result = null,
 }) {
+  const { ui } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (value) => {
@@ -200,7 +204,7 @@ export default function QuestionCard({
       {/* Header */}
       <div className="flex items-center justify-between">
         <span className="phase-tag bg-sage-100 text-sage-600">
-          問題 {questionNumber} / {totalQuestions}
+          {ui.questionCard.questionLabel} {questionNumber} / {totalQuestions}
         </span>
         {submitted && (
           <motion.span
@@ -215,10 +219,10 @@ export default function QuestionCard({
             }`}
           >
             {result?.isCorrect
-              ? '✓ 正確'
+              ? ui.questionCard.correct
               : result?.feedbackLevel === 'good'
-              ? '→ 接近'
-              : '● 複習'}
+              ? ui.questionCard.close
+              : ui.questionCard.review}
           </motion.span>
         )}
       </div>

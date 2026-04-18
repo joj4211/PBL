@@ -3,6 +3,7 @@ import { Star, RefreshCw, CheckCircle2 } from 'lucide-react';
 import PhaseTransition from '../ui/PhaseTransition';
 import ProgressIndicator from '../ui/ProgressIndicator';
 import Button from '../ui/Button';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const stagger = {
   animate: { transition: { staggerChildren: 0.2, delayChildren: 0.4 } },
@@ -13,6 +14,7 @@ const fadeUp = {
 };
 
 export default function PostPearls({ caseData, currentPhase, restart }) {
+  const { ui } = useLanguage();
   const { title, finalReview } = caseData.postPearls;
 
   return (
@@ -30,9 +32,7 @@ export default function PostPearls({ caseData, currentPhase, restart }) {
           </div>
           <div>
             <h2 className="text-2xl font-bold text-warm-900 font-serif">{title}</h2>
-            <p className="text-warm-400 text-sm mt-1">
-              Consolidate what you've learned from this case.
-            </p>
+            <p className="text-warm-400 text-sm mt-1">{ui.postPearls.subtitle}</p>
           </div>
         </motion.div>
 
@@ -46,7 +46,7 @@ export default function PostPearls({ caseData, currentPhase, restart }) {
           <div className="w-16 h-16 mx-auto rounded-full bg-sage-100 flex items-center justify-center mb-3">
             <CheckCircle2 className="w-8 h-8 text-sage-500" />
           </div>
-          <h3 className="text-xl font-bold text-warm-900 font-serif">Case Complete</h3>
+          <h3 className="text-xl font-bold text-warm-900 font-serif">{ui.postPearls.caseComplete}</h3>
           <p className="text-warm-400 text-sm mt-1">
             {caseData.title}
           </p>
@@ -80,7 +80,7 @@ export default function PostPearls({ caseData, currentPhase, restart }) {
         >
           <Button onClick={restart} variant="secondary">
             <RefreshCw className="w-4 h-4 mr-2 inline" />
-            Restart Case
+            {ui.postPearls.restart}
           </Button>
         </motion.div>
       </div>

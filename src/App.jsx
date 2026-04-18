@@ -1,6 +1,8 @@
 import { AnimatePresence } from 'framer-motion';
+import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
 import { useCase } from './hooks/useCase';
 import { PHASES } from './logic/stateMachine';
+import { defaultCaseId } from './cases/index';
 import AppShell from './components/layout/AppShell';
 import Intro from './components/phases/Intro';
 import PreTest from './components/phases/PreTest';
@@ -26,8 +28,9 @@ const PhaseComponents = {
   [PHASES.POST_PEARLS]:     PostPearls,
 };
 
-export default function App() {
-  const caseState = useCase();
+function AppContent() {
+  const { lang } = useLanguage();
+  const caseState = useCase(defaultCaseId, lang);
   const { currentPhase } = caseState;
   const CurrentPhase = PhaseComponents[currentPhase];
 
@@ -37,5 +40,13 @@ export default function App() {
         <CurrentPhase key={currentPhase} {...caseState} />
       </AnimatePresence>
     </AppShell>
+  );
+}
+
+export default function App() {
+  return (
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
   );
 }

@@ -5,10 +5,12 @@ import PhaseTransition from '../ui/PhaseTransition';
 import ProgressIndicator from '../ui/ProgressIndicator';
 import ImagePlaceholder from '../ui/ImagePlaceholder';
 import Button from '../ui/Button';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 // ── PTA Card ──────────────────────────────────────────────────
 
 function PTACard({ inv }) {
+  const { ui } = useLanguage();
   const [revealed, setRevealed] = useState(false);
 
   return (
@@ -25,7 +27,7 @@ function PTACard({ inv }) {
             onClick={() => setRevealed(true)}
             className="text-xs font-semibold text-sage-600 hover:text-sage-700 underline underline-offset-2 transition-colors"
           >
-            View answer
+            {ui.workup.viewAnswer}
           </button>
         ) : (
           <motion.div
@@ -47,6 +49,7 @@ function PTACard({ inv }) {
 // ── Caloric Card ──────────────────────────────────────────────
 
 function CaloricCard({ inv }) {
+  const { ui } = useLanguage();
   const [revealed, setRevealed] = useState(false);
   const [input, setInput] = useState('');
 
@@ -61,17 +64,17 @@ function CaloricCard({ inv }) {
         />
       ))}
       <div className="glass-card-sage px-4 py-3">
-        <p className="text-xs font-semibold text-sage-600 mb-1">Observation</p>
+        <p className="text-xs font-semibold text-sage-600 mb-1">{ui.workup.observationLabel}</p>
         <p className="text-sm text-warm-700">{inv.observation}</p>
       </div>
       <div className="space-y-2">
         <p className="text-sm font-medium text-warm-800">
-          Task: {inv.task}
+          {ui.workup.taskPrefix}{inv.task}
         </p>
         <textarea
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Enter your calculation or reasoning…"
+          placeholder={ui.workup.inputPlaceholder}
           rows={3}
           className="w-full px-4 py-3 rounded-xl border-2 border-warm-200 bg-white/50 text-warm-800 text-sm
             placeholder:text-warm-300 focus:outline-none focus:border-sage-300 resize-none transition-colors"
@@ -81,7 +84,7 @@ function CaloricCard({ inv }) {
             onClick={() => setRevealed(true)}
             className="text-xs font-semibold text-sage-600 hover:text-sage-700 underline underline-offset-2 transition-colors"
           >
-            View result
+            {ui.workup.viewResult}
           </button>
         ) : (
           <motion.div
@@ -103,6 +106,7 @@ function CaloricCard({ inv }) {
 // ── VEMP Card ─────────────────────────────────────────────────
 
 function VEMPCard({ inv }) {
+  const { ui } = useLanguage();
   return (
     <div className="space-y-4">
       <ImagePlaceholder
@@ -121,12 +125,10 @@ function VEMPCard({ inv }) {
       {/* Task (no answer in JSON — students interpret the image) */}
       <div className="px-4 py-3 rounded-xl border-2 border-dashed border-warm-200 bg-warm-50/40">
         <p className="text-xs font-semibold text-warm-500 uppercase tracking-wider mb-1">
-          Thinking Task
+          {ui.workup.thinkingTask}
         </p>
         <p className="text-sm font-medium text-warm-800">{inv.task}</p>
-        <p className="text-xs text-warm-400 mt-2 italic">
-          Apply the color code above to the image and form your interpretation.
-        </p>
+        <p className="text-xs text-warm-400 mt-2 italic">{ui.workup.colorCodeHint}</p>
       </div>
     </div>
   );
@@ -172,6 +174,7 @@ function InvestigationPanel({ inv, defaultOpen = false }) {
 // ── Main Component ────────────────────────────────────────────
 
 export default function Workup({ caseData, currentPhase, advancePhase }) {
+  const { ui } = useLanguage();
   const { title, investigations } = caseData.workup;
 
   return (
@@ -189,9 +192,7 @@ export default function Workup({ caseData, currentPhase, advancePhase }) {
           </div>
           <div>
             <h2 className="text-2xl font-bold text-warm-900 font-serif">{title}</h2>
-            <p className="text-warm-400 text-sm mt-1">
-              Expand each investigation to interpret the data.
-            </p>
+            <p className="text-warm-400 text-sm mt-1">{ui.workup.subtitle}</p>
           </div>
         </motion.div>
 
@@ -212,7 +213,7 @@ export default function Workup({ caseData, currentPhase, advancePhase }) {
         {/* Proceed */}
         <div className="flex flex-col items-center gap-3 pb-12">
           <Button onClick={advancePhase} size="lg">
-            Proceed to Management
+            {ui.workup.proceed}
             <ChevronRight className="inline ml-1.5 w-4 h-4" />
           </Button>
         </div>

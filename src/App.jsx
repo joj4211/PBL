@@ -1,6 +1,8 @@
 import { AnimatePresence } from 'framer-motion';
 import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
+import EntryPage from './components/auth/EntryPage';
 import { useCase } from './hooks/useCase';
+import { useAuth } from './hooks/useAuth';
 import { PHASES } from './logic/stateMachine';
 import { defaultCaseId } from './cases/index';
 import AppShell from './components/layout/AppShell';
@@ -28,9 +30,34 @@ const PhaseComponents = {
 
 function AppContent() {
   const { lang } = useLanguage();
+  const auth = useAuth();
   const caseState = useCase(defaultCaseId, lang);
   const { currentPhase, goBackPhase, exitToIntro } = caseState;
   const CurrentPhase = PhaseComponents[currentPhase];
+
+  if (auth.loading) {
+    return (
+      <AppShell>
+        <div className="min-h-screen flex items-center justify-center px-4">
+          <div className="glass-card px-6 py-4 text-sm font-semibold text-warm-600">
+            載入中...
+          </div>
+        </div>
+      </AppShell>
+    );
+  }
+
+  if (!auth.user) {
+    return (
+      <AppShell>
+        <EntryPage
+          onSignIn={auth.signIn}
+          onSignUp={auth.signUp}
+          loading={auth.loading}
+        />
+      </AppShell>
+    );
+  }
 
   return (
     <AppShell
@@ -38,9 +65,10 @@ function AppContent() {
       showBackControl={currentPhase !== PHASES.PRE_TEST}
       onBack={goBackPhase}
       onExit={exitToIntro}
+      onSignOut={auth.signOut}
     >
       <AnimatePresence mode="wait">
-        <CurrentPhase key={currentPhase} {...caseState} />
+        <CurrentPhase key={currentPhase} {...caseState} user={auth.user} />
       </AnimatePresence>
     </AppShell>
   );

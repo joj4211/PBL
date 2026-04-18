@@ -6,6 +6,7 @@ export default function AppShell({
   showBackControl = true,
   onBack,
   onExit,
+  onSignOut,
 }) {
   const { lang, setLang } = useLanguage();
   const navLabels = lang === 'zh'
@@ -58,7 +59,15 @@ export default function AppShell({
       )}
 
       {/* Language toggle */}
-      <div className="absolute top-4 right-4 z-20">
+      <div className="absolute top-4 right-4 z-20 flex items-center gap-2">
+        {onSignOut && (
+          <button
+            onClick={onSignOut}
+            className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200"
+          >
+            {lang === 'zh' ? '登出' : 'Sign out'}
+          </button>
+        )}
         <button
           onClick={() => setLang(lang === 'zh' ? 'en' : 'zh')}
           className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200"

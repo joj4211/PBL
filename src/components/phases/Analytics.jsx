@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   BarChart,
@@ -15,6 +16,7 @@ import ProgressIndicator from '../ui/ProgressIndicator';
 import Button from '../ui/Button';
 import { calculatePhaseScore, getPerformanceInsight } from '../../logic/scoring';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { supabase } from '../../lib/supabaseClient';
 
 const stagger = {
   animate: { transition: { staggerChildren: 0.12, delayChildren: 0.2 } },
@@ -38,9 +40,14 @@ export default function Analytics({
   caseData,
   currentPhase,
   getPhaseAnswers,
-  setCurrentPhase,
+  restart,
+  user,
+  attemptSaved,
+  markAttemptSaved,
 }) {
-  const { ui } = useLanguage();
+  const { ui, lang } = useLanguage();
+  const [saveStatus, setSaveStatus] = useState('');
+  const saveStartedRef = useRef(false);
   const preAnswers = getPhaseAnswers('preTest');
   const postAnswers = getPhaseAnswers('postTest');
   const interactiveAnswers = getPhaseAnswers('interactive');
@@ -70,6 +77,56 @@ export default function Analytics({
     steady: 'bg-warm-50 border-warm-300 text-warm-700',
     reflect: 'bg-warm-50 border-warm-200 text-warm-600',
   };
+
+  useEffect(() => {
+    if (!user || attemptSaved || saveStartedRef.current) return;
+
+    let cancelled = false;
+    saveStartedRef.current = true;
+
+    async function saveAttempt() {
+      setSaveStatus('正在儲存本次學習紀錄...');
+      const { error } = await supabase.from('case_attempts').insert({
+        user_id: user.id,
+        case_id: caseData.id,
+        language: lang,
+        pre_test_score: preScore.percentage,
+        interactive_score: interactiveScore.percentage,
+        post_test_score: postScore.percentage,
+        answers: {
+          preTest: preAnswers,
+          interactive: interactiveAnswers,
+          postTest: postAnswers,
+        },
+      });
+
+      if (cancelled) return;
+
+      if (error) {
+        saveStartedRef.current = false;
+        setSaveStatus(`學習紀錄儲存失敗：${error.message}`);
+        return;
+      }
+
+      markAttemptSaved();
+      setSaveStatus('本次學習紀錄已儲存。');
+    }
+
+    saveAttempt();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [
+    attemptSaved,
+    caseData.id,
+    interactiveScore.percentage,
+    lang,
+    markAttemptSaved,
+    postScore.percentage,
+    preScore.percentage,
+    user,
+  ]);
 
   return (
     <PhaseTransition>
@@ -177,10 +234,16 @@ export default function Analytics({
             </motion.div>
           )}
 
+          {saveStatus && (
+            <motion.div variants={fadeUp} className="glass-card-sage px-4 py-3">
+              <p className="text-sm font-medium text-sage-700">{saveStatus}</p>
+            </motion.div>
+          )}
+
           {/* Restart */}
           <motion.div variants={fadeUp} className="flex justify-center pt-4">
             <Button
-              onClick={() => setCurrentPhase('intro')}
+              onClick={restart}
               variant="secondary"
               size="md"
             >

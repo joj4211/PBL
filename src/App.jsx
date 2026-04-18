@@ -4,18 +4,20 @@ import { PHASES } from './logic/stateMachine';
 import AppShell from './components/layout/AppShell';
 import Intro from './components/phases/Intro';
 import PreTest from './components/phases/PreTest';
-import CaseStudy from './components/phases/CaseStudy';
-import InteractiveSession from './components/phases/InteractiveSession';
-import PostTest from './components/phases/PostTest';
-import Analytics from './components/phases/Analytics';
+import ChiefComplaint from './components/phases/ChiefComplaint';
+import PhysicalExam from './components/phases/PhysicalExam';
+import Workup from './components/phases/Workup';
+import Management from './components/phases/Management';
+import PostPearls from './components/phases/PostPearls';
 
 const PhaseComponents = {
-  [PHASES.INTRO]: Intro,
-  [PHASES.PRE_TEST]: PreTest,
-  [PHASES.CASE_STUDY]: CaseStudy,
-  [PHASES.INTERACTIVE]: InteractiveSession,
-  [PHASES.POST_TEST]: PostTest,
-  [PHASES.ANALYTICS]: Analytics,
+  [PHASES.INTRO]:           Intro,
+  [PHASES.PRE_TEST]:        PreTest,
+  [PHASES.CHIEF_COMPLAINT]: ChiefComplaint,
+  [PHASES.PHYSICAL_EXAM]:   PhysicalExam,
+  [PHASES.WORKUP]:          Workup,
+  [PHASES.MANAGEMENT]:      Management,
+  [PHASES.POST_PEARLS]:     PostPearls,
 };
 
 export default function App() {

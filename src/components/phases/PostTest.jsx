@@ -17,9 +17,12 @@ export default function PostTest({
 }) {
   const { ui } = useLanguage();
   const questions = caseData.postTest.questions;
+  const savedPostAnswers = getPhaseAnswers('postTest');
   const [qIndex, setQIndex] = useState(0);
-  const [phaseAnswers, setPhaseAnswers] = useState({});
-  const [showSummary, setShowSummary] = useState(false);
+  const [phaseAnswers, setPhaseAnswers] = useState(savedPostAnswers);
+  const [showSummary, setShowSummary] = useState(
+    () => Object.keys(savedPostAnswers).length === questions.length
+  );
 
   const currentQuestion = questions[qIndex];
   const isLastQuestion = qIndex === questions.length - 1;

@@ -11,7 +11,7 @@ export default function ProgressIndicator({ currentPhase }) {
   if (currentPhase === PHASES.INTRO) return null;
 
   return (
-    <div className="w-full px-4 pt-5 pb-1 flex justify-center">
+    <div className="w-full px-4 pt-16 sm:pt-5 pb-1 flex justify-center">
       <div className="flex items-center gap-0.5 sm:gap-1">
         {visiblePhases.map((phase, i) => {
           const phaseIndex = getPhaseIndex(phase);

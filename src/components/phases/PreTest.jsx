@@ -8,10 +8,10 @@ import { useLanguage } from '../../contexts/LanguageContext';
 
 // ── Single MC Question ────────────────────────────────────────
 
-function MCQuestion({ question, onDone }) {
+function MCQuestion({ question, onDone, savedResult = null }) {
   const { ui } = useLanguage();
-  const [selected, setSelected] = useState(null);
-  const [result, setResult] = useState(null);
+  const [selected, setSelected] = useState(savedResult?.selectedId ?? null);
+  const [result, setResult] = useState(savedResult);
 
   const handleSelect = (id) => {
     if (result) return;
@@ -75,11 +75,20 @@ function MCQuestion({ question, onDone }) {
 
 // ── PreTest Phase ─────────────────────────────────────────────
 
-export default function PreTest({ caseData, currentPhase, advancePhase, submitAnswer }) {
+export default function PreTest({
+  caseData,
+  currentPhase,
+  advancePhase,
+  submitAnswer,
+  getPhaseAnswers,
+}) {
   const { ui } = useLanguage();
   const questions = caseData.preTest.questions;
+  const savedAnswers = getPhaseAnswers('preTest');
   const [qIndex, setQIndex] = useState(0);
-  const [doneAnswers, setDoneAnswers] = useState([]);
+  const [doneAnswers, setDoneAnswers] = useState(() =>
+    questions.map((q) => savedAnswers[q.id] ?? null)
+  );
   const [showSummary, setShowSummary] = useState(false);
 
   const currentQuestion = questions[qIndex];
@@ -152,6 +161,7 @@ export default function PreTest({ caseData, currentPhase, advancePhase, submitAn
                 key={currentQuestion.id}
                 question={currentQuestion}
                 onDone={handleDone}
+                savedResult={doneAnswers[qIndex]}
               />
 
               {currentAnswered && (

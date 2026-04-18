@@ -11,13 +11,17 @@ export default function InteractiveSession({
   caseData,
   currentPhase,
   submitAnswer,
+  getPhaseAnswers,
   advancePhase,
 }) {
   const { ui } = useLanguage();
   const questions = caseData.interactive.questions;
+  const savedResults = getPhaseAnswers('interactive');
   const [qIndex, setQIndex] = useState(0);
-  const [results, setResults] = useState({});
-  const [showSummary, setShowSummary] = useState(false);
+  const [results, setResults] = useState(savedResults);
+  const [showSummary, setShowSummary] = useState(
+    () => Object.keys(savedResults).length === questions.length
+  );
 
   const currentQuestion = questions[qIndex];
   const isLastQuestion = qIndex === questions.length - 1;

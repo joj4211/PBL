@@ -5,8 +5,12 @@
   "coverDescription": "Target Learners: PGY Residents / Medical Students\n\nEducational Goal: Differentiate peripheral from central vertigo (HINTS exam), interpret Caloric canal paresis, and understand VEMP in localizing vestibular nerve involvement.",
   "estimatedTime": "30–45 min",
   "difficulty": "Intermediate",
-  "tags": ["ENT", "Emergency", "HINTS", "Vertigo"],
-
+  "tags": [
+    "ENT",
+    "Emergency",
+    "HINTS",
+    "Vertigo"
+  ],
   "preTest": {
     "title": "Pre-Test (Baseline Assessment)",
     "instructions": "Before we begin the case, answer the following question to assess your baseline knowledge.",
@@ -16,16 +20,28 @@
         "type": "multiple-choice",
         "text": "A patient presents with acute onset continuous vertigo, nausea, and spontaneous left-beating nystagmus. Which finding would most strongly suggest a peripheral etiology?",
         "options": [
-          { "id": "A", "text": "(A) Vertical nystagmus." },
-          { "id": "B", "text": "(B) A corrective \"catch-up\" saccade during the Head Impulse Test (HIT) to the right.", "correct": true },
-          { "id": "C", "text": "(C) Skew deviation (vertical misalignment of the eyes)." },
-          { "id": "D", "text": "(D) Nystagmus that changes direction with gaze." }
+          {
+            "id": "A",
+            "text": "Vertical nystagmus."
+          },
+          {
+            "id": "B",
+            "text": "A corrective \"catch-up\" saccade during the Head Impulse Test (HIT) to the right.",
+            "correct": true
+          },
+          {
+            "id": "C",
+            "text": "Skew deviation (vertical misalignment of the eyes)."
+          },
+          {
+            "id": "D",
+            "text": "Nystagmus that changes direction with gaze."
+          }
         ],
         "explanation": null
       }
     ]
   },
-
   "chiefComplaint": {
     "slides": [
       {
@@ -55,7 +71,6 @@
       }
     ]
   },
-
   "physicalExam": {
     "title": "Physical Examination (The HINTS Exam)",
     "videoPlaceholder": {
@@ -90,7 +105,6 @@
       "answer": "Benign / Peripheral"
     }
   },
-
   "workup": {
     "title": "Vestibular Workup (Data Interpretation)",
     "investigations": [
@@ -105,7 +119,10 @@
       {
         "id": "caloric",
         "name": "Caloric Test",
-        "images": ["image_caloric_1.png", "image_caloric_2.png"],
+        "images": [
+          "image_caloric_1.png",
+          "image_caloric_2.png"
+        ],
         "aspectRatio": "4 / 3",
         "observation": "Right-side irrigation shows significantly reduced response.",
         "task": "Calculate the Canal Paresis (CP).",
@@ -125,27 +142,45 @@
       }
     ]
   },
-
   "management": {
     "title": "Management & Rehabilitation",
     "clinicalDecisionTree": [
       {
         "stage": "Immediate Treatment",
         "options": [
-          { "id": "A", "text": "(A) Epley Maneuver.", "feedback": "→ Incorrect. This is not BPPV!", "correct": false },
-          { "id": "B", "text": "(B) High-dose Corticosteroids + Vestibular Suppressants (short-term).", "feedback": "→ Correct! Steroids may improve nerve recovery.", "correct": true }
+          {
+            "id": "A",
+            "text": "Epley Maneuver.",
+            "feedback": "→ Incorrect. This is not BPPV!",
+            "correct": false
+          },
+          {
+            "id": "B",
+            "text": "High-dose Corticosteroids + Vestibular Suppressants (short-term).",
+            "feedback": "→ Correct! Steroids may improve nerve recovery.",
+            "correct": true
+          }
         ]
       },
       {
         "stage": "Long-term Management",
         "options": [
-          { "id": "A", "text": "(A) Absolute bed rest.", "feedback": "→ Incorrect. Bed rest hinders central compensation.", "correct": false },
-          { "id": "B", "text": "(B) Early Vestibular Rehabilitation Therapy (VRT).", "feedback": "→ Correct! Early movement promotes brain adaptation.", "correct": true }
+          {
+            "id": "A",
+            "text": "Absolute bed rest.",
+            "feedback": "→ Incorrect. Bed rest hinders central compensation.",
+            "correct": false
+          },
+          {
+            "id": "B",
+            "text": "Early Vestibular Rehabilitation Therapy (VRT).",
+            "feedback": "→ Correct! Early movement promotes brain adaptation.",
+            "correct": true
+          }
         ]
       }
     ]
   },
-
   "interactive": {
     "instructions": "Use the case data to explain your clinical reasoning. Focus on peripheral vs central clues.",
     "questions": [
@@ -153,7 +188,12 @@
         "id": "interactive-q1",
         "type": "text-input",
         "text": "Which HINTS findings in this case support a peripheral vestibular lesion?",
-        "keywords": ["head impulse", "catch-up", "skew", "direction"],
+        "keywords": [
+          "head impulse",
+          "catch-up",
+          "skew",
+          "direction"
+        ],
         "hint": "Think about HIT, skew deviation, and nystagmus direction.",
         "feedbackTemplate": {
           "excellent": "Good reasoning. You connected key HINTS clues such as {keyword} with a peripheral vestibular pattern.",
@@ -165,7 +205,12 @@
         "id": "interactive-q2",
         "type": "text-input",
         "text": "Why does normal hearing make vestibular neuritis more likely than labyrinthitis?",
-        "keywords": ["hearing", "labyrinthitis", "neuritis", "cochlear"],
+        "keywords": [
+          "hearing",
+          "labyrinthitis",
+          "neuritis",
+          "cochlear"
+        ],
         "hint": "Compare vestibular-only symptoms with cochlear involvement.",
         "feedbackTemplate": {
           "excellent": "Exactly. Mentioning {keyword} shows you understand that labyrinthitis usually includes cochlear involvement.",
@@ -175,7 +220,6 @@
       }
     ]
   },
-
   "postTest": {
     "instructions": "Answer these questions after completing the case. They revisit the most important learning points.",
     "questions": [
@@ -184,10 +228,23 @@
         "type": "multiple-choice",
         "text": "In acute vestibular syndrome, which HINTS pattern is most consistent with a peripheral lesion?",
         "options": [
-          { "id": "A", "text": "(A) Normal head impulse test, direction-changing nystagmus, and skew deviation." },
-          { "id": "B", "text": "(B) Abnormal head impulse test, unidirectional nystagmus, and no skew deviation.", "correct": true },
-          { "id": "C", "text": "(C) Vertical nystagmus with severe headache." },
-          { "id": "D", "text": "(D) New focal weakness with normal vestibular testing." }
+          {
+            "id": "A",
+            "text": "Normal head impulse test, direction-changing nystagmus, and skew deviation."
+          },
+          {
+            "id": "B",
+            "text": "Abnormal head impulse test, unidirectional nystagmus, and no skew deviation.",
+            "correct": true
+          },
+          {
+            "id": "C",
+            "text": "Vertical nystagmus with severe headache."
+          },
+          {
+            "id": "D",
+            "text": "New focal weakness with normal vestibular testing."
+          }
         ],
         "explanation": "A peripheral HINTS pattern includes an abnormal head impulse test, unidirectional nystagmus, and absent skew deviation."
       },
@@ -196,22 +253,33 @@
         "type": "multiple-choice",
         "text": "Which finding would shift the diagnosis away from vestibular neuritis and toward labyrinthitis?",
         "options": [
-          { "id": "A", "text": "(A) Recent upper respiratory infection." },
-          { "id": "B", "text": "(B) Nausea and vomiting." },
-          { "id": "C", "text": "(C) Hearing loss or tinnitus.", "correct": true },
-          { "id": "D", "text": "(D) Right canal paresis on caloric testing." }
+          {
+            "id": "A",
+            "text": "Recent upper respiratory infection."
+          },
+          {
+            "id": "B",
+            "text": "Nausea and vomiting."
+          },
+          {
+            "id": "C",
+            "text": "Hearing loss or tinnitus.",
+            "correct": true
+          },
+          {
+            "id": "D",
+            "text": "Right canal paresis on caloric testing."
+          }
         ],
         "explanation": "Labyrinthitis involves the inner ear labyrinth and commonly includes cochlear symptoms such as hearing loss or tinnitus."
       }
     ]
   },
-
   "learningPoints": [
     "Use HINTS to separate peripheral vestibular neuritis from central causes in acute vestibular syndrome.",
     "Normal hearing supports vestibular neuritis over labyrinthitis.",
     "Caloric weakness and VEMP findings help localize vestibular nerve involvement."
   ],
-
   "postPearls": {
     "title": "Post-Test & Key Learning Pearls",
     "finalReview": [

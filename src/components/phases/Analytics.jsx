@@ -93,7 +93,7 @@ export default function Analytics({
         <motion.div variants={stagger} initial="initial" animate="animate" className="space-y-5">
           {/* Score overview cards */}
           <motion.div variants={fadeUp} className="grid grid-cols-3 gap-3">
-            {chartData.map(({ name, score, color }) => (
+            {chartData.map(({ name, score, color, scoreObj }) => (
               <div key={name} className="glass-card p-4 text-center">
                 <div className="text-xs font-semibold text-warm-400 mb-2">{name}</div>
                 <div

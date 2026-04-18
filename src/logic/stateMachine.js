@@ -10,7 +10,6 @@ export const PHASES = {
   INTERACTIVE:     'interactive',
   POST_TEST:       'postTest',
   ANALYTICS:       'analytics',
-  POST_PEARLS:     'postPearls',
 };
 
 export const PHASE_ORDER = [
@@ -23,12 +22,16 @@ export const PHASE_ORDER = [
   PHASES.INTERACTIVE,
   PHASES.POST_TEST,
   PHASES.ANALYTICS,
-  PHASES.POST_PEARLS,
 ];
 
 export const getNextPhase = (currentPhase) => {
   const idx = PHASE_ORDER.indexOf(currentPhase);
   return idx < PHASE_ORDER.length - 1 ? PHASE_ORDER[idx + 1] : null;
+};
+
+export const getPrevPhase = (currentPhase) => {
+  const idx = PHASE_ORDER.indexOf(currentPhase);
+  return idx > 0 ? PHASE_ORDER[idx - 1] : null;
 };
 
 export const getPhaseIndex = (phase) => PHASE_ORDER.indexOf(phase);

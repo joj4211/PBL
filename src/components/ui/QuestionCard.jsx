@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle2, XCircle, Lightbulb, Send } from 'lucide-react';
 import Button from './Button';
@@ -8,7 +8,11 @@ import { useLanguage } from '../../contexts/LanguageContext';
 
 function MultipleChoiceQuestion({ question, onSubmit, submitted, result }) {
   const { ui } = useLanguage();
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState(result?.selectedId ?? null);
+
+  useEffect(() => {
+    setSelected(result?.selectedId ?? null);
+  }, [result]);
 
   const handleSelect = (id) => {
     if (submitted) return;
@@ -90,7 +94,11 @@ function MultipleChoiceQuestion({ question, onSubmit, submitted, result }) {
 
 function TextInputQuestion({ question, onSubmit, submitted, result }) {
   const { ui } = useLanguage();
-  const [text, setText] = useState('');
+  const [text, setText] = useState(result?.inputText ?? '');
+
+  useEffect(() => {
+    setText(result?.inputText ?? '');
+  }, [result]);
 
   const handleSubmit = () => {
     if (!text.trim() || submitted) return;
@@ -186,7 +194,11 @@ export default function QuestionCard({
   result = null,
 }) {
   const { ui } = useLanguage();
-  const [submitted, setSubmitted] = useState(false);
+  const [submitted, setSubmitted] = useState(Boolean(result));
+
+  useEffect(() => {
+    setSubmitted(Boolean(result));
+  }, [result]);
 
   const handleSubmit = (value) => {
     const res = onSubmit(value);

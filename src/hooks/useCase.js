@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { PHASES, getNextPhase } from '../logic/stateMachine';
+import { PHASES, getNextPhase, getPrevPhase } from '../logic/stateMachine';
 import { scoreMultipleChoice, scoreTextInput } from '../logic/scoring';
 import { getCase, defaultCaseId } from '../cases/index';
 
@@ -12,6 +12,14 @@ export const useCase = (caseId = defaultCaseId, lang = 'zh') => {
 
   const advancePhase = useCallback(() => {
     setCurrentPhase((prev) => getNextPhase(prev) ?? prev);
+  }, []);
+
+  const goBackPhase = useCallback(() => {
+    setCurrentPhase((prev) => getPrevPhase(prev) ?? prev);
+  }, []);
+
+  const exitToIntro = useCallback(() => {
+    setCurrentPhase(PHASES.INTRO);
   }, []);
 
   const submitAnswer = useCallback((phaseId, question, value) => {
@@ -56,6 +64,8 @@ export const useCase = (caseId = defaultCaseId, lang = 'zh') => {
     currentPhase,
     preTestAnswer,
     advancePhase,
+    goBackPhase,
+    exitToIntro,
     submitAnswer,
     submitPreTest,
     getPhaseAnswers,

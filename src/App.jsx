@@ -13,7 +13,6 @@ import Management from './components/phases/Management';
 import InteractiveSession from './components/phases/InteractiveSession';
 import PostTest from './components/phases/PostTest';
 import Analytics from './components/phases/Analytics';
-import PostPearls from './components/phases/PostPearls';
 
 const PhaseComponents = {
   [PHASES.INTRO]:           Intro,
@@ -25,17 +24,21 @@ const PhaseComponents = {
   [PHASES.INTERACTIVE]:     InteractiveSession,
   [PHASES.POST_TEST]:       PostTest,
   [PHASES.ANALYTICS]:       Analytics,
-  [PHASES.POST_PEARLS]:     PostPearls,
 };
 
 function AppContent() {
   const { lang } = useLanguage();
   const caseState = useCase(defaultCaseId, lang);
-  const { currentPhase } = caseState;
+  const { currentPhase, goBackPhase, exitToIntro } = caseState;
   const CurrentPhase = PhaseComponents[currentPhase];
 
   return (
-    <AppShell>
+    <AppShell
+      showCaseControls={currentPhase !== PHASES.INTRO}
+      showBackControl={currentPhase !== PHASES.PRE_TEST}
+      onBack={goBackPhase}
+      onExit={exitToIntro}
+    >
       <AnimatePresence mode="wait">
         <CurrentPhase key={currentPhase} {...caseState} />
       </AnimatePresence>

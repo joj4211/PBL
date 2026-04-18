@@ -100,6 +100,16 @@ export default function Intro({ caseData, advancePhase }) {
             </Button>
             <p className="text-xs text-warm-400">{ui.intro.quietSpace}</p>
           </motion.div>
+
+          {onShowGallery && (
+            <motion.div variants={fadeUp}>
+              <button
+                onClick={onShowGallery}
+                className="text-xs text-warm-400/70 hover:text-warm-600 transition-colors underline underline-offset-2 opacity-60 hover:opacity-100">
+                🧪 互動頁面預覽
+              </button>
+            </motion.div>
+          )}
         </motion.div>
       </div>
     </PhaseTransition>

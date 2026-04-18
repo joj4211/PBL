@@ -7,7 +7,7 @@ import QuestionCard from '../ui/QuestionCard';
 import Button from '../ui/Button';
 import { calculatePhaseScore } from '../../logic/scoring';
 
-export default function PreTest({ caseData, currentPhase, submitAnswer, getPhaseAnswers, advancePhase }) {
+export default function PreTest({ caseData, currentPhase, submitPreTest, advancePhase }) {
   const questions = caseData.preTest.questions;
   const [qIndex, setQIndex] = useState(0);
   const [phaseAnswers, setPhaseAnswers] = useState({});
@@ -17,7 +17,7 @@ export default function PreTest({ caseData, currentPhase, submitAnswer, getPhase
   const isLastQuestion = qIndex === questions.length - 1;
 
   const handleSubmit = (value) => {
-    const result = submitAnswer('preTest', currentQuestion, value);
+    const result = submitPreTest(currentQuestion, value);
     setPhaseAnswers((prev) => ({ ...prev, [currentQuestion.id]: result }));
     return result;
   };

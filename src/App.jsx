@@ -18,6 +18,7 @@ import Management from './components/phases/Management';
 import InteractiveSession from './components/phases/InteractiveSession';
 import PostTest from './components/phases/PostTest';
 import Analytics from './components/phases/Analytics';
+import PerformanceStats from './components/pages/PerformanceStats';
 
 const PhaseComponents = {
   [PHASES.INTRO]:           Intro,
@@ -34,7 +35,7 @@ const PhaseComponents = {
 function AppContent() {
   const { lang } = useLanguage();
   const auth = useAuth();
-  const [screen, setScreen]               = useState('landing'); // 'landing' | 'topic' | 'case'
+  const [screen, setScreen]               = useState('landing'); // 'landing' | 'topic' | 'case' | 'performance-stats'
   const [selectedTopic, setSelectedTopic] = useState(null);
   const [selectedCaseId, setSelectedCaseId] = useState(defaultCaseId);
   const caseState = useCase(selectedCaseId, lang);
@@ -60,8 +61,12 @@ function AppContent() {
     setScreen('topic');
   };
 
+  if (screen === 'performance-stats') {
+    return <PerformanceStats lang={lang} onBack={handleBackToLanding} />;
+  }
+
   if (screen === 'landing') {
-    return <LandingPage lang={lang} onSelectTopic={handleSelectTopic} />;
+    return <LandingPage lang={lang} onSelectTopic={handleSelectTopic} onViewStats={() => setScreen('performance-stats')} />;
   }
 
   if (screen === 'topic') {

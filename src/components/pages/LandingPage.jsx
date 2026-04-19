@@ -60,7 +60,7 @@ const cardItem = {
   animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
 };
 
-export default function LandingPage({ lang, onSelectTopic }) {
+export default function LandingPage({ lang, onSelectTopic, onViewStats }) {
   const { setLang } = useLanguage();
   const isZh = lang === 'zh';
 
@@ -91,8 +91,16 @@ export default function LandingPage({ lang, onSelectTopic }) {
         style={{ background: 'radial-gradient(circle, #95B880, transparent 70%)', animationDelay: '4s' }}
       />
 
-      {/* Language toggle */}
-      <div className="absolute top-4 right-4 z-20">
+      {/* Stats + Language toggle */}
+      <div className="absolute top-4 right-4 z-20 flex items-center gap-2">
+        {onViewStats && (
+          <button
+            onClick={onViewStats}
+            className="text-xs font-semibold px-3 py-1.5 rounded-full border border-sage-300 bg-sage-50/80 backdrop-blur-sm text-sage-700 hover:bg-sage-100 hover:border-sage-400 transition-all duration-200"
+          >
+            {lang === 'zh' ? '📊 學習統計' : '📊 My Stats'}
+          </button>
+        )}
         <button
           onClick={() => setLang(lang === 'zh' ? 'en' : 'zh')}
           className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200"

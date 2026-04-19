@@ -9,6 +9,7 @@ export const useCase = (caseId = defaultCaseId, lang = 'zh') => {
   const [currentPhase, setCurrentPhase] = useState(PHASES.INTRO);
   const [preTestAnswer, setPreTestAnswer] = useState(null);
   const [answersByPhase, setAnswersByPhase] = useState({});
+  const [attemptSaved, setAttemptSaved] = useState(false);
 
   const advancePhase = useCallback(() => {
     setCurrentPhase((prev) => getNextPhase(prev) ?? prev);
@@ -22,6 +23,7 @@ export const useCase = (caseId = defaultCaseId, lang = 'zh') => {
     setCurrentPhase(PHASES.INTRO);
     setPreTestAnswer(null);
     setAnswersByPhase({});
+    setAttemptSaved(false);
   }, []);
 
   const submitAnswer = useCallback((phaseId, question, value) => {
@@ -59,18 +61,26 @@ export const useCase = (caseId = defaultCaseId, lang = 'zh') => {
     setCurrentPhase(PHASES.INTRO);
     setPreTestAnswer(null);
     setAnswersByPhase({});
+    setAttemptSaved(false);
+  }, []);
+
+  const markAttemptSaved = useCallback(() => {
+    setAttemptSaved(true);
   }, []);
 
   return {
     caseData,
     currentPhase,
     preTestAnswer,
+    answersByPhase,
+    attemptSaved,
     advancePhase,
     goBackPhase,
     exitToIntro,
     submitAnswer,
     submitPreTest,
     getPhaseAnswers,
+    markAttemptSaved,
     setCurrentPhase,
     restart,
   };

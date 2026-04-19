@@ -114,11 +114,8 @@ export default function InteractiveGallery({ onSelectPage, onBack }) {
           <motion.div variants={fadeUp} className="flex items-center gap-3 mb-8">
             <button onClick={onBack}
               className="flex items-center gap-1 text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 transition-all">
-              <ChevronLeft className="w-3 h-3" />返回首頁
+              <ChevronLeft className="w-3 h-3" />返回功能維護
             </button>
-            <span className="text-xs font-semibold tracking-widest uppercase text-sage-600 bg-sage-50 border border-sage-200 px-3 py-1 rounded-full">
-              互動學習模組
-            </span>
           </motion.div>
 
           <motion.div variants={fadeUp} className="mb-2">

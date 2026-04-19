@@ -14,7 +14,7 @@ const fadeUp = {
   animate: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
 };
 
-export default function Intro({ caseData, advancePhase, onShowGallery }) {
+export default function Intro({ caseData, advancePhase }) {
   const { ui } = useLanguage();
   const features = ui.intro.features;
 
@@ -100,16 +100,6 @@ export default function Intro({ caseData, advancePhase, onShowGallery }) {
             </Button>
             <p className="text-xs text-warm-400">{ui.intro.quietSpace}</p>
           </motion.div>
-
-          {onShowGallery && (
-            <motion.div variants={fadeUp}>
-              <button
-                onClick={onShowGallery}
-                className="text-xs text-warm-400/70 hover:text-warm-600 transition-colors underline underline-offset-2 opacity-60 hover:opacity-100">
-                🧪 互動頁面預覽
-              </button>
-            </motion.div>
-          )}
         </motion.div>
       </div>
     </PhaseTransition>

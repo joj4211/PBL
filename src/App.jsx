@@ -10,6 +10,7 @@ import AppShell from './components/layout/AppShell';
 import LandingPage from './components/pages/LandingPage';
 import TopicPage from './components/pages/TopicPage';
 import PerformancePage from './components/pages/PerformancePage';
+import MaintenancePage from './components/pages/MaintenancePage';
 import Intro from './components/phases/Intro';
 import PreTest from './components/phases/PreTest';
 import ChiefComplaint from './components/phases/ChiefComplaint';
@@ -56,7 +57,7 @@ const InteractivePages = {
   report:      CaseReport,
 };
 
-function AppContent({ onShowGallery }) {
+function AppContent({ onShowMaintenance }) {
   const { lang } = useLanguage();
   const auth = useAuth();
   const [screen, setScreen]               = useState('landing'); // 'landing' | 'topic' | 'performance' | 'case'
@@ -109,7 +110,7 @@ function AppContent({ onShowGallery }) {
 
   if (!auth.user) {
     return (
-      <AppShell>
+      <AppShell onShowMaintenance={onShowMaintenance}>
         <EntryPage
           onSignIn={auth.signIn}
           onSignUp={auth.signUp}
@@ -170,7 +171,6 @@ function AppContent({ onShowGallery }) {
           {...caseState}
           user={auth.user}
           onExit={handleExitCase}
-          onShowGallery={onShowGallery}
         />
       </AnimatePresence>
     </AppShell>
@@ -182,6 +182,7 @@ function AppRouter() {
   const [selectedPage, setSelectedPage] = useState(null);
 
   const handleShowGallery = () => setScreen('interactive-gallery');
+  const handleShowMaintenance = () => setScreen('maintenance');
 
   const handleSelectPage  = (pageId) => {
     setSelectedPage(pageId);
@@ -189,10 +190,22 @@ function AppRouter() {
   };
 
   const handleBackToGallery = () => setScreen('interactive-gallery');
+  const handleBackToMaintenance = () => setScreen('maintenance');
   const handleBackToMain    = () => setScreen('main');
 
+  if (screen === 'maintenance') {
+    return (
+      <AppShell>
+        <MaintenancePage
+          onBack={handleBackToMain}
+          onShowGallery={handleShowGallery}
+        />
+      </AppShell>
+    );
+  }
+
   if (screen === 'interactive-gallery') {
-    return <InteractiveGallery onSelectPage={handleSelectPage} onBack={handleBackToMain} />;
+    return <InteractiveGallery onSelectPage={handleSelectPage} onBack={handleBackToMaintenance} />;
   }
 
   if (screen === 'interactive-page' && selectedPage) {
@@ -202,7 +215,7 @@ function AppRouter() {
     }
   }
 
-  return <AppContent onShowGallery={handleShowGallery} />;
+  return <AppContent onShowMaintenance={handleShowMaintenance} />;
 }
 
 export default function App() {

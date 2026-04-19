@@ -9,6 +9,7 @@ import { defaultCaseId } from './cases/index';
 import AppShell from './components/layout/AppShell';
 import LandingPage from './components/pages/LandingPage';
 import TopicPage from './components/pages/TopicPage';
+import PerformancePage from './components/pages/PerformancePage';
 import Intro from './components/phases/Intro';
 import PreTest from './components/phases/PreTest';
 import ChiefComplaint from './components/phases/ChiefComplaint';
@@ -34,7 +35,7 @@ const PhaseComponents = {
 function AppContent() {
   const { lang } = useLanguage();
   const auth = useAuth();
-  const [screen, setScreen]               = useState('landing'); // 'landing' | 'topic' | 'case'
+  const [screen, setScreen]               = useState('landing'); // 'landing' | 'topic' | 'performance' | 'case'
   const [selectedTopic, setSelectedTopic] = useState(null);
   const [selectedCaseId, setSelectedCaseId] = useState(defaultCaseId);
   const caseState = useCase(selectedCaseId, lang);
@@ -50,6 +51,10 @@ function AppContent() {
     setScreen('case');
   };
 
+  const handleSelectPerformance = () => {
+    setScreen('performance');
+  };
+
   const handleBackToLanding = () => {
     setScreen('landing');
     setSelectedTopic(null);
@@ -60,22 +65,11 @@ function AppContent() {
     setScreen('topic');
   };
 
-  if (screen === 'landing') {
-    return <LandingPage lang={lang} onSelectTopic={handleSelectTopic} />;
-  }
-
-  if (screen === 'topic') {
-    return (
-      <TopicPage
-        topic={selectedTopic}
-        lang={lang}
-        onSelectCase={handleSelectCase}
-        onBack={handleBackToLanding}
-      />
-    );
-  }
-
-  const CurrentPhase = PhaseComponents[currentPhase];
+  const handleSignOut = async () => {
+    setScreen('landing');
+    setSelectedTopic(null);
+    await auth.signOut();
+  };
 
   if (auth.loading) {
     return (
@@ -101,16 +95,53 @@ function AppContent() {
     );
   }
 
+  if (screen === 'landing') {
+    return (
+      <LandingPage
+        lang={lang}
+        onSelectTopic={handleSelectTopic}
+        onSelectPerformance={handleSelectPerformance}
+        onSignOut={handleSignOut}
+      />
+    );
+  }
+
+  if (screen === 'topic') {
+    return (
+      <TopicPage
+        topic={selectedTopic}
+        lang={lang}
+        onSelectCase={handleSelectCase}
+        onBack={handleBackToLanding}
+        onSignOut={handleSignOut}
+      />
+    );
+  }
+
+  if (screen === 'performance') {
+    return (
+      <PerformancePage
+        user={auth.user}
+        lang={lang}
+        onBack={handleBackToLanding}
+        onSignOut={handleSignOut}
+      />
+    );
+  }
+
+  const CurrentPhase = PhaseComponents[currentPhase];
+
   return (
     <AppShell
       showCaseControls={true}
-      showBackControl={currentPhase !== PHASES.PRE_TEST}
+      showBackControl={currentPhase !== PHASES.INTRO && currentPhase !== PHASES.PRE_TEST}
+      showExitControl={currentPhase !== PHASES.ANALYTICS}
       onBack={goBackPhase}
       onExit={handleExitCase}
-      onSignOut={auth.signOut}
+      onSignOut={handleSignOut}
     >
       <AnimatePresence mode="wait">
-        <CurrentPhase key={currentPhase} {...caseState} user={auth.user} />
+        <CurrentPhase key={currentPhase} {...caseState} user={auth.user} onExit={handleExitCase} />
       </AnimatePresence>
     </AppShell>
   );

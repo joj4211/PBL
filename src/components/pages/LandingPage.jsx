@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { BarChart2 } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 const topics = [
@@ -60,7 +61,7 @@ const cardItem = {
   animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
 };
 
-export default function LandingPage({ lang, onSelectTopic }) {
+export default function LandingPage({ lang, onSelectTopic, onSelectPerformance, onSignOut }) {
   const { setLang } = useLanguage();
   const isZh = lang === 'zh';
 
@@ -69,6 +70,8 @@ export default function LandingPage({ lang, onSelectTopic }) {
     ? '以真實病例為核心，建立臨床思維。\n專為醫學生與住院醫師設計。'
     : 'Case-based learning to build clinical reasoning.\nDesigned for medical students and residents.';
   const badge      = isZh ? '互動式學習 · 即時回饋 · 雙語支援' : 'Interactive · Instant Feedback · Bilingual';
+  const statsTitle = isZh ? '表現統計' : 'Performance Stats';
+  const statsText  = isZh ? '查看五大主題的學習紀錄與平均表現' : 'View records and averages across five topic areas';
   const comingSoon = isZh ? '即將上線' : 'Coming Soon';
   const caseCount  = (n) => isZh ? `${n} 個病例` : `${n} case${n > 1 ? 's' : ''}`;
 
@@ -92,13 +95,21 @@ export default function LandingPage({ lang, onSelectTopic }) {
       />
 
       {/* Language toggle */}
-      <div className="absolute top-4 right-4 z-20">
+      <div className="absolute top-4 right-4 z-20 flex items-center gap-2">
         <button
-          onClick={() => setLang(lang === 'zh' ? 'en' : 'zh')}
+          onClick={onSignOut}
           className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200"
         >
-          {lang === 'zh' ? 'EN' : '中文'}
+          {isZh ? '登出' : 'Sign out'}
         </button>
+        <select
+          value={lang}
+          onChange={(event) => setLang(event.target.value)}
+          className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200 outline-none"
+        >
+          <option value="zh">中文</option>
+          <option value="en">English</option>
+        </select>
       </div>
 
       <div className="relative z-10 min-h-screen flex flex-col items-center px-4 py-16">
@@ -109,7 +120,7 @@ export default function LandingPage({ lang, onSelectTopic }) {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-12"
         >
-          <span className="text-xs font-semibold tracking-widest uppercase text-sage-600 bg-sage-50 border border-sage-200 px-4 py-1.5 rounded-full">
+          <span className="inline-flex max-w-full justify-center whitespace-nowrap text-[11px] sm:text-xs font-semibold tracking-[0.08em] sm:tracking-widest uppercase text-sage-600 bg-sage-50 border border-sage-200 px-3 sm:px-4 py-1.5 rounded-full">
             {badge}
           </span>
           <h1 className="mt-5 text-4xl sm:text-5xl font-bold text-warm-900 font-serif leading-tight">
@@ -127,6 +138,27 @@ export default function LandingPage({ lang, onSelectTopic }) {
           animate="animate"
           className="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
         >
+          <motion.button
+            variants={cardItem}
+            onClick={onSelectPerformance}
+            whileHover={{ scale: 1.02, boxShadow: '0 8px 32px rgba(0,0,0,0.10)' }}
+            whileTap={{ scale: 0.98 }}
+            className="glass-card p-5 text-left w-full border-2 border-sage-200 focus:outline-none focus:ring-2 focus:ring-sage-300"
+          >
+            <div className="flex items-start gap-3 mb-3">
+              <div className="w-12 h-12 rounded-xl bg-sage-100 flex items-center justify-center flex-shrink-0">
+                <BarChart2 className="w-6 h-6 text-sage-600" />
+              </div>
+              <div>
+                <div className="text-base font-bold text-sage-700">{statsTitle}</div>
+                <div className="text-xs text-warm-400 mt-0.5">{statsText}</div>
+              </div>
+            </div>
+            <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-sage-100 text-sage-700">
+              {isZh ? '查看紀錄' : 'View stats'}
+            </span>
+          </motion.button>
+
           {topics.map((topic) => {
             const c = colorMap[topic.color];
             const t = topic[lang];

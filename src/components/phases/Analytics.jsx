@@ -44,6 +44,7 @@ export default function Analytics({
   user,
   attemptSaved,
   markAttemptSaved,
+  onExit,
 }) {
   const { ui, lang } = useLanguage();
   const [saveStatus, setSaveStatus] = useState('');
@@ -240,8 +241,8 @@ export default function Analytics({
             </motion.div>
           )}
 
-          {/* Restart */}
-          <motion.div variants={fadeUp} className="flex justify-center pt-4">
+          {/* Actions */}
+          <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-3 pt-4">
             <Button
               onClick={restart}
               variant="secondary"
@@ -249,6 +250,13 @@ export default function Analytics({
             >
               <RefreshCw className="w-4 h-4 mr-2 inline" />
               {ui.analytics.restart}
+            </Button>
+            <Button
+              onClick={onExit}
+              variant="secondary"
+              size="md"
+            >
+              {lang === 'zh' ? '退出' : 'Exit'}
             </Button>
           </motion.div>
         </motion.div>

@@ -9,7 +9,7 @@ const item = {
   animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
 };
 
-export default function TopicPage({ topic, lang, onSelectCase, onBack }) {
+export default function TopicPage({ topic, lang, onSelectCase, onBack, onSignOut }) {
   const { setLang } = useLanguage();
   const isZh = lang === 'zh';
   const t = topic[lang];
@@ -41,13 +41,21 @@ export default function TopicPage({ topic, lang, onSelectCase, onBack }) {
       </div>
 
       {/* Language toggle */}
-      <div className="absolute top-4 right-4 z-20">
+      <div className="absolute top-4 right-4 z-20 flex items-center gap-2">
         <button
-          onClick={() => setLang(lang === 'zh' ? 'en' : 'zh')}
+          onClick={onSignOut}
           className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200"
         >
-          {lang === 'zh' ? 'EN' : '中文'}
+          {isZh ? '登出' : 'Sign out'}
         </button>
+        <select
+          value={lang}
+          onChange={(event) => setLang(event.target.value)}
+          className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200 outline-none"
+        >
+          <option value="zh">中文</option>
+          <option value="en">English</option>
+        </select>
       </div>
 
       <div className="relative z-10 min-h-screen flex flex-col items-center px-4 py-16">

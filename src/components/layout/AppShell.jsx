@@ -4,6 +4,7 @@ export default function AppShell({
   children,
   showCaseControls = false,
   showBackControl = true,
+  showExitControl = true,
   onBack,
   onExit,
   onSignOut,
@@ -49,12 +50,14 @@ export default function AppShell({
               {navLabels.back}
             </button>
           )}
-          <button
-            onClick={onExit}
-            className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200"
-          >
-            {navLabels.exit}
-          </button>
+          {showExitControl && (
+            <button
+              onClick={onExit}
+              className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200"
+            >
+              {navLabels.exit}
+            </button>
+          )}
         </div>
       )}
 
@@ -68,12 +71,14 @@ export default function AppShell({
             {lang === 'zh' ? '登出' : 'Sign out'}
           </button>
         )}
-        <button
-          onClick={() => setLang(lang === 'zh' ? 'en' : 'zh')}
-          className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200"
+        <select
+          value={lang}
+          onChange={(event) => setLang(event.target.value)}
+          className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200 outline-none"
         >
-          {lang === 'zh' ? 'EN' : '中文'}
-        </button>
+          <option value="zh">中文</option>
+          <option value="en">English</option>
+        </select>
       </div>
 
       <div className="relative z-10 min-h-screen flex flex-col">

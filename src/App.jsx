@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { LanguageProvider, useLanguage } from './contexts/LanguageContext';
 import EntryPage from './components/auth/EntryPage';
@@ -6,6 +7,8 @@ import { useAuth } from './hooks/useAuth';
 import { PHASES } from './logic/stateMachine';
 import { defaultCaseId } from './cases/index';
 import AppShell from './components/layout/AppShell';
+import LandingPage from './components/pages/LandingPage';
+import TopicPage from './components/pages/TopicPage';
 import Intro from './components/phases/Intro';
 import PreTest from './components/phases/PreTest';
 import ChiefComplaint from './components/phases/ChiefComplaint';
@@ -31,8 +34,47 @@ const PhaseComponents = {
 function AppContent() {
   const { lang } = useLanguage();
   const auth = useAuth();
-  const caseState = useCase(defaultCaseId, lang);
+  const [screen, setScreen]               = useState('landing'); // 'landing' | 'topic' | 'case'
+  const [selectedTopic, setSelectedTopic] = useState(null);
+  const [selectedCaseId, setSelectedCaseId] = useState(defaultCaseId);
+  const caseState = useCase(selectedCaseId, lang);
   const { currentPhase, goBackPhase, exitToIntro } = caseState;
+
+  const handleSelectTopic = (topic) => {
+    setSelectedTopic(topic);
+    setScreen('topic');
+  };
+
+  const handleSelectCase = (caseId) => {
+    setSelectedCaseId(caseId);
+    setScreen('case');
+  };
+
+  const handleBackToLanding = () => {
+    setScreen('landing');
+    setSelectedTopic(null);
+  };
+
+  const handleExitCase = () => {
+    exitToIntro();
+    setScreen('topic');
+  };
+
+  if (screen === 'landing') {
+    return <LandingPage lang={lang} onSelectTopic={handleSelectTopic} />;
+  }
+
+  if (screen === 'topic') {
+    return (
+      <TopicPage
+        topic={selectedTopic}
+        lang={lang}
+        onSelectCase={handleSelectCase}
+        onBack={handleBackToLanding}
+      />
+    );
+  }
+
   const CurrentPhase = PhaseComponents[currentPhase];
 
   if (auth.loading) {
@@ -61,10 +103,10 @@ function AppContent() {
 
   return (
     <AppShell
-      showCaseControls={currentPhase !== PHASES.INTRO}
+      showCaseControls={true}
       showBackControl={currentPhase !== PHASES.PRE_TEST}
       onBack={goBackPhase}
-      onExit={exitToIntro}
+      onExit={handleExitCase}
       onSignOut={auth.signOut}
     >
       <AnimatePresence mode="wait">

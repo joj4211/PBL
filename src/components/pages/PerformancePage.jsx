@@ -3,21 +3,12 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, BarChart2, CheckCircle2 } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { supabase } from '../../lib/supabaseClient';
-
-const topics = [
-  { id: 'infection', zh: '感染類', en: 'Infection', color: 'rose', caseIds: [] },
-  { id: 'hearing', zh: '聽力損失類', en: 'Hearing Loss', color: 'amber', caseIds: [] },
-  { id: 'dizziness', zh: '眩暈類', en: 'Dizziness', color: 'sage', caseIds: ['case_01'] },
-  { id: 'trauma', zh: '急症／外傷', en: 'Trauma / Emergency', color: 'orange', caseIds: [] },
-  { id: 'pediatric', zh: '小兒／腫瘤', en: 'Pediatric / Tumor', color: 'purple', caseIds: [] },
-];
+import { domains } from '../../config/domains';
 
 const colorMap = {
-  rose: 'bg-rose-100 text-rose-700 border-rose-200',
   amber: 'bg-amber-100 text-amber-700 border-amber-200',
   sage: 'bg-sage-100 text-sage-700 border-sage-200',
-  orange: 'bg-orange-100 text-orange-700 border-orange-200',
-  purple: 'bg-purple-100 text-purple-700 border-purple-200',
+  rose: 'bg-rose-100 text-rose-700 border-rose-200',
 };
 
 function average(values) {
@@ -38,8 +29,8 @@ export default function PerformancePage({ user, lang, onBack, onSignOut }) {
     badge: isZh ? '個人表現紀錄' : 'Personal performance',
     title: isZh ? '表現統計' : 'Performance Stats',
     subtitle: isZh
-      ? '依五大主題整理你的作答紀錄與平均表現。'
-      : 'Review your attempt history and average scores across five topic areas.',
+      ? '依耳科、鼻科、喉科整理你的作答紀錄與平均表現。'
+      : 'Review your attempt history and average scores across otology, rhinology, and laryngology.',
     attempts: isZh ? '完成次數' : 'Attempts',
     average: isZh ? '平均表現' : 'Average',
     noRecord: isZh ? '尚無紀錄' : 'No records yet',
@@ -57,7 +48,7 @@ export default function PerformancePage({ user, lang, onBack, onSignOut }) {
 
       const { data, error: queryError } = await supabase
         .from('case_attempts')
-        .select('case_id, pre_test_score, interactive_score, post_test_score')
+        .select('case_id, domain, pre_test_score, interactive_score, post_test_score')
         .eq('user_id', user.id);
 
       if (cancelled) return;
@@ -79,8 +70,10 @@ export default function PerformancePage({ user, lang, onBack, onSignOut }) {
     };
   }, [user.id]);
 
-  const topicStats = useMemo(() => topics.map((topic) => {
-    const topicAttempts = attempts.filter((attempt) => topic.caseIds.includes(attempt.case_id));
+  const topicStats = useMemo(() => domains.map((topic) => {
+    const topicAttempts = attempts.filter((attempt) => (
+      attempt.domain === topic.id || topic.cases.some((caseItem) => caseItem.id === attempt.case_id)
+    ));
     const scores = topicAttempts.map((attempt) => average([
       attempt.pre_test_score,
       attempt.interactive_score,
@@ -153,7 +146,7 @@ export default function PerformancePage({ user, lang, onBack, onSignOut }) {
           <div className="glass-card p-5 sm:p-6 mb-5 flex items-center justify-between gap-4">
             <div>
               <div className="text-sm font-semibold text-warm-500">{text.average}</div>
-              <div className="text-xs text-warm-400 mt-1">{user.email}</div>
+              <div className="text-xs text-warm-400 mt-1">{user.id}</div>
             </div>
             <div className="text-4xl font-bold text-sage-600">
               {overallAverage === null ? '--' : `${overallAverage}%`}
@@ -172,43 +165,48 @@ export default function PerformancePage({ user, lang, onBack, onSignOut }) {
 
           {!loading && !error && (
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {topicStats.map((topic, index) => (
-                <motion.div
-                  key={topic.id}
-                  initial={{ opacity: 0, y: 18 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.45, delay: index * 0.05 }}
-                  className="glass-card p-5"
-                >
-                  <div className="flex items-start justify-between gap-3">
-                    <div>
-                      <h2 className="text-lg font-bold text-warm-900">{topic[lang]}</h2>
-                      <p className="text-xs text-warm-400 mt-1">
-                        {text.attempts}：{topic.attempts}
-                      </p>
+              {topicStats.map((topic, index) => {
+                const topicText = topic[lang];
+
+                return (
+                  <motion.div
+                    key={topic.id}
+                    initial={{ opacity: 0, y: 18 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.45, delay: index * 0.05 }}
+                    className="glass-card p-5"
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <div>
+                        <h2 className="text-lg font-bold text-warm-900">{topicText.title}</h2>
+                        <p className="text-xs text-warm-400 mt-1">{topicText.subtitle}</p>
+                        <p className="text-xs text-warm-400 mt-2">
+                          {text.attempts}：{topic.attempts}
+                        </p>
+                      </div>
+                      <span className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${colorMap[topic.color]}`}>
+                        {topic.score === null ? text.noRecord : `${topic.score}%`}
+                      </span>
                     </div>
-                    <span className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${colorMap[topic.color]}`}>
-                      {topic.score === null ? text.noRecord : `${topic.score}%`}
-                    </span>
-                  </div>
 
-                  <div className="mt-5 h-2 rounded-full bg-warm-100 overflow-hidden">
-                    <div
-                      className="h-full rounded-full bg-sage-500 transition-all duration-500"
-                      style={{ width: `${topic.score ?? 0}%` }}
-                    />
-                  </div>
+                    <div className="mt-5 h-2 rounded-full bg-warm-100 overflow-hidden">
+                      <div
+                        className="h-full rounded-full bg-sage-500 transition-all duration-500"
+                        style={{ width: `${topic.score ?? 0}%` }}
+                      />
+                    </div>
 
-                  {topic.score !== null ? (
-                    <p className="mt-4 text-xs text-sage-600 font-semibold flex items-center gap-1">
-                      <CheckCircle2 className="w-3.5 h-3.5" />
-                      {text.average} {topic.score}%
-                    </p>
-                  ) : (
-                    <p className="mt-4 text-xs text-warm-400">{text.noData}</p>
-                  )}
-                </motion.div>
-              ))}
+                    {topic.score !== null ? (
+                      <p className="mt-4 text-xs text-sage-600 font-semibold flex items-center gap-1">
+                        <CheckCircle2 className="w-3.5 h-3.5" />
+                        {text.average} {topic.score}%
+                      </p>
+                    ) : (
+                      <p className="mt-4 text-xs text-warm-400">{text.noData}</p>
+                    )}
+                  </motion.div>
+                );
+              })}
             </div>
           )}
         </div>

@@ -1,61 +1,55 @@
 import { useCallback, useEffect, useState } from 'react';
 import { supabase } from '../lib/supabaseClient';
 
+const STORAGE_KEY = 'pbl_user_id';
+
+function normalizeUserId(userId) {
+  return userId.trim();
+}
+
+function makeUser(userId) {
+  return { id: userId, user_id: userId };
+}
+
 export function useAuth() {
-  const [session, setSession] = useState(null);
+  const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    let mounted = true;
-
-    supabase.auth.getSession().then(({ data }) => {
-      if (!mounted) return;
-      setSession(data.session);
-      setLoading(false);
-    });
-
-    const { data: authListener } = supabase.auth.onAuthStateChange(
-      (_event, nextSession) => {
-        setSession(nextSession);
-        setLoading(false);
-      }
-    );
-
-    return () => {
-      mounted = false;
-      authListener.subscription.unsubscribe();
-    };
+    const savedUserId = localStorage.getItem(STORAGE_KEY);
+    if (savedUserId) {
+      setUser(makeUser(savedUserId));
+    }
+    setLoading(false);
   }, []);
 
-  const signIn = useCallback(async ({ email, password }) => {
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
+  const enterWithUserId = useCallback(async ({ userId }) => {
+    const nextUserId = normalizeUserId(userId);
+    if (!nextUserId) {
+      throw new Error('請輸入 user_id。');
+    }
+
+    const { error } = await supabase
+      .from('app_users')
+      .upsert({ user_id: nextUserId }, { onConflict: 'user_id' });
+
     if (error) throw error;
+
+    localStorage.setItem(STORAGE_KEY, nextUserId);
+    setUser(makeUser(nextUserId));
   }, []);
 
-  const signUp = useCallback(async ({ email, password, displayName }) => {
-    const { error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: {
-        data: {
-          display_name: displayName,
-        },
-      },
-    });
-    if (error) throw error;
-  }, []);
-
-  const signOut = useCallback(async () => {
-    const { error } = await supabase.auth.signOut();
-    if (error) throw error;
+  const signOut = useCallback(() => {
+    localStorage.removeItem(STORAGE_KEY);
+    setUser(null);
   }, []);
 
   return {
-    user: session?.user ?? null,
-    session,
+    user,
+    session: user,
     loading,
-    signIn,
-    signUp,
+    signIn: enterWithUserId,
+    signUp: enterWithUserId,
     signOut,
   };
 }

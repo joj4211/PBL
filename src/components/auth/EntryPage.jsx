@@ -1,16 +1,13 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { BookOpenCheck, LockKeyhole, Mail, UserPlus } from 'lucide-react';
+import { BookOpenCheck, UserRound } from 'lucide-react';
 import Button from '../ui/Button';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 export default function EntryPage({ onSignIn, onSignUp, loading }) {
   const { lang } = useLanguage();
   const [mode, setMode] = useState('signIn');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [displayName, setDisplayName] = useState('');
+  const [userId, setUserId] = useState('');
   const [message, setMessage] = useState('');
   const [submitting, setSubmitting] = useState(false);
 
@@ -23,20 +20,14 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
       features: ['案例導向', '即時回饋', '表現紀錄'],
       signIn: '登入',
       signUp: '註冊',
-      displayName: '顯示名稱',
-      displayNamePlaceholder: '請輸入你的名稱',
-      password: '密碼',
-      passwordPlaceholder: '至少 6 個字元',
-      confirmPassword: '確認密碼',
-      confirmPasswordPlaceholder: '再次輸入密碼',
-      passwordMismatch: '兩次輸入的密碼不一致。',
-      signUpDone: '註冊完成。若系統要求信箱驗證，請先到信箱完成確認。',
+      userId: 'user_id',
+      userIdPlaceholder: '請輸入你的 user_id',
       failed: '操作失敗，請稍後再試。',
-      testFailed: '測試帳號登入失敗，請稍後再試。',
       processing: '處理中...',
-      createAccount: '建立帳號',
+      createAccount: '註冊並開始',
       start: '登入並開始',
       testSignIn: '使用測試帳號登入',
+      note: '不需要 email 或密碼。若 user_id 尚未建立，登入時也會自動建立資料。',
     },
     en: {
       eyebrow: 'Interactive PBL Learning',
@@ -45,58 +36,42 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
       features: ['Case based', 'Instant feedback', 'Performance records'],
       signIn: 'Sign in',
       signUp: 'Register',
-      displayName: 'Display name',
-      displayNamePlaceholder: 'Enter your name',
-      password: 'Password',
-      passwordPlaceholder: 'At least 6 characters',
-      confirmPassword: 'Confirm password',
-      confirmPasswordPlaceholder: 'Enter password again',
-      passwordMismatch: 'The two passwords do not match.',
-      signUpDone: 'Registration complete. If email confirmation is required, please confirm your email first.',
+      userId: 'user_id',
+      userIdPlaceholder: 'Enter your user_id',
       failed: 'Something went wrong. Please try again later.',
-      testFailed: 'Test account sign-in failed. Please try again later.',
       processing: 'Processing...',
-      createAccount: 'Create account',
+      createAccount: 'Register and start',
       start: 'Sign in and start',
       testSignIn: 'Use test account',
+      note: 'No email or password required. If the user_id does not exist yet, signing in will create it.',
     },
   }[lang];
 
   const resetMessage = () => setMessage('');
 
-  const handleTestSignIn = async () => {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     resetMessage();
-    setMode('signIn');
-    setEmail('joj4211@gmail.com');
-    setPassword('123456');
-    setSubmitting(true);
 
+    setSubmitting(true);
     try {
-      await onSignIn({ email: 'joj4211@gmail.com', password: '123456' });
+      if (isSignUp) {
+        await onSignUp({ userId });
+      } else {
+        await onSignIn({ userId });
+      }
     } catch (error) {
-      setMessage(error.message || text.testFailed);
+      setMessage(error.message || text.failed);
     } finally {
       setSubmitting(false);
     }
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleTestSignIn = async () => {
     resetMessage();
-
-    if (isSignUp && password !== confirmPassword) {
-      setMessage(text.passwordMismatch);
-      return;
-    }
-
     setSubmitting(true);
     try {
-      if (isSignUp) {
-        await onSignUp({ email, password, displayName });
-        setMessage(text.signUpDone);
-      } else {
-        await onSignIn({ email, password });
-      }
+      await onSignIn({ userId: 'TEST_101' });
     } catch (error) {
       setMessage(error.message || text.failed);
     } finally {
@@ -168,69 +143,23 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">
-            {isSignUp && (
-              <label className="block">
-                <span className="text-xs font-semibold text-warm-600">{text.displayName}</span>
-                <div className="mt-1.5 flex items-center gap-2 rounded-xl border-2 border-warm-200 bg-white/45 px-3 py-2.5">
-                  <UserPlus className="w-4 h-4 text-warm-400" />
-                  <input
-                    value={displayName}
-                    onChange={(e) => setDisplayName(e.target.value)}
-                    className="w-full bg-transparent text-sm text-warm-800 outline-none"
-                    placeholder={text.displayNamePlaceholder}
-                  />
-                </div>
-              </label>
-            )}
-
             <label className="block">
-              <span className="text-xs font-semibold text-warm-600">Email</span>
+              <span className="text-xs font-semibold text-warm-600">{text.userId}</span>
               <div className="mt-1.5 flex items-center gap-2 rounded-xl border-2 border-warm-200 bg-white/45 px-3 py-2.5">
-                <Mail className="w-4 h-4 text-warm-400" />
+                <UserRound className="w-4 h-4 text-warm-400" />
                 <input
-                  type="email"
                   required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={userId}
+                  onChange={(event) => setUserId(event.target.value)}
                   className="w-full bg-transparent text-sm text-warm-800 outline-none"
-                  placeholder="you@example.com"
+                  placeholder={text.userIdPlaceholder}
                 />
               </div>
             </label>
 
-            <label className="block">
-              <span className="text-xs font-semibold text-warm-600">{text.password}</span>
-              <div className="mt-1.5 flex items-center gap-2 rounded-xl border-2 border-warm-200 bg-white/45 px-3 py-2.5">
-                <LockKeyhole className="w-4 h-4 text-warm-400" />
-                <input
-                  type="password"
-                  required
-                  minLength={6}
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="w-full bg-transparent text-sm text-warm-800 outline-none"
-                  placeholder={text.passwordPlaceholder}
-                />
-              </div>
-            </label>
-
-            {isSignUp && (
-              <label className="block">
-                <span className="text-xs font-semibold text-warm-600">{text.confirmPassword}</span>
-                <div className="mt-1.5 flex items-center gap-2 rounded-xl border-2 border-warm-200 bg-white/45 px-3 py-2.5">
-                  <LockKeyhole className="w-4 h-4 text-warm-400" />
-                  <input
-                    type="password"
-                    required
-                    minLength={6}
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)}
-                    className="w-full bg-transparent text-sm text-warm-800 outline-none"
-                    placeholder={text.confirmPasswordPlaceholder}
-                  />
-                </div>
-              </label>
-            )}
+            <p className="rounded-xl border border-warm-200 bg-warm-50/60 px-4 py-3 text-xs text-warm-600 leading-relaxed">
+              {text.note}
+            </p>
 
             {message && (
               <p className="rounded-xl border border-warm-200 bg-warm-50/70 px-4 py-3 text-sm text-warm-700">
@@ -242,16 +171,14 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
               {submitting ? text.processing : isSignUp ? text.createAccount : text.start}
             </Button>
 
-            <Button
+            <button
               type="button"
-              variant="secondary"
-              size="lg"
-              className="w-full"
               onClick={handleTestSignIn}
               disabled={loading || submitting}
+              className="w-full rounded-xl border border-warm-200 bg-white/45 px-4 py-3 text-sm font-semibold text-warm-700 transition-colors hover:bg-white/70 disabled:cursor-not-allowed disabled:opacity-60"
             >
               {text.testSignIn}
-            </Button>
+            </button>
           </form>
         </section>
       </motion.div>

@@ -17,6 +17,7 @@ import Button from '../ui/Button';
 import { calculatePhaseScore, getPerformanceInsight } from '../../logic/scoring';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { supabase } from '../../lib/supabaseClient';
+import { getDomainByCaseId } from '../../config/domains';
 
 const stagger = {
   animate: { transition: { staggerChildren: 0.12, delayChildren: 0.2 } },
@@ -65,6 +66,7 @@ export default function Analytics({
     '{delta}',
     Math.abs(insight.delta)
   );
+  const domain = getDomainByCaseId(caseData.id);
 
   const chartData = [
     { name: ui.analytics.preLabel,         score: preScore.percentage,         color: '#CEB07A', scoreObj: preScore },
@@ -90,6 +92,7 @@ export default function Analytics({
       const { error } = await supabase.from('case_attempts').insert({
         user_id: user.id,
         case_id: caseData.id,
+        domain: domain.id,
         language: lang,
         pre_test_score: preScore.percentage,
         interactive_score: interactiveScore.percentage,
@@ -121,6 +124,7 @@ export default function Analytics({
   }, [
     attemptSaved,
     caseData.id,
+    domain.id,
     interactiveScore.percentage,
     lang,
     markAttemptSaved,

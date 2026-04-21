@@ -1,57 +1,7 @@
 import { motion } from 'framer-motion';
 import { BarChart2 } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
-
-const topics = [
-  {
-    id: 'infection',
-    zh: { title: '感染類', subtitle: 'Infection', tags: ['AOM', 'COM', 'Cholesteatoma', 'Otomycosis'] },
-    en: { title: 'Infection', subtitle: '感染類', tags: ['AOM', 'COM', 'Cholesteatoma', 'Otomycosis'] },
-    icon: '🦠',
-    color: 'rose',
-    cases: [],
-  },
-  {
-    id: 'hearing',
-    zh: { title: '聽力損失類', subtitle: 'Hearing Loss', tags: ['Otosclerosis', 'SSNHL', 'NIHL', 'Presbycusis'] },
-    en: { title: 'Hearing Loss', subtitle: '聽力損失類', tags: ['Otosclerosis', 'SSNHL', 'NIHL', 'Presbycusis'] },
-    icon: '👂',
-    color: 'amber',
-    cases: [],
-  },
-  {
-    id: 'dizziness',
-    zh: { title: '眩暈類', subtitle: 'Dizziness', tags: ['BPPV', "Meniere's", 'Vestibular Neuritis'] },
-    en: { title: 'Dizziness', subtitle: '眩暈類', tags: ['BPPV', "Meniere's", 'Vestibular Neuritis'] },
-    icon: '🌀',
-    color: 'sage',
-    cases: [{ id: 'case_01', zh: '前庭神經炎', en: 'Vestibular Neuritis' }],
-  },
-  {
-    id: 'trauma',
-    zh: { title: '急症／外傷', subtitle: 'Trauma / Emergency', tags: ['TM Perforation', 'Temporal Bone Fx', 'FB in ear'] },
-    en: { title: 'Trauma / Emergency', subtitle: '急症／外傷', tags: ['TM Perforation', 'Temporal Bone Fx', 'FB in ear'] },
-    icon: '🚨',
-    color: 'orange',
-    cases: [],
-  },
-  {
-    id: 'pediatric',
-    zh: { title: '小兒／腫瘤', subtitle: 'Pediatric / Tumor', tags: ['OME', 'Congenital Cholesteatoma', 'Acoustic Neuroma'] },
-    en: { title: 'Pediatric / Tumor', subtitle: '小兒／腫瘤', tags: ['OME', 'Congenital Cholesteatoma', 'Acoustic Neuroma'] },
-    icon: '🏥',
-    color: 'purple',
-    cases: [],
-  },
-];
-
-const colorMap = {
-  rose:   { border: 'border-rose-200',   iconBg: 'bg-rose-100',   text: 'text-rose-600',   tagBg: 'bg-rose-50',   tagBorder: 'border-rose-200',   countBg: 'bg-rose-100 text-rose-700' },
-  amber:  { border: 'border-amber-200',  iconBg: 'bg-amber-100',  text: 'text-amber-600',  tagBg: 'bg-amber-50',  tagBorder: 'border-amber-200',  countBg: 'bg-amber-100 text-amber-700' },
-  sage:   { border: 'border-sage-200',   iconBg: 'bg-sage-100',   text: 'text-sage-600',   tagBg: 'bg-sage-50',   tagBorder: 'border-sage-200',   countBg: 'bg-sage-100 text-sage-700' },
-  orange: { border: 'border-orange-200', iconBg: 'bg-orange-100', text: 'text-orange-600', tagBg: 'bg-orange-50', tagBorder: 'border-orange-200', countBg: 'bg-orange-100 text-orange-700' },
-  purple: { border: 'border-purple-200', iconBg: 'bg-purple-100', text: 'text-purple-600', tagBg: 'bg-purple-50', tagBorder: 'border-purple-200', countBg: 'bg-purple-100 text-purple-700' },
-};
+import { domains, domainColorMap } from '../../config/domains';
 
 const container = {
   animate: { transition: { delayChildren: 0.1, staggerChildren: 0.08 } },
@@ -71,7 +21,7 @@ export default function LandingPage({ lang, onSelectTopic, onSelectPerformance, 
     : 'Case-based learning to build clinical reasoning.\nDesigned for medical students and residents.';
   const badge      = isZh ? '互動式學習 · 即時回饋 · 雙語支援' : 'Interactive · Instant Feedback · Bilingual';
   const statsTitle = isZh ? '表現統計' : 'Performance Stats';
-  const statsText  = isZh ? '查看五大主題的學習紀錄與平均表現' : 'View records and averages across five topic areas';
+  const statsText  = isZh ? '查看耳鼻喉三大類的學習紀錄與平均表現' : 'View records and averages across otology, rhinology, and laryngology';
   const comingSoon = isZh ? '即將上線' : 'Coming Soon';
   const caseCount  = (n) => isZh ? `${n} 個病例` : `${n} case${n > 1 ? 's' : ''}`;
 
@@ -159,8 +109,8 @@ export default function LandingPage({ lang, onSelectTopic, onSelectPerformance, 
             </span>
           </motion.button>
 
-          {topics.map((topic) => {
-            const c = colorMap[topic.color];
+          {domains.map((topic) => {
+            const c = domainColorMap[topic.color];
             const t = topic[lang];
             const hasCase = topic.cases.length > 0;
 

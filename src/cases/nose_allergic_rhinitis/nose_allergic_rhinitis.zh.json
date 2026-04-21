@@ -1,0 +1,143 @@
+{
+  "id": "nose_allergic_rhinitis",
+  "title": "鼻水背後的拼圖",
+  "subtitle": "The Allergic Puzzle",
+  "description": "過敏性鼻炎分類、共病評估、診斷工具與治療決策。",
+  "estimatedTime": "20-30 分鐘",
+  "difficulty": "中階",
+  "tags": [
+    "鼻科",
+    "Allergic Rhinitis",
+    "ARIA",
+    "INCS"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: 臨床表現與疾病分類",
+      "scenario": "一位 41 歲男性初診，主訴「多年來」深受雙側鼻塞、流鼻水以及鼻涕倒流所苦，嚴重影響白天的專注力與晚上的睡眠。",
+      "media": "載入圖片：ARIA 過敏性鼻炎分類圖",
+      "question": "請參考上方 ARIA 分類圖，這位患者的症狀應被歸類為哪個區塊？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 間歇性 & 輕度 (Intermittent & Mild)"
+        },
+        {
+          "id": "B",
+          "text": "(B) 持續性 & 中重度 (Persistent & Moderate-severe)",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 間歇性 & 中重度 (Intermittent & Moderate-severe)"
+        }
+      ],
+      "feedback": "正確答案：B\n\n解析： 根據定義，持續性鼻炎 (Persistent) 為每個禮拜連續超過 4 天有症狀，且連續 4 個星期都有症狀\n\n。患者長達多年的症狀完全符合。此外，症狀嚴重程度若影響到日常活動、工作或是學業表現及睡眠，則歸類為中重度 (Moderate-severe)\n\n。"
+    },
+    {
+      "title": "Step 2/6: 深入病史與共病評估",
+      "scenario": "確認為持續性中重度鼻炎後，你準備開立處方。但在此之前，主治醫師提醒你：「不要只看著病人的鼻子！」",
+      "question": "根據「一致性過敏性呼吸道 (Unified allergic airway)」的概念，你在門診還必須常規詢問該名患者是否具有下列哪種症狀或病史？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 慢性腹瀉與腸躁症"
+        },
+        {
+          "id": "B",
+          "text": "(B) 氣喘症狀 (如喘鳴與咳嗽) 與過敏性結膜炎",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 偏頭痛與眩暈"
+        }
+      ],
+      "feedback": "正確答案：B\n\n解析： 過敏性結膜炎 (allergic conjunctivitis) 和過敏性氣喘 (allergic asthma) 都是過敏性鼻炎常見的共病\n\n。目前醫學界也逐漸有 unified allergic airway 的共識，把上下呼吸道疾病視為同一種疾病，因為有相同的流行病學與病生理機轉\n\n。"
+    },
+    {
+      "title": "Step 3/6: 診斷工具的陷阱",
+      "scenario": "你建議患者接受皮膚點刺測試 (Skin prick testing)。患者順口提到：「我昨天鼻子太癢，有吃了一顆抗組織胺 (Antihistamine)，應該不影響今天的檢查吧？」",
+      "question": "面對剛服用過抗組織胺的患者，下列處置何者最正確？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 不受影響，可以直接進行皮膚點刺測試。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 暫緩檢查，或改抽血檢測血清特異性 IgE (RAST)。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 增加過敏原注射的劑量來蓋過抗組織胺的效果。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n解析： 這是門診常見的陷阱！病人在 7-10 天前若服用過抗過敏藥物 (如 antihistamine)，會無法表現出過敏反應\n\n。若 testing 的 negative control 有反應或是 positive control 沒反應，則必須檢測血中 IgE levels\n\n。"
+    },
+    {
+      "title": "Step 4/6: 藥物治療的迷思",
+      "scenario": "患者抱怨：「我之前買過一種噴了『馬上通』的鼻噴劑，但連續噴了一個月後完全沒效，反而塞得更嚴重。你開的類固醇鼻噴劑 (INCS) 也會這樣嗎？」",
+      "media": "載入表格：Table 91.2 Pharmacological treatments",
+      "question": "你該如何向患者解釋「速效鼻噴劑」與「類固醇鼻噴劑 (INCS)」的差異？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 速效的是「局部去充血劑」，連續使用極限為 7-10 天否則會反彈；類固醇鼻噴劑則是第一線治療，需要約兩週才達最大效果。",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) 兩者都是抗組織胺，噴越久效果越差。"
+        },
+        {
+          "id": "C",
+          "text": "(C) 類固醇鼻噴劑長期使用會導致鼻黏膜變薄，不建議超過一週。"
+        }
+      ],
+      "feedback": "正確答案：A\n\n解析： 局部去充血劑 (Topical decongestants) 能迅速緩解鼻塞，但連續使用極限為 7-10 天，否則會引發反彈性血管擴張 (rebound vasodilation)\n\n。相反地，局部類固醇鼻噴劑需要一段時間（兩周）才能達到最大效果，因長期使用並無黏膜變薄之證據\n\n。"
+    },
+    {
+      "title": "Step 5/6: 內視鏡互動挑戰 (尋找阻塞元凶)",
+      "scenario": "經過衛教正確使用 INCS 三個月後，患者回診表示「雙側鼻塞」依然嚴重。你為他安排鼻咽內視鏡檢查。",
+      "media": "載入互動圖片：真實鼻內視鏡影像，設定兩個 Hotspot 點擊區",
+      "question": "請在畫面上，點擊標示出 2 個造成藥物無效的「物理性結構異常」。",
+      "constructionNote": "此步驟原始設計為互動圖片 Hotspot。現在先以施工中媒體欄位與正確解析呈現。",
+      "options": [
+        {
+          "id": "A",
+          "text": "🎯 命中 1： 向右彎曲的後段鼻中膈 (Posterior DNS to right)",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "🎯 命中 2： 慢性肥厚腫大的下鼻甲 (Bilateral CHR)",
+          "correct": true
+        }
+      ],
+      "feedback": "🎯 命中 1： 向右彎曲的後段鼻中膈 (Posterior DNS to right)\n\n🎯 命中 2： 慢性肥厚腫大的下鼻甲 (Bilateral CHR)\n\n主治醫師的臨床解析： 過敏性鼻炎的鼻鏡檢查常見鼻黏膜白且腫，covered in thin mucus\n\n。長期單側鼻塞有可能是鼻中膈彎曲等解剖異常造成\n\n。在嚴重或非典型的案例中，內視鏡檢查排除其他發炎、腫瘤疾病或解剖異常是非常重要的\n\n。"
+    },
+    {
+      "title": "Step 6/6: 最終處置與手術決策",
+      "scenario": "確認結構阻塞後，患者決定接受「雙側鼻中膈鼻道成形術與後鼻神經截斷術」。",
+      "question": "根據 ARIA 治療指引，手術在過敏性鼻炎的治療中扮演什麼角色？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 手術切除下鼻甲後，過敏性鼻炎即可根治，永不復發。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 作為第一線治療，優先於所有藥物。"
+        },
+        {
+          "id": "C",
+          "text": "(C) 減少鼻黏膜下組織的手術能改善鼻塞並增進藥物進入，但通常仍必須搭配藥物治療。",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：C\n\n解析： 減少鼻黏膜下組織的手術方法對於鼻塞具有治療效果，也能增進藥物進入的效果，但通常必須搭配藥物治療\n\n。指引也指出下鼻甲的減積手術在臨床上偶爾是有用的 (may be of use occasionally)\n\n。"
+    }
+  ]
+}

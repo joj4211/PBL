@@ -1,0 +1,148 @@
+{
+  "id": "nose_epistaxis_hht",
+  "title": "血流不止的危機：嚴重鼻出血與 HHT",
+  "subtitle": "The Unstoppable Red Tide",
+  "description": "嚴重鼻出血、CTA、SPA、填塞併發症與 HHT 治療。",
+  "estimatedTime": "20-30 分鐘",
+  "difficulty": "進階",
+  "tags": [
+    "鼻科",
+    "Epistaxis",
+    "HHT",
+    "SPA"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: 危機識讀與影像學評估 (Warning Signs & CTA)",
+      "scenario": "一位 57 歲女性，無特殊過去病史。主訴連續三天發生極度嚴重的鼻出血 (Massive epistaxis)。你在急診為她進行鼻內視鏡檢查，發現左側下鼻道、下鼻甲前方有多處活動性出血點，且左側中鼻道與上鼻道有大量湧血，懷疑是蝶竇病灶 (sphenoid sinus lesion)。",
+      "media": "載入圖片：急診 triage 監視器畫面 (BP 149/103) 與電腦斷層 (CTA) 影像",
+      "question": "面對這類「不明原因的大量流血 (Massive epistaxis)」且懷疑有後部深層病灶時，為何在急診第一時間安排「血管攝影電腦斷層 (CTA)」是保命的關鍵步驟（Warning sign）？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 為了確認鼻中膈是否彎曲，以利後續置放鼻塞紗布。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 必須排除頸動脈破裂症候群 (Carotid Blowout Syndrome) 或動脈瘤等致命性血管異常\n\n。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) CTA 是診斷單純前鼻孔出血 (Kiesselbach's area) 的黃金標準。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n主治醫師的 Tip： 遇到嚴重、反覆、異常大量的鼻出血，尤其是有頭頸癌放療病史 (NPC history) 或懷疑深部病灶時，務必小心 Carotid Blowout Syndrome 或 pseudoaneurysm\n\n。直接盲目進入開刀房可能引發大災難，因此術前切 CTA 確認沒有異常的 enhancing lesion 是非常正確的決策\n\n！"
+    },
+    {
+      "title": "Step 2/6: 尋根溯源：後鼻孔出血的解剖學 (Anatomy of Posterior Epistaxis)",
+      "scenario": "CTA 結果顯示雙側上頜竇積血 (L > R)，但沒有發現異常的血管增生病灶。由於出血量極大且源自後部鼻腔，你將患者收治入院，準備進行「雙側內視鏡鼻竇手術 (ESS) 及左側蝶顎動脈電燒術 (SPA Cauterization)」。",
+      "media": "載入圖片：Lateral nasal wall 血管解剖圖，標示 SPA 位置",
+      "question": "在進行蝶顎動脈 (Sphenopalatine Artery, SPA) 結紮或電燒前，你必須清楚它的解剖來源。SPA 是哪一條主要動脈系統的終末分支 (Terminal branch)？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 內頸動脈 (Internal Carotid Artery) -> 眼動脈 (Ophthalmic artery) -> SPA"
+        },
+        {
+          "id": "B",
+          "text": "(B) 外頸動脈 (External Carotid Artery) -> 面動脈 (Facial artery) -> SPA"
+        },
+        {
+          "id": "C",
+          "text": "(C) 外頸動脈 (External Carotid Artery) -> 內頷動脈 (Internal Maxillary Artery, IMA) -> SPA",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：C\n\n解剖複習： 後鼻腔的主要血流供應來自外頸動脈的分支。內頷動脈 (IMA) 進入翼顎窩 (pterygopalatine fossa) 後，其終末分支即為蝶顎動脈 (SPA)\n\n。SPA 穿過蝶顎孔進入鼻腔，是支配後鼻腔黏膜最主要的血管，也是後鼻孔大出血最常見的元凶\n\n。"
+    },
+    {
+      "title": "Step 3/6: 後鼻孔填塞的陷阱 (Posterior Packing Pitfalls)",
+      "scenario": "在等待進開刀房前，由於出血實在太猛烈，你暫時使用了 14Fr Foley 尿管作為後鼻孔水球填塞 (Posterior nasal packing/balloon) 來壓迫止血。",
+      "media": "載入圖片：Foley 尿管於後鼻孔水球充氣壓迫的示意圖",
+      "question": "使用 Foley balloon 進行後鼻孔填塞時，你在護理醫囑 (Order) 上必須特別註明下列哪一項重要指示，以避免嚴重的缺血併發症？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 水球必須連續打滿 50ml 的 Normal Saline 並且用力往外拉緊維持 7 天。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 每 6 小時 (Q6H) 必須釋放張力 (release tension)，且 24-48 小時後必須鬆開 balloon\n\n。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 必須同時在水中加入高濃度硝酸銀 (Silver nitrate) 進行化學燒灼。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n臨床地雷： Foley balloon 雖然能暫時止住後方出血，但持續的高壓壓迫若不每 6 小時稍微釋放張力，且放置超過 24-48 小時，極易造成鼻孔 (nostril) 及鼻咽 (NP) 黏膜的缺血性壞死 (Avascular necrosis)\n\n。"
+    },
+    {
+      "title": "Step 4/6: HHT 的特殊止血兵器 (Specific Interventions for HHT)",
+      "scenario": "在手術中，你發現左側鼻腔黏膜有多處異常擴張的微小血管叢。綜合病史，你高度懷疑患者罹患「遺傳性出血性微血管擴張症 (HHT, Hereditary Hemorrhagic Telangiectasia)」。",
+      "media": "載入圖片：內視鏡下呈現 HHT 典型的紅色毛細血管擴張病灶",
+      "question": "對於 HHT 患者鼻部多發性的微血管出血，除了傳統的 Bipolar 電燒外，文獻特別指出哪一種「雷射輔助電燒」具有相當良好的止血效果？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) CO2 Laser (二氧化碳雷射)"
+        },
+        {
+          "id": "B",
+          "text": "(B) KTP-assisted cautery (KTP 雷射)",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Excimer Laser (準分子雷射)"
+        }
+      ],
+      "feedback": "正確答案：B\n\n主治醫師的 Tip： 一般電燒 (Bipolar) 在處理 HHT 時常常會讓脆弱的黏膜越燒越爛。KTP-assisted cautery (綠光雷射) 因為對血紅素有高度選擇性吸收，能精準破壞異常擴張的血管而不傷及太多周邊正常黏膜，在 HHT 的鼻部血管出血治療上效果備受肯定\n\n。"
+    },
+    {
+      "title": "Step 5/6: 填塞物引發的全身風暴 (Complications of Packing - TSS)",
+      "scenario": "假設手術前，急診醫師曾在她的鼻腔塞滿了不可吸收的凡士林紗布 (Petroleum gauze)。術後第一天，病患突然發高燒 (>38.9℃)、血壓下降 (Hypotension)，且雙手手掌出現瀰漫性紅斑 (diffuse macular erythroderma)。",
+      "media": "載入圖片：Table - CDC's case definition of Toxic shock syndrome (發燒、低血壓、紅斑手掌脫皮)",
+      "question": "這種因為鼻腔填塞物引發的急症稱為什麼？其致病機轉為何？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 鼻肺反射 (Nasopulmonary reflex)；因過度換氣導致缺氧。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 敗血性休克；由綠膿桿菌 (Pseudomonas) 直接感染血液引起。"
+        },
+        {
+          "id": "C",
+          "text": "(C) 毒性休克症候群 (Toxic Shock Syndrome, TSS)；由葡萄球菌外毒素 (Staphylococcal exotoxin) 引起\n\n。",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：C\n\n臨床地雷： Toxic shock syndrome (TSS) 是鼻腔填塞物（尤其是傳統紗布）最可怕的併發症之一。它是由金黃色葡萄球菌的外毒素 (Staphylococcal exotoxin) 所引發的全身性免疫風暴，常在塞完 24 小時內發生，但也可能數週後才發生。這也是為什麼現在臨床上越來越傾向使用可吸收止血材 (如 FloSeal) 或儘早手術止血的原因\n\n。"
+    },
+    {
+      "title": "Step 6/6: HHT 的終極外科手段 (Ultimate Surgical Therapy for HHT)",
+      "scenario": "這次的 ESS 加上 SPA 結紮手術很成功。但你在查房時告訴患者，HHT 是一種基因疾病，未來仍有復發大出血的風險。",
+      "media": "載入圖片：鼻中膈皮瓣移植 (Septodermoplasty) 示意圖",
+      "question": "如果該名 HHT 患者未來經過多次電燒、填塞、甚至是 SPA 結紮都無法控制反覆大出血 (Refractory epistaxis)，耳鼻喉科醫師可以考慮進行哪一項終極的外科手術？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 全鼻切除術 (Total rhinectomy)"
+        },
+        {
+          "id": "B",
+          "text": "(B) 鼻黏膜皮膚移植術 (Septodermoplasty)",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 內頸動脈血管栓塞術 (ICA endovascular embolization)"
+        }
+      ],
+      "feedback": "正確答案：B\n\n術式解析： Septodermoplasty (鼻中膈皮瓣成形/移植術) 是針對頑固型 HHT 鼻出血的進階術式。作法是將容易出血的脆弱黏膜廣泛切除 (widely excise)，直到軟骨膜上層 (supramucoperichondrium)，然後使用異體移植 (allograft) 或裂層皮膚移植 (STSG) 覆蓋並縫合\n\n，藉此將脆弱的呼吸道黏膜替換成較堅韌的皮瓣，以減少未來的出血機率。"
+    }
+  ]
+}

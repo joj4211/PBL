@@ -1,0 +1,148 @@
+{
+  "id": "nose_ecrswnp",
+  "title": "The Silent Polyposis",
+  "subtitle": "Eosinophilic CRS with Nasal Polyps",
+  "description": "eCRSwNP, Type 2 CRS, imaging, biomarkers, surgical strategy, and postoperative care.",
+  "estimatedTime": "20-30 min",
+  "difficulty": "Advanced",
+  "tags": [
+    "Rhinology",
+    "CRSwNP",
+    "Type 2 CRS",
+    "FESS"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: Clinical Presentation & EPOS Criteria",
+      "scenario": "A 45-year-old man comes to clinic. He has no significant underlying disease. He reports bilateral nasal obstruction, especially on the right side, for many years. However, he denies purulent rhinorrhea, hyposmia, facial fullness or pain, postnasal drip, or allergic symptoms. His SNOT-22 total score is unusually low, only 6. However, physical examination and nasal endoscopy clearly show bilateral nasal polyps, bilateral inferior turbinate hypertrophy, and septal deviation.",
+      "media": "Load chart: EPOS Table 94.1 Clinical definition of rhinosinusitis",
+      "question": "Despite the very low SNOT-22 score and lack of symptoms such as facial pain or smell loss, does this patient meet the clinical diagnostic criteria for chronic rhinosinusitis (CRS) according to EPOS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) No. CRS requires nasal obstruction, purulent nasal discharge, and facial pain all at the same time."
+        },
+        {
+          "id": "B",
+          "text": "(B) Yes. He has a major symptom, nasal obstruction, for more than 12 weeks, plus objective endoscopic evidence of nasal polyps.",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) No. His SNOT-22 score is only 6, below the disease severity threshold."
+        }
+      ],
+      "feedback": "Correct answer: B\n\nExplanation: According to EPOS criteria, rhinosinusitis requires at least one major subjective symptom, nasal blockage/obstruction or nasal discharge, together with objective evidence on endoscopy, such as nasal polyps, or CT changes for more than 3 months.\n\nAlthough this patient has only one subjective symptom, he has clear objective bilateral nasal polyps, so the diagnosis of CRS is established."
+    },
+    {
+      "title": "Step 2/6: CT Imaging & Differential Diagnosis",
+      "scenario": "For further evaluation, you arrange sinus CT. The report shows soft tissue density in the bilateral nasal cavities, ostiomeatal complexes (OMC), bilateral ethmoid sinuses, maxillary sinuses, and sphenoid sinuses. More notably, the soft tissue contains **high density and/or faint calcification**.",
+      "media": "Load image: Figure 94.4 CT showing high-density/faint calcification within the sinuses",
+      "question": "When high-density shadows, double density signs, or calcification are seen on CT in a patient with diffuse nasal polyps, which subtype or pathologic feature is most strongly suggested?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) A specific manifestation of cystic fibrosis"
+        },
+        {
+          "id": "B",
+          "text": "(B) Eosinophilic mucin or fungal antigen deposition in allergic fungal rhinosinusitis (AFRS)",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Early bony erosion from inverted papilloma"
+        }
+      ],
+      "feedback": "Correct answer: B\n\nExplanation: Double density signs or faint calcification on CT are typical features of AFRS or aspirin-exacerbated respiratory disease (AERD). These high-density areas usually represent extremely thick granular eosinophilic mucin or fungal antigen deposition.\n\nThis suggests that a strong Type 2 immune response may be involved in this patient."
+    },
+    {
+      "title": "Step 3/6: Biomarkers & Endotyping",
+      "scenario": "To confirm your suspicion, you arrange blood tests. The pre-lab results show a total eosinophil count of 377, while IgE (109) and ECP (4.99) are within normal limits. You classify this patient as eosinophilic chronic rhinosinusitis with nasal polyps (eCRSwNP / Type 2 CRS).",
+      "media": "Load chart: Identifying Biomarkers in Type 2 CRS pie chart",
+      "question": "Regarding biomarkers in Type 2 inflammation, which statement about eosinophil cationic protein (ECP) is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) ECP is a cytotoxic protein stored in eosinophil granules and released by activated eosinophils; high preoperative levels suggest a higher risk of polyp recurrence.",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) ECP is an exotoxin found only on the surface of fungi and rises only with fungal infection."
+        },
+        {
+          "id": "C",
+          "text": "(C) If ECP is within the normal range, Type 2 inflammation can be completely excluded."
+        }
+      ],
+      "feedback": "Correct answer: A\n\nExplanation: ECP, eosinophil cationic protein, is a toxic protein stored in eosinophil granules and released by activated eosinophils. High preoperative ECP predicts a higher risk of nasal polyp recurrence after endoscopic sinus surgery (ESS).\n\nAlthough ECP is normal in this case, the peripheral blood eosinophil count of 377 still strongly suggests Type 2 inflammation, a phenotype often associated with high recurrence rates."
+    },
+    {
+      "title": "Step 4/6: Surgical Strategy - FHFESS",
+      "scenario": "Based on objective data, including severe right-sided obstruction on rhinomanometry and diffuse Type 2 inflammation, you discuss treatment with the patient and decide to arrange bilateral full-house functional endoscopic sinus surgery (Full House FESS, FHFESS) combined with septomeatoplasty.",
+      "media": "Load chart: Preferred Surgery vs Preferred Biologics flowchart",
+      "question": "For a patient like this with widespread diffuse inflammation and Type 2 / eCRS features, why does recent clinical consensus favor wide surgery such as full-house ESS or even re-boot surgery rather than simply removing local polyps?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Because extensive surgery can completely remove all allergic nerves and cure Type 2 inflammation permanently."
+        },
+        {
+          "id": "B",
+          "text": "(B) In diffuse inflammation, simply relieving local obstruction has limited value; wide surgery opens the sinus cavities so postoperative topical medications, such as steroid irrigations, can reach all sinuses effectively.",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) To prevent unilateral antrochoanal polyps from developing."
+        }
+      ],
+      "feedback": "Correct answer: B\n\nExplanation: In typical Type 2 / eCRSwNP patients, simply relieving a local blockage or removing isolated polyps is of less value, and recurrence rates are high.\n\nWide surgery such as full-house ESS or re-boot surgery is the recommended option.\n\nThe key purpose of surgery is to fully open the sinus cavities so that long-term topical anti-inflammatory therapy, such as corticosteroid irrigation, can effectively control the disease."
+    },
+    {
+      "title": "Step 5/6: Histopathology Interpretation",
+      "scenario": "The surgery is completed successfully, and the removed polyp tissue is sent for pathology. Your attending reminds you: “For eCRSwNP patients, pathology is not only about ruling out cancer. Structured histologic analysis can predict how refractory the disease may be.”",
+      "media": "Load chart: Figure 97.6 Chronic Rhinosinusitis Histopathology Report table",
+      "question": "In structured histopathology, in addition to counting eosinophils per high-power field (>10/hpf), which crystal composed of eosinophil Galectin-10 protein in tissue mucus strongly suggests severe Type 2 immune response?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Cholesterol crystals"
+        },
+        {
+          "id": "B",
+          "text": "(B) Charcot-Leyden crystals (CLCs)",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Uric acid crystals"
+        }
+      ],
+      "feedback": "Correct answer: B\n\nExplanation: Charcot-Leyden crystals (CLCs) are composed of galectin-10 protein, which is abundant in eosinophil cytoplasm.\n\nIn CRS, asthma, and allergic bronchopulmonary aspergillosis, these crystals are often found embedded in extremely thick eosinophil-rich allergic mucin and serve as a marker of severe Type 2 inflammation."
+    },
+    {
+      "title": "Step 6/6: Post-surgical Medical Management",
+      "scenario": "At follow-up, the patient’s nasal patency is markedly improved, and right-sided nasal resistance has returned to normal. However, your attending emphasizes: “Surgery only changed the drug delivery pathway. The long-term battle against Type 2 inflammation begins now.”",
+      "media": "Load image: Figure 97.3 Corticosteroid irrigations",
+      "question": "According to treatment guidelines, what is the main and effective maintenance topical anti-inflammatory therapy after surgery for this type of eCRSwNP patient?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Long-term oral macrolide antibiotics for three months"
+        },
+        {
+          "id": "B",
+          "text": "(B) Corticosteroid irrigations / steroid nasal irrigation",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Daily topical decongestants"
+        }
+      ],
+      "feedback": "Correct answer: B\n\nExplanation: Corticosteroid irrigations are the main common effective delivery mechanism for topical anti-inflammatory therapy after endoscopic sinus surgery.\n\nAfter the sinuses are opened surgically, high-volume irrigation can penetrate all opened spaces, similar to a prophylactic inhaler for asthma patients.\n\nThis can effectively suppress Type 2 inflammation and prevent polyp recurrence. For Type 2 / eCRS patients, long-term macrolides lack proven efficacy."
+    }
+  ]
+}

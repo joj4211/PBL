@@ -20,12 +20,12 @@ export default function Intro({ caseData, advancePhase }) {
 
   return (
     <PhaseTransition>
-      <div className="min-h-screen flex flex-col items-center justify-center px-4 py-16">
+      <div className="min-h-screen px-4 py-16">
         <motion.div
           variants={stagger}
           initial="initial"
           animate="animate"
-          className="w-full max-w-2xl flex flex-col items-center text-center gap-6"
+          className="w-full max-w-2xl mx-auto flex flex-col gap-6"
         >
           {/* Badge */}
           <motion.div variants={fadeUp}>
@@ -36,22 +36,22 @@ export default function Intro({ caseData, advancePhase }) {
 
           {/* Title */}
           <motion.div variants={fadeUp}>
-            <h1 className="text-4xl sm:text-5xl font-bold text-warm-900 font-serif leading-tight">
+            <h1 className="text-3xl sm:text-4xl font-bold text-warm-900 font-serif leading-tight">
               {caseData.title}
             </h1>
-            <p className="mt-3 text-lg text-warm-600 font-light">{caseData.subtitle}</p>
+            <p className="mt-2 text-base text-warm-600 font-light">{caseData.subtitle}</p>
           </motion.div>
 
           {/* Description */}
           <motion.p
             variants={fadeUp}
-            className="text-warm-500 text-sm text-left max-w-lg leading-relaxed bg-white/40 backdrop-blur-sm border border-white/60 rounded-2xl px-5 py-4 whitespace-pre-line"
+            className="text-warm-700 text-sm leading-relaxed glass-card-warm px-5 py-4 whitespace-pre-line"
           >
             {caseData.coverDescription}
           </motion.p>
 
           {/* Meta tags */}
-          <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-2">
+          <motion.div variants={fadeUp} className="flex flex-wrap gap-2">
             {caseData.tags?.map((tag) => (
               <span
                 key={tag}
@@ -94,7 +94,7 @@ export default function Intro({ caseData, advancePhase }) {
           <motion.div variants={fadeUp} className="w-20 h-px bg-warm-200" />
 
           {/* CTA */}
-          <motion.div variants={fadeUp} className="flex flex-col items-center gap-3">
+          <motion.div variants={fadeUp} className="flex flex-col items-center gap-3 pt-2">
             <Button onClick={advancePhase} size="lg" variant="primary">
               {ui.intro.beginCase}
             </Button>

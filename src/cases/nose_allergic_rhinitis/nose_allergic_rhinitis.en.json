@@ -1,0 +1,143 @@
+{
+  "id": "nose_allergic_rhinitis",
+  "title": "The Allergic Puzzle",
+  "subtitle": "Behind the Runny Nose",
+  "description": "Allergic rhinitis classification, comorbidity assessment, diagnostic pitfalls, and treatment decisions.",
+  "estimatedTime": "20-30 min",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Rhinology",
+    "Allergic Rhinitis",
+    "ARIA",
+    "INCS"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: Clinical Presentation and Disease Classification",
+      "scenario": "A 41-year-old man presents to clinic for the first time. He reports that for “many years” he has suffered from bilateral nasal obstruction, rhinorrhea, and postnasal drip, which have severely affected his daytime concentration and nighttime sleep.",
+      "media": "Load image: ARIA allergic rhinitis classification chart",
+      "question": "Based on the ARIA classification chart above, which category best describes this patient’s symptoms?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Intermittent & mild"
+        },
+        {
+          "id": "B",
+          "text": "(B) Persistent & moderate-severe",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Intermittent & moderate-severe"
+        }
+      ],
+      "feedback": "Correct answer: B\n\nExplanation: By definition, persistent rhinitis means symptoms occur for more than 4 days per week and for more than 4 consecutive weeks.\n\nThis patient’s many years of symptoms clearly fit that definition. In addition, symptoms are classified as moderate-severe when they affect daily activities, work or school performance, or sleep."
+    },
+    {
+      "title": "Step 2/6: Focused History and Comorbidity Assessment",
+      "scenario": "After confirming persistent moderate-severe rhinitis, you are preparing to prescribe treatment. Before doing so, your attending reminds you: “Do not only look at the patient’s nose!”",
+      "question": "Based on the concept of the unified allergic airway, which symptoms or history should you routinely ask about in this outpatient visit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Chronic diarrhea and irritable bowel syndrome"
+        },
+        {
+          "id": "B",
+          "text": "(B) Asthma symptoms, such as wheezing and cough, and allergic conjunctivitis",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Migraine and vertigo"
+        }
+      ],
+      "feedback": "Correct answer: B\n\nExplanation: Allergic conjunctivitis and allergic asthma are common comorbidities of allergic rhinitis.\n\nThere is also growing consensus around the unified allergic airway concept, which views upper and lower airway diseases as part of the same disease process because they share epidemiologic and pathophysiologic mechanisms."
+    },
+    {
+      "title": "Step 3/6: Pitfalls in Diagnostic Testing",
+      "scenario": "You recommend skin prick testing. The patient casually mentions, “My nose was very itchy yesterday, so I took one antihistamine tablet. That should not affect today’s test, right?”",
+      "question": "For a patient who recently took an antihistamine, which management is most appropriate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) It does not affect the test; proceed directly with skin prick testing."
+        },
+        {
+          "id": "B",
+          "text": "(B) Postpone the test, or perform serum-specific IgE testing (RAST) instead.",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Increase the allergen injection dose to overcome the effect of the antihistamine."
+        }
+      ],
+      "feedback": "Correct answer: B\n\nExplanation: This is a common outpatient pitfall. If a patient has taken anti-allergic medication, such as an antihistamine, within the previous 7-10 days, the allergic reaction may not be expressed.\n\nIf the negative control reacts or the positive control fails to react, serum IgE levels should be checked instead."
+    },
+    {
+      "title": "Step 4/6: Misconceptions About Medical Treatment",
+      "scenario": "The patient says, “I once bought a nasal spray that opened my nose immediately, but after using it continuously for a month it stopped working and my obstruction got even worse. Will the steroid nasal spray (INCS) you prescribe do the same thing?”",
+      "media": "Load table: Table 91.2 Pharmacological treatments",
+      "question": "How should you explain the difference between the “fast-acting nasal spray” and an intranasal corticosteroid spray (INCS)?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) The fast-acting spray is a topical decongestant, which should be used for no more than 7-10 days because of rebound symptoms; INCS is first-line therapy and takes about two weeks to reach maximal effect.",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) Both are antihistamines, and the longer they are used, the weaker the effect becomes."
+        },
+        {
+          "id": "C",
+          "text": "(C) Long-term INCS use thins the nasal mucosa, so it should not be used for more than one week."
+        }
+      ],
+      "feedback": "Correct answer: A\n\nExplanation: Topical decongestants can rapidly relieve nasal obstruction, but continuous use should be limited to 7-10 days; otherwise rebound vasodilation can occur.\n\nBy contrast, topical intranasal corticosteroids require time, about two weeks, to reach maximal effect, and there is no evidence that long-term use causes mucosal thinning."
+    },
+    {
+      "title": "Step 5/6: Endoscopic Interactive Challenge (Finding the Cause of Obstruction)",
+      "scenario": "After three months of education and correct INCS use, the patient returns and says his “bilateral nasal obstruction” remains severe. You arrange nasopharyngoscopy.",
+      "media": "Load interactive image: real nasal endoscopic image with two hotspot click areas",
+      "question": "On the image, identify the 2 physical structural abnormalities that explain why medication was ineffective.",
+      "constructionNote": "This step was originally designed as an interactive image hotspot task. For now, the media field and correct explanation are shown as a work-in-progress placeholder.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hit 1: Posterior deviated nasal septum to the right (Posterior DNS to right)",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "Hit 2: Chronically hypertrophic inferior turbinates (Bilateral CHR)",
+          "correct": true
+        }
+      ],
+      "feedback": "Hit 1: Posterior deviated nasal septum to the right (Posterior DNS to right)\n\nHit 2: Chronically hypertrophic inferior turbinates (Bilateral CHR)\n\nAttending’s clinical explanation: On nasal examination, allergic rhinitis commonly shows pale and swollen nasal mucosa covered in thin mucus.\n\nLong-standing unilateral nasal obstruction may be caused by an anatomic abnormality such as septal deviation.\n\nIn severe or atypical cases, endoscopic examination is very important to exclude other inflammatory disease, tumors, or anatomic abnormalities."
+    },
+    {
+      "title": "Step 6/6: Final Management and Surgical Decision-Making",
+      "scenario": "After confirming structural obstruction, the patient decides to undergo bilateral septomeatoplasty and posterior nasal neurectomy.",
+      "question": "According to the ARIA treatment guideline, what role does surgery play in the treatment of allergic rhinitis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) After inferior turbinate resection, allergic rhinitis is cured and will never recur."
+        },
+        {
+          "id": "B",
+          "text": "(B) Surgery is first-line therapy and should be prioritized over all medications."
+        },
+        {
+          "id": "C",
+          "text": "(C) Surgery that reduces submucosal tissue can improve nasal obstruction and improve drug delivery, but it usually still needs to be combined with medical therapy.",
+          "correct": true
+        }
+      ],
+      "feedback": "Correct answer: C\n\nExplanation: Surgical reduction of submucosal tissue can treat nasal obstruction and improve drug delivery, but it usually must be combined with medical therapy.\n\nThe guideline also notes that inferior turbinate reduction may occasionally be useful in clinical practice."
+    }
+  ]
+}

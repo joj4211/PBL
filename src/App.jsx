@@ -5,12 +5,13 @@ import EntryPage from './components/auth/EntryPage';
 import { useCase } from './hooks/useCase';
 import { useAuth } from './hooks/useAuth';
 import { PHASES } from './logic/stateMachine';
-import { defaultCaseId } from './cases/index';
+import { defaultCaseId, getNoseCase } from './cases/index';
 import AppShell from './components/layout/AppShell';
 import LandingPage from './components/pages/LandingPage';
 import TopicPage from './components/pages/TopicPage';
 import PerformancePage from './components/pages/PerformancePage';
 import MaintenancePage from './components/pages/MaintenancePage';
+import NoseCasePage from './components/pages/NoseCasePage';
 import Intro from './components/phases/Intro';
 import PreTest from './components/phases/PreTest';
 import ChiefComplaint from './components/phases/ChiefComplaint';
@@ -60,7 +61,7 @@ const InteractivePages = {
 function AppContent({ onShowMaintenance }) {
   const { lang } = useLanguage();
   const auth = useAuth();
-  const [screen, setScreen]               = useState('landing'); // 'landing' | 'topic' | 'performance' | 'case'
+  const [screen, setScreen]               = useState('landing'); // 'landing' | 'topic' | 'performance' | 'case' | 'noseCase'
   const [selectedTopic, setSelectedTopic] = useState(null);
   const [selectedCaseId, setSelectedCaseId] = useState(defaultCaseId);
   const caseState = useCase(selectedCaseId, lang);
@@ -72,8 +73,15 @@ function AppContent({ onShowMaintenance }) {
   };
 
   const handleSelectCase = (caseId) => {
+    const isNoseCase = Boolean(getNoseCase(caseId, lang));
+
     setSelectedCaseId(caseId);
-    setScreen('case');
+
+    if (!isNoseCase) {
+      caseState.startAtPhase(PHASES.PRE_TEST);
+    }
+
+    setScreen(isNoseCase ? 'noseCase' : 'case');
   };
 
   const handleSelectPerformance = () => {
@@ -149,6 +157,20 @@ function AppContent({ onShowMaintenance }) {
         user={auth.user}
         lang={lang}
         onBack={handleBackToLanding}
+        onSignOut={handleSignOut}
+      />
+    );
+  }
+
+  if (screen === 'noseCase') {
+    const noseCase = getNoseCase(selectedCaseId, lang);
+
+    return (
+      <NoseCasePage
+        caseData={noseCase}
+        user={auth.user}
+        lang={lang}
+        onBack={() => setScreen('topic')}
         onSignOut={handleSignOut}
       />
     );

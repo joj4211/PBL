@@ -64,6 +64,13 @@ export const useCase = (caseId = defaultCaseId, lang = 'zh') => {
     setAttemptSaved(false);
   }, []);
 
+  const startAtPhase = useCallback((phase = PHASES.INTRO) => {
+    setCurrentPhase(phase);
+    setPreTestAnswer(null);
+    setAnswersByPhase({});
+    setAttemptSaved(false);
+  }, []);
+
   const markAttemptSaved = useCallback(() => {
     setAttemptSaved(true);
   }, []);
@@ -83,5 +90,6 @@ export const useCase = (caseId = defaultCaseId, lang = 'zh') => {
     markAttemptSaved,
     setCurrentPhase,
     restart,
+    startAtPhase,
   };
 };

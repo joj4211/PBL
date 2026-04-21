@@ -5,7 +5,7 @@ export const domains = [
     en: { title: 'Otology', subtitle: '耳科', tags: ['Vertigo', 'Hearing Loss', 'Otitis', 'Vestibular'] },
     icon: '👂',
     color: 'amber',
-    cases: [{ id: 'case_01', zh: '前庭神經炎', en: 'Vestibular Neuritis' }],
+    cases: [{ id: 'ear_vestibular_neuritis', zh: '前庭神經炎', en: 'Vestibular Neuritis' }],
   },
   {
     id: 'nose',
@@ -13,7 +13,13 @@ export const domains = [
     en: { title: 'Rhinology', subtitle: '鼻科', tags: ['Rhinitis', 'Sinusitis', 'Epistaxis', 'Nasal Obstruction'] },
     icon: '👃',
     color: 'sage',
-    cases: [],
+    cases: [
+      { id: 'nose_allergic_rhinitis', zh: '鼻水背後的拼圖', en: 'The Allergic Puzzle' },
+      { id: 'nose_ecrswnp', zh: '無聲蔓延的鼻息肉', en: 'The Silent Polyposis' },
+      { id: 'nose_epistaxis_hht', zh: '血流不止的危機：嚴重鼻出血與 HHT', en: 'The Unstoppable Red Tide' },
+      { id: 'nose_npc', zh: '隱匿的危機：頸部腫塊與無聲的鼻咽癌', en: 'The Hidden Threat: Nasopharyngeal Carcinoma' },
+      { id: 'nose_caudal_deviation', zh: 'The Complex Blockage: Beyond the Mucosa', en: 'The Complex Blockage: Beyond the Mucosa' },
+    ],
   },
   {
     id: 'throat',

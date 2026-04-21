@@ -1,0 +1,148 @@
+{
+  "id": "nose_npc",
+  "title": "The Hidden Threat: Nasopharyngeal Carcinoma",
+  "subtitle": "Neck Mass and Silent NPC",
+  "description": "NPC warning signs, pathology, EBV DNA, imaging staging, treatment, and late fatal complications.",
+  "estimatedTime": "20-30 min",
+  "difficulty": "Advanced",
+  "tags": [
+    "Rhinology",
+    "NPC",
+    "EBV DNA",
+    "CCRT"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: Symptoms & Anatomy",
+      "scenario": "A 40-year-old man presents for his first clinic visit. He smokes and has no other chronic disease. He reports a painless mass on the left side of his neck that has persisted for two months and is gradually enlarging. Further questioning reveals that over the past month he has often felt fullness in the left ear and unilateral hearing loss, but he has no sore throat or toothache.",
+      "media": "Load image: nasopharyngeal surface anatomy diagram marking the Fossa of Rosenmüller and Eustachian tube orifice",
+      "question": "Given upper neck mass (Level II) plus unilateral middle ear effusion symptoms, which deep anatomic site must you carefully examine to exclude a primary malignancy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Piriform sinus"
+        },
+        {
+          "id": "B",
+          "text": "(B) Fossa of Rosenmüller",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Palatine tonsil"
+        }
+      ],
+      "feedback": "Correct answer: B\n\nAttending’s tip: Up to 70% of patients with nasopharyngeal carcinoma present with cervical lymphadenopathy, often Level II/V.\n\nTumors arising from the Fossa of Rosenmüller can easily invade the Eustachian tube opening anteriorly, causing unilateral otitis media with effusion (OME).\n\nFor unexplained persistent unilateral OME with a neck mass, nasopharyngeal endoscopy is essential."
+    },
+    {
+      "title": "Step 2/6: Pathology & WHO Classification",
+      "scenario": "You perform nasopharyngeal endoscopy in clinic and find a tumor at the left Fossa of Rosenmüller with abnormal surface microvasculature and easy contact bleeding. You immediately perform a biopsy.",
+      "media": "Load image: H&E histology showing carcinoma cells with abundant lymphocytic infiltration",
+      "question": "In areas where nasopharyngeal carcinoma is endemic, such as South China and Taiwan, more than 95% of NPC belongs to which histologic subtype, which often shows abundant CD8+ T-cell and plasma-cell infiltration under microscopy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Keratinizing squamous cell carcinoma"
+        },
+        {
+          "id": "B",
+          "text": "(B) Non-keratinizing carcinoma / lymphoepithelial carcinoma",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Adenoid cystic carcinoma"
+        }
+      ],
+      "feedback": "Correct answer: B\n\nPathology point: In endemic regions, more than 95% of NPC is non-keratinizing carcinoma. Its distinctive feature is lymphocytic infiltration around malignant cells, so it is also called lymphoepithelial carcinoma. EBV can be found in nearly all carcinoma cells of this subtype."
+    },
+    {
+      "title": "Step 3/6: Tumor Markers: EBV DNA",
+      "scenario": "Pathology confirms nasopharyngeal carcinoma, and EBV-encoded RNA (EBER) is positive. To evaluate tumor load and provide a marker for treatment response monitoring, you need to order a blood tumor marker.",
+      "media": "Load chart: comparison table of sensitivity and specificity for EBV tests",
+      "question": "Which blood test has the highest sensitivity (96%) and specificity (93%), rapidly decreases after treatment, and is currently the most practical multipurpose tumor marker for monitoring NPC recurrence and prognosis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Blood EBV IgG/IgM antibody titer"
+        },
+        {
+          "id": "B",
+          "text": "(B) Carcinoembryonic antigen (CEA)"
+        },
+        {
+          "id": "C",
+          "text": "(C) Plasma EBV DNA titer by rt-PCR",
+          "correct": true
+        }
+      ],
+      "feedback": "Correct answer: C\n\nTesting pitfall: EBV IgG/IgM only indicates prior or recent infection and is not meaningful for diagnosing NPC because most adults have been infected.\n\nBy contrast, rt-PCR detection of plasma EBV DNA is highly accurate and reflects tumor burden. If EBV DNA does not fall after treatment or rises again later, it often suggests residual local disease or distant metastasis."
+    },
+    {
+      "title": "Step 4/6: Imaging & Staging",
+      "scenario": "You need accurate AJCC 8th edition staging for this 40-year-old patient to plan intensity-modulated radiation therapy (IMRT). You must evaluate whether the tumor invades the parapharyngeal space, cranial nerves, or bone marrow.",
+      "media": "Load image: axial MRI showing tumor invasion of the parapharyngeal space",
+      "question": "To precisely define the local soft tissue extent of tumor invasion and assist 3D radiotherapy planning, which imaging modality is the gold standard and first choice for local staging?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Non-contrast CT"
+        },
+        {
+          "id": "B",
+          "text": "(B) MRI",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Bone scan"
+        }
+      ],
+      "feedback": "Correct answer: B\n\nImaging point: MRI has excellent soft-tissue resolution and is the preferred modality for NPC staging and treatment assessment. MRI can accurately evaluate parapharyngeal space invasion, perineural spread, and marrow infiltration, which is crucial for protecting important structures such as the brainstem and optic nerves and for planning modern IMRT."
+    },
+    {
+      "title": "Step 5/6: Primary Treatment Strategy",
+      "scenario": "Based on imaging and pathology, the patient is staged as Stage III (T2N2M0), with parapharyngeal space invasion and bilateral cervical lymph node metastases.",
+      "media": "Load chart: IMRT dose-painting distribution for the nasopharynx and neck",
+      "question": "For non-metastatic but advanced Stage III nasopharyngeal carcinoma, what is the internationally accepted gold standard primary treatment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Radical nasopharyngectomy plus bilateral neck dissection."
+        },
+        {
+          "id": "B",
+          "text": "(B) Induction chemotherapy alone."
+        },
+        {
+          "id": "C",
+          "text": "(C) Concurrent chemoradiotherapy (CCRT), commonly with cisplatin as the preferred chemotherapy.",
+          "correct": true
+        }
+      ],
+      "feedback": "Correct answer: C\n\nTreatment consensus: NPC is highly radiosensitive, and radiotherapy is first-line treatment. However, for high-risk Stage II and Stage III/IV disease, radiotherapy alone is insufficient. The gold standard is concurrent chemoradiotherapy (CCRT), most commonly using cisplatin with radiation.\n\nSalvage surgery is usually reserved for local recurrence after failed radiotherapy."
+    },
+    {
+      "title": "Step 6/6: Late Fatal Complications",
+      "scenario": "The patient completes CCRT successfully and achieves complete remission. Six years later, however, he suddenly has several episodes of mild epistaxis, known as sentinel bleeds, followed by massive and uncontrollable epistaxis in the emergency department with unstable blood pressure.",
+      "media": "Load image: angiography showing a ruptured aneurysm",
+      "question": "In a patient who received high-dose nasopharyngeal radiotherapy years earlier, this fatal massive bleeding most likely arises from which late complication of radiotherapy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Osteoradionecrosis of the temporal bone"
+        },
+        {
+          "id": "B",
+          "text": "(B) Internal carotid artery aneurysm / pseudoaneurysm blowout",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Radiation-induced sarcoma"
+        }
+      ],
+      "feedback": "Correct answer: B\n\nEmergency nightmare: Internal carotid artery aneurysm rupture is a rare but extremely fatal late complication after radiotherapy for NPC. The classic presentation is mild sentinel bleeding followed hours to days later by sudden massive epistaxis. Management requires rapid airway stabilization and urgent consultation with interventional radiology for endovascular stenting or embolization."
+    }
+  ]
+}

@@ -125,7 +125,7 @@ function ClinicalDecision({ decision }) {
 
 // ── Main Component ────────────────────────────────────────────
 
-export default function PhysicalExam({ caseData, currentPhase, advancePhase }) {
+export default function PhysicalExam({ caseData, currentPhase, advancePhase, lang, isAdmin, user }) {
   const { ui } = useLanguage();
   const { title, videoPlaceholder, steps, clinicalDecision } = caseData.physicalExam;
 
@@ -158,6 +158,11 @@ export default function PhysicalExam({ caseData, currentPhase, advancePhase }) {
             <ImagePlaceholder
               media={videoPlaceholder}
               type="video"
+              caseId={caseData.id}
+              lang={lang}
+              assetKey="physicalExam.videoPlaceholder"
+              isAdmin={isAdmin}
+              user={user}
             />
           </motion.div>
 

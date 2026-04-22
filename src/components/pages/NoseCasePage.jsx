@@ -19,14 +19,14 @@ function scoreAnswers(answers, steps) {
   return steps.length > 0 ? Math.round((correct / steps.length) * 100) : 0;
 }
 
-function MediaPlaceholder({ media, text }) {
+function MediaPlaceholder({ media, text, mediaContext }) {
   if (!media) return null;
 
   if (typeof media === 'string') {
-    return <ImagePlaceholder label={media} note={text.mediaNote} />;
+    return <ImagePlaceholder label={media} note={text.mediaNote} {...mediaContext} />;
   }
 
-  return <ImagePlaceholder media={media} note={media.note ?? text.mediaNote} />;
+  return <ImagePlaceholder media={media} note={media.note ?? text.mediaNote} {...mediaContext} />;
 }
 
 function NoseProgressIndicator({ currentIndex, total }) {
@@ -68,7 +68,7 @@ function NoseProgressIndicator({ currentIndex, total }) {
   );
 }
 
-export default function NoseCasePage({ caseData, user, lang, onBack, onSignOut }) {
+export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, onSignOut }) {
   const { setLang } = useLanguage();
   const [stepIndex, setStepIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
@@ -80,6 +80,13 @@ export default function NoseCasePage({ caseData, user, lang, onBack, onSignOut }
   const domainStyles = domainColorMap[domain.color] ?? domainColorMap.sage;
 
   const step = caseData.steps[stepIndex];
+  const mediaContext = {
+    caseId: caseData.id,
+    lang,
+    isAdmin,
+    user,
+    assetKey: `steps.${stepIndex}.media`,
+  };
   const selectedAnswer = answers[stepIndex] ?? null;
   const isLastStep = stepIndex === caseData.steps.length - 1;
   const correctIds = step.options.filter((option) => option.correct).map((option) => option.id);
@@ -310,7 +317,7 @@ export default function NoseCasePage({ caseData, user, lang, onBack, onSignOut }
                   </div>
 
                   <div className="mt-5 space-y-4">
-                    <MediaPlaceholder media={step.media} text={text} />
+                    <MediaPlaceholder media={step.media} text={text} mediaContext={mediaContext} />
 
                     {step.constructionNote && (
                       <p className="rounded-2xl border border-warm-200 bg-warm-50/70 px-4 py-3 text-xs text-warm-600 leading-relaxed">

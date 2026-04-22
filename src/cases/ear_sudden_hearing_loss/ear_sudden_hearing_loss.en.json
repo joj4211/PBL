@@ -1,0 +1,148 @@
+{
+  "id": "ear_sudden_hearing_loss",
+  "title": "The Silent World",
+  "subtitle": "Evaluation and salvage treatment for sudden sensorineural hearing loss",
+  "description": "Definition, prognostic factors, imaging exclusion, steroid therapy, hyperbaric oxygen therapy, and intratympanic salvage treatment for sudden sensorineural hearing loss.",
+  "estimatedTime": "20-30 min",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Otology",
+    "SSNHL",
+    "Steroid",
+    "HBOT"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: Clinical Presentation and Definition",
+      "scenario": "A 70-year-old woman is brought to the emergency department because she suddenly could not hear from her right ear starting yesterday. She also reports left-sided tinnitus. Brain CT in the emergency department has excluded hemorrhage. Pure-tone audiometry shows severe right hearing loss up to 95 dB and 60 dB in the left ear. Tympanograms are type A bilaterally, indicating normal middle-ear pressure.",
+      "media": "Load image: Pure-tone audiogram showing profound right sensorineural hearing loss",
+      "question": "According to the standard clinical definition of sudden sensorineural hearing loss (SSNHL), which statement is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) More than 20 dB hearing loss at a single frequency within 1 week."
+        },
+        {
+          "id": "B",
+          "text": "(B) Conductive hearing loss greater than 40 dB with tympanic membrane rupture within 24 hours."
+        },
+        {
+          "id": "C",
+          "text": "(C) More than 30 dB hearing loss over 3 contiguous audiometric frequencies within 72 hours.",
+          "correct": true
+        }
+      ],
+      "feedback": "Correct answer: C\n\nClinical definition: SSNHL is an otologic emergency. The standard definition is rapid onset within 72 hours with more than 30 dB hearing loss across 3 contiguous audiometric frequencies. Up to 99% of cases are unilateral, and most have no identifiable cause, so they are classified as idiopathic SSNHL."
+    },
+    {
+      "title": "Step 2/6: Prognostic Factors",
+      "scenario": "While explaining the condition to this 70-year-old patient's family, they anxiously ask, \"Doctor, is there a chance her hearing will fully recover?\"",
+      "media": "Load image: Prognostic-factor radar chart including age, vertigo, hearing-loss severity, and treatment timing",
+      "question": "Based on the literature, which poor prognostic factors does this patient have when estimating the chance of recovery in ISSNHL?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Female sex and pre-existing hearing loss in the left ear only."
+        },
+        {
+          "id": "B",
+          "text": "(B) Age over 60, associated vertigo or dizziness, and extremely severe initial hearing loss at 95 dB.",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Very short time to presentation only."
+        }
+      ],
+      "feedback": "Correct answer: B\n\nAttending tip: Four key factors influence recovery in ISSNHL. Earlier treatment improves prognosis, but age greater than 60 years, associated vertigo or dizziness, severe hearing loss such as 95 dB, and a downward-sloping audiogram suggest poor prognosis. This patient unfortunately has several adverse factors."
+    },
+    {
+      "title": "Step 3/6: Imaging and Differential Diagnosis",
+      "scenario": "Although brain CT in the emergency department excluded hemorrhage, as an otolaryngologist you must exclude dangerous non-idiopathic retrocochlear causes of unilateral sensorineural hearing loss.",
+      "media": "Load image: Imaging features of a cerebellopontine angle tumor",
+      "question": "To exclude acoustic neuroma or multiple sclerosis, which imaging study is the required gold-standard examination?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Non-contrast high-resolution CT of the temporal bone"
+        },
+        {
+          "id": "B",
+          "text": "(B) Carotid echo"
+        },
+        {
+          "id": "C",
+          "text": "(C) MRI with gadolinium enhancement",
+          "correct": true
+        }
+      ],
+      "feedback": "Correct answer: C\n\nDiagnostic pitfall: About 10-20% of patients with acoustic neuroma or vestibular schwannoma can present with sudden hearing loss. Although the overall proportion is not high, contrast-enhanced MRI is essential to exclude these tumors and central nervous system disease. If MRI is contraindicated, contrast-enhanced CT is the fallback option."
+    },
+    {
+      "title": "Step 4/6: Primary Medical Therapy and Monitoring",
+      "scenario": "The patient is admitted. You decide to give her a 1-week course of intravenous or oral steroid therapy.",
+      "media": "Load image: Prednisolone bottle with blood pressure and glucose monitors",
+      "question": "What is the most widely accepted initial steroid dose for ISSNHL, and what should be closely monitored in this 70-year-old patient with hypertension?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Prednisolone 5 mg/kg/day, monitoring asthma attacks."
+        },
+        {
+          "id": "B",
+          "text": "(B) Prednisolone 1 mg/kg/day, usually up to 60 mg/day, for 10-14 days; closely monitor blood glucose and blood pressure.",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Dexamethasone 60 mg/day for 1 month; monitor auditory nerve atrophy."
+        }
+      ],
+      "feedback": "Correct answer: B\n\nTreatment consensus: The systemic steroid regimen with the best supporting evidence is oral prednisolone 1 mg/kg/day, usually capped at 60 mg/day, for 10-14 days. Because high-dose steroids can cause hypertension, hyperglycemia even in non-diabetic patients, insomnia, and gastric ulceration, admission with close blood pressure and glucose monitoring is strongly recommended in elderly patients."
+    },
+    {
+      "title": "Step 5/6: Adjuvant Therapy: Hyperbaric Oxygen",
+      "scenario": "Because the patient's hearing loss is very severe, you also arrange 5 sessions of hyperbaric oxygen therapy.",
+      "media": "Load image: Hyperbaric chamber treatment setting",
+      "question": "Hyperbaric oxygen therapy is thought to increase oxygen delivery to inner-ear tissue and counter cochlear ischemia. Before treatment, which common adverse effect must you warn the patient about?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Permanent retinal detachment"
+        },
+        {
+          "id": "B",
+          "text": "(B) Difficulty equalizing middle-ear pressure, causing ear fullness, pain, or Eustachian tube dysfunction",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Pneumothorax and irreversible pulmonary fibrosis"
+        }
+      ],
+      "feedback": "Correct answer: B\n\nCounseling point: Hyperbaric oxygen therapy is time-consuming and expensive. Serious complications are uncommon, but 17-45% of patients experience middle-ear pressure equalization difficulty or Eustachian tube dysfunction. Claustrophobia is also a common reason for treatment interruption."
+    },
+    {
+      "title": "Step 6/6: Salvage Therapy: Intratympanic Steroid",
+      "scenario": "After systemic steroids and 5 sessions of hyperbaric oxygen therapy, the patient has only a partial response and her right-sided hearing remains very poor. You suggest intratympanic steroid injection to the family.",
+      "media": "Load image: Microscopic transtympanic steroid injection through the tympanic membrane",
+      "question": "For intratympanic steroid as salvage therapy, what are its major advantage and main complication?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Advantage: avoids systemic steroid adverse effects such as hyperglycemia and achieves higher local inner-ear concentration; complication: persistent tympanic membrane perforation.",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) Advantage: one injection guarantees 100% hearing recovery; complication: irreversible facial paralysis."
+        },
+        {
+          "id": "C",
+          "text": "(C) Advantage: completely covered by insurance and painless; complication: middle-ear cholesteatoma."
+        }
+      ],
+      "feedback": "Correct answer: A\n\nProcedure interpretation: When systemic steroids fail or when patients have severe diabetes or hypertension that makes systemic therapy unsuitable, intratympanic steroid injection is an excellent salvage option. It increases inner-ear drug concentration and avoids systemic adverse effects. Its main complications are persistent tympanic membrane perforation after repeated injections, along with temporary dizziness and pain."
+    }
+  ]
+}

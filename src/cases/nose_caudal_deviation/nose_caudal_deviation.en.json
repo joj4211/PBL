@@ -1,0 +1,148 @@
+{
+  "id": "nose_caudal_deviation",
+  "title": "The Complex Blockage: Beyond the Mucosa",
+  "subtitle": "Caudal deviation and nasal obstruction",
+  "description": "Internal nasal valve stenosis, functional rhinoplasty, grafting, turbinoplasty, and splinting.",
+  "estimatedTime": "20-30 minutes",
+  "difficulty": "Advanced",
+  "tags": [
+    "Rhinology",
+    "Nasal Obstruction",
+    "Functional Rhinoplasty",
+    "INV"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: Initial Assessment & Differentiating Obstruction",
+      "scenario": "A 50-year-old male presents to your OPD reporting long-standing chronic nasal obstruction, intermittent nasal congestion, and watery rhinorrhea. His rTNSS score is CRIS\\_S:2000\\_1. The nasal mucosa appears boggy. He denies facial pressure or anosmia.",
+      "media": "Load image: Illustration of nasal airflow resistance and mucosal hypertrophy vs. structural deformity",
+      "question": "Before prescribing an intranasal corticosteroid spray (INCS), what simple in-office clinical step can help you distinguish if the obstruction is primarily due to reversible mucosal hypertrophy versus a fixed structural deformity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Performing a Rinne and Weber test."
+        },
+        {
+          "id": "B",
+          "text": "(B) Re-evaluating the nasal airway after the application of topical nasal decongestants.",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Ordering an immediate computed tomography (CT) scan of the sinuses."
+        }
+      ],
+      "feedback": "Correct Answer: B\n\nClinical Pearl: Significant improvement in nasal obstruction after the application of topical nasal decongestants indicates that mucosal elements (hypertrophy/congestion) play a major role\n\n. If the obstruction remains unchanged after decongestion, it strongly points to a fixed structural blockage, such as a deviated septum or valve collapse\n\n."
+    },
+    {
+      "title": "Step 2/6: Identifying the Structural Deficit (Anatomy)",
+      "scenario": "After 4 months of adequate INCS therapy, the patient reports only slight improvement. A structural evaluation with nasal endoscopy reveals significant caudal deviated nasal septum (DNS) to the left, high septal deviation, and bilateral internal nasal valve (INV) stenosis.",
+      "media": "Load diagram: Cross-sectional anatomy of the Internal Nasal Valve (INV)",
+      "question": "To properly understand and correct this patient's internal nasal valve stenosis, you must know its boundaries. Which of the following structures forms the superior/lateral boundary of the internal nasal valve?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) The caudal margin of the upper lateral cartilage (ULC).",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) The medial crus of the lower lateral cartilage (LLC)."
+        },
+        {
+          "id": "C",
+          "text": "(C) The perpendicular plate of the ethmoid."
+        }
+      ],
+      "feedback": "Correct Answer: A\n\nClinical Pearl: The internal nasal valve is the narrowest portion of the nasal airway\n\n. It is bounded medially by the cartilaginous septum, superiorly/laterally by the caudal aspect of the upper lateral cartilage (ULC), inferiorly by the floor of the nose, and posteriorly by the head of the inferior turbinate\n\n."
+    },
+    {
+      "title": "Step 3/6: Interactive Challenge - Physical Examination",
+      "scenario": "You want to physically demonstrate the dynamic contribution of the nasal valve stenosis to the patient's symptoms before recommending functional rhinoplasty.",
+      "media": "Load interactive animation: A patient's face where the user must drag their finger to perform a clinical maneuver",
+      "question": "Which classic physical examination maneuver involves placing lateral traction on the patient's cheek to open the nasal valve, and what does a \"negative\" result mean?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Valsalva Maneuver; a negative test means the eustachian tube is blocked."
+        },
+        {
+          "id": "B",
+          "text": "(B) Cottle's Maneuver; a negative test suggests the cause of the blockage does NOT rest in the lateral nasal wall.",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Modified Cottle's Maneuver; a negative test proves the septum is perfectly straight."
+        }
+      ],
+      "feedback": "Correct Answer: B\n\nClinical Pearl: The Cottle maneuver involves pulling the cheek skin laterally. Relief of obstruction with this maneuver pinpoints the issue to the nasal valve area\n\n. However, a negative Cottle's test is often more informative, suggesting that the cause of the nasal blockage does NOT rest in the lateral nasal wall, but rather in the septum or deeper structures\n\n."
+    },
+    {
+      "title": "Step 4/6: Surgical Strategy & Grafting Techniques",
+      "scenario": "Due to the severe caudal and high dorsal septal deviation causing valve stenosis, standard submucosal resection (SMR) is insufficient. You plan a functional rhinoplasty (open approach).",
+      "media": "Load illustration: Placement of Spreader Grafts vs. Alar Batten Grafts",
+      "question": "To correct the high dorsal deviation and simultaneously widen the angle of the internal nasal valve, which specific grafting technique should you utilize during the functional rhinoplasty?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Columellar strut graft"
+        },
+        {
+          "id": "B",
+          "text": "(B) Spreader grafts",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Alar batten grafts"
+        }
+      ],
+      "feedback": "Correct Answer: B\n\nClinical Pearl: Spreader grafts (typically harvested from the quadrangular cartilage) are placed in a submucosal pocket between the septum and the upper lateral cartilages (ULC)\n\n. They are the gold standard for reconstructing the dorsal \"T\" junction, splinting dorsal deviations, and effectively widening the internal nasal valve angle\n\n. Alar batten grafts, on the other hand, are used to strengthen the external nasal valve\n\n."
+    },
+    {
+      "title": "Step 5/6: Addressing the Turbinates (Surgical Pitfalls)",
+      "scenario": "While correcting the septum and valves, you must also perform a bilateral submucosal turbinoplasty (SMT) to address his refractory chronic hypertrophic rhinitis (CHR).",
+      "media": "Load image: Endoscopic view of a microdebrider reducing the inferior turbinate",
+      "question": "As a surgeon, you choose a conservative submucosal approach (like using a microdebrider) rather than performing an aggressive total inferior turbinectomy. What debilitating postoperative complication are you trying to avoid?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Cerebrospinal fluid (CSF) rhinorrhea"
+        },
+        {
+          "id": "B",
+          "text": "(B) Toxic shock syndrome"
+        },
+        {
+          "id": "C",
+          "text": "(C) Empty nose syndrome (loss of sensation of airflow)",
+          "correct": true
+        }
+      ],
+      "feedback": "Correct Answer: C\n\nClinical Pearl: The inferior turbinate mucosa must be spared as much as possible\n\n. Over-aggressive resection or complete removal of the inferior turbinate can lead to a paradoxical sensation of severe nasal obstruction despite a wide-open airway, known as \"Empty Nose Syndrome\" (or rhinitis sicca)\n\n."
+    },
+    {
+      "title": "Step 6/6: Post-Operative Management & Splinting",
+      "scenario": "The functional rhinoplasty and bilateral SMT are completed. You want to ensure the septal flaps adhere properly, prevent hematomas, and avoid the severe discomfort of traditional nasal packing.",
+      "media": "Load image: Doyle splints and septal quilting sutures in place",
+      "question": "Based on modern rhinologic practices, what is the preferred method to prevent postoperative septal hematoma and synechiae while sparing the patient the discomfort of nasal packing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Using septal quilting sutures or inserting soft silicone septal splints (e.g., Doyle splints).",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) Prescribing 4 weeks of high-dose systemic corticosteroids."
+        },
+        {
+          "id": "C",
+          "text": "(C) Leaving the mucoperichondrial flaps completely open to drain freely."
+        }
+      ],
+      "feedback": "Correct Answer: A\n\nClinical Pearl: Careful dissection minimizes bleeding, frequently obviating the need for uncomfortable nasal packing\n\n. Septal quilting sutures have demonstrated a great reduction in postoperative hematomas and improved patient satisfaction\n\n. Alternatively, soft septal splints (like Doyle splints) compress the flaps, eliminate the need for packing, prevent hematoma, and prevent synechiae (adhesions) between the septum and newly operated turbinates"
+    }
+  ]
+}

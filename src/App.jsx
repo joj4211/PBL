@@ -5,12 +5,13 @@ import EntryPage from './components/auth/EntryPage';
 import { useCase } from './hooks/useCase';
 import { useAuth } from './hooks/useAuth';
 import { PHASES } from './logic/stateMachine';
-import { defaultCaseId } from './cases/index';
+import { defaultCaseId, getStepCase } from './cases/index';
 import AppShell from './components/layout/AppShell';
 import LandingPage from './components/pages/LandingPage';
 import TopicPage from './components/pages/TopicPage';
 import PerformancePage from './components/pages/PerformancePage';
 import MaintenancePage from './components/pages/MaintenancePage';
+import NoseCasePage from './components/pages/NoseCasePage';
 import Intro from './components/phases/Intro';
 import PreTest from './components/phases/PreTest';
 import ChiefComplaint from './components/phases/ChiefComplaint';
@@ -57,10 +58,36 @@ const InteractivePages = {
   report:      CaseReport,
 };
 
+function ArchivedCaseDemo({ caseId, onBackToMaintenance }) {
+  const { lang } = useLanguage();
+  const caseState = useCase(caseId, lang);
+  const { currentPhase, goBackPhase } = caseState;
+  const CurrentPhase = PhaseComponents[currentPhase];
+
+  return (
+    <AppShell
+      showCaseControls={true}
+      showBackControl={currentPhase !== PHASES.INTRO && currentPhase !== PHASES.PRE_TEST}
+      showExitControl={true}
+      onBack={goBackPhase}
+      onExit={onBackToMaintenance}
+    >
+      <AnimatePresence mode="wait">
+        <CurrentPhase
+          key={currentPhase}
+          {...caseState}
+          user={null}
+          onExit={onBackToMaintenance}
+        />
+      </AnimatePresence>
+    </AppShell>
+  );
+}
+
 function AppContent({ onShowMaintenance }) {
   const { lang } = useLanguage();
   const auth = useAuth();
-  const [screen, setScreen]               = useState('landing'); // 'landing' | 'topic' | 'performance' | 'case'
+  const [screen, setScreen]               = useState('landing'); // 'landing' | 'topic' | 'performance' | 'case' | 'stepCase'
   const [selectedTopic, setSelectedTopic] = useState(null);
   const [selectedCaseId, setSelectedCaseId] = useState(defaultCaseId);
   const caseState = useCase(selectedCaseId, lang);
@@ -72,8 +99,15 @@ function AppContent({ onShowMaintenance }) {
   };
 
   const handleSelectCase = (caseId) => {
+    const isStepCase = Boolean(getStepCase(caseId, lang));
+
     setSelectedCaseId(caseId);
-    setScreen('case');
+
+    if (!isStepCase) {
+      caseState.startAtPhase(PHASES.PRE_TEST);
+    }
+
+    setScreen(isStepCase ? 'stepCase' : 'case');
   };
 
   const handleSelectPerformance = () => {
@@ -154,6 +188,20 @@ function AppContent({ onShowMaintenance }) {
     );
   }
 
+  if (screen === 'stepCase') {
+    const stepCase = getStepCase(selectedCaseId, lang);
+
+    return (
+      <NoseCasePage
+        caseData={stepCase}
+        user={auth.user}
+        lang={lang}
+        onBack={() => setScreen('topic')}
+        onSignOut={handleSignOut}
+      />
+    );
+  }
+
   const CurrentPhase = PhaseComponents[currentPhase];
 
   return (
@@ -180,6 +228,7 @@ function AppContent({ onShowMaintenance }) {
 function AppRouter() {
   const [screen,       setScreen]       = useState('main');
   const [selectedPage, setSelectedPage] = useState(null);
+  const [archivedCaseId, setArchivedCaseId] = useState(null);
 
   const handleShowGallery = () => setScreen('interactive-gallery');
   const handleShowMaintenance = () => setScreen('maintenance');
@@ -187,6 +236,11 @@ function AppRouter() {
   const handleSelectPage  = (pageId) => {
     setSelectedPage(pageId);
     setScreen('interactive-page');
+  };
+
+  const handleSelectArchivedCase = (caseId) => {
+    setArchivedCaseId(caseId);
+    setScreen('archived-case');
   };
 
   const handleBackToGallery = () => setScreen('interactive-gallery');
@@ -199,8 +253,18 @@ function AppRouter() {
         <MaintenancePage
           onBack={handleBackToMain}
           onShowGallery={handleShowGallery}
+          onSelectArchivedCase={handleSelectArchivedCase}
         />
       </AppShell>
+    );
+  }
+
+  if (screen === 'archived-case' && archivedCaseId) {
+    return (
+      <ArchivedCaseDemo
+        caseId={archivedCaseId}
+        onBackToMaintenance={handleBackToMaintenance}
+      />
     );
   }
 

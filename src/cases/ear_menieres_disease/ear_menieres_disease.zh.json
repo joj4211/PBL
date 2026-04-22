@@ -1,0 +1,148 @@
+{
+  "id": "ear_menieres_disease",
+  "title": "天旋地轉與低鳴的浪潮 (The Waves of Vertigo: Ménière’s Disease)",
+  "subtitle": "梅尼爾氏症診斷、檢查與治療決策",
+  "description": "梅尼爾氏症的診斷標準、聽力學表現、電生理檢查、影像排除與分階段治療。",
+  "estimatedTime": "20-30 分鐘",
+  "difficulty": "中階",
+  "tags": [
+    "耳科",
+    "Ménière’s disease",
+    "Vertigo",
+    "Endolymphatic hydrops"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: 臨床診斷標準 (Diagnostic Criteria)",
+      "scenario": "一位 38 歲女性來到門診，主訴過去三個月來，發生過 3 次嚴重的「天旋地轉 (Vertigo)」。每次發作時，右耳都會有明顯的悶塞感 (aural fullness) 與低頻的「轟轟聲 (tinnitus)」。發作期間她只能躺在床上，並伴隨嚴重的噁心嘔吐。",
+      "media": "載入表格：Table 63.1 Diagnostic criteria for Ménière’s disease",
+      "question": "根據 2015 年的診斷準則，若要將此病患診斷為「確定性梅尼爾氏症 (Definite Ménière’s disease)」，其自發性眩暈發作的「時間長度」必須符合下列哪一個條件？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 至少發作 5 次，每次持續 5 分鐘到 72 小時。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 至少 2 次自發性眩暈發作，每次持續 20 分鐘至 12 小時。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 眩暈發作持續超過 24 小時，且伴隨劇烈頭痛。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n主治醫師的 Tip： 梅尼爾氏症的診斷高度仰賴病史。Definite Ménière’s disease 的標準為：≥ 2 次的自發性眩暈，每次持續 20 分鐘到 12 小時；且必須伴隨聽力學證實的患耳低/中頻感音神經性聽損，以及波動性的耳部症狀 (耳鳴、聽力下降或耳悶)。選項 A 其實是前庭性偏頭痛 (Vestibular migraine) 的標準。"
+    },
+    {
+      "title": "Step 2/6: 聽力學表現與病生理機轉 (Audiometry & Pathophysiology)",
+      "scenario": "在患者眩暈發作過後，你為她安排了純音聽力檢查 (PTA)。聽力圖顯示右耳呈現典型的「低頻感音神經性聽力喪失 (Low tone sensorineural hearing loss)」。",
+      "media": "載入圖片：梅尼爾氏症早期的向上傾斜 (upward-sloping) 聽力圖",
+      "question": "梅尼爾氏症的臨床症狀（眩暈、低頻聽損、耳悶），在組織病理學上最主要被認為與內耳的哪一種現象有關？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 半規管內耳石脫落 (Canalithiasis)"
+        },
+        {
+          "id": "B",
+          "text": "(B) 聽神經的微血管缺血 (Microvascular ischemia)"
+        },
+        {
+          "id": "C",
+          "text": "(C) 內淋巴液水腫 (Endolymphatic hydrops)",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：C\n\n病生理學解析： 自發性的「內淋巴液水腫 (Endolymphatic hydrops)」被認為是 Ménière’s disease 的核心組織病理特徵。雖然內淋巴水腫不是梅尼爾氏症獨有，但這種膜性迷路體積的異常擴張與壓力變化，完美解釋了患者波動性的聽力喪失與耳悶感。"
+    },
+    {
+      "title": "Step 3/6: 特殊電生理檢查 (Electrocochleography, ECoG)",
+      "scenario": "為了尋找內淋巴水腫的電生理學證據，你為她安排了「耳蝸電圖 (Electrocochleography, ECoG)」檢查。",
+      "media": "載入圖片：Figure 63.2 Electrocochleogram 顯示異常升高的 SP 波",
+      "question": "在評估梅尼爾氏症患者的 ECoG 報告時，下列哪一項數值異常升高是內淋巴水腫 (Endolymphatic hydrops) 的典型特徵？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 聽性腦幹反應 (ABR) 的 Wave I 潛伏期延長"
+        },
+        {
+          "id": "B",
+          "text": "(B) 總合電位與動作電位的振幅比值升高 (Elevated SP/AP ratio)",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 頸部前庭誘發肌電位 (cVEMP) 振幅異常變大"
+        }
+      ],
+      "feedback": "正確答案：B\n\n檢查判讀： 耳蝸電圖 (ECoG) 可以用來展示內淋巴水腫的電生理基礎。在梅尼爾氏症中，基底膜 (basilar membrane) 的位移會導致總合電位 (Summating Potential, SP) 變大。臨床上常使用 Click 刺激，若 Extratympanic 的 SP/AP ratio > 0.42，或 Transtympanic 的 SP/AP ratio > 0.35，即強烈暗示有內淋巴水腫的存在。"
+    },
+    {
+      "title": "Step 4/6: 影像學鑑別診斷 (Exclusion by MRI)",
+      "scenario": "儘管臨床症狀與聽力圖都非常符合梅尼爾氏症，但主任在查房時提醒你：「在下 Definite Ménière’s disease 的診斷前，必須先排除其他原因 (other causes excluded)。」",
+      "media": "載入圖片：MRI 顯示小腦骨髓角 (CP angle) 腫瘤的影像",
+      "question": "為了排除其他可能導致類似症狀的「次發性病灶 (如神經血管壓迫或後顱窩腫瘤)」，最敏感且必要的影像學檢查為何？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 施打顯影劑的核磁共振造影 (MRI of CP angle with contrast enhancement)",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) 顳骨高解析度電腦斷層 (HRCT of temporal bone)"
+        },
+        {
+          "id": "C",
+          "text": "(C) 頸部都卜勒超音波 (Carotid Doppler ultrasound)"
+        }
+      ],
+      "feedback": "正確答案：A\n\n診斷地雷： 梅尼爾氏症是一個「排除性診斷」。施打顯影劑的 MRI 是排除內耳畸形、第八對腦神經血管衝突、小腦骨髓角腫瘤 (尤其是前庭神經鞘瘤 vestibular schwannoma) 最敏感的影像學方法。只有在排除這些潛在病灶後，才能確立梅尼爾氏症的診斷。"
+    },
+    {
+      "title": "Step 5/6: 第一線藥物與生活型態改變 (First-Line Management)",
+      "scenario": "確診後，你準備為病患開立處方並進行門診衛教，希望能預防她未來眩暈的反覆發作。",
+      "media": "載入圖片：低鹽飲食與 Betahistine 藥物示意圖",
+      "question": "根據目前的治療指引，梅尼爾氏症患者「預防復發」的第一線常規治療 (First-line medical treatment) 應包含下列何者？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 鼓勵大量飲用咖啡以利尿，並常規服用高劑量類固醇。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 嚴格控制鹽分與避免咖啡因 (low-salt and caffeine-free diet)，並可合併使用利尿劑與 Betahistine (16mg TID)。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 立即安排前庭神經切斷術。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n治療共識： 預防梅尼爾氏症發作的第一線治療包含：嚴格的低鹽與無咖啡因飲食控制 (Counselling includes a low-salt and caffeine-free diet)。藥物方面，利尿劑 (如 hydrochlorothiazide) 可降低內淋巴水腫；而 Betahistine (一種 histamine analog，建議 16mg TID) 也常被合併使用以預防眩暈復發。"
+    },
+    {
+      "title": "Step 6/6: 針對猝倒發作的末期救援 (End-Stage & Tumarkin Crisis)",
+      "scenario": "兩年後，該患者的右耳聽力已嚴重退化 (大於 70dB)。更可怕的是，她最近發生了數次「沒有失去意識，但突然感覺被推倒而重摔在地」的發作，被診斷為危險的 Tumarkin crisis (Drop attacks)。傳統藥物與飲食控制已完全失效。",
+      "media": "載入圖片：耳內注射 (Intratympanic injection) 的示意圖",
+      "question": "面對這種聽力已經極差，且出現危險猝倒發作 (Tumarkin crises) 的頑固型/末期梅尼爾氏症病患，下列哪一種「耳內注射治療」是強烈建議的有效手段，藉由破壞前庭功能來停止眩暈？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 耳內注射類固醇 (Intratympanic dexamethasone)"
+        },
+        {
+          "id": "B",
+          "text": "(B) 耳內注射慶大黴素 (Intratympanic gentamicin)",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 耳內注射玻尿酸 (Intratympanic hyaluronic acid)"
+        }
+      ],
+      "feedback": "正確答案：B\n\n進階處置： 耳內注射類固醇 (Dexamethasone) 適用於想「保留聽力」的救援治療；但對於已經進入末期 (end-stage)、聽力已喪失，或出現極度危險的 Tumarkin crisis (Drop attack) 病人，利用 aminoglycoside 耳毒性破壞前庭神經的「耳內注射 Gentamicin」是非常有效的手段 (In refractory or end-stage cases, intratympanic injection of gentamicin can be offered)，但須警告患者有伴隨聽力完全喪失的風險。"
+    }
+  ]
+}

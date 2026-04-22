@@ -1,11 +1,9 @@
 import { motion } from 'framer-motion';
 import { PHASE_ORDER, PHASES, getPhaseIndex } from '../../logic/stateMachine';
-import { useLanguage } from '../../contexts/LanguageContext';
 
 const visiblePhases = PHASE_ORDER.filter((p) => p !== PHASES.INTRO);
 
 export default function ProgressIndicator({ currentPhase }) {
-  const { ui } = useLanguage();
   const currentIndex = getPhaseIndex(currentPhase);
 
   if (currentPhase === PHASES.INTRO) return null;
@@ -17,7 +15,6 @@ export default function ProgressIndicator({ currentPhase }) {
           const phaseIndex = getPhaseIndex(phase);
           const isDone = phaseIndex < currentIndex;
           const isCurrent = phase === currentPhase;
-          const meta = ui.phases[phase];
 
           return (
             <div key={phase} className="flex items-start gap-0.5 sm:gap-1">
@@ -35,13 +32,6 @@ export default function ProgressIndicator({ currentPhase }) {
                 >
                   {isDone ? '✓' : i + 1}
                 </motion.div>
-                <span
-                  className={`hidden sm:block text-xs font-medium transition-colors duration-300 whitespace-nowrap ${
-                    isCurrent ? 'text-sage-600' : isDone ? 'text-sage-400' : 'text-warm-400'
-                  }`}
-                >
-                  {meta.shortLabel}
-                </span>
               </div>
 
               {/* Connector */}

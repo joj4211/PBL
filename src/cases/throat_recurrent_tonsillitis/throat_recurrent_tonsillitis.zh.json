@@ -1,0 +1,148 @@
+{
+  "id": "throat_recurrent_tonsillitis",
+  "title": "反覆燃燒的咽喉 (The Burning Throat: Recurrent Tonsillitis)",
+  "subtitle": "反覆性扁桃腺炎與扁桃腺切除術",
+  "description": "反覆性扁桃腺炎的手術適應症、微生物學、手術器械、圍手術期藥物、止痛與延遲性出血處置。",
+  "estimatedTime": "20-30 分鐘",
+  "difficulty": "中階",
+  "tags": [
+    "喉科",
+    "Tonsillitis",
+    "Tonsillectomy",
+    "Post-op bleeding"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: 手術適應症與臨床評估 (Surgical Indications)",
+      "scenario": "一位 25 歲男性來到門診，主訴過去 2 年來深受「反覆性扁桃腺發炎 (recurrent tonsillitis)」所苦，每次發作都伴隨嚴重喉嚨痛、化膿與發燒，且即使去診所與醫院吃抗生素依然反覆發作。理學檢查發現雙側扁桃腺為 Grade III 腫大。",
+      "media": "載入圖片：Grade III 腫大的扁桃腺與咽部發炎照片",
+      "question": "在與患者討論手術介入時，你提及了他的病史符合著名的「Paradise criteria」以及 SIGN guidelines。根據該指引，下列何種發作頻率符合建議進行扁桃腺切除術的標準？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 過去 6 個月內發生 3 次發炎。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 1 年內發作至少 7 次；或連續 2 年每年發作至少 5 次；或連續 3 年每年發作至少 3 次。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 只要曾發生過一次伴隨發燒的扁桃腺炎即可。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n主治醫師的 Tip： 根據 Paradise criteria 與 SIGN guidelines，扁桃腺發炎必須達到特定頻率（1年7次 / 2年每年5次 / 3年每年3次），且臨床症狀明顯、影響正常功能並有良好的病歷記載時，進行扁桃腺切除術 (Tonsillectomy) 才能顯著改善患者的生活品質 (QOL)。"
+    },
+    {
+      "title": "Step 2/6: 微生物學的陷阱 (Microbiology of Recurrent Tonsillitis)",
+      "scenario": "患者不解地問：「我每次發炎去診所，醫生都開針對鏈球菌的抗生素給我吃，為什麼還是會一直復發？」你向他解釋「急性」與「反覆性」扁桃腺炎的致病菌其實有所不同。",
+      "media": "載入圖片：顯微鏡下細菌抹片的示意圖",
+      "question": "雖然 A群 β-溶血性鏈球菌 (GABHS) 是「急性扁桃腺炎 (Acute tonsillitis)」最常見的致病菌，但在「反覆性扁桃腺炎 (Recurrent tonsillitis)」中，最主要的致病微生物其實是下列何者？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 僅為 GABHS 與黴漿菌 (Mycoplasma)"
+        },
+        {
+          "id": "B",
+          "text": "(B) 嗜血桿菌 (Haemophilus influenzae) 與金黃色葡萄球菌 (S. aureus, 包含 MRSA)",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 僅為 EB 病毒 (Epstein-Barr virus)"
+        }
+      ],
+      "feedback": "正確答案：B\n\n臨床地雷： 這是許多臨床醫師常忽略的點！急性感染最常見是 GABHS；但對於像這位患者反覆發作 (Recurrent tonsillitis) 的情況，最主要的致病菌其實是 Haemophilus influenzae 以及 S. aureus (包含 MRSA)，GABHS 反而較不常見。這也是為什麼單純針對鏈球菌的短期抗生素往往無法根除問題。"
+    },
+    {
+      "title": "Step 3/6: 手術器械與出血率評估 (Surgical Techniques & Bleeding)",
+      "scenario": "患者同意於 2026/01/15 接受雙側扁桃腺切除術。在術前說明時，患者非常擔憂「術後大出血」的風險。你必須根據大型統計數據選擇適當的手術器械。",
+      "media": "載入表格：Table 38.1 Surgical techniques and post-operative haemorrhage",
+      "question": "根據英國 NPTA (National Prospective Tonsillectomy Audit) 的大型統計與 Best Clinical Practice 指引，下列哪一種手術器械/方式擁有「最低的」術後出血率 (post-operative haemorrhage rates)？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 傳統冷械分離法 (Cold steel dissection tonsillectomy)",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) 單極電燒剝離 (Monopolar diathermy dissection)"
+        },
+        {
+          "id": "C",
+          "text": "(C) 雙極電燒剪刀 (Bipolar diathermy scissors)"
+        }
+      ],
+      "feedback": "正確答案：A\n\n術式解析： 根據 NPTA 的統計，傳統的「Cold steel tonsillectomy」出血率比其他高溫熱能方式低 (Primary 0.5-0.8%, Secondary 1.0-2.4%)，且術後疼痛程度也較低。相對而言，完全依賴單極電燒 (Monopolar) 的術後出血率與疼痛感都是最高的。"
+    },
+    {
+      "title": "Step 4/6: 圍手術期的藥物優化 (Peri-operative Glucocorticoids)",
+      "scenario": "患者進入開刀房。麻醉科醫師在進行麻醉誘導 (induction) 時詢問你，是否需要給予某些預防性藥物來減少術後的疼痛與不適。",
+      "media": "載入圖片：Dexamethasone 的藥物小瓶",
+      "question": "根據 Cochrane review 與現代最佳臨床實踐 (Best Clinical Practice)，在扁桃腺手術圍手術期常規給予下列哪一種藥物，被證實可以安全且有效地「降低術後發病率 (morbidity)、疼痛與噁心嘔吐」？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 連續七天的術後預防性抗生素"
+        },
+        {
+          "id": "B",
+          "text": "(B) 術中給予單一劑量的靜脈注射類固醇 (A single dose of intravenous dexamethasone)",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 大劑量的阿斯匹靈 (High-dose aspirin)"
+        }
+      ],
+      "feedback": "正確答案：B\n\n治療共識： 醫學證據強烈支持在手術期間給予單一劑量 (A single dose) 的 dexamethasone 作為輔助治療，能顯著降低術後疼痛與噁心嘔吐 (PONV)。相反地，2012 年的文獻已明確反對術後常規使用抗生素，且抗生素對於降低術後併發症並無幫助。"
+    },
+    {
+      "title": "Step 5/6: 術後止痛藥物的選擇 (Post-op Analgesia)",
+      "scenario": "手術順利結束。扁桃腺切除術後最大的問題就是「疼痛 (Pain)」，通常需要 1-2 週才能恢復。你需要開立出院的止痛藥物。",
+      "media": "載入圖片：術後疼痛管理的藥物選擇示意圖",
+      "question": "關於扁桃腺術後的止痛藥物選擇，下列敘述何者正確？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 鴉片類藥物 (Opioids) 是首選，因為它們不會引起噁心嘔吐。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 非類固醇消炎止痛藥 (NSAIDs) 術後噁心嘔吐較鴉片類少，且「不會」增加傷口流血的風險，是安全有效的選擇。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 為了達到最佳止痛效果，所有兒童術後都應常規使用可待因 (Codeine)。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n臨床衛教： 術後止痛極度重要！NSAIDs 是安全且有效的，不僅噁心嘔吐的副作用少於鴉片類，文獻也證實它「不會增加傷口流血的風險」。另外要特別注意，Codeine (可待因) 在兒童是絕對禁忌 (可能致命)，Aspirin 則要避免雷氏症候群 (Reye syndrome)。"
+    },
+    {
+      "title": "Step 6/6: 延遲性出血的處置 (Managing Secondary Haemorrhage)",
+      "scenario": "術後第 8 天，患者突然跑來急診，主訴嘴巴裡有少許血絲，吞嚥時也覺得特別痛。你檢查發現兩側 tonsillar fossa 有偽膜，且有輕微的滲血。此為「次發性出血 (Secondary haemorrhage)」。",
+      "media": "載入圖片：術後扁桃腺窩 (Tonsillar fossa) 偽膜形成與輕微滲血的照片",
+      "question": "扁桃腺術後的「次發性出血 (Secondary bleeding，發生於術後 24 小時至 2 週內)」最常與下列哪種狀況有關？且標準的第一線治療為何？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 與未發現的血友病有關；需立即輸注凝血因子。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 常與 Streptococcus 局部感染有關；第一線治療為「單純使用抗生素 (antibiotic therapy alone)」，極少需要再次進開刀房。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 與縫線脫落有關；必須立即推進開刀房重新縫合。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n急診地雷： Secondary haemorrhage 常發生在術後 5-10 天偽膜脫落期，這通常與局部的鏈球菌 (Streptococcus) 感染有關。對於大多數次發性出血，處置上通常只需要給予抗生素治療 (Bleeding usually settles with antibiotic therapy alone)，很少需要再次進行外科手術止血。"
+    }
+  ]
+}

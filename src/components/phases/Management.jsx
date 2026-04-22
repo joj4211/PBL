@@ -5,6 +5,7 @@ import PhaseTransition from '../ui/PhaseTransition';
 import ProgressIndicator from '../ui/ProgressIndicator';
 import Button from '../ui/Button';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { stripOptionPrefix } from '../../utils/text';
 
 function DecisionStage({ stage, stageIdx, onComplete }) {
   const { ui } = useLanguage();
@@ -51,7 +52,7 @@ function DecisionStage({ stage, stageIdx, onComplete }) {
               <span className="flex-shrink-0 w-6 h-6 rounded-full border-2 border-current flex items-center justify-center text-xs font-bold opacity-60 mt-0.5">
                 {opt.id}
               </span>
-              <span className="text-warm-800 text-sm leading-snug flex-1">{opt.text}</span>
+              <span className="text-warm-800 text-sm leading-snug flex-1">{stripOptionPrefix(opt.text)}</span>
               {selected?.id === opt.id && opt.correct && (
                 <CheckCircle2 className="flex-shrink-0 w-5 h-5 text-sage-500" />
               )}

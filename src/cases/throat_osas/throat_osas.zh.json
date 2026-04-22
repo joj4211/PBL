@@ -1,0 +1,148 @@
+{
+  "id": "throat_osas",
+  "title": "沉睡中的窒息與危機 (The Silent Choke & Surgical Crisis)",
+  "subtitle": "阻塞性睡眠呼吸中止症與睡眠外科",
+  "description": "OSA 篩檢、PSG 嚴重度、CPAP 順從度、DISE、睡眠外科與術後出血照護。",
+  "estimatedTime": "20-30 分鐘",
+  "difficulty": "中階",
+  "tags": [
+    "喉科",
+    "OSA",
+    "PSG",
+    "Sleep surgery"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: 臨床表現與快速篩檢 (Clinical Symptoms & Screening)",
+      "scenario": "一位 36 歲男性 (BMI 26) 來到耳鼻喉科門診，主訴長年來有嚴重的打呼問題，且家人目擊過他在睡眠中出現呼吸暫停 (Witnessed sleep apnea)",
+      "media": "載入圖片：BOX snot-22, ESS, stop-bang questionare",
+      "question": "為了在門診快速「篩檢未診斷的 OSA高風險族群」，並協助鑑別是否為中度至重度患者，你應該請他填寫下列哪一份量表？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) SNOT-22 (鼻腔鼻竇結果測試)"
+        },
+        {
+          "id": "B",
+          "text": "(B) ESS (Epworth Sleepiness Scale)"
+        },
+        {
+          "id": "C",
+          "text": "(C) STOP-Bang questionnaire",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：C\n\n主治醫師的 Tip： STOP-Bang questionnaire 包含打呼、疲倦、目擊呼吸中止、高血壓、BMI、年齡、頸圍與性別，是非常實用的臨床篩檢工具。它不僅可用來篩檢未診斷的 OSA，還能有效鑑別中度至重度的患者。"
+    },
+    {
+      "title": "Step 2/6: 睡眠多項生理檢查與嚴重度分級 (PSG & Severity)",
+      "scenario": "為了確診，你為他安排了醫院的整夜睡眠多項生理功能檢查 (Polysomnography, PSG)。檢查報告出爐，顯示他的「睡眠呼吸中止與淺呼吸指數 (Apnea-Hypopnea Index, AHI)」高達 33.7 times/hour。",
+      "media": "載入圖片：PSG 圖譜，顯示呼吸氣流停止合併血氧下降的 oxygen dip",
+      "question": "根據這份 PSG 報告的 AHI 數值，該名患者的阻塞性睡眠呼吸中止症 (OSA) 屬於哪一個嚴重度等級？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 輕度 (Mild OSA)"
+        },
+        {
+          "id": "B",
+          "text": "(B) 中度 (Moderate OSA)"
+        },
+        {
+          "id": "C",
+          "text": "(C) 重度 (Severe OSA)",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：C\n\n臨床定義： 根據診斷標準，AHI < 5 為正常；AHI 介於 515 為輕度；AHI 介於 1530 為中度；當 AHI ≥ 30 次/小時，即診斷為重度阻塞性睡眠呼吸中止症 (Severe OSA)。該患者 AHI 高達 33.7，屬於重度，且併發日間嗜睡，必須積極治療。"
+    },
+    {
+      "title": "Step 3/6: 內科黃金標準與治療失敗 (Medical Management & Compliance)",
+      "scenario": "面對重度 OSA 患者，你首先建議非侵入性的黃金標準治療：連續正壓呼吸器 (Nasal CPAP)。然而，一個月後患者回診，表示他戴著面罩根本睡不著，因為漏氣與幽閉恐懼感讓他非常痛苦 (無法忍受 CPAP)，並強烈要求「開刀解決」。理學檢查發現他的雙側扁桃腺為 Grade II 腫大，舌頭位置為 Friedman class 2。",
+      "media": "載入圖片：scopy",
+      "question": "針對 CPAP 治療的「機器順從度 (Compliance)」，目前的醫學定義為下列何者？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 每週使用 5 晚以上，且每晚使用大於 4 小時。",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) 每天必須佩戴超過 8 小時，無論白天或晚上。"
+        },
+        {
+          "id": "C",
+          "text": "(C) 只要睡前戴上超過 30 分鐘即可算作有順從性。"
+        }
+      ],
+      "feedback": "正確答案：A\n\n臨床地雷： CPAP 順從度的標準是「每週 > 5 晚，每晚 > 4 小時」。像這位年輕患者因為面罩不適而無法忍受 (could not tolerate CPAP)，是臨床上走向外科手術介入的最常見原因。"
+    },
+    {
+      "title": "Step 4/6: 術前精準評估與手術策略 (DISE & Surgical Intervention)",
+      "scenario": "既然患者決定接受手術，由於 OSAS 常常是「多層次阻塞 (Multi-level obstruction)」，你安排他在麻醉下進行了「藥物誘導睡眠內視鏡 (Drug-Induced Sleep Endoscopy, DISE)」來觀察動態阻塞的位置。隨後，你為他執行了懸雍垂顎咽成形術 (UPPP) 以及經口機器手臂舌根縮減術 (TORS for tongue base reduction)。",
+      "media": "載入圖片：DISE 內視鏡視野下，顯示軟顎與舌根在睡眠時塌陷阻塞呼吸道",
+      "question": "為何在進行 UPPP 與 TORS 之前，執行「藥物誘導睡眠內視鏡 (DISE)」是現代睡眠外科的關鍵步驟？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 為了直接在門診將扁桃腺切除。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 因為清醒時的理學檢查無法完全反映睡眠時肌肉放鬆後的真實塌陷狀況，DISE 能動態找出阻塞點 (如軟顎或舌根) 以精準導引手術範圍。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 為了順便進行切片排除鼻咽癌。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n術式解析： 患者有重度 AHI 且包含扁桃腺肥大與舌根問題，阻塞往往是立體的。DISE 模擬了患者睡眠的狀態，讓外科醫師能清楚看見是單純軟顎塌陷、側咽壁塌陷，還是舌根向後倒，進而決定是否需要加上 TORS 舌根縮減術。"
+    },
+    {
+      "title": "Step 5/6: 術後急診危機：延遲性大出血 (Post-op Complication: Delayed Hemorrhage)",
+      "scenario": "手術順利完成且患者原已出院。然而，在術後第 13 天 (3/29 半夜)，患者突然因為「口咽部大量出血與流鼻血 (epistaxis and oral bleeding)」衝到急診。在急診，他的生命徵象尚穩 (BP 135/95)，但口腔內不斷有鮮血湧出，內視鏡顯示舌根處有巨大的血塊 (massive blood clot formation over tongue base) 導致無法看清出血點。",
+      "media": "載入圖片：急診內視鏡視野，顯示舌根與扁桃腺窩被巨大血塊覆蓋",
+      "question": "面對 UPPP/TORS 術後的延遲性出血，急診第一線的保守處置與評估應包含下列何者？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 立刻在急診盲目將止血鉗夾住舌根深處。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 確保呼吸道暢通，抽血評估凝血功能，給予局部腎上腺素 (Epinephrine) 吸入或壓迫，並靜脈注射傳明酸 (Tranexamic acid) 止血。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 立即執行氣管切開術 (Tracheostomy)。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n急診夢魘： TORS 與 UPPP 的術後出血 (Post-op delayed active bleeding) 是最令人害怕的併發症，尤其當血塊堆積在舌根可能引發窒息。該案例在急診先排除了縫線裂開，並利用 Epinephrine 噴霧與抗纖維溶解藥物 (Tranexamic acid, Hemoclot) 成功穩定了病情，轉收入院進行支持性療法 (Supportive care)。"
+    },
+    {
+      "title": "Step 6/6: 出院衛教與傷口照護 (Discharge Instructions & Wound Care)",
+      "scenario": "經過止血藥物治療與短暫放置鼻胃管 (NG tube) 後，患者的傷口恢復良好，無再出血跡象，並成功嘗試冷流質飲食。在 3/31 準備出院時，你必須給予他最嚴格的衛教以防止悲劇重演。",
+      "media": "載入圖片：術後飲食衛教單 (冷流質飲食示意圖)",
+      "question": "根據該名患者的出院護理指導，你應該強烈提醒他注意下列哪一項術後照護原則？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 出院後應立即恢復吃熱湯與硬質食物以補充體力。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 手術後 2 週內傷口仍有可能滲血，切勿用力咳嗽；術後 1 週內需維持「冷流質飲食 (Cold liquid diet)」，若有出血可口含冰水止血。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 建議每天大聲唱歌以復健咽喉肌肉。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n主治醫師的叮嚀： 咽喉部黏膜手術 (尤其是切除扁桃腺與舌根) 術後的偽膜脫落期 (約術後 7-14 天) 是延遲性出血的高峰期。絕對禁止用力咳嗽 (避免腹壓/血管壓力升高)，並嚴格要求「冷流質飲食 (如冰牛奶、布丁)」與冰敷，以收縮血管、預防致命的大出血"
+    }
+  ]
+}

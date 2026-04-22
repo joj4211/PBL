@@ -1,0 +1,148 @@
+{
+  "id": "nose_epistaxis_hht",
+  "title": "The Unstoppable Red Tide",
+  "subtitle": "Severe Epistaxis and HHT",
+  "description": "Severe epistaxis, CTA, SPA, packing complications, and HHT treatment.",
+  "estimatedTime": "20-30 min",
+  "difficulty": "Advanced",
+  "tags": [
+    "Rhinology",
+    "Epistaxis",
+    "HHT",
+    "SPA"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: Warning Signs & CTA",
+      "scenario": "A 57-year-old woman with no significant past medical history presents with extremely severe epistaxis for three consecutive days. In the emergency department, nasal endoscopy shows multiple active bleeding points in the left inferior meatus and anterior inferior turbinate. There is also massive bleeding from the left middle meatus and superior meatus, raising suspicion for a sphenoid sinus lesion.",
+      "media": "Load image: emergency triage monitor (BP 149/103) and CT angiography (CTA) images",
+      "question": "In this type of unexplained massive epistaxis with suspected deep posterior disease, why is arranging CT angiography (CTA) immediately in the emergency department a life-saving warning-sign step?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) To confirm whether the nasal septum is deviated, so nasal packing can be placed more easily."
+        },
+        {
+          "id": "B",
+          "text": "(B) To exclude fatal vascular abnormalities such as carotid blowout syndrome or aneurysm.",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) CTA is the gold standard for diagnosing simple anterior epistaxis from Kiesselbach's area."
+        }
+      ],
+      "feedback": "Correct answer: B\n\nAttending’s tip: In severe, recurrent, unusually massive epistaxis, especially in patients with a history of head and neck cancer radiotherapy (NPC history) or suspected deep lesions, always be alert for carotid blowout syndrome or pseudoaneurysm.\n\nProceeding blindly to the operating room can cause disaster, so obtaining preoperative CTA to confirm there is no abnormal enhancing lesion is a very appropriate decision."
+    },
+    {
+      "title": "Step 2/6: Anatomy of Posterior Epistaxis",
+      "scenario": "CTA shows blood accumulation in both maxillary sinuses (L > R), but no abnormal vascular enhancing lesion. Because the bleeding is massive and originates from the posterior nasal cavity, you admit the patient and prepare for bilateral endoscopic sinus surgery (ESS) and left sphenopalatine artery cauterization (SPA cauterization).",
+      "media": "Load image: lateral nasal wall vascular anatomy diagram marking the SPA location",
+      "question": "Before ligating or cauterizing the sphenopalatine artery (SPA), you must understand its anatomy. SPA is the terminal branch of which major arterial system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Internal carotid artery -> ophthalmic artery -> SPA"
+        },
+        {
+          "id": "B",
+          "text": "(B) External carotid artery -> facial artery -> SPA"
+        },
+        {
+          "id": "C",
+          "text": "(C) External carotid artery -> internal maxillary artery (IMA) -> SPA",
+          "correct": true
+        }
+      ],
+      "feedback": "Correct answer: C\n\nAnatomy review: The major blood supply to the posterior nasal cavity comes from branches of the external carotid artery. After the internal maxillary artery (IMA) enters the pterygopalatine fossa, its terminal branch is the sphenopalatine artery (SPA).\n\nSPA passes through the sphenopalatine foramen into the nasal cavity. It is the main arterial supply to the posterior nasal mucosa and the most common culprit in major posterior epistaxis."
+    },
+    {
+      "title": "Step 3/6: Posterior Packing Pitfalls",
+      "scenario": "While waiting for the operating room, the bleeding is so severe that you temporarily use a 14Fr Foley catheter as a posterior nasal packing balloon to compress the bleeding.",
+      "media": "Load image: illustration of a Foley catheter balloon inflated for posterior nasal packing",
+      "question": "When using a Foley balloon for posterior nasal packing, which important nursing order must be clearly specified to avoid severe ischemic complications?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Inflate the balloon continuously with 50 mL normal saline and pull tightly for 7 days."
+        },
+        {
+          "id": "B",
+          "text": "(B) Release tension every 6 hours (Q6H), and loosen the balloon after 24-48 hours.",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Add high-concentration silver nitrate into the balloon fluid for chemical cauterization."
+        }
+      ],
+      "feedback": "Correct answer: B\n\nClinical pitfall: A Foley balloon can temporarily control posterior bleeding, but continuous high-pressure compression without releasing tension every 6 hours, and placement beyond 24-48 hours, can easily cause avascular necrosis of the nostril and nasopharyngeal mucosa."
+    },
+    {
+      "title": "Step 4/6: Specific Interventions for HHT",
+      "scenario": "During surgery, you find multiple abnormally dilated small vascular clusters on the left nasal mucosa. Considering the overall history, you strongly suspect hereditary hemorrhagic telangiectasia (HHT).",
+      "media": "Load image: endoscopic view showing typical red telangiectatic HHT lesions",
+      "question": "For multifocal microvascular bleeding in the nose of an HHT patient, in addition to traditional bipolar cautery, which laser-assisted cautery has been reported to have good hemostatic effect?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) CO2 laser"
+        },
+        {
+          "id": "B",
+          "text": "(B) KTP-assisted cautery",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Excimer laser"
+        }
+      ],
+      "feedback": "Correct answer: B\n\nAttending’s tip: Standard bipolar cautery can further damage the fragile mucosa in HHT. KTP-assisted cautery, a green-light laser, is selectively absorbed by hemoglobin and can precisely treat abnormal dilated vessels while sparing more surrounding normal mucosa. It is considered effective for nasal vascular bleeding in HHT."
+    },
+    {
+      "title": "Step 5/6: Complications of Packing - TSS",
+      "scenario": "Suppose that before surgery, the emergency physician packed her nasal cavity with non-absorbable petroleum gauze. On postoperative day 1, the patient suddenly develops high fever (>38.9°C), hypotension, and diffuse macular erythroderma on both palms.",
+      "media": "Load image: table - CDC's case definition of toxic shock syndrome (fever, hypotension, palmar erythema/desquamation)",
+      "question": "What is this emergency caused by nasal packing called, and what is its pathophysiology?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Nasopulmonary reflex; hypoxia caused by hyperventilation."
+        },
+        {
+          "id": "B",
+          "text": "(B) Septic shock; caused by direct bloodstream infection with Pseudomonas."
+        },
+        {
+          "id": "C",
+          "text": "(C) Toxic shock syndrome (TSS); caused by staphylococcal exotoxin.",
+          "correct": true
+        }
+      ],
+      "feedback": "Correct answer: C\n\nClinical pitfall: Toxic shock syndrome (TSS) is one of the most dangerous complications of nasal packing, especially traditional gauze packing. It is caused by systemic immune activation triggered by Staphylococcus aureus exotoxin. It often occurs within 24 hours after packing, but it may also occur weeks later. This is one reason modern practice increasingly favors absorbable hemostatic materials such as FloSeal or earlier surgical control of bleeding."
+    },
+    {
+      "title": "Step 6/6: Ultimate Surgical Therapy for HHT",
+      "scenario": "This ESS plus SPA ligation procedure is successful. However, during rounds, you explain to the patient that HHT is a genetic disease, and future recurrent major bleeding remains possible.",
+      "media": "Load image: septodermoplasty illustration",
+      "question": "If this HHT patient develops refractory epistaxis that cannot be controlled after repeated cautery, packing, or even SPA ligation, which ultimate surgical procedure can an otolaryngologist consider?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Total rhinectomy"
+        },
+        {
+          "id": "B",
+          "text": "(B) Septodermoplasty",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Internal carotid artery endovascular embolization"
+        }
+      ],
+      "feedback": "Correct answer: B\n\nProcedure explanation: Septodermoplasty is an advanced procedure for refractory HHT epistaxis. The fragile bleeding mucosa is widely excised down to the supramucoperichondrium, then covered and sutured with an allograft or split-thickness skin graft (STSG).\n\nThis replaces fragile respiratory mucosa with a tougher skin graft, reducing the chance of future bleeding."
+    }
+  ]
+}

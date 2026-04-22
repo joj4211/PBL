@@ -1,0 +1,148 @@
+{
+  "id": "throat_ludwigs_angina_airway",
+  "title": "The Deadly Swell: Ludwig's Angina Airway Rescue",
+  "subtitle": "Ludwig's angina and difficult-airway management",
+  "description": "Airway adjuncts, definitive airway principles, CICO emergency management, tracheostomy anatomy, and postoperative complications in Ludwig's angina.",
+  "estimatedTime": "20-30 min",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Laryngology",
+    "Ludwig's angina",
+    "CICO",
+    "Tracheostomy"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: Initial Airway Adjunct",
+      "scenario": "A 58-year-old man is brought to the emergency department with respiratory distress after several days of severe mandibular toothache and fever. Physical examination shows severe woody swelling of the submandibular floor of mouth, pushing the tongue upward and backward and nearly obstructing the oropharynx. You diagnose severe Ludwig's angina. The patient is conscious and has a gag reflex, but breathing is extremely labored.",
+      "media": "Load image: Figure 72.2 Nasopharyngeal airway illustration",
+      "question": "Before preparing a more advanced airway intervention, which airway adjunct is the safest and most appropriate choice to temporarily bypass the posteriorly displaced tongue base and maintain airflow?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Oral/Guedel airway"
+        },
+        {
+          "id": "B",
+          "text": "(B) Nasopharyngeal airway",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Immediately give high-dose sedatives to make the patient sleep and relax the muscles."
+        }
+      ],
+      "feedback": "Correct answer: B\n\nEmergency tool: Ludwig's angina pushes the tongue base backward and causes oropharyngeal obstruction. A nasopharyngeal airway is well suited for obstruction at the oropharyngeal level and can bypass the tongue base to establish airflow. In contrast, an oral/Guedel airway is inappropriate when the gag reflex is still present."
+    },
+    {
+      "title": "Step 2/6: Principles of Intervention",
+      "scenario": "After placing the nasopharyngeal airway, the patient's oxygen saturation temporarily stabilizes, but swelling is visibly worsening and complete airway obstruction could occur at any moment. You must establish a definitive airway as soon as possible.",
+      "media": "Load image: Box 72.2 Principles of intervention in upper airway obstruction",
+      "question": "According to the principles of intervention in upper airway obstruction, what is the core decision-making concept in this emergency airway obstruction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Always perform emergency open tracheostomy directly on the emergency stretcher."
+        },
+        {
+          "id": "B",
+          "text": "(B) Secure and protect the airway using the most straightforward and least invasive method.",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Incise and drain the deep neck abscess first, and only then consider securing the airway."
+        }
+      ],
+      "feedback": "Correct answer: B\n\nDecision key: The principle is to secure the airway with the most straightforward and least invasive method. For Ludwig's angina, this usually means attempting awake fiberoptic nasotracheal intubation first. If that fails or is absolutely contraindicated, proceed to a surgical airway."
+    },
+    {
+      "title": "Step 3/6: Managing the CICO Emergency",
+      "scenario": "You attempt awake nasotracheal intubation, but massive deep neck swelling has distorted the anatomy and the tube cannot pass. The patient suddenly becomes agitated, loses consciousness, and desaturates to 60%. Bag-valve-mask ventilation cannot deliver oxygen. This is a classic can't intubate, can't oxygenate (CICO) emergency.",
+      "media": "Load image: Instruments and steps for the scalpel-bougie technique of cricothyroidotomy",
+      "question": "In a CICO crisis, which front-of-neck access method is most strongly supported by the Difficult Airway Society because it improves outcomes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Continue blind oral intubation attempts until successful."
+        },
+        {
+          "id": "B",
+          "text": "(B) Traditional large-bore needle cricothyroidotomy."
+        },
+        {
+          "id": "C",
+          "text": "(C) Scalpel-bougie technique of cricothyroidotomy.",
+          "correct": true
+        }
+      ],
+      "feedback": "Correct answer: C\n\nAirway guideline update: For CICO patients, the Difficult Airway Society strongly supports the scalpel-bougie technique of cricothyroidotomy. Compared with traditional needle cricothyroidotomy, this technique can establish the airway more quickly and reliably and improve patient outcomes."
+    },
+    {
+      "title": "Step 4/6: Open Surgical Tracheostomy",
+      "scenario": "You decisively perform scalpel-bougie cricothyroidotomy and successfully rescue the airway. After the patient stabilizes, the team moves him rapidly to the operating room to convert to a formal open surgical tracheostomy.",
+      "media": "Load image: Tracheal and thyroid anatomy showing the cricoid cartilage and tracheal rings",
+      "question": "When making the tracheotomy, where should the ideal tracheal opening be placed to avoid injuring the cricoid cartilage and causing future severe subglottic stenosis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Through the cricothyroid membrane"
+        },
+        {
+          "id": "B",
+          "text": "(B) Between the 1st and 2nd tracheal rings"
+        },
+        {
+          "id": "C",
+          "text": "(C) Between the 2nd and 4th tracheal rings",
+          "correct": true
+        }
+      ],
+      "feedback": "Correct answer: C\n\nSurgical pitfall: The ideal opening for formal tracheostomy is between the 2nd and 4th tracheal rings. Injury to the cricoid cartilage or first tracheal ring must be avoided because it can cause mucosal inflammation and cartilage damage, leading to severe future subglottic stenosis."
+    },
+    {
+      "title": "Step 5/6: Subcutaneous Emphysema",
+      "scenario": "The formal tracheostomy is completed successfully, and the abscess is incised and drained. The patient is transferred to the ICU. On postoperative day 1, the nurse urgently calls you because his neck and upper chest are abnormally swollen with crepitus on palpation, consistent with subcutaneous emphysema.",
+      "media": "Load image: Chest and neck swelling in subcutaneous emphysema",
+      "question": "If the tracheostomy tube becomes partially obstructed, which improper wound-closure step can worsen subcutaneous emphysema and even lead to tube displacement from excessive air pressure?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Hemostatic suturing of the thyroid isthmus is too thorough."
+        },
+        {
+          "id": "B",
+          "text": "(B) The skin around the tracheostomy stoma is sutured too tightly.",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) The tracheostomy tube cuff is inflated with too much air."
+        }
+      ],
+      "feedback": "Correct answer: B\n\nClinical detail: The skin around the tracheostomy stoma must not be sutured too tightly; usually only one stitch is placed. If the tube is partially obstructed and the skin is tight, high-pressure air cannot escape and can dissect into surrounding soft tissue, causing severe subcutaneous emphysema from the lower eyelids to the upper chest and even tube displacement."
+    },
+    {
+      "title": "Step 6/6: Converting to Tracheostomy",
+      "scenario": "Looking back on the dramatic rescue, a junior resident asks, \"Since the emergency cricothyroidotomy already restored the oxygen saturation to 99%, why can't we just keep that tube instead of converting to formal tracheostomy?\"",
+      "media": "Load image: Neck anatomy showing the cricothyroid membrane and cricoid cartilage",
+      "question": "After the patient stabilizes, why should an emergency cricothyroidotomy be converted to formal tracheostomy as soon as possible?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Ongoing tube friction against the cricoid cartilage can cause irreversible subglottic stenosis, and carbon dioxide clearance is less effective.",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) It accelerates deep neck pus drainage into the lungs and causes severe aspiration pneumonia."
+        },
+        {
+          "id": "C",
+          "text": "(C) It directly compresses both recurrent laryngeal nerves and causes permanent aphonia."
+        }
+      ],
+      "feedback": "Correct answer: A\n\nFollow-up care point: Cricothyroidotomy is only a temporary lifesaving procedure. Once the patient stabilizes, it should be converted to formal tracheostomy because cricothyroidotomy does not clear carbon dioxide as effectively, and prolonged tube contact with the cricoid cartilage can cause severe subglottic stenosis, making later decannulation difficult."
+    }
+  ]
+}

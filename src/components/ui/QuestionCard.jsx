@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle2, XCircle, Lightbulb, Send } from 'lucide-react';
 import Button from './Button';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { stripOptionPrefix } from '../../utils/text';
 
 // ── Multiple Choice ───────────────────────────────────────────
 
@@ -45,7 +46,7 @@ function MultipleChoiceQuestion({ question, onSubmit, submitted, result }) {
             <span className="flex-shrink-0 w-7 h-7 rounded-full border-2 border-current flex items-center justify-center text-xs font-bold uppercase opacity-60">
               {opt.id}
             </span>
-            <span className="text-warm-800 text-sm leading-snug">{opt.text}</span>
+            <span className="text-warm-800 text-sm leading-snug">{stripOptionPrefix(opt.text)}</span>
             {submitted && opt.id === result?.correctId && (
               <CheckCircle2 className="ml-auto flex-shrink-0 w-5 h-5 text-sage-500" />
             )}

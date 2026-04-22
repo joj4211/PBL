@@ -1,0 +1,148 @@
+{
+  "id": "throat_ludwigs_angina_airway",
+  "title": "深頸部的致命窒息：Ludwig's Angina 氣道保衛戰 (The Deadly Swell)",
+  "subtitle": "Ludwig's angina 與困難氣道處置",
+  "description": "Ludwig's angina 的氣道輔助器、決定性呼吸道、CICO 急症、氣切定位與術後併發症。",
+  "estimatedTime": "20-30 分鐘",
+  "difficulty": "中階",
+  "tags": [
+    "喉科",
+    "Ludwig's angina",
+    "CICO",
+    "Tracheostomy"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: 急診氣道阻塞與輔助器選擇 (Initial Airway Adjunct)",
+      "scenario": "一位 58 歲男性因為嚴重的下顎牙痛與發燒數日，今晚因「呼吸窘迫」被送入急診。理學檢查發現他的下巴下方（口底）有嚴重的硬性腫脹，舌頭被整個往上、往後推擠，幾乎堵死整個口咽部。你診斷他患有嚴重的「路德維希氏咽峽炎 (Ludwig's angina)」。病患還有意識且具備作嘔反射 (gag reflex)，但呼吸極度費力。",
+      "media": "載入圖片：Figure 72.2 Nasopharyngeal airway (鼻咽呼吸道) 示意圖",
+      "question": "在準備更進階的氣道介入前，為了暫時撐開被後推的舌根以維持氣流，下列哪一種人工氣道 (Airway adjunct) 是此時最適合且安全的選擇？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 口咽呼吸道 (Oral/Guedel airway)"
+        },
+        {
+          "id": "B",
+          "text": "(B) 鼻咽呼吸道 (Nasopharyngeal airway)",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 立即給予大劑量鎮靜劑使病患睡著，以放鬆肌肉。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n急診利器： Ludwig's angina 會使舌根後頂，造成口咽部阻塞。鼻咽呼吸道 (Nasopharyngeal airway) 非常適合阻塞部位在口咽者的病患，能有效越過舌根建立氣流通道。相對地，病患若還存有作嘔反射 (gag reflex)，則絕對不適合放置口咽呼吸道 (Oral/Guedel airway)。"
+    },
+    {
+      "title": "Step 2/6: 氣道介入的最高指導原則 (Principles of Intervention)",
+      "scenario": "放置鼻咽呼吸道後，病患的血氧暫時回穩，但腫脹仍在以肉眼可見的速度惡化，隨時可能完全窒息。你必須盡快為他建立「決定性呼吸道 (Definitive airway)」。",
+      "media": "載入圖片：BOX 72.2 Principles of intervention in upper airway obstruction",
+      "question": "根據上呼吸道阻塞的介入原則 (Principles of intervention)，面對這類緊急氣道阻塞狀況，你應該遵循的最核心決策概念是什麼？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 一律直接在急診推床進行緊急傳統氣切手術。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 以「最直接且最少侵入性」的方式建立並保護呼吸道 (Secure the airway with the most straightforward and least invasive method)。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 必須先切開引流深頸部膿瘍，之後才考慮建立呼吸道。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n決策關鍵： 根據介入原則，應以「最直接且最少侵入性的方式」來保護呼吸道。因此，面對 Ludwig's angina，通常會先嘗試在清醒狀態下使用軟式支氣管鏡進行經鼻氣管插管，若失敗或有絕對禁忌，才會進展到外科呼吸道 (Surgical airway)。"
+    },
+    {
+      "title": "Step 3/6: 生死瞬間的 CICO 急症 (Managing the CICO Emergency)",
+      "scenario": "你嘗試進行清醒經鼻插管，但巨大的深頸部腫脹完全改變了解剖構造，導管無法進入。此時病患突然躁動、失去意識，血氧掉到 60%，且使用 BVM (袋瓣罩甦醒球) 也無法將氧氣打入。這是一個標準的 「無法插管、無法給氧 (Can’t Intubate, Can’t Oxygenate, CICO)」 恐怖急症！",
+      "media": "載入圖片：Scalpel-Bougie technique of cricothyroidotomy 的器械與操作圖",
+      "question": "面對 CICO 的極度危急狀況，根據英國困難呼吸道學會 (Difficult Airway Society) 針對頸前呼吸道 (FONA) 的最新建議，下列哪一種處置方式能改善預後，目前最被大力支持？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 繼續盲目嘗試經口插管，直到成功為止。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 傳統大號針頭環甲膜穿刺 (Traditional needle cricothyroidotomy)。"
+        },
+        {
+          "id": "C",
+          "text": "(C) 手術刀合併通條的環甲膜切開術 (Scalpel-Bougie's technique of cricothyroidotomy)。",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：C\n\n急救指引更新： 針對無法插管或給氧 (CICO) 的病患，英國困難呼吸道學會 (DAS) 強烈支持使用「手術刀合併通條的環甲膜切開術 (Scalpel-Bougie's technique of cricothyroidotomy)」。相較於傳統的 needle cricothyroidotomy，這種作法能更快速且確實地建立呼吸道，改善病患預後。"
+    },
+    {
+      "title": "Step 4/6: 正式氣切手術的解剖定位 (Open Surgical Tracheostomy)",
+      "scenario": "你果斷地執行了 Scalpel-Bougie 環甲膜切開術，成功建立氣道，將患者從鬼門關前拉了回來！在病患生命徵象穩定後，團隊迅速將他推入開刀房，準備轉換為「傳統開放性氣切手術 (Open surgical tracheostomy)」。",
+      "media": "載入圖片：氣管與甲狀腺解剖圖，標示出環狀軟骨與氣管軟骨環",
+      "question": "在實際切開氣管 (Tracheotomy) 時，為了避免傷及環狀軟骨 (cricoid cartilage) 導致日後嚴重的聲門下狹窄，理想的氣管切開位置應該落在哪裡？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 穿過環甲膜 (Cricothyroid membrane)"
+        },
+        {
+          "id": "B",
+          "text": "(B) 第 1 個與第 2 個氣管軟骨之間"
+        },
+        {
+          "id": "C",
+          "text": "(C) 第 2 到第 4 個氣管軟骨之間 (Between the 2nd and 4th tracheal rings)",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：C\n\n手術地雷： 傳統氣切手術理想的切開位置在「第 2 到第 4 個氣管軟骨」之間。絕對要避免傷及環狀軟骨 (cricoid cartilage) 或第 1 個氣管軟骨，否則會造成氣管黏膜發炎與軟骨受損，極易導致日後嚴重的聲門下狹窄 (subglottic stenosis)。"
+    },
+    {
+      "title": "Step 5/6: 術後中期併發症 - 皮下氣腫 (Subcutaneous Emphysema)",
+      "scenario": "正式氣切順利完成，同時切開引流了膿瘍，病患轉入加護病房。然而在術後第一天，護理師緊急呼叫你，表示病患的頸部到上胸部異常腫脹，觸診時有「波波」的摩擦感，診斷為皮下氣腫 (Subcutaneous emphysema)。",
+      "media": "載入圖片：皮下氣腫患者的胸部外觀腫脹示意圖",
+      "question": "當氣切管發生部分阻塞時，手術中的哪一個「不當縫合步驟」會加劇皮下氣腫的發生，甚至導致空氣壓力過大而使氣切管移位？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 甲狀腺峽部止血縫合得太徹底。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 氣切造口周圍的皮膚縫合得太緊 (Sutured too tightly)。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 將氣切管的氣囊 (Cuff) 充滿太多空氣。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n臨床細節： 氣切造口周圍的皮膚縫合「絕對不能太緊」（通常只縫一針）。若是氣切管有部分阻塞，縫合過緊會導致高壓空氣無法排出而竄入周圍軟組織，產生嚴重的皮下氣腫，範圍可從下眼瞼延伸到胸部上段，甚至造成氣切管移位。"
+    },
+    {
+      "title": "Step 6/6: 轉換手術的關鍵考量 (Converting to Tracheostomy)",
+      "scenario": "回顧整個驚心動魄的搶救過程，學弟好奇地問你：「學長，既然我們在急診做的『環甲膜切開術 (Cricothyroidotomy)』已經成功把病人的血氧拉到 99% 了，為什麼我們不直接留著那根管子就好，還要大費周章進開刀房轉換成正式氣切 (Tracheostomy) 呢？」",
+      "media": "載入圖片：環甲膜 (Cricothyroid membrane) 與環狀軟骨 (Cricoid cartilage) 的頸部解剖圖",
+      "question": "你向學弟解釋，在病患生命徵象穩定後，必須盡快將緊急的環甲膜切開術轉換為正式氣切手術。這是因為長期放置環甲膜切開管，會帶來什麼嚴重的後果？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 管路持續摩擦環狀軟骨，可能造成不可逆的聲門下狹窄 (Subglottic stenosis)；且較難洗出二氧化碳。",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) 會加速深頸部感染的膿液直接灌入肺部，引發嚴重的吸入性肺炎。"
+        },
+        {
+          "id": "C",
+          "text": "(C) 會直接壓迫雙側喉返神經，導致永久性失聲。"
+        }
+      ],
+      "feedback": "正確答案：A\n\n後續照護重點： Cricothyroidotomy (環甲膜切開術) 只是暫時救命的手段。一旦病患穩定，須盡快轉為正式的氣切，一是因為此種方式無法有效將二氧化碳洗出，二是因為管路持續摩擦環狀軟骨 (cricoid cartilage) 可能造成嚴重的聲門下狹窄 (subglottic stenosis)。這會導致病患未來難以順利拔管！"
+    }
+  ]
+}

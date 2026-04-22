@@ -1,0 +1,148 @@
+{
+  "id": "nose_ecrswnp",
+  "title": "無聲蔓延的鼻息肉",
+  "subtitle": "嗜酸性慢性鼻竇炎合併鼻息肉",
+  "description": "eCRSwNP、Type 2 CRS、影像、生物標記、手術策略與術後照護。",
+  "estimatedTime": "20-30 分鐘",
+  "difficulty": "進階",
+  "tags": [
+    "鼻科",
+    "CRSwNP",
+    "Type 2 CRS",
+    "FESS"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: 臨床表現與診斷標準 (Clinical Presentation & EPOS Criteria)",
+      "scenario": "一位 45 歲男性來到門診，過去無特殊潛在疾病。他主訴雙側鼻塞（尤其是右側）已經很多年了。然而，他否認有膿性鼻涕、嗅覺減退、臉部脹痛、鼻涕倒流或過敏症狀。填寫 SNOT-22 問卷的總分異常的低，僅有 6 分。但理學檢查與鼻內視鏡 (Sinuscopy) 卻清楚看到雙側鼻息肉 (bilateral nasal polyps)、雙側下鼻甲肥厚與鼻中膈彎曲。",
+      "media": "載入圖表：EPOS Table 94.1 Clinical definition of rhinosinusitis",
+      "question": "儘管病人的 SNOT-22 分數極低且缺乏臉部疼痛或嗅覺喪失等症狀，根據 EPOS 的臨床診斷標準，他是否符合「慢性鼻竇炎 (CRS)」的診斷？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 不符合，因為診斷 CRS 必須同時具備鼻塞、膿鼻涕與臉部疼痛三大症狀。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 符合，因為具備主要症狀（鼻塞）大於 12 週，且內視鏡客觀發現鼻息肉。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 不符合，因為患者的 SNOT-22 只有 6 分，未達疾病嚴重度門檻。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n解析： 根據 EPOS 標準，診斷鼻竇炎需要病人主觀具備「鼻塞/阻塞」或「鼻涕(前/後)」至少一項主要症狀（此病人有長年鼻塞），並配合客觀的內視鏡發現（如：鼻息肉）或 CT 影像變化大於 3 個月\n\n。該患者雖然主觀症狀單一，但客觀上有明確的雙側鼻息肉，因此 CRS 診斷成立。"
+    },
+    {
+      "title": "Step 2/6: 影像學發現與鑑別診斷 (CT Imaging & Differential Diagnosis)",
+      "scenario": "為了進一步評估，你安排了鼻竇電腦斷層 (CT)。報告顯示：雙側鼻腔、竇口鼻道複合體 (OMC)、雙側篩竇、上頜竇與蝶竇皆有軟組織密度影。更特別的是，軟組織中帶有**「高密度影與微弱鈣化 (high density and/or faint calcification)」**。",
+      "media": "載入圖片：Figure 94.4 CT 顯示鼻竇內高密度/微弱鈣化影像",
+      "question": "在瀰漫性鼻息肉患者的 CT 中發現「高密度影 (Double density signs) 或鈣化」時，最常強烈暗示下列哪一種次分類或病理特徵？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 囊性纖維化 (Cystic fibrosis) 的特異性表現"
+        },
+        {
+          "id": "B",
+          "text": "(B) 過敏性黴菌性鼻竇炎 (AFRS) 中的嗜酸性黏蛋白 (eosinophilic mucin) 或黴菌抗原沉積",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 倒置性乳頭狀瘤 (Inverted papilloma) 的早期骨骼侵蝕"
+        }
+      ],
+      "feedback": "正確答案：B\n\n解析： 電腦斷層上的「雙重密度徵象 (double density signs)」或微弱鈣化，是典型 AFRS 或伴隨阿斯匹靈加重性呼吸道疾病 (AERD) 的特徵，這些高密度影通常代表著極度黏稠的「嗜酸性黏蛋白 (granular eosinophilic mucin)」或是黴菌抗原的沉積\n\n。這暗示了此患者可能有強烈的 Type 2 免疫反應參與其中。"
+    },
+    {
+      "title": "Step 3/6: 生物標記與內在型分類 (Biomarkers & Endotyping)",
+      "scenario": "為了確認你的懷疑，你安排了抽血檢驗 (Pre-lab)。結果顯示：總嗜酸性球計數 (Total Eosinophil Count) 高達 377，但 IgE (109) 與 ECP (4.99) 皆在正常範圍內。你將此患者歸類為嗜酸性慢性鼻竇炎合併鼻息肉 (eCRSwNP / Type 2 CRS)。",
+      "media": "載入圖表：Identifying Biomarkers in Type 2 CRS 圓餅圖",
+      "question": "關於 Type 2 炎症中的生物標記，下列何者對嗜酸性陽離子蛋白 (ECP) 的描述是正確的？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) ECP 是一種儲存於嗜酸性球顆粒中的細胞毒性蛋白，由活化的嗜酸性球釋放；術前高濃度暗示著較高的息肉復發風險。",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) ECP 是一種只存在於黴菌表面的外毒素，必須感染真菌才會升高。"
+        },
+        {
+          "id": "C",
+          "text": "(C) 只要 ECP 在正常範圍內，就絕對可以排除 Type 2 炎症的可能。"
+        }
+      ],
+      "feedback": "正確答案：A\n\n解析： ECP (Eosinophil cationic protein) 是一種儲存於嗜酸性球顆粒中的毒性蛋白，釋放自被活化的嗜酸性球。術前高濃度的 ECP 預示著內視鏡手術 (ESS) 後較高的息肉復發風險\n\n。雖然本案例的 ECP 正常，但其高達 377 的周邊血液嗜酸性球 (EOS) 依然強烈指向 Type 2 炎症，這類患者通常具有高復發率\n\n。"
+    },
+    {
+      "title": "Step 4/6: 手術策略決策 (Surgical Strategy - FHFESS)",
+      "scenario": "經由客觀數據（鼻阻力測量右側嚴重阻塞，且有瀰漫性 Type 2 發炎），在與患者討論後，你決定為他安排「雙側全鼻竇內視鏡手術 (Full House FESS, FHFESS) 合併鼻中膈鼻道成形術」。",
+      "media": "載入圖表：Preferred Surgery vs Preferred Biologics 流程圖",
+      "question": "面對如同本例「廣泛瀰漫性發炎且具有 Type 2 / eCRS 特徵」的鼻息肉患者，為何近期的臨床共識更傾向於執行大範圍的「Full house ESS」甚至「Re-boot surgery」，而非僅僅摘除局部息肉？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 因為大範圍手術可以徹底切除所有過敏神經，從此治癒 Type 2 發炎反應。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 對於瀰漫性發炎，僅解除局部阻塞意義不大；大範圍手術能徹底打開鼻竇空間，使術後的「局部藥物（如類固醇沖洗）」能順利進入所有鼻竇發揮作用。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 為了預防單側上頜竇後鼻孔息肉 (antrochoanal polyps) 的發生。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n解析： 在典型的 Type 2 / eCRSwNP 患者中，單純解除局部阻塞或只切除獨立息肉的價值很低 (is of less value)，復發率極高\n\n。廣泛的大範圍手術 (Full house ESS 或 Re-boot surgery) 才是建議選項\n\n。手術的關鍵核心目的，是將鼻竇腔室「徹底敞開」，讓患者能有效接受長期的「局部抗炎治療（如皮質類固醇沖洗）」以控制疾病\n\n。"
+    },
+    {
+      "title": "Step 5/6: 病理報告的解讀 (Histopathology Interpretation)",
+      "scenario": "手術順利完成，切下來的息肉組織送交病理科化驗。主治醫師提醒你：「對 eCRSwNP 病人來說，病理報告不只是看有沒有癌症，結構化的組織學分析能預測疾病的難治程度。」",
+      "media": "載入圖表：Figure 97.6 Chronic Rhinosinusitis Histopathology Report 表格",
+      "question": "根據結構化組織病理學，除了觀察每高倍視野的嗜酸性球數量 (>10/hpf)，若在組織黏液中觀察到下列哪一種「由嗜酸性球內 Galectin-10 蛋白組成的結晶體」，高度暗示嚴重的 Type 2 免疫反應？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 膽固醇結晶 (Cholesterol crystals)"
+        },
+        {
+          "id": "B",
+          "text": "(B) 夏科-雷登氏結晶 (Charcot-Leyden Crystals, CLCs)",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 尿酸結晶 (Uric acid crystals)"
+        }
+      ],
+      "feedback": "正確答案：B\n\n解析： 夏科-雷登氏結晶 (Charcot-Leyden crystals, CLCs) 是由嗜酸性球細胞質內富含的 galectin-10 蛋白所組成\n\n。在 CRS、氣喘及過敏性支氣管肺麴菌病中，這種結晶常被發現包埋在極度黏稠、富含嗜酸性球的「過敏性黏蛋白 (allergic mucin)」中，是 Type 2 嚴重發炎的標誌\n\n。"
+    },
+    {
+      "title": "Step 6/6: 術後藥物照顧 (Post-surgical Medical Management)",
+      "scenario": "患者回診時鼻腔通暢度大幅改善，右側鼻阻力恢復正常。但主治醫師強調：「手術只是改變了給藥通道，Type 2 發炎的長期抗戰現在才開始。」",
+      "media": "載入圖片：Figure 97.3 局部皮質類固醇沖洗 (Corticosteroid irrigations)",
+      "question": "根據治療指引，手術後針對此類 eCRSwNP 病患，最主要且有效的「維持期局部抗炎治療」手段為何？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 長期口服巨環類抗生素 (Macrolides) 三個月"
+        },
+        {
+          "id": "B",
+          "text": "(B) 局部皮質類固醇沖洗 (Corticosteroid irrigations / 類固醇洗鼻)",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 每天使用局部去充血劑 (Topical decongestants)"
+        }
+      ],
+      "feedback": "正確答案：B\n\n解析： 皮質類固醇沖洗 (Corticosteroid irrigations) 是鼻竇內視鏡手術後局部抗炎治療的「主要手段 (common effective delivery mechanism)」\n\n。手術打開鼻竇後，大容量的沖洗液能穿透所有被打開的空間，這就像是氣喘患者使用預防性吸入劑一樣 (similar to a prophylactic inhaler for asthma patients)\n\n，能有效壓制 Type 2 發炎並預防息肉復發。對於 Type 2 / eCRS 患者，長期使用巨環類抗生素 (Macrolides) 缺乏療效\n\n。"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "id": "nose_npc",
+  "title": "隱匿的危機：頸部腫塊與無聲的鼻咽癌",
+  "subtitle": "頸部腫塊與無聲鼻咽癌",
+  "description": "鼻咽癌臨床警訊、病理、EBV DNA、影像分期、治療與晚期併發症。",
+  "estimatedTime": "20-30 分鐘",
+  "difficulty": "進階",
+  "tags": [
+    "鼻科",
+    "NPC",
+    "EBV DNA",
+    "CCRT"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: 臨床表現與解剖學 (Symptoms & Anatomy)",
+      "scenario": "一位 40 歲男性初診，平時有抽菸習慣，無其他慢性病。他主訴左側脖子有一個「無痛性腫塊」已經持續兩個月且漸漸變大。進一步詢問發現，他最近一個月常覺得左耳有「悶塞感」與單側聽力下降，但他沒有喉嚨痛或牙痛。",
+      "media": "載入圖片：鼻咽表面解剖圖，標示 Fossa of Rosenmüller 與 Eustachian tube orifice",
+      "question": "考慮到患者有上頸部腫塊 (Level II) 合併單側中耳積液 (OME) 的耳悶症狀，你最必須仔細檢查下列哪個深部解剖位置以排除原發惡性腫瘤？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 梨狀竇 (Piriform sinus)"
+        },
+        {
+          "id": "B",
+          "text": "(B) 鼻咽側隱窩 (Fossa of Rosenmüller)",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 腭扁桃腺 (Palatine tonsil)"
+        }
+      ],
+      "feedback": "正確答案：B\n\n主治醫師的 Tip： 高達 70% 的鼻咽癌患者就診時呈現頸部淋巴腫大 (常為 Level II/V)\n\n。此外，起源於鼻咽側隱窩 (Rosenmüller fossa) 的腫瘤容易侵犯前方的耳咽管 (Eustachian tube) 開口，導致單側積液性中耳炎 (OME)\n\n。對於無法解釋的持續性單側中耳積液合併頸部腫塊，務必安排內視鏡檢查鼻咽！"
+    },
+    {
+      "title": "Step 2/6: 組織切片與內在病理型態 (Pathology & WHO Classification)",
+      "scenario": "你在門診為他進行鼻咽內視鏡檢查，發現在左側 Fossa of Rosenmüller 有一處表面充滿異常微血管且容易接觸性出血 (easy contact bleeding) 的腫瘤，並立刻進行切片\n\n。",
+      "media": "載入圖片：組織學 H&E 染色，顯示癌細胞被豐富淋巴細胞浸潤",
+      "question": "在鼻咽癌好發地區 (如華南、台灣)，超過 95% 的鼻咽癌屬於哪一種組織學亞型？且該亞型在顯微鏡下常呈現被 CD8+ T 細胞與漿細胞大量浸潤的特徵？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 分化型角質化鱗狀上皮癌 (Keratinizing squamous cell carcinoma)"
+        },
+        {
+          "id": "B",
+          "text": "(B) 非角化鱗狀上皮癌 / 淋巴上皮癌 (Non-keratinizing carcinoma / Lymphoepithelial carcinoma)",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 腺樣囊狀癌 (Adenoid cystic carcinoma)"
+        }
+      ],
+      "feedback": "正確答案：B\n\n病理重點： 在流行地區，超過 95% 屬於非角化鱗狀上皮癌 (Non-keratinizing carcinoma)。其獨特的特徵是惡性細胞會被淋巴細胞浸潤，故又稱「淋巴上皮癌 (Lymphoepithelial carcinoma)」。這種亞型幾乎所有癌細胞中都可發現 EB 病毒 (EBV) 的存在\n\n。"
+    },
+    {
+      "title": "Step 3/6: 精準的腫瘤標記 (Tumor Markers: EBV DNA)",
+      "scenario": "病理報告證實為鼻咽癌 (EBV-encoded RNA, EBER 呈陽性)\n\n。為了後續評估腫瘤負荷量 (Tumor load) 以及作為治療成效的追蹤指標，你需要抽血檢驗腫瘤標記。",
+      "media": "載入圖表：比較各類 EBV 檢測之敏感度與特異度表格",
+      "question": "下列哪一種抽血檢驗項目的敏感性 (96%) 與特異性 (93%) 最高，且能在治療後迅速下降，是目前監測鼻咽癌復發與預後「最實用的多用途腫瘤標記」？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 血液 EB 病毒 IgG/IgM 抗體效價 (EBV IgG/IgM titer)"
+        },
+        {
+          "id": "B",
+          "text": "(B) 癌胚抗原 (CEA)"
+        },
+        {
+          "id": "C",
+          "text": "(C) 血漿 EB 病毒 DNA 濃度 (Plasma EBV DNA titer by rt-PCR)",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：C\n\n檢驗地雷： EBV IgG/IgM 只代表曾感染或近期感染，對診斷鼻咽癌「無意義」，因為多數成人都感染過\n\n。相反地，利用 rt-PCR 檢測血漿中的 EBV DNA 濃度，不僅準確度極高，還能反映腫瘤負荷量。若治療後 EBV DNA 無法下降或日後再度升高，通常暗示局部殘留病灶或遠端轉移\n\n。"
+    },
+    {
+      "title": "Step 4/6: 影像學分期首選 (Imaging & Staging)",
+      "scenario": "你需要為這名 40 歲患者進行精準的 AJCC 第八版癌症分期，以制定後續的放射線治療計畫 (IMRT)。你必須評估腫瘤是否侵犯咽旁間隙、顱神經或骨髓。",
+      "media": "載入圖片：MRI 橫斷切面顯示腫瘤侵犯咽旁間隙",
+      "question": "為了精確界定腫瘤侵犯的軟組織範圍，並輔助 3D 放射治療計畫的繪製，下列哪一種影像學檢查是「局部影像分期」的黃金標準 (首選)？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 無顯影劑的電腦斷層 (Non-contrast CT)"
+        },
+        {
+          "id": "B",
+          "text": "(B) 磁振造影 (MRI)",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 骨骼掃描 (Bone scan)"
+        }
+      ],
+      "feedback": "正確答案：B\n\n影像重點： MRI 具備極優越的軟組織解析度，是鼻咽癌分期和治療評估的首選。MRI 可以精確評估腫瘤是否侵犯咽旁間隙 (parapharyngeal space)、神經周圍擴散 (perineural spread) 及骨髓浸潤 (marrow infiltration)，這對保護腦幹與視神經等重要構造、制定現代強度調控放射治療 (IMRT) 計畫至關重要\n\n。"
+    },
+    {
+      "title": "Step 5/6: 核心治療策略 (Primary Treatment Strategy)",
+      "scenario": "綜合影像與病理，患者被判定為第三期 (Stage III: T2N2M0)，因腫瘤已侵犯咽旁間隙且伴隨雙側頸部淋巴結轉移。",
+      "media": "載入圖表：IMRT 鼻咽部與頸部輻射劑量分佈圖 (Dose-painting)",
+      "question": "針對無遠端轉移但屬於晚期 (Stage III) 的鼻咽癌，現今國際公認的標準主要治療 (Gold Standard Primary Treatment) 為何？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 根除性鼻咽切除術加上雙側頸部淋巴廓清術。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 單獨給予誘導性化學治療 (Induction chemotherapy)。"
+        },
+        {
+          "id": "C",
+          "text": "(C) 同步化學放射治療 (Concurrent chemoradiotherapy, CCRT)，常以 Cisplatin 作為化療首選。",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：C\n\n治療共識： 鼻咽癌對放射線高度敏感，放療是第一線治療。然而對於 High-risk Stage II 及 Stage III、IV 期的較晚期疾病，單獨放療不夠，黃金標準是「同步化學放射治療 (CCRT)」，最常與放療同時使用的化療藥物為 Cisplatin\n\n。救援性外科手術 (Salvage surgery) 通常只保留給放療失敗的局部復發患者\n\n。"
+    },
+    {
+      "title": "Step 6/6: 晚期放射線致命併發症 (Late Fatal Complications)",
+      "scenario": "患者順利完成 CCRT，腫瘤完全緩解。然而在 6 年後，他突然因為幾次輕微的流鼻血 (前哨性出血, sentinel bleeds)，接著在急診發生「極度大量且難以控制的鼻出血 (Massive epistaxis)」，血壓開始不穩。",
+      "media": "載入圖片：血管攝影顯示破裂的動脈瘤",
+      "question": "發生在接受過高劑量鼻咽放射治療多年後的患者身上，這類致命性大出血最可能源自於哪一種放射治療的晚期併發症？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 顳骨放射性骨壞死 (Osteoradionecrosis of temporal bone)"
+        },
+        {
+          "id": "B",
+          "text": "(B) 內頸動脈動脈瘤 / 假性動脈瘤破裂 (Internal carotid artery aneurysm blowout)",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 放射線誘發性肉瘤 (Radiation-induced sarcoma)"
+        }
+      ],
+      "feedback": "正確答案：B\n\n急診夢魘： 內頸動脈動脈瘤破裂是鼻咽癌放射治療後罕見但極度致命的晚期併發症。典型症狀就是病患會先有輕微的「前哨性出血」，數小時到數天後突然爆發大量鼻血。處理方式需迅速維持呼吸道，並照會放射線科進行血管腔內支架置放或血管栓塞\n\n。"
+    }
+  ]
+}

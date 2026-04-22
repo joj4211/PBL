@@ -1,0 +1,148 @@
+{
+  "id": "throat_recurrent_tonsillitis",
+  "title": "The Burning Throat: Recurrent Tonsillitis",
+  "subtitle": "Recurrent tonsillitis and tonsillectomy",
+  "description": "Surgical indications, microbiology, surgical instruments, perioperative medication, analgesia, and management of delayed bleeding in recurrent tonsillitis.",
+  "estimatedTime": "20-30 min",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Laryngology",
+    "Tonsillitis",
+    "Tonsillectomy",
+    "Post-op bleeding"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: Surgical Indications",
+      "scenario": "A 25-year-old man visits clinic because recurrent tonsillitis has bothered him for the past 2 years. Each episode causes severe sore throat, exudate, and fever, and attacks recur despite antibiotics from clinics and hospitals. Physical examination shows bilateral grade III tonsillar hypertrophy.",
+      "media": "Load image: Grade III tonsillar hypertrophy with pharyngeal inflammation",
+      "question": "When discussing surgery, you mention that his history meets the Paradise criteria and SIGN guidelines. Which attack frequency supports tonsillectomy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Three infections within the past 6 months."
+        },
+        {
+          "id": "B",
+          "text": "(B) At least 7 episodes in 1 year, at least 5 episodes per year for 2 consecutive years, or at least 3 episodes per year for 3 consecutive years.",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Any single episode of tonsillitis with fever."
+        }
+      ],
+      "feedback": "Correct answer: B\n\nAttending tip: Paradise criteria and SIGN guidelines require a specific frequency of tonsillitis, documented clinically and severe enough to affect normal function, before tonsillectomy is expected to significantly improve quality of life."
+    },
+    {
+      "title": "Step 2/6: Microbiology of Recurrent Tonsillitis",
+      "scenario": "The patient asks, \"Every time I get tonsillitis, doctors prescribe antibiotics for streptococcus. Why does it keep coming back?\" You explain that the microbiology of acute and recurrent tonsillitis differs.",
+      "media": "Load image: Microscopic bacterial smear illustration",
+      "question": "Although group A beta-hemolytic streptococcus is the most common pathogen in acute tonsillitis, what are the main pathogens in recurrent tonsillitis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Only group A beta-hemolytic streptococcus and Mycoplasma"
+        },
+        {
+          "id": "B",
+          "text": "(B) Haemophilus influenzae and Staphylococcus aureus, including MRSA",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Only Epstein-Barr virus"
+        }
+      ],
+      "feedback": "Correct answer: B\n\nClinical pitfall: Acute tonsillitis is most commonly caused by group A beta-hemolytic streptococcus, but recurrent tonsillitis is more often associated with Haemophilus influenzae and Staphylococcus aureus, including MRSA. This is why short courses targeting streptococcus alone often fail to eradicate the problem."
+    },
+    {
+      "title": "Step 3/6: Surgical Techniques and Bleeding",
+      "scenario": "The patient agrees to bilateral tonsillectomy. During preoperative counseling, he is very worried about postoperative hemorrhage. You need to choose an appropriate surgical technique based on large audit data.",
+      "media": "Load table: Table 38.1 Surgical techniques and postoperative hemorrhage",
+      "question": "According to the UK National Prospective Tonsillectomy Audit and best clinical practice guidance, which surgical technique has the lowest postoperative hemorrhage rate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Cold steel dissection tonsillectomy",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) Monopolar diathermy dissection"
+        },
+        {
+          "id": "C",
+          "text": "(C) Bipolar diathermy scissors"
+        }
+      ],
+      "feedback": "Correct answer: A\n\nProcedure interpretation: NPTA data show that traditional cold steel tonsillectomy has lower bleeding rates than thermal techniques, with primary bleeding around 0.5-0.8% and secondary bleeding around 1.0-2.4%. It also causes less postoperative pain. Fully monopolar techniques have the highest postoperative bleeding and pain burden."
+    },
+    {
+      "title": "Step 4/6: Perioperative Glucocorticoids",
+      "scenario": "The patient enters the operating room. During induction, the anesthesiologist asks whether any preventive medication should be given to reduce postoperative pain and discomfort.",
+      "media": "Load image: Dexamethasone vial",
+      "question": "According to Cochrane review and best clinical practice, which perioperative medication safely and effectively reduces postoperative morbidity, pain, nausea, and vomiting after tonsillectomy?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Seven days of postoperative prophylactic antibiotics"
+        },
+        {
+          "id": "B",
+          "text": "(B) A single intraoperative intravenous dose of dexamethasone",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) High-dose aspirin"
+        }
+      ],
+      "feedback": "Correct answer: B\n\nTreatment consensus: Evidence strongly supports a single perioperative dose of dexamethasone as adjunctive therapy to reduce postoperative pain and postoperative nausea/vomiting. In contrast, routine postoperative antibiotics are not recommended and do not reduce complications."
+    },
+    {
+      "title": "Step 5/6: Postoperative Analgesia",
+      "scenario": "The surgery is completed smoothly. The biggest problem after tonsillectomy is pain, and recovery usually takes 1-2 weeks. You need to prescribe discharge analgesics.",
+      "media": "Load image: Postoperative pain management medication choices",
+      "question": "Which statement about postoperative analgesia after tonsillectomy is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Opioids are preferred because they do not cause nausea or vomiting."
+        },
+        {
+          "id": "B",
+          "text": "(B) NSAIDs cause less postoperative nausea and vomiting than opioids and do not increase wound bleeding risk, so they are safe and effective.",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Codeine should be routinely used in all children after surgery for best pain control."
+        }
+      ],
+      "feedback": "Correct answer: B\n\nClinical counseling: Postoperative pain control is crucial. NSAIDs are safe and effective, with fewer nausea and vomiting effects than opioids, and evidence shows they do not increase wound bleeding risk. Codeine is absolutely contraindicated in children because it can be fatal, and aspirin should be avoided because of Reye syndrome."
+    },
+    {
+      "title": "Step 6/6: Managing Secondary Hemorrhage",
+      "scenario": "On postoperative day 8, the patient comes to the emergency department because of a small amount of blood in the mouth and worse pain with swallowing. Examination shows pseudomembrane over both tonsillar fossae with mild oozing, consistent with secondary hemorrhage.",
+      "media": "Load image: Post-tonsillectomy tonsillar fossa pseudomembrane with mild bleeding",
+      "question": "Secondary bleeding after tonsillectomy occurs from 24 hours to 2 weeks postoperatively. What is it most commonly associated with, and what is the standard first-line treatment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Undiagnosed hemophilia; immediately transfuse clotting factor."
+        },
+        {
+          "id": "B",
+          "text": "(B) Local Streptococcus infection; first-line treatment is antibiotic therapy alone, and return to the operating room is rarely needed.",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Suture dehiscence; immediately return to the operating room for re-suturing."
+        }
+      ],
+      "feedback": "Correct answer: B\n\nEmergency pitfall: Secondary hemorrhage often occurs around postoperative days 5-10 during pseudomembrane sloughing and is commonly related to local Streptococcus infection. In most cases, bleeding settles with antibiotic therapy alone, and repeat surgical hemostasis is rarely needed."
+    }
+  ]
+}

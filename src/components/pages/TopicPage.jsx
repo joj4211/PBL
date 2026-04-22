@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { getCase } from '../../cases/index';
 
 const container = {
   animate: { transition: { delayChildren: 0.1, staggerChildren: 0.08 } },
@@ -79,26 +80,34 @@ export default function TopicPage({ topic, lang, onSelectCase, onBack, onSignOut
               animate="animate"
               className="flex flex-col gap-4"
             >
-              {topic.cases.map((c) => (
-                <motion.div
-                  key={c.id}
-                  variants={item}
-                  className="glass-card p-5 flex items-center justify-between gap-4"
-                >
-                  <div>
-                    <div className="font-semibold text-warm-900">{c[lang]}</div>
-                    <div className="text-xs text-warm-400 mt-0.5">
-                      {c[lang === 'zh' ? 'en' : 'zh']}
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => onSelectCase(c.id)}
-                    className="flex-shrink-0 text-sm font-semibold px-4 py-2 rounded-full bg-sage-500 text-white hover:bg-sage-600 transition-colors duration-200"
+              {topic.cases.map((c) => {
+                const caseContent = getCase(c.id, lang);
+                const title = caseContent?.title ?? c[lang];
+                const subtitle = caseContent?.subtitle ?? '';
+
+                return (
+                  <motion.div
+                    key={c.id}
+                    variants={item}
+                    className="glass-card p-5 flex items-center justify-between gap-4"
                   >
-                    {isZh ? '開始學習' : 'Start'}
-                  </button>
-                </motion.div>
-              ))}
+                    <div>
+                      <div className="font-semibold text-warm-900">{title}</div>
+                      {subtitle && (
+                        <div className="text-xs text-warm-400 mt-0.5">
+                          {subtitle}
+                        </div>
+                      )}
+                    </div>
+                    <button
+                      onClick={() => onSelectCase(c.id)}
+                      className="flex-shrink-0 text-sm font-semibold px-4 py-2 rounded-full bg-sage-500 text-white hover:bg-sage-600 transition-colors duration-200"
+                    >
+                      {isZh ? '開始學習' : 'Start'}
+                    </button>
+                  </motion.div>
+                );
+              })}
             </motion.div>
           ) : (
             <motion.div

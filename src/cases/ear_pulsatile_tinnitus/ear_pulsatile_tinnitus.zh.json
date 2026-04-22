@@ -1,0 +1,148 @@
+{
+  "id": "ear_pulsatile_tinnitus",
+  "title": "搏動的雜訊與耳悶之謎 (The Pulsating Noise & Blocked Ears)",
+  "subtitle": "搏動性耳鳴與乙狀竇骨壁缺損",
+  "description": "搏動性耳鳴的靜脈性鑑別、SSCD 排除、影像確診、節律分類與手術治療。",
+  "estimatedTime": "20-30 分鐘",
+  "difficulty": "中階",
+  "tags": [
+    "耳科",
+    "Pulsatile tinnitus",
+    "Sigmoid sinus",
+    "ETD"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: 搏動性耳鳴的初步鑑別 (Initial Assessment)",
+      "scenario": "一位 63 歲男性來到門診，主訴雙耳悶塞感長達 2 年，且右耳有持續一年的「低頻搏動性耳鳴 (low-tone pulsatile tinnitus)」。理學檢查發現：當醫師對其右側頸靜脈施加壓迫 (jugular vein compression) 時，耳鳴的聲音會完全消失 (cease the tinnitus)。",
+      "media": "載入圖片：頸部血管解剖圖，標示頸靜脈壓迫測試 (Jugular compression test)",
+      "question": "根據理學檢查中「壓迫同側頸靜脈 (Compression of ipsilateral IJV) 可緩解耳鳴」的特徵，這強烈暗示該患者的搏動性耳鳴屬於下列哪一種來源？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 動脈性異常 (Arterial anomalies，如頸動脈狹窄)"
+        },
+        {
+          "id": "B",
+          "text": "(B) 靜脈性異常 (Venous anomalies)",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 肌肉性陣攣 (Muscular myoclonus)"
+        }
+      ],
+      "feedback": "正確答案：B\n\n主治醫師的 Tip： 靜脈來源的異常（如高位頸靜脈球或血管壁異常突出）最經典的理學檢查特徵就是「壓迫同側頸靜脈 (Compression of ipsilateral IJV) 會緩解耳鳴」。這對後續的影像學安排具有高度導向性！"
+    },
+    {
+      "title": "Step 2/6: 排除內耳第三窗症候群 (Ruling Out SSCD)",
+      "scenario": "患者早先的顳骨電腦斷層 (Petrous CT) 曾懷疑有「右側上半規管裂症候群 (SSCD)」。為了在門診驗證這個懷疑，你測試了 Tullio phenomenon 與 Hennebert sign，結果皆為陰性 (negative findings)。",
+      "media": "載入圖片：內視鏡與眼震電圖 (VNG) 觀察眼震的示意圖",
+      "question": "根據文獻，上半規管裂症候群 (Semicircular canal dehiscence, SSCD) 除了有大約 50% 的機率會產生搏動性耳鳴外，最典型的臨床症狀（即 Tullio phenomenon 欲誘發的反應）為何？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 聲音或壓力誘發的眩暈 (Sound/pressure-induced vertigo)",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) 吞嚥時誘發的中耳疼痛 (Swallowing-induced otalgia)"
+        },
+        {
+          "id": "C",
+          "text": "(C) 頸部轉動誘發的視力模糊 (Neck rotation-induced blurred vision)"
+        }
+      ],
+      "feedback": "正確答案：A\n\n神經耳科解析： SSCD 的典型症狀包含聲音或壓力誘發的眩暈 (sound/pressure-induced vertigo)，以及大約 50% 會合併搏動性耳鳴。由於患者理學檢查 (Tullio/Hennebert sign) 皆為陰性且無眩暈主訴，這讓我們更傾向尋找其他導致搏動性耳鳴的結構異常。"
+    },
+    {
+      "title": "Step 3/6: 影像學確診與致病機轉 (Pathophysiology & Imaging)",
+      "scenario": "為了更精確評估血管與骨骼的關係，你安排了血管攝影電腦斷層 (CTA)，最終確認患者真正的病灶為「右側乙狀竇骨壁缺損 (Right sigmoid sinus dehiscence)」。",
+      "media": "載入圖片：顳骨 CTA 冠狀切面，箭頭指出乙狀竇缺乏骨質屏蔽",
+      "question": "根據耳鳴的病生理學機轉，周圍聽覺系統附近的「靜脈血管解剖結構異常 (如 sigmoid sinus 異常)」，為何會產生搏動性耳鳴？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 靜脈血流逆流進入耳蝸，導致毛細胞破壞。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 血管解剖異常產生血流擾動，加上骨壁缺損，使聲音不受阻礙地傳遞至周圍聽覺系統。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 靜脈壓迫導致第八對腦神經 (聽神經) 缺血與不正常放電。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n解剖地雷： 搏動性耳鳴的病生理機轉主要來自周圍聽覺系統附近血管解剖結構的異常。乙狀竇骨壁缺損 (dehiscence) 導致原本該被骨頭屏蔽的靜脈血流噪音，毫無阻礙地傳導至中耳與內耳，進而產生患者主觀聽到的搏動性耳鳴。"
+    },
+    {
+      "title": "Step 4/6: 節律性分類的陷阱 (Synchronous vs. Non-synchronous)",
+      "scenario": "患者的搏動性耳鳴在「運動時會加劇 (exacerbated by exercise)」。這類隨心搏或心輸出量增加而改變的耳鳴，屬於「同步性 (Synchronous)」搏動性耳鳴。",
+      "media": "載入圖片：心電圖與耳鳴聲波同步的示意圖",
+      "question": "在臨床分類上，下列哪一種疾病通常引起的是「與心臟脈搏不同步 (Non-synchronous pulsatile tinnitus)」的搏動性耳鳴？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 頸動脈粥狀硬化疾病 (Atherosclerotic carotid artery disease)"
+        },
+        {
+          "id": "B",
+          "text": "(B) 顳骨硬腦膜動靜脈畸形 (Dural arteriovenous malformation)"
+        },
+        {
+          "id": "C",
+          "text": "(C) 軟顎肌陣攣或中耳肌陣攣 (Palatal or middle ear myoclonus)",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：C\n\n分類盲點： 搏動性耳鳴依據是否與患者心臟脈搏同步，分為 synchronous 與 non-synchronous。血管性來源（動脈或靜脈）通常是同步的；而非同步性 (Non-synchronous) 搏動性耳鳴的常見原因包含中耳肌陣攣、軟顎肌陣攣 (Palatal myoclonus) 以及耳咽管異常。"
+    },
+    {
+      "title": "Step 5/6: 針對靜脈性耳鳴的外科介入 (Surgical Treatment)",
+      "scenario": "確診右側乙狀竇骨壁缺損後，因為耳鳴嚴重影響睡眠與生活品質，患者決定接受「右側經乳突乙狀竇骨壁重建手術 (Right transmastoid sigmoid sinus wall resurfacing)」，使用骨水泥 (bone cement) 覆蓋。",
+      "media": "載入圖片：手術顯微鏡視野，顯示骨水泥覆蓋於乙狀竇上的畫面",
+      "question": "針對 Sigmoid sinus diverticulum 或是 Dehiscence (骨壁缺損)，文獻建議的外科處置 (Surgery) 方式為何？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 經乳突重建乙狀竇壁 (Transmastoid reconstruction of the sigmoid wall) 或血管內栓塞 (Endovascular coil embolization)。",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) 聽神經切斷術 (Vestibulocochlear nerve section)。"
+        },
+        {
+          "id": "C",
+          "text": "(C) 裝設人工耳蝸 (Cochlear implantation) 以聲音掩蔽 (Masking)。"
+        }
+      ],
+      "feedback": "正確答案：A\n\n術式解析： 手術的精髓在於「重建隔音牆」。針對乙狀竇異常，臨床上的處置包含觀察、經乳突乙狀竇壁重建手術 (Transmastoid reconstruction of the sigmoid wall)，或是血管內線圈栓塞與支架置放 (Endovascular coil embolization and stenting)。"
+    },
+    {
+      "title": "Step 6/6: 另一種耳悶與非同步耳鳴的元兇 (Concomitant ET Issues)",
+      "scenario": "同一次麻醉中，你繼續為他執行「雙側耳咽管氣球擴張術」，以解決他長達 2 年的阻塞性耳咽管功能障礙 (Obstructive ETD)。但在耳咽管疾病的頻譜中，另一種極端也會造成耳鳴。",
+      "media": "載入圖片：耳咽管解剖與呼吸氣流進入中耳的示意圖",
+      "question": "在鑑別非血管性、非同步性的搏動性耳鳴時，若患者主訴耳鳴「隨呼吸同步」且「躺下時症狀減輕 (因靜脈鬱積而被動壓迫)」，必須強烈懷疑下列哪一種耳咽管異常？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 中耳積水 (Serous otitis media)"
+        },
+        {
+          "id": "B",
+          "text": "(B) 耳硬化症 (Otosclerosis)"
+        },
+        {
+          "id": "C",
+          "text": "(C) 耳咽管開放症 (Patulous Eustachian tube)",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：C\n\n臨床地雷： 本案例雖然是阻塞性 ETD，但不可不知「耳咽管開放症 (Patulous ET)」也會造成耳脹與搏動性耳鳴。其特徵為自聽增強 (autophony)、耳鳴隨呼吸同步（因壓力變化），且躺下時因靜脈鬱積 (venous stasis) 被動壓迫耳咽管，症狀反而會減輕"
+    }
+  ]
+}

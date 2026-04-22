@@ -1,0 +1,148 @@
+{
+  "id": "throat_hoarseness_vocal_polyp",
+  "title": "The Painter's Hoarse Voice",
+  "subtitle": "Hoarseness, vocal fold polyp, and phonomicrosurgery",
+  "description": "Voice handicap assessment, GRBAS scoring, vocal fold polyp differentiation, KTP laser, microflap technique, and postoperative care.",
+  "estimatedTime": "20-30 min",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Laryngology",
+    "Hoarseness",
+    "Vocal fold polyp",
+    "Phonomicrosurgery"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: Subjective Voice Assessment",
+      "scenario": "A 57-year-old male painter comes to clinic. He has smoked 1 pack per day for more than 40 years. He reports hoarseness for several years. To quantify how this voice problem affects his daily work and social life, you ask him to complete the Chinese version of the Voice Handicap Index-10 (VHI-10).",
+      "media": "Load image: Example of the Chinese VHI-10 questionnaire",
+      "question": "According to Taiwanese research, what minimal clinically important difference (MCID) on the Chinese VHI-10 indicates a meaningful clinical improvement during future treatment?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 10 points"
+        },
+        {
+          "id": "B",
+          "text": "(B) 4 points",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 1 point"
+        }
+      ],
+      "feedback": "Correct answer: B\n\nAttending tip: VHI-10 is an excellent questionnaire for assessing the patient's subjective voice handicap. Research has set the optimal MCID for the Chinese VHI-10 at 4 points. If a patient's score improves by more than 4 points after voice therapy or surgery, the treatment can be considered positively responsive."
+    },
+    {
+      "title": "Step 2/6: Perceptual Evaluation: GRBAS",
+      "scenario": "At follow-up, you perform standard auditory-perceptual voice evaluation and record his voice score as GRB: 323.",
+      "media": "Load image: GRBAS scoring chart with parameter definitions",
+      "question": "In the GRBAS system, what does B:3 indicate, and what vocal fold physiology does it correspond to?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Roughness; extremely irregular vocal fold vibration."
+        },
+        {
+          "id": "B",
+          "text": "(B) Strain; excessive effort during phonation."
+        },
+        {
+          "id": "C",
+          "text": "(C) Breathiness; an airy voice caused by incomplete closure of the vocal folds.",
+          "correct": true
+        }
+      ],
+      "feedback": "Correct answer: C\n\nAssessment interpretation: GRBAS stands for Grade, Roughness, Breathiness, Asthenia, and Strain. GRB 323 indicates severe overall dysphonia and severe breathiness, strongly suggesting a vocal fold lesion that prevents complete glottic closure and allows substantial air leakage during phonation."
+    },
+    {
+      "title": "Step 3/6: Stroboscopy and Benign Lesion Differentiation",
+      "scenario": "You arrange stroboscopy and find a right anterior one-third non-hemorrhagic vocal fold polyp. The left vocal fold also has telangiectasia.",
+      "media": "Load image: Endoscopic image showing a unilateral exophytic vocal fold polyp",
+      "question": "Compared with vocal fold nodules, which statement about vocal fold polyps is most accurate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) They are usually bilateral symmetric lesions, and most resolve with conservative voice therapy alone."
+        },
+        {
+          "id": "B",
+          "text": "(B) They may be unilateral or bilateral, often appear clear and exophytic or heme-colored, and usually respond poorly to voice therapy.",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) They are cup-shaped depressions caused by repeated impact from the contralateral lesion, called a cup-and-saucer deformity."
+        }
+      ],
+      "feedback": "Correct answer: B\n\nDiagnostic point: Vocal fold polyps may be unilateral or bilateral and often appear clear and exophytic or heme-colored. Unlike nodules, polyps usually respond poorly to voice therapy alone. That is why this patient failed steroid and reflux medication treatment and eventually needed surgery."
+    },
+    {
+      "title": "Step 4/6: Vascular Lesions and KTP Laser",
+      "scenario": "You notice telangiectasia on the patient's left vocal fold. These vascular lesions often run perpendicular to the long axis of the vocal fold and can bleed after phonotrauma.",
+      "media": "Load image: Venous lakes and telangiectasia on the vocal fold surface",
+      "question": "If laser treatment is chosen for vocal fold telangiectasia, which laser is preferred because it is selectively absorbed by hemoglobin and destroys vessels while reducing thermal injury to surrounding mucosa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) CO2 laser"
+        },
+        {
+          "id": "B",
+          "text": "(B) KTP laser",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Nd:YAG laser"
+        }
+      ],
+      "feedback": "Correct answer: B\n\nProcedure interpretation: Benign vocal fold lesions can often be treated with cold instruments. For vascular lesions, however, KTP laser has a major advantage because its wavelength is highly and selectively absorbed by hemoglobin. This produces an angiolytic effect while greatly reducing thermal injury to surrounding vocal fold tissue."
+    },
+    {
+      "title": "Step 5/6: Phonomicrosurgery and Microflap",
+      "scenario": "The patient chooses surgery, and you arrange microlaryngosurgery with biopsy. Because of his 40-year smoking history, biopsy is necessary to exclude keratosis or malignant degeneration. During surgery, you use a microflap approach.",
+      "media": "Load image: Microflap approach showing epithelial incision beside the lesion",
+      "question": "When using a microflap approach to remove a submucosal lesion such as a polyp, what is the most important surgical principle?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Widely remove the normal tissue around the lesion to ensure no residual lesion remains."
+        },
+        {
+          "id": "B",
+          "text": "(B) Cut deeply down to the vocal ligament and muscle to completely excavate the lesion."
+        },
+        {
+          "id": "C",
+          "text": "(C) Make the incision as close to the lesion as possible, stay in the most superficial plane possible, and minimize injury to surrounding tissue.",
+          "correct": true
+        }
+      ],
+      "feedback": "Correct answer: C\n\nSurgical pitfall: The spirit of phonomicrosurgery is preserving normal mucosa. The key principles of the microflap approach are to incise the epithelium close to the lesion, dissect in as superficial a plane as possible, and minimize disruption of surrounding tissue. Excessive removal causes vocal fold scarring and permanent voice impairment."
+    },
+    {
+      "title": "Step 6/6: Postoperative Care and Complication Prevention",
+      "scenario": "The surgery is completed smoothly. The polyp is fully removed and the microflap is well repositioned. You visit the ward to provide discharge instructions.",
+      "media": "Load image: Postoperative voice rest and hydration counseling",
+      "question": "Which postoperative instruction after microlaryngosurgery is correct and must be explained to the patient?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) No water for 3 days after surgery to protect the vocal fold wound."
+        },
+        {
+          "id": "B",
+          "text": "(B) Voice rest for 2-14 days, adequate hydration, and counseling about temporary lingual nerve injury from intubation or suspension, such as tongue numbness or taste change.",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Voice recovery is guaranteed to be 100%, with no risk of worsening."
+        }
+      ],
+      "feedback": "Correct answer: B\n\nClinical counseling: Adequate voice rest for 2-14 days and good hydration are essential after surgery. Proton pump inhibitors are often used to prevent reflux irritation of the wound. Patients must also be informed that suspension can compress nerves and cause temporary tongue numbness or taste change from lingual nerve injury, usually improving within 1 month. About 1-2% of patients may have no improvement or even worse voice after surgery."
+    }
+  ]
+}

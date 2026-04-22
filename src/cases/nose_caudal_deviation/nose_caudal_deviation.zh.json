@@ -1,0 +1,148 @@
+{
+  "id": "nose_caudal_deviation",
+  "title": "複雜的鼻阻塞：不只是黏膜問題",
+  "subtitle": "鼻中膈尾端偏曲與鼻阻塞",
+  "description": "內鼻閥狹窄、功能性鼻整形、移植物技巧、下鼻甲手術與鼻中膈固定。",
+  "estimatedTime": "20-30 分鐘",
+  "difficulty": "進階",
+  "tags": [
+    "鼻科",
+    "鼻阻塞",
+    "功能性鼻整形",
+    "內鼻閥"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: 初步評估與鼻阻塞鑑別",
+      "scenario": "一位 50 歲男性至門診就診，主訴長期慢性鼻阻塞、間歇性鼻塞與水樣鼻水。他的 rTNSS 分數為 CRIS\\_S:2000\\_1。鼻黏膜呈現腫脹狀。他否認臉部壓迫感或嗅覺喪失。",
+      "media": "載入圖片：鼻腔氣流阻力、黏膜肥厚與結構變形的示意圖",
+      "question": "在開立鼻內類固醇噴劑 (INCS) 之前，哪一個簡單的門診臨床步驟可以幫助你區分阻塞主要來自可逆性黏膜肥厚，還是固定的結構變形？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 執行 Rinne 與 Weber 測試。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 使用局部鼻去充血劑後，重新評估鼻腔通氣。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 立即安排鼻竇電腦斷層。"
+        }
+      ],
+      "feedback": "正確答案：B\n\nClinical Pearl: 使用局部鼻去充血劑後，若鼻阻塞明顯改善，代表黏膜因素（肥厚／充血）扮演重要角色。\n\n若去充血後阻塞幾乎沒有改變，則強烈指向固定的結構性阻塞，例如鼻中膈偏曲或鼻閥塌陷。"
+    },
+    {
+      "title": "Step 2/6: 辨識結構缺損（解剖）",
+      "scenario": "接受足量 INCS 治療 4 個月後，病人表示只有些微改善。鼻內視鏡結構評估發現明顯的鼻中膈尾端向左偏曲、較高位的鼻中膈偏曲，以及雙側內鼻閥 (INV) 狹窄。",
+      "media": "載入圖示：內鼻閥 (INV) 的橫切面解剖圖",
+      "question": "為了正確理解並矯正此病人的內鼻閥狹窄，你必須知道它的邊界。下列哪個構造形成內鼻閥的上方／外側邊界？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 上外側軟骨 (ULC) 的尾端邊緣。",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) 下外側軟骨 (LLC) 的內側腳。"
+        },
+        {
+          "id": "C",
+          "text": "(C) 篩骨垂直板。"
+        }
+      ],
+      "feedback": "正確答案：A\n\nClinical Pearl: 內鼻閥是鼻氣道最狹窄的部分。\n\n其內側邊界為軟骨性鼻中膈，上方／外側邊界為上外側軟骨 (ULC) 的尾端部分，下方為鼻底，後方為下鼻甲頭端。"
+    },
+    {
+      "title": "Step 3/6: 互動挑戰 - 理學檢查",
+      "scenario": "在建議功能性鼻整形前，你想用理學檢查向病人示範鼻閥狹窄對症狀的動態影響。",
+      "media": "載入互動動畫：病人臉部，使用者需拖曳手指執行臨床檢查動作",
+      "question": "哪一個經典理學檢查動作是將病人臉頰向外側牽拉以打開鼻閥？而「陰性」結果代表什麼？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Valsalva Maneuver；陰性代表耳咽管阻塞。"
+        },
+        {
+          "id": "B",
+          "text": "(B) Cottle's Maneuver；陰性代表阻塞原因不在外側鼻壁。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Modified Cottle's Maneuver；陰性證明鼻中膈完全筆直。"
+        }
+      ],
+      "feedback": "正確答案：B\n\nClinical Pearl: Cottle maneuver 是將臉頰皮膚向外側牽拉。若阻塞因此改善，代表問題定位在鼻閥區域。\n\n然而，陰性的 Cottle 測試常更有資訊價值，代表鼻阻塞原因不在外側鼻壁，而可能在鼻中膈或更深層的結構。"
+    },
+    {
+      "title": "Step 4/6: 手術策略與移植物技巧",
+      "scenario": "由於嚴重的鼻中膈尾端與高位背側偏曲造成鼻閥狹窄，標準黏膜下切除術 (SMR) 並不足夠。你計畫執行開放式功能性鼻整形。",
+      "media": "載入圖示：Spreader grafts 與 Alar batten grafts 的放置位置",
+      "question": "為了矯正高位鼻背偏曲並同時加寬內鼻閥角度，在功能性鼻整形中應使用哪一種特定移植物技巧？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Columellar strut graft"
+        },
+        {
+          "id": "B",
+          "text": "(B) Spreader grafts",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Alar batten grafts"
+        }
+      ],
+      "feedback": "正確答案：B\n\nClinical Pearl: Spreader grafts 通常取自四方軟骨，放置於鼻中膈與上外側軟骨 (ULC) 之間的黏膜下口袋。\n\n它們是重建鼻背「T」型交界、支撐鼻背偏曲並有效加寬內鼻閥角度的黃金標準。\n\n相對地，alar batten grafts 用於強化外鼻閥。"
+    },
+    {
+      "title": "Step 5/6: 處理下鼻甲（手術陷阱）",
+      "scenario": "在矯正鼻中膈與鼻閥的同時，你也必須執行雙側黏膜下鼻甲成形術 (SMT)，以處理他的頑固性慢性肥厚性鼻炎 (CHR)。",
+      "media": "載入圖片：使用 microdebrider 縮減下鼻甲的內視鏡畫面",
+      "question": "身為外科醫師，你選擇保守的黏膜下手術方式（例如使用 microdebrider），而不是積極執行全下鼻甲切除術。你想避免哪一種嚴重影響生活品質的術後併發症？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 腦脊髓液鼻漏"
+        },
+        {
+          "id": "B",
+          "text": "(B) 毒性休克症候群"
+        },
+        {
+          "id": "C",
+          "text": "(C) 空鼻症候群（氣流感覺喪失）",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：C\n\nClinical Pearl: 下鼻甲黏膜應盡可能保留。\n\n過度積極切除或完全移除下鼻甲，可能造成一種矛盾性感受：明明氣道很寬，病人卻仍感覺嚴重鼻阻塞，稱為空鼻症候群（或 rhinitis sicca）。"
+    },
+    {
+      "title": "Step 6/6: 術後照護與固定",
+      "scenario": "功能性鼻整形與雙側 SMT 完成後，你希望確保鼻中膈黏膜瓣能妥善貼合、預防血腫，並避免傳統鼻填塞帶來的嚴重不適。",
+      "media": "載入圖片：Doyle splints 與鼻中膈 quilting sutures 放置情形",
+      "question": "根據現代鼻科手術實務，為預防術後鼻中膈血腫與沾黏，同時避免鼻填塞造成的不適，偏好的方法為何？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 使用鼻中膈 quilting sutures，或放置柔軟矽膠鼻中膈支架（例如 Doyle splints）。",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) 開立 4 週高劑量全身性類固醇。"
+        },
+        {
+          "id": "C",
+          "text": "(C) 讓黏骨膜瓣完全敞開以利自由引流。"
+        }
+      ],
+      "feedback": "正確答案：A\n\nClinical Pearl: 仔細剝離可降低出血，通常能避免使用令人不適的鼻填塞。\n\n鼻中膈 quilting sutures 已被證實能大幅降低術後血腫並提升病人滿意度。\n\n另一種方式是使用柔軟鼻中膈支架（如 Doyle splints）壓迫黏膜瓣，免除填塞需求，並預防血腫及鼻中膈與新手術下鼻甲之間的沾黏。"
+    }
+  ]
+}

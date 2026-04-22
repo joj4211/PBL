@@ -15,7 +15,6 @@ export default function ProgressIndicator({ currentPhase }) {
           const phaseIndex = getPhaseIndex(phase);
           const isDone = phaseIndex < currentIndex;
           const isCurrent = phase === currentPhase;
-          const meta = ui.phases[phase];
 
           return (
             <div key={phase} className="flex items-start gap-0.5 sm:gap-1">

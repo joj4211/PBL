@@ -1,0 +1,148 @@
+{
+  "id": "throat_thyroid_nodule",
+  "title": "The Hidden Nodule: Precision Evaluation",
+  "subtitle": "Risk assessment and surgical decision-making for thyroid nodules",
+  "description": "Initial TSH evaluation, malignant ultrasound features, FNA technique, molecular testing, 2025 ATA surgical extent, and prophylactic neck dissection decisions.",
+  "estimatedTime": "20-30 min",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Laryngology",
+    "Thyroid nodule",
+    "FNA",
+    "ATA"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: Incidental Nodule and Initial Workup",
+      "scenario": "A 45-year-old woman is found to have a 1.8 cm right thyroid nodule incidentally on neck ultrasound during an employee health check. She has no dysphagia, hoarseness, or neck pain. She brings the report to your clinic for consultation.",
+      "media": "Load image: Outpatient physician palpating the thyroid",
+      "question": "For a clinically suspected or incidentally imaged thyroid nodule, in addition to dedicated thyroid ultrasound, which hormone test must be checked first to guide the subsequent workup?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Serum thyroid-stimulating hormone (TSH)",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) Calcitonin"
+        },
+        {
+          "id": "C",
+          "text": "(C) Thyroglobulin (Tg)"
+        }
+      ],
+      "feedback": "Correct answer: A\n\nAttending tip: After ultrasound, serum TSH is the standard starting point for all thyroid nodules. If TSH is suppressed, the nodule may be autonomously functioning, and radioactive iodine scintigraphy should be arranged. If the nodule is hot, the malignancy risk is very low and FNA is usually not needed."
+    },
+    {
+      "title": "Step 2/6: Sonographic Risk Assessment",
+      "scenario": "The patient's blood test shows a normal TSH level. You personally perform a thyroid ultrasound and carefully assess the morphology of the 1.8 cm nodule.",
+      "media": "Load image: Thyroid ultrasound showing a solid hypoechoic nodule with irregular margins and microcalcifications",
+      "question": "When assessing cancer risk by ultrasound, which set of sonographic features strongly suggests malignancy and strongly supports FNA?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Purely cystic, smooth margins, and posterior enhancement."
+        },
+        {
+          "id": "B",
+          "text": "(B) Spongiform appearance, isoechoic texture, and peripheral vascularity."
+        },
+        {
+          "id": "C",
+          "text": "(C) Solid composition, hypoechogenicity, irregular margins, and microcalcifications.",
+          "correct": true
+        }
+      ],
+      "feedback": "Correct answer: C\n\nImaging pitfall: Ultrasound is powerful for risk stratification. Solid composition, irregular margins, parenchymal hypoechogenicity, and microcalcifications have high predictive value for thyroid cancer. In contrast, a purely cystic nodule is almost certainly benign."
+    },
+    {
+      "title": "Step 3/6: FNA Technique and Cystic Fluid",
+      "scenario": "The patient agrees to ultrasound-guided fine-needle aspiration. While preparing the equipment, a student brings an 18-gauge core needle and says, \"If we aspirate cystic fluid, we should send all of it for cytology to improve the diagnostic yield.\"",
+      "media": "Load image: Ultrasound-guided FNA using a 25-gauge needle and syringe",
+      "question": "According to standard thyroid FNA practice and clinical evidence, which statement about needle choice and cystic fluid management is most correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Use an 18-gauge core needle routinely, and always send aspirated cystic fluid for cytology."
+        },
+        {
+          "id": "B",
+          "text": "(B) Use a 25- to 27-gauge needle; aspirating cystic fluid may relieve symptoms, but the fluid has no role in cytologic analysis.",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Avoid any needle movement to prevent bleeding; if the first sample is nondiagnostic, proceed immediately to diagnostic surgery."
+        }
+      ],
+      "feedback": "Correct answer: B\n\nClinical pearl: Standard thyroid FNA uses a 5-10 cc syringe with a 25- to 27-gauge needle, with about 5 seconds of needle undulation within the lesion. Core-needle biopsy has no role in routine evaluation of low-risk nodules. Although aspirating cystic fluid can shrink the nodule and relieve symptoms, cytologic analysis of cystic fluid has no clinical value. If cystic content leads to a nondiagnostic sample, repeat FNA after healing is the correct next step."
+    },
+    {
+      "title": "Step 4/6: Molecular Testing for Indeterminate Cytology",
+      "scenario": "One week later, the FNA cytology report shows atypia of undetermined significance (AUS), Bethesda category III. The uncertain result makes the patient anxious. To refine risk assessment, you suggest molecular testing of the aspirated sample.",
+      "media": "Load image: Genetic testing report listing common mutations",
+      "question": "When evaluating indeterminate thyroid cytology, which group of mutations significantly increases the diagnostic yield for thyroid cancer and can change surgical decision-making?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) BRCA1 and BRCA2 mutations"
+        },
+        {
+          "id": "B",
+          "text": "(B) BRAF, RET-PTC, RAS, or PAX8/PPARg mutations",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) BCR-ABL fusion"
+        }
+      ],
+      "feedback": "Correct answer: B\n\nPrecision medicine: When FNA cytology is indeterminate, up to 29% of specimens may show BRAF, RET-PTC, RAS, or PAX8/PPARg mutations. Galectin-3 immunostaining also has high predictive value. Detecting these mutations preoperatively helps confirm malignant risk and determine the extent of surgery."
+    },
+    {
+      "title": "Step 5/6: Surgical Extent in the 2025 ATA Guidelines",
+      "scenario": "Molecular testing is positive for BRAF mutation, confirming papillary thyroid carcinoma. The tumor is 1.8 cm (cT1b), ultrasound shows no extrathyroidal extension, the contralateral thyroid is normal, and there are no suspicious lymph nodes. The patient chooses surgery and asks whether the entire thyroid must be removed.",
+      "media": "Load image: Comparison of thyroid lobectomy and total thyroidectomy",
+      "question": "According to the newly released 2025 American Thyroid Association guidelines, what is the preferred surgical extent for tumors smaller than 2 cm without extrathyroidal extension or suspicious lymph nodes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Lobectomy is sufficient.",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) Total thyroidectomy is mandatory to allow later radioactive iodine treatment."
+        },
+        {
+          "id": "C",
+          "text": "(C) Radiofrequency ablation alone is enough, and surgery is prohibited."
+        }
+      ],
+      "feedback": "Correct answer: A\n\n2025 ATA update: The 2025 ATA guidelines broaden the indications for lobectomy. For tumors smaller than 2 cm without extrathyroidal extension or suspicious lymph nodes, lobectomy is strongly preferred; even 2-4 cm tumors may be considered for lobectomy. Recurrence rates are similar to total thyroidectomy, while complications such as hypoparathyroidism and lifelong thyroid hormone dependence are reduced."
+    },
+    {
+      "title": "Step 6/6: Prophylactic Central Neck Dissection",
+      "scenario": "After the decision for lobectomy, the patient's husband asks, \"Since you are already operating, can you remove all the nearby central neck lymph nodes just to be safe?\"",
+      "media": "Load image: Central compartment level VI lymph-node anatomy",
+      "question": "For clinically node-negative T1-T2 early tumors, what do the 2025 ATA guidelines recommend regarding prophylactic central neck dissection?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Strongly recommend it because it significantly improves overall survival."
+        },
+        {
+          "id": "B",
+          "text": "(B) Strongly discourage it because it does not improve long-term outcomes and increases the risk of nerve injury and hypoparathyroidism.",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Remove only left-sided lymph nodes as a representative sample."
+        }
+      ],
+      "feedback": "Correct answer: B\n\n2025 ATA concept update: Central neck dissection increases the risk of recurrent laryngeal nerve injury and hypoparathyroidism. The 2025 ATA guidelines more strongly discourage prophylactic central neck dissection in clinically node-negative T1-T2 tumors because it does not improve long-term outcomes and only adds surgical morbidity."
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "id": "throat_hoarseness_vocal_polyp",
+  "title": "油漆工的沙啞嗓音 (The Painter's Hoarse Voice)",
+  "subtitle": "聲音沙啞、聲帶息肉與喉顯微手術",
+  "description": "聲音障礙量表、GRBAS、聲帶息肉鑑別、KTP 雷射、微瓣技術與術後照護。",
+  "estimatedTime": "20-30 分鐘",
+  "difficulty": "中階",
+  "tags": [
+    "喉科",
+    "Hoarseness",
+    "Vocal fold polyp",
+    "Phonomicrosurgery"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: 主觀音聲評估與生活品質 (Subjective Voice Assessment)",
+      "scenario": "一位 57 歲的男性油漆工來到門診。他每天抽一包菸長達 40 年 (1 PPD for 40+ years)。他主訴聲音沙啞 (hoarseness) 已經好幾年了。為了量化這個聲音問題對他日常工作與社交的影響，你請他填寫了一份「華文版語音障礙指數表 (VHI-10)」。",
+      "media": "載入圖片：華文版 VHI-10 量表問卷範例",
+      "question": "根據台灣學者的研究，為了判斷這名患者在未來的治療中是否有「有意義的臨床改善」，華文版 VHI-10 的「最小臨床重要差異 (Minimal Clinically Important Difference, MCID)」被設定為幾分？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 10 分"
+        },
+        {
+          "id": "B",
+          "text": "(B) 4 分",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 1 分"
+        }
+      ],
+      "feedback": "正確答案：B\n\n主治醫師的 Tip： VHI-10 是一份評估聲音障礙患者主觀感受的極佳問卷。根據研究，華文版 VHI-10 的最佳 MCID 設定為 4 分。這代表未來不論是做語言治療或手術，只要患者的 VHI-10 分數進步超過 4 分，我們就可以視為「治療有正向反應 (positive or responsive)」。"
+    },
+    {
+      "title": "Step 2/6: 聽覺知覺評估 (Perceptual Evaluation: GRBAS)",
+      "scenario": "患者回診時，你為他進行了標準的聽覺知覺評估 (Auditory-perceptual evaluation)。你在病歷上紀錄了他的聲音分數為：「GRB: 323」。",
+      "media": "載入圖片：GRBAS 評分表與各項參數定義",
+      "question": "根據 GRBAS 評估系統，病歷上紀錄的「B: 3」代表這名患者的聲音具有嚴重 (Severe) 的何種特徵？其對應的聲帶生理狀態為何？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 粗糙聲 (Roughness)；代表聲帶震動極度不規律。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 緊繃聲 (Strain)；代表發聲時過度用力。"
+        },
+        {
+          "id": "C",
+          "text": "(C) 氣息聲 (Breathiness)；代表發聲時有漏氣聲，通常起因於聲帶無法完全閉合 (incomplete closure of vocal folds)。",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：C\n\n評估解析： GRBAS 分別代表 Grade (整體嚴重度), Roughness (粗糙), Breathiness (氣息/漏氣聲), Asthenia (無力), Strain (緊繃)。該患者 GRB 為 323，代表有嚴重的沙啞 (G=3) 與嚴重的漏氣聲 (B=3)，強烈暗示他的聲帶上有病灶阻礙了聲門的完全閉合，導致發聲時空氣大量漏出。"
+    },
+    {
+      "title": "Step 3/6: 內視鏡與病灶鑑別 (Stroboscopy & Benign Lesions)",
+      "scenario": "你安排了喉閃頻攝影 (Stroboscopy) 檢查，發現患者右側聲帶前 1/3 有一個「非出血性息肉 (Right VF non-hemorrhagic polyp)」，而左側聲帶則有微血管擴張 (Lt VF telangiectasia)。",
+      "media": "載入圖片：內視鏡下顯示單側外突性 (exophytic) 的聲帶息肉",
+      "question": "相較於好發在雙側的聲帶結節 (Nodules)，關於「聲帶息肉 (Vocal fold polyps)」的臨床特徵，下列敘述何者最正確？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 多為雙側對稱性病灶，且多數只要靠保守的語言治療即可痊癒。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 可以是單側或雙側，外觀多呈清澈外突狀或帶血色，且通常對語言治療效果不好 (poor response to voice therapy)。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 是因對側病灶不斷撞擊產生的杯狀凹陷，又稱「cup and saucer」變形。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n診斷重點： 聲帶息肉 (Polyps) 可以是單側或雙側，外觀常呈 clear exophytic 或 heme-colored。與結節 (Nodules) 不同的是，息肉通常對單純的語言治療 (voice therapy) 效果不佳，這也是為什麼該患者在使用類固醇與胃藥治療後依舊無效，最終需要尋求手術介入的原因。"
+    },
+    {
+      "title": "Step 4/6: 血管性病灶的特殊雷射治療 (Vascular Lesions & KTP Laser)",
+      "scenario": "你注意到患者左側聲帶有血管擴張 (Telangiectasia)。這類血管性病灶 (Vascular lesions) 常呈垂直於聲帶縱軸的分佈，容易因發聲創傷引發聲帶出血。",
+      "media": "載入圖片：聲帶表面的靜脈湖 (venous lakes) 與微血管擴張",
+      "question": "若決定使用雷射來處理聲帶表面這類微血管擴張的病灶，目前臨床上首選哪一種雷射，因為它能精準被「血紅素 (hemoglobin)」吸收，有效破壞血管同時降低對周圍黏膜的熱傷害 (thermal injury risk)？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 二氧化碳雷射 (CO2 Laser)"
+        },
+        {
+          "id": "B",
+          "text": "(B) 磷酸鈦鉀雷射 (KTP Laser)",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 銣雅各雷射 (Nd:YAG Laser)"
+        }
+      ],
+      "feedback": "正確答案：B\n\n術式解析： 一般的聲帶良性病灶使用冷器械 (cold instrumentation) 即可處理。但在面對血管性病灶 (Vascular ectasias) 時，KTP laser 具有極大優勢。因為 KTP 雷射的波長能被血紅素高度選擇性吸收，達到精準血管溶解 (angiolytic) 的效果，同時大幅降低周圍聲帶組織的熱傷害。"
+    },
+    {
+      "title": "Step 5/6: 喉顯微手術與微瓣技術 (Phonomicrosurgery & Microflap)",
+      "scenario": "患者決定接受手術，你安排了「喉顯微手術合併切片 (MLS with biopsy)」。由於患者有長達 40 年的抽菸史，切片是絕對必要的，以排除角化症 (Keratosis) 或惡性轉變 (malignant degeneration)。手術中你採用了「微瓣技術 (Microflap approach)」。",
+      "media": "載入圖片：Microflap approach，展示在病灶旁劃開上皮的步驟",
+      "question": "在執行 Microflap approach 移除黏膜下病灶 (如息肉) 時，最重要的手術核心原則是什麼？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 大範圍切除病灶周圍的正常組織，以確保沒有殘留。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 深切直到聲帶韌帶 (Vocal ligament) 與肌肉層，徹底挖除。"
+        },
+        {
+          "id": "C",
+          "text": "(C) 切口應盡量靠近病灶，剝離時盡可能維持在極淺的層次 (Staying in as superficial plane as possible)，並將對周圍組織的破壞降到最低。",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：C\n\n手術地雷： Phonomicrosurgery 的精神就是「保留正常黏膜」。Microflap 的關鍵原則包括：在最靠近病灶處切開上皮、盡可能在極淺層剝離 (superficial plane)，並最小化對周圍組織的破壞 (minimal disrupting surrounding tissue)。過度切除會導致嚴重的聲帶結疤 (scar formation)，造成永久性發聲障礙。"
+    },
+    {
+      "title": "Step 6/6: 術後照護與併發症預防 (Post-op Care & Complications)",
+      "scenario": "手術順利結束，息肉被完整移除且微瓣復位良好。你在術後前往病房對患者進行出院衛教。",
+      "media": "載入圖片：術後禁聲 (Voice Rest) 與多喝水衛教圖",
+      "question": "關於喉顯微手術 (MLS) 的術後照護與潛在併發症，下列何項指導是正確且必須告知患者的？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 術後需完全禁水三天以保護聲帶傷口。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 術後需進行 2-14 天不等的「噤聲休息 (Voice rest)」，且需保持充足水分攝取；另外需注意插管與懸吊可能引起的暫時性舌神經損傷 (舌頭麻木或味覺改變)。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 術後保證聲音 100% 恢復，不會有任何變差的風險。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n臨床衛教： 術後絕對需要充分的 Voice rest (2-14天) 與保持身體水分充足，並常規使用胃藥 (PPI) 預防胃酸逆流刺激傷口。此外，必須在術前/術後告知病患，喉懸吊 (Suspension) 過程可能壓迫神經，導致暫時性的舌頭麻木或味覺改變 (Lingual nerve injury)，一般在一個月內會慢慢恢復。同時，仍有 1-2% 的患者術後聲音可能不會進步甚至變差。"
+    }
+  ]
+}

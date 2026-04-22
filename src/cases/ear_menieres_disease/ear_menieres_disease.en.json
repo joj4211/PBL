@@ -1,0 +1,148 @@
+{
+  "id": "ear_menieres_disease",
+  "title": "The Waves of Vertigo: Meniere's Disease",
+  "subtitle": "Diagnosis, testing, and treatment decisions in Meniere's disease",
+  "description": "Diagnostic criteria, audiometric findings, electrophysiologic testing, exclusion imaging, and staged treatment for Meniere's disease.",
+  "estimatedTime": "20-30 min",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Otology",
+    "Meniere's disease",
+    "Vertigo",
+    "Endolymphatic hydrops"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: Diagnostic Criteria",
+      "scenario": "A 38-year-old woman visits the clinic after three severe episodes of spinning vertigo over the past 3 months. During each attack, she also has marked right-sided aural fullness and a low-pitched roaring tinnitus. During attacks she can only lie in bed and has severe nausea and vomiting.",
+      "media": "Load table: Table 63.1 Diagnostic criteria for Meniere's disease",
+      "question": "According to the 2015 diagnostic criteria, what duration of spontaneous vertigo attacks is required to diagnose definite Meniere's disease?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) At least 5 attacks, each lasting 5 minutes to 72 hours."
+        },
+        {
+          "id": "B",
+          "text": "(B) At least 2 spontaneous vertigo attacks, each lasting 20 minutes to 12 hours.",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Vertigo lasting more than 24 hours with severe headache."
+        }
+      ],
+      "feedback": "Correct answer: B\n\nAttending tip: The diagnosis of Meniere's disease relies heavily on history. Definite Meniere's disease requires at least 2 spontaneous episodes of vertigo lasting 20 minutes to 12 hours, audiometrically documented low- to mid-frequency sensorineural hearing loss in the affected ear, and fluctuating aural symptoms such as tinnitus, hearing loss, or aural fullness.\n\nChoice A actually describes the attack-duration criterion for vestibular migraine."
+    },
+    {
+      "title": "Step 2/6: Audiometry and Pathophysiology",
+      "scenario": "After the vertigo attack, you arrange pure-tone audiometry. The audiogram shows the typical pattern of right low-tone sensorineural hearing loss.",
+      "media": "Load image: Early upward-sloping audiogram in Meniere's disease",
+      "question": "The symptoms of Meniere's disease, including vertigo, low-frequency hearing loss, and aural fullness, are mainly thought to be related to which histopathologic inner-ear phenomenon?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Canalithiasis"
+        },
+        {
+          "id": "B",
+          "text": "(B) Microvascular ischemia of the auditory nerve"
+        },
+        {
+          "id": "C",
+          "text": "(C) Endolymphatic hydrops",
+          "correct": true
+        }
+      ],
+      "feedback": "Correct answer: C\n\nPathophysiology: Spontaneous endolymphatic hydrops is considered the core histopathologic feature of Meniere's disease. Although endolymphatic hydrops is not unique to Meniere's disease, abnormal expansion and pressure changes in the membranous labyrinth explain fluctuating hearing loss and aural fullness very well."
+    },
+    {
+      "title": "Step 3/6: Electrocochleography (ECoG)",
+      "scenario": "To look for electrophysiologic evidence of endolymphatic hydrops, you arrange electrocochleography (ECoG).",
+      "media": "Load image: Figure 63.2 Electrocochleogram showing an abnormally elevated SP wave",
+      "question": "When reviewing ECoG in a patient with suspected Meniere's disease, which abnormally elevated value is a typical feature of endolymphatic hydrops?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Prolonged ABR wave I latency"
+        },
+        {
+          "id": "B",
+          "text": "(B) Elevated summating potential/action potential ratio (SP/AP ratio)",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Abnormally increased cVEMP amplitude"
+        }
+      ],
+      "feedback": "Correct answer: B\n\nTest interpretation: ECoG can demonstrate the electrophysiologic basis of endolymphatic hydrops. In Meniere's disease, basilar membrane displacement increases the summating potential. Clinically, click stimulation is often used; an extratympanic SP/AP ratio greater than 0.42 or a transtympanic SP/AP ratio greater than 0.35 strongly suggests endolymphatic hydrops."
+    },
+    {
+      "title": "Step 4/6: Exclusion by MRI",
+      "scenario": "Although the clinical symptoms and audiogram fit Meniere's disease very well, your attending reminds you during rounds: \"Before diagnosing definite Meniere's disease, other causes must be excluded.\"",
+      "media": "Load image: MRI showing a cerebellopontine angle tumor",
+      "question": "To exclude secondary lesions that can cause similar symptoms, such as neurovascular compression or posterior fossa tumors, which imaging study is the most sensitive and necessary?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) MRI of the cerebellopontine angle with contrast enhancement",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) High-resolution CT of the temporal bone"
+        },
+        {
+          "id": "C",
+          "text": "(C) Carotid Doppler ultrasound"
+        }
+      ],
+      "feedback": "Correct answer: A\n\nDiagnostic pitfall: Meniere's disease is a diagnosis of exclusion. Contrast-enhanced MRI is the most sensitive imaging method for excluding inner-ear malformations, neurovascular conflict of the eighth cranial nerve, and cerebellopontine angle tumors, especially vestibular schwannoma. Only after excluding these potential lesions can the diagnosis be established."
+    },
+    {
+      "title": "Step 5/6: First-Line Management",
+      "scenario": "After confirming the diagnosis, you prepare a prescription and outpatient counseling to prevent future recurrent vertigo attacks.",
+      "media": "Load image: Low-salt diet and betahistine medication illustration",
+      "question": "According to current treatment guidance, which first-line routine treatment should be included to prevent recurrence in patients with Meniere's disease?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Encourage large amounts of coffee for diuresis and routinely prescribe high-dose steroids."
+        },
+        {
+          "id": "B",
+          "text": "(B) Strict salt restriction and caffeine avoidance, with possible diuretics and betahistine 16 mg three times daily.",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Immediately schedule vestibular nerve section."
+        }
+      ],
+      "feedback": "Correct answer: B\n\nTreatment consensus: First-line preventive treatment includes counseling for a low-salt and caffeine-free diet. Medically, diuretics such as hydrochlorothiazide may reduce endolymphatic hydrops, and betahistine, a histamine analog commonly dosed at 16 mg three times daily, is often used to prevent recurrent vertigo."
+    },
+    {
+      "title": "Step 6/6: End-Stage Disease and Tumarkin Crisis",
+      "scenario": "Two years later, the patient's right-sided hearing has deteriorated severely to more than 70 dB. More concerningly, she has had several drop attacks in which she suddenly feels pushed to the ground without losing consciousness. She is diagnosed with dangerous Tumarkin crisis. Conventional medication and dietary control have completely failed.",
+      "media": "Load image: Intratympanic injection illustration",
+      "question": "For refractory or end-stage Meniere's disease with very poor hearing and dangerous Tumarkin crises, which intratympanic treatment is strongly recommended because it stops vertigo by ablating vestibular function?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Intratympanic dexamethasone"
+        },
+        {
+          "id": "B",
+          "text": "(B) Intratympanic gentamicin",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Intratympanic hyaluronic acid"
+        }
+      ],
+      "feedback": "Correct answer: B\n\nAdvanced management: Intratympanic dexamethasone is a rescue option when hearing preservation is desired. However, in end-stage disease with lost hearing or extremely dangerous Tumarkin drop attacks, intratympanic gentamicin uses aminoglycoside ototoxicity to ablate vestibular function and can be very effective. Patients must be warned about the risk of complete hearing loss."
+    }
+  ]
+}

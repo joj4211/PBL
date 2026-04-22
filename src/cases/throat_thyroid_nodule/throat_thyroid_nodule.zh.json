@@ -1,0 +1,148 @@
+{
+  "id": "throat_thyroid_nodule",
+  "title": "頸部的隱形炸彈：甲狀腺結節的精準評估 (The Hidden Nodule: Precision Evaluation)",
+  "subtitle": "甲狀腺結節風險評估與手術決策",
+  "description": "甲狀腺結節的 TSH 起始評估、超音波惡性特徵、FNA、分子檢測與 2025 ATA 手術建議。",
+  "estimatedTime": "20-30 分鐘",
+  "difficulty": "中階",
+  "tags": [
+    "喉科",
+    "Thyroid nodule",
+    "FNA",
+    "ATA"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: 意外發現的結節與初步評估 (Incidental Nodule & Initial Workup)",
+      "scenario": "一位 45 歲女性在員工健檢時，頸部超音波意外發現右側甲狀腺有一個 1.8 公分的結節。她平時沒有任何吞嚥困難、聲音沙啞或頸部疼痛的症狀。她帶著健檢報告來到你的門診諮詢。",
+      "media": "載入圖片：門診醫師觸診甲狀腺的示意圖",
+      "question": "面對臨床懷疑或影像學發現的甲狀腺結節，除了安排詳細的甲狀腺專門超音波 (Thyroid Ultrasound) 之外，第一線「必須」抽血檢驗下列哪一個荷爾蒙指標，以決定後續的評估流程？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 血清甲狀腺刺激素 (Serum TSH)",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) 降鈣素 (Calcitonin)"
+        },
+        {
+          "id": "C",
+          "text": "(C) 甲狀腺球蛋白 (Thyroglobulin, Tg)"
+        }
+      ],
+      "feedback": "正確答案：A\n\n主治醫師的 Tip： 在超音波檢查之後，評估血清 TSH 是所有甲狀腺結節的標準起手式。如果 TSH 受到抑制 (低於正常值)，代表結節可能具有自主分泌功能 (Toxic adenoma)，此時應安排放射性碘掃描 (123I scintigraphy)；若證實為「熱結節 (Hot nodule)」，其惡性機率極低，通常不需要進行細針穿刺 (FNA)。"
+    },
+    {
+      "title": "Step 2/6: 辨識超音波的惡性特徵 (Sonographic Risk Assessment)",
+      "scenario": "患者的抽血報告顯示 TSH 在正常範圍內 (Normal TSH)。你親自為她進行了甲狀腺超音波檢查，仔細評估這個 1.8 公分結節的型態。",
+      "media": "載入圖片：甲狀腺超音波影像，顯示一個實心、低回音、邊緣不規則且帶有微小鈣化的結節",
+      "question": "根據超音波特徵來評估癌症風險時，下列哪一組超音波發現 (Sonographic features) 強烈暗示該結節為惡性，且強烈建議進行細針穿刺 (FNA)？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 純囊腫 (Purely cystic)、邊緣平滑 (smooth margins)、後方回音增強 (posterior enhancement)。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 海綿狀外觀 (Spongiform appearance)、等回音 (isoechoic)、周邊血液豐富 (peripheral vascularity)。"
+        },
+        {
+          "id": "C",
+          "text": "(C) 實心 (Solid)、低回音 (hypoechogenicity)、邊緣不規則 (irregular margins) 與微小鈣化 (microcalcifications)。",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：C\n\n影像學地雷： 超音波是風險評估的利器。研究證實，當結節呈現實心組成 (solid composition)、邊緣不規則 (irregular margins)、實質低回音 (parenchymal hypoechogenicity) 以及微小鈣化 (microcalcification) 時，預測甲狀腺癌的準確率極高。相反地，純囊腫 (Purely cystic) 的結節幾乎可以認定為良性。"
+    },
+    {
+      "title": "Step 3/6: 穿刺技術與囊液處置迷思 (FNA Technique & Cystic Fluid)",
+      "scenario": "患者同意接受超音波導引細針穿刺 (US-FNA)。在準備器械時，學生準備了支粗針 (18-gauge Core-needle) 給你抽取組織「這顆結節裡面有一部分是液體，如果等一下抽到囊腫液體 (cystic fluid)，我們應該把液體全部送去細胞學化驗，這樣診斷率才會高！」",
+      "media": "載入圖片：Ultrasound-guided FNA 的操作實況，展示 25-g 細針與空針 (Figure 11-1)",
+      "question": "根據甲狀腺細針穿刺 (FNA) 的標準操作規範與臨床實證，下列對於穿刺針具選擇與囊腫液體 (Cystic fluid) 的處置，何者最為正確？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 為了取得足夠細胞，應常規使用 18-gauge 粗針 (Core-needle)；且抽出的囊腫液體必須常規送細胞學檢驗。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 應使用 25 至 27-gauge 的細針進行穿刺；抽除囊腫液體雖可緩解症狀，但該液體「不具備」細胞學分析的臨床價值 (no role for cytologic analysis)。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 穿刺時應避免任何針頭抽動 (undulation) 以防出血；若初次穿刺檢體不足 (nondiagnostic)，應立即安排診斷性手術切除。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n主治醫師的臨床實務 (Clinical Pearl)： 這題考驗的是真實的操作細節！甲狀腺 FNA 的標準操作是使用 5-10 cc 空針配合 25 到 27-gauge 的細針，並在病灶內進行約 5 秒的抽插動作 (undulation)。粗針 (Core-needle) 在常規低風險結節評估中目前並無角色。 另外，雖然抽掉囊腫液體能讓結節縮小，但文獻明確指出「囊腫液體的細胞學分析毫無臨床價值 (there is no role for the cytologic analysis of cystic fluid)」。若因囊腫成分過多導致檢體不足 (nondiagnostic)，正確做法是等待組織癒合後「再次穿刺 (repeat FNA)」，通常有高達 50% 的機率能在第二次取得具有診斷價值的檢體。"
+    },
+    {
+      "title": "Step 4/6: 不確定細胞學的分子標記 (Molecular Testing for Indeterminate Cytology)",
+      "scenario": "一週後，FNA 的細胞學報告出爐，結果為「非典型細胞，意義不明 (Atypia of Undetermined Significance, AUS / Bethesda Category III)」。這種不確定的報告讓患者非常焦慮。為了進一步精準評估風險，你提議對穿刺檢體進行「分子標記測試 (Molecular Testing)」。",
+      "media": "載入圖片：基因檢測報告示意圖，列出常見突變基因",
+      "question": "在評估細胞學結果為「不確定 (Indeterminate)」的檢體時，若驗出下列哪一組基因突變，會顯著提高甲狀腺癌的診斷率並改變後續的手術決策？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) BRCA1 與 BRCA2 突變"
+        },
+        {
+          "id": "B",
+          "text": "(B) BRAF、RET-PTC、RAS 或 PAX8/PPARg 突變",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) BCR-ABL 融合基因"
+        }
+      ],
+      "feedback": "正確答案：B\n\n精準醫學： 當 FNA cytologic analysis 為 indeterminate 時，高達 29% 的檢體可以驗出 BRAF、RET-PTC、RAS 或 PAX8/PPARg 基因的突變。此外，免疫染色 Galectin-3 也有極高的預測價值。術前偵測到這些突變能大幅幫助醫師確認惡性風險並決定手術範圍。"
+    },
+    {
+      "title": "Step 5/6: 2025 ATA 手術範圍新準則 (Surgical Extent - 2025 ATA Guidelines)",
+      "scenario": "患者的分子檢測結果呈現 BRAF 突變陽性，證實為甲狀腺乳突癌 (PTC)。考量腫瘤大小為 1.8 公分 (cT1b)，超音波無甲狀腺外侵犯 (no ETE)，且對側甲狀腺完全正常，無可疑淋巴結。患者決定接受手術，並詢問是否需要將「整個甲狀腺」都切除。",
+      "media": "載入圖片：甲狀腺單葉切除 (Lobectomy) 與全切除 (Total Thyroidectomy) 的對照圖",
+      "question": "根據最新發布的 2025 年美國甲狀腺學會 (ATA) 治療指引，對於小於 2 公分且沒有甲狀腺外圍侵犯 (ETE) 或可疑淋巴結的腫瘤，首選 (Preferred) 的手術範圍為何？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 單側甲狀腺葉切除術 (Lobectomy) 即可。",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) 必須執行甲狀腺全切除術 (Total Thyroidectomy)，以便後續進行放射碘 (RAI) 治療。"
+        },
+        {
+          "id": "C",
+          "text": "(C) 只需使用無線電頻率燒灼 (RFA) 即可，嚴禁開刀。"
+        }
+      ],
+      "feedback": "正確答案：A\n\n2025 ATA 最新指引： 2025 年 ATA 指引擴大了單葉切除 (Lobectomy) 的適應症。對於 < 2 公分的腫瘤 (且無 ETE 或可疑淋巴結)，強烈建議首選 Lobectomy；甚至 2-4 公分的腫瘤也可以考慮。單葉切除的復發率與全切除相當，但能大幅降低併發症 (如副甲狀腺低下) 與終身依賴甲狀腺素補充的機率。"
+    },
+    {
+      "title": "Step 6/6: 預防性淋巴結廓清的爭議 (Prophylactic Central Neck Dissection)",
+      "scenario": "在確定進行「單側甲狀腺葉切除術 (Lobectomy)」後，患者的丈夫擔心地問：「既然都開刀了，為了保險起見，能不能把腫瘤旁邊的『中央區淋巴結』全部順便清除乾淨 (預防性廓清)？」",
+      "media": "載入圖片：頸部中央區淋巴結 (Central Compartment, Level VI) 的解剖位置圖",
+      "question": "針對臨床上沒有發現淋巴結轉移 (cN0) 的 T1-T2 早期腫瘤，根據 2025 ATA 指引，關於「預防性中央頸部淋巴結廓清術 (Prophylactic CLND)」的建議為何？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 強烈建議執行，因為能顯著提升患者的整體存活率 (Overall survival)。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 強烈不建議執行 (More strongly discouraged)，因為它無法改善長期預後，反而會增加神經損傷與副甲狀腺低下的併發症風險。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 建議只清除左側的淋巴結作為抽樣代表。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n2025 ATA 觀念更新： 中央區頸部淋巴廓清 (CLND) 會增加喉返神經損傷與副甲狀腺低下的風險。最新的 2025 ATA 指引更強烈地反對 (more strongly discouraged) 在沒有臨床證據 (cN0) 的 T1-T2 腫瘤進行預防性 CLND (pCLND)，因為它不僅無法改善長期預後 (does not improve long-term outcomes)，還徒增手術併發症"
+    }
+  ]
+}

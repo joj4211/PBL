@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, TestTube, ChevronDown, ChevronRight } from 'lucide-react';
+import { stripOptionPrefix } from '../../utils/text';
 
 const CASE = '張女士，35歲，主訴長期疲倦、面色蒼白、頭暈3個月，近日症狀加劇。無出血病史，飲食正常。月經量偏多。';
 
@@ -184,7 +185,7 @@ export default function LabResults({ onBack }) {
                                 ? 'border-red-300 bg-red-50/60'
                                 : 'border-warm-200 bg-white/20 opacity-50'
                         }`}>
-                        {showResult && (opt.correct ? '✓ ' : isSel ? '✗ ' : '')}{opt.text}
+                        {showResult && (opt.correct ? '✓ ' : isSel ? '✗ ' : '')}{stripOptionPrefix(opt.text)}
                       </button>
                     );
                   })}

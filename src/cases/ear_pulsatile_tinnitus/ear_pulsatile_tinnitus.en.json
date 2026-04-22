@@ -1,0 +1,148 @@
+{
+  "id": "ear_pulsatile_tinnitus",
+  "title": "The Pulsating Noise & Blocked Ears",
+  "subtitle": "Pulsatile tinnitus and sigmoid sinus dehiscence",
+  "description": "Venous causes of pulsatile tinnitus, exclusion of SSCD, imaging confirmation, rhythmic classification, surgical treatment, and Eustachian tube disorders.",
+  "estimatedTime": "20-30 min",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Otology",
+    "Pulsatile tinnitus",
+    "Sigmoid sinus",
+    "ETD"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: Initial Assessment",
+      "scenario": "A 63-year-old man visits clinic with bilateral aural fullness for 2 years and right-sided low-tone pulsatile tinnitus for 1 year. On physical examination, when the physician compresses the right jugular vein, the tinnitus completely disappears.",
+      "media": "Load image: Neck vascular anatomy showing the jugular compression test",
+      "question": "The finding that ipsilateral internal jugular vein compression relieves tinnitus strongly suggests that this patient's pulsatile tinnitus comes from which source?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Arterial anomaly, such as carotid artery stenosis"
+        },
+        {
+          "id": "B",
+          "text": "(B) Venous anomaly",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Muscular myoclonus"
+        }
+      ],
+      "feedback": "Correct answer: B\n\nAttending tip: Venous sources, such as a high-riding jugular bulb or dehiscence/diverticulum of venous structures, classically improve when the ipsilateral internal jugular vein is compressed. This physical finding strongly guides the subsequent imaging workup."
+    },
+    {
+      "title": "Step 2/6: Ruling Out SSCD",
+      "scenario": "An earlier petrous CT raised concern for right superior semicircular canal dehiscence (SSCD). To test this suspicion in clinic, you check for Tullio phenomenon and Hennebert sign; both are negative.",
+      "media": "Load image: Endoscopy and VNG illustration for observing nystagmus",
+      "question": "In addition to pulsatile tinnitus in about 50% of cases, what is the typical clinical symptom of SSCD that the Tullio phenomenon is meant to provoke?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Sound- or pressure-induced vertigo",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) Swallowing-induced otalgia"
+        },
+        {
+          "id": "C",
+          "text": "(C) Neck-rotation-induced blurred vision"
+        }
+      ],
+      "feedback": "Correct answer: A\n\nNeurotology interpretation: SSCD typically causes sound- or pressure-induced vertigo, and about 50% of patients also have pulsatile tinnitus. Because this patient has negative Tullio and Hennebert signs and no vertigo complaint, we should look for another structural cause of pulsatile tinnitus."
+    },
+    {
+      "title": "Step 3/6: Pathophysiology and Imaging",
+      "scenario": "To better evaluate the relationship between vessels and bone, you arrange CT angiography. The true lesion is confirmed as right sigmoid sinus dehiscence.",
+      "media": "Load image: Coronal temporal-bone CTA with an arrow indicating lack of bony shielding over the sigmoid sinus",
+      "question": "Based on the pathophysiology of tinnitus, why can venous vascular anatomic abnormalities near the peripheral auditory system, such as sigmoid sinus abnormalities, cause pulsatile tinnitus?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Venous blood refluxes into the cochlea and destroys hair cells."
+        },
+        {
+          "id": "B",
+          "text": "(B) The vascular abnormality creates turbulent flow, and the bony dehiscence allows that sound to transmit directly to the nearby auditory system.",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Venous compression causes ischemia and abnormal firing of the eighth cranial nerve."
+        }
+      ],
+      "feedback": "Correct answer: B\n\nAnatomic pitfall: Pulsatile tinnitus often arises from vascular anatomic abnormalities near the peripheral auditory system. Sigmoid sinus dehiscence removes the bony barrier that should insulate venous flow noise, allowing the sound to transmit into the middle and inner ear and be perceived as pulsatile tinnitus."
+    },
+    {
+      "title": "Step 4/6: Synchronous vs. Non-Synchronous Pitfalls",
+      "scenario": "The patient's pulsatile tinnitus worsens with exercise. Tinnitus that changes with the heartbeat or increased cardiac output is classified as synchronous pulsatile tinnitus.",
+      "media": "Load image: ECG synchronized with tinnitus waveform",
+      "question": "Clinically, which condition usually causes non-synchronous pulsatile tinnitus, meaning it is not synchronized with the heartbeat?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Atherosclerotic carotid artery disease"
+        },
+        {
+          "id": "B",
+          "text": "(B) Temporal-bone dural arteriovenous malformation"
+        },
+        {
+          "id": "C",
+          "text": "(C) Palatal or middle-ear myoclonus",
+          "correct": true
+        }
+      ],
+      "feedback": "Correct answer: C\n\nClassification point: Pulsatile tinnitus is classified by whether it synchronizes with the cardiac pulse. Vascular sources are usually synchronous. Non-synchronous pulsatile tinnitus is commonly caused by middle-ear myoclonus, palatal myoclonus, or Eustachian tube abnormalities."
+    },
+    {
+      "title": "Step 5/6: Surgical Treatment for Venous Tinnitus",
+      "scenario": "After right sigmoid sinus dehiscence is confirmed, the tinnitus severely affects sleep and quality of life. The patient chooses right transmastoid sigmoid sinus wall resurfacing with bone cement.",
+      "media": "Load image: Surgical microscopic view showing bone cement covering the sigmoid sinus",
+      "question": "For sigmoid sinus diverticulum or dehiscence, which surgical treatments are recommended in the literature?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Transmastoid reconstruction of the sigmoid wall or endovascular coil embolization.",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) Vestibulocochlear nerve section."
+        },
+        {
+          "id": "C",
+          "text": "(C) Cochlear implantation to mask the sound."
+        }
+      ],
+      "feedback": "Correct answer: A\n\nProcedure interpretation: The surgical principle is to rebuild the sound-insulating wall. Management of sigmoid sinus abnormalities includes observation, transmastoid reconstruction of the sigmoid wall, or endovascular coil embolization and stenting."
+    },
+    {
+      "title": "Step 6/6: Concomitant Eustachian Tube Issues",
+      "scenario": "During the same anesthesia, you also perform bilateral Eustachian tube balloon dilation to treat his 2-year history of obstructive Eustachian tube dysfunction. However, another extreme on the Eustachian tube disease spectrum can also cause tinnitus.",
+      "media": "Load image: Eustachian tube anatomy and airflow entering the middle ear",
+      "question": "When differentiating non-vascular, non-synchronous pulsatile tinnitus, which Eustachian tube abnormality should be strongly suspected if tinnitus synchronizes with breathing and improves when lying down because venous stasis passively compresses the tube?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Serous otitis media"
+        },
+        {
+          "id": "B",
+          "text": "(B) Otosclerosis"
+        },
+        {
+          "id": "C",
+          "text": "(C) Patulous Eustachian tube",
+          "correct": true
+        }
+      ],
+      "feedback": "Correct answer: C\n\nClinical pitfall: Although this case involves obstructive Eustachian tube dysfunction, patulous Eustachian tube can also cause aural fullness and pulsatile tinnitus. Its features include autophony, tinnitus synchronized with breathing due to pressure changes, and symptom improvement when lying down because venous stasis passively narrows the Eustachian tube."
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "id": "ear_sudden_hearing_loss",
+  "title": "世界突然安靜 the silent world",
+  "subtitle": "突發性感音神經性聽損評估與救援治療",
+  "description": "突發性感音神經性聽損的定義、預後因子、影像排除、類固醇、高壓氧與耳內注射治療。",
+  "estimatedTime": "20-30 分鐘",
+  "difficulty": "中階",
+  "tags": [
+    "耳科",
+    "SSNHL",
+    "Steroid",
+    "HBOT"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: 臨床表現與聽力學定義 (Clinical Presentation & Definition)",
+      "scenario": "一位 70 歲女性被送到急診，主訴從昨天開始「右耳突然聽不到」，伴隨左側耳鳴。急診已經做過 Brain CT 排除出血，純音聽力檢查 (PTA) 顯示右耳高達 95dB 的嚴重聽損，左耳為 60dB；鼓室圖 (Tympanogram) 為雙側 Type A (正常中耳壓力)。",
+      "media": "載入圖片：純音聽力圖 PTA，顯示右耳極重度感音神經性聽損",
+      "question": "根據目前臨床上對「突發性感音神經性聽損 (SSNHL)」的標準定義，下列何者正確？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 在 1 週內，單一頻率發生超過 20 分貝的聽力下降。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 在 24 小時內，伴隨耳膜破裂與大於 40 分貝的傳導性聽損。"
+        },
+        {
+          "id": "C",
+          "text": "(C) 在 72 小時內，在連續 3 個聽力檢測頻率範圍中，發生大於 30 分貝的聽力下降。",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：C\n\n臨床定義： SSNHL 是一個耳科急症，其標準定義為：Rapid onset（發作時間在 72 小時以內），且在聽力檢查中發現「連續三個頻率有超過 30 dB 的聽力下降」。這類疾病高達 99% 為單側發作，且大多找不出明確原因，歸類為 Idiopathic (ISSNHL)。"
+    },
+    {
+      "title": "Step 2/6: 預後因子的評估 (Prognostic Factors)",
+      "scenario": "在為這位 70 歲的婆婆解釋病情時，家屬非常焦慮地問：「醫師，媽媽的聽力有機會完全恢復嗎？」",
+      "media": "載入圖片：預後因子雷達圖 (年齡、暈眩、聽損程度、治療時機)",
+      "question": "根據文獻，評估 ISSNHL 的恢復機率時，這位患者具備了哪些強烈的「預後不良 (Poorer prognosis) 危險因子」？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 只有女性性別與左耳原本就有聽損。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 高於 60 歲 (年齡大)、伴隨暈眩 (Vertigo/dizziness)、以及極度嚴重的初始聽力喪失 (95 dB)。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 只有發作時間極短 (1天內就醫)。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n主治醫師的 Tip： 有四個關鍵因素會影響 ISSNHL 的恢復。越早治療預後越好；但「年齡大於 60 歲」、「伴隨暈眩 (Vertigo)」（約 30-40% 病患會有，通常預後較差），以及「嚴重的聽損 (95dB)」或 downward-sloping 聽力圖，都暗示著極差的預後。這位婆婆不幸具備了上述2項不良因子。"
+    },
+    {
+      "title": "Step 3/6: 影像學鑑別診斷 (Imaging & Differential Diagnosis)",
+      "scenario": "雖然急診已經做過 Brain CT 排除出血，但身為耳鼻喉科醫師，你必須排除導致單側感音神經性聽損的「非特發性、且具危險性的潛在病因 (retrocochlear lesions)」。",
+      "media": "載入圖片：小腦骨髓角 (CPA) 腫瘤的影像學特徵",
+      "question": "為了排除聽神經瘤 (Acoustic neuroma) 或多發性硬化症，下列哪一項是必備的影像學檢查黃金標準？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 顳骨高解析度無顯影劑電腦斷層 (Non-contrast HRCT of Temporal bone)"
+        },
+        {
+          "id": "B",
+          "text": "(B) 頸部血管超音波 (Carotid echo)"
+        },
+        {
+          "id": "C",
+          "text": "(C) 施打顯影劑的核磁共振造影 (MRI with gadolinium enhancement)",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：C\n\n診斷地雷： 大約 10-20% 的聽神經瘤 (Acoustic neuroma / vestibular schwannoma) 病人會以「突發性聽損」來表現。雖然整體比例不高，但為了排除這類致命腫瘤或中樞神經病變，打顯影劑的 MRI 是絕對必要的檢查。若病患有金屬植入物或幽閉恐懼症等 MRI 禁忌症，才退而求其次使用顯影劑 CT。"
+    },
+    {
+      "title": "Step 4/6: 第一線藥物治療與監測 (Primary Medical Therapy)",
+      "scenario": "患者辦理住院。你決定給予她連續一週的靜脈注射/口服類固醇治療 (2026/01/13-01/20)。",
+      "media": "載入圖片：Prednisolone 藥物瓶與血壓/血糖監測器",
+      "question": "目前對 ISSNHL 最廣泛接受的類固醇起始建議劑量為何？且在使用於這位 70 歲有高血壓 (158/77 mmHg) 的婆婆身上時，應特別監控什麼？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Prednisolone 5 mg/kg/day，監控氣喘發作。"
+        },
+        {
+          "id": "B",
+          "text": "(B) Prednisolone 1 mg/kg/day (最高劑量通常為 60 mg/day)，使用 10-14 天；需嚴格監控血糖與血壓波動。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Dexamethasone 60 mg/day，使用 1 個月；需監控聽神經萎縮。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n治療共識： 目前研究效果最好的全身性類固醇劑量為口服 Prednisolone 1 mg/kg/day (Max 60mg/day)，使用 10-14 天。由於高劑量類固醇會引起高血壓、高血糖 (即使原本無糖尿病)、失眠與胃潰瘍，在給予這類高齡患者時，強烈建議住院並密切監控血壓與血糖。"
+    },
+    {
+      "title": "Step 5/6: 輔助與救援治療 - 高壓氧 (Adjuvant Therapy: HBOT)",
+      "scenario": "由於患者的聽損非常嚴重，你同步為她安排了 5 次的高壓氧治療 (Hyperbaric oxygen therapy *5 sessions)。",
+      "media": "載入圖片：高壓氧艙 (Hyperbaric chamber) 治療情境",
+      "question": "高壓氧 (HBOT) 被認為能增加內耳組織氧氣，對抗 cochlear ischemia。但在安排患者進入高壓氧艙之前，你必須先警告她哪一個「最常見的副作用」？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 永久性視網膜剝離"
+        },
+        {
+          "id": "B",
+          "text": "(B) 中耳壓力無法平衡 (Difficulty equalizing pressure) 導致的耳悶痛或耳咽管功能障礙",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 氣胸與肺部不可逆纖維化"
+        }
+      ],
+      "feedback": "正確答案：B\n\n臨床衛教： 高壓氧治療十分耗時且昂貴，儘管嚴重併發症不常見，但高達 17%~45% 的病患會經歷「中耳壓力不平衡」或「耳咽管功能障礙 (Eustachian tube dysfunction)」，另外「幽閉恐懼症 (Claustrophobia)」也是常見導致治療中斷的原因。"
+    },
+    {
+      "title": "Step 6/6: 中耳內注射救援治療 (Salvage Therapy: IT Steroid)",
+      "scenario": "經過全身性類固醇與 5 次高壓氧治療後，患者只有「部分恢復 (partial response)」，右耳聽力依舊極差。此時，你向家屬提議進行「中耳腔內類固醇注射 (Intratympanic, IT steroid)」。",
+      "media": "載入圖片：顯微鏡下將細針穿透耳膜 (Transtympanic injection) 注入類固醇的示意圖",
+      "question": "關於使用 IT steroid 作為救援治療 (Salvage treatment)，其最大的優勢與最主要的併發症分別為何？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 優勢：可避免全身性類固醇的副作用 (如高血糖) 且讓內耳局部濃度更高；副作用：持續性的耳膜穿孔 (Persistent TM perforation)。",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) 優勢：只需注射一次即可保證聽力 100% 恢復；副作用：不可逆的顏面神經麻痺。"
+        },
+        {
+          "id": "C",
+          "text": "(C) 優勢：健保完全給付且無痛；副作用：引發中耳膽脂瘤。"
+        }
+      ],
+      "feedback": "正確答案：A\n\n術式解析： 當全身性類固醇無效 (refractory) 或是病人有嚴重糖尿病/高血壓不適合全身性給藥時，中耳腔內注射 (IT steroid) 是一個極佳的救援選項。它能直接提高內耳藥物濃度並避開全身性副作用。然而，它最主要的副作用是反覆注射導致的「持續性耳膜穿孔 (Persistent tympanic membrane perforation)」，以及暫時性的頭暈與疼痛。"
+    }
+  ]
+}

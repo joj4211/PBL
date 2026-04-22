@@ -1,16 +1,20 @@
 export const domains = [
   {
     id: 'ear',
-    zh: { title: '耳科', subtitle: 'Otology', tags: ['Vertigo', 'Hearing Loss', 'Otitis', 'Vestibular'] },
-    en: { title: 'Otology', subtitle: '耳科', tags: ['Vertigo', 'Hearing Loss', 'Otitis', 'Vestibular'] },
+    zh: { title: '耳科', subtitle: '前庭、聽力與中耳疾病', tags: ['眩暈', '聽力損失', '中耳炎', '前庭功能'] },
+    en: { title: 'Otology', subtitle: 'Vestibular, hearing, and middle ear disorders', tags: ['Vertigo', 'Hearing Loss', 'Otitis', 'Vestibular'] },
     icon: '👂',
     color: 'amber',
-    cases: [{ id: 'ear_vestibular_neuritis', zh: '前庭神經炎', en: 'Vestibular Neuritis' }],
+    cases: [
+      { id: 'ear_menieres_disease', zh: '天旋地轉與低鳴的浪潮', en: 'The Waves of Vertigo' },
+      { id: 'ear_sudden_hearing_loss', zh: '世界突然安靜', en: 'The Silent World' },
+      { id: 'ear_pulsatile_tinnitus', zh: '搏動的雜訊與耳悶之謎', en: 'The Pulsating Noise & Blocked Ears' },
+    ],
   },
   {
     id: 'nose',
-    zh: { title: '鼻科', subtitle: 'Rhinology', tags: ['Rhinitis', 'Sinusitis', 'Epistaxis', 'Nasal Obstruction'] },
-    en: { title: 'Rhinology', subtitle: '鼻科', tags: ['Rhinitis', 'Sinusitis', 'Epistaxis', 'Nasal Obstruction'] },
+    zh: { title: '鼻科', subtitle: '鼻炎、鼻竇炎與鼻阻塞', tags: ['鼻炎', '鼻竇炎', '鼻出血', '鼻阻塞'] },
+    en: { title: 'Rhinology', subtitle: 'Rhinitis, sinusitis, and nasal obstruction', tags: ['Rhinitis', 'Sinusitis', 'Epistaxis', 'Nasal Obstruction'] },
     icon: '👃',
     color: 'sage',
     cases: [
@@ -18,16 +22,22 @@ export const domains = [
       { id: 'nose_ecrswnp', zh: '無聲蔓延的鼻息肉', en: 'The Silent Polyposis' },
       { id: 'nose_epistaxis_hht', zh: '血流不止的危機：嚴重鼻出血與 HHT', en: 'The Unstoppable Red Tide' },
       { id: 'nose_npc', zh: '隱匿的危機：頸部腫塊與無聲的鼻咽癌', en: 'The Hidden Threat: Nasopharyngeal Carcinoma' },
-      { id: 'nose_caudal_deviation', zh: 'The Complex Blockage: Beyond the Mucosa', en: 'The Complex Blockage: Beyond the Mucosa' },
+      { id: 'nose_caudal_deviation', zh: '複雜的鼻阻塞：不只是黏膜問題', en: 'The Complex Blockage: Beyond the Mucosa' },
     ],
   },
   {
     id: 'throat',
-    zh: { title: '喉科', subtitle: 'Laryngology', tags: ['Hoarseness', 'Dysphagia', 'Airway', 'Laryngitis'] },
-    en: { title: 'Laryngology', subtitle: '喉科', tags: ['Hoarseness', 'Dysphagia', 'Airway', 'Laryngitis'] },
+    zh: { title: '喉科', subtitle: '嗓音、吞嚥與呼吸道問題', tags: ['聲音沙啞', '吞嚥困難', '呼吸道', '喉炎'] },
+    en: { title: 'Laryngology', subtitle: 'Voice, swallowing, and airway problems', tags: ['Hoarseness', 'Dysphagia', 'Airway', 'Laryngitis'] },
     icon: '🗣️',
     color: 'rose',
-    cases: [],
+    cases: [
+      { id: 'throat_hoarseness_vocal_polyp', zh: '油漆工的沙啞嗓音', en: "The Painter's Hoarse Voice" },
+      { id: 'throat_osas', zh: '沉睡中的窒息與危機', en: 'The Silent Choke & Surgical Crisis' },
+      { id: 'throat_thyroid_nodule', zh: '頸部的隱形炸彈：甲狀腺結節的精準評估', en: 'The Hidden Nodule' },
+      { id: 'throat_recurrent_tonsillitis', zh: '反覆燃燒的咽喉', en: 'The Burning Throat' },
+      { id: 'throat_ludwigs_angina_airway', zh: "深頸部的致命窒息：Ludwig's Angina 氣道保衛戰", en: 'The Deadly Swell' },
+    ],
   },
 ];
 

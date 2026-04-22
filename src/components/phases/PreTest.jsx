@@ -5,6 +5,7 @@ import PhaseTransition from '../ui/PhaseTransition';
 import ProgressIndicator from '../ui/ProgressIndicator';
 import Button from '../ui/Button';
 import { useLanguage } from '../../contexts/LanguageContext';
+import { stripOptionPrefix } from '../../utils/text';
 
 // ── Single MC Question ────────────────────────────────────────
 
@@ -39,7 +40,7 @@ function MCQuestion({ question, onDone, savedResult = null }) {
             <span className="flex-shrink-0 w-7 h-7 rounded-full border-2 border-current flex items-center justify-center text-xs font-bold opacity-60">
               {opt.id}
             </span>
-            <span className="text-warm-800 text-sm leading-snug flex-1 text-left">{opt.text}</span>
+            <span className="text-warm-800 text-sm leading-snug flex-1 text-left">{stripOptionPrefix(opt.text)}</span>
           </div>
         </button>
       ))}

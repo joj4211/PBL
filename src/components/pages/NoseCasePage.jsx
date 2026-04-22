@@ -5,11 +5,10 @@ import {
   CheckCircle2,
   ChevronLeft,
   ChevronRight,
-  Construction,
-  Image as ImageIcon,
   XCircle,
 } from 'lucide-react';
 import Button from '../ui/Button';
+import ImagePlaceholder from '../ui/ImagePlaceholder';
 import { supabase } from '../../lib/supabaseClient';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { stripOptionPrefix } from '../../utils/text';
@@ -20,28 +19,14 @@ function scoreAnswers(answers, steps) {
   return steps.length > 0 ? Math.round((correct / steps.length) * 100) : 0;
 }
 
-function MediaPlaceholder({ label, text }) {
-  if (!label) return null;
+function MediaPlaceholder({ media, text }) {
+  if (!media) return null;
 
-  return (
-    <div className="rounded-2xl border border-dashed border-warm-300/80 bg-white/35 px-5 py-5">
-      <div className="flex items-start gap-3">
-        <div className="w-10 h-10 rounded-xl bg-warm-100/80 flex items-center justify-center flex-shrink-0">
-          <ImageIcon className="w-5 h-5 text-warm-500" />
-        </div>
-        <div>
-          <p className="text-xs font-semibold tracking-widest uppercase text-warm-500 mb-1">
-            {text.mediaWip}
-          </p>
-          <p className="text-sm text-warm-700 leading-relaxed">{label}</p>
-          <p className="text-xs text-warm-400 mt-2 flex items-center gap-1.5">
-            <Construction className="w-3.5 h-3.5" />
-            {text.mediaNote}
-          </p>
-        </div>
-      </div>
-    </div>
-  );
+  if (typeof media === 'string') {
+    return <ImagePlaceholder label={media} note={text.mediaNote} />;
+  }
+
+  return <ImagePlaceholder media={media} note={media.note ?? text.mediaNote} />;
 }
 
 function NoseProgressIndicator({ currentIndex, total }) {
@@ -325,7 +310,7 @@ export default function NoseCasePage({ caseData, user, lang, onBack, onSignOut }
                   </div>
 
                   <div className="mt-5 space-y-4">
-                    <MediaPlaceholder label={step.media} text={text} />
+                    <MediaPlaceholder media={step.media} text={text} />
 
                     {step.constructionNote && (
                       <p className="rounded-2xl border border-warm-200 bg-warm-50/70 px-4 py-3 text-xs text-warm-600 leading-relaxed">

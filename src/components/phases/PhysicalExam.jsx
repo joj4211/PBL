@@ -156,11 +156,8 @@ export default function PhysicalExam({ caseData, currentPhase, advancePhase }) {
             transition={{ duration: 0.5 }}
           >
             <ImagePlaceholder
+              media={videoPlaceholder}
               type="video"
-              filename={videoPlaceholder.filename}
-              label={videoPlaceholder.label}
-              note={videoPlaceholder.note}
-              aspectRatio={videoPlaceholder.aspectRatio}
             />
           </motion.div>
 

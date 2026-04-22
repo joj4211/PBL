@@ -16,7 +16,7 @@ function PTACard({ inv }) {
   return (
     <div className="space-y-4">
       <ImagePlaceholder
-        filename={inv.image}
+        media={inv.image}
         label={inv.name}
         aspectRatio={inv.aspectRatio}
       />
@@ -58,7 +58,7 @@ function CaloricCard({ inv }) {
       {inv.images.map((img, idx) => (
         <ImagePlaceholder
           key={idx}
-          filename={img}
+          media={img}
           label={`${inv.name} — Image ${idx + 1}`}
           aspectRatio={inv.aspectRatio}
         />
@@ -110,7 +110,7 @@ function VEMPCard({ inv }) {
   return (
     <div className="space-y-4">
       <ImagePlaceholder
-        filename={inv.image}
+        media={inv.image}
         label={inv.name}
         aspectRatio={inv.aspectRatio}
       />

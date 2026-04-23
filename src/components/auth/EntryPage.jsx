@@ -11,8 +11,15 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
   const [submitting, setSubmitting] = useState(false);
+  const [showTestAccounts, setShowTestAccounts] = useState(false);
+  const [selectedTestAccount, setSelectedTestAccount] = useState('test101@example.com');
 
   const isSignUp = mode === 'signUp';
+  const testAccounts = [
+    { email: 'test101@example.com', password: '123456' },
+    { email: 'test102@example.com', password: '123456' },
+  ];
+
   const text = {
     zh: {
       eyebrow: 'Interactive PBL Learning',
@@ -31,6 +38,9 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
       start: '登入並開始',
       confirmation: '註冊完成。請先到信箱確認 email，再回來登入。',
       note: '請使用 Supabase Auth 帳號登入。未登入者無法讀取 private bucket 內的圖片或影片。',
+      useTestLogin: '使用測試帳號登入',
+      chooseTestAccount: '選擇測試帳號',
+      fillTestAccount: '帶入測試帳號',
     },
     en: {
       eyebrow: 'Interactive PBL Learning',
@@ -49,6 +59,9 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
       start: 'Sign in and start',
       confirmation: 'Account created. Please confirm your email, then sign in.',
       note: 'Sign in with Supabase Auth. Private bucket images and videos are available only after sign-in.',
+      useTestLogin: 'Use test account',
+      chooseTestAccount: 'Choose a test account',
+      fillTestAccount: 'Fill test account',
     },
   }[lang];
 
@@ -73,6 +86,15 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
     } finally {
       setSubmitting(false);
     }
+  };
+
+  const handleUseTestAccount = () => {
+    const account = testAccounts.find((item) => item.email === selectedTestAccount);
+    if (!account) return;
+    setEmail(account.email);
+    setPassword(account.password);
+    setMode('signIn');
+    resetMessage();
   };
 
   return (
@@ -184,6 +206,45 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
               {submitting ? text.processing : isSignUp ? text.createAccount : text.start}
             </Button>
           </form>
+
+          {!isSignUp && (
+            <div className="mt-4 border-t border-warm-200 pt-4">
+              <button
+                type="button"
+                onClick={() => setShowTestAccounts((prev) => !prev)}
+                className="w-full rounded-xl border border-sage-200 bg-sage-50/70 px-4 py-2.5 text-sm font-semibold text-sage-700 hover:bg-sage-100 transition-colors"
+              >
+                {text.useTestLogin}
+              </button>
+
+              {showTestAccounts && (
+                <div className="mt-3 rounded-xl border border-warm-200 bg-white/55 p-3">
+                  <label className="block">
+                    <span className="text-xs font-semibold text-warm-600">{text.chooseTestAccount}</span>
+                    <select
+                      value={selectedTestAccount}
+                      onChange={(event) => setSelectedTestAccount(event.target.value)}
+                      className="mt-1.5 w-full rounded-lg border border-warm-200 bg-white/80 px-3 py-2 text-sm text-warm-800 outline-none"
+                    >
+                      {testAccounts.map((account) => (
+                        <option key={account.email} value={account.email}>
+                          {account.email}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+
+                  <button
+                    type="button"
+                    onClick={handleUseTestAccount}
+                    className="mt-3 w-full rounded-lg bg-sage-500 px-3 py-2 text-sm font-semibold text-white hover:bg-sage-600 transition-colors"
+                  >
+                    {text.fillTestAccount}
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
         </section>
       </motion.div>
     </div>

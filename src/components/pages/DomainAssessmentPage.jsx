@@ -87,6 +87,15 @@ export default function DomainAssessmentPage({
     });
 
     const nowIso = new Date().toISOString();
+    const { error: appUserError } = await supabase
+      .from('app_users')
+      .upsert({ user_id: user.id }, { onConflict: 'user_id' });
+
+    if (appUserError) {
+      setError(appUserError.message);
+      setSubmitting(false);
+      return;
+    }
 
     const { error: insertError } = await supabase
       .from('domain_assessments')

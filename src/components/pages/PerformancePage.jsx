@@ -16,6 +16,196 @@ function average(values) {
   return Math.round(values.reduce((sum, value) => sum + value, 0) / values.length);
 }
 
+function mean(values) {
+  if (values.length === 0) return null;
+  return values.reduce((sum, value) => sum + value, 0) / values.length;
+}
+
+function sampleStandardDeviation(values) {
+  if (values.length < 2) return null;
+  const m = mean(values);
+  const variance = values.reduce((sum, value) => sum + ((value - m) ** 2), 0) / (values.length - 1);
+  return Math.sqrt(variance);
+}
+
+function formatNumber(value, decimals = 3) {
+  if (value === null || Number.isNaN(value) || !Number.isFinite(value)) return '--';
+  return value.toFixed(decimals);
+}
+
+function logGamma(z) {
+  const coefficients = [
+    676.5203681218851,
+    -1259.1392167224028,
+    771.3234287776531,
+    -176.6150291621406,
+    12.507343278686905,
+    -0.13857109526572012,
+    0.000009984369578019571,
+    0.00000015056327351493116,
+  ];
+
+  if (z < 0.5) {
+    return Math.log(Math.PI) - Math.log(Math.sin(Math.PI * z)) - logGamma(1 - z);
+  }
+
+  const adjusted = z - 1;
+  let x = 0.9999999999998099;
+  for (let i = 0; i < coefficients.length; i += 1) {
+    x += coefficients[i] / (adjusted + i + 1);
+  }
+
+  const t = adjusted + coefficients.length - 0.5;
+  return 0.5 * Math.log(2 * Math.PI) + ((adjusted + 0.5) * Math.log(t)) - t + Math.log(x);
+}
+
+function betaContinuedFraction(x, a, b) {
+  const maxIterations = 200;
+  const epsilon = 0.000000000000001;
+  const fpMin = 0.0000000000000000000000000000001;
+
+  let c = 1;
+  let d = 1 - ((a + b) * x / (a + 1));
+  if (Math.abs(d) < fpMin) d = fpMin;
+  d = 1 / d;
+  let fraction = d;
+
+  for (let m = 1; m <= maxIterations; m += 1) {
+    const m2 = 2 * m;
+
+    let numerator = (m * (b - m) * x) / ((a + m2 - 1) * (a + m2));
+    d = 1 + (numerator * d);
+    if (Math.abs(d) < fpMin) d = fpMin;
+    c = 1 + (numerator / c);
+    if (Math.abs(c) < fpMin) c = fpMin;
+    d = 1 / d;
+    fraction *= d * c;
+
+    numerator = (-(a + m) * (a + b + m) * x) / ((a + m2) * (a + m2 + 1));
+    d = 1 + (numerator * d);
+    if (Math.abs(d) < fpMin) d = fpMin;
+    c = 1 + (numerator / c);
+    if (Math.abs(c) < fpMin) c = fpMin;
+    d = 1 / d;
+    const delta = d * c;
+    fraction *= delta;
+
+    if (Math.abs(delta - 1) < epsilon) break;
+  }
+
+  return fraction;
+}
+
+function regularizedIncompleteBeta(x, a, b) {
+  if (x <= 0) return 0;
+  if (x >= 1) return 1;
+
+  const logBeta = logGamma(a) + logGamma(b) - logGamma(a + b);
+  const front = Math.exp((a * Math.log(x)) + (b * Math.log(1 - x)) - logBeta);
+  const symmetryThreshold = (a + 1) / (a + b + 2);
+
+  if (x < symmetryThreshold) {
+    return (front * betaContinuedFraction(x, a, b)) / a;
+  }
+
+  return 1 - ((front * betaContinuedFraction(1 - x, b, a)) / b);
+}
+
+function studentsTCdf(x, df) {
+  if (!Number.isFinite(x) || df <= 0) return null;
+  if (x === 0) return 0.5;
+
+  const transformed = df / (df + (x ** 2));
+  const ibeta = regularizedIncompleteBeta(transformed, df / 2, 0.5);
+
+  if (x > 0) return 1 - (0.5 * ibeta);
+  return 0.5 * ibeta;
+}
+
+function inverseStudentsTCdf(target, df) {
+  let low = -12;
+  let high = 12;
+
+  for (let i = 0; i < 80; i += 1) {
+    const mid = (low + high) / 2;
+    const cdf = studentsTCdf(mid, df);
+    if (cdf < target) {
+      low = mid;
+    } else {
+      high = mid;
+    }
+  }
+
+  return (low + high) / 2;
+}
+
+function computePairedTTest(beforeValues, afterValues) {
+  if (beforeValues.length !== afterValues.length) {
+    throw new Error('before 與 after 的樣本長度不一致。');
+  }
+
+  const pairs = beforeValues
+    .map((before, index) => ({
+      before,
+      after: afterValues[index],
+    }))
+    .filter(({ before, after }) => Number.isFinite(before) && Number.isFinite(after));
+
+  const cleanBefore = pairs.map((pair) => pair.before);
+  const cleanAfter = pairs.map((pair) => pair.after);
+  const differences = pairs.map((pair) => pair.after - pair.before);
+  const n = differences.length;
+
+  if (n < 2) {
+    return {
+      n,
+      beforeMean: mean(cleanBefore),
+      beforeSd: sampleStandardDeviation(cleanBefore),
+      afterMean: mean(cleanAfter),
+      afterSd: sampleStandardDeviation(cleanAfter),
+      meanDifference: mean(differences),
+      tStatistic: null,
+      degreesOfFreedom: null,
+      pValue: null,
+      confidenceInterval: [null, null],
+      effectSize: null,
+      significant: false,
+      insufficientSample: true,
+    };
+  }
+
+  const meanDifference = mean(differences);
+  const sdDifference = sampleStandardDeviation(differences);
+  const standardError = sdDifference === 0 ? 0 : sdDifference / Math.sqrt(n);
+  const tStatistic = standardError === 0
+    ? (meanDifference === 0 ? 0 : Number.POSITIVE_INFINITY)
+    : meanDifference / standardError;
+  const degreesOfFreedom = n - 1;
+  const pValue = Number.isFinite(tStatistic)
+    ? 2 * (1 - studentsTCdf(Math.abs(tStatistic), degreesOfFreedom))
+    : 0;
+  const alpha = 0.05;
+  const tCritical = inverseStudentsTCdf(1 - (alpha / 2), degreesOfFreedom);
+  const marginOfError = standardError === 0 ? 0 : tCritical * standardError;
+  const effectSize = sdDifference === 0 ? null : meanDifference / sdDifference;
+
+  return {
+    n,
+    beforeMean: mean(cleanBefore),
+    beforeSd: sampleStandardDeviation(cleanBefore),
+    afterMean: mean(cleanAfter),
+    afterSd: sampleStandardDeviation(cleanAfter),
+    meanDifference,
+    tStatistic,
+    degreesOfFreedom,
+    pValue,
+    confidenceInterval: [meanDifference - marginOfError, meanDifference + marginOfError],
+    effectSize,
+    significant: pValue < alpha,
+    insufficientSample: false,
+  };
+}
+
 export default function PerformancePage({ user, lang, onBack, onSignOut }) {
   const { setLang } = useLanguage();
   const [attempts, setAttempts] = useState([]);
@@ -35,6 +225,26 @@ export default function PerformancePage({ user, lang, onBack, onSignOut }) {
     average: isZh ? '平均表現' : 'Average',
     noRecord: isZh ? '尚無紀錄' : 'No records yet',
     noData: isZh ? '完成案例後，這裡會出現你的主題表現。' : 'Complete a case to see topic performance here.',
+    pairedTitle: isZh ? '耳鼻喉三科前後測配對 t 檢定' : 'ENT pre/post paired t-test',
+    pairedDescription: isZh
+      ? '輸入來源：耳科、鼻科、喉科各自「前測最高分」與「後測最高分」，自動排除缺失 pair。'
+      : 'Input source: highest pre-test and post-test scores from otology, rhinology, and laryngology. Missing pairs are excluded automatically.',
+    pairedInput: isZh ? '分析輸入（最高分）' : 'Analysis input (highest scores)',
+    metric: isZh ? '指標' : 'Metric',
+    value: isZh ? '數值' : 'Value',
+    n: isZh ? '有效樣本數 n' : 'Effective sample size n',
+    beforeMeanSd: isZh ? 'before mean ± SD' : 'before mean ± SD',
+    afterMeanSd: isZh ? 'after mean ± SD' : 'after mean ± SD',
+    meanDiff: isZh ? '差值 mean difference' : 'Mean difference',
+    tStatistic: isZh ? 't statistic' : 't statistic',
+    dof: isZh ? 'degrees of freedom' : 'degrees of freedom',
+    pValue: isZh ? 'p-value' : 'p-value',
+    ci95: isZh ? '95% confidence interval' : '95% confidence interval',
+    effectSize: isZh ? 'effect size (paired Cohen\'s d)' : 'effect size (paired Cohen\'s d)',
+    significant: isZh ? '是否達統計顯著（alpha = 0.05）' : 'Statistically significant (alpha = 0.05)',
+    yes: isZh ? '是' : 'Yes',
+    no: isZh ? '否' : 'No',
+    insufficient: isZh ? '有效樣本不足（n < 2），無法完成 t 檢定。' : 'Insufficient effective samples (n < 2), unable to run t-test.',
     loading: isZh ? '讀取表現紀錄中...' : 'Loading performance records...',
     error: isZh ? '讀取紀錄失敗' : 'Failed to load records',
   };
@@ -90,6 +300,44 @@ export default function PerformancePage({ user, lang, onBack, onSignOut }) {
   const overallAverage = average(topicStats
     .map((topic) => topic.score)
     .filter((score) => score !== null));
+
+  const pairedTest = useMemo(() => {
+    const highestScoresByTopic = domains.map((topic) => {
+      const topicAttempts = attempts.filter((attempt) => (
+        attempt.domain === topic.id || topic.cases.some((caseItem) => caseItem.id === attempt.case_id)
+      ));
+      const preCandidates = topicAttempts
+        .map((attempt) => attempt.pre_test_score)
+        .filter((score) => Number.isFinite(score));
+      const postCandidates = topicAttempts
+        .map((attempt) => attempt.post_test_score)
+        .filter((score) => Number.isFinite(score));
+
+      return {
+        topicId: topic.id,
+        topicTitle: topic[lang].title,
+        before: preCandidates.length > 0 ? Math.max(...preCandidates) : null,
+        after: postCandidates.length > 0 ? Math.max(...postCandidates) : null,
+      };
+    });
+
+    const beforeValues = highestScoresByTopic.map((item) => item.before);
+    const afterValues = highestScoresByTopic.map((item) => item.after);
+
+    try {
+      const result = computePairedTTest(beforeValues, afterValues);
+      return {
+        inputRows: highestScoresByTopic,
+        ...result,
+        error: '',
+      };
+    } catch (computeError) {
+      return {
+        inputRows: highestScoresByTopic,
+        error: computeError.message,
+      };
+    }
+  }, [attempts, lang]);
 
   return (
     <div
@@ -164,50 +412,152 @@ export default function PerformancePage({ user, lang, onBack, onSignOut }) {
           )}
 
           {!loading && !error && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {topicStats.map((topic, index) => {
-                const topicText = topic[lang];
+            <>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {topicStats.map((topic, index) => {
+                  const topicText = topic[lang];
 
-                return (
-                  <motion.div
-                    key={topic.id}
-                    initial={{ opacity: 0, y: 18 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.45, delay: index * 0.05 }}
-                    className="glass-card p-5"
-                  >
-                    <div className="flex items-start justify-between gap-3">
-                      <div>
-                        <h2 className="text-lg font-bold text-warm-900">{topicText.title}</h2>
-                        <p className="text-xs text-warm-400 mt-1">{topicText.subtitle}</p>
-                        <p className="text-xs text-warm-400 mt-2">
-                          {text.attempts}：{topic.attempts}
-                        </p>
+                  return (
+                    <motion.div
+                      key={topic.id}
+                      initial={{ opacity: 0, y: 18 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.45, delay: index * 0.05 }}
+                      className="glass-card p-5"
+                    >
+                      <div className="flex items-start justify-between gap-3">
+                        <div>
+                          <h2 className="text-lg font-bold text-warm-900">{topicText.title}</h2>
+                          <p className="text-xs text-warm-400 mt-1">{topicText.subtitle}</p>
+                          <p className="text-xs text-warm-400 mt-2">
+                            {text.attempts}：{topic.attempts}
+                          </p>
+                        </div>
+                        <span className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${colorMap[topic.color]}`}>
+                          {topic.score === null ? text.noRecord : `${topic.score}%`}
+                        </span>
                       </div>
-                      <span className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${colorMap[topic.color]}`}>
-                        {topic.score === null ? text.noRecord : `${topic.score}%`}
-                      </span>
-                    </div>
 
-                    <div className="mt-5 h-2 rounded-full bg-warm-100 overflow-hidden">
-                      <div
-                        className="h-full rounded-full bg-sage-500 transition-all duration-500"
-                        style={{ width: `${topic.score ?? 0}%` }}
-                      />
-                    </div>
+                      <div className="mt-5 h-2 rounded-full bg-warm-100 overflow-hidden">
+                        <div
+                          className="h-full rounded-full bg-sage-500 transition-all duration-500"
+                          style={{ width: `${topic.score ?? 0}%` }}
+                        />
+                      </div>
 
-                    {topic.score !== null ? (
-                      <p className="mt-4 text-xs text-sage-600 font-semibold flex items-center gap-1">
-                        <CheckCircle2 className="w-3.5 h-3.5" />
-                        {text.average} {topic.score}%
-                      </p>
-                    ) : (
-                      <p className="mt-4 text-xs text-warm-400">{text.noData}</p>
+                      {topic.score !== null ? (
+                        <p className="mt-4 text-xs text-sage-600 font-semibold flex items-center gap-1">
+                          <CheckCircle2 className="w-3.5 h-3.5" />
+                          {text.average} {topic.score}%
+                        </p>
+                      ) : (
+                        <p className="mt-4 text-xs text-warm-400">{text.noData}</p>
+                      )}
+                    </motion.div>
+                  );
+                })}
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.15 }}
+                className="glass-card p-5 sm:p-6 mt-5"
+              >
+                <h2 className="text-xl font-bold text-warm-900">{text.pairedTitle}</h2>
+                <p className="text-sm text-warm-500 mt-1">{text.pairedDescription}</p>
+
+                <div className="mt-4 overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="text-left text-warm-500 border-b border-warm-200">
+                        <th className="py-2 pr-3">{text.pairedInput}</th>
+                        <th className="py-2 pr-3">before</th>
+                        <th className="py-2">after</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {pairedTest.inputRows.map((row) => (
+                        <tr key={row.topicId} className="border-b border-warm-100 text-warm-700">
+                          <td className="py-2 pr-3 font-semibold">{row.topicTitle}</td>
+                          <td className="py-2 pr-3">{row.before ?? '--'}</td>
+                          <td className="py-2">{row.after ?? '--'}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+
+                {pairedTest.error ? (
+                  <p className="mt-4 text-sm font-semibold text-rose-600">{pairedTest.error}</p>
+                ) : (
+                  <div className="mt-5 overflow-x-auto">
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="text-left text-warm-500 border-b border-warm-200">
+                          <th className="py-2 pr-3">{text.metric}</th>
+                          <th className="py-2">{text.value}</th>
+                        </tr>
+                      </thead>
+                      <tbody className="text-warm-700">
+                        <tr className="border-b border-warm-100">
+                          <td className="py-2 pr-3">{text.n}</td>
+                          <td className="py-2">{pairedTest.n ?? '--'}</td>
+                        </tr>
+                        <tr className="border-b border-warm-100">
+                          <td className="py-2 pr-3">{text.beforeMeanSd}</td>
+                          <td className="py-2">
+                            {`${formatNumber(pairedTest.beforeMean)} ± ${formatNumber(pairedTest.beforeSd)}`}
+                          </td>
+                        </tr>
+                        <tr className="border-b border-warm-100">
+                          <td className="py-2 pr-3">{text.afterMeanSd}</td>
+                          <td className="py-2">
+                            {`${formatNumber(pairedTest.afterMean)} ± ${formatNumber(pairedTest.afterSd)}`}
+                          </td>
+                        </tr>
+                        <tr className="border-b border-warm-100">
+                          <td className="py-2 pr-3">{text.meanDiff}</td>
+                          <td className="py-2">{formatNumber(pairedTest.meanDifference)}</td>
+                        </tr>
+                        <tr className="border-b border-warm-100">
+                          <td className="py-2 pr-3">{text.tStatistic}</td>
+                          <td className="py-2">{formatNumber(pairedTest.tStatistic)}</td>
+                        </tr>
+                        <tr className="border-b border-warm-100">
+                          <td className="py-2 pr-3">{text.dof}</td>
+                          <td className="py-2">{pairedTest.degreesOfFreedom ?? '--'}</td>
+                        </tr>
+                        <tr className="border-b border-warm-100">
+                          <td className="py-2 pr-3">{text.pValue}</td>
+                          <td className="py-2">{formatNumber(pairedTest.pValue)}</td>
+                        </tr>
+                        <tr className="border-b border-warm-100">
+                          <td className="py-2 pr-3">{text.ci95}</td>
+                          <td className="py-2">
+                            {`[${formatNumber(pairedTest.confidenceInterval?.[0])}, ${formatNumber(pairedTest.confidenceInterval?.[1])}]`}
+                          </td>
+                        </tr>
+                        <tr className="border-b border-warm-100">
+                          <td className="py-2 pr-3">{text.effectSize}</td>
+                          <td className="py-2">{formatNumber(pairedTest.effectSize)}</td>
+                        </tr>
+                        <tr>
+                          <td className="py-2 pr-3">{text.significant}</td>
+                          <td className="py-2 font-semibold">
+                            {pairedTest.significant ? text.yes : text.no}
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    {pairedTest.insufficientSample && (
+                      <p className="mt-4 text-sm font-semibold text-rose-600">{text.insufficient}</p>
                     )}
-                  </motion.div>
-                );
-              })}
-            </div>
+                  </div>
+                )}
+              </motion.div>
+            </>
           )}
         </div>
       </div>

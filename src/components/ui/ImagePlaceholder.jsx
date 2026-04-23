@@ -33,6 +33,11 @@ export default function ImagePlaceholder({
   assetKey,
   isAdmin = false,
   user,
+  hotspotTask = false,
+  hotspotTargets = [],
+  userHotspots = [],
+  onHotspotsLoaded,
+  onUserHotspotsChange,
 }) {
   const [remoteMedia, setRemoteMedia] = useState(null);
   const [loadError, setLoadError] = useState(false);
@@ -40,6 +45,9 @@ export default function ImagePlaceholder({
   const [uploadState, setUploadState] = useState('idle');
   const [uploadError, setUploadError] = useState('');
   const [previewOpen, setPreviewOpen] = useState(false);
+  const [adminHotspots, setAdminHotspots] = useState([]);
+  const [hotspotSaveState, setHotspotSaveState] = useState('idle');
+  const [hotspotError, setHotspotError] = useState('');
   const item = normalizeMedia(remoteMedia ?? media);
   const resolvedType = item.type ?? type;
   const resolvedProvider = item.provider;
@@ -90,7 +98,7 @@ export default function ImagePlaceholder({
     async function loadAssetOverride() {
       const { data, error } = await supabase
         .from('case_media_assets')
-        .select('bucket,path,type,label,note,aspect_ratio')
+        .select('*')
         .eq('case_id', caseId)
         .eq('language', lang)
         .eq('asset_key', assetKey)
@@ -107,7 +115,12 @@ export default function ImagePlaceholder({
         label: data.label,
         note: data.note,
         aspectRatio: data.aspect_ratio,
+        hotspots: data.hotspots ?? [],
       });
+      setAdminHotspots(data.hotspots ?? []);
+      if (onHotspotsLoaded) {
+        onHotspotsLoaded(data.hotspots ?? []);
+      }
     }
 
     loadAssetOverride();
@@ -193,6 +206,7 @@ export default function ImagePlaceholder({
         label: resolvedLabel,
         note: resolvedNote,
         aspect_ratio: resolvedAspectRatio,
+        hotspots: adminHotspots,
         uploaded_by: user.id,
       }, {
         onConflict: 'case_id,language,asset_key',
@@ -208,6 +222,70 @@ export default function ImagePlaceholder({
     setRemoteMedia(nextMedia);
     setUploadState('uploaded');
   };
+
+  const getPointFromEvent = (event) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    return {
+      x: ((event.clientX - rect.left) / rect.width) * 100,
+      y: ((event.clientY - rect.top) / rect.height) * 100,
+      r: 6,
+    };
+  };
+
+  const saveHotspots = async (nextHotspots) => {
+    if (!canUpload || !resolvedPath) return;
+
+    setHotspotSaveState('saving');
+    setHotspotError('');
+
+    const { error } = await supabase
+      .from('case_media_assets')
+      .update({ hotspots: nextHotspots })
+      .eq('case_id', caseId)
+      .eq('language', lang)
+      .eq('asset_key', assetKey);
+
+    if (error) {
+      setHotspotSaveState('error');
+      setHotspotError(error.message);
+      return;
+    }
+
+    setHotspotSaveState('saved');
+  };
+
+  const handleHotspotImageClick = (event) => {
+    if (!hotspotTask || !showImage) return;
+
+    const point = getPointFromEvent(event);
+
+    if (isAdmin) {
+      const nextHotspots = [...adminHotspots, point].slice(-2);
+      setAdminHotspots(nextHotspots);
+      if (onHotspotsLoaded) {
+        onHotspotsLoaded(nextHotspots);
+      }
+      saveHotspots(nextHotspots);
+      return;
+    }
+
+    const nextHotspots = [...userHotspots, point].slice(-2);
+    if (onUserHotspotsChange) {
+      onUserHotspotsChange(nextHotspots);
+    }
+  };
+
+  const resetAdminHotspots = () => {
+    setAdminHotspots([]);
+    if (onHotspotsLoaded) {
+      onHotspotsLoaded([]);
+    }
+    saveHotspots([]);
+  };
+
+  const activeTargets = isAdmin ? adminHotspots : [];
+  const activeUserHotspots = isAdmin ? [] : userHotspots;
+  const canInteractWithHotspots = hotspotTask && showImage;
 
   const handleDrop = (event) => {
     event.preventDefault();
@@ -245,8 +323,8 @@ export default function ImagePlaceholder({
           <div className="mx-auto inline-block max-w-full overflow-hidden rounded-xl border border-warm-200 bg-warm-50/30 align-top">
             <button
               type="button"
-              onClick={() => setPreviewOpen(true)}
-              className="block max-w-full cursor-zoom-in"
+              onClick={canInteractWithHotspots ? handleHotspotImageClick : () => setPreviewOpen(true)}
+              className={`relative block max-w-full ${canInteractWithHotspots ? 'cursor-crosshair' : 'cursor-zoom-in'}`}
             >
               <img
                 src={resolvedSrc}
@@ -254,8 +332,52 @@ export default function ImagePlaceholder({
                 onError={() => setLoadError(true)}
                 className="block max-h-[70vh] max-w-full object-contain"
               />
+              {canInteractWithHotspots && activeTargets.map((point, index) => (
+                <span
+                  key={`target-${index}`}
+                  className="pointer-events-none absolute rounded-full border-2 border-sage-600 bg-sage-400/20"
+                  style={{
+                    left: `${point.x}%`,
+                    top: `${point.y}%`,
+                    width: `${point.r * 2}%`,
+                    height: `${point.r * 2}%`,
+                    transform: 'translate(-50%, -50%)',
+                  }}
+                />
+              ))}
+              {canInteractWithHotspots && activeUserHotspots.map((point, index) => (
+                <span
+                  key={`user-${index}`}
+                  className="pointer-events-none absolute h-4 w-4 rounded-full border-2 border-white bg-red-400 shadow"
+                  style={{
+                    left: `${point.x}%`,
+                    top: `${point.y}%`,
+                    transform: 'translate(-50%, -50%)',
+                  }}
+                />
+              ))}
             </button>
           </div>
+          {hotspotTask && (
+            <div className="mt-2 text-center text-xs text-warm-500">
+              {isAdmin ? '點圖片標記 2 個正確答案範圍。' : '請在圖片上點選 2 個答案位置。'}
+            </div>
+          )}
+          {isAdmin && hotspotTask && (
+            <div className="mt-2 flex flex-wrap items-center justify-center gap-2 text-xs">
+              <button
+                type="button"
+                onClick={resetAdminHotspots}
+                className="rounded-lg border border-warm-200 bg-white/70 px-3 py-1.5 font-semibold text-warm-600 hover:bg-warm-50"
+              >
+                重設標記
+              </button>
+              <span className="text-warm-500">{adminHotspots.length} / 2</span>
+              {hotspotSaveState === 'saving' && <span className="text-warm-400">儲存中...</span>}
+              {hotspotSaveState === 'saved' && <span className="text-sage-600">已儲存</span>}
+              {hotspotError && <span className="text-red-500">{hotspotError}</span>}
+            </div>
+          )}
           <div className="text-center">{uploadControl}</div>
           {uploadFeedback}
         </div>

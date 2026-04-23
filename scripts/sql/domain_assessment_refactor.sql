@@ -182,11 +182,15 @@ create table if not exists public.case_media_assets (
   label text,
   note text,
   aspect_ratio text,
+  hotspots jsonb not null default '[]'::jsonb,
   uploaded_by text references public.app_users(user_id) on delete set null,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now(),
   primary key (case_id, language, asset_key)
 );
+
+alter table public.case_media_assets
+  add column if not exists hotspots jsonb not null default '[]'::jsonb;
 
 create index if not exists idx_case_media_assets_case_id
   on public.case_media_assets(case_id);

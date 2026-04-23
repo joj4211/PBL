@@ -22,6 +22,7 @@ export default function TopicPage({
   assessmentStats,
   caseAttempts,
   loading,
+  canResetAssessments = false,
   onResetAssessments,
   resettingAssessments,
 }) {
@@ -30,24 +31,29 @@ export default function TopicPage({
   const t = topic[lang];
   const hasCases = topic.cases.length > 0;
 
-  const preDone = Boolean(progress?.pretest_completed);
+  const preDone = Boolean(progress?.pretest_completed || assessmentStats?.preTestLatest != null);
+  const postDone = Boolean(progress?.posttest_completed || assessmentStats?.postTestLatest != null);
   const allCasesDone = topic.cases.every((caseItem) => (caseAttempts?.[caseItem.id] ?? 0) >= 1);
-  const showPostButton = preDone && allCasesDone;
+  const showPostPanel = preDone && allCasesDone;
 
   const text = {
     preGateTitle: isZh ? '需先完成前測才能進入案例' : 'Complete pre-test to unlock cases',
     preGateBody: isZh ? '前測完成並成功寫入成績後，才會顯示案例入口。' : 'Case entry unlocks only after pre-test submission is saved.',
     enterPre: isZh ? '進入前測' : 'Start pre-test',
     enterPost: isZh ? '進入後測' : 'Start post-test',
+    postReady: isZh ? '你已完成本主題所有案例，現在可進行後測。' : 'All cases are completed. You can now take the post-test.',
+    postCompleted: isZh ? '您已完成後測。' : 'You have completed the post-test.',
     attempts: isZh ? '完成次數' : 'Attempts',
-    latestBest: isZh ? '最新 / 最佳' : 'Latest / Best',
+    preScore: isZh ? '前測分數' : 'Pre-test score',
+    postScore: isZh ? '後測分數' : 'Post-test score',
     noScore: '--',
-    resetAssessments: isZh ? '重置前後測紀錄' : 'Reset assessment records',
-    resetConfirm: isZh ? '確定要重置此科別前後測紀錄嗎？此動作無法復原。' : 'Reset pre/post assessment records for this domain? This cannot be undone.',
+    resetAssessments: isZh ? '重置前後測分數' : 'Reset assessment scores',
+    resetConfirm: isZh ? '確定要重置此科別前後測分數嗎？重置後可以重新作答前後測。' : 'Reset pre/post assessment scores for this domain? You can retake them after reset.',
   };
 
-  const preStats = `${assessmentStats?.preTestLatest ?? text.noScore} / ${assessmentStats?.preTestBest ?? text.noScore}`;
-  const postStats = `${assessmentStats?.postTestLatest ?? text.noScore} / ${assessmentStats?.postTestBest ?? text.noScore}`;
+  const formatScore = (score) => (score == null ? text.noScore : `${score}分`);
+  const preStats = formatScore(assessmentStats?.preTestLatest);
+  const postStats = formatScore(assessmentStats?.postTestLatest);
 
   return (
     <div
@@ -66,23 +72,23 @@ export default function TopicPage({
       <div className="absolute top-4 left-4 z-20">
         <button
           onClick={onBack}
-          className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200"
+          className="nav-pill"
         >
           {isZh ? '← 返回' : '← Back'}
         </button>
       </div>
 
-      <div className="absolute top-4 right-4 z-20 flex items-center gap-2">
+      <div className="absolute top-4 right-5 z-20 flex items-center gap-2">
         <button
           onClick={onSignOut}
-          className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200"
+          className="nav-pill"
         >
           {isZh ? '登出' : 'Sign out'}
         </button>
         <select
           value={lang}
           onChange={(event) => setLang(event.target.value)}
-          className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200 outline-none"
+          className="nav-select"
         >
           <option value="zh">中文</option>
           <option value="en">English</option>
@@ -104,30 +110,32 @@ export default function TopicPage({
         <div className="w-full max-w-2xl space-y-4">
           <div className="glass-card p-5 grid grid-cols-2 gap-4 text-sm">
             <div>
-              <p className="text-xs text-warm-400 uppercase tracking-wider">Pre-test {text.latestBest}</p>
+              <p className="text-xs text-warm-400 uppercase tracking-wider">{text.preScore}</p>
               <p className="text-lg font-bold text-sage-700 mt-1">{preStats}</p>
             </div>
             <div>
-              <p className="text-xs text-warm-400 uppercase tracking-wider">Post-test {text.latestBest}</p>
+              <p className="text-xs text-warm-400 uppercase tracking-wider">{text.postScore}</p>
               <p className="text-lg font-bold text-sage-700 mt-1">{postStats}</p>
             </div>
           </div>
 
-          <div className="flex justify-end">
-            <button
-              onClick={() => {
-                if (!onResetAssessments) return;
-                if (!window.confirm(text.resetConfirm)) return;
-                onResetAssessments();
-              }}
-              disabled={loading || resettingAssessments}
-              className="text-xs font-semibold px-4 py-2 rounded-full border border-red-300 bg-red-50 text-red-600 hover:bg-red-100 transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
-            >
-              {resettingAssessments
-                ? (isZh ? '重置中...' : 'Resetting...')
-                : text.resetAssessments}
-            </button>
-          </div>
+          {canResetAssessments && (preDone || postDone) && (
+            <div className="flex justify-end">
+              <button
+                onClick={() => {
+                  if (!onResetAssessments) return;
+                  if (!window.confirm(text.resetConfirm)) return;
+                  onResetAssessments();
+                }}
+                disabled={loading || resettingAssessments}
+                className="danger-pill"
+              >
+                {resettingAssessments
+                  ? (isZh ? '重置中...' : 'Resetting...')
+                  : text.resetAssessments}
+              </button>
+            </div>
+          )}
 
           {!preDone && (
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="glass-card p-6 text-center">
@@ -135,7 +143,7 @@ export default function TopicPage({
               <p className="text-sm text-warm-500 mt-2 mb-4">{text.preGateBody}</p>
               <button
                 onClick={onStartPreTest}
-                className="text-sm font-semibold px-5 py-2 rounded-full bg-sage-500 text-white hover:bg-sage-600 transition-colors duration-200"
+                className="action-pill px-5"
               >
                 {text.enterPre}
               </button>
@@ -172,7 +180,7 @@ export default function TopicPage({
                     </div>
                     <button
                       onClick={() => onSelectCase(c.id)}
-                      className="flex-shrink-0 text-sm font-semibold px-4 py-2 rounded-full bg-sage-500 text-white hover:bg-sage-600 transition-colors duration-200"
+                      className="action-pill flex-shrink-0"
                     >
                       {isZh ? '開始學習' : 'Start'}
                     </button>
@@ -182,17 +190,19 @@ export default function TopicPage({
             </motion.div>
           )}
 
-          {preDone && showPostButton && (
+          {showPostPanel && (
             <div className="glass-card p-5 text-center">
               <p className="text-sm text-warm-500 mb-3">
-                {isZh ? '你已完成本主題所有案例，現在可進行後測。' : 'All cases are completed. You can now take the post-test.'}
+                {postDone ? text.postCompleted : text.postReady}
               </p>
-              <button
-                onClick={onStartPostTest}
-                className="text-sm font-semibold px-5 py-2 rounded-full bg-sage-500 text-white hover:bg-sage-600 transition-colors duration-200"
-              >
-                {text.enterPost}
-              </button>
+              {!postDone && (
+                <button
+                  onClick={onStartPostTest}
+                  className="action-pill px-5"
+                >
+                  {text.enterPost}
+                </button>
+              )}
             </div>
           )}
 

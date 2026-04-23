@@ -27,7 +27,7 @@ export default function MaintenancePage({ onBack, onShowGallery, onSelectArchive
       <button
         type="button"
         onClick={onBack}
-        className="absolute top-4 left-4 z-20 text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200"
+        className="nav-pill absolute top-4 left-4 z-20"
       >
         <ArrowLeft className="inline w-3 h-3 mr-1" />
         {text.back}

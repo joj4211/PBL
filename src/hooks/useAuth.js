@@ -1,12 +1,44 @@
 import { useCallback, useEffect, useState } from 'react';
 import { supabase } from '../lib/supabaseClient';
 
-const ADMIN_EMAILS = ['joj4211@gmail.com'];
-
 export function useAuth() {
   const [user, setUser] = useState(null);
   const [session, setSession] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [authLoading, setAuthLoading] = useState(true);
+  const [profileLoading, setProfileLoading] = useState(false);
+
+  const ensureAppUser = useCallback(async (authUser) => {
+    if (!authUser?.id) return null;
+
+    const { data: existingUser, error: selectError } = await supabase
+      .from('app_users')
+      .select('user_id,isAdmin')
+      .eq('user_id', authUser.id)
+      .maybeSingle();
+
+    if (selectError) {
+      console.warn('Unable to load app user profile:', selectError.message);
+      return null;
+    }
+
+    if (existingUser) {
+      return existingUser;
+    }
+
+    const { data: createdUser, error: insertError } = await supabase
+      .from('app_users')
+      .insert({ user_id: authUser.id, isAdmin: false })
+      .select('user_id,isAdmin')
+      .single();
+
+    if (insertError) {
+      console.warn('Unable to create app user profile:', insertError.message);
+      return null;
+    }
+
+    return createdUser;
+  }, []);
 
   useEffect(() => {
     let mounted = true;
@@ -18,12 +50,13 @@ export function useAuth() {
       if (error) {
         setUser(null);
         setSession(null);
+        setIsAdmin(false);
       } else {
         setSession(data.session);
         setUser(data.session?.user ?? null);
       }
 
-      setLoading(false);
+      setAuthLoading(false);
     }
 
     loadSession();
@@ -31,7 +64,7 @@ export function useAuth() {
     const { data: listener } = supabase.auth.onAuthStateChange((_event, nextSession) => {
       setSession(nextSession);
       setUser(nextSession?.user ?? null);
-      setLoading(false);
+      setAuthLoading(false);
     });
 
     return () => {
@@ -40,15 +73,31 @@ export function useAuth() {
     };
   }, []);
 
-  const ensureAppUser = useCallback(async (authUser) => {
-    if (!authUser?.id) return;
+  useEffect(() => {
+    if (!user?.id) {
+      setIsAdmin(false);
+      setProfileLoading(false);
+      return;
+    }
 
-    const { error } = await supabase
-      .from('app_users')
-      .upsert({ user_id: authUser.id }, { onConflict: 'user_id' });
+    let cancelled = false;
 
-    if (error) throw error;
-  }, []);
+    async function loadProfile() {
+      setProfileLoading(true);
+      setIsAdmin(false);
+      const appUser = await ensureAppUser(user);
+      if (cancelled) return;
+
+      setIsAdmin(Boolean(appUser?.isAdmin));
+      setProfileLoading(false);
+    }
+
+    loadProfile();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [ensureAppUser, user]);
 
   const signIn = useCallback(async ({ email, password }) => {
     const nextEmail = email.trim();
@@ -62,7 +111,8 @@ export function useAuth() {
     });
 
     if (error) throw error;
-    await ensureAppUser(data.user);
+    const appUser = await ensureAppUser(data.user);
+    setIsAdmin(Boolean(appUser?.isAdmin));
     return data;
   }, [ensureAppUser]);
 
@@ -80,7 +130,8 @@ export function useAuth() {
     if (error) throw error;
 
     if (data.session) {
-      await ensureAppUser(data.user);
+      const appUser = await ensureAppUser(data.user);
+      setIsAdmin(Boolean(appUser?.isAdmin));
     }
 
     return {
@@ -93,13 +144,14 @@ export function useAuth() {
     await supabase.auth.signOut();
     setUser(null);
     setSession(null);
+    setIsAdmin(false);
   }, []);
 
   return {
     user,
     session,
-    isAdmin: ADMIN_EMAILS.includes(user?.email ?? ''),
-    loading,
+    isAdmin,
+    loading: authLoading || profileLoading,
     signIn,
     signUp,
     signOut,

@@ -46,7 +46,7 @@ export default function AppShell({
           {showBackControl && (
             <button
               onClick={onBack}
-              className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200"
+              className="nav-pill"
             >
               {navLabels.back}
             </button>
@@ -54,7 +54,7 @@ export default function AppShell({
           {showExitControl && (
             <button
               onClick={onExit}
-              className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200"
+              className="nav-pill"
             >
               {navLabels.exit}
             </button>
@@ -67,7 +67,7 @@ export default function AppShell({
         {onShowMaintenance && (
           <button
             onClick={onShowMaintenance}
-            className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200"
+            className="nav-pill"
           >
             {lang === 'zh' ? '功能維護' : 'Maintenance'}
           </button>
@@ -75,7 +75,7 @@ export default function AppShell({
         {onSignOut && (
           <button
             onClick={onSignOut}
-            className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200"
+            className="nav-pill"
           >
             {lang === 'zh' ? '登出' : 'Sign out'}
           </button>
@@ -83,7 +83,7 @@ export default function AppShell({
         <select
           value={lang}
           onChange={(event) => setLang(event.target.value)}
-          className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200 outline-none"
+          className="nav-select"
         >
           <option value="zh">中文</option>
           <option value="en">English</option>

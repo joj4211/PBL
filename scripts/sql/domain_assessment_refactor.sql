@@ -7,7 +7,60 @@ begin;
 -- Uncomment if you want a clean reset.
 -- truncate table public.case_attempts;
 
--- 1) user_domain_progress: per-user, per-domain access gates and rollups.
+-- 1) app_users: profile row linked to Supabase Auth.
+create table if not exists public.app_users (
+  user_id text primary key,
+  created_at timestamptz not null default now()
+);
+
+alter table public.app_users
+  add column if not exists "isAdmin" boolean not null default false;
+
+alter table public.app_users enable row level security;
+
+-- Keep this table locked down: users can create/read only their own non-admin row.
+do $$
+declare
+  policy_record record;
+begin
+  for policy_record in
+    select policyname
+      from pg_policies
+     where schemaname = 'public'
+       and tablename = 'app_users'
+  loop
+    execute format('drop policy if exists %I on public.app_users', policy_record.policyname);
+  end loop;
+end $$;
+
+create policy "app_users_select_own"
+on public.app_users
+for select
+using (auth.uid()::text = user_id);
+
+create policy "app_users_insert_own_non_admin"
+on public.app_users
+for insert
+with check (
+  auth.uid()::text = user_id
+  and "isAdmin" = false
+);
+
+create or replace function public.is_current_user_admin()
+returns boolean
+language sql
+stable
+security definer
+set search_path = public
+as $$
+  select coalesce((
+    select "isAdmin"
+      from public.app_users
+     where user_id = auth.uid()::text
+  ), false);
+$$;
+
+-- 2) user_domain_progress: per-user, per-domain access gates and rollups.
 create table if not exists public.user_domain_progress (
   user_id text not null references public.app_users(user_id) on delete cascade,
   domain_id text not null check (domain_id in ('ear', 'nose', 'throat')),
@@ -30,7 +83,7 @@ create index if not exists idx_user_domain_progress_user_id
 create index if not exists idx_user_domain_progress_domain_id
   on public.user_domain_progress(domain_id);
 
--- 2) domain_assessments: keep full history of retries.
+-- 3) domain_assessments: keep full history of retries.
 create table if not exists public.domain_assessments (
   id bigserial primary key,
   user_id text not null references public.app_users(user_id) on delete cascade,
@@ -51,7 +104,33 @@ create index if not exists idx_domain_assessments_type
 create index if not exists idx_domain_assessments_completed_at
   on public.domain_assessments(completed_at desc);
 
--- 3) Trigger helper for updated_at.
+create or replace function public.prevent_duplicate_domain_assessment()
+returns trigger
+language plpgsql
+as $$
+begin
+  if exists (
+    select 1
+      from public.domain_assessments
+     where user_id = new.user_id
+       and domain_id = new.domain_id
+       and assessment_type = new.assessment_type
+  ) then
+    raise exception 'domain assessment already completed';
+  end if;
+
+  return new;
+end;
+$$;
+
+drop trigger if exists trg_domain_assessments_prevent_duplicate on public.domain_assessments;
+
+create trigger trg_domain_assessments_prevent_duplicate
+before insert on public.domain_assessments
+for each row
+execute function public.prevent_duplicate_domain_assessment();
+
+-- 4) Trigger helper for updated_at.
 create or replace function public.set_updated_at_timestamp()
 returns trigger
 language plpgsql
@@ -70,7 +149,107 @@ before update on public.user_domain_progress
 for each row
 execute function public.set_updated_at_timestamp();
 
--- 4) Enforce new answers payload shape for case_attempts.
+-- 5) case_media_assets: admin-maintained media overrides.
+create table if not exists public.case_media_assets (
+  case_id text not null,
+  language text not null,
+  asset_key text not null,
+  bucket text not null default 'case-media',
+  path text not null,
+  type text not null check (type in ('image', 'video')),
+  label text,
+  note text,
+  aspect_ratio text,
+  uploaded_by text references public.app_users(user_id) on delete set null,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  primary key (case_id, language, asset_key)
+);
+
+create index if not exists idx_case_media_assets_case_id
+  on public.case_media_assets(case_id);
+
+drop trigger if exists trg_case_media_assets_set_updated_at on public.case_media_assets;
+
+create trigger trg_case_media_assets_set_updated_at
+before update on public.case_media_assets
+for each row
+execute function public.set_updated_at_timestamp();
+
+alter table public.case_media_assets enable row level security;
+
+DROP POLICY IF EXISTS "case_media_assets_select_authenticated" ON public.case_media_assets;
+DROP POLICY IF EXISTS "case_media_assets_insert_admin" ON public.case_media_assets;
+DROP POLICY IF EXISTS "case_media_assets_update_admin" ON public.case_media_assets;
+DROP POLICY IF EXISTS "case_media_assets_delete_admin" ON public.case_media_assets;
+
+create policy "case_media_assets_select_authenticated"
+on public.case_media_assets
+for select
+using (auth.role() = 'authenticated');
+
+create policy "case_media_assets_insert_admin"
+on public.case_media_assets
+for insert
+with check (public.is_current_user_admin());
+
+create policy "case_media_assets_update_admin"
+on public.case_media_assets
+for update
+using (public.is_current_user_admin())
+with check (public.is_current_user_admin());
+
+create policy "case_media_assets_delete_admin"
+on public.case_media_assets
+for delete
+using (public.is_current_user_admin());
+
+insert into storage.buckets (id, name, public)
+values ('case-media', 'case-media', false)
+on conflict (id) do update set public = false;
+
+DROP POLICY IF EXISTS "case_media_select_authenticated" ON storage.objects;
+DROP POLICY IF EXISTS "case_media_insert_admin" ON storage.objects;
+DROP POLICY IF EXISTS "case_media_update_admin" ON storage.objects;
+DROP POLICY IF EXISTS "case_media_delete_admin" ON storage.objects;
+
+create policy "case_media_select_authenticated"
+on storage.objects
+for select
+using (
+  bucket_id = 'case-media'
+  and auth.role() = 'authenticated'
+);
+
+create policy "case_media_insert_admin"
+on storage.objects
+for insert
+with check (
+  bucket_id = 'case-media'
+  and public.is_current_user_admin()
+);
+
+create policy "case_media_update_admin"
+on storage.objects
+for update
+using (
+  bucket_id = 'case-media'
+  and public.is_current_user_admin()
+)
+with check (
+  bucket_id = 'case-media'
+  and public.is_current_user_admin()
+);
+
+create policy "case_media_delete_admin"
+on storage.objects
+for delete
+using (
+  bucket_id = 'case-media'
+  and public.is_current_user_admin()
+);
+
+-- 6) Enforce new answers payload shape for case_attempts.
 --    Required keys: schemaVersion, caseMeta, summary.overall(number), steps(array)
 alter table public.case_attempts
   alter column answers set not null;
@@ -89,12 +268,12 @@ alter table public.case_attempts
     and jsonb_typeof(answers->'steps') = 'array'
     and jsonb_typeof(answers->'summary') = 'object'
     and jsonb_typeof((answers->'summary'->'overall')) = 'number'
-  );
+  ) not valid;
 
 create index if not exists idx_case_attempts_user_domain_case
   on public.case_attempts(user_id, domain, case_id);
 
--- 5) Keep progress and score rollups in sync with domain_assessments inserts.
+-- 7) Keep progress and score rollups in sync with domain_assessments inserts.
 create or replace function public.sync_user_domain_progress_from_assessment()
 returns trigger
 language plpgsql
@@ -173,7 +352,7 @@ after insert on public.domain_assessments
 for each row
 execute function public.sync_user_domain_progress_from_assessment();
 
--- 6) RLS
+-- 8) RLS
 alter table public.user_domain_progress enable row level security;
 alter table public.domain_assessments enable row level security;
 
@@ -202,6 +381,8 @@ with check (auth.uid()::text = user_id);
 -- domain_assessments
 DROP POLICY IF EXISTS "da_select_own" ON public.domain_assessments;
 DROP POLICY IF EXISTS "da_insert_own" ON public.domain_assessments;
+DROP POLICY IF EXISTS "da_delete_own_admin" ON public.domain_assessments;
+DROP POLICY IF EXISTS "da_delete_own" ON public.domain_assessments;
 
 create policy "da_select_own"
 on public.domain_assessments
@@ -212,5 +393,10 @@ create policy "da_insert_own"
 on public.domain_assessments
 for insert
 with check (auth.uid()::text = user_id);
+
+create policy "da_delete_own"
+on public.domain_assessments
+for delete
+using (auth.uid()::text = user_id);
 
 commit;

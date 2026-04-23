@@ -1,10 +1,24 @@
 import { useMemo, useState } from 'react';
-import { ArrowLeft, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, CheckCircle2, XCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Button from '../ui/Button';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { supabase } from '../../lib/supabaseClient';
 import { buildCaseAttemptAnswers, buildOverallFromSteps } from '../../logic/attemptPayload';
+
+function stripAnswerPrefix(text, correctId) {
+  if (!text) return '';
+
+  const answerId = correctId ? correctId.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') : '[A-D]';
+  const answerPattern = correctId ? `(?:${answerId}|[A-D])` : '[A-D]';
+  const patterns = [
+    new RegExp(`^\\s*正確答案(?:為|是)?\\s*[:：]?\\s*${answerPattern}\\s*[。\\.、：:]?\\s*`, 'i'),
+    new RegExp(`^\\s*正解\\s*[:：]?\\s*${answerPattern}\\s*[。\\.、：:]?\\s*`, 'i'),
+    new RegExp(`^\\s*Correct\\s+answer\\s*[:：]?\\s*${answerPattern}\\s*[。\\.、：:]?\\s*`, 'i'),
+  ];
+
+  return patterns.reduce((cleanText, pattern) => cleanText.replace(pattern, ''), text);
+}
 
 function mapQuestionToStep(question, selectedId) {
   const correctOption = question.options.find((option) => option.correct);
@@ -31,6 +45,7 @@ export default function DomainAssessmentPage({
   assessment,
   user,
   lang,
+  alreadyCompleted = false,
   onBack,
   onSaved,
   onSignOut,
@@ -49,10 +64,13 @@ export default function DomainAssessmentPage({
     submit: isZh ? '提交測驗' : 'Submit assessment',
     submitting: isZh ? '提交中...' : 'Submitting...',
     selectPrompt: isZh ? '請先完成所有題目。' : 'Please answer all questions first.',
+    completedPrompt: isZh ? '你已完成此測驗。' : 'You have already completed this assessment.',
     doneTitle: isZh ? '測驗完成' : 'Assessment complete',
-    doneNote: isZh ? '分數已成功儲存，已為你解鎖下一步。' : 'Score saved successfully. The next step is now unlocked.',
-    score: isZh ? '本次正確率' : 'Attempt score',
-    nextStep: isZh ? '下一步：回主題' : 'Next: Back to topic',
+    doneNote: isZh ? '分數已成功儲存。' : 'Score saved successfully.',
+    feedback: isZh ? '回饋' : 'Feedback',
+    correctAnswer: isZh ? '正確答案' : 'Correct answer',
+    score: isZh ? '本次得分' : 'Attempt score',
+    nextStep: isZh ? '下一步' : 'Next',
   };
 
   const titleBlock = assessment[lang] ?? assessment.zh;
@@ -69,6 +87,11 @@ export default function DomainAssessmentPage({
   const overall = buildOverallFromSteps(steps);
 
   const handleSubmit = async () => {
+    if (alreadyCompleted) {
+      setError(text.completedPrompt);
+      return;
+    }
+
     if (answered !== total) {
       setError(text.selectPrompt);
       return;
@@ -86,17 +109,6 @@ export default function DomainAssessmentPage({
       steps,
     });
 
-    const nowIso = new Date().toISOString();
-    const { error: appUserError } = await supabase
-      .from('app_users')
-      .upsert({ user_id: user.id }, { onConflict: 'user_id' });
-
-    if (appUserError) {
-      setError(appUserError.message);
-      setSubmitting(false);
-      return;
-    }
-
     const { error: insertError } = await supabase
       .from('domain_assessments')
       .insert({
@@ -105,11 +117,13 @@ export default function DomainAssessmentPage({
         assessment_type: kind,
         score: overall.percentage,
         answers: answersPayload,
-        completed_at: nowIso,
+        completed_at: new Date().toISOString(),
       });
 
     if (insertError) {
-      setError(insertError.message);
+      setError(insertError.message.includes('domain assessment already completed')
+        ? text.completedPrompt
+        : insertError.message);
       setSubmitting(false);
       return;
     }
@@ -130,7 +144,7 @@ export default function DomainAssessmentPage({
       <div className="absolute top-4 left-4 z-20">
         <button
           onClick={onBack}
-          className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200"
+          className="nav-pill"
         >
           <ArrowLeft className="inline w-3 h-3 mr-1" />
           {text.back}
@@ -140,14 +154,14 @@ export default function DomainAssessmentPage({
       <div className="absolute top-4 right-4 z-20 flex items-center gap-2">
         <button
           onClick={onSignOut}
-          className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200"
+          className="nav-pill"
         >
           {text.signOut}
         </button>
         <select
           value={lang}
           onChange={(event) => setLang(event.target.value)}
-          className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200 outline-none"
+          className="nav-select"
         >
           <option value="zh">中文</option>
           <option value="en">English</option>
@@ -170,8 +184,9 @@ export default function DomainAssessmentPage({
           {assessment.questions.map((question, index) => {
             const selectedId = responses[question.id] ?? null;
             const questionText = question.prompt?.[lang] ?? question.prompt?.zh;
-            const explanation = question.explanation?.[lang] ?? question.explanation?.zh;
             const correctOption = question.options.find((option) => option.correct);
+            const rawExplanation = question.explanation?.[lang] ?? question.explanation?.zh;
+            const explanation = stripAnswerPrefix(rawExplanation, correctOption?.id);
 
             return (
               <motion.div
@@ -188,7 +203,15 @@ export default function DomainAssessmentPage({
                   {question.options.map((option) => {
                     const optionText = option.text?.[lang] ?? option.text?.zh;
                     const selected = selectedId === option.id;
-                    const optionClass = selected ? 'option-card option-card-selected' : 'option-card';
+                    const optionClass = !showExplanations
+                      ? selected
+                        ? 'option-card option-card-selected'
+                        : 'option-card'
+                      : option.correct
+                        ? 'option-card option-card-correct'
+                        : selected
+                          ? 'option-card option-card-incorrect'
+                          : 'option-card opacity-45';
 
                     return (
                       <button
@@ -201,7 +224,13 @@ export default function DomainAssessmentPage({
                           <span className="w-7 h-7 rounded-full border-2 border-current flex items-center justify-center text-xs font-bold uppercase opacity-60">
                             {option.id}
                           </span>
-                          <span className="text-sm text-warm-800">{optionText}</span>
+                          <span className="flex-1 text-sm text-warm-800">{optionText}</span>
+                          {showExplanations && option.correct && (
+                            <CheckCircle2 className="w-5 h-5 flex-shrink-0 text-sage-500" />
+                          )}
+                          {showExplanations && selected && !option.correct && (
+                            <XCircle className="w-5 h-5 flex-shrink-0 text-red-400" />
+                          )}
                         </div>
                       </button>
                     );
@@ -209,10 +238,13 @@ export default function DomainAssessmentPage({
                 </div>
 
                 {showExplanations && (
-                  <p className="mt-3 text-xs text-warm-500">
-                    {isZh ? '正解：' : 'Correct: '}
-                    {correctOption?.id} · {explanation}
-                  </p>
+                  <div className="mt-4 rounded-xl border border-sage-200 bg-sage-50/70 px-4 py-4 text-sm text-warm-700 leading-relaxed">
+                    <p className="text-xs font-bold text-sage-700 mb-3">{text.feedback}</p>
+                    <p className="text-sm font-semibold text-warm-700 mb-4">
+                      {text.correctAnswer}：{correctOption?.id}
+                    </p>
+                    <p>{explanation}</p>
+                  </div>
                 )}
               </motion.div>
             );
@@ -224,7 +256,7 @@ export default function DomainAssessmentPage({
               <div>
                 <p className="text-sm font-semibold text-sage-700">{text.doneTitle}</p>
                 <p className="text-xs text-sage-600">{text.doneNote}</p>
-                <p className="text-xs text-sage-600 mt-1">{text.score}：{savedScore}%</p>
+                <p className="text-xs text-sage-600 mt-1">{text.score}：{savedScore}分</p>
                 <div className="mt-3">
                   <Button onClick={onBack} size="sm">
                     {text.nextStep}

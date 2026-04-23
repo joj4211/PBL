@@ -128,6 +128,12 @@ function AppContent({ onShowMaintenance }) {
   };
 
   const handleStartDomainAssessment = (kind) => {
+    const completed = kind === 'preTest'
+      ? progress?.pretest_completed
+      : progress?.posttest_completed;
+
+    if (completed) return;
+
     setAssessmentKind(kind);
     setScreen('domainAssessment');
   };
@@ -156,20 +162,38 @@ function AppContent({ onShowMaintenance }) {
 
     setResettingAssessments(true);
 
-    await supabase
+    const { error: deleteError } = await supabase
       .from('domain_assessments')
       .delete()
       .eq('user_id', auth.user.id)
       .eq('domain_id', selectedTopic.id);
 
-    await supabase
+    if (deleteError) {
+      window.alert(`重置失敗：${deleteError.message}`);
+      setResettingAssessments(false);
+      return;
+    }
+
+    const { error: progressError } = await supabase
       .from('user_domain_progress')
       .upsert({
         user_id: auth.user.id,
         domain_id: selectedTopic.id,
         pretest_completed: false,
         posttest_completed: false,
+        latest_pretest_score: null,
+        best_pretest_score: null,
+        latest_posttest_score: null,
+        best_posttest_score: null,
+        pretest_completed_at: null,
+        posttest_completed_at: null,
       }, { onConflict: 'user_id,domain_id' });
+
+    if (progressError) {
+      window.alert(`重置失敗：${progressError.message}`);
+      setResettingAssessments(false);
+      return;
+    }
 
     await refreshDomainProgress();
     setResettingAssessments(false);
@@ -189,7 +213,7 @@ function AppContent({ onShowMaintenance }) {
 
   if (!auth.user) {
     return (
-      <AppShell onShowMaintenance={onShowMaintenance}>
+      <AppShell>
         <EntryPage
           onSignIn={auth.signIn}
           onSignUp={auth.signUp}
@@ -205,6 +229,8 @@ function AppContent({ onShowMaintenance }) {
         lang={lang}
         onSelectTopic={handleSelectTopic}
         onSelectPerformance={handleSelectPerformance}
+        onShowMaintenance={auth.isAdmin ? onShowMaintenance : null}
+        isAdmin={auth.isAdmin}
         onSignOut={handleSignOut}
       />
     );
@@ -224,6 +250,7 @@ function AppContent({ onShowMaintenance }) {
         assessmentStats={assessmentStats}
         caseAttempts={caseAttempts}
         loading={progressLoading}
+        canResetAssessments={true}
         onResetAssessments={handleResetAssessments}
         resettingAssessments={resettingAssessments}
       />
@@ -240,6 +267,9 @@ function AppContent({ onShowMaintenance }) {
         assessment={assessment}
         user={auth.user}
         lang={lang}
+        alreadyCompleted={assessmentKind === 'preTest'
+          ? Boolean(progress?.pretest_completed)
+          : Boolean(progress?.posttest_completed)}
         onBack={() => setScreen('topic')}
         onSaved={async () => {
           await refreshDomainProgress();

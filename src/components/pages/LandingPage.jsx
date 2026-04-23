@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { BarChart2 } from 'lucide-react';
+import { BarChart2, Wrench } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { domains, domainColorMap } from '../../config/domains';
 
@@ -11,7 +11,14 @@ const cardItem = {
   animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
 };
 
-export default function LandingPage({ lang, onSelectTopic, onSelectPerformance, onSignOut }) {
+export default function LandingPage({
+  lang,
+  onSelectTopic,
+  onSelectPerformance,
+  onShowMaintenance,
+  isAdmin,
+  onSignOut,
+}) {
   const { setLang } = useLanguage();
   const isZh = lang === 'zh';
 
@@ -22,6 +29,7 @@ export default function LandingPage({ lang, onSelectTopic, onSelectPerformance, 
   const badge      = isZh ? '互動式學習 · 即時回饋 · 雙語支援' : 'Interactive · Instant Feedback · Bilingual';
   const statsTitle = isZh ? '表現統計' : 'Performance Stats';
   const statsText  = isZh ? '查看耳鼻喉三大類的學習紀錄與平均表現' : 'View records and averages across otology, rhinology, and laryngology';
+  const maintenanceLabel = isZh ? '功能維護' : 'Maintenance';
   const comingSoon = isZh ? '即將上線' : 'Coming Soon';
   const caseCount  = (n) => isZh ? `${n} 個病例` : `${n} case${n > 1 ? 's' : ''}`;
 
@@ -46,16 +54,25 @@ export default function LandingPage({ lang, onSelectTopic, onSelectPerformance, 
 
       {/* Language toggle */}
       <div className="absolute top-4 right-4 z-20 flex items-center gap-2">
+        {isAdmin && onShowMaintenance && (
+          <button
+            onClick={onShowMaintenance}
+            className="nav-pill gap-1.5"
+          >
+            <Wrench className="w-3 h-3" />
+            {maintenanceLabel}
+          </button>
+        )}
         <button
           onClick={onSignOut}
-          className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200"
+          className="nav-pill"
         >
           {isZh ? '登出' : 'Sign out'}
         </button>
         <select
           value={lang}
           onChange={(event) => setLang(event.target.value)}
-          className="text-xs font-semibold px-3 py-1.5 rounded-full border border-warm-300 bg-white/60 backdrop-blur-sm text-warm-600 hover:bg-white/80 hover:border-warm-400 transition-all duration-200 outline-none"
+          className="nav-select"
         >
           <option value="zh">中文</option>
           <option value="en">English</option>

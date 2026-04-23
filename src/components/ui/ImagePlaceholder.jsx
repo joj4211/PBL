@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Image, UploadCloud, Video } from 'lucide-react';
 import { supabase } from '../../lib/supabaseClient';
 
@@ -38,6 +39,7 @@ export default function ImagePlaceholder({
   const [signedUrl, setSignedUrl] = useState(null);
   const [uploadState, setUploadState] = useState('idle');
   const [uploadError, setUploadError] = useState('');
+  const [previewOpen, setPreviewOpen] = useState(false);
   const item = normalizeMedia(remoteMedia ?? media);
   const resolvedType = item.type ?? type;
   const resolvedProvider = item.provider;
@@ -52,12 +54,33 @@ export default function ImagePlaceholder({
   const resolvedSrc = item.src ?? item.url ?? src ?? url ?? signedUrl ?? (resolvedFilename ? `/${resolvedFilename}` : null);
   const showVideo = resolvedType === 'video' && resolvedSrc && !loadError;
   const showImage = resolvedType === 'image' && resolvedSrc && !loadError;
+  const hasVisibleMedia = showImage || showVideo;
   const codeValue = resolvedFilename ?? resolvedPath ?? resolvedSrc;
   const canUpload = isAdmin && caseId && assetKey && user?.id;
 
   useEffect(() => {
     setLoadError(false);
   }, [resolvedSrc, resolvedPath]);
+
+  useEffect(() => {
+    if (!previewOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setPreviewOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [previewOpen]);
 
   useEffect(() => {
     if (!caseId || !assetKey) return;
@@ -194,7 +217,7 @@ export default function ImagePlaceholder({
   const uploadControl = canUpload ? (
     <label className="mt-2 inline-flex cursor-pointer items-center gap-1.5 rounded-lg border border-sage-200 bg-sage-50 px-3 py-1.5 text-xs font-semibold text-sage-700 hover:bg-sage-100">
       <UploadCloud className="h-3.5 w-3.5" />
-      {uploadState === 'uploading' ? '上傳中...' : '上傳媒體'}
+      {uploadState === 'uploading' ? '上傳中...' : hasVisibleMedia ? '重新上傳媒體' : '上傳媒體'}
       <input
         type="file"
         accept="image/*,video/*"
@@ -213,47 +236,71 @@ export default function ImagePlaceholder({
 
   if (showImage) {
     return (
-      <div
-        className="w-full rounded-xl overflow-hidden border border-warm-200 bg-warm-50/30"
-        onDragOver={(event) => canUpload && event.preventDefault()}
-        onDrop={handleDrop}
-      >
-        <img
-          src={resolvedSrc}
-          alt={resolvedLabel ?? resolvedFilename ?? ''}
-          onError={() => setLoadError(true)}
-          className="w-full object-contain"
-          style={{ aspectRatio: resolvedAspectRatio }}
-        />
-        {resolvedLabel && (
-          <p className="text-xs text-center text-warm-400 py-2 px-3">{resolvedLabel}</p>
+      <>
+        <div
+          className="w-full"
+          onDragOver={(event) => canUpload && event.preventDefault()}
+          onDrop={handleDrop}
+        >
+          <div className="mx-auto inline-block max-w-full overflow-hidden rounded-xl border border-warm-200 bg-warm-50/30 align-top">
+            <button
+              type="button"
+              onClick={() => setPreviewOpen(true)}
+              className="block max-w-full cursor-zoom-in"
+            >
+              <img
+                src={resolvedSrc}
+                alt={resolvedLabel ?? resolvedFilename ?? ''}
+                onError={() => setLoadError(true)}
+                className="block max-h-[70vh] max-w-full object-contain"
+              />
+            </button>
+          </div>
+          <div className="text-center">{uploadControl}</div>
+          {uploadFeedback}
+        </div>
+
+        {previewOpen && createPortal(
+          <div
+            className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/85 p-3 sm:p-6"
+            onClick={() => setPreviewOpen(false)}
+          >
+            <div className="pointer-events-none absolute inset-0 backdrop-blur-sm" />
+            <div
+              className="relative flex max-h-[94vh] max-w-[96vw] items-center justify-center overflow-hidden rounded-xl bg-black/20 shadow-2xl"
+              onClick={(event) => event.stopPropagation()}
+            >
+              <img
+                src={resolvedSrc}
+                alt={resolvedLabel ?? resolvedFilename ?? ''}
+                className="block max-h-[94vh] max-w-[96vw] object-contain"
+              />
+            </div>
+          </div>,
+          document.body
         )}
-        <div className="text-center">{uploadControl}</div>
-        {uploadFeedback}
-      </div>
+      </>
     );
   }
 
   if (showVideo) {
     return (
       <div
-        className="w-full rounded-xl overflow-hidden border border-warm-200 bg-black"
+        className="w-full"
         onDragOver={(event) => canUpload && event.preventDefault()}
         onDrop={handleDrop}
       >
-        <video
-          src={resolvedSrc}
-          poster={resolvedPoster}
-          controls
-          preload="metadata"
-          onError={() => setLoadError(true)}
-          className="w-full object-contain"
-          style={{ aspectRatio: resolvedAspectRatio }}
-        />
-        {resolvedLabel && (
-          <p className="text-xs text-center text-warm-400 py-2 px-3 bg-warm-50">{resolvedLabel}</p>
-        )}
-        <div className="text-center bg-warm-50">{uploadControl}</div>
+        <div className="mx-auto inline-block max-w-full overflow-hidden rounded-xl border border-warm-200 bg-black align-top">
+          <video
+            src={resolvedSrc}
+            poster={resolvedPoster}
+            controls
+            preload="metadata"
+            onError={() => setLoadError(true)}
+            className="block max-h-[70vh] max-w-full object-contain"
+          />
+        </div>
+        <div className="text-center">{uploadControl}</div>
         {uploadFeedback}
       </div>
     );

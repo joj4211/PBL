@@ -52,6 +52,7 @@ export default function DomainAssessmentPage({
     doneTitle: isZh ? '測驗完成' : 'Assessment complete',
     doneNote: isZh ? '分數已成功儲存，已為你解鎖下一步。' : 'Score saved successfully. The next step is now unlocked.',
     score: isZh ? '本次正確率' : 'Attempt score',
+    nextStep: isZh ? '下一步：回主題' : 'Next: Back to topic',
   };
 
   const titleBlock = assessment[lang] ?? assessment.zh;
@@ -215,6 +216,11 @@ export default function DomainAssessmentPage({
                 <p className="text-sm font-semibold text-sage-700">{text.doneTitle}</p>
                 <p className="text-xs text-sage-600">{text.doneNote}</p>
                 <p className="text-xs text-sage-600 mt-1">{text.score}：{savedScore}%</p>
+                <div className="mt-3">
+                  <Button onClick={onBack} size="sm">
+                    {text.nextStep}
+                  </Button>
+                </div>
               </div>
             </div>
           ) : (

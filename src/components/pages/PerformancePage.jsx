@@ -211,8 +211,7 @@ export default function PerformancePage({
   lang,
   onBack,
   onSignOut,
-  showPersonalStats = true,
-  showPairedTest = false,
+  mode = 'personal',
 }) {
   const { setLang } = useLanguage();
   const [attempts, setAttempts] = useState([]);
@@ -220,6 +219,8 @@ export default function PerformancePage({
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const isZh = lang === 'zh';
+  const isPersonalMode = mode === 'personal';
+  const isPairedMode = mode === 'paired';
 
   const text = {
     back: isZh ? '返回' : 'Back',
@@ -263,46 +264,42 @@ export default function PerformancePage({
   useEffect(() => {
     let cancelled = false;
 
-    async function loadAttempts() {
+    async function loadPerformanceData() {
       setLoading(true);
       setError('');
 
-      const [attemptsRes, assessmentsRes] = await Promise.all([
-        showPersonalStats
-          ? supabase
-            .from('case_attempts')
-            .select('case_id, domain, pre_test_score, interactive_score, post_test_score')
-            .eq('user_id', user.id)
-          : Promise.resolve({ data: [], error: null }),
-        showPairedTest
-          ? supabase
-            .from('domain_assessments')
-            .select('user_id, domain_id, assessment_type, score, completed_at')
-          : Promise.resolve({ data: [], error: null }),
-      ]);
+      const result = isPairedMode
+        ? await supabase
+          .from('domain_assessments')
+          .select('user_id, domain_id, assessment_type, score, completed_at')
+        : await supabase
+          .from('case_attempts')
+          .select('case_id, domain, pre_test_score, interactive_score, post_test_score')
+          .eq('user_id', user.id);
 
       if (cancelled) return;
 
-      const queryError = attemptsRes.error || assessmentsRes.error;
-
-      if (queryError) {
-        setError(queryError.message);
+      if (result.error) {
+        setError(result.error.message);
         setAttempts([]);
         setAssessmentRows([]);
+      } else if (isPairedMode) {
+        setAttempts([]);
+        setAssessmentRows(result.data ?? []);
       } else {
-        setAttempts(attemptsRes.data ?? []);
-        setAssessmentRows(assessmentsRes.data ?? []);
+        setAttempts(result.data ?? []);
+        setAssessmentRows([]);
       }
 
       setLoading(false);
     }
 
-    loadAttempts();
+    loadPerformanceData();
 
     return () => {
       cancelled = true;
     };
-  }, [showPairedTest, showPersonalStats, user.id]);
+  }, [isPairedMode, user.id]);
 
   const topicStats = useMemo(() => domains.map((topic) => {
     const topicAttempts = attempts.filter((attempt) => (
@@ -437,7 +434,7 @@ export default function PerformancePage({
             </p>
           </motion.div>
 
-          {showPersonalStats && (
+          {isPersonalMode && (
             <div className="glass-card p-5 sm:p-6 mb-5 flex items-center justify-between gap-4">
               <div>
                 <div className="text-sm font-semibold text-warm-500">{text.average}</div>
@@ -461,7 +458,7 @@ export default function PerformancePage({
 
           {!loading && !error && (
             <>
-              {showPersonalStats && (
+              {isPersonalMode && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {topicStats.map((topic, index) => {
                     const topicText = topic[lang];
@@ -508,13 +505,13 @@ export default function PerformancePage({
                 </div>
               )}
 
-              {showPairedTest && (
+              {isPairedMode && (
                 <motion.div
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.15 }}
-                className="glass-card p-5 sm:p-6 mt-5"
-              >
+                  initial={{ opacity: 0, y: 24 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.15 }}
+                  className="glass-card p-5 sm:p-6 mt-5"
+                >
                 <h2 className="text-xl font-bold text-warm-900">{text.pairedTitle}</h2>
                 <p className="text-sm text-warm-500 mt-1">{text.pairedDescription}</p>
 

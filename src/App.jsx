@@ -125,8 +125,7 @@ function MaintenancePerformancePage({ onBack }) {
         lang={lang}
         onBack={onBack}
         onSignOut={auth.signOut}
-        showPersonalStats={false}
-        showPairedTest={true}
+        mode="paired"
       />
     </AppShell>
   );
@@ -267,13 +266,13 @@ function AppContent({ onShowMaintenance }) {
 
   if (screen === 'landing') {
     return (
-        <LandingPage
-          lang={lang}
-          onSelectTopic={handleSelectTopic}
-          onSelectPerformance={handleSelectPerformance}
-          onShowMaintenance={auth.isAdmin ? onShowMaintenance : null}
-          isAdmin={auth.isAdmin}
-          onSignOut={handleSignOut}
+      <LandingPage
+        lang={lang}
+        onSelectTopic={handleSelectTopic}
+        onSelectPerformance={handleSelectPerformance}
+        onShowMaintenance={auth.isAdmin ? onShowMaintenance : null}
+        isAdmin={auth.isAdmin}
+        onSignOut={handleSignOut}
       />
     );
   }
@@ -328,8 +327,7 @@ function AppContent({ onShowMaintenance }) {
         lang={lang}
         onBack={handleBackToLanding}
         onSignOut={handleSignOut}
-        showPersonalStats={true}
-        showPairedTest={false}
+        mode="personal"
       />
     );
   }

@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { BookOpenCheck, UserRound } from 'lucide-react';
+import { BookOpenCheck, Lock, Mail } from 'lucide-react';
 import Button from '../ui/Button';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 export default function EntryPage({ onSignIn, onSignUp, loading }) {
   const { lang } = useLanguage();
   const [mode, setMode] = useState('signIn');
-  const [userId, setUserId] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
   const [submitting, setSubmitting] = useState(false);
 
@@ -20,14 +21,16 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
       features: ['案例導向', '即時回饋', '表現紀錄'],
       signIn: '登入',
       signUp: '註冊',
-      userId: 'user_id',
-      userIdPlaceholder: '請輸入你的 user_id',
+      email: 'Email',
+      emailPlaceholder: '請輸入 email',
+      password: '密碼',
+      passwordPlaceholder: '請輸入密碼',
       failed: '操作失敗，請稍後再試。',
       processing: '處理中...',
       createAccount: '註冊並開始',
       start: '登入並開始',
-      testSignIn: '使用測試帳號登入',
-      note: '不需要 email 或密碼。若 user_id 尚未建立，登入時也會自動建立資料。',
+      confirmation: '註冊完成。請先到信箱確認 email，再回來登入。',
+      note: '請使用 Supabase Auth 帳號登入。未登入者無法讀取 private bucket 內的圖片或影片。',
     },
     en: {
       eyebrow: 'Interactive PBL Learning',
@@ -36,14 +39,16 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
       features: ['Case based', 'Instant feedback', 'Performance records'],
       signIn: 'Sign in',
       signUp: 'Register',
-      userId: 'user_id',
-      userIdPlaceholder: 'Enter your user_id',
+      email: 'Email',
+      emailPlaceholder: 'Enter your email',
+      password: 'Password',
+      passwordPlaceholder: 'Enter your password',
       failed: 'Something went wrong. Please try again later.',
       processing: 'Processing...',
       createAccount: 'Register and start',
       start: 'Sign in and start',
-      testSignIn: 'Use test account',
-      note: 'No email or password required. If the user_id does not exist yet, signing in will create it.',
+      confirmation: 'Account created. Please confirm your email, then sign in.',
+      note: 'Sign in with Supabase Auth. Private bucket images and videos are available only after sign-in.',
     },
   }[lang];
 
@@ -56,22 +61,13 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
     setSubmitting(true);
     try {
       if (isSignUp) {
-        await onSignUp({ userId });
+        const result = await onSignUp({ email, password });
+        if (result?.needsConfirmation) {
+          setMessage(text.confirmation);
+        }
       } else {
-        await onSignIn({ userId });
+        await onSignIn({ email, password });
       }
-    } catch (error) {
-      setMessage(error.message || text.failed);
-    } finally {
-      setSubmitting(false);
-    }
-  };
-
-  const handleTestSignIn = async () => {
-    resetMessage();
-    setSubmitting(true);
-    try {
-      await onSignIn({ userId: 'TEST_101' });
     } catch (error) {
       setMessage(error.message || text.failed);
     } finally {
@@ -144,15 +140,32 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <label className="block">
-              <span className="text-xs font-semibold text-warm-600">{text.userId}</span>
+              <span className="text-xs font-semibold text-warm-600">{text.email}</span>
               <div className="mt-1.5 flex items-center gap-2 rounded-xl border-2 border-warm-200 bg-white/45 px-3 py-2.5">
-                <UserRound className="w-4 h-4 text-warm-400" />
+                <Mail className="w-4 h-4 text-warm-400" />
                 <input
                   required
-                  value={userId}
-                  onChange={(event) => setUserId(event.target.value)}
+                  type="email"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
                   className="w-full bg-transparent text-sm text-warm-800 outline-none"
-                  placeholder={text.userIdPlaceholder}
+                  placeholder={text.emailPlaceholder}
+                />
+              </div>
+            </label>
+
+            <label className="block">
+              <span className="text-xs font-semibold text-warm-600">{text.password}</span>
+              <div className="mt-1.5 flex items-center gap-2 rounded-xl border-2 border-warm-200 bg-white/45 px-3 py-2.5">
+                <Lock className="w-4 h-4 text-warm-400" />
+                <input
+                  required
+                  type="password"
+                  minLength={6}
+                  value={password}
+                  onChange={(event) => setPassword(event.target.value)}
+                  className="w-full bg-transparent text-sm text-warm-800 outline-none"
+                  placeholder={text.passwordPlaceholder}
                 />
               </div>
             </label>
@@ -170,15 +183,6 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
             <Button type="submit" size="lg" className="w-full" disabled={loading || submitting}>
               {submitting ? text.processing : isSignUp ? text.createAccount : text.start}
             </Button>
-
-            <button
-              type="button"
-              onClick={handleTestSignIn}
-              disabled={loading || submitting}
-              className="w-full rounded-xl border border-warm-200 bg-white/45 px-4 py-3 text-sm font-semibold text-warm-700 transition-colors hover:bg-white/70 disabled:cursor-not-allowed disabled:opacity-60"
-            >
-              {text.testSignIn}
-            </button>
           </form>
         </section>
       </motion.div>

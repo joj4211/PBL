@@ -9,16 +9,18 @@ import { useLanguage } from '../../contexts/LanguageContext';
 
 // ── PTA Card ──────────────────────────────────────────────────
 
-function PTACard({ inv }) {
+function PTACard({ inv, mediaContext }) {
   const { ui } = useLanguage();
   const [revealed, setRevealed] = useState(false);
 
   return (
     <div className="space-y-4">
       <ImagePlaceholder
-        filename={inv.image}
+        media={inv.image}
         label={inv.name}
         aspectRatio={inv.aspectRatio}
+        {...mediaContext}
+        assetKey={`workup.${inv.id}.image`}
       />
       <div className="space-y-2">
         <p className="text-sm font-medium text-warm-800">{inv.question}</p>
@@ -48,7 +50,7 @@ function PTACard({ inv }) {
 
 // ── Caloric Card ──────────────────────────────────────────────
 
-function CaloricCard({ inv }) {
+function CaloricCard({ inv, mediaContext }) {
   const { ui } = useLanguage();
   const [revealed, setRevealed] = useState(false);
   const [input, setInput] = useState('');
@@ -58,9 +60,11 @@ function CaloricCard({ inv }) {
       {inv.images.map((img, idx) => (
         <ImagePlaceholder
           key={idx}
-          filename={img}
+          media={img}
           label={`${inv.name} — Image ${idx + 1}`}
           aspectRatio={inv.aspectRatio}
+          {...mediaContext}
+          assetKey={`workup.${inv.id}.images.${idx}`}
         />
       ))}
       <div className="glass-card-sage px-4 py-3">
@@ -105,14 +109,16 @@ function CaloricCard({ inv }) {
 
 // ── VEMP Card ─────────────────────────────────────────────────
 
-function VEMPCard({ inv }) {
+function VEMPCard({ inv, mediaContext }) {
   const { ui } = useLanguage();
   return (
     <div className="space-y-4">
       <ImagePlaceholder
-        filename={inv.image}
+        media={inv.image}
         label={inv.name}
         aspectRatio={inv.aspectRatio}
+        {...mediaContext}
+        assetKey={`workup.${inv.id}.image`}
       />
       {/* Color code rules */}
       <div className="glass-card-warm px-4 py-3 space-y-1">
@@ -136,7 +142,7 @@ function VEMPCard({ inv }) {
 
 // ── Investigation Accordion ───────────────────────────────────
 
-function InvestigationPanel({ inv, defaultOpen = false }) {
+function InvestigationPanel({ inv, defaultOpen = false, mediaContext }) {
   const [open, setOpen] = useState(defaultOpen);
 
   return (
@@ -160,9 +166,9 @@ function InvestigationPanel({ inv, defaultOpen = false }) {
             className="overflow-hidden"
           >
             <div className="px-6 pb-6 pt-2">
-              {inv.id === 'pta'    && <PTACard    inv={inv} />}
-              {inv.id === 'caloric'&& <CaloricCard inv={inv} />}
-              {inv.id === 'vemp'  && <VEMPCard   inv={inv} />}
+              {inv.id === 'pta'    && <PTACard    inv={inv} mediaContext={mediaContext} />}
+              {inv.id === 'caloric'&& <CaloricCard inv={inv} mediaContext={mediaContext} />}
+              {inv.id === 'vemp'  && <VEMPCard   inv={inv} mediaContext={mediaContext} />}
             </div>
           </motion.div>
         )}
@@ -173,9 +179,15 @@ function InvestigationPanel({ inv, defaultOpen = false }) {
 
 // ── Main Component ────────────────────────────────────────────
 
-export default function Workup({ caseData, currentPhase, advancePhase }) {
+export default function Workup({ caseData, currentPhase, advancePhase, lang, isAdmin, user }) {
   const { ui } = useLanguage();
   const { title, investigations } = caseData.workup;
+  const mediaContext = {
+    caseId: caseData.id,
+    lang,
+    isAdmin,
+    user,
+  };
 
   return (
     <PhaseTransition>
@@ -205,7 +217,7 @@ export default function Workup({ caseData, currentPhase, advancePhase }) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.12 }}
             >
-              <InvestigationPanel inv={inv} defaultOpen={idx === 0} />
+              <InvestigationPanel inv={inv} defaultOpen={idx === 0} mediaContext={mediaContext} />
             </motion.div>
           ))}
         </div>

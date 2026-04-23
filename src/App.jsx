@@ -77,6 +77,8 @@ function ArchivedCaseDemo({ caseId, onBackToMaintenance }) {
           key={currentPhase}
           {...caseState}
           user={null}
+          isAdmin={false}
+          lang={lang}
           onExit={onBackToMaintenance}
         />
       </AnimatePresence>
@@ -195,6 +197,7 @@ function AppContent({ onShowMaintenance }) {
       <NoseCasePage
         caseData={stepCase}
         user={auth.user}
+        isAdmin={auth.isAdmin}
         lang={lang}
         onBack={() => setScreen('topic')}
         onSignOut={handleSignOut}
@@ -218,6 +221,8 @@ function AppContent({ onShowMaintenance }) {
           key={currentPhase}
           {...caseState}
           user={auth.user}
+          isAdmin={auth.isAdmin}
+          lang={lang}
           onExit={handleExitCase}
         />
       </AnimatePresence>

@@ -8,12 +8,13 @@ export function useAuth() {
   const [authLoading, setAuthLoading] = useState(true);
   const [profileLoading, setProfileLoading] = useState(false);
 
-  const ensureAppUser = useCallback(async (authUser) => {
+  const ensureAppUser = useCallback(async (authUser, medicalRole = null) => {
     if (!authUser?.id) return null;
+    const nextMedicalRole = medicalRole ?? authUser.user_metadata?.medical_role ?? null;
 
     const { data: existingUser, error: selectError } = await supabase
       .from('app_users')
-      .select('user_id,isAdmin')
+      .select('user_id,isAdmin,medical_role')
       .eq('user_id', authUser.id)
       .maybeSingle();
 
@@ -22,14 +23,30 @@ export function useAuth() {
       return null;
     }
 
-    if (existingUser) {
+    if (existingUser && (!nextMedicalRole || existingUser.medical_role)) {
       return existingUser;
+    }
+
+    if (existingUser && nextMedicalRole) {
+      const { data: updatedUser, error: updateError } = await supabase
+        .from('app_users')
+        .update({ medical_role: nextMedicalRole })
+        .eq('user_id', authUser.id)
+        .select('user_id,isAdmin,medical_role')
+        .single();
+
+      if (updateError) {
+        console.warn('Unable to update app user profile:', updateError.message);
+        return existingUser;
+      }
+
+      return updatedUser;
     }
 
     const { data: createdUser, error: insertError } = await supabase
       .from('app_users')
-      .insert({ user_id: authUser.id, isAdmin: false })
-      .select('user_id,isAdmin')
+      .insert({ user_id: authUser.id, isAdmin: false, medical_role: nextMedicalRole })
+      .select('user_id,isAdmin,medical_role')
       .single();
 
     if (insertError) {
@@ -116,21 +133,30 @@ export function useAuth() {
     return data;
   }, [ensureAppUser]);
 
-  const signUp = useCallback(async ({ email, password }) => {
+  const signUp = useCallback(async ({ email, password, medicalRole }) => {
     const nextEmail = email.trim();
     if (!nextEmail || !password) {
       throw new Error('請輸入 email 與密碼。');
     }
 
+    if (!medicalRole) {
+      throw new Error('請選擇身分。');
+    }
+
     const { data, error } = await supabase.auth.signUp({
       email: nextEmail,
       password,
+      options: {
+        data: {
+          medical_role: medicalRole,
+        },
+      },
     });
 
     if (error) throw error;
 
     if (data.session) {
-      const appUser = await ensureAppUser(data.user);
+      const appUser = await ensureAppUser(data.user, medicalRole);
       setIsAdmin(Boolean(appUser?.isAdmin));
     }
 

@@ -1,9 +1,14 @@
 import { motion } from 'framer-motion';
-import { Archive, ArrowLeft, LayoutGrid } from 'lucide-react';
+import { Archive, ArrowLeft, BarChart2, LayoutGrid } from 'lucide-react';
 import Button from '../ui/Button';
 import { useLanguage } from '../../contexts/LanguageContext';
 
-export default function MaintenancePage({ onBack, onShowGallery, onSelectArchivedCase }) {
+export default function MaintenancePage({
+  onBack,
+  onShowGallery,
+  onSelectArchivedCase,
+  onSelectPerformance,
+}) {
   const { lang } = useLanguage();
   const isZh = lang === 'zh';
 
@@ -14,6 +19,11 @@ export default function MaintenancePage({ onBack, onShowGallery, onSelectArchive
       ? '查看 10 個互動式醫學情境頁面。'
       : 'View 10 interactive medical scenario pages.',
     button: isZh ? '進入互動設計預覽' : 'Open interactive preview',
+    statsTitle: isZh ? '表現統計' : 'Performance Stats',
+    statsDescription: isZh
+      ? '查看所有帳號的前後測配對 t 檢定與主題表現統計。'
+      : 'Review all-user pre/post paired t-test and topic performance stats.',
+    openStats: isZh ? '開啟統計' : 'Open stats',
     archiveTitle: isZh ? '範例保存' : 'Archived examples',
     archiveDescription: isZh
       ? '保留早期完整 phase flow 範例，不放在正式案例清單。'
@@ -59,6 +69,29 @@ export default function MaintenancePage({ onBack, onShowGallery, onSelectArchive
             onClick={onShowGallery}
           >
             {text.button}
+          </Button>
+        </section>
+
+        <section className="glass-card p-4">
+          <div className="flex items-start gap-2.5">
+            <div className="w-8 h-8 rounded-lg bg-sage-100 flex items-center justify-center flex-shrink-0">
+              <BarChart2 className="w-4 h-4 text-sage-600" />
+            </div>
+            <div>
+              <h2 className="text-base font-bold text-warm-900 leading-tight">
+                {text.statsTitle}
+              </h2>
+              <p className="text-xs text-warm-500 mt-1 leading-relaxed">{text.statsDescription}</p>
+            </div>
+          </div>
+          <Button
+            type="button"
+            variant="secondary"
+            size="sm"
+            className="w-full mt-4"
+            onClick={onSelectPerformance}
+          >
+            {text.openStats}
           </Button>
         </section>
 

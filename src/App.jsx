@@ -90,6 +90,47 @@ function ArchivedCaseDemo({ caseId, onBackToMaintenance }) {
   );
 }
 
+function MaintenancePerformancePage({ onBack }) {
+  const { lang } = useLanguage();
+  const auth = useAuth();
+
+  if (auth.loading) {
+    return (
+      <AppShell>
+        <div className="min-h-screen flex items-center justify-center px-4">
+          <div className="glass-card px-6 py-4 text-sm font-semibold text-warm-600">
+            載入中...
+          </div>
+        </div>
+      </AppShell>
+    );
+  }
+
+  if (!auth.user || !auth.isAdmin) {
+    return (
+      <AppShell>
+        <div className="min-h-screen flex items-center justify-center px-4">
+          <div className="glass-card p-5 text-sm font-semibold text-warm-600">
+            {lang === 'zh' ? '只有管理員可以查看此頁面。' : 'Admins only.'}
+          </div>
+        </div>
+      </AppShell>
+    );
+  }
+
+  return (
+    <AppShell>
+      <PerformancePage
+        user={auth.user}
+        lang={lang}
+        onBack={onBack}
+        onSignOut={auth.signOut}
+        mode="paired"
+      />
+    </AppShell>
+  );
+}
+
 function AppContent({ onShowMaintenance }) {
   const { lang } = useLanguage();
   const auth = useAuth();
@@ -286,6 +327,7 @@ function AppContent({ onShowMaintenance }) {
         lang={lang}
         onBack={handleBackToLanding}
         onSignOut={handleSignOut}
+        mode="personal"
       />
     );
   }
@@ -340,6 +382,7 @@ function AppRouter() {
 
   const handleShowGallery = () => setScreen('interactive-gallery');
   const handleShowMaintenance = () => setScreen('maintenance');
+  const handleShowPerformance = () => setScreen('maintenance-performance');
 
   const handleSelectPage  = (pageId) => {
     setSelectedPage(pageId);
@@ -362,9 +405,14 @@ function AppRouter() {
           onBack={handleBackToMain}
           onShowGallery={handleShowGallery}
           onSelectArchivedCase={handleSelectArchivedCase}
+          onSelectPerformance={handleShowPerformance}
         />
       </AppShell>
     );
+  }
+
+  if (screen === 'maintenance-performance') {
+    return <MaintenancePerformancePage onBack={handleBackToMaintenance} />;
   }
 
   if (screen === 'archived-case' && archivedCaseId) {

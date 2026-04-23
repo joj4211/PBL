@@ -16,6 +16,19 @@ create table if not exists public.app_users (
 alter table public.app_users
   add column if not exists "isAdmin" boolean not null default false;
 
+alter table public.app_users
+  add column if not exists medical_role text;
+
+alter table public.app_users
+  drop constraint if exists app_users_medical_role_check;
+
+alter table public.app_users
+  add constraint app_users_medical_role_check
+  check (
+    medical_role is null
+    or medical_role in ('主治醫師', '住院醫師', 'PGY', 'Clerk')
+  );
+
 alter table public.app_users enable row level security;
 
 -- Keep this table locked down: users can create/read only their own non-admin row.
@@ -41,6 +54,15 @@ using (auth.uid()::text = user_id);
 create policy "app_users_insert_own_non_admin"
 on public.app_users
 for insert
+with check (
+  auth.uid()::text = user_id
+  and "isAdmin" = false
+);
+
+create policy "app_users_update_own_role_non_admin"
+on public.app_users
+for update
+using (auth.uid()::text = user_id)
 with check (
   auth.uid()::text = user_id
   and "isAdmin" = false
@@ -380,6 +402,8 @@ with check (auth.uid()::text = user_id);
 
 -- domain_assessments
 DROP POLICY IF EXISTS "da_select_own" ON public.domain_assessments;
+DROP POLICY IF EXISTS "da_select_authenticated" ON public.domain_assessments;
+DROP POLICY IF EXISTS "da_select_admin_all" ON public.domain_assessments;
 DROP POLICY IF EXISTS "da_insert_own" ON public.domain_assessments;
 DROP POLICY IF EXISTS "da_delete_own_admin" ON public.domain_assessments;
 DROP POLICY IF EXISTS "da_delete_own" ON public.domain_assessments;
@@ -388,6 +412,11 @@ create policy "da_select_own"
 on public.domain_assessments
 for select
 using (auth.uid()::text = user_id);
+
+create policy "da_select_admin_all"
+on public.domain_assessments
+for select
+using (public.is_current_user_admin());
 
 create policy "da_insert_own"
 on public.domain_assessments

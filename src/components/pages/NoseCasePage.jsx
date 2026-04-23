@@ -15,14 +15,14 @@ import { stripOptionPrefix } from '../../utils/text';
 import { domainColorMap, getDomainByCaseId } from '../../config/domains';
 import { buildCaseAttemptAnswers, buildOverallFromSteps } from '../../logic/attemptPayload';
 
-function MediaPlaceholder({ media, text, mediaContext }) {
+function MediaPlaceholder({ media, text, mediaContext, hotspotProps }) {
   if (!media) return null;
 
   if (typeof media === 'string') {
-    return <ImagePlaceholder label={media} note={text.mediaNote} {...mediaContext} />;
+    return <ImagePlaceholder label={media} note={text.mediaNote} {...mediaContext} {...hotspotProps} />;
   }
 
-  return <ImagePlaceholder media={media} note={media.note ?? text.mediaNote} {...mediaContext} />;
+  return <ImagePlaceholder media={media} note={media.note ?? text.mediaNote} {...mediaContext} {...hotspotProps} />;
 }
 
 function NoseProgressIndicator({ currentIndex, total }) {
@@ -69,6 +69,8 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
   const [stepIndex, setStepIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [draftSelections, setDraftSelections] = useState({});
+  const [hotspotTargets, setHotspotTargets] = useState([]);
+  const [hotspotSelections, setHotspotSelections] = useState({});
   const [saveState, setSaveState] = useState('idle');
   const [saveError, setSaveError] = useState('');
   const domain = getDomainByCaseId(caseData.id);
@@ -88,6 +90,9 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
   const correctIds = step.options.filter((option) => option.correct).map((option) => option.id);
   const isMultiSelect = correctIds.length > 1;
   const draftSelectedIds = draftSelections[stepIndex] ?? [];
+  const isNoseHotspotStep = caseData.id === 'nose_allergic_rhinitis' && stepIndex === 4;
+  const isEpistaxisTriageCtaStep = caseData.id === 'nose_epistaxis_hht' && stepIndex === 0;
+  const currentHotspotSelections = hotspotSelections[stepIndex] ?? [];
   const isZh = lang === 'zh';
   const text = {
     back: isZh ? `返回${domainText.title}` : `Back to ${domainText.title}`,
@@ -187,6 +192,47 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
     });
   };
 
+  const pointHitsTarget = (point, target) => {
+    const distance = Math.hypot(point.x - target.x, point.y - target.y);
+    return distance <= (target.r ?? 6);
+  };
+
+  const submitHotspotAnswer = () => {
+    if (selectedAnswer) return;
+
+    const isCorrect =
+      hotspotTargets.length === 2 &&
+      currentHotspotSelections.length === 2 &&
+      hotspotTargets.every((target) =>
+        currentHotspotSelections.some((point) => pointHitsTarget(point, target))
+      );
+
+    setAnswers((prev) => {
+      const next = [...prev];
+      next[stepIndex] = {
+        order: stepIndex,
+        questionId: step.id ?? `step-${stepIndex + 1}`,
+        type: 'image-hotspot',
+        step: step.title,
+        selectedId: null,
+        selectedIds: null,
+        selectedText: currentHotspotSelections.map((point) => ({
+          x: Math.round(point.x * 10) / 10,
+          y: Math.round(point.y * 10) / 10,
+        })),
+        inputText: null,
+        matchedKeywords: null,
+        correctId: null,
+        correctIds,
+        isCorrect,
+        explanation: step.feedback ?? null,
+        feedback: step.feedback ?? null,
+        feedbackLevel: isCorrect ? 'excellent' : 'hint',
+      };
+      return next;
+    });
+  };
+
   const saveAttempt = async () => {
     setSaveState('saving');
     setSaveError('');
@@ -221,6 +267,11 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
   };
 
   const goNext = () => {
+    if (isNoseHotspotStep && !selectedAnswer) {
+      submitHotspotAnswer();
+      return;
+    }
+
     if (!selectedAnswer) return;
     if (isLastStep) {
       saveAttempt();
@@ -338,7 +389,43 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
                   </div>
 
                   <div className="mt-5 space-y-4">
-                    <MediaPlaceholder media={step.media} text={text} mediaContext={mediaContext} />
+                    {isEpistaxisTriageCtaStep ? (
+                      <div className="grid gap-4 sm:grid-cols-2">
+                        <ImagePlaceholder
+                          label={isZh ? '載入圖片：急診 triage 監視器畫面 (BP 149/103)' : 'Load image: emergency triage monitor (BP 149/103)'}
+                          note={text.mediaNote}
+                          caseId={caseData.id}
+                          lang={lang}
+                          isAdmin={isAdmin}
+                          user={user}
+                          assetKey="steps.0.media.triage"
+                        />
+                        <ImagePlaceholder
+                          label={isZh ? '載入圖片：電腦斷層血管攝影 (CTA) 影像' : 'Load image: CT angiography (CTA) image'}
+                          note={text.mediaNote}
+                          caseId={caseData.id}
+                          lang={lang}
+                          isAdmin={isAdmin}
+                          user={user}
+                          assetKey="steps.0.media.cta"
+                        />
+                      </div>
+                    ) : (
+                      <MediaPlaceholder
+                        media={step.media}
+                        text={text}
+                        mediaContext={mediaContext}
+                        hotspotProps={isNoseHotspotStep ? {
+                          hotspotTask: true,
+                          hotspotTargets,
+                          userHotspots: currentHotspotSelections,
+                          onHotspotsLoaded: setHotspotTargets,
+                          onUserHotspotsChange: (points) => {
+                            setHotspotSelections((prev) => ({ ...prev, [stepIndex]: points }));
+                          },
+                        } : {}}
+                      />
+                    )}
 
                     {step.constructionNote && (
                       <p className="rounded-2xl border border-warm-200 bg-warm-50/70 px-4 py-3 text-xs text-warm-600 leading-relaxed">
@@ -354,7 +441,7 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
                   </p>
 
                   <div className="space-y-3">
-                    {step.options.map((option) => {
+                    {!isNoseHotspotStep && step.options.map((option) => {
                     const selected = result?.selectedId === option.id || result?.selectedIds?.includes(option.id);
                     const draftSelected = draftSelectedIds.includes(option.id);
                     const isCorrectOption = result?.correctIds.includes(option.id);
@@ -389,7 +476,13 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
                   })}
                   </div>
 
-                  {isMultiSelect && !result && (
+                  {isNoseHotspotStep && !result && (
+                    <p className="rounded-2xl border border-warm-200 bg-warm-50/70 px-4 py-3 text-xs text-warm-600 leading-relaxed">
+                      已點選 {currentHotspotSelections.length} / 2。按「下一步」後會直接判定答案。
+                    </p>
+                  )}
+
+                  {isMultiSelect && !result && !isNoseHotspotStep && (
                     <div className="mt-4 flex justify-end">
                       <Button onClick={submitMultiAnswer} disabled={draftSelectedIds.length === 0}>
                         {text.confirm}
@@ -425,7 +518,7 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
                       <ChevronLeft className="inline w-4 h-4 mr-1" />
                       {text.previous}
                     </Button>
-                    <Button onClick={goNext} disabled={!selectedAnswer || saveState === 'saving'} className="w-full sm:w-auto">
+                    <Button onClick={goNext} disabled={(!selectedAnswer && !isNoseHotspotStep) || saveState === 'saving'} className="w-full sm:w-auto">
                       {saveState === 'saving' ? text.saving : isLastStep ? text.finish : text.next}
                       <ChevronRight className="inline w-4 h-4 ml-1" />
                     </Button>

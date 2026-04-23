@@ -10,18 +10,46 @@ const item = {
   animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
 };
 
-export default function TopicPage({ topic, lang, onSelectCase, onBack, onSignOut }) {
+export default function TopicPage({
+  topic,
+  lang,
+  onSelectCase,
+  onBack,
+  onSignOut,
+  onStartPreTest,
+  onStartPostTest,
+  progress,
+  assessmentStats,
+  caseAttempts,
+  loading,
+}) {
   const { setLang } = useLanguage();
   const isZh = lang === 'zh';
   const t = topic[lang];
   const hasCases = topic.cases.length > 0;
+
+  const preDone = Boolean(progress?.pretest_completed);
+  const allCasesDone = topic.cases.every((caseItem) => (caseAttempts?.[caseItem.id] ?? 0) >= 1);
+  const showPostButton = preDone && allCasesDone;
+
+  const text = {
+    preGateTitle: isZh ? '需先完成前測才能進入案例' : 'Complete pre-test to unlock cases',
+    preGateBody: isZh ? '前測完成並成功寫入成績後，才會顯示案例入口。' : 'Case entry unlocks only after pre-test submission is saved.',
+    enterPre: isZh ? '進入前測' : 'Start pre-test',
+    enterPost: isZh ? '進入後測' : 'Start post-test',
+    attempts: isZh ? '完成次數' : 'Attempts',
+    latestBest: isZh ? '最新 / 最佳' : 'Latest / Best',
+    noScore: '--',
+  };
+
+  const preStats = `${assessmentStats?.preTestLatest ?? text.noScore} / ${assessmentStats?.preTestBest ?? text.noScore}`;
+  const postStats = `${assessmentStats?.postTestLatest ?? text.noScore} / ${assessmentStats?.postTestBest ?? text.noScore}`;
 
   return (
     <div
       className="min-h-screen relative overflow-hidden"
       style={{ background: 'linear-gradient(135deg, #FAF7F0 0%, #FFFEF8 40%, #F0F5EC 100%)' }}
     >
-      {/* Ambient orbs */}
       <div
         className="absolute -top-32 -right-32 w-96 h-96 rounded-full opacity-25 animate-float pointer-events-none"
         style={{ background: 'radial-gradient(circle, #B8D0A8, transparent 70%)' }}
@@ -31,7 +59,6 @@ export default function TopicPage({ topic, lang, onSelectCase, onBack, onSignOut
         style={{ background: 'radial-gradient(circle, #DFC99E, transparent 70%)', animationDelay: '2s' }}
       />
 
-      {/* Back button */}
       <div className="absolute top-4 left-4 z-20">
         <button
           onClick={onBack}
@@ -41,7 +68,6 @@ export default function TopicPage({ topic, lang, onSelectCase, onBack, onSignOut
         </button>
       </div>
 
-      {/* Language toggle */}
       <div className="absolute top-4 right-4 z-20 flex items-center gap-2">
         <button
           onClick={onSignOut}
@@ -60,20 +86,43 @@ export default function TopicPage({ topic, lang, onSelectCase, onBack, onSignOut
       </div>
 
       <div className="relative z-10 min-h-screen flex flex-col items-center px-4 py-16">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mb-10"
+          className="text-center mb-8"
         >
           <div className="text-4xl mb-3">{topic.icon}</div>
           <h1 className="text-3xl font-bold text-warm-900 font-serif">{t.title}</h1>
           <p className="text-warm-400 text-sm mt-1">{t.subtitle}</p>
         </motion.div>
 
-        <div className="w-full max-w-2xl">
-          {hasCases ? (
+        <div className="w-full max-w-2xl space-y-4">
+          <div className="glass-card p-5 grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <p className="text-xs text-warm-400 uppercase tracking-wider">Pre-test {text.latestBest}</p>
+              <p className="text-lg font-bold text-sage-700 mt-1">{preStats}</p>
+            </div>
+            <div>
+              <p className="text-xs text-warm-400 uppercase tracking-wider">Post-test {text.latestBest}</p>
+              <p className="text-lg font-bold text-sage-700 mt-1">{postStats}</p>
+            </div>
+          </div>
+
+          {!preDone && (
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="glass-card p-6 text-center">
+              <p className="text-base font-semibold text-warm-800">{text.preGateTitle}</p>
+              <p className="text-sm text-warm-500 mt-2 mb-4">{text.preGateBody}</p>
+              <button
+                onClick={onStartPreTest}
+                className="text-sm font-semibold px-5 py-2 rounded-full bg-sage-500 text-white hover:bg-sage-600 transition-colors duration-200"
+              >
+                {text.enterPre}
+              </button>
+            </motion.div>
+          )}
+
+          {preDone && hasCases && (
             <motion.div
               variants={container}
               initial="initial"
@@ -84,6 +133,7 @@ export default function TopicPage({ topic, lang, onSelectCase, onBack, onSignOut
                 const caseContent = getCase(c.id, lang);
                 const title = caseContent?.title ?? c[lang];
                 const subtitle = caseContent?.subtitle ?? '';
+                const attempts = caseAttempts?.[c.id] ?? 0;
 
                 return (
                   <motion.div
@@ -98,6 +148,7 @@ export default function TopicPage({ topic, lang, onSelectCase, onBack, onSignOut
                           {subtitle}
                         </div>
                       )}
+                      <div className="text-xs text-sage-600 mt-2">{text.attempts}：{attempts}</div>
                     </div>
                     <button
                       onClick={() => onSelectCase(c.id)}
@@ -109,33 +160,24 @@ export default function TopicPage({ topic, lang, onSelectCase, onBack, onSignOut
                 );
               })}
             </motion.div>
-          ) : (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="glass-card p-8 text-center"
-            >
-              <div className="text-3xl mb-3">🚧</div>
-              <div className="text-lg font-semibold text-warm-700 mb-1">
-                {isZh ? '即將上線' : 'Coming Soon'}
-              </div>
-              <p className="text-warm-400 text-sm mb-6">
-                {isZh
-                  ? '此主題的病例正在製作中，敬請期待。'
-                  : 'Cases for this topic are being developed. Stay tuned!'}
+          )}
+
+          {preDone && showPostButton && (
+            <div className="glass-card p-5 text-center">
+              <p className="text-sm text-warm-500 mb-3">
+                {isZh ? '你已完成本主題所有案例，現在可進行後測。' : 'All cases are completed. You can now take the post-test.'}
               </p>
-              <div className="flex flex-wrap justify-center gap-2">
-                {t.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-xs px-3 py-1 rounded-full bg-warm-100 text-warm-500 border border-warm-200"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
+              <button
+                onClick={onStartPostTest}
+                className="text-sm font-semibold px-5 py-2 rounded-full bg-sage-500 text-white hover:bg-sage-600 transition-colors duration-200"
+              >
+                {text.enterPost}
+              </button>
+            </div>
+          )}
+
+          {loading && (
+            <div className="glass-card p-5 text-sm text-warm-500">{isZh ? '讀取進度中...' : 'Loading progress...'}</div>
           )}
         </div>
       </div>

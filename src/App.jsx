@@ -7,6 +7,7 @@ import { useAuth } from './hooks/useAuth';
 import { PHASES } from './logic/stateMachine';
 import { useDomainProgress } from './hooks/useDomainProgress';
 import { getDomainAssessment } from './config/domainAssessments';
+import { supabase } from './lib/supabaseClient';
 import { defaultCaseId, getStepCase } from './cases/index';
 import AppShell from './components/layout/AppShell';
 import LandingPage from './components/pages/LandingPage';
@@ -96,6 +97,7 @@ function AppContent({ onShowMaintenance }) {
   const [selectedTopic, setSelectedTopic] = useState(null);
   const [selectedCaseId, setSelectedCaseId] = useState(defaultCaseId);
   const [assessmentKind, setAssessmentKind] = useState('preTest');
+  const [resettingAssessments, setResettingAssessments] = useState(false);
   const caseState = useCase(selectedCaseId, lang);
   const { currentPhase, goBackPhase, exitToIntro } = caseState;
 
@@ -149,6 +151,30 @@ function AppContent({ onShowMaintenance }) {
     await auth.signOut();
   };
 
+  const handleResetAssessments = async () => {
+    if (!auth.user?.id || !selectedTopic?.id || resettingAssessments) return;
+
+    setResettingAssessments(true);
+
+    await supabase
+      .from('domain_assessments')
+      .delete()
+      .eq('user_id', auth.user.id)
+      .eq('domain_id', selectedTopic.id);
+
+    await supabase
+      .from('user_domain_progress')
+      .upsert({
+        user_id: auth.user.id,
+        domain_id: selectedTopic.id,
+        pretest_completed: false,
+        posttest_completed: false,
+      }, { onConflict: 'user_id,domain_id' });
+
+    await refreshDomainProgress();
+    setResettingAssessments(false);
+  };
+
   if (auth.loading) {
     return (
       <AppShell>
@@ -198,6 +224,8 @@ function AppContent({ onShowMaintenance }) {
         assessmentStats={assessmentStats}
         caseAttempts={caseAttempts}
         loading={progressLoading}
+        onResetAssessments={handleResetAssessments}
+        resettingAssessments={resettingAssessments}
       />
     );
   }

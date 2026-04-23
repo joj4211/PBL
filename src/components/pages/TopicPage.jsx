@@ -22,6 +22,8 @@ export default function TopicPage({
   assessmentStats,
   caseAttempts,
   loading,
+  onResetAssessments,
+  resettingAssessments,
 }) {
   const { setLang } = useLanguage();
   const isZh = lang === 'zh';
@@ -40,6 +42,8 @@ export default function TopicPage({
     attempts: isZh ? '完成次數' : 'Attempts',
     latestBest: isZh ? '最新 / 最佳' : 'Latest / Best',
     noScore: '--',
+    resetAssessments: isZh ? '重置前後測紀錄' : 'Reset assessment records',
+    resetConfirm: isZh ? '確定要重置此科別前後測紀錄嗎？此動作無法復原。' : 'Reset pre/post assessment records for this domain? This cannot be undone.',
   };
 
   const preStats = `${assessmentStats?.preTestLatest ?? text.noScore} / ${assessmentStats?.preTestBest ?? text.noScore}`;
@@ -107,6 +111,22 @@ export default function TopicPage({
               <p className="text-xs text-warm-400 uppercase tracking-wider">Post-test {text.latestBest}</p>
               <p className="text-lg font-bold text-sage-700 mt-1">{postStats}</p>
             </div>
+          </div>
+
+          <div className="flex justify-end">
+            <button
+              onClick={() => {
+                if (!onResetAssessments) return;
+                if (!window.confirm(text.resetConfirm)) return;
+                onResetAssessments();
+              }}
+              disabled={loading || resettingAssessments}
+              className="text-xs font-semibold px-4 py-2 rounded-full border border-red-300 bg-red-50 text-red-600 hover:bg-red-100 transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed"
+            >
+              {resettingAssessments
+                ? (isZh ? '重置中...' : 'Resetting...')
+                : text.resetAssessments}
+            </button>
           </div>
 
           {!preDone && (

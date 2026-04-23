@@ -37,6 +37,7 @@ export default function DomainAssessmentPage({
 }) {
   const { setLang } = useLanguage();
   const [responses, setResponses] = useState({});
+  const [showExplanations, setShowExplanations] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [savedScore, setSavedScore] = useState(null);
   const [error, setError] = useState('');
@@ -51,6 +52,7 @@ export default function DomainAssessmentPage({
     doneTitle: isZh ? '測驗完成' : 'Assessment complete',
     doneNote: isZh ? '分數已成功儲存，已為你解鎖下一步。' : 'Score saved successfully. The next step is now unlocked.',
     score: isZh ? '本次正確率' : 'Attempt score',
+    nextStep: isZh ? '下一步：回主題' : 'Next: Back to topic',
   };
 
   const titleBlock = assessment[lang] ?? assessment.zh;
@@ -62,8 +64,7 @@ export default function DomainAssessmentPage({
       const selectedId = responses[question.id];
       if (!selectedId) return null;
       return mapQuestionToStep(question, selectedId);
-    })
-    .filter(Boolean), [assessment.questions, responses]);
+    }).filter(Boolean), [assessment.questions, responses]);
 
   const overall = buildOverallFromSteps(steps);
 
@@ -73,6 +74,7 @@ export default function DomainAssessmentPage({
       return;
     }
 
+    setShowExplanations(true);
     setSubmitting(true);
     setError('');
 
@@ -182,6 +184,7 @@ export default function DomainAssessmentPage({
                     return (
                       <button
                         key={option.id}
+                        disabled={showExplanations}
                         onClick={() => setResponses((prev) => ({ ...prev, [question.id]: option.id }))}
                         className={optionClass}
                       >
@@ -196,7 +199,7 @@ export default function DomainAssessmentPage({
                   })}
                 </div>
 
-                {selectedId && (
+                {showExplanations && (
                   <p className="mt-3 text-xs text-warm-500">
                     {isZh ? '正解：' : 'Correct: '}
                     {correctOption?.id} · {explanation}
@@ -213,11 +216,15 @@ export default function DomainAssessmentPage({
                 <p className="text-sm font-semibold text-sage-700">{text.doneTitle}</p>
                 <p className="text-xs text-sage-600">{text.doneNote}</p>
                 <p className="text-xs text-sage-600 mt-1">{text.score}：{savedScore}%</p>
+                <div className="mt-3">
+                  <Button onClick={onBack} size="sm">
+                    {text.nextStep}
+                  </Button>
+                </div>
               </div>
             </div>
           ) : (
             <div className="glass-card p-5 space-y-3">
-              <p className="text-sm text-warm-600">{text.score}：{overall.percentage}%</p>
               {error && <p className="text-xs text-red-500">{error}</p>}
               <Button onClick={handleSubmit} disabled={submitting} className="w-full sm:w-auto">
                 {submitting ? text.submitting : text.submit}

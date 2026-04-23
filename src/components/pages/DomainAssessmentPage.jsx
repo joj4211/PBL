@@ -225,7 +225,6 @@ export default function DomainAssessmentPage({
             </div>
           ) : (
             <div className="glass-card p-5 space-y-3">
-              <p className="text-sm text-warm-600">{text.score}：{overall.percentage}%</p>
               {error && <p className="text-xs text-red-500">{error}</p>}
               <Button onClick={handleSubmit} disabled={submitting} className="w-full sm:w-auto">
                 {submitting ? text.submitting : text.submit}

@@ -13,11 +13,7 @@ import { supabase } from '../../lib/supabaseClient';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { stripOptionPrefix } from '../../utils/text';
 import { domainColorMap, getDomainByCaseId } from '../../config/domains';
-
-function scoreAnswers(answers, steps) {
-  const correct = answers.filter((answer) => answer?.isCorrect).length;
-  return steps.length > 0 ? Math.round((correct / steps.length) * 100) : 0;
-}
+import { buildCaseAttemptAnswers, buildOverallFromSteps } from '../../logic/attemptPayload';
 
 function MediaPlaceholder({ media, text, mediaContext }) {
   if (!media) return null;
@@ -128,11 +124,21 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
     setAnswers((prev) => {
       const next = [...prev];
       next[stepIndex] = {
+        order: stepIndex,
+        questionId: step.id ?? `step-${stepIndex + 1}`,
+        type: 'multiple-choice',
         step: step.title,
         selectedId: option.id,
+        selectedIds: null,
         selectedText: option.text,
+        inputText: null,
+        matchedKeywords: null,
+        correctId: correctIds[0] ?? null,
         correctIds,
         isCorrect: Boolean(option.correct),
+        explanation: step.feedback ?? null,
+        feedback: step.feedback ?? null,
+        feedbackLevel: Boolean(option.correct) ? 'excellent' : 'hint',
       };
       return next;
     });
@@ -159,13 +165,23 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
     setAnswers((prev) => {
       const next = [...prev];
       next[stepIndex] = {
+        order: stepIndex,
+        questionId: step.id ?? `step-${stepIndex + 1}`,
+        type: 'multiple-choice',
         step: step.title,
+        selectedId: null,
         selectedIds: draftSelectedIds,
         selectedText: step.options
           .filter((option) => draftSelectedIds.includes(option.id))
           .map((option) => option.text),
+        inputText: null,
+        matchedKeywords: null,
+        correctId: correctIds[0] ?? null,
         correctIds,
         isCorrect,
+        explanation: step.feedback ?? null,
+        feedback: step.feedback ?? null,
+        feedbackLevel: isCorrect ? 'excellent' : 'hint',
       };
       return next;
     });
@@ -175,19 +191,24 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
     setSaveState('saving');
     setSaveError('');
 
-    const score = scoreAnswers(answers, caseData.steps);
+    const overall = buildOverallFromSteps(answers);
+    const answersPayload = buildCaseAttemptAnswers({
+      caseId: caseData.id,
+      caseTitle: caseData.title,
+      domain: domain.id,
+      language: lang,
+      steps: answers,
+    });
+
     const { error } = await supabase.from('case_attempts').insert({
       user_id: user.id,
       case_id: caseData.id,
       domain: domain.id,
       language: lang,
       pre_test_score: null,
-      interactive_score: score,
+      interactive_score: overall.percentage,
       post_test_score: null,
-      answers: {
-        caseTitle: caseData.title,
-        answers,
-      },
+      answers: answersPayload,
     });
 
     if (error) {
@@ -212,7 +233,7 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
     setStepIndex((index) => Math.max(0, index - 1));
   };
 
-  const score = scoreAnswers(answers, caseData.steps);
+  const score = buildOverallFromSteps(answers).percentage;
 
   return (
     <div

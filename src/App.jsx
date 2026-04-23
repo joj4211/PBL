@@ -5,6 +5,8 @@ import EntryPage from './components/auth/EntryPage';
 import { useCase } from './hooks/useCase';
 import { useAuth } from './hooks/useAuth';
 import { PHASES } from './logic/stateMachine';
+import { useDomainProgress } from './hooks/useDomainProgress';
+import { getDomainAssessment } from './config/domainAssessments';
 import { defaultCaseId, getStepCase } from './cases/index';
 import AppShell from './components/layout/AppShell';
 import LandingPage from './components/pages/LandingPage';
@@ -12,6 +14,7 @@ import TopicPage from './components/pages/TopicPage';
 import PerformancePage from './components/pages/PerformancePage';
 import MaintenancePage from './components/pages/MaintenancePage';
 import NoseCasePage from './components/pages/NoseCasePage';
+import DomainAssessmentPage from './components/pages/DomainAssessmentPage';
 import Intro from './components/phases/Intro';
 import PreTest from './components/phases/PreTest';
 import ChiefComplaint from './components/phases/ChiefComplaint';
@@ -89,11 +92,17 @@ function ArchivedCaseDemo({ caseId, onBackToMaintenance }) {
 function AppContent({ onShowMaintenance }) {
   const { lang } = useLanguage();
   const auth = useAuth();
-  const [screen, setScreen]               = useState('landing'); // 'landing' | 'topic' | 'performance' | 'case' | 'stepCase'
+  const [screen, setScreen]               = useState('landing'); // 'landing' | 'topic' | 'performance' | 'case' | 'stepCase' | 'domainAssessment'
   const [selectedTopic, setSelectedTopic] = useState(null);
   const [selectedCaseId, setSelectedCaseId] = useState(defaultCaseId);
+  const [assessmentKind, setAssessmentKind] = useState('preTest');
   const caseState = useCase(selectedCaseId, lang);
   const { currentPhase, goBackPhase, exitToIntro } = caseState;
+
+  const { progress, assessmentStats, caseAttempts, loading: progressLoading, refresh: refreshDomainProgress } = useDomainProgress(
+    auth.user?.id,
+    selectedTopic?.id
+  );
 
   const handleSelectTopic = (topic) => {
     setSelectedTopic(topic);
@@ -106,7 +115,7 @@ function AppContent({ onShowMaintenance }) {
     setSelectedCaseId(caseId);
 
     if (!isStepCase) {
-      caseState.startAtPhase(PHASES.PRE_TEST);
+      caseState.startAtPhase(PHASES.INTRO);
     }
 
     setScreen(isStepCase ? 'stepCase' : 'case');
@@ -116,19 +125,27 @@ function AppContent({ onShowMaintenance }) {
     setScreen('performance');
   };
 
+  const handleStartDomainAssessment = (kind) => {
+    setAssessmentKind(kind);
+    setScreen('domainAssessment');
+  };
+
   const handleBackToLanding = () => {
     setScreen('landing');
     setSelectedTopic(null);
+    setAssessmentKind('preTest');
   };
 
-  const handleExitCase = () => {
+  const handleExitCase = async () => {
     exitToIntro();
     setScreen('topic');
+    await refreshDomainProgress();
   };
 
   const handleSignOut = async () => {
     setScreen('landing');
     setSelectedTopic(null);
+    setAssessmentKind('preTest');
     await auth.signOut();
   };
 
@@ -175,6 +192,31 @@ function AppContent({ onShowMaintenance }) {
         onSelectCase={handleSelectCase}
         onBack={handleBackToLanding}
         onSignOut={handleSignOut}
+        onStartPreTest={() => handleStartDomainAssessment('preTest')}
+        onStartPostTest={() => handleStartDomainAssessment('postTest')}
+        progress={progress}
+        assessmentStats={assessmentStats}
+        caseAttempts={caseAttempts}
+        loading={progressLoading}
+      />
+    );
+  }
+
+  if (screen === 'domainAssessment' && selectedTopic) {
+    const assessment = getDomainAssessment(selectedTopic.id, assessmentKind);
+
+    return (
+      <DomainAssessmentPage
+        domain={selectedTopic}
+        kind={assessmentKind}
+        assessment={assessment}
+        user={auth.user}
+        lang={lang}
+        onBack={() => setScreen('topic')}
+        onSaved={async () => {
+          await refreshDomainProgress();
+        }}
+        onSignOut={handleSignOut}
       />
     );
   }
@@ -199,7 +241,10 @@ function AppContent({ onShowMaintenance }) {
         user={auth.user}
         isAdmin={auth.isAdmin}
         lang={lang}
-        onBack={() => setScreen('topic')}
+        onBack={async () => {
+          setScreen('topic');
+          await refreshDomainProgress();
+        }}
         onSignOut={handleSignOut}
       />
     );

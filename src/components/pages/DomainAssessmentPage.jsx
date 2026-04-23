@@ -37,7 +37,7 @@ export default function DomainAssessmentPage({
 }) {
   const { setLang } = useLanguage();
   const [responses, setResponses] = useState({});
-  const [submittedResponses, setSubmittedResponses] = useState({});
+  const [showExplanations, setShowExplanations] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [savedScore, setSavedScore] = useState(null);
   const [error, setError] = useState('');
@@ -47,10 +47,8 @@ export default function DomainAssessmentPage({
     back: isZh ? '返回主題' : 'Back to topic',
     signOut: isZh ? '登出' : 'Sign out',
     submit: isZh ? '提交測驗' : 'Submit assessment',
-    submitAnswer: isZh ? '送出答案' : 'Submit answer',
     submitting: isZh ? '提交中...' : 'Submitting...',
     selectPrompt: isZh ? '請先完成所有題目。' : 'Please answer all questions first.',
-    choosePrompt: isZh ? '請先選擇一個選項。' : 'Please pick an option first.',
     doneTitle: isZh ? '測驗完成' : 'Assessment complete',
     doneNote: isZh ? '分數已成功儲存，已為你解鎖下一步。' : 'Score saved successfully. The next step is now unlocked.',
     score: isZh ? '本次正確率' : 'Attempt score',
@@ -58,15 +56,14 @@ export default function DomainAssessmentPage({
 
   const titleBlock = assessment[lang] ?? assessment.zh;
   const total = assessment.questions.length;
-  const answered = Object.keys(submittedResponses).length;
+  const answered = Object.keys(responses).length;
 
   const steps = useMemo(() => assessment.questions
     .map((question) => {
-      const selectedId = submittedResponses[question.id];
+      const selectedId = responses[question.id];
       if (!selectedId) return null;
       return mapQuestionToStep(question, selectedId);
-    })
-    .filter(Boolean), [assessment.questions, submittedResponses]);
+    }).filter(Boolean), [assessment.questions, responses]);
 
   const overall = buildOverallFromSteps(steps);
 
@@ -76,6 +73,7 @@ export default function DomainAssessmentPage({
       return;
     }
 
+    setShowExplanations(true);
     setSubmitting(true);
     setError('');
 
@@ -112,16 +110,6 @@ export default function DomainAssessmentPage({
     if (onSaved) {
       onSaved();
     }
-  };
-
-  const handleSubmitAnswer = (question) => {
-    const selectedId = responses[question.id];
-    if (!selectedId) {
-      setError(text.choosePrompt);
-      return;
-    }
-    setError('');
-    setSubmittedResponses((prev) => ({ ...prev, [question.id]: selectedId }));
   };
 
   return (
@@ -171,11 +159,9 @@ export default function DomainAssessmentPage({
 
           {assessment.questions.map((question, index) => {
             const selectedId = responses[question.id] ?? null;
-            const submittedId = submittedResponses[question.id] ?? null;
             const questionText = question.prompt?.[lang] ?? question.prompt?.zh;
             const explanation = question.explanation?.[lang] ?? question.explanation?.zh;
             const correctOption = question.options.find((option) => option.correct);
-            const isSubmitted = Boolean(submittedId);
 
             return (
               <motion.div
@@ -197,7 +183,7 @@ export default function DomainAssessmentPage({
                     return (
                       <button
                         key={option.id}
-                        disabled={isSubmitted}
+                        disabled={showExplanations}
                         onClick={() => setResponses((prev) => ({ ...prev, [question.id]: option.id }))}
                         className={optionClass}
                       >
@@ -212,15 +198,7 @@ export default function DomainAssessmentPage({
                   })}
                 </div>
 
-                {!isSubmitted && (
-                  <div className="mt-3 flex justify-end">
-                    <Button onClick={() => handleSubmitAnswer(question)} disabled={!selectedId}>
-                      {text.submitAnswer}
-                    </Button>
-                  </div>
-                )}
-
-                {isSubmitted && (
+                {showExplanations && (
                   <p className="mt-3 text-xs text-warm-500">
                     {isZh ? '正解：' : 'Correct: '}
                     {correctOption?.id} · {explanation}

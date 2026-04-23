@@ -9,6 +9,7 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
   const [mode, setMode] = useState('signIn');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [medicalRole, setMedicalRole] = useState('');
   const [message, setMessage] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [showTestAccounts, setShowTestAccounts] = useState(false);
@@ -18,6 +19,7 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
     { email: 'test101@example.com', password: '123456' },
     { email: 'test102@example.com', password: '123456' },
   ];
+  const roleOptions = ['主治醫師', '住院醫師', 'PGY', 'Clerk'];
 
   const text = {
     zh: {
@@ -31,6 +33,8 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
       emailPlaceholder: '請輸入 email',
       password: '密碼',
       passwordPlaceholder: '請輸入密碼',
+      role: '身分',
+      rolePlaceholder: '請選擇身分',
       failed: '操作失敗，請稍後再試。',
       processing: '處理中...',
       createAccount: '註冊並開始',
@@ -51,6 +55,8 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
       emailPlaceholder: 'Enter your email',
       password: 'Password',
       passwordPlaceholder: 'Enter your password',
+      role: 'Role',
+      rolePlaceholder: 'Select your role',
       failed: 'Something went wrong. Please try again later.',
       processing: 'Processing...',
       createAccount: 'Register and start',
@@ -71,7 +77,7 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
     setSubmitting(true);
     try {
       if (isSignUp) {
-        const result = await onSignUp({ email, password });
+        const result = await onSignUp({ email, password, medicalRole });
         if (result?.needsConfirmation) {
           setMessage(text.confirmation);
         }
@@ -198,6 +204,23 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
                 />
               </div>
             </label>
+
+            {isSignUp && (
+              <label className="block">
+                <span className="text-xs font-semibold text-warm-600">{text.role}</span>
+                <select
+                  required
+                  value={medicalRole}
+                  onChange={(event) => setMedicalRole(event.target.value)}
+                  className="mt-1.5 w-full rounded-xl border-2 border-warm-200 bg-white/45 px-3 py-2.5 text-sm text-warm-800 outline-none"
+                >
+                  <option value="">{text.rolePlaceholder}</option>
+                  {roleOptions.map((role) => (
+                    <option key={role} value={role}>{role}</option>
+                  ))}
+                </select>
+              </label>
+            )}
 
             <p className="rounded-xl border border-warm-200 bg-warm-50/60 px-4 py-3 text-xs text-warm-600 leading-relaxed">
               {text.note}

@@ -206,9 +206,17 @@ function computePairedTTest(beforeValues, afterValues) {
   };
 }
 
-export default function PerformancePage({ user, lang, onBack, onSignOut }) {
+export default function PerformancePage({
+  user,
+  lang,
+  onBack,
+  onSignOut,
+  showPersonalStats = true,
+  showPairedTest = false,
+}) {
   const { setLang } = useLanguage();
   const [attempts, setAttempts] = useState([]);
+  const [assessmentRows, setAssessmentRows] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const isZh = lang === 'zh';
@@ -227,9 +235,12 @@ export default function PerformancePage({ user, lang, onBack, onSignOut }) {
     noData: isZh ? '完成案例後，這裡會出現你的主題表現。' : 'Complete a case to see topic performance here.',
     pairedTitle: isZh ? '耳鼻喉三科前後測配對 t 檢定' : 'ENT pre/post paired t-test',
     pairedDescription: isZh
-      ? '輸入來源：耳科、鼻科、喉科各自「前測最高分」與「後測最高分」，自動排除缺失 pair。'
-      : 'Input source: highest pre-test and post-test scores from otology, rhinology, and laryngology. Missing pairs are excluded automatically.',
-    pairedInput: isZh ? '分析輸入（最高分）' : 'Analysis input (highest scores)',
+      ? '輸入來源：所有帳號在耳科、鼻科、喉科的前後測分數；同一使用者同一科別取前測最高分與後測最高分，自動排除缺失 pair。'
+      : 'Input source: all users\' pre/post domain assessment scores. Each user-domain pair uses highest pre-test and post-test scores. Missing pairs are excluded automatically.',
+    pairedInput: isZh ? '分析輸入' : 'Analysis input',
+    pairedPairCount: isZh ? '有效 pair' : 'Valid pairs',
+    pairedBeforeAverage: isZh ? 'before 平均' : 'Before average',
+    pairedAfterAverage: isZh ? 'after 平均' : 'After average',
     metric: isZh ? '指標' : 'Metric',
     value: isZh ? '數值' : 'Value',
     n: isZh ? '有效樣本數 n' : 'Effective sample size n',
@@ -256,18 +267,31 @@ export default function PerformancePage({ user, lang, onBack, onSignOut }) {
       setLoading(true);
       setError('');
 
-      const { data, error: queryError } = await supabase
-        .from('case_attempts')
-        .select('case_id, domain, pre_test_score, interactive_score, post_test_score')
-        .eq('user_id', user.id);
+      const [attemptsRes, assessmentsRes] = await Promise.all([
+        showPersonalStats
+          ? supabase
+            .from('case_attempts')
+            .select('case_id, domain, pre_test_score, interactive_score, post_test_score')
+            .eq('user_id', user.id)
+          : Promise.resolve({ data: [], error: null }),
+        showPairedTest
+          ? supabase
+            .from('domain_assessments')
+            .select('user_id, domain_id, assessment_type, score, completed_at')
+          : Promise.resolve({ data: [], error: null }),
+      ]);
 
       if (cancelled) return;
+
+      const queryError = attemptsRes.error || assessmentsRes.error;
 
       if (queryError) {
         setError(queryError.message);
         setAttempts([]);
+        setAssessmentRows([]);
       } else {
-        setAttempts(data ?? []);
+        setAttempts(attemptsRes.data ?? []);
+        setAssessmentRows(assessmentsRes.data ?? []);
       }
 
       setLoading(false);
@@ -278,7 +302,7 @@ export default function PerformancePage({ user, lang, onBack, onSignOut }) {
     return () => {
       cancelled = true;
     };
-  }, [user.id]);
+  }, [showPairedTest, showPersonalStats, user.id]);
 
   const topicStats = useMemo(() => domains.map((topic) => {
     const topicAttempts = attempts.filter((attempt) => (
@@ -302,42 +326,64 @@ export default function PerformancePage({ user, lang, onBack, onSignOut }) {
     .filter((score) => score !== null));
 
   const pairedTest = useMemo(() => {
-    const highestScoresByTopic = domains.map((topic) => {
-      const topicAttempts = attempts.filter((attempt) => (
-        attempt.domain === topic.id || topic.cases.some((caseItem) => caseItem.id === attempt.case_id)
+    const pairsByUserDomain = assessmentRows.reduce((acc, row) => {
+      if (!row.user_id || !row.domain_id || !Number.isFinite(row.score)) return acc;
+
+      const key = `${row.user_id}::${row.domain_id}`;
+      const current = acc[key] ?? {
+        userId: row.user_id,
+        topicId: row.domain_id,
+        before: null,
+        after: null,
+      };
+
+      if (row.assessment_type === 'preTest') {
+        current.before = current.before === null ? row.score : Math.max(current.before, row.score);
+      }
+
+      if (row.assessment_type === 'postTest') {
+        current.after = current.after === null ? row.score : Math.max(current.after, row.score);
+      }
+
+      acc[key] = current;
+      return acc;
+    }, {});
+
+    const pairs = Object.values(pairsByUserDomain);
+    const inputRows = domains.map((topic) => {
+      const topicPairs = pairs.filter((pair) => pair.topicId === topic.id);
+      const validPairs = topicPairs.filter((pair) => (
+        Number.isFinite(pair.before) && Number.isFinite(pair.after)
       ));
-      const preCandidates = topicAttempts
-        .map((attempt) => attempt.pre_test_score)
-        .filter((score) => Number.isFinite(score));
-      const postCandidates = topicAttempts
-        .map((attempt) => attempt.post_test_score)
-        .filter((score) => Number.isFinite(score));
+      const beforeValues = validPairs.map((pair) => pair.before);
+      const afterValues = validPairs.map((pair) => pair.after);
 
       return {
         topicId: topic.id,
         topicTitle: topic[lang].title,
-        before: preCandidates.length > 0 ? Math.max(...preCandidates) : null,
-        after: postCandidates.length > 0 ? Math.max(...postCandidates) : null,
+        pairCount: validPairs.length,
+        before: mean(beforeValues),
+        after: mean(afterValues),
       };
     });
 
-    const beforeValues = highestScoresByTopic.map((item) => item.before);
-    const afterValues = highestScoresByTopic.map((item) => item.after);
+    const beforeValues = pairs.map((item) => item.before);
+    const afterValues = pairs.map((item) => item.after);
 
     try {
       const result = computePairedTTest(beforeValues, afterValues);
       return {
-        inputRows: highestScoresByTopic,
+        inputRows,
         ...result,
         error: '',
       };
     } catch (computeError) {
       return {
-        inputRows: highestScoresByTopic,
+        inputRows,
         error: computeError.message,
       };
     }
-  }, [attempts, lang]);
+  }, [assessmentRows, lang]);
 
   return (
     <div
@@ -391,15 +437,17 @@ export default function PerformancePage({ user, lang, onBack, onSignOut }) {
             </p>
           </motion.div>
 
-          <div className="glass-card p-5 sm:p-6 mb-5 flex items-center justify-between gap-4">
-            <div>
-              <div className="text-sm font-semibold text-warm-500">{text.average}</div>
-              <div className="text-xs text-warm-400 mt-1">{user.email ?? user.id}</div>
+          {showPersonalStats && (
+            <div className="glass-card p-5 sm:p-6 mb-5 flex items-center justify-between gap-4">
+              <div>
+                <div className="text-sm font-semibold text-warm-500">{text.average}</div>
+                <div className="text-xs text-warm-400 mt-1">{user.email ?? user.id}</div>
+              </div>
+              <div className="text-4xl font-bold text-sage-600">
+                {overallAverage === null ? '--' : `${overallAverage}%`}
+              </div>
             </div>
-            <div className="text-4xl font-bold text-sage-600">
-              {overallAverage === null ? '--' : `${overallAverage}%`}
-            </div>
-          </div>
+          )}
 
           {loading && (
             <div className="glass-card p-5 text-sm font-semibold text-warm-600">{text.loading}</div>
@@ -413,52 +461,55 @@ export default function PerformancePage({ user, lang, onBack, onSignOut }) {
 
           {!loading && !error && (
             <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {topicStats.map((topic, index) => {
-                  const topicText = topic[lang];
+              {showPersonalStats && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {topicStats.map((topic, index) => {
+                    const topicText = topic[lang];
 
-                  return (
-                    <motion.div
-                      key={topic.id}
-                      initial={{ opacity: 0, y: 18 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.45, delay: index * 0.05 }}
-                      className="glass-card p-5"
-                    >
-                      <div className="flex items-start justify-between gap-3">
-                        <div>
-                          <h2 className="text-lg font-bold text-warm-900">{topicText.title}</h2>
-                          <p className="text-xs text-warm-400 mt-1">{topicText.subtitle}</p>
-                          <p className="text-xs text-warm-400 mt-2">
-                            {text.attempts}：{topic.attempts}
-                          </p>
+                    return (
+                      <motion.div
+                        key={topic.id}
+                        initial={{ opacity: 0, y: 18 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.45, delay: index * 0.05 }}
+                        className="glass-card p-5"
+                      >
+                        <div className="flex items-start justify-between gap-3">
+                          <div>
+                            <h2 className="text-lg font-bold text-warm-900">{topicText.title}</h2>
+                            <p className="text-xs text-warm-400 mt-1">{topicText.subtitle}</p>
+                            <p className="text-xs text-warm-400 mt-2">
+                              {text.attempts}：{topic.attempts}
+                            </p>
+                          </div>
+                          <span className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${colorMap[topic.color]}`}>
+                            {topic.score === null ? text.noRecord : `${topic.score}%`}
+                          </span>
                         </div>
-                        <span className={`text-xs font-semibold px-2.5 py-1 rounded-full border ${colorMap[topic.color]}`}>
-                          {topic.score === null ? text.noRecord : `${topic.score}%`}
-                        </span>
-                      </div>
 
-                      <div className="mt-5 h-2 rounded-full bg-warm-100 overflow-hidden">
-                        <div
-                          className="h-full rounded-full bg-sage-500 transition-all duration-500"
-                          style={{ width: `${topic.score ?? 0}%` }}
-                        />
-                      </div>
+                        <div className="mt-5 h-2 rounded-full bg-warm-100 overflow-hidden">
+                          <div
+                            className="h-full rounded-full bg-sage-500 transition-all duration-500"
+                            style={{ width: `${topic.score ?? 0}%` }}
+                          />
+                        </div>
 
-                      {topic.score !== null ? (
-                        <p className="mt-4 text-xs text-sage-600 font-semibold flex items-center gap-1">
-                          <CheckCircle2 className="w-3.5 h-3.5" />
-                          {text.average} {topic.score}%
-                        </p>
-                      ) : (
-                        <p className="mt-4 text-xs text-warm-400">{text.noData}</p>
-                      )}
-                    </motion.div>
-                  );
-                })}
-              </div>
+                        {topic.score !== null ? (
+                          <p className="mt-4 text-xs text-sage-600 font-semibold flex items-center gap-1">
+                            <CheckCircle2 className="w-3.5 h-3.5" />
+                            {text.average} {topic.score}%
+                          </p>
+                        ) : (
+                          <p className="mt-4 text-xs text-warm-400">{text.noData}</p>
+                        )}
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              )}
 
-              <motion.div
+              {showPairedTest && (
+                <motion.div
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.15 }}
@@ -472,16 +523,18 @@ export default function PerformancePage({ user, lang, onBack, onSignOut }) {
                     <thead>
                       <tr className="text-left text-warm-500 border-b border-warm-200">
                         <th className="py-2 pr-3">{text.pairedInput}</th>
-                        <th className="py-2 pr-3">before</th>
-                        <th className="py-2">after</th>
+                        <th className="py-2 pr-3">{text.pairedPairCount}</th>
+                        <th className="py-2 pr-3">{text.pairedBeforeAverage}</th>
+                        <th className="py-2">{text.pairedAfterAverage}</th>
                       </tr>
                     </thead>
                     <tbody>
                       {pairedTest.inputRows.map((row) => (
                         <tr key={row.topicId} className="border-b border-warm-100 text-warm-700">
                           <td className="py-2 pr-3 font-semibold">{row.topicTitle}</td>
-                          <td className="py-2 pr-3">{row.before ?? '--'}</td>
-                          <td className="py-2">{row.after ?? '--'}</td>
+                          <td className="py-2 pr-3">{row.pairCount}</td>
+                          <td className="py-2 pr-3">{formatNumber(row.before)}</td>
+                          <td className="py-2">{formatNumber(row.after)}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -556,7 +609,8 @@ export default function PerformancePage({ user, lang, onBack, onSignOut }) {
                     )}
                   </div>
                 )}
-              </motion.div>
+                </motion.div>
+              )}
             </>
           )}
         </div>

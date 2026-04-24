@@ -81,7 +81,6 @@
     {
       "title": "Step 4/6: Primary Medical Therapy and Monitoring",
       "scenario": "The patient is admitted. You decide to give her a 1-week course of intravenous or oral steroid therapy.",
-      "media": "Load image: Prednisolone bottle with blood pressure and glucose monitors",
       "question": "What is the most widely accepted initial steroid dose for ISSNHL, and what should be closely monitored in this 70-year-old patient with hypertension?",
       "options": [
         {
@@ -124,7 +123,7 @@
     },
     {
       "title": "Step 6/6: Salvage Therapy: Intratympanic Steroid",
-      "scenario": "After systemic steroids and 5 sessions of hyperbaric oxygen therapy, the patient has only a partial response and her right-sided hearing remains very poor. You suggest intratympanic steroid injection to the family.",
+      "scenario": "After systemic steroids and 5 sessions of hyperbaric oxygen therapy, the patient has only a poor response and her right-sided hearing remains very poor. You suggest intratympanic steroid injection to the family.",
       "media": "Load image: Microscopic transtympanic steroid injection through the tympanic membrane",
       "question": "For intratympanic steroid as salvage therapy, what are its major advantage and main complication?",
       "options": [

@@ -80,7 +80,7 @@
     },
     {
       "title": "Step 4/6: Imaging & Staging",
-      "scenario": "You need accurate AJCC 8th edition staging for this 40-year-old patient to plan intensity-modulated radiation therapy (IMRT). You must evaluate whether the tumor invades the parapharyngeal space, cranial nerves, or bone marrow.",
+      "scenario": "You need accurate AJCC 9th edition staging for this 40-year-old patient to plan intensity-modulated radiation therapy (IMRT). You must evaluate whether the tumor invades the parapharyngeal space, cranial nerves, or bone marrow.",
       "media": "Load image: axial MRI showing tumor invasion of the parapharyngeal space",
       "question": "To precisely define the local soft tissue extent of tumor invasion and assist 3D radiotherapy planning, which imaging modality is the gold standard and first choice for local staging?",
       "options": [
@@ -102,25 +102,25 @@
     },
     {
       "title": "Step 5/6: Primary Treatment Strategy",
-      "scenario": "Based on imaging and pathology, the patient is staged as Stage III (T2N2M0), with parapharyngeal space invasion and bilateral cervical lymph node metastases.",
+      "scenario": "The pathology confirmed that the 40-year-old male is suffering from non-keratinizing nasopharyngeal carcinoma (NPC). Imaging reveals tumor invasion into the parapharyngeal space, accompanied by bilateral cervical lymph node metastasis (cT2N2M0).\n\nUnder the latest AJCC 9th Edition (the current 2026 standard), due to the revision of the staging system, this patient has been reclassified from the old Stage III to Stage II. However, his pre-treatment EBV DNA level is elevated (> 4000 copies/ml). You are preparing to explain the treatment plan, which sits at a \"precision stratification\" turning point, to the family.",
       "media": "Load chart: IMRT dose-painting distribution for the nasopharynx and neck",
-      "question": "For non-metastatic but advanced Stage III nasopharyngeal carcinoma, what is the internationally accepted gold standard primary treatment?",
+      "question": "In the 2026 clinical consensus, the treatment for Stage II nasopharyngeal carcinoma (NPC) depends on \"Risk Stratification.\" For this patient with cT2N2M0 (Stage II) and an elevated EBV DNA level, which of the following is currently recognized as the most appropriate \"Standard Primary Treatment\"?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Radical nasopharyngectomy plus bilateral neck dissection."
+          "text": "(A) To reduce toxicity and maintain quality of life, treatment should be universally de-escalated to Intensity-Modulated Radiation Therapy (IMRT) alone."
         },
         {
           "id": "B",
-          "text": "(B) Induction chemotherapy alone."
+          "text": "(B) Extensive endoscopic nasopharyngeal tumor resection, combined with bilateral neck dissection."
         },
         {
           "id": "C",
-          "text": "(C) Concurrent chemoradiotherapy (CCRT), commonly with cisplatin as the preferred chemotherapy.",
+          "text": "(C) Classified as a medium-to-high risk group, the standard regimen is concurrent chemoradiotherapy (CCRT), with the consideration of adding induction chemotherapy.",
           "correct": true
         }
       ],
-      "feedback": "Correct answer: C\n\nTreatment consensus: NPC is highly radiosensitive, and radiotherapy is first-line treatment. However, for high-risk Stage II and Stage III/IV disease, radiotherapy alone is insufficient. The gold standard is concurrent chemoradiotherapy (CCRT), most commonly using cisplatin with radiation.\n\nSalvage surgery is usually reserved for local recurrence after failed radiotherapy."
+      "feedback": "Correct answer: C\n\nIn the AJCC 9th Edition (2026), Stage II treatment has become more precise.\n\nIntermediate to High Risk Group: As in this case with N2 lymph node metastasis or high EBV DNA, CCRT (IMRT + Cisplatin) remains the absolute cornerstone, and induction chemotherapy (IC) is often considered to treat micrometastases.\n\nLow Risk Group: Only patients with T1-2, N1, and low EBV DNA are considered for \"de-escalation\" (RT alone) to reduce blood and gastrointestinal toxicity. Never assume all new Stage II cases are low-risk and hastily remove chemotherapy!"
     },
     {
       "title": "Step 6/6: Late Fatal Complications",

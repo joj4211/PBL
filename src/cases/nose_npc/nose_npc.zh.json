@@ -80,7 +80,7 @@
     },
     {
       "title": "Step 4/6: 影像學分期首選 (Imaging & Staging)",
-      "scenario": "你需要為這名 40 歲患者進行精準的 AJCC 第八版癌症分期，以制定後續的放射線治療計畫 (IMRT)。你必須評估腫瘤是否侵犯咽旁間隙、顱神經或骨髓。",
+      "scenario": "你需要為這名 40 歲患者進行精準的 AJCC 第九版癌症分期，以制定後續的放射線治療計畫 (IMRT)。你必須評估腫瘤是否侵犯咽旁間隙、顱神經或骨髓。",
       "media": "載入圖片：MRI 橫斷切面顯示腫瘤侵犯咽旁間隙",
       "question": "為了精確界定腫瘤侵犯的軟組織範圍，並輔助 3D 放射治療計畫的繪製，下列哪一種影像學檢查是「局部影像分期」的黃金標準 (首選)？",
       "options": [
@@ -102,25 +102,25 @@
     },
     {
       "title": "Step 5/6: 核心治療策略 (Primary Treatment Strategy)",
-      "scenario": "綜合影像與病理，患者被判定為第三期 (Stage III: T2N2M0)，因腫瘤已侵犯咽旁間隙且伴隨雙側頸部淋巴結轉移。",
+      "scenario": "病理切片證實該名 40 歲男性罹患「非角化型鼻咽癌 (Non-keratinizing NPC)」。影像學顯示腫瘤侵犯咽旁間隙，並伴隨雙側頸部淋巴結轉移 (cT2N2M0)。 根據最新的 AJCC 第九版 (2026年現行標準)，由於分期系統的改版，此病患從舊版的 Stage III 被重新歸類為 Stage II。然而，他的治療前 EBV DNA 數值偏高 (> 4000 copies/ml)。你準備向家屬解釋這個處於「精準分層」轉折點的治療計畫。",
       "media": "載入圖表：IMRT 鼻咽部與頸部輻射劑量分佈圖 (Dose-painting)",
-      "question": "針對無遠端轉移但屬於晚期 (Stage III) 的鼻咽癌，現今國際公認的標準主要治療 (Gold Standard Primary Treatment) 為何？",
+      "question": "在 2026 年的臨床共識中，Stage II 鼻咽癌的治療取決於「風險分層 (Risk Stratification)」。面對這名 cT2N2M0 (Stage II) 且 EBV DNA 偏高的病患，下列何者是目前公認最適當的「標準主要治療」？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 根除性鼻咽切除術加上雙側頸部淋巴廓清術。"
+          "text": "(A) 為了減毒與維持生活品質，應全面降階 (De-escalation) 為單純強度調控放射治療 (IMRT alone)。"
         },
         {
           "id": "B",
-          "text": "(B) 單獨給予誘導性化學治療 (Induction chemotherapy)。"
+          "text": "(B) 廣泛性內視鏡鼻咽腫瘤切除手術，合併雙側頸部淋巴廓清術。"
         },
         {
           "id": "C",
-          "text": "(C) 同步化學放射治療 (Concurrent chemoradiotherapy, CCRT)，常以 Cisplatin 作為化療首選。",
+          "text": "(C) 屬於中高風險組，標準方案為同步化學放射線治療 (CCRT)，並可考慮加入誘導化療 (Induction Chemotherapy)。",
           "correct": true
         }
       ],
-      "feedback": "正確答案：C\n\n治療共識： 鼻咽癌對放射線高度敏感，放療是第一線治療。然而對於 High-risk Stage II 及 Stage III、IV 期的較晚期疾病，單獨放療不夠，黃金標準是「同步化學放射治療 (CCRT)」，最常與放療同時使用的化療藥物為 Cisplatin\n\n。救援性外科手術 (Salvage surgery) 通常只保留給放療失敗的局部復發患者\n\n。"
+      "feedback": "正確答案：C\n\n在 AJCC 第九版 (2026) 中，Stage II 的治療已走向精準化。\n中高風險組 (Intermediate to High Risk)：如本例的 N2 淋巴結轉移或 高 EBV DNA，CCRT (IMRT + Cisplatin) 仍是絕對的標準基石，且常會考慮加入誘導化療 (IC) 以處理微小轉移。\n低風險組 (Low Risk)：只有在 T1-2, N1 且 低 EBV DNA 的病患，才考慮「降階治療 (De-escalation)」為單純放療 (RT alone) 以減少血液與腸胃毒性。絕不可將所有新版 Stage II 皆視為低風險而貿然減去化療！\n\n。"
     },
     {
       "title": "Step 6/6: 晚期放射線致命併發症 (Late Fatal Complications)",

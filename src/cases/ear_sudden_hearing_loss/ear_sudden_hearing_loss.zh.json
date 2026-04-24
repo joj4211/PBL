@@ -80,8 +80,7 @@
     },
     {
       "title": "Step 4/6: 第一線藥物治療與監測 (Primary Medical Therapy)",
-      "scenario": "患者辦理住院。你決定給予她連續一週的靜脈注射/口服類固醇治療 (2026/01/13-01/20)。",
-      "media": "載入圖片：Prednisolone 藥物瓶與血壓/血糖監測器",
+      "scenario": "患者辦理住院。你決定給予她連續一週的靜脈注射/口服類固醇治療。",
       "question": "目前對 ISSNHL 最廣泛接受的類固醇起始建議劑量為何？且在使用於這位 70 歲有高血壓 (158/77 mmHg) 的婆婆身上時，應特別監控什麼？",
       "options": [
         {
@@ -124,7 +123,7 @@
     },
     {
       "title": "Step 6/6: 中耳內注射救援治療 (Salvage Therapy: IT Steroid)",
-      "scenario": "經過全身性類固醇與 5 次高壓氧治療後，患者只有「部分恢復 (partial response)」，右耳聽力依舊極差。此時，你向家屬提議進行「中耳腔內類固醇注射 (Intratympanic, IT steroid)」。",
+      "scenario": "經過全身性類固醇與 5 次高壓氧治療後，患者只有「部分恢復 (poor response)」，右耳聽力依舊極差。此時，你向家屬提議進行「中耳腔內類固醇注射 (Intratympanic, IT steroid)」。",
       "media": "載入圖片：顯微鏡下將細針穿透耳膜 (Transtympanic injection) 注入類固醇的示意圖",
       "question": "關於使用 IT steroid 作為救援治療 (Salvage treatment)，其最大的優勢與最主要的併發症分別為何？",
       "options": [

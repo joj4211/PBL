@@ -1,0 +1,148 @@
+{
+  "id": "ear_spinning_world_acute_vestibular_neuritis",
+  "title": "The Spinning World: An Emergency Department Challenge",
+  "subtitle": "Acute Vestibular Neuritis",
+  "description": "Central stroke exclusion in acute vertigo, HINTS interpretation, audiometric differentiation, caloric testing, and rehabilitation planning.",
+  "estimatedTime": "20-30 min",
+  "difficulty": "Intermediate",
+  "tags": [
+    "Otology",
+    "Emergency",
+    "Vestibular Neuritis",
+    "HINTS"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: History Taking & Neurologic Landmines",
+      "scenario": "A 42-year-old woman is brought to the emergency department with sudden, severe, and constant vertigo for the past 12 hours. She has intense nausea and has vomited twice. She also had upper respiratory infection symptoms in the past week. To rapidly exclude a dangerous central stroke, you must ask key essential negative findings.",
+      "media": "Load image: emergency physician taking a focused history",
+      "question": "To rule out possible brainstem involvement, which question is the single most important one to ask right now?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) \"Have you ever taken any ototoxic antibiotics in the past?\""
+        },
+        {
+          "id": "B",
+          "text": "(B) \"Do you currently have any slurred speech or difficulty swallowing?\"",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) \"When you change head position, does the vertigo last only a few seconds?\""
+        }
+      ],
+      "feedback": "Correct answer: B\n\nClinical reasoning: In emergency care for acute vertigo, the first priority is excluding brainstem stroke. Asking about focal neurologic symptoms such as dysarthria, swallowing difficulty, or limb weakness/numbness is a life-saving check for essential negative findings."
+    },
+    {
+      "title": "Step 2/6: Nystagmus Interpretation & Alexander's Law",
+      "scenario": "The patient is alert and has no speech or swallowing problems. You begin the HINTS exam (Head Impulse, Nystagmus, Test of Skew). You observe spontaneous left-beating horizontal-torsional nystagmus.",
+      "media": "Load video: spontaneous left-beating nystagmus",
+      "question": "Based on the principle that the slow phase points toward the lesion and the fast phase toward the healthy side, the lesion is likely on the right. According to Alexander's Law, when will the nystagmus intensity increase?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Looking to the left",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) Looking to the right"
+        },
+        {
+          "id": "C",
+          "text": "(C) Looking up"
+        }
+      ],
+      "feedback": "Correct answer: A\n\nClinical reasoning: By Alexander's Law, nystagmus intensifies when gaze is directed toward the fast phase. In this case, the nystagmus beats left (fast phase left), suggesting a right-sided lesion, and becomes stronger with left gaze."
+    },
+    {
+      "title": "Step 3/6: Reverse Thinking in the Head Impulse Test",
+      "scenario": "You then perform the Head Impulse Test (HIT). When you rapidly turn her head to the right, her eyes move with the head first, followed by an obvious catch-up saccade back to center.",
+      "media": "Load image: HIT diagram showing a catch-up saccade",
+      "question": "In this patient with acute persistent vertigo, what major clinical implication does this abnormal (positive) HIT finding have?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) It strongly suggests a brainstem or cerebellar stroke."
+        },
+        {
+          "id": "B",
+          "text": "(B) It confirms benign paroxysmal positional vertigo (BPPV)."
+        },
+        {
+          "id": "C",
+          "text": "(C) It strongly supports a peripheral vestibular etiology rather than a central stroke.",
+          "correct": true
+        }
+      ],
+      "feedback": "Correct answer: C\n\nHINTS pearl: In acute persistent vertigo, an abnormal unilateral HIT with a catch-up saccade indicates ipsilateral peripheral vestibular hypofunction, supporting a benign peripheral lesion such as vestibular neuritis. In contrast, a completely normal HIT in this setting strongly raises concern for a dangerous central stroke."
+    },
+    {
+      "title": "Step 4/6: Audiometry & Differential Diagnosis",
+      "scenario": "After initial stabilization in the emergency department, you arrange pure-tone audiometry (PTA). The audiogram shows completely normal hearing in both ears.",
+      "media": "Load image: PTA showing normal bilateral hearing",
+      "question": "This key negative finding of no hearing loss helps distinguish this case from which other peripheral ear disorder that can also cause acute vertigo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Vestibular migraine"
+        },
+        {
+          "id": "B",
+          "text": "(B) Benign paroxysmal positional vertigo (BPPV)"
+        },
+        {
+          "id": "C",
+          "text": "(C) Labyrinthitis",
+          "correct": true
+        }
+      ],
+      "feedback": "Correct answer: C\n\nDiagnostic key: Labyrinthitis and vestibular neuritis can appear very similar, but the major distinction is hearing loss. If this patient had ipsilateral hearing loss, the diagnosis would shift toward labyrinthitis. Normal hearing effectively excludes labyrinthitis."
+    },
+    {
+      "title": "Step 5/6: Caloric Testing & Canal Paresis",
+      "scenario": "To further confirm the diagnosis and quantify vestibular impairment, you arrange a caloric test. The result shows markedly reduced nystagmus response when the right ear is irrigated.",
+      "media": "Load image: ENG/VNG report from caloric testing",
+      "question": "When interpreting a caloric test report, which value should be calculated, and if it is greater than 25%, indicates significant right vestibular hypofunction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Fixation Index (FI)"
+        },
+        {
+          "id": "B",
+          "text": "(B) Directional Preponderance (DP)"
+        },
+        {
+          "id": "C",
+          "text": "(C) Canal Paresis (CP)",
+          "correct": true
+        }
+      ],
+      "feedback": "Correct answer: C\n\nInterpretation: Caloric testing primarily compares horizontal semicircular canal function between both sides. A Canal Paresis (CP) value over 25% indicates clear unilateral vestibular hypofunction on that side."
+    },
+    {
+      "title": "Step 6/6: Management Decisions & Vestibular Rehabilitation",
+      "scenario": "The diagnosis is confirmed as right acute vestibular neuritis. You are discussing immediate treatment and long-term recovery planning with the patient.",
+      "media": "Load image: patient performing vestibular rehabilitation therapy (VRT)",
+      "question": "Regarding immediate care and long-term recovery planning for vestibular neuritis, which medical decision is most appropriate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Perform an immediate Epley maneuver and prescribe prolonged absolute bed rest."
+        },
+        {
+          "id": "B",
+          "text": "(B) Continue long-term vestibular suppressants until vertigo completely disappears."
+        },
+        {
+          "id": "C",
+          "text": "(C) Use high-dose corticosteroids in the acute phase, and start early VRT once symptoms improve.",
+          "correct": true
+        }
+      ],
+      "feedback": "Correct answer: C\n\nManagement consensus: High-dose corticosteroids in the acute phase may support neural recovery. Early vestibular rehabilitation therapy (VRT) is strongly recommended to promote central compensation. Absolute bed rest or prolonged vestibular suppressants can hinder central adaptation. This condition is not otolith displacement, so Epley maneuver is ineffective."
+    }
+  ]
+}

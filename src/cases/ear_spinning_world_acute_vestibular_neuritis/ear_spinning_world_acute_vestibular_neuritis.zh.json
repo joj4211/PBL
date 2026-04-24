@@ -1,0 +1,148 @@
+{
+  "id": "ear_spinning_world_acute_vestibular_neuritis",
+  "title": "天旋地轉的急診挑戰",
+  "subtitle": "急性前庭神經炎 (The Spinning World: Acute Vestibular Neuritis)",
+  "description": "急性眩暈中的中樞排除、HINTS 判讀、聽力鑑別、卡路里測試與復健決策。",
+  "estimatedTime": "20-30 分鐘",
+  "difficulty": "中階",
+  "tags": [
+    "耳科",
+    "急診",
+    "前庭神經炎",
+    "HINTS"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: 病史詢問與神經學地雷 (History & Essential Negative Findings)",
+      "scenario": "一位 42 歲女性被送到急診室，主訴突發性、嚴重且持續的「天旋地轉 (constant vertigo)」，發作至今已 12 小時。她感到強烈的噁心並吐了兩次。她最近一週有上呼吸道感染 (URI) 的症狀。為了快速排除危險的中樞型中風 (Stroke)，你必須詢問關鍵的「陰性發現 (Essential Negative Findings)」。",
+      "media": "載入圖片：急診醫師詢問病史的示意圖",
+      "question": "為了排除腦幹 (Brainstem) 受到侵犯的可能性，下列哪一個問題是你此時「最必須」詢問病患的？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 「你以前有吃過任何耳毒性抗生素嗎？」"
+        },
+        {
+          "id": "B",
+          "text": "(B) 「你目前有任何說話不清楚，或是吞嚥困難的狀況嗎？」",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 「當你改變頭部姿勢時，眩暈會只持續幾秒鐘嗎？」"
+        }
+      ],
+      "feedback": "正確答案：B\n\n臨床解析： 在急診面對急性眩暈，首要任務是排除腦幹中風。詢問是否有構音障礙 (difficulty speaking)、吞嚥困難 (swallowing difficulty) 或肢體無力/麻木等局部神經學症狀，是確認 \"Essential Negative Findings\" 的保命關鍵。"
+    },
+    {
+      "title": "Step 2/6: 眼震判讀與亞歷山大定律 (Nystagmus & Alexander's Law)",
+      "scenario": "病患意識清楚，無任何說話或吞嚥困難。你開始進行 HINTS 檢查 (Head Impulse, Nystagmus, Test of Skew)。你觀察到她有自發性的「向左打的水平扭轉型眼震 (Left-beating horizontal-torsional nystagmus)」。",
+      "media": "載入影片：向左打的自發性眼震 (Left-beating nystagmus)",
+      "question": "根據眼震慢相朝向病灶、快相朝向健康側的原則，這名病患的病灶可能在「右側」。此時若根據「亞歷山大定律 (Alexander’s Law)」，當病患眼睛看向哪一個方向時，眼震的強度會增加？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 向左看 (Looking to the left)",
+          "correct": true
+        },
+        {
+          "id": "B",
+          "text": "(B) 向右看 (Looking to the right)"
+        },
+        {
+          "id": "C",
+          "text": "(C) 向上看 (Looking up)"
+        }
+      ],
+      "feedback": "正確答案：A\n\n臨床解析： 根據亞歷山大定律 (Alexander's Law)，當眼睛注視著「眼震快相 (Fast Phase)」的方向時，眼震強度會增加。本例眼震向左打 (快相向左)，代表病灶在右側，且向左看時眼震會變大。"
+    },
+    {
+      "title": "Step 3/6: 頭部脈衝測試的逆向思考 (The Head Impulse Test)",
+      "scenario": "你接著對她執行「頭部脈衝測試 (Head Impulse Test, HIT)」。當你快速將她的頭轉向右側時，她的眼睛跟著頭部轉動，接著出現了一個明顯的「校正性眼球跳動 (catch-up saccade)」才回到中心。",
+      "media": "載入圖片：執行 Head Impulse Test 時出現 Catch-up saccade 的圖解",
+      "question": "在評估這位急性持續性眩暈的病患時，觀察到這個「異常的 (Positive)」頭部脈衝測試結果，具有什麼重大的臨床意義？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 強烈暗示病患發生了腦幹或小腦中風。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 確認這是一起良性陣發性姿勢性眩暈 (BPPV)。"
+        },
+        {
+          "id": "C",
+          "text": "(C) 強烈支持「周邊性前庭神經炎 (Peripheral etiology)」，而非中樞型中風。",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：C\n\n臨床地雷 (HINTS is King)： 在急性持續眩暈中，單側頭部脈衝測試 (HIT) 異常（出現 catch-up saccade）代表同側周邊前庭功能低下，支持良性的周邊病灶 (如前庭神經炎)。相反地，如果 HIT 呈現「完全正常」，反而強烈暗示這是危險的中樞型中風！"
+    },
+    {
+      "title": "Step 4/6: 聽力學與鑑別診斷 (Audiometry & Labyrinthitis)",
+      "scenario": "經過急診初步穩定後，你為她安排了純音聽力檢查 (PTA)。聽力圖顯示她的雙耳聽力「完全正常 (within normal limits)」。",
+      "media": "載入圖片：顯示雙耳正常聽力的純音聽力圖 (PTA)",
+      "question": "「沒有聽力喪失 (No hearing loss)」這個關鍵的陰性發現，能夠將此病例與下列哪一種同樣會產生急性眩暈的周邊性耳疾區分開來？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 前庭性偏頭痛 (Vestibular migraine)"
+        },
+        {
+          "id": "B",
+          "text": "(B) 良性陣發性姿勢性眩暈 (BPPV)"
+        },
+        {
+          "id": "C",
+          "text": "(C) 內耳迷路炎 (Labyrinthitis)",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：C\n\n診斷關鍵： 內耳迷路炎 (Labyrinthitis) 與前庭神經炎 (Vestibular Neuritis) 的症狀極為相似，但最大的區別在於：如果該名女性同時伴隨了「患側聽力喪失 (hearing loss)」，診斷就會轉向內耳迷路炎。正常聽力成功排除了迷路炎。"
+    },
+    {
+      "title": "Step 5/6: 卡路里測試與功能低下 (Caloric Test & Canal Paresis)",
+      "scenario": "為了進一步確診並量化前庭功能的受損程度，你安排了「卡路里測試 (Caloric Test)」。檢查結果發現，當對右耳進行灌注刺激時，眼震反應顯著減弱。",
+      "media": "載入圖片：Caloric Test 的眼震電圖 (ENG/VNG) 紀錄報告",
+      "question": "在判讀卡路里測試報告時，醫師必須計算下列哪一項數值，若該數值大於 25%，即代表右側前庭神經出現顯著的功能低下 (Vestibular hypofunction)？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 視覺抑制指數 (Fixation Index, FI)"
+        },
+        {
+          "id": "B",
+          "text": "(B) 方向優勢 (Directional Preponderance, DP)"
+        },
+        {
+          "id": "C",
+          "text": "(C) 半規管麻痺指數 (Canal Paresis, CP)",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：C\n\n判讀解析： 卡路里測試主要用來比較兩側水平半規管的功能。若計算出的半規管麻痺指數 (Canal Paresis, CP) 大於 25%，即證明該側存在明顯的單側前庭功能低下 (Unilateral vestibular hypofunction)。"
+    },
+    {
+      "title": "Step 6/6: 治療決策與前庭復健 (Management & Rehabilitation)",
+      "scenario": "確診為「右側急性前庭神經炎 (Acute Vestibular Neuritis)」。你正在與病患討論接下來的藥物治療與長期復健計畫。",
+      "media": "載入圖片：病患進行前庭復健運動 (VRT) 的示意圖",
+      "question": "關於前庭神經炎的立即性處置與長期復原計畫，下列哪一個醫療決策是最正確的？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 立即執行耳石復位術 (Epley Maneuver)，並要求長期絕對臥床休息 (Absolute bed rest)。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 長期開立前庭抑制劑 (Vestibular suppressants)，直到眩暈完全消失為止。"
+        },
+        {
+          "id": "C",
+          "text": "(C) 急性期給予高劑量類固醇，症狀緩解後應盡早開始前庭復健治療 (Early VRT)。",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：C\n\n治療共識： 急性期給予高劑量類固醇 (High-dose Corticosteroids) 能幫助神經恢復；同時強烈建議盡早開始前庭復健治療 (Early Vestibular Rehabilitation Therapy, VRT) 以促進大腦的中樞代償。絕對臥床 (Absolute bed rest) 或長期使用前庭抑制劑反而會阻礙中樞神經系統的代償適應！另外，此病並非耳石脫落，所以 Epley Maneuver 是無效的。"
+    }
+  ]
+}

@@ -9,6 +9,8 @@ export const domains = [
       { id: 'ear_menieres_disease', zh: '天旋地轉與低鳴的浪潮', en: 'The Waves of Vertigo' },
       { id: 'ear_sudden_hearing_loss', zh: '世界突然安靜', en: 'The Silent World' },
       { id: 'ear_pulsatile_tinnitus', zh: '搏動的雜訊與耳悶之謎', en: 'The Pulsating Noise & Blocked Ears' },
+      { id: 'ear_spinning_world_acute_vestibular_neuritis', zh: '天旋地轉的急診挑戰', en: 'The Spinning World: ED Challenge' },
+      { id: 'ear_cholesteatoma_silent_erosion', zh: '膽脂瘤', en: 'Cholesteatoma: Silent Erosion' },
     ],
   },
   {

@@ -6,6 +6,10 @@ import earSuddenHearingLossZh from './ear_sudden_hearing_loss/ear_sudden_hearing
 import earSuddenHearingLossEn from './ear_sudden_hearing_loss/ear_sudden_hearing_loss.en.json';
 import earPulsatileTinnitusZh from './ear_pulsatile_tinnitus/ear_pulsatile_tinnitus.zh.json';
 import earPulsatileTinnitusEn from './ear_pulsatile_tinnitus/ear_pulsatile_tinnitus.en.json';
+import earSpinningWorldAcuteVestibularNeuritisZh from './ear_spinning_world_acute_vestibular_neuritis/ear_spinning_world_acute_vestibular_neuritis.zh.json';
+import earSpinningWorldAcuteVestibularNeuritisEn from './ear_spinning_world_acute_vestibular_neuritis/ear_spinning_world_acute_vestibular_neuritis.en.json';
+import earCholesteatomaSilentErosionZh from './ear_cholesteatoma_silent_erosion/ear_cholesteatoma_silent_erosion.zh.json';
+import earCholesteatomaSilentErosionEn from './ear_cholesteatoma_silent_erosion/ear_cholesteatoma_silent_erosion.en.json';
 import noseAllergicRhinitisZh from './nose_allergic_rhinitis/nose_allergic_rhinitis.zh.json';
 import noseAllergicRhinitisEn from './nose_allergic_rhinitis/nose_allergic_rhinitis.en.json';
 import noseEcrswnpZh from './nose_ecrswnp/nose_ecrswnp.zh.json';
@@ -34,6 +38,8 @@ export const caseIds = [
   'ear_menieres_disease',
   'ear_sudden_hearing_loss',
   'ear_pulsatile_tinnitus',
+  'ear_spinning_world_acute_vestibular_neuritis',
+  'ear_cholesteatoma_silent_erosion',
   'nose_allergic_rhinitis',
   'nose_ecrswnp',
   'nose_epistaxis_hht',
@@ -52,6 +58,8 @@ const contentByLang = {
     ear_menieres_disease: earMenieresDiseaseZh,
     ear_sudden_hearing_loss: earSuddenHearingLossZh,
     ear_pulsatile_tinnitus: earPulsatileTinnitusZh,
+    ear_spinning_world_acute_vestibular_neuritis: earSpinningWorldAcuteVestibularNeuritisZh,
+    ear_cholesteatoma_silent_erosion: earCholesteatomaSilentErosionZh,
     nose_allergic_rhinitis: noseAllergicRhinitisZh,
     nose_ecrswnp: noseEcrswnpZh,
     nose_epistaxis_hht: noseEpistaxisHhtZh,
@@ -68,6 +76,8 @@ const contentByLang = {
     ear_menieres_disease: earMenieresDiseaseEn,
     ear_sudden_hearing_loss: earSuddenHearingLossEn,
     ear_pulsatile_tinnitus: earPulsatileTinnitusEn,
+    ear_spinning_world_acute_vestibular_neuritis: earSpinningWorldAcuteVestibularNeuritisEn,
+    ear_cholesteatoma_silent_erosion: earCholesteatomaSilentErosionEn,
     nose_allergic_rhinitis: noseAllergicRhinitisEn,
     nose_ecrswnp: noseEcrswnpEn,
     nose_epistaxis_hht: noseEpistaxisHhtEn,

@@ -1,0 +1,172 @@
+{
+  "id": "ear_cholesteatoma_silent_erosion",
+  "title": "Cholesteatoma",
+  "subtitle": "The Silent Bone-Eroding Crisis in the Middle Ear",
+  "description": "Red-flag screening in chronic middle ear disease, otoendoscopic and audiologic interpretation, HRCT localization, bone erosion pathophysiology, and surgical decisions.",
+  "estimatedTime": "20-30 min",
+  "difficulty": "Intermediate-Advanced",
+  "tags": [
+    "Otology",
+    "Cholesteatoma",
+    "Middle Ear",
+    "Mastoid Surgery"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: History Taking & Red Flags",
+      "scenario": "A 56-year-old woman presents to clinic with left-sided tinnitus for over one year and progressive hearing decline in the left ear. In patients with chronic middle ear disease, you must screen for potentially life-threatening critical red flags during history taking.",
+      "media": "Load image: outpatient physician history-taking scene",
+      "question": "To exclude severe local invasion and complications from cholesteatoma, which question is the most essential to ask during the interview?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) \"Have you recently eaten too salty foods or drunk too much coffee?\""
+        },
+        {
+          "id": "B",
+          "text": "(B) \"Have you recently had sudden facial weakness or asymmetry, or frequent spinning vertigo?\"",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) \"Did you ever have mumps as a child?\""
+        },
+        {
+          "id": "D",
+          "text": "(D) \"Is your tinnitus a heartbeat-like thumping sound?\""
+        }
+      ],
+      "feedback": "Correct answer: B\n\nAttending tip: In suspected middle ear cholesteatoma, immediately screen three major red flags: (1) vertigo or imbalance (suggesting semicircular canal erosion with possible labyrinthine fistula), (2) facial palsy/asymmetry (suggesting facial canal involvement), and (3) persistent otorrhea unresponsive to antibiotic ear drops (suggesting resistant biofilm or cholesteatoma)."
+    },
+    {
+      "title": "Step 2/6: Otoendoscopy & Physical Examination",
+      "scenario": "You arrange otoendoscopy. You carefully inspect all tympanic membrane regions, especially the superior area near the ossicular chain.",
+      "media": "Load image: real otoendoscopic image showing abnormal attic structure",
+      "question": "On otoendoscopy, which finding is the most pathognomonic feature of secondary acquired cholesteatoma?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Erythematous bulging of pars tensa"
+        },
+        {
+          "id": "B",
+          "text": "(B) Keratin debris within a retraction pocket of pars flaccida",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Clear middle ear effusion with an air-fluid level"
+        },
+        {
+          "id": "D",
+          "text": "(D) Hemorrhagic bullae on the tympanic membrane"
+        }
+      ],
+      "feedback": "Correct answer: B\n\nClinical reasoning: In chronic ear disease, the attic (pars flaccida region) is a key area. Keratin debris accumulating inside a pars flaccida retraction pocket is the classic hallmark of acquired cholesteatoma."
+    },
+    {
+      "title": "Step 3/6: Tuning Fork Testing & Audiometry",
+      "scenario": "In clinic, you perform bedside tuning fork tests. Weber lateralizes to the left (affected side); Rinne is negative on the left (BC > AC) and positive on the right (AC > BC). Subsequent pure-tone audiometry confirms this pattern.",
+      "media": "Load image: PTA audiogram showing a prominent left-sided air-bone gap",
+      "question": "Based on the tuning fork findings and audiogram, what type of hearing loss is most likely in the patient's left ear?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Sensorineural hearing loss (SNHL)"
+        },
+        {
+          "id": "B",
+          "text": "(B) Conductive hearing loss (CHL)",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Central auditory processing disorder"
+        },
+        {
+          "id": "D",
+          "text": "(D) Auditory neuropathy"
+        }
+      ],
+      "feedback": "Correct answer: B\n\nInterpretation pearl: Weber to the affected ear plus a negative Rinne on the affected side (BC > AC) indicates classic conductive hearing loss. In a chronically inflamed wet ear with a clear air-bone gap, ossicular erosion from cholesteatoma should be strongly suspected."
+    },
+    {
+      "title": "Step 4/6: Imaging Localization & Bone Destruction (HRCT Temporal Bone)",
+      "scenario": "To establish a surgical plan, you obtain high-resolution temporal bone CT (HRCT). Imaging shows a soft-tissue lesion in the left attic with surrounding bony erosion.",
+      "media": "Load image: coronal HRCT marked with attic and scutum landmarks",
+      "question": "When interpreting CT in middle ear cholesteatoma, which bony structure on the lateral attic wall is most commonly eroded early?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Promontory"
+        },
+        {
+          "id": "B",
+          "text": "(B) Internal auditory canal"
+        },
+        {
+          "id": "C",
+          "text": "(C) Scutum",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) Sigmoid sinus plate"
+        }
+      ],
+      "feedback": "Correct answer: C\n\nImaging key point: The scutum is the pointed bony lateral wall of the attic. In the progression of acquired attic cholesteatoma, scutum erosion is one of the earliest and most typical CT findings. The ossicular chain and tegmen tympani should also be checked for integrity."
+    },
+    {
+      "title": "Step 5/6: Core Pathophysiology of Bone Erosion",
+      "scenario": "After seeing the CT report, the patient is very anxious and asks, \"Doctor, you said my bone is being eaten away. Does that mean I have malignant bone cancer?\" You need to explain this with accurate pathophysiology.",
+      "media": "Load image: animation schematic of cholesteatoma enzymes eroding bone",
+      "question": "Regarding why cholesteatoma destroys bone, which explanation is medically most accurate?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Cholesteatoma is a rapidly dividing malignant sarcoma that directly devours surrounding bone."
+        },
+        {
+          "id": "B",
+          "text": "(B) Cholesteatoma is not a true neoplasm; it is a keratinizing squamous epithelial trap that secretes osteolytic enzymes.",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) Cholesteatoma itself does not damage bone; bone dissolves only from long-term soaking in pus."
+        },
+        {
+          "id": "D",
+          "text": "(D) Cholesteatoma is a fungal infection that releases strong acid to corrode middle ear bone."
+        }
+      ],
+      "feedback": "Correct answer: B\n\nCore concept: Despite the name, cholesteatoma is not a true tumor. It is a misplaced keratinizing squamous epithelial trap, and the epithelial tissue plus associated inflammation produce osteolytic enzymes that erode nearby ossicles and temporal bone."
+    },
+    {
+      "title": "Step 6/6: Final Management & Surgical Decision Making",
+      "scenario": "After explaining the condition, you reach the final management crossroads. For this confirmed left-sided secondary acquired middle ear cholesteatoma, you must provide the most accurate treatment recommendation.",
+      "media": "Load image: clinical decision tree for management",
+      "question": "For this 56-year-old woman with secondary acquired cholesteatoma, which treatment choice and concept is completely incorrect?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) If the disease is extensive or the posterior canal wall is already damaged, canal wall down tympanomastoidectomy (CWD) can be selected."
+        },
+        {
+          "id": "B",
+          "text": "(B) To preserve more normal anatomy, canal wall up tympanomastoidectomy (CWU) may be considered, but close postoperative follow-up is essential."
+        },
+        {
+          "id": "C",
+          "text": "(C) Because cholesteatoma is benign, regular observation and ear water precautions during bathing are sufficient; surgery is unnecessary.",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) Cholesteatoma is locally invasive, and surgical clearance is mandatory."
+        }
+      ],
+      "feedback": "Correct answer: C\n\nSurgical consensus: Option C is absolutely incorrect. Although cholesteatoma is not malignant, it is locally invasive and can continue to destroy ossicles, injure the facial nerve, and even spread intracranially. Surgical clearance is the only required standard treatment; observation and water precautions alone are ineffective and dangerous."
+    }
+  ]
+}

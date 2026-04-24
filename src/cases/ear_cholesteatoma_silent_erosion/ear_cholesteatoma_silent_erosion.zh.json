@@ -1,0 +1,172 @@
+{
+  "id": "ear_cholesteatoma_silent_erosion",
+  "title": "膽脂瘤",
+  "subtitle": "Cholesteatoma — The Silent Bone-Eroding Crisis in the Middle Ear",
+  "description": "慢性中耳疾病的紅旗徵象、耳內視鏡與聽力判讀、HRCT 定位、骨侵蝕機轉與手術決策。",
+  "estimatedTime": "20-30 分鐘",
+  "difficulty": "中高階",
+  "tags": [
+    "耳科",
+    "膽脂瘤",
+    "中耳",
+    "乳突手術"
+  ],
+  "steps": [
+    {
+      "title": "Step 1/6: 病史詢問與危險徵兆 (History Taking & Red Flags)",
+      "scenario": "一位 56 歲女性來到門診，主訴左耳有持續超過 1 年的耳鳴 (tinnitus)，且她覺得左耳的聽力有逐漸變差的趨勢 (progressive hearing loss)。面對這類慢性中耳疾病的患者，你必須在病史詢問時篩檢出可能危及生命的「危險徵兆 (Critical Red Flags)」。",
+      "media": "載入圖片：門診醫師問診示意圖",
+      "question": "為了排除膽脂瘤已經產生嚴重的局部侵犯與併發症，下列哪一個問題是你在問診時「最必須」詢問病患的？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 「你最近有沒有吃太鹹，或是喝太多咖啡？」"
+        },
+        {
+          "id": "B",
+          "text": "(B) 「你最近有沒有突然覺得臉部肌肉無力、不對稱，或是常常感到天旋地轉的眩暈？」",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 「你小時候有沒有得過腮腺炎？」"
+        },
+        {
+          "id": "D",
+          "text": "(D) 「你的耳鳴是像心跳一樣『噗通、噗通』的聲音嗎？」"
+        }
+      ],
+      "feedback": "正確答案：B\n\n主治醫師的 Tip： 面對懷疑有中耳膽脂瘤的患者，必須立刻篩檢三大 Red Flags：1. 眩暈或不平衡 (暗示可能侵蝕半規管形成 Labyrinthine fistula)；2. 顏面神經麻痺/不對稱 (暗示侵犯顏面神經管)；3. 對抗生素點耳液無效的持續性流膿 (暗示有抗藥性生物膜或膽脂瘤)。"
+    },
+    {
+      "title": "Step 2/6: 內視鏡理學檢查 (Otoendoscopy & Physical Exam)",
+      "scenario": "你為她安排了耳內視鏡檢查 (Otoendoscopy)。你仔細檢視了耳膜的各個區域，特別是上方靠近聽小骨鏈的解剖位置。",
+      "media": "載入圖片：真實耳內視鏡影像 (Otoendoscopy)，顯示上鼓室的異常結構",
+      "question": "在耳內視鏡檢查中，下列哪一項發現是「次發性後天型膽脂瘤 (Secondary acquired cholesteatoma)」最具特異性 (pathognomonic) 的典型特徵？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 緊張部 (Pars Tensa) 出現紅腫外凸。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 鬆弛部 (Pars Flaccida) 的內陷袋 (Retraction pocket) 中發現角質碎屑 (Keratin debris)。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 中耳腔出現清澈積液與氣液面 (Air-fluid levels)。"
+        },
+        {
+          "id": "D",
+          "text": "(D) 耳膜表面出現出血性水泡 (Bullae formation)。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n臨床解析： 檢查慢性耳疾時，「上鼓室 (Attic)」也就是耳膜的「鬆弛部 (Pars Flaccida)」是關鍵區域。在鬆弛部的內陷袋中積聚的角質碎屑 (Keratin debris) 是後天型膽脂瘤最標準的特徵。"
+    },
+    {
+      "title": "Step 3/6: 音叉測試與聽力學判讀 (Tuning Fork & Audiometry)",
+      "scenario": "在門診，你拿出了音叉 (Tuning Fork) 進行初步測試。結果顯示：韋伯氏測驗 (Weber Test) 聲音偏向左側 (患耳)；林內氏測驗 (Rinne Test) 在左耳呈現陰性 (Bone Conduction > Air Conduction)，右耳呈現陽性 (AC > BC)。隨後的純音聽力檢查 (PTA) 也證實了這個發現。",
+      "media": "載入圖片：PTA 純音聽力圖，顯示左耳有明顯的 Air-Bone Gap",
+      "question": "根據音叉測試結果與聽力圖的表現，這位病患左耳的聽力喪失最可能屬於下列哪一種型態？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 感音神經性聽力喪失 (Sensorineural Hearing Loss, SNHL)"
+        },
+        {
+          "id": "B",
+          "text": "(B) 傳導性聽力喪失 (Conductive Hearing Loss, CHL)",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 中樞性聽覺處理障礙 (Central Auditory Processing Disorder)"
+        },
+        {
+          "id": "D",
+          "text": "(D) 聽神經病變 (Auditory Neuropathy)"
+        }
+      ],
+      "feedback": "正確答案：B\n\n判讀重點： 韋伯氏測驗偏向患耳，且林內氏測驗在患耳為陰性 (BC > AC)，這代表標準的「傳導性聽損 (CHL)」。在一個長期發炎流湯的「濕耳 (wet ear)」中看到明顯的氣骨導差 (Air-Bone Gap)，要高度懷疑是膽脂瘤侵蝕了聽小骨 (ossicular erosion)。"
+    },
+    {
+      "title": "Step 4/6: 影像學定位與骨骼破壞 (HRCT Temporal Bone)",
+      "scenario": "為了確立手術計畫，你安排了「顳骨高解析度電腦斷層 (HRCT)」。影像顯示左側中耳腔上鼓室有一團軟組織陰影，且周圍的骨頭有被侵蝕的跡象。",
+      "media": "載入圖片：HRCT 冠狀切面影像，標示出上鼓室與盾狀骨的位置",
+      "question": "在判讀中耳膽脂瘤的 CT 影像時，下列哪一個位於上鼓室外側壁的骨性構造，最常在早期就被觀察到遭受「侵蝕破壞 (erosion)」？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 鼓岬 (Promontory)"
+        },
+        {
+          "id": "B",
+          "text": "(B) 內聽道 (Internal auditory canal)"
+        },
+        {
+          "id": "C",
+          "text": "(C) 盾狀骨 (Scutum)",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) 乙狀竇骨壁 (Sigmoid sinus plate)"
+        }
+      ],
+      "feedback": "正確答案：C\n\n影像重點： 盾狀骨 (Scutum) 是上鼓室外側壁的尖端骨骼。在後天型膽脂瘤 (Attic retraction pocket) 的進展中，Scutum erosion 是最早期且最典型的 CT 影像學徵象。同時也必須檢查聽小骨鏈 (Ossicular chain) 與鼓室蓋 (Tegmen Tympani) 是否完整。"
+    },
+    {
+      "title": "Step 5/6: 疾病機轉的核心概念 (Pathophysiology of Bone Destruction)",
+      "scenario": "病患看到 CT 報告後非常恐慌，詢問你：「醫生，你說我的骨頭被吃掉了，這是不是代表我長了惡性的骨癌？」你必須用正確的病生理學觀念向她解釋。",
+      "media": "載入圖片：膽脂瘤細胞分泌酵素侵蝕骨頭的動畫示意圖",
+      "question": "關於「膽脂瘤 (Cholesteatoma)」會吃掉骨頭的原因，下列何種解釋在醫學上是最正確的？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 膽脂瘤是一種快速分裂的惡性肉瘤 (Sarcoma)，會直接吞噬周邊骨頭。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 膽脂瘤並非真正的腫瘤，而是一個會分泌「溶骨酶 (Osteolytic enzymes)」的角質化鱗狀上皮陷阱。",
+          "correct": true
+        },
+        {
+          "id": "C",
+          "text": "(C) 膽脂瘤本身不會破壞骨頭，骨頭是因為長期泡在膿液中被「溶化」的。"
+        },
+        {
+          "id": "D",
+          "text": "(D) 膽脂瘤是一種黴菌感染，會釋放強酸腐蝕中耳骨骼。"
+        }
+      ],
+      "feedback": "正確答案：B\n\n核心觀念： 膽脂瘤 (Cholesteatoma) 在字面上雖有「瘤」，但它不是真正的腫瘤。它是一個迷路的角質化鱗狀上皮陷阱 (epithelial trap)，這些上皮組織與伴隨的發炎反應會分泌「溶骨酶 (osteolytic enzymes)」，進而侵蝕周邊的聽小骨與顳骨。"
+    },
+    {
+      "title": "Step 6/6: 最終處置與外科決策 (Surgical Decision Making)",
+      "scenario": "向病患解釋完病情後，來到了最終的醫療決策十字路口。面對這個確診的左耳中耳膽脂瘤，你必須給予最正確的治療建議。",
+      "media": "載入圖片：Clinical Decision Tree 治療決策樹",
+      "question": "針對這位 56 歲女性的次發性後天型膽脂瘤，下列哪一個治療選項與觀念是完全錯誤的？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 若病灶範圍很大或後側耳道壁已遭破壞，可選擇保留外耳道後壁被削低的「開放式乳突鑿開術 (Canal Wall Down Tympanomastoidectomy, CWD)」。"
+        },
+        {
+          "id": "B",
+          "text": "(B) 為了保留正常解剖構造，可考慮進行「保留耳道後壁乳突鑿開術 (Canal Wall Up Tympanomastoidectomy, CWU)」，但術後需要病患高度配合追蹤。"
+        },
+        {
+          "id": "C",
+          "text": "(C) 因為膽脂瘤是良性的，只要定期回診觀察 (Observation)，並在洗澡時做好耳朵防水 (Water precautions) 即可，不需要開刀。",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) 膽脂瘤具備局部侵入性 (Locally invasive)，外科手術清除 (Surgical clearance) 是必須的處置。"
+        }
+      ],
+      "feedback": "正確答案：C\n\n手術共識： 選項 C 是絕對錯誤的 (Incorrect)！膽脂瘤雖然不是惡性腫瘤，但它具有「局部侵入性 (Locally invasive)」，會持續破壞聽小骨、顏面神經甚至侵入顱內。因此，「外科手術清除 (Surgical clearance)」是唯一且必須的標準處置，單純觀察與防水是無效且危險的。"
+    }
+  ]
+}

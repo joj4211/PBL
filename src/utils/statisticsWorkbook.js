@@ -472,6 +472,69 @@ function buildOverallSummaryRows(assessmentAnswers, caseAnswers, roles) {
   ]);
 }
 
+function buildAssessmentQuestionSummaryRows(assessmentAnswers = []) {
+  const rows = new Map();
+
+  assessmentAnswers.forEach((row) => {
+    if (!row || typeof row !== 'object') return;
+
+    const key = [
+      row.domain_title || '',
+      row.assessment_type || '',
+      row.assessment_title || '',
+      row.question_order || '',
+    ].join('::');
+
+    if (!rows.has(key)) {
+      rows.set(key, {
+        domain_title: row.domain_title,
+        assessment_type: row.assessment_type,
+        assessment_title: row.assessment_title,
+        question_no: row.question_order,
+      });
+    }
+  });
+
+  return Array.from(rows.values()).sort((left, right) => (
+    (left.domain_title || '').localeCompare(right.domain_title || '')
+    || (left.assessment_type || '').localeCompare(right.assessment_type || '')
+    || (left.question_no || 0) - (right.question_no || 0)
+  ));
+}
+
+function buildCaseQuestionSummaryRows(caseAnswers = []) {
+  const rows = new Map();
+
+  caseAnswers.forEach((row) => {
+    if (!row || typeof row !== 'object') return;
+    if (row.phase === 'preTest' || row.phase === 'postTest') return;
+
+    const key = [
+      row.domain_id || '',
+      row.domain_title || '',
+      row.case_id || '',
+      row.case_title || '',
+      row.step_order || '',
+    ].join('::');
+
+    if (!rows.has(key)) {
+      rows.set(key, {
+        domain_id: row.domain_id,
+        domain_title: row.domain_title,
+        case_id: row.case_id,
+        case_title: row.case_title,
+        step_order: row.step_order,
+      });
+    }
+  });
+
+  return Array.from(rows.values()).sort((left, right) => (
+    (left.domain_id || '').localeCompare(right.domain_id || '')
+    || (left.case_id || '').localeCompare(right.case_id || '')
+    || (left.step_order || 0) - (right.step_order || 0)
+  ));
+}
+
 function addUserSummaryFormulas({
   worksheet,
   rows,
@@ -637,6 +700,195 @@ function addOverallSummaryFormulas({
   }
 }
 
+function addUserPerformanceSheet({
+  workbook,
+  users,
+  assessmentAttemptColumns,
+  assessmentAttemptLastRow,
+}) {
+  const sheet = workbook.addWorksheet('user_performance');
+  const columns = [
+    { header: 'user_id', key: 'user_id', width: 38, note: '使用者唯一識別碼。' },
+    { header: 'display_name', key: 'display_name', width: 18, note: '暱稱/姓名。' },
+    { header: 'medical_role', key: 'medical_role', width: 14, note: '職級。' },
+    { header: 'pre-test average score', key: 'pre_avg_score', width: 18, note: 'Excel 公式：該使用者前測平均分數。' },
+    { header: 'pre-test average time cost', key: 'pre_avg_time', width: 20, note: 'Excel 公式：該使用者前測平均耗時（秒）。' },
+    { header: 'pre-test repeated times', key: 'pre_times', width: 18, note: 'Excel 公式：該使用者前測作答次數。' },
+    { header: 'post-test average score', key: 'post_avg_score', width: 18, note: 'Excel 公式：該使用者後測平均分數。' },
+    { header: 'post-test average time cost', key: 'post_avg_time', width: 20, note: 'Excel 公式：該使用者後測平均耗時（秒）。' },
+    { header: 'post-test repeated times', key: 'post_times', width: 18, note: 'Excel 公式：該使用者後測作答次數。' },
+  ];
+
+  styleSheet(sheet, columns);
+  addHeaderNotes(sheet, columns);
+  addRows(
+    sheet,
+    users.map((user) => ({
+      user_id: user.user_id,
+      display_name: user.display_name ?? '',
+      medical_role: user.medical_role ?? '',
+    })),
+    columns
+  );
+
+  const aaUser = makeRange(getColumnLetter(assessmentAttemptColumns, 'user_id'), assessmentAttemptLastRow);
+  const aaType = makeRange(getColumnLetter(assessmentAttemptColumns, 'assessment_type'), assessmentAttemptLastRow);
+  const aaScore = makeRange(getColumnLetter(assessmentAttemptColumns, 'score'), assessmentAttemptLastRow);
+  const aaDuration = makeRange(getColumnLetter(assessmentAttemptColumns, 'duration_seconds'), assessmentAttemptLastRow);
+
+  for (let rowIndex = 2; rowIndex <= users.length + 1; rowIndex += 1) {
+    const userRef = `$A${rowIndex}`;
+
+    sheet.getCell(`D${rowIndex}`).value = {
+      formula: `IFERROR(AVERAGEIFS(assessment_attempts!${aaScore},assessment_attempts!${aaUser},${userRef},assessment_attempts!${aaType},"preTest"),"")`,
+    };
+    sheet.getCell(`E${rowIndex}`).value = {
+      formula: `IFERROR(AVERAGEIFS(assessment_attempts!${aaDuration},assessment_attempts!${aaUser},${userRef},assessment_attempts!${aaType},"preTest"),"")`,
+    };
+    sheet.getCell(`F${rowIndex}`).value = {
+      formula: `COUNTIFS(assessment_attempts!${aaUser},${userRef},assessment_attempts!${aaType},"preTest")`,
+    };
+    sheet.getCell(`G${rowIndex}`).value = {
+      formula: `IFERROR(AVERAGEIFS(assessment_attempts!${aaScore},assessment_attempts!${aaUser},${userRef},assessment_attempts!${aaType},"postTest"),"")`,
+    };
+    sheet.getCell(`H${rowIndex}`).value = {
+      formula: `IFERROR(AVERAGEIFS(assessment_attempts!${aaDuration},assessment_attempts!${aaUser},${userRef},assessment_attempts!${aaType},"postTest"),"")`,
+    };
+    sheet.getCell(`I${rowIndex}`).value = {
+      formula: `COUNTIFS(assessment_attempts!${aaUser},${userRef},assessment_attempts!${aaType},"postTest")`,
+    };
+  }
+}
+
+function addQuestionAssessmentSheet({
+  workbook,
+  assessmentSummaryRows,
+  caseSummaryRows,
+  assessmentAnswerColumns,
+  caseAnswerColumns,
+  assessmentAnswerLastRow,
+  caseAnswerLastRow,
+}) {
+  const sheet = workbook.addWorksheet('question_assessment');
+
+  sheet.mergeCells('A1:E1');
+  sheet.mergeCells('H1:M1');
+  sheet.getCell('A1').value = 'assessment_attempts';
+  sheet.getCell('H1').value = 'case_attempts';
+
+  ['A1', 'H1'].forEach((cellRef) => {
+    const cell = sheet.getCell(cellRef);
+    cell.font = { bold: true, color: { argb: 'FFFFFFFF' } };
+    cell.fill = {
+      type: 'pattern',
+      pattern: 'solid',
+      fgColor: { argb: '5E8847' },
+    };
+    cell.alignment = { vertical: 'middle', horizontal: 'center' };
+  });
+
+  const assessmentHeaders = [
+    { cell: 'A2', value: 'domain_title', note: 'domain 中文名稱。' },
+    { cell: 'B2', value: 'assessment_type', note: 'preTest / postTest。' },
+    { cell: 'C2', value: 'assessment_title', note: '前測/後測標題。' },
+    { cell: 'D2', value: 'question_no.', note: '題目順序。' },
+    { cell: 'E2', value: 'correct_rate', note: 'Excel 公式：全體使用者在此前後測題目的總正確率。' },
+  ];
+
+  const caseHeaders = [
+    { cell: 'H2', value: 'domain_id', note: 'ear / nose / throat。' },
+    { cell: 'I2', value: 'domain_title', note: 'domain 中文名稱。' },
+    { cell: 'J2', value: 'case_id', note: 'case 唯一識別碼。' },
+    { cell: 'K2', value: 'case_title', note: 'case 標題。' },
+    { cell: 'L2', value: 'step_order', note: 'step 在該 case 中的順序。' },
+    { cell: 'M2', value: 'correct_rate', note: 'Excel 公式：全體使用者在此 case step 的總正確率。' },
+  ];
+
+  [...assessmentHeaders, ...caseHeaders].forEach(({ cell, value, note }) => {
+    sheet.getCell(cell).value = value;
+    sheet.getCell(cell).font = { bold: true };
+    sheet.getCell(cell).fill = {
+      type: 'pattern',
+      pattern: 'solid',
+      fgColor: { argb: 'DCEAD2' },
+    };
+    sheet.getCell(cell).alignment = { vertical: 'middle', horizontal: 'center', wrapText: true };
+    if (note) {
+      sheet.getCell(cell).note = note;
+    }
+  });
+
+  const totalRows = Math.max(assessmentSummaryRows.length, caseSummaryRows.length);
+
+  for (let index = 0; index < totalRows; index += 1) {
+    const rowNumber = index + 3;
+    const assessmentRow = assessmentSummaryRows[index];
+    const caseRow = caseSummaryRows[index];
+
+    if (assessmentRow) {
+      sheet.getCell(`A${rowNumber}`).value = assessmentRow.domain_title ?? '';
+      sheet.getCell(`B${rowNumber}`).value = assessmentRow.assessment_type ?? '';
+      sheet.getCell(`C${rowNumber}`).value = assessmentRow.assessment_title ?? '';
+      sheet.getCell(`D${rowNumber}`).value = assessmentRow.question_no ?? '';
+    }
+
+    if (caseRow) {
+      sheet.getCell(`H${rowNumber}`).value = caseRow.domain_id ?? '';
+      sheet.getCell(`I${rowNumber}`).value = caseRow.domain_title ?? '';
+      sheet.getCell(`J${rowNumber}`).value = caseRow.case_id ?? '';
+      sheet.getCell(`K${rowNumber}`).value = caseRow.case_title ?? '';
+      sheet.getCell(`L${rowNumber}`).value = caseRow.step_order ?? '';
+    }
+  }
+
+  sheet.columns = [
+    { key: 'A', width: 16 },
+    { key: 'B', width: 16 },
+    { key: 'C', width: 22 },
+    { key: 'D', width: 12 },
+    { key: 'E', width: 14 },
+    { key: 'F', width: 3 },
+    { key: 'G', width: 3 },
+    { key: 'H', width: 12 },
+    { key: 'I', width: 16 },
+    { key: 'J', width: 28 },
+    { key: 'K', width: 28 },
+    { key: 'L', width: 12 },
+    { key: 'M', width: 14 },
+  ];
+  sheet.views = [{ state: 'frozen', ySplit: 2 }];
+
+  const asDomainTitle = makeRange(getColumnLetter(assessmentAnswerColumns, 'domain_title'), assessmentAnswerLastRow);
+  const asType = makeRange(getColumnLetter(assessmentAnswerColumns, 'assessment_type'), assessmentAnswerLastRow);
+  const asTitle = makeRange(getColumnLetter(assessmentAnswerColumns, 'assessment_title'), assessmentAnswerLastRow);
+  const asQuestionOrder = makeRange(getColumnLetter(assessmentAnswerColumns, 'question_order'), assessmentAnswerLastRow);
+  const asCorrect = makeRange(getColumnLetter(assessmentAnswerColumns, 'is_correct'), assessmentAnswerLastRow);
+
+  const csDomainId = makeRange(getColumnLetter(caseAnswerColumns, 'domain_id'), caseAnswerLastRow);
+  const csCaseId = makeRange(getColumnLetter(caseAnswerColumns, 'case_id'), caseAnswerLastRow);
+  const csPhase = makeRange(getColumnLetter(caseAnswerColumns, 'phase'), caseAnswerLastRow);
+  const csStepOrder = makeRange(getColumnLetter(caseAnswerColumns, 'step_order'), caseAnswerLastRow);
+  const csCorrect = makeRange(getColumnLetter(caseAnswerColumns, 'is_correct'), caseAnswerLastRow);
+
+  for (let index = 0; index < totalRows; index += 1) {
+    const rowNumber = index + 3;
+
+    if (assessmentSummaryRows[index]) {
+      sheet.getCell(`E${rowNumber}`).value = {
+        formula: `IFERROR(SUMIFS(assessment_answers!${asCorrect},assessment_answers!${asDomainTitle},A${rowNumber},assessment_answers!${asType},B${rowNumber},assessment_answers!${asTitle},C${rowNumber},assessment_answers!${asQuestionOrder},D${rowNumber})/COUNTIFS(assessment_answers!${asDomainTitle},A${rowNumber},assessment_answers!${asType},B${rowNumber},assessment_answers!${asTitle},C${rowNumber},assessment_answers!${asQuestionOrder},D${rowNumber}),"")`,
+      };
+      sheet.getCell(`E${rowNumber}`).numFmt = '0.00%';
+    }
+
+    if (caseSummaryRows[index]) {
+      sheet.getCell(`M${rowNumber}`).value = {
+        formula: `IFERROR(SUMPRODUCT((case_answers!${csDomainId}=H${rowNumber})*(case_answers!${csCaseId}=J${rowNumber})*(case_answers!${csStepOrder}=L${rowNumber})*(case_answers!${csPhase}<>"preTest")*(case_answers!${csPhase}<>"postTest"),case_answers!${csCorrect})/SUMPRODUCT((case_answers!${csDomainId}=H${rowNumber})*(case_answers!${csCaseId}=J${rowNumber})*(case_answers!${csStepOrder}=L${rowNumber})*(case_answers!${csPhase}<>"preTest")*(case_answers!${csPhase}<>"postTest")),"")`,
+      };
+      sheet.getCell(`M${rowNumber}`).numFmt = '0.00%';
+    }
+  }
+}
+
 function downloadBuffer(buffer, fileName) {
   const blob = new Blob(
     [buffer],
@@ -680,6 +932,8 @@ export async function createStatisticsWorkbook({
     caseLookup,
   });
   const roles = Array.from(new Set(users.map((user) => user.medical_role).filter(Boolean)));
+  const assessmentSummaryRows = buildAssessmentQuestionSummaryRows(assessmentAnswerRows);
+  const caseSummaryRows = buildCaseQuestionSummaryRows(caseAnswerRows);
 
   addReadmeSheet(workbook);
 
@@ -738,6 +992,13 @@ export async function createStatisticsWorkbook({
   styleSheet(assessmentAttemptsSheet, assessmentAttemptColumns);
   addHeaderNotes(assessmentAttemptsSheet, assessmentAttemptColumns);
   addRows(assessmentAttemptsSheet, assessmentAttemptRows, assessmentAttemptColumns);
+
+  addUserPerformanceSheet({
+    workbook,
+    users,
+    assessmentAttemptColumns,
+    assessmentAttemptLastRow: assessmentAttemptRows.length + 1,
+  });
 
   const assessmentAnswersSheet = workbook.addWorksheet('assessment_answers');
   const assessmentAnswerColumns = [
@@ -821,6 +1082,16 @@ export async function createStatisticsWorkbook({
   styleSheet(caseAnswersSheet, caseAnswerColumns);
   addHeaderNotes(caseAnswersSheet, caseAnswerColumns);
   addRows(caseAnswersSheet, caseAnswerRows, caseAnswerColumns);
+
+  addQuestionAssessmentSheet({
+    workbook,
+    assessmentSummaryRows,
+    caseSummaryRows,
+    assessmentAnswerColumns,
+    caseAnswerColumns,
+    assessmentAnswerLastRow: assessmentAnswerRows.length + 1,
+    caseAnswerLastRow: caseAnswerRows.length + 1,
+  });
 
   const userSummarySheet = workbook.addWorksheet('user_summary');
   const userSummaryColumns = [

@@ -18,6 +18,7 @@ export default function LandingPage({
   onShowMaintenance,
   isAdmin,
   onSignOut,
+  displayName,
 }) {
   const { setLang } = useLanguage();
   const isZh = lang === 'zh';
@@ -32,6 +33,9 @@ export default function LandingPage({
   const maintenanceLabel = isZh ? '功能維護' : 'Maintenance';
   const comingSoon = isZh ? '即將上線' : 'Coming Soon';
   const caseCount  = (n) => isZh ? `${n} 個病例` : `${n} case${n > 1 ? 's' : ''}`;
+  const welcomeText = displayName
+    ? (isZh ? `歡迎，${displayName}` : `Welcome, ${displayName}`)
+    : (isZh ? '歡迎使用' : 'Welcome');
 
   return (
     <div
@@ -53,6 +57,12 @@ export default function LandingPage({
       />
 
       {/* Language toggle */}
+      <div className="absolute top-4 left-4 z-20">
+        <div className="nav-pill">
+          {welcomeText}
+        </div>
+      </div>
+
       <div className="absolute top-4 right-4 z-20 flex items-center gap-2">
         {isAdmin && onShowMaintenance && (
           <button

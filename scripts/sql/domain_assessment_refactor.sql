@@ -113,9 +113,24 @@ create table if not exists public.domain_assessments (
   assessment_type text not null check (assessment_type in ('preTest', 'postTest')),
   score int4 not null check (score between 0 and 100),
   answers jsonb not null,
+  started_at timestamptz,
   completed_at timestamptz not null default now(),
+  duration_seconds int4 check (duration_seconds is null or duration_seconds >= 0),
   created_at timestamptz not null default now()
 );
+
+alter table public.domain_assessments
+  add column if not exists started_at timestamptz;
+
+alter table public.domain_assessments
+  add column if not exists duration_seconds int4;
+
+alter table public.domain_assessments
+  drop constraint if exists domain_assessments_duration_seconds_check;
+
+alter table public.domain_assessments
+  add constraint domain_assessments_duration_seconds_check
+  check (duration_seconds is null or duration_seconds >= 0);
 
 create index if not exists idx_domain_assessments_user_domain
   on public.domain_assessments(user_id, domain_id);
@@ -126,31 +141,9 @@ create index if not exists idx_domain_assessments_type
 create index if not exists idx_domain_assessments_completed_at
   on public.domain_assessments(completed_at desc);
 
-create or replace function public.prevent_duplicate_domain_assessment()
-returns trigger
-language plpgsql
-as $$
-begin
-  if exists (
-    select 1
-      from public.domain_assessments
-     where user_id = new.user_id
-       and domain_id = new.domain_id
-       and assessment_type = new.assessment_type
-  ) then
-    raise exception 'domain assessment already completed';
-  end if;
-
-  return new;
-end;
-$$;
-
 drop trigger if exists trg_domain_assessments_prevent_duplicate on public.domain_assessments;
 
-create trigger trg_domain_assessments_prevent_duplicate
-before insert on public.domain_assessments
-for each row
-execute function public.prevent_duplicate_domain_assessment();
+drop function if exists public.prevent_duplicate_domain_assessment();
 
 -- 4) Trigger helper for updated_at.
 create or replace function public.set_updated_at_timestamp()
@@ -296,6 +289,32 @@ alter table public.case_attempts
     and jsonb_typeof((answers->'summary'->'overall')) = 'number'
   ) not valid;
 
+alter table public.case_attempts
+  add column if not exists started_at timestamptz;
+
+alter table public.case_attempts
+  add column if not exists completed_at timestamptz;
+
+alter table public.case_attempts
+  add column if not exists duration_seconds int4;
+
+alter table public.case_attempts
+  add column if not exists status text;
+
+alter table public.case_attempts
+  drop constraint if exists case_attempts_duration_seconds_check;
+
+alter table public.case_attempts
+  add constraint case_attempts_duration_seconds_check
+  check (duration_seconds is null or duration_seconds >= 0);
+
+alter table public.case_attempts
+  drop constraint if exists case_attempts_status_check;
+
+alter table public.case_attempts
+  add constraint case_attempts_status_check
+  check (status is null or status in ('completed'));
+
 create index if not exists idx_case_attempts_user_domain_case
   on public.case_attempts(user_id, domain, case_id);
 
@@ -340,7 +359,7 @@ begin
       pretest_completed = true,
       latest_pretest_score = excluded.latest_pretest_score,
       best_pretest_score = greatest(coalesce(public.user_domain_progress.best_pretest_score, 0), excluded.best_pretest_score),
-      pretest_completed_at = coalesce(public.user_domain_progress.pretest_completed_at, excluded.pretest_completed_at),
+      pretest_completed_at = excluded.pretest_completed_at,
       updated_at = now();
   else
     insert into public.user_domain_progress (
@@ -363,7 +382,7 @@ begin
       posttest_completed = true,
       latest_posttest_score = excluded.latest_posttest_score,
       best_posttest_score = greatest(coalesce(public.user_domain_progress.best_posttest_score, 0), excluded.best_posttest_score),
-      posttest_completed_at = coalesce(public.user_domain_progress.posttest_completed_at, excluded.posttest_completed_at),
+      posttest_completed_at = excluded.posttest_completed_at,
       updated_at = now();
   end if;
 
@@ -431,5 +450,67 @@ create policy "da_delete_own"
 on public.domain_assessments
 for delete
 using (auth.uid()::text = user_id);
+
+with ranked_assessments as (
+  select
+    user_id,
+    domain_id,
+    assessment_type,
+    score,
+    completed_at,
+    row_number() over (
+      partition by user_id, domain_id, assessment_type
+      order by completed_at desc, id desc
+    ) as rn
+  from public.domain_assessments
+),
+rollup as (
+  select
+    user_id,
+    domain_id,
+    max(score) filter (where assessment_type = 'preTest') as best_pretest_score,
+    max(score) filter (where assessment_type = 'postTest') as best_posttest_score,
+    max(completed_at) filter (where assessment_type = 'preTest') as pretest_completed_at,
+    max(completed_at) filter (where assessment_type = 'postTest') as posttest_completed_at,
+    max(score) filter (where assessment_type = 'preTest' and rn = 1) as latest_pretest_score,
+    max(score) filter (where assessment_type = 'postTest' and rn = 1) as latest_posttest_score
+  from ranked_assessments
+  group by user_id, domain_id
+)
+insert into public.user_domain_progress (
+  user_id,
+  domain_id,
+  pretest_completed,
+  posttest_completed,
+  latest_pretest_score,
+  best_pretest_score,
+  latest_posttest_score,
+  best_posttest_score,
+  pretest_completed_at,
+  posttest_completed_at
+)
+select
+  user_id,
+  domain_id,
+  pretest_completed_at is not null,
+  posttest_completed_at is not null,
+  latest_pretest_score,
+  best_pretest_score,
+  latest_posttest_score,
+  best_posttest_score,
+  pretest_completed_at,
+  posttest_completed_at
+from rollup
+on conflict (user_id, domain_id)
+do update set
+  pretest_completed = excluded.pretest_completed,
+  posttest_completed = excluded.posttest_completed,
+  latest_pretest_score = excluded.latest_pretest_score,
+  best_pretest_score = excluded.best_pretest_score,
+  latest_posttest_score = excluded.latest_posttest_score,
+  best_posttest_score = excluded.best_posttest_score,
+  pretest_completed_at = excluded.pretest_completed_at,
+  posttest_completed_at = excluded.posttest_completed_at,
+  updated_at = now();
 
 commit;

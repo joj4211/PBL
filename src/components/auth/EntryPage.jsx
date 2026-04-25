@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { BookOpenCheck, Lock, Mail } from 'lucide-react';
+import { BookOpenCheck, Lock, Mail, User } from 'lucide-react';
 import Button from '../ui/Button';
 import { useLanguage } from '../../contexts/LanguageContext';
 
@@ -9,6 +9,7 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
   const [mode, setMode] = useState('signIn');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [displayName, setDisplayName] = useState('');
   const [medicalRole, setMedicalRole] = useState('');
   const [message, setMessage] = useState('');
   const [submitting, setSubmitting] = useState(false);
@@ -33,6 +34,8 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
       emailPlaceholder: '請輸入 email',
       password: '密碼',
       passwordPlaceholder: '請輸入密碼',
+      displayName: '姓名 / 暱稱',
+      displayNamePlaceholder: '請輸入姓名或暱稱',
       role: '身分',
       rolePlaceholder: '請選擇身分',
       failed: '操作失敗，請稍後再試。',
@@ -55,6 +58,8 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
       emailPlaceholder: 'Enter your email',
       password: 'Password',
       passwordPlaceholder: 'Enter your password',
+      displayName: 'Name / Nickname',
+      displayNamePlaceholder: 'Enter your name or nickname',
       role: 'Role',
       rolePlaceholder: 'Select your role',
       failed: 'Something went wrong. Please try again later.',
@@ -77,7 +82,7 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
     setSubmitting(true);
     try {
       if (isSignUp) {
-        const result = await onSignUp({ email, password, medicalRole });
+        const result = await onSignUp({ email, password, medicalRole, displayName });
         if (result?.needsConfirmation) {
           setMessage(text.confirmation);
         }
@@ -206,20 +211,36 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
             </label>
 
             {isSignUp && (
-              <label className="block">
-                <span className="text-xs font-semibold text-warm-600">{text.role}</span>
-                <select
-                  required
-                  value={medicalRole}
-                  onChange={(event) => setMedicalRole(event.target.value)}
-                  className="mt-1.5 w-full rounded-xl border-2 border-warm-200 bg-white/45 px-3 py-2.5 text-sm text-warm-800 outline-none"
-                >
-                  <option value="">{text.rolePlaceholder}</option>
-                  {roleOptions.map((role) => (
-                    <option key={role} value={role}>{role}</option>
-                  ))}
-                </select>
-              </label>
+              <>
+                <label className="block">
+                  <span className="text-xs font-semibold text-warm-600">{text.displayName}</span>
+                  <div className="mt-1.5 flex items-center gap-2 rounded-xl border-2 border-warm-200 bg-white/45 px-3 py-2.5">
+                    <User className="w-4 h-4 text-warm-400" />
+                    <input
+                      required
+                      value={displayName}
+                      onChange={(event) => setDisplayName(event.target.value)}
+                      className="w-full bg-transparent text-sm text-warm-800 outline-none"
+                      placeholder={text.displayNamePlaceholder}
+                    />
+                  </div>
+                </label>
+
+                <label className="block">
+                  <span className="text-xs font-semibold text-warm-600">{text.role}</span>
+                  <select
+                    required
+                    value={medicalRole}
+                    onChange={(event) => setMedicalRole(event.target.value)}
+                    className="mt-1.5 w-full rounded-xl border-2 border-warm-200 bg-white/45 px-3 py-2.5 text-sm text-warm-800 outline-none"
+                  >
+                    <option value="">{text.rolePlaceholder}</option>
+                    {roleOptions.map((role) => (
+                      <option key={role} value={role}>{role}</option>
+                    ))}
+                  </select>
+                </label>
+              </>
             )}
 
             <p className="rounded-xl border border-warm-200 bg-warm-50/60 px-4 py-3 text-xs text-warm-600 leading-relaxed">

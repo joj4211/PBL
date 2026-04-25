@@ -41,19 +41,28 @@ export default function TopicPage({
     preGateBody: isZh ? '前測完成並成功寫入成績後，才會顯示案例入口。' : 'Case entry unlocks only after pre-test submission is saved.',
     enterPre: isZh ? '進入前測' : 'Start pre-test',
     enterPost: isZh ? '進入後測' : 'Start post-test',
+    retakePre: isZh ? '再次作答前測' : 'Retake pre-test',
+    retakePost: isZh ? '再次作答後測' : 'Retake post-test',
     postReady: isZh ? '你已完成本主題所有案例，現在可進行後測。' : 'All cases are completed. You can now take the post-test.',
-    postCompleted: isZh ? '您已完成後測。' : 'You have completed the post-test.',
+    postCompleted: isZh ? '您已完成後測，可再次作答。' : 'You have completed the post-test and may retake it.',
     attempts: isZh ? '完成次數' : 'Attempts',
     preScore: isZh ? '前測分數' : 'Pre-test score',
     postScore: isZh ? '後測分數' : 'Post-test score',
+    latest: isZh ? '最新' : 'Latest',
+    best: isZh ? '最高' : 'Best',
+    assessmentCount: isZh ? '完成次數' : 'Completed attempts',
     noScore: '--',
     resetAssessments: isZh ? '重置前後測分數' : 'Reset assessment scores',
     resetConfirm: isZh ? '確定要重置此科別前後測分數嗎？重置後可以重新作答前後測。' : 'Reset pre/post assessment scores for this domain? You can retake them after reset.',
   };
 
   const formatScore = (score) => (score == null ? text.noScore : `${score}分`);
-  const preStats = formatScore(assessmentStats?.preTestLatest);
-  const postStats = formatScore(assessmentStats?.postTestLatest);
+  const preLatest = formatScore(assessmentStats?.preTestLatest);
+  const preBest = formatScore(assessmentStats?.preTestBest);
+  const postLatest = formatScore(assessmentStats?.postTestLatest);
+  const postBest = formatScore(assessmentStats?.postTestBest);
+  const preCount = assessmentStats?.preTestCount ?? 0;
+  const postCount = assessmentStats?.postTestCount ?? 0;
 
   return (
     <div
@@ -108,14 +117,32 @@ export default function TopicPage({
         </motion.div>
 
         <div className="w-full max-w-2xl space-y-4">
-          <div className="glass-card p-5 grid grid-cols-2 gap-4 text-sm">
-            <div>
+          <div className="glass-card p-5 grid grid-cols-2 gap-4 text-sm items-start">
+            <div className="min-w-0">
               <p className="text-xs text-warm-400 uppercase tracking-wider">{text.preScore}</p>
-              <p className="text-lg font-bold text-sage-700 mt-1">{preStats}</p>
+              <p className="text-lg font-bold text-sage-700 mt-1">{text.latest}：{preLatest}</p>
+              <p className="text-xs text-warm-500 mt-1">{text.best}：{preBest}</p>
+              <p className="text-xs text-warm-500 mt-1">{text.assessmentCount}：{preCount}</p>
+              <button
+                onClick={onStartPreTest}
+                className="action-pill mt-3 px-4"
+              >
+                {preDone ? text.retakePre : text.enterPre}
+              </button>
             </div>
-            <div>
+            <div className="min-w-0 self-start justify-self-end text-left">
               <p className="text-xs text-warm-400 uppercase tracking-wider">{text.postScore}</p>
-              <p className="text-lg font-bold text-sage-700 mt-1">{postStats}</p>
+              <p className="text-lg font-bold text-sage-700 mt-1">{text.latest}：{postLatest}</p>
+              <p className="text-xs text-warm-500 mt-1">{text.best}：{postBest}</p>
+              <p className="text-xs text-warm-500 mt-1">{text.assessmentCount}：{postCount}</p>
+              {showPostPanel && (
+                <button
+                  onClick={onStartPostTest}
+                  className="action-pill mt-3 px-4"
+                >
+                  {postDone ? text.retakePost : text.enterPost}
+                </button>
+              )}
             </div>
           </div>
 
@@ -140,13 +167,7 @@ export default function TopicPage({
           {!preDone && (
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="glass-card p-6 text-center">
               <p className="text-base font-semibold text-warm-800">{text.preGateTitle}</p>
-              <p className="text-sm text-warm-500 mt-2 mb-4">{text.preGateBody}</p>
-              <button
-                onClick={onStartPreTest}
-                className="action-pill px-5"
-              >
-                {text.enterPre}
-              </button>
+              <p className="text-sm text-warm-500 mt-2">{text.preGateBody}</p>
             </motion.div>
           )}
 
@@ -188,22 +209,6 @@ export default function TopicPage({
                 );
               })}
             </motion.div>
-          )}
-
-          {showPostPanel && (
-            <div className="glass-card p-5 text-center">
-              <p className="text-sm text-warm-500 mb-3">
-                {postDone ? text.postCompleted : text.postReady}
-              </p>
-              {!postDone && (
-                <button
-                  onClick={onStartPostTest}
-                  className="action-pill px-5"
-                >
-                  {text.enterPost}
-                </button>
-              )}
-            </div>
           )}
 
           {loading && (

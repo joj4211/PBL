@@ -96,7 +96,26 @@ async function main() {
       pre_test_score: null,
       interactive_score: 0,
       post_test_score: null,
-      answers: { source: 'scripts/check-supabase.js' },
+      status: 'completed',
+      answers: {
+        schemaVersion: '2.1.0',
+        caseMeta: {
+          caseId: 'nose_allergic_rhinitis',
+          caseTitle: 'probe',
+          domain: 'nose',
+          language: 'zh',
+        },
+        attemptMeta: {
+          startedAt: new Date().toISOString(),
+          completedAt: new Date().toISOString(),
+          durationSeconds: 1,
+          status: 'completed',
+        },
+        summary: {
+          overall: 0,
+        },
+        steps: [],
+      },
     };
 
     const { error: insertError } = await supabase

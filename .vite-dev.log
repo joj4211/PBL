@@ -1,0 +1,29 @@
+
+> medical-pbl@0.1.0 dev
+> vite --host 0.0.0.0
+
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m606[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.1.102:[1m5173[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m下午12:16:26[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/phases/Analytics.jsx, /src/components/pages/DomainAssessmentPage.jsx, /src/components/pages/NoseCasePage.jsx[22m
+[2m下午12:17:54[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[2m下午12:18:10[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/pages/DomainAssessmentPage.jsx, /src/index.css[22m
+[2m下午12:18:19[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[2m下午12:18:53[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/pages/TopicPage.jsx, /src/index.css[22m
+[2m下午12:19:08[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[2m下午12:19:22[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/phases/Analytics.jsx, /src/index.css[22m
+[2m下午12:19:33[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/pages/NoseCasePage.jsx, /src/index.css[22m
+[2m下午12:20:49[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/pages/TopicPage.jsx, /src/index.css[22m
+[2m下午12:27:09[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/pages/TopicPage.jsx, /src/index.css[22m
+[2m下午12:27:37[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ui/ImagePlaceholder.jsx, /src/index.css[22m
+[2m下午12:27:46[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ui/ImagePlaceholder.jsx, /src/index.css[22m
+[2m下午12:27:51[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ui/ImagePlaceholder.jsx, /src/index.css[22m
+[2m下午12:58:54[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/auth/EntryPage.jsx, /src/index.css[22m
+[2m下午12:59:17[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[2m下午12:59:26[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[2m下午1:05:08[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m
+[2m下午1:05:20[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/pages/LandingPage.jsx, /src/index.css[22m
+[2m下午1:05:25[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.jsx, /src/index.css[22m

@@ -3,6 +3,13 @@ import { PHASES, getNextPhase, getPrevPhase } from '../logic/stateMachine';
 import { scoreMultipleChoice, scoreTextInput } from '../logic/scoring';
 import { getCase, defaultCaseId } from '../cases/index';
 
+function createAttemptStart() {
+  return {
+    iso: new Date().toISOString(),
+    ms: Date.now(),
+  };
+}
+
 export const useCase = (caseId = defaultCaseId, lang = 'zh') => {
   const caseData = getCase(caseId, lang);
 
@@ -10,6 +17,7 @@ export const useCase = (caseId = defaultCaseId, lang = 'zh') => {
   const [preTestAnswer, setPreTestAnswer] = useState(null);
   const [answersByPhase, setAnswersByPhase] = useState({});
   const [attemptSaved, setAttemptSaved] = useState(false);
+  const [attemptStartedAt, setAttemptStartedAt] = useState(null);
 
   const advancePhase = useCallback(() => {
     setCurrentPhase((prev) => getNextPhase(prev) ?? prev);
@@ -24,6 +32,7 @@ export const useCase = (caseId = defaultCaseId, lang = 'zh') => {
     setPreTestAnswer(null);
     setAnswersByPhase({});
     setAttemptSaved(false);
+    setAttemptStartedAt(null);
   }, []);
 
   const submitAnswer = useCallback((phaseId, question, value) => {
@@ -62,6 +71,7 @@ export const useCase = (caseId = defaultCaseId, lang = 'zh') => {
     setPreTestAnswer(null);
     setAnswersByPhase({});
     setAttemptSaved(false);
+    setAttemptStartedAt(createAttemptStart());
   }, []);
 
   const startAtPhase = useCallback((phase = PHASES.INTRO) => {
@@ -69,6 +79,7 @@ export const useCase = (caseId = defaultCaseId, lang = 'zh') => {
     setPreTestAnswer(null);
     setAnswersByPhase({});
     setAttemptSaved(false);
+    setAttemptStartedAt(createAttemptStart());
   }, []);
 
   const markAttemptSaved = useCallback(() => {
@@ -81,6 +92,7 @@ export const useCase = (caseId = defaultCaseId, lang = 'zh') => {
     preTestAnswer,
     answersByPhase,
     attemptSaved,
+    attemptStartedAt,
     advancePhase,
     goBackPhase,
     exitToIntro,

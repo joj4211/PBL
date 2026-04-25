@@ -6,8 +6,10 @@ export function useDomainProgress(userId, domainId) {
   const [assessmentStats, setAssessmentStats] = useState({
     preTestLatest: null,
     preTestBest: null,
+    preTestCount: 0,
     postTestLatest: null,
     postTestBest: null,
+    postTestCount: 0,
   });
   const [caseAttempts, setCaseAttempts] = useState({});
   const [loading, setLoading] = useState(true);
@@ -67,12 +69,12 @@ export function useDomainProgress(userId, domainId) {
     const pickStats = (type) => {
       const rows = assessments.filter((item) => item.assessment_type === type);
       if (rows.length === 0) {
-        return { latest: null, best: null };
+        return { latest: null, best: null, count: 0 };
       }
 
       const latest = rows[0].score;
       const best = rows.reduce((max, item) => Math.max(max, item.score ?? 0), 0);
-      return { latest, best };
+      return { latest, best, count: rows.length };
     };
 
     const pre = pickStats('preTest');
@@ -81,8 +83,10 @@ export function useDomainProgress(userId, domainId) {
     setAssessmentStats({
       preTestLatest: pre.latest,
       preTestBest: pre.best,
+      preTestCount: pre.count,
       postTestLatest: post.latest,
       postTestBest: post.best,
+      postTestCount: post.count,
     });
 
     setLoading(false);

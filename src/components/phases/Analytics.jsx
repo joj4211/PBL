@@ -28,6 +28,7 @@ export default function Analytics({
   restart,
   user,
   attemptSaved,
+  attemptStartedAt,
   markAttemptSaved,
   onExit,
 }) {
@@ -54,13 +55,24 @@ export default function Analytics({
   }), [caseData.id, caseData.title, domain.id, lang, steps]);
 
   useEffect(() => {
-    if (!user || attemptSaved || saveStartedRef.current) return;
+    if (!user || !attemptStartedAt || attemptSaved || saveStartedRef.current) return;
 
     let cancelled = false;
     saveStartedRef.current = true;
 
     async function saveAttempt() {
       setSaveStatus('正在儲存本次學習紀錄...');
+      const completedAt = new Date().toISOString();
+      const durationSeconds = Math.max(
+        1,
+        Math.round((Date.now() - attemptStartedAt.ms) / 1000)
+      );
+      const attemptMeta = {
+        startedAt: attemptStartedAt.iso,
+        completedAt,
+        durationSeconds,
+        status: 'completed',
+      };
       const { error } = await supabase.from('case_attempts').insert({
         user_id: user.id,
         case_id: caseData.id,
@@ -69,7 +81,14 @@ export default function Analytics({
         pre_test_score: null,
         interactive_score: overall.percentage,
         post_test_score: null,
-        answers: answersPayload,
+        started_at: attemptStartedAt.iso,
+        completed_at: completedAt,
+        duration_seconds: durationSeconds,
+        status: 'completed',
+        answers: {
+          ...answersPayload,
+          attemptMeta,
+        },
       });
 
       if (cancelled) return;
@@ -89,7 +108,7 @@ export default function Analytics({
     return () => {
       cancelled = true;
     };
-  }, [answersPayload, attemptSaved, caseData.id, domain.id, lang, markAttemptSaved, overall.percentage, user]);
+  }, [answersPayload, attemptSaved, attemptStartedAt, caseData.id, domain.id, lang, markAttemptSaved, overall.percentage, user]);
 
   return (
     <PhaseTransition>

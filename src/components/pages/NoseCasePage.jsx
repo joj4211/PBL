@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   ArrowLeft,
@@ -73,6 +73,10 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
   const [hotspotSelections, setHotspotSelections] = useState({});
   const [saveState, setSaveState] = useState('idle');
   const [saveError, setSaveError] = useState('');
+  const attemptStartedRef = useRef({
+    iso: new Date().toISOString(),
+    ms: Date.now(),
+  });
   const domain = getDomainByCaseId(caseData.id);
   const domainText = domain[lang] ?? domain.zh;
   const domainStyles = domainColorMap[domain.color] ?? domainColorMap.sage;
@@ -236,6 +240,11 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
   const saveAttempt = async () => {
     setSaveState('saving');
     setSaveError('');
+    const completedAt = new Date().toISOString();
+    const durationSeconds = Math.max(
+      1,
+      Math.round((Date.now() - attemptStartedRef.current.ms) / 1000)
+    );
 
     const overall = buildOverallFromSteps(answers);
     const answersPayload = buildCaseAttemptAnswers({
@@ -244,6 +253,12 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
       domain: domain.id,
       language: lang,
       steps: answers,
+      attemptMeta: {
+        startedAt: attemptStartedRef.current.iso,
+        completedAt,
+        durationSeconds,
+        status: 'completed',
+      },
     });
 
     const { error } = await supabase.from('case_attempts').insert({
@@ -254,6 +269,10 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
       pre_test_score: null,
       interactive_score: overall.percentage,
       post_test_score: null,
+      started_at: attemptStartedRef.current.iso,
+      completed_at: completedAt,
+      duration_seconds: durationSeconds,
+      status: 'completed',
       answers: answersPayload,
     });
 

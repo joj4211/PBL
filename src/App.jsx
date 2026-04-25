@@ -169,12 +169,6 @@ function AppContent({ onShowMaintenance }) {
   };
 
   const handleStartDomainAssessment = (kind) => {
-    const completed = kind === 'preTest'
-      ? progress?.pretest_completed
-      : progress?.posttest_completed;
-
-    if (completed) return;
-
     setAssessmentKind(kind);
     setScreen('domainAssessment');
   };
@@ -273,6 +267,7 @@ function AppContent({ onShowMaintenance }) {
         onShowMaintenance={auth.isAdmin ? onShowMaintenance : null}
         isAdmin={auth.isAdmin}
         onSignOut={handleSignOut}
+        displayName={auth.appUser?.display_name ?? auth.user?.user_metadata?.display_name ?? auth.user?.email?.split('@')[0]}
       />
     );
   }
@@ -308,9 +303,6 @@ function AppContent({ onShowMaintenance }) {
         assessment={assessment}
         user={auth.user}
         lang={lang}
-        alreadyCompleted={assessmentKind === 'preTest'
-          ? Boolean(progress?.pretest_completed)
-          : Boolean(progress?.posttest_completed)}
         onBack={() => setScreen('topic')}
         onSaved={async () => {
           await refreshDomainProgress();

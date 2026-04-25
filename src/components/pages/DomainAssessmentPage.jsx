@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { ArrowLeft, CheckCircle2, XCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Button from '../ui/Button';
@@ -45,7 +45,6 @@ export default function DomainAssessmentPage({
   assessment,
   user,
   lang,
-  alreadyCompleted = false,
   onBack,
   onSaved,
   onSignOut,
@@ -56,6 +55,10 @@ export default function DomainAssessmentPage({
   const [submitting, setSubmitting] = useState(false);
   const [savedScore, setSavedScore] = useState(null);
   const [error, setError] = useState('');
+  const attemptStartedRef = useRef({
+    iso: new Date().toISOString(),
+    ms: Date.now(),
+  });
 
   const isZh = lang === 'zh';
   const text = {
@@ -64,7 +67,6 @@ export default function DomainAssessmentPage({
     submit: isZh ? '提交測驗' : 'Submit assessment',
     submitting: isZh ? '提交中...' : 'Submitting...',
     selectPrompt: isZh ? '請先完成所有題目。' : 'Please answer all questions first.',
-    completedPrompt: isZh ? '你已完成此測驗。' : 'You have already completed this assessment.',
     doneTitle: isZh ? '測驗完成' : 'Assessment complete',
     doneNote: isZh ? '分數已成功儲存。' : 'Score saved successfully.',
     feedback: isZh ? '回饋' : 'Feedback',
@@ -87,11 +89,6 @@ export default function DomainAssessmentPage({
   const overall = buildOverallFromSteps(steps);
 
   const handleSubmit = async () => {
-    if (alreadyCompleted) {
-      setError(text.completedPrompt);
-      return;
-    }
-
     if (answered !== total) {
       setError(text.selectPrompt);
       return;
@@ -101,12 +98,24 @@ export default function DomainAssessmentPage({
     setSubmitting(true);
     setError('');
 
+    const completedAt = new Date().toISOString();
+    const durationSeconds = Math.max(
+      1,
+      Math.round((Date.now() - attemptStartedRef.current.ms) / 1000)
+    );
+
     const answersPayload = buildCaseAttemptAnswers({
       caseId: `${domain.id}_${kind}`,
       caseTitle: titleBlock.title,
       domain: domain.id,
       language: lang,
       steps,
+      attemptMeta: {
+        startedAt: attemptStartedRef.current.iso,
+        completedAt,
+        durationSeconds,
+        assessmentType: kind,
+      },
     });
 
     const { error: insertError } = await supabase
@@ -117,13 +126,13 @@ export default function DomainAssessmentPage({
         assessment_type: kind,
         score: overall.percentage,
         answers: answersPayload,
-        completed_at: new Date().toISOString(),
+        started_at: attemptStartedRef.current.iso,
+        completed_at: completedAt,
+        duration_seconds: durationSeconds,
       });
 
     if (insertError) {
-      setError(insertError.message.includes('domain assessment already completed')
-        ? text.completedPrompt
-        : insertError.message);
+      setError(insertError.message);
       setSubmitting(false);
       return;
     }

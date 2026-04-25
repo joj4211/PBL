@@ -40,6 +40,7 @@ export default function ImagePlaceholder({
   onUserHotspotsChange,
 }) {
   const [remoteMedia, setRemoteMedia] = useState(null);
+  const [resolvedAssetLanguage, setResolvedAssetLanguage] = useState('shared');
   const [loadError, setLoadError] = useState(false);
   const [signedUrl, setSignedUrl] = useState(null);
   const [uploadState, setUploadState] = useState('idle');
@@ -94,32 +95,44 @@ export default function ImagePlaceholder({
     if (!caseId || !assetKey) return;
 
     let cancelled = false;
+    setRemoteMedia(null);
+    setResolvedAssetLanguage('shared');
+    setAdminHotspots([]);
+    if (onHotspotsLoaded) {
+      onHotspotsLoaded([]);
+    }
 
     async function loadAssetOverride() {
+      const preferredLanguages = Array.from(new Set(['shared', 'zh', lang].filter(Boolean)));
       const { data, error } = await supabase
         .from('case_media_assets')
         .select('*')
         .eq('case_id', caseId)
-        .eq('language', lang)
         .eq('asset_key', assetKey)
-        .maybeSingle();
+        .in('language', preferredLanguages);
 
-      if (cancelled) return;
-      if (error || !data) return;
+      if (cancelled || error || !data?.length) return;
+
+      const nextAsset = preferredLanguages
+        .map((language) => data.find((item) => item.language === language))
+        .find(Boolean);
+
+      if (!nextAsset) return;
 
       setRemoteMedia({
-        type: data.type,
+        type: nextAsset.type,
         provider: 'supabase',
-        bucket: data.bucket,
-        path: data.path,
-        label: data.label,
-        note: data.note,
-        aspectRatio: data.aspect_ratio,
-        hotspots: data.hotspots ?? [],
+        bucket: nextAsset.bucket,
+        path: nextAsset.path,
+        label: nextAsset.label,
+        note: nextAsset.note,
+        aspectRatio: nextAsset.aspect_ratio,
+        hotspots: nextAsset.hotspots ?? [],
       });
-      setAdminHotspots(data.hotspots ?? []);
+      setResolvedAssetLanguage(nextAsset.language ?? 'shared');
+      setAdminHotspots(nextAsset.hotspots ?? []);
       if (onHotspotsLoaded) {
-        onHotspotsLoaded(data.hotspots ?? []);
+        onHotspotsLoaded(nextAsset.hotspots ?? []);
       }
     }
 
@@ -128,7 +141,7 @@ export default function ImagePlaceholder({
     return () => {
       cancelled = true;
     };
-  }, [assetKey, caseId, lang]);
+  }, [assetKey, caseId, lang, onHotspotsLoaded]);
 
   useEffect(() => {
     if (resolvedProvider !== 'supabase' || !resolvedPath) {
@@ -169,7 +182,7 @@ export default function ImagePlaceholder({
 
     const nextType = file.type.startsWith('video/') ? 'video' : 'image';
     const nextBucket = 'case-media';
-    const nextPath = `${caseId}/${lang}/${assetKey}/${Date.now()}-${safeFileName(file.name)}`;
+    const nextPath = `${caseId}/shared/${assetKey}/${Date.now()}-${safeFileName(file.name)}`;
 
     const { error: uploadStorageError } = await supabase.storage
       .from(nextBucket)
@@ -198,7 +211,7 @@ export default function ImagePlaceholder({
       .from('case_media_assets')
       .upsert({
         case_id: caseId,
-        language: lang,
+        language: 'shared',
         asset_key: assetKey,
         bucket: nextBucket,
         path: nextPath,
@@ -220,6 +233,7 @@ export default function ImagePlaceholder({
     }
 
     setRemoteMedia(nextMedia);
+    setResolvedAssetLanguage('shared');
     setUploadState('uploaded');
   };
 
@@ -242,7 +256,7 @@ export default function ImagePlaceholder({
       .from('case_media_assets')
       .update({ hotspots: nextHotspots })
       .eq('case_id', caseId)
-      .eq('language', lang)
+      .eq('language', resolvedAssetLanguage)
       .eq('asset_key', assetKey);
 
     if (error) {

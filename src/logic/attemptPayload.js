@@ -61,17 +61,19 @@ export function buildCaseAttemptAnswers({
   domain,
   language,
   steps,
+  attemptMeta = null,
 }) {
   const overall = buildOverallFromSteps(steps);
 
   return {
-    schemaVersion: '2.0.0',
+    schemaVersion: '2.1.0',
     caseMeta: {
       caseId,
       caseTitle,
       domain,
       language,
     },
+    attemptMeta,
     summary: {
       overall: overall.percentage,
     },

@@ -7,7 +7,6 @@ import { useAuth } from './hooks/useAuth';
 import { PHASES } from './logic/stateMachine';
 import { useDomainProgress } from './hooks/useDomainProgress';
 import { getDomainAssessment } from './config/domainAssessments';
-import { supabase } from './lib/supabaseClient';
 import { defaultCaseId, getStepCase } from './cases/index';
 import AppShell from './components/layout/AppShell';
 import LandingPage from './components/pages/LandingPage';
@@ -138,7 +137,6 @@ function AppContent({ onShowMaintenance }) {
   const [selectedTopic, setSelectedTopic] = useState(null);
   const [selectedCaseId, setSelectedCaseId] = useState(defaultCaseId);
   const [assessmentKind, setAssessmentKind] = useState('preTest');
-  const [resettingAssessments, setResettingAssessments] = useState(false);
   const caseState = useCase(selectedCaseId, lang);
   const { currentPhase, goBackPhase, exitToIntro } = caseState;
 
@@ -190,48 +188,6 @@ function AppContent({ onShowMaintenance }) {
     setSelectedTopic(null);
     setAssessmentKind('preTest');
     await auth.signOut();
-  };
-
-  const handleResetAssessments = async () => {
-    if (!auth.user?.id || !selectedTopic?.id || resettingAssessments) return;
-
-    setResettingAssessments(true);
-
-    const { error: deleteError } = await supabase
-      .from('domain_assessments')
-      .delete()
-      .eq('user_id', auth.user.id)
-      .eq('domain_id', selectedTopic.id);
-
-    if (deleteError) {
-      window.alert(`重置失敗：${deleteError.message}`);
-      setResettingAssessments(false);
-      return;
-    }
-
-    const { error: progressError } = await supabase
-      .from('user_domain_progress')
-      .upsert({
-        user_id: auth.user.id,
-        domain_id: selectedTopic.id,
-        pretest_completed: false,
-        posttest_completed: false,
-        latest_pretest_score: null,
-        best_pretest_score: null,
-        latest_posttest_score: null,
-        best_posttest_score: null,
-        pretest_completed_at: null,
-        posttest_completed_at: null,
-      }, { onConflict: 'user_id,domain_id' });
-
-    if (progressError) {
-      window.alert(`重置失敗：${progressError.message}`);
-      setResettingAssessments(false);
-      return;
-    }
-
-    await refreshDomainProgress();
-    setResettingAssessments(false);
   };
 
   if (auth.loading) {
@@ -286,9 +242,6 @@ function AppContent({ onShowMaintenance }) {
         assessmentStats={assessmentStats}
         caseAttempts={caseAttempts}
         loading={progressLoading}
-        canResetAssessments={true}
-        onResetAssessments={handleResetAssessments}
-        resettingAssessments={resettingAssessments}
       />
     );
   }

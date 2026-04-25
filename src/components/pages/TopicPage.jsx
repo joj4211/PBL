@@ -22,9 +22,6 @@ export default function TopicPage({
   assessmentStats,
   caseAttempts,
   loading,
-  canResetAssessments = false,
-  onResetAssessments,
-  resettingAssessments,
 }) {
   const { setLang } = useLanguage();
   const isZh = lang === 'zh';
@@ -52,8 +49,6 @@ export default function TopicPage({
     best: isZh ? '最高' : 'Best',
     assessmentCount: isZh ? '完成次數' : 'Completed attempts',
     noScore: '--',
-    resetAssessments: isZh ? '重置前後測分數' : 'Reset assessment scores',
-    resetConfirm: isZh ? '確定要重置此科別前後測分數嗎？重置後可以重新作答前後測。' : 'Reset pre/post assessment scores for this domain? You can retake them after reset.',
   };
 
   const formatScore = (score) => (score == null ? text.noScore : `${score}分`);
@@ -145,24 +140,6 @@ export default function TopicPage({
               )}
             </div>
           </div>
-
-          {canResetAssessments && (preDone || postDone) && (
-            <div className="flex justify-end">
-              <button
-                onClick={() => {
-                  if (!onResetAssessments) return;
-                  if (!window.confirm(text.resetConfirm)) return;
-                  onResetAssessments();
-                }}
-                disabled={loading || resettingAssessments}
-                className="danger-pill"
-              >
-                {resettingAssessments
-                  ? (isZh ? '重置中...' : 'Resetting...')
-                  : text.resetAssessments}
-              </button>
-            </div>
-          )}
 
           {!preDone && (
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="glass-card p-6 text-center">

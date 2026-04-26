@@ -13,13 +13,8 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
   const [medicalRole, setMedicalRole] = useState('');
   const [message, setMessage] = useState('');
   const [submitting, setSubmitting] = useState(false);
-  const [showTestAccounts, setShowTestAccounts] = useState(false);
 
   const isSignUp = mode === 'signUp';
-  const testAccounts = [
-    { email: 'test101@example.com', password: '123456' },
-    { email: 'test102@example.com', password: '123456' },
-  ];
   const roleOptions = ['主治醫師', '住院醫師', 'PGY', 'Clerk'];
 
   const text = {
@@ -44,8 +39,6 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
       start: '登入並開始',
       confirmation: '註冊完成，但目前後台仍要求 email 確認。請確認信箱後再登入。',
       note: '請使用 Supabase Auth 帳號登入。未登入者無法讀取 private bucket 內的圖片或影片。',
-      useTestLogin: '使用測試帳號登入',
-      chooseTestAccount: '選擇測試帳號',
     },
     en: {
       eyebrow: 'Interactive PBL Learning',
@@ -68,8 +61,6 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
       start: 'Sign in and start',
       confirmation: 'Account created, but email confirmation is still required. Please confirm your email, then sign in.',
       note: 'Sign in with Supabase Auth. Private bucket images and videos are available only after sign-in.',
-      useTestLogin: 'Use test account',
-      chooseTestAccount: 'Choose a test account',
     },
   }[lang];
 
@@ -89,25 +80,6 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
       } else {
         await onSignIn({ email, password });
       }
-    } catch (error) {
-      setMessage(error.message || text.failed);
-    } finally {
-      setSubmitting(false);
-    }
-  };
-
-  const handleUseTestAccount = async (accountEmail) => {
-    const account = testAccounts.find((item) => item.email === accountEmail);
-    if (!account) return;
-
-    setEmail(account.email);
-    setPassword(account.password);
-    setMode('signIn');
-    resetMessage();
-
-    setSubmitting(true);
-    try {
-      await onSignIn({ email: account.email, password: account.password });
     } catch (error) {
       setMessage(error.message || text.failed);
     } finally {
@@ -257,38 +229,6 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
               {submitting ? text.processing : isSignUp ? text.createAccount : text.start}
             </Button>
           </form>
-
-          {!isSignUp && (
-            <div className="mt-4 border-t border-warm-200 pt-4">
-              <button
-                type="button"
-                onClick={() => setShowTestAccounts((prev) => !prev)}
-                className="w-full rounded-xl border border-sage-200 bg-sage-50/70 px-4 py-2.5 text-sm font-semibold text-sage-700 hover:bg-sage-100 transition-colors"
-                disabled={loading || submitting}
-              >
-                {submitting ? text.processing : text.useTestLogin}
-              </button>
-
-              {showTestAccounts && (
-                <div className="mt-3 rounded-xl border border-warm-200 bg-white/55 p-3">
-                  <p className="text-xs font-semibold text-warm-600">{text.chooseTestAccount}</p>
-                  <div className="mt-2 space-y-2">
-                    {testAccounts.map((account) => (
-                      <button
-                        key={account.email}
-                        type="button"
-                        disabled={loading || submitting}
-                        onClick={() => handleUseTestAccount(account.email)}
-                        className="w-full rounded-lg border border-warm-200 bg-white/80 px-3 py-2 text-left text-sm font-semibold text-warm-700 transition-colors hover:border-sage-300 hover:bg-sage-50 disabled:cursor-not-allowed disabled:opacity-60"
-                      >
-                        {account.email}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
         </section>
       </motion.div>
     </div>

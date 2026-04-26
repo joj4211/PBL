@@ -39,8 +39,8 @@ export default function MaintenancePage({
     openArchive: isZh ? '開啟範例' : 'Open example',
     exportTitle: isZh ? '輸出統計資料' : 'Export stats data',
     exportDescription: isZh
-      ? '下載所有帳號、前後測、主題進度與案例紀錄的 Excel 檔。'
-      : 'Download an Excel workbook with all users, assessments, progress, and case attempts.',
+      ? '下載 app_users、case_attempts、domain_assessments 三張原始資料表的 Excel 檔。'
+      : 'Download a raw Excel workbook for app_users, case_attempts, and domain_assessments.',
     exportButton: isZh ? '下載 Excel' : 'Download Excel',
     exporting: isZh ? '輸出中...' : 'Exporting...',
     exportDone: isZh ? '已下載 Excel 統計資料。' : 'Excel statistics downloaded.',
@@ -54,22 +54,19 @@ export default function MaintenancePage({
 
     try {
       const { downloadStatisticsWorkbook } = await import('../../utils/statisticsWorkbook');
-      const [usersRes, progressRes, assessmentsRes, attemptsRes] = await Promise.all([
+      const [usersRes, assessmentsRes, attemptsRes] = await Promise.all([
         supabase
           .from('app_users')
-          .select('user_id,user_account,display_name,medical_role,isAdmin,created_at'),
-        supabase
-          .from('user_domain_progress')
           .select('*'),
         supabase
           .from('domain_assessments')
-          .select('id,user_id,domain_id,assessment_type,score,answers,started_at,completed_at,duration_seconds,created_at'),
+          .select('*'),
         supabase
           .from('case_attempts')
-          .select('id,user_id,case_id,domain,language,interactive_score,answers,started_at,completed_at,duration_seconds,status,created_at'),
+          .select('*'),
       ]);
 
-      const nextError = usersRes.error || progressRes.error || assessmentsRes.error || attemptsRes.error;
+      const nextError = usersRes.error || assessmentsRes.error || attemptsRes.error;
 
       if (nextError) {
         setExportState('error');
@@ -78,10 +75,9 @@ export default function MaintenancePage({
       }
 
       await downloadStatisticsWorkbook({
-        users: usersRes.data ?? [],
-        domainProgress: progressRes.data ?? [],
-        assessmentAttempts: assessmentsRes.data ?? [],
+        appUsers: usersRes.data ?? [],
         caseAttempts: attemptsRes.data ?? [],
+        domainAssessments: assessmentsRes.data ?? [],
       });
 
       setExportState('done');

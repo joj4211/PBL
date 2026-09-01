@@ -50,7 +50,7 @@
         },
         {
           "id": "B",
-          "text": "(B) The patient has severe OSA, but the AHI alone does not identify the anatomical level of upper-airway collapse or determine which operation should be performed."
+          "text": "(B) The patient has severe OSA, but the AHI alone does not identify the anatomical level of upper-airway collapse or determine which operation should be performed.",
           "correct": true
         },
         {
@@ -99,7 +99,7 @@
         },
         {
           "id": "C",
-          "text": "(C) Tongue base"
+          "text": "(C) Tongue base",
           "correct": true
         },
         {

@@ -14,135 +14,151 @@
   "steps": [
     {
       "title": "Step 1/6: Clinical Symptoms and Screening",
-      "scenario": "A 36-year-old man with BMI 26 visits the ENT clinic because of severe long-term snoring. His family has witnessed apneic episodes during sleep.",
+      "scenario": "A 36-year-old man with a BMI of 26 kg/m² presents to your ENT clinic because of long-standing disruptive snoring.\nHis wife reports that his sleep has become increasingly abnormal.\nOn further questioning, he reports:\n•	Excessive daytime sleepiness \n•	Nasal obstruction \n•	Sneezing \nHis wife additionally reports recurrent pauses in breathing during sleep.\nHe has no known major cardiopulmonary or neurologic comorbidity.\nPhysical examination demonstrates:\n•	Bilateral tonsils: Grade II \n•	Friedman tongue position: Class II \n•	BMI: 26 kg/m² ",
       "media": "Load image: SNOT-22, ESS, and STOP-Bang questionnaires",
-      "question": "To quickly screen for high-risk undiagnosed OSA in clinic and help identify moderate to severe disease, which questionnaire should you use?",
+      "question": "Based on this clinical presentation, what is the most appropriate next step to establish the diagnosis?",
       "options": [
         {
           "id": "A",
-          "text": "(A) SNOT-22"
+          "text": "(A) Diagnose OSA clinically based on snoring and witnessed apnea alone."
         },
         {
           "id": "B",
-          "text": "(B) Epworth Sleepiness Scale (ESS)"
+          "text": "(B) Use STOP-Bang as the definitive diagnostic test."
         },
         {
           "id": "C",
-          "text": "(C) STOP-Bang questionnaire",
+          "text": "(C) Obtain objective sleep testing with polysomnography or an appropriate home sleep apnea test.",
           "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) Perform DISE before sleep testing to determine whether OSA is present."
         }
       ],
-      "feedback": "Correct answer: C\n\nAttending tip: STOP-Bang includes snoring, tiredness, observed apnea, hypertension, BMI, age, neck circumference, and gender. It is a practical clinical screening tool for undiagnosed OSA and can help identify patients with moderate to severe disease."
-    },
+      "feedback": "Correct answer: C\n\nThe combination of:\n•	Habitual loud snoring \n•	Witnessed apnea \n•	Excessive daytime sleepiness \ncreates a high clinical suspicion for OSA, but clinical history and screening questionnaires do not establish the diagnosis.\nObjective sleep testing is required.\nFor an uncomplicated adult at increased risk for moderate-to-severe OSA, the AASM accepts either polysomnography (PSG) or a technically adequate home sleep apnea test (HSAT) as diagnostic options. \nClinical Pearl: \nScreening estimates risk. Objective sleep testing establishes the diagnosis.\n➡️ Transition\nIn this patient, an overnight PSG is obtained.\n \n📚 Evidence\nKapur VK, Auckley DH, Chowdhuri S, et al. Clinical practice guideline for diagnostic testing for adult obstructive sleep apnea. J Clin Sleep Med. 2017;13(3):479–504. \n2026 note: AASM currently has a focused update of the adult diagnostic-testing guideline in development; the 2017 guideline remains the published diagnostic CPG at present."
+	},
     {
       "title": "Step 2/6: PSG and Severity",
       "scenario": "To confirm the diagnosis, you arrange overnight polysomnography. The report shows an apnea-hypopnea index (AHI) of 33.7 events per hour.",
       "media": "Load image: PSG tracing showing airflow cessation with oxygen desaturation",
-      "question": "Based on this AHI value, what severity grade is this patient's obstructive sleep apnea?",
+      "question": "Which interpretation is most accurate?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Mild OSA"
+          "text": "(A) The patient has moderate OSA, and the PSG identifies the tongue base as the major site of obstruction."
         },
         {
           "id": "B",
-          "text": "(B) Moderate OSA"
+          "text": "(B) The patient has severe OSA, but the AHI alone does not identify the anatomical level of upper-airway collapse or determine which operation should be performed."
+          "correct": true
         },
         {
           "id": "C",
-          "text": "(C) Severe OSA",
-          "correct": true
+          "text": "(C) The patient has severe OSA, therefore tongue-base surgery is indicated",
         }
       ],
-      "feedback": "Correct answer: C\n\nClinical definition: AHI less than 5 is normal, 5-15 is mild OSA, 15-30 is moderate OSA, and AHI of 30 or higher is severe OSA. This patient's AHI is 33.7, which is severe and, with daytime sleepiness, requires active treatment."
-    },
+      "feedback": "Correct answer: B\n\nAn AHI ≥30 events/hour is conventionally categorized as severe OSA.\nTherefore:\nAHI 33.7/h → Severe OSA\nHowever, this is the first important surgical teaching point:\nSeverity ≠ Site of obstruction\nPSG characterizes the physiologic burden of sleep-disordered breathing, but it does not tell the surgeon whether the dominant collapse occurs at the:\n•	Velum \n•	Lateral pharyngeal wall \n•	Tongue base \n•	Epiglottis \n•	Or multiple levels \nThe International Consensus Statement on OSA emphasizes that OSA evaluation and treatment require integration of sleep-study findings with the patient's phenotype and upper-airway anatomy. \nClinical Pearl: \nAHI tells you how severe the disease is—not where to operate.\n\nTransition: \nThe patient now has an objective diagnosis: Severe obstructive sleep apnea\nThe next question becomes: How should he be treated initially?\n\nEvidence\nChang JL, Goldberg AN, Alt JA, et al. International consensus statement on obstructive sleep apnea. Int Forum Allergy Rhinol. 2023;13(7):1061–1482."
+	},
     {
       "title": "Step 3/6: Medical Management and Compliance",
-      "scenario": "For severe OSA, you first recommend the noninvasive gold-standard treatment: nasal CPAP. One month later, the patient returns and says he cannot sleep with the mask because leak and claustrophobia are intolerable. He strongly requests surgery. Physical examination shows bilateral grade II tonsillar hypertrophy and Friedman class 2 tongue position.",
-      "media": "Load image: Endoscopic evaluation",
-      "question": "What is the current medical definition of CPAP compliance?",
+      "scenario": "Because the patient has severe OSA with excessive daytime sleepiness, PAP therapy is recommended. He is started on nasal PAP therapy and receives treatment for his concomitant nasal symptoms.\nHowever, despite attempts to use the device, he reports:\n“I can't sleep with the mask on. I can't tolerate it.”\nHe requests a surgical option.",
+      "question": "What is the most appropriate next step?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Use on more than 5 nights per week and more than 4 hours per night.",
+          "text": "(A) Discuss referral for comprehensive sleep-surgical evaluation and alternative treatment options.",
           "correct": true
         },
         {
           "id": "B",
-          "text": "(B) The device must be worn for more than 8 hours every day, whether daytime or nighttime."
+          "text": "(B) Proceed directly to UPPP because the tonsils are enlarged."
         },
         {
           "id": "C",
-          "text": "(C) Wearing it for more than 30 minutes before sleep counts as compliant."
+          "text": "(C) Stop treatment because PAP intolerance means the OSA cannot be treated."
         }
       ],
-      "feedback": "Correct answer: A\n\nClinical pitfall: CPAP compliance is generally defined as use on more than 5 nights per week and more than 4 hours per night. This young patient cannot tolerate CPAP because of mask discomfort, which is one of the most common reasons to consider surgical intervention."
+      "feedback": "Correct answer: A\n\nCPAP is strongly supported for adults with OSA and excessive sleepiness, and CPAP or APAP are standard ongoing PAP modalities. \nBut if PAP is intolerable or unacceptable, the next step is not automatically a particular operation.\nThe AASM gives a strong recommendation that clinicians discuss referral to a sleep surgeon in adults with OSA who are intolerant or unaccepting of PAP; the guideline specifically supports this discussion for patients with BMI <40 kg/m². \nThis patient:\nBMI 26 + severe OSA + PAP intolerance\nis therefore an appropriate candidate for surgical evaluation.\nClinical Pearl\nPAP intolerance selects the surgical pathway. It does not select the operation.\nTransition: \nNow that surgery is being considered, the surgeon needs to answer:\nWhere does this patient's airway actually collapse during sleep?\n\n Evidence\nPatil SP, Ayappa IA, Caples SM, et al. Treatment of adult obstructive sleep apnea with positive airway pressure: An AASM clinical practice guideline. J Clin Sleep Med. 2019;15(2):335–343. \nKent D, Stanley J, Aurora RN, et al. Referral of adults with obstructive sleep apnea for surgical consultation: An AASM clinical practice guideline. J Clin Sleep Med. 2021;17(12):2499–2505."
     },
     {
       "title": "Step 4/6: DISE and Surgical Intervention",
-      "scenario": "Because the patient chooses surgery and OSA is often caused by multilevel obstruction, you arrange drug-induced sleep endoscopy (DISE) under anesthesia to observe the dynamic sites of collapse. You then perform uvulopalatopharyngoplasty (UPPP) and transoral robotic surgery for tongue-base reduction.",
+      "scenario": "Awake examination shows Grade II tonsils and Friedman tongue position class II.\nHowever, the surgeon recognizes that awake anatomy may not reproduce the dynamic collapse that occurs during sleep.\nThe patient therefore undergoes:\nDrug-Induced Sleep Endoscopy (DISE)",
       "media": "Load image: DISE view showing soft-palate and tongue-base collapse during sleep",
-      "question": "Why is DISE a key step in modern sleep surgery before UPPP and TORS?",
+      "question": "Which anatomical level demonstrates clinically significant collapse （collapse > 50% of the original lumen）in this DISE video?",
       "options": [
         {
           "id": "A",
-          "text": "(A) To directly remove the tonsils in clinic."
+          "text": "(A) Velum"
+          "correct": true
         },
         {
           "id": "B",
-          "text": "(B) Awake physical examination cannot fully reflect collapse during sleep after muscle relaxation; DISE dynamically identifies obstruction sites such as the soft palate or tongue base and guides surgical planning.",
+          "text": "(B) Oropharyngeal lateral walls",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) To perform biopsy and exclude nasopharyngeal carcinoma."
+          "text": "(C) Tongue base"
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) Epiglottis"
+        },
+        {
+          "id": "E",
+          "text": "(E) Arytenoid"
         }
       ],
-      "feedback": "Correct answer: B\n\nProcedure interpretation: In patients with severe AHI plus tonsillar hypertrophy and tongue-base issues, obstruction is often three-dimensional. DISE simulates sleep and lets the surgeon see whether collapse is from the soft palate, lateral pharyngeal walls, tongue base, or multiple levels, guiding whether TORS tongue-base reduction is needed."
+      "feedback": "Correct answer: A,B,C\n\nOSA is a dynamic upper-airway disorder.\nDISE can reveal sleep-state collapse involving the:\n•	Velum \n•	Lateral pharyngeal walls \n•	Tongue base \n•	Epiglottis \nand can demonstrate multilevel obstruction that may be incompletely predicted by awake examination.\nAAO-HNS states that DISE may be useful in determining the most effective OSA surgical treatment plan. \nA 2024 systematic review and meta-analysis of DISE-guided upper-airway surgery also found that collapse patterns identified by DISE are associated with surgical outcomes and failure risk. \n Clinical Pearl:\nAwake examination describes anatomy. DISE demonstrates collapse.\nTransition:\nThe airway assessment now suggests that the patient requires a site-directed multilevel surgical strategy.\nThe next decision is:\nWhen should tongue-base surgery be added?\nEvidence: \nAAO-HNS. Position statement: Treatment of obstructive sleep apnea. Revised 2021. \nQi Y, Zhao Y, Yan Y, Wu D. Surgical failure guided by DISE in patients with obstructive sleep apnea: A systematic review and meta-analysis. Eur Arch Otorhinolaryngol. 2024;281(7):3333–3343."
     },
     {
-      "title": "Step 5/6: Postoperative Complication: Delayed Hemorrhage",
-      "scenario": "The operation is completed smoothly and the patient has been discharged. On postoperative day 13, he suddenly rushes to the emergency department because of massive oropharyngeal bleeding and epistaxis. His vital signs are stable, but fresh blood keeps pouring into the oral cavity. Endoscopy shows a massive blood clot over the tongue base, making the bleeding point unclear.",
+      "title": "Step 5/6: Selecting the Operation",
+      "scenario": "The surgical team plans treatment based on the patient's anatomical and dynamic airway assessment.\nThe final surgical plan includes: UPPP  + TORS tongue-base reduction",
       "media": "Load image: Emergency endoscopic view showing a massive clot over the tongue base and tonsillar fossa",
-      "question": "For delayed bleeding after UPPP and TORS, what should first-line emergency conservative management and evaluation include?",
+      "question": "Which finding provides the strongest rationale for adding TORS tongue-base reduction to the surgical plan?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Blindly clamp deep in the tongue base in the emergency department."
+          "text": "(A) AHI >30 events/hour"
         },
         {
           "id": "B",
-          "text": "(B) Secure the airway, check coagulation labs, apply local epinephrine by inhalation or compression, and give intravenous tranexamic acid.",
+          "text": "(B) Clinically significant tongue-base / retrolingual obstruction demonstrated during airway evaluation in an appropriately selected patient.",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) Immediately perform tracheostomy."
+          "text": "(C) PAP intolerance alone"
         }
       ],
-      "feedback": "Correct answer: B\n\nEmergency nightmare: Delayed postoperative bleeding after TORS and UPPP is one of the most frightening complications, especially when clot accumulates at the tongue base and threatens suffocation. In this case, the emergency team excluded wound dehiscence, used epinephrine spray and tranexamic acid to stabilize the bleeding, and admitted the patient for supportive care."
+      "feedback": "Correct answer: B\n\nThis is the central surgical principle of the case.\nTORS is not an AHI-directed operation. It is a site-directed operation.\nA patient can have an AHI of 50 without meaningful tongue-base collapse—and tongue-base reduction would not automatically be justified.\nConversely, when tongue-base obstruction is an important component of the patient's airway phenotype, TORS may be considered as part of an individualized surgical plan.\nA 2026 systematic review of standalone TORS tongue-base surgery found that the published studies largely involved adults with:\n•	Moderate-to-severe OSA \n•	PAP failure/intolerance \n•	Evidence of tongue-base hypertrophy/obstruction \nMean AHI improved from 34.2 to 14.7 events/hour, but the authors stressed the limited number of studies, heterogeneity, and importance of careful patient selection. \nWhy multilevel surgery?\nIf the patient has clinically important obstruction at both:\nPalatal/pharyngeal level\nand\nTongue-base level\nthen treatment may need to address both sites.\nClinical Pearl:\nMultilevel surgery should be justified by multilevel obstruction—not simply by severe OSA.\nThe final question is:\nHow do you know whether the OSA was actually treated successfully?\n\n 📚 Evidence\nChaidas K, Mouratidou S. Standalone transoral robotic surgery for obstructive sleep apnoea: A systematic literature review of clinical outcomes. Life. 2026;16(2):332. \nMouratidou S, Chaidas K. Transoral robotic surgery for patients with obstructive sleep apnoea: A systematic review of current practices. 2024.\nAAO-HNS recognizes tongue-base procedures, including midline glossectomy-type approaches, as potential components of comprehensive adult OSA surgical management."
     },
     {
       "title": "Step 6/6: Discharge Instructions and Wound Care",
-      "scenario": "After hemostatic medication and short-term nasogastric tube placement, the wound recovers well with no further bleeding. The patient tolerates cold liquid diet and is ready for discharge.",
-      "media": "Load image: Postoperative cold liquid diet instruction sheet",
-      "question": "Which postoperative care principle should you strongly emphasize at discharge?",
+      "scenario": "After appropriate postoperative healing, the patient reports:\n“I feel much better, and my family says my snoring is much quieter.”\nHe asks:\n“Does that mean my sleep apnea is cured?”"
+      "question": "What is the most appropriate method to determine whether surgical treatment has successfully controlled his OSA?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Resume hot soup and hard food immediately after discharge to regain strength."
+          "text": "(A) Resolution of snoring alone"
         },
         {
           "id": "B",
-          "text": "(B) The wound may still ooze during the first 2 postoperative weeks. Avoid forceful coughing, maintain a cold liquid diet during the first week, and hold ice water in the mouth if bleeding occurs.",
-          "correct": true
+          "text": "(B) Improvement in daytime sleepiness alone"
         },
         {
           "id": "C",
-          "text": "(C) Sing loudly every day to rehabilitate the throat muscles."
+          "text": "(C) A wider airway on postoperative office endoscopy"
+        },
+        {
+          "id": "D",
+          "text": "(D) Clinical reassessment combined with objective follow-up sleep testing after an appropriate healing interval",
+          "correct": true
         }
       ],
-      "feedback": "Correct answer: B\n\nAttending reminder: After oropharyngeal mucosal surgery, especially tonsil and tongue-base surgery, the pseudomembrane sloughing period around postoperative days 7-14 is the peak time for delayed bleeding. Forceful coughing must be avoided, and a strict cold liquid diet such as cold milk or pudding plus ice therapy helps constrict vessels and prevent life-threatening hemorrhage."
+      "feedback": "Correct answer: D\n\nSubjective improvement matters, but:\nLess snoring ≠ cure of OSA\nand:\nImproved ESS ≠ normalization of respiratory events\nOSA treatment efficacy should include objective reassessment of sleep-disordered breathing after a non-PAP intervention such as upper-airway surgery.\nAdvanced Teaching Point\nSleep-surgery studies frequently use a criterion such as:\n≥50% reduction in AHI + postoperative AHI <20\nto define surgical success.\nHowever:\nSurgical success ≠ cure\nA patient can meet a research definition of success and still have clinically important residual OSA.\nTherefore outcome assessment should integrate:\n•	Post-treatment AHI / REI \n•	Oxygenation \n•	Residual daytime symptoms \n•	Sleep-related quality of life \n•	Cardiometabolic context \n•	Need for adjunctive therapy \nClinical Pearl: \nThe operation is finished when the wound heals. OSA treatment is finished only when the outcome is objectively reassessed."
     }
   ]
 }

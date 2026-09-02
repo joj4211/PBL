@@ -14,135 +14,151 @@
   "steps": [
     {
       "title": "Step 1/6: 臨床表現與快速篩檢 (Clinical Symptoms & Screening)",
-      "scenario": "一位 36 歲男性 (BMI 26) 來到耳鼻喉科門診，主訴長年來有嚴重的打呼問題，且家人目擊過他在睡眠中出現呼吸暫停 (Witnessed sleep apnea)",
+      "scenario": "一位 36 歲男性（BMI 為 26 kg/m²）因長期干擾他人的打鼾問題，至耳鼻喉科門診求診。\n其妻子表示他的睡眠狀況變得越來越異常。\n經進一步問診，他主訴有以下症狀：\n• 日間過度嗜睡 \n• 鼻塞 \n• 打噴嚏 \n其妻子補充指出，他在睡眠期間反覆出現呼吸暫停的現象。\n他已知無重大心肺或神經系統合併症。\n身體檢查顯示：\n• 雙側扁桃腺：二級 \n• 費德曼舌頭位置：第二級 \n• BMI：26 kg/m²",
       "media": "載入圖片：BOX snot-22, ESS, stop-bang questionare",
-      "question": "為了在門診快速「篩檢未診斷的 OSA高風險族群」，並協助鑑別是否為中度至重度患者，你應該請他填寫下列哪一份量表？",
+      "question": "根據此臨床表現，為明確診斷，最適當的下一步措施為何？",
       "options": [
         {
           "id": "A",
-          "text": "(A) SNOT-22 (鼻腔鼻竇結果測試)"
+          "text": "(A) 僅根據打鼾與目擊的呼吸暫停表現，即可在臨床上診斷為阻塞性睡眠呼吸中止症（OSA）。"
         },
         {
           "id": "B",
-          "text": "(B) ESS (Epworth Sleepiness Scale)"
+          "text": "(B) 將 STOP-Bang 問卷作為確診的最終診斷工具。"
         },
         {
           "id": "C",
-          "text": "(C) STOP-Bang questionnaire",
+          "text": "(C) 透過多頻道睡眠專科檢查（PSG）或適當的居家睡眠呼吸中止檢測取得客觀的睡眠測試數據。",
           "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) 在進行睡眠測試前先施行藥物誘發睡眠內視鏡檢查（DISE），以確定是否存在阻塞性睡眠呼吸中止症（OSA）。"
         }
       ],
-      "feedback": "正確答案：C\n\n主治醫師的 Tip： STOP-Bang questionnaire 包含打呼、疲倦、目擊呼吸中止、高血壓、BMI、年齡、頸圍與性別，是非常實用的臨床篩檢工具。它不僅可用來篩檢未診斷的 OSA，還能有效鑑別中度至重度的患者。"
+      "feedback": "正確答案：C\n\n結合以下症狀：\n• 習慣性大聲打鼾\n• 目擊呼吸暫停\n• 日間過度嗜睡\n建立了高度的阻塞性睡眠呼吸中止症（OSA）臨床懷疑，但單憑臨床病史和篩檢問卷無法確立診斷。\n必須進行客觀的睡眠測試。\n對於無合併症且患有中度至重度 OSA 風高風險的成年患者，美國睡眠醫學會（AASM）接受多頻道睡眠專科檢查（PSG）或技術上合格的居家睡眠呼吸中止檢測（HSAT）作為診斷選項。\n\n臨床重點（Clinical Pearl）：\n篩檢用於評估風險；客觀的睡眠測試方能確立診斷。\n\n過渡銜接\n針對該名患者，已安排並完成一夜的 PSG 檢查。\n\n實證依據\nKapur VK, Auckley DH, Chowdhuri S, et al. Clinical practice guideline for diagnostic testing for adult obstructive sleep apnea. J Clin Sleep Med. 2017;13(3):479–504.\n2026 年備註：AASM 目前正在制定成人診斷測試指南的焦點更新版；目前 2017 年的指南仍為已發布的診斷臨床實踐指南（CPG）。"
     },
     {
       "title": "Step 2/6: 睡眠多項生理檢查與嚴重度分級 (PSG & Severity)",
       "scenario": "為了確診，你為他安排了醫院的整夜睡眠多項生理功能檢查 (Polysomnography, PSG)。檢查報告出爐，顯示他的「睡眠呼吸中止與淺呼吸指數 (Apnea-Hypopnea Index, AHI)」高達 33.7 times/hour。",
       "media": "載入圖片：PSG 圖譜，顯示呼吸氣流停止合併血氧下降的 oxygen dip",
-      "question": "根據這份 PSG 報告的 AHI 數值，該名患者的阻塞性睡眠呼吸中止症 (OSA) 屬於哪一個嚴重度等級？",
+      "question": "哪一項解讀最為準確？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 輕度 (Mild OSA)"
+          "text": "(A) 患者患有中度阻塞性睡眠呼吸中止症（OSA），且多頻道睡眠專科檢查（PSG）確認舌根為主要阻塞部位。"
         },
         {
           "id": "B",
-          "text": "(B) 中度 (Moderate OSA)"
+          "text": "(B) 患者患有重度阻塞性睡眠呼吸中止症（OSA），但僅憑呼吸暫停低通氣指數（AHI）無法確定上呼吸道塌陷的解剖結構層級，也無法決定應施行何種手術。",
+          "correct": true
         },
         {
           "id": "C",
-          "text": "(C) 重度 (Severe OSA)",
-          "correct": true
+          "text": "(C) 患者患有重度阻塞性睡眠呼吸中止症（OSA），因此適合進行舌根手術"
         }
       ],
-      "feedback": "正確答案：C\n\n臨床定義： 根據診斷標準，AHI < 5 為正常；AHI 介於 515 為輕度；AHI 介於 1530 為中度；當 AHI ≥ 30 次/小時，即診斷為重度阻塞性睡眠呼吸中止症 (Severe OSA)。該患者 AHI 高達 33.7，屬於重度，且併發日間嗜睡，必須積極治療。"
+      "feedback": "正確答案：B\n\nAHI ≥ 30 次/小時在傳統上被歸類為重度 OSA。\n因此：\nAHI 33.7 次/小時 → 重度 OSA\n然而，這是第一個重要的外科教學重點：\n嚴重程度 ≠ 阻塞部位\nPSG 可描繪睡眠呼吸障礙的生理負擔特徵，但無法告訴外科醫師主要塌陷是發生在：\n• 軟顎（Velum）\n• 側咽壁（Lateral pharyngeal wall）\n• 舌根（Tongue base）\n• 會厭（Epiglottis）\n• 或多重層級\n《阻塞性睡眠呼吸中止症國際共識聲明》強調，OSA 的評估與治療需要將睡眠檢查結果與患者的臨床表現型及上呼吸道解剖結構進行整合。\n\n臨床重點（Clinical Pearl）：\nAHI 告訴你疾病有多嚴重，而非要在哪裡開刀。\n\n過渡銜接：\n患者目前已取得客觀診斷：重度阻塞性睡眠呼吸中止症。\n接下來的問題是：初期的最適當治療為何？\n\n實證依據：\nChang JL, Goldberg AN, Alt JA, et al. International consensus statement on obstructive sleep apnea. Int Forum Allergy Rhinol. 2023;13(7):1061–1482."
     },
     {
       "title": "Step 3/6: 內科黃金標準與治療失敗 (Medical Management & Compliance)",
-      "scenario": "面對重度 OSA 患者，你首先建議非侵入性的黃金標準治療：連續正壓呼吸器 (Nasal CPAP)。然而，一個月後患者回診，表示他戴著面罩根本睡不著，因為漏氣與幽閉恐懼感讓他非常痛苦 (無法忍受 CPAP)，並強烈要求「開刀解決」。理學檢查發現他的雙側扁桃腺為 Grade II 腫大，舌頭位置為 Friedman class 2。",
-      "media": "載入圖片：scopy",
-      "question": "針對 CPAP 治療的「機器順從度 (Compliance)」，目前的醫學定義為下列何者？",
+      "scenario": "由於患者患有伴隨日間過度嗜睡的重度阻塞性睡眠呼吸中止症（OSA），因而建議採用正壓呼吸器（PAP）治療。他開始接受鼻罩式 PAP 治療，並同時針對伴隨的鼻部症狀進行治療。\n然而，儘管嘗試使用該裝置，他仍表示：\n「我戴著面罩根本睡不著，我實在無法忍受。」\n他因而提出手術治療的需求。",
+      "question": "最適當的下一步措施為何？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 每週使用 5 晚以上，且每晚使用大於 4 小時。",
+          "text": "(A) 討論轉介進行全面的睡眠手術評估以及其他替代治療選項。",
           "correct": true
         },
         {
           "id": "B",
-          "text": "(B) 每天必須佩戴超過 8 小時，無論白天或晚上。"
+          "text": "(B) 因扁桃腺腫大，直接施行懸壅垂腭咽成形術（UPPP）。"
         },
         {
           "id": "C",
-          "text": "(C) 只要睡前戴上超過 30 分鐘即可算作有順從性。"
+          "text": "(C) 停止治療，因為無法耐受 PAP 意味著 OSA 無法被治療。"
         }
       ],
-      "feedback": "正確答案：A\n\n臨床地雷： CPAP 順從度的標準是「每週 > 5 晚，每晚 > 4 小時」。像這位年輕患者因為面罩不適而無法忍受 (could not tolerate CPAP)，是臨床上走向外科手術介入的最常見原因。"
+      "feedback": "正確答案：A\n\n對於伴有過度嗜睡的成人 OSA 患者，強烈建議使用 CPAP，且 CPAP 或 APAP 為標準的持續性 PAP 治療模式。\n然而，若患者無法耐受或無法接受 PAP，下一步並非自動採取某種特定手術。\n美國睡眠醫學會（AASM）給予強烈建議：對於無法耐受或無法接受 PAP 的成人 OSA 患者，臨床醫師應與其討論轉介至睡眠外科醫師進行評估；該指南特別支持對 BMI <40 kg/m² 的患者進行此討論。\n\n本例患者：\nBMI 26 + 重度 OSA + PAP 耐受不良\n因此是進行手術評估的合適人選。\n\n臨床重點（Clinical Pearl）：\nPAP 耐受不良決定了進入「手術治療途徑」，但無法決定「具體施行何種手術」。\n\n過渡銜接：\n既然已考慮進行手術，外科醫師接下來需要回答的是：\n這名患者的呼吸道究竟在睡眠中的「哪個部位」發生塌陷？\n\n實證依據：\nPatil SP, Ayappa IA, Caples SM, et al. Treatment of adult obstructive sleep apnea with positive airway pressure: An AASM clinical practice guideline. J Clin Sleep Med. 2019;15(2):335–343.\nKent D, Stanley J, Aurora RN, et al. Referral of adults with obstructive sleep apnea for surgical consultation: An AASM clinical practice guideline. J Clin Sleep Med. 2021;17(12):2499–2505."
     },
     {
       "title": "Step 4/6: 術前精準評估與手術策略 (DISE & Surgical Intervention)",
-      "scenario": "既然患者決定接受手術，由於 OSAS 常常是「多層次阻塞 (Multi-level obstruction)」，你安排他在麻醉下進行了「藥物誘導睡眠內視鏡 (Drug-Induced Sleep Endoscopy, DISE)」來觀察動態阻塞的位置。隨後，你為他執行了懸雍垂顎咽成形術 (UPPP) 以及經口機器手臂舌根縮減術 (TORS for tongue base reduction)。",
+      "scenario": "清醒狀態下的檢查顯示雙側扁桃腺為二級（Grade II），且費德曼舌頭位置分類為第二級（Friedman Class II）。\n然而，外科醫師意識到清醒時的解剖結構可能無法反映睡眠期間發生的動態塌陷。\n因此，患者接受了：\n藥物誘發睡眠內視鏡檢查（DISE）",
       "media": "載入圖片：DISE 內視鏡視野下，顯示軟顎與舌根在睡眠時塌陷阻塞呼吸道",
-      "question": "為何在進行 UPPP 與 TORS 之前，執行「藥物誘導睡眠內視鏡 (DISE)」是現代睡眠外科的關鍵步驟？",
+      "question": "在此 DISE 影片中，哪一個解剖層級呈現出具臨床意義的塌陷（塌陷程度 > 原管腔的 50%）？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 為了直接在門診將扁桃腺切除。"
+          "text": "(A) 軟顎（Velum）",
+          "correct": true
         },
         {
           "id": "B",
-          "text": "(B) 因為清醒時的理學檢查無法完全反映睡眠時肌肉放鬆後的真實塌陷狀況，DISE 能動態找出阻塞點 (如軟顎或舌根) 以精準導引手術範圍。",
+          "text": "(B) 口咽側壁（Oropharyngeal lateral walls）",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) 為了順便進行切片排除鼻咽癌。"
-        }
-      ],
-      "feedback": "正確答案：B\n\n術式解析： 患者有重度 AHI 且包含扁桃腺肥大與舌根問題，阻塞往往是立體的。DISE 模擬了患者睡眠的狀態，讓外科醫師能清楚看見是單純軟顎塌陷、側咽壁塌陷，還是舌根向後倒，進而決定是否需要加上 TORS 舌根縮減術。"
-    },
-    {
-      "title": "Step 5/6: 術後急診危機：延遲性大出血 (Post-op Complication: Delayed Hemorrhage)",
-      "scenario": "手術順利完成且患者原已出院。然而，在術後第 13 天 (3/29 半夜)，患者突然因為「口咽部大量出血與流鼻血 (epistaxis and oral bleeding)」衝到急診。在急診，他的生命徵象尚穩 (BP 135/95)，但口腔內不斷有鮮血湧出，內視鏡顯示舌根處有巨大的血塊 (massive blood clot formation over tongue base) 導致無法看清出血點。",
-      "media": "載入圖片：急診內視鏡視野，顯示舌根與扁桃腺窩被巨大血塊覆蓋",
-      "question": "面對 UPPP/TORS 術後的延遲性出血，急診第一線的保守處置與評估應包含下列何者？",
-      "options": [
-        {
-          "id": "A",
-          "text": "(A) 立刻在急診盲目將止血鉗夾住舌根深處。"
-        },
-        {
-          "id": "B",
-          "text": "(B) 確保呼吸道暢通，抽血評估凝血功能，給予局部腎上腺素 (Epinephrine) 吸入或壓迫，並靜脈注射傳明酸 (Tranexamic acid) 止血。",
+          "text": "(C) 舌根（Tongue base）",
           "correct": true
         },
         {
-          "id": "C",
-          "text": "(C) 立即執行氣管切開術 (Tracheostomy)。"
+          "id": "D",
+          "text": "(D) 會厭（Epiglottis）"
+        },
+        {
+          "id": "E",
+          "text": "(E) 杓狀軟骨（Arytenoid）"
         }
       ],
-      "feedback": "正確答案：B\n\n急診夢魘： TORS 與 UPPP 的術後出血 (Post-op delayed active bleeding) 是最令人害怕的併發症，尤其當血塊堆積在舌根可能引發窒息。該案例在急診先排除了縫線裂開，並利用 Epinephrine 噴霧與抗纖維溶解藥物 (Tranexamic acid, Hemoclot) 成功穩定了病情，轉收入院進行支持性療法 (Supportive care)。"
+      "feedback": "正確答案：A, B, C\n\nOSA 是一種動態的上呼吸道疾病。\nDISE 可以揭示睡眠狀態下的塌陷，涉及：\n• 軟顎（Velum）\n• 咽側壁（Lateral pharyngeal walls）\n• 舌根（Tongue base）\n• 會厭（Epiglottis）\n並能呈現清醒狀態檢查可能無法完全預測的多重層級阻塞（multilevel obstruction）。\n美國耳鼻喉頭頸外科學會（AAO-HNS）指出，DISE 有助於確定最有效的 OSA 手術治療計劃。\n一份 2024 年針對 DISE 指引之上呼吸道手術進行的系統性文獻回顧與統合分析也指出，經由 DISE 確認的塌陷模式與手術預後及失敗風險顯著相關。\n\n臨床重點（Clinical Pearl）：\n清醒檢查描述「解剖結構」；DISE 展現「動態塌陷」。\n\n過渡銜接：\n呼吸道評估結果顯示，該患者需要採取標的導向的多層級手術策略（site-directed multilevel surgical strategy）。\n下一個關鍵決策為：\n何時應該加上舌根手術？\n\n實證依據：\nAAO-HNS. Position statement: Treatment of obstructive sleep apnea. Revised 2021.\nQi Y, Zhao Y, Yan Y, Wu D. Surgical failure guided by DISE in patients with obstructive sleep apnea: A systematic review and meta-analysis. Eur Arch Otorhinolaryngol. 2024;281(7):3333–3343."
     },
     {
-      "title": "Step 6/6: 出院衛教與傷口照護 (Discharge Instructions & Wound Care)",
-      "scenario": "經過止血藥物治療與短暫放置鼻胃管 (NG tube) 後，患者的傷口恢復良好，無再出血跡象，並成功嘗試冷流質飲食。在 3/31 準備出院時，你必須給予他最嚴格的衛教以防止悲劇重演。",
+      "title": "第 5/6 步：選擇手術方案 (Selecting the Operation)",
+      "scenario": "醫療團隊根據患者的解剖結構與動態呼吸道評估結果擬定治療計畫。\n最終的手術計畫包含：懸壅垂腭咽成形術（UPPP）＋ 經口機器人舌根切除術（TORS tongue-base reduction）。",
       "media": "載入圖片：術後飲食衛教單 (冷流質飲食示意圖)",
-      "question": "根據該名患者的出院護理指導，你應該強烈提醒他注意下列哪一項術後照護原則？",
+      "question": "下列哪一項發現為在手術計畫中加入「TORS 舌根切除術」提供了最強的合理依據？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 出院後應立即恢復吃熱湯與硬質食物以補充體力。"
+          "text": "(A) AHI >30 次/小時"
         },
         {
           "id": "B",
-          "text": "(B) 手術後 2 週內傷口仍有可能滲血，切勿用力咳嗽；術後 1 週內需維持「冷流質飲食 (Cold liquid diet)」，若有出血可口含冰水止血。",
+          "text": "(B) 在合適的患者中，於呼吸道評估時證實存在具臨床意義的舌根/舌後區域阻塞（retrolingual obstruction）。",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) 建議每天大聲唱歌以復健咽喉肌肉。"
+          "text": "(C) 單純因為 PAP 耐受不良"
         }
       ],
-      "feedback": "正確答案：B\n\n主治醫師的叮嚀： 咽喉部黏膜手術 (尤其是切除扁桃腺與舌根) 術後的偽膜脫落期 (約術後 7-14 天) 是延遲性出血的高峰期。絕對禁止用力咳嗽 (避免腹壓/血管壓力升高)，並嚴格要求「冷流質飲食 (如冰牛奶、布丁)」與冰敷，以收縮血管、預防致命的大出血"
+      "feedback": "正確答案：B\n\n這是本個案的核心外科治療原則。\nTORS 並非針對 AHI 數值導向的手術，而是針對特定解剖部位導向的手術（site-directed operation）。\n患者即使 AHI 為 50，若不存在實質性的舌根塌陷，亦無法自動構成施行舌根切除術的合理性。\n相對地，當舌根阻塞是患者呼吸道表現型（phenotype）的重要組成部分時，TORS 可作為個體化手術計畫的一部分被納入考量。\n\n一份 2026 年針對單獨施行 TORS 舌根手術的系統性文獻回顧發現，現有已發表的文獻研究對象主要為具備以下特徵的成人：\n• 中度至重度 OSA\n• PAP 治療失敗或耐受不良\n• 有舌根肥大/阻塞的實證\n平均 AHI 從 34.2 次/小時改善至 14.7 次/小時，但作者強調現有研究數量有限、具異質性，且嚴格篩選患者至關重要。\n\n為何需要多層級手術？\n若患者在以下兩個層級皆存在具臨床意義的阻塞：\n軟顎/口咽層級（Palatal/pharyngeal level）\n以及\n舌根層級（Tongue-base level）\n則治療計畫需同時處理這兩個部位。\n\n臨床重點（Clinical Pearl）：\n多層級手術應基於「多層級阻塞」來建立合理性，而非單純因為「重度 OSA」。\n\n最後一個問題：\n您該如何確認 OSA 是否真正獲得成功的治療？\n\n實證依據：\nChaidas K, Mouratidou S. Standalone transoral robotic surgery for obstructive sleep apnoea: A systematic literature review of clinical outcomes. Life. 2026;16(2):332.\nMouratidou S, Chaidas K. Transoral robotic surgery for patients with obstructive sleep apnoea: A systematic review of current practices. 2024.\nAAO-HNS 認可包括中央舌切除術式（midline glossectomy-type approaches）在內的舌根處置，為成人 OSA 綜合手術管理中的潛在組成部分。"
+    },
+    {
+      "title": "第 6/6 步：出院須知與傷口照護 (Discharge Instructions and Wound Care)",
+      "scenario": "經過適當的術後恢復與癒合後，患者表示：\n「我感覺好多了，我家人也說我打鼾聲小了很多。」\n他接著問：\n「這代表我的睡眠呼吸中止症已經治癒了嗎？」",
+      "question": "要確定手術治療是否成功控制了他的 OSA，最適當的方法為何？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 單純根據打鼾情形緩解"
+        },
+        {
+          "id": "B",
+          "text": "(B) 單純根據日間嗜睡症狀改善"
+        },
+        {
+          "id": "C",
+          "text": "(C) 術後於門診進行內視鏡檢查顯示呼吸道變寬"
+        },
+        {
+          "id": "D",
+          "text": "(D) 經過適當的癒合期後，結合臨床重新評估與客觀的追蹤睡眠檢查",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：D\n\n主觀症狀改善固然重要，但：\n打鼾減少 ≠ OSA 治癒\n且：\n愛普沃斯嗜睡量表（ESS）改善 ≠ 呼吸事件恢復正常\n在實施非 PAP 干預措施（如上呼吸道手術）後，OSA 的治療療效應包含對睡眠呼吸障礙進行客觀的重新評估。\n\n進階教學重點：\n睡眠手術研究通常採用以下標準來定義手術成功（Surgical Success）：\nAHI 降低 ≥50% 且術後 AHI < 20\n然而：\n手術成功 ≠ 完全治癒\n患者即使符合研究定義的手術成功，仍可能殘留具臨床意義的 OSA。\n因此，預後評估應整合：\n• 治療後的 AHI / REI\n• 血氧濃度\n• 殘留的日間症狀\n• 睡眠相關生活品質\n• 心血管與代謝背景狀況\n• 是否需要輔助治療\n\n臨床重點（Clinical Pearl）：\n傷口癒合時，手術即告完成；只有在預後獲得客觀重新評估後，OSA 的治療才算完成。"
     }
   ]
 }

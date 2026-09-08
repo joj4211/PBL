@@ -438,7 +438,7 @@ export default function PerformancePage({
             <div className="glass-card p-5 sm:p-6 mb-5 flex items-center justify-between gap-4">
               <div>
                 <div className="text-sm font-semibold text-warm-500">{text.average}</div>
-                <div className="text-xs text-warm-400 mt-1">{user.email ?? user.id}</div>
+                <div className="text-xs text-warm-400 mt-1">{user.user_metadata?.user_account ?? user.id}</div>
               </div>
               <div className="text-4xl font-bold text-sage-600">
                 {overallAverage === null ? '--' : `${overallAverage}%`}

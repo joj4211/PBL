@@ -223,7 +223,7 @@ function AppContent({ onShowMaintenance }) {
         onShowMaintenance={auth.isAdmin ? onShowMaintenance : null}
         isAdmin={auth.isAdmin}
         onSignOut={handleSignOut}
-        displayName={auth.appUser?.display_name ?? auth.user?.user_metadata?.display_name ?? auth.user?.email?.split('@')[0]}
+        displayName={auth.appUser?.user_account ?? auth.user?.user_metadata?.user_account ?? auth.user?.email?.split('@')[0]}
       />
     );
   }

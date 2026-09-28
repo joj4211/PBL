@@ -1,171 +1,198 @@
 {
-  "id": "ear_cholesteatoma_silent_erosion",
-  "title": "Cholesteatoma",
-  "subtitle": "The Silent Bone-Eroding Crisis in the Middle Ear",
-  "description": "Red-flag screening in chronic middle ear disease, otoendoscopic and audiologic interpretation, HRCT localization, bone erosion pathophysiology, and surgical decisions.",
-  "estimatedTime": "20-30 min",
-  "difficulty": "Intermediate-Advanced",
+  "id": "ear_cholesteatoma",
+  "title": "The Ear That Kept Running",
+  "subtitle": "A teenager with six months of a wet, deaf ear, from the first otoscopy to the follow-up plan",
+  "description": "Reading the drum, what the audiogram says about the ossicles, what CT decides and what it cannot, choosing the operation, rebuilding the hearing, congenital or acquired once the pathology is back, and watching for what comes back.",
+  "estimatedTime": "20-25 min",
+  "difficulty": "Intermediate",
   "tags": [
     "Otology",
-    "Cholesteatoma",
-    "Middle Ear",
-    "Mastoid Surgery"
+    "Chronic otitis media",
+    "Tympanomastoidectomy",
+    "Ossiculoplasty"
   ],
   "steps": [
     {
-      "title": "Step 1/6: History Taking & Red Flags",
-      "scenario": "A 56-year-old woman presents to clinic with left-sided tinnitus for over one year and progressive hearing decline in the left ear. In patients with chronic middle ear disease, you must screen for potentially life-threatening critical red flags during history taking.",
-      "question": "To exclude severe local invasion and complications from cholesteatoma, which question is the most essential to ask during the interview?",
+      "title": "Step 1/7: The Drum",
+      "scenario": "A 16-year-old boy comes to clinic with his mother.\n\n    Complaint       left ear feels blocked and sounds \"watery\"\n    Duration        six months\n    Discharge       on and off, not smelly, no blood\n    Pain            none\n    Fever           none\n    Hearing         worse on the left\n\nOtic drops from another clinic helped the discharge for a while.\n\nYou look in the left ear.",
+      "media": "Load image: Otoendoscopy of the left ear from this patient, de-identified, unannotated. Caption: 'Left ear.'",
+      "question": "What do you see, and what does it mean?",
       "options": [
         {
           "id": "A",
-          "text": "(A) \"Have you recently eaten too salty foods or drunk too much coffee?\""
+          "text": "(A) A dull, retracted drum with a fluid level: otitis media with effusion, treat with a nasal steroid and review"
         },
         {
           "id": "B",
-          "text": "(B) \"Have you recently had sudden facial weakness or asymmetry, or frequent spinning vertigo?\"",
-          "correct": true
+          "text": "(B) White plaques on the drum: myringosclerosis from old infection, no action needed"
         },
         {
           "id": "C",
-          "text": "(C) \"Did you ever have mumps as a child?\""
+          "text": "(C) A whitish mass behind the drum with crust and debris at the attic: cholesteatoma until proven otherwise",
+          "correct": true
         },
         {
           "id": "D",
-          "text": "(D) \"Is your tinnitus a heartbeat-like thumping sound?\""
+          "text": "(D) A red pulsatile mass behind the drum: glomus tympanicum, image before touching it"
         }
       ],
-      "feedback": "Correct answer: B\n\nAttending tip: In suspected middle ear cholesteatoma, immediately screen three major red flags: (1) vertigo or imbalance (suggesting semicircular canal erosion with possible labyrinthine fistula), (2) facial palsy/asymmetry (suggesting facial canal involvement), and (3) persistent otorrhea unresponsive to antibiotic ear drops (suggesting resistant biofilm or cholesteatoma)."
+      "feedback": "Correct answer: C\n\nSix months of painless discharge that comes back after drops, a blocked ear, and hearing loss is the history of cholesteatoma. The drum confirms it:\n• a whitish mass behind the drum in the upper part of the middle ear,\n• crust or keratin debris at the attic, the pars flaccida above the short process of the malleus,\n• effusion around it.\n\nCholesteatoma is keratinizing squamous epithelium where it should not be, in the middle ear or mastoid. It is not a tumor, but it behaves like one locally: it grows, it erodes bone, and it does not go away. Painless is the point. Pain means acute infection; cholesteatoma is chronic and quiet until it has eroded something.\n\nWhy the others fail:\n(A) Effusion alone gives a dull drum, sometimes a fluid level, and no mass. The white mass and the attic debris are not effusion. And effusion in a 16-year-old on one side only should itself make you look harder.\n(B) Myringosclerosis is chalky white plaque in the drum, flat, not behind it, and it does not discharge.\n(D) A glomus is red or blue, behind an intact drum, often pulsatile, and the history is pulsatile tinnitus. This is white.\n\nKeypoint: painless chronic otorrhea plus a whitish attic mass is cholesteatoma until proven otherwise; look at the pars flaccida.\n\nReference: Yung M, Tono T, Olszewska E, et al. EAONO/JOS joint consensus statements on the definitions, classification and staging of middle ear cholesteatoma. J Int Adv Otol. 2017;13(1):1-8."
     },
     {
-      "title": "Step 2/6: Otoendoscopy & Physical Examination",
-      "scenario": "You arrange otoendoscopy. You carefully inspect all tympanic membrane regions, especially the superior area near the ossicular chain.",
-      "media": "Load image: real otoendoscopic image showing abnormal attic structure",
-      "question": "On otoendoscopy, which finding is the most pathognomonic feature of secondary acquired cholesteatoma?",
+      "title": "Step 2/7: The Numbers",
+      "scenario": "Hearing tests, both from the outside clinic:\n\n    Pure-tone audiogram, left    conductive hearing loss, air-bone gap 46 dB\n    Pure-tone audiogram, right   normal\n    Tympanogram, left            type B, normal canal volume\n    Tympanogram, right           type A",
+      "media": "Load image: Pure-tone audiogram and tympanogram from this patient, de-identified. Caption: 'Audiogram and tympanogram.'",
+      "question": "What does an air-bone gap of 46 dB tell you that a gap of 20 dB would not?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Erythematous bulging of pars tensa"
+          "text": "(A) Nothing extra; the size of the gap does not localize the problem"
         },
         {
           "id": "B",
-          "text": "(B) Keratin debris within a retraction pocket of pars flaccida",
+          "text": "(B) That the ossicular chain is probably interrupted, not just dampened by fluid or a mass",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) Clear middle ear effusion with an air-fluid level"
+          "text": "(C) That the cochlea is also damaged"
         },
         {
           "id": "D",
-          "text": "(D) Hemorrhagic bullae on the tympanic membrane"
+          "text": "(D) That the eustachian tube is blocked"
         }
       ],
-      "feedback": "Correct answer: B\n\nClinical reasoning: In chronic ear disease, the attic (pars flaccida region) is a key area. Keratin debris accumulating inside a pars flaccida retraction pocket is the classic hallmark of acquired cholesteatoma."
+      "feedback": "Correct answer: B\n\nA conductive loss is an air-bone gap: bone conduction, which bypasses the middle ear, is normal, and air conduction, which needs the drum and ossicles, is worse. The size of the gap says how badly the chain is working.\n• Fluid in the middle ear, or a mass pressing on the drum, dampens the chain: a gap of roughly 20 to 30 dB.\n• A drum perforation alone: usually under 30 dB.\n• A break in the chain, with the drum intact, can reach 50 to 60 dB, near the maximum a conductive loss can be.\n\nA 46 dB gap is too large for fluid or a small mass. It says the sound is not getting from the drum to the stapes, which means the cholesteatoma has eroded an ossicle, most often the long process of the incus. That is what the surgeon found.\n\nThe type B tympanogram with a normal canal volume adds that the drum is intact and the middle ear is filled with something, fluid or soft tissue. A type B with a large canal volume would mean a perforation.\n\nWhy the others fail:\n(A) The gap size is one of the most useful numbers in otology. It separates a wet ear from a broken chain before you have opened it.\n(C) Bone conduction is normal. The cochlea is fine. A sensorineural component would show as a drop in bone conduction.\n(D) A blocked tube gives effusion and a type B, but the effusion alone would not produce a 46 dB gap.\n\nKeypoint: air-bone gap over 40 dB with an intact drum means an ossicular discontinuity; plan to find an eroded incus.\n\nReference: Gulya AJ, Minor LB, Poe DS, eds. Glasscock-Shambaugh Surgery of the Ear. 6th ed. Shelton, CT: People's Medical Publishing House; 2010."
     },
     {
-      "title": "Step 3/6: Tuning Fork Testing & Audiometry",
-      "scenario": "In clinic, you perform bedside tuning fork tests. Weber lateralizes to the left (affected side); Rinne is negative on the left (BC > AC) and positive on the right (AC > BC). Subsequent pure-tone audiometry confirms this pattern.",
-      "media": "Load image: PTA audiogram showing a prominent left-sided air-bone gap",
-      "question": "Based on the tuning fork findings and audiogram, what type of hearing loss is most likely in the patient's left ear?",
+      "title": "Step 3/7: What the CT Decides",
+      "scenario": "High-resolution CT of the temporal bone, 1 mm cuts, no contrast:\n\n    Left middle ear      soft tissue density, including Prussak's space\n    Left ossicles        suspicious erosion\n    Left aditus/antrum   opacified\n    Left canal           small soft tissue lesion\n    Right ear            normal, well aerated\n    Both sides           cochlea, semicircular canals, facial nerve canal, carotid canal, jugular foramen normal\n\nThe report ends: \"Related to otomastoiditis with cholesteatoma?\"",
+      "media": "Load image: Coronal HRCT of the left temporal bone from this patient, de-identified, unannotated. Caption: 'HRCT, coronal.'",
+      "question": "What does this CT decide, and what does it not?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Sensorineural hearing loss (SNHL)"
+          "text": "(A) It confirms cholesteatoma; soft tissue in the attic is diagnostic"
         },
         {
           "id": "B",
-          "text": "(B) Conductive hearing loss (CHL)",
-          "correct": true
+          "text": "(B) It is unnecessary; the diagnosis is clinical and the surgeon will see what is there"
         },
         {
           "id": "C",
-          "text": "(C) Central auditory processing disorder"
+          "text": "(C) It rules cholesteatoma out; there is no bony erosion described"
         },
         {
           "id": "D",
-          "text": "(D) Auditory neuropathy"
+          "text": "(D) It maps the extent and the danger areas for surgery, but it cannot tell cholesteatoma from granulation or fluid",
+          "correct": true
         }
       ],
-      "feedback": "Correct answer: B\n\nInterpretation pearl: Weber to the affected ear plus a negative Rinne on the affected side (BC > AC) indicates classic conductive hearing loss. In a chronically inflamed wet ear with a clear air-bone gap, ossicular erosion from cholesteatoma should be strongly suspected."
+      "feedback": "Correct answer: D\n\nThe radiologist's question mark is honest. On CT, cholesteatoma, granulation tissue, mucus and fluid all look the same: soft tissue density. CT does not make the diagnosis. The otoscope made the diagnosis in Step 1. What CT does is answer the questions the surgeon needs before opening the ear.\n\nWhere is it?\n• Prussak's space, the attic, the aditus and the antrum: the classic route of an attic cholesteatoma spreading backward into the mastoid.\n\nWhat has it eroded?\n• The ossicles, which matches the 46 dB gap.\n• The scutum and the superior canal wall, which the surgeon confirmed.\n\nWhat must the surgeon not hit?\n• The tegmen: is there a dehiscence into the middle fossa?\n• The lateral semicircular canal: is there a fistula? A fistula changes the operation.\n• The facial nerve canal: is it dehiscent in the tympanic segment?\n• The sigmoid sinus and jugular bulb: are they high or forward?\nHere all of these are intact, which is what lets you plan a standard operation.\n\nIf the question were whether soft tissue is cholesteatoma at all, the test is non-echo-planar diffusion-weighted MRI, where cholesteatoma restricts diffusion and granulation does not. That is the tool for follow-up in Step 7.\n\nWhy the others fail:\n(A) Soft tissue in the attic is consistent with cholesteatoma, not diagnostic of it. Granulation looks identical.\n(B) The diagnosis is clinical, but the map is not. Operating without knowing whether the tegmen or the lateral canal is open is how complications happen.\n(C) The report describes ossicular erosion and loss of aeration, and even an ear with no erosion on CT can harbor cholesteatoma. CT cannot rule it out.\n\nKeypoint: CT does not diagnose cholesteatoma; it maps its extent and the four structures you must not enter.\n\nReference: Yung M, Tono T, Olszewska E, et al. J Int Adv Otol. 2017;13(1):1-8. Lingam RK, Bassett P. A meta-analysis on the diagnostic performance of non-echoplanar diffusion-weighted imaging in detecting middle ear cholesteatoma. Otol Neurotol. 2017;38(4):521-528."
     },
     {
-      "title": "Step 4/6: Imaging Localization & Bone Destruction (HRCT Temporal Bone)",
-      "scenario": "To establish a surgical plan, you obtain high-resolution temporal bone CT (HRCT). Imaging shows a soft-tissue lesion in the left attic with surrounding bony erosion.",
-      "media": "Load image: coronal HRCT marked with attic and scutum landmarks",
-      "question": "When interpreting CT in middle ear cholesteatoma, which bony structure on the lateral attic wall is most commonly eroded early?",
+      "title": "Step 4/7: The Operation",
+      "scenario": "Sixteen years old. Six months of painless otorrhea and a 46 dB conductive loss.\n\nCT: soft tissue in the attic, aditus and antrum with suspicious ossicular erosion; well-pneumatized mastoid; tegmen, lateral semicircular canal and facial nerve canal intact.\n\nThe referral diagnosis is congenital cholesteatoma. You plan surgery.",
+      "media": "",
+      "question": "Which operation, and why?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Promontory"
+          "text": "(A) Continue otic drops and review in three months; surgery only if the discharge persists"
         },
         {
           "id": "B",
-          "text": "(B) Internal auditory canal"
+          "text": "(B) Canal wall-down mastoidectomy, because it gives the lowest recurrence and that is what matters most"
         },
         {
           "id": "C",
-          "text": "(C) Scutum",
+          "text": "(C) Canal wall-up tympanomastoidectomy, accepting a higher residual and recurrence rate in exchange for a normal canal and a dry ear, with planned surveillance",
           "correct": true
         },
         {
           "id": "D",
-          "text": "(D) Sigmoid sinus plate"
+          "text": "(D) Ossiculoplasty alone through the canal, without a mastoidectomy"
         }
       ],
-      "feedback": "Correct answer: C\n\nImaging key point: The scutum is the pointed bony lateral wall of the attic. In the progression of acquired attic cholesteatoma, scutum erosion is one of the earliest and most typical CT findings. The ossicular chain and tegmen tympani should also be checked for integrity."
+      "feedback": "Correct answer: C\n\nCholesteatoma has one treatment: take it out. Drops control the infection around it; they do not remove keratinizing skin from the mastoid, and every month it stays it erodes more. The question is not whether to operate but how.\n\nThe choice is the posterior canal wall.\n\nCanal wall-up:\n• the bony ear canal is preserved, the mastoid is opened behind it, and the attic is reached through the mastoid and the canal,\n• the ear looks and works like a normal ear afterward: no cavity, no lifelong cleaning, no water restriction, easier hearing-aid use,\n• the cost is that residual disease can hide behind the intact wall and the pars flaccida can retract again, so recurrence is higher than after a canal wall-down procedure, and it must be watched.\n\nCanal wall-down:\n• the posterior canal wall is removed, making the mastoid and the canal one cavity that can be inspected in clinic,\n• lower recurrence, at the price of a cavity that needs cleaning for life and often runs.\n\nFor a 16-year-old with a pneumatized mastoid, disease limited to the attic and mastoid on CT, and intact danger areas, canal wall-up is the standard choice. Canal wall-down is reserved for extensive disease, a sclerotic mastoid, a lateral canal fistula, an only-hearing ear, or a patient who will not come back for surveillance. The recurrence cost of canal wall-up is paid in Step 7.\n\nWhy the others fail:\n(A) Drops treat the discharge, not the disease. Three more months is three months of bone erosion.\n(B) Recurrence is one outcome among several. In a teenager a lifelong cavity is a real cost, and his anatomy does not require it.\n(D) The disease is in the mastoid. Reconstructing the hearing without removing the cholesteatoma behind it is rebuilding a house on a fire.\n\nKeypoint: cholesteatoma is removed, not treated; canal wall-up preserves a normal ear in a young patient at the price of surveillance.\n\nReference: Tomlin J, Chang D, McCutcheon B, Harris J. Surgical technique and recurrence in cholesteatoma: a meta-analysis. Audiol Neurootol. 2013;18(3):135-142. Yung M, Tono T, Olszewska E, et al. J Int Adv Otol. 2017;13(1):1-8."
     },
     {
-      "title": "Step 5/6: Core Pathophysiology of Bone Erosion",
-      "scenario": "After seeing the CT report, the patient is very anxious and asks, \"Doctor, you said my bone is being eaten away. Does that mean I have malignant bone cancer?\" You need to explain this with accurate pathophysiology.",
-      "media": "Load image: animation schematic of cholesteatoma enzymes eroding bone",
-      "question": "Regarding why cholesteatoma destroys bone, which explanation is medically most accurate?",
+      "title": "Step 5/7: Rebuilding the Hearing",
+      "scenario": "In the operating room. The attic and mastoid are cleared of cholesteatoma and granulation. You bring the endoscope into the middle ear:\n\n    Malleus                present, handle intact\n    Incus                  long process eroded; incudostapedial joint destroyed\n    Stapes                 superstructure intact, mobile\n    Round window reflex    positive\n    Mucosa                 edematous, granular\n    Drum                   small attic perforation; the pars tensa needs a graft\n\nThe eroded incus is removed.",
+      "media": "Load image: Endoscopic intraoperative photograph, de-identified, unannotated: the middle ear after removal of the incus, stapes superstructure visible, prosthesis being placed between the drum and the stapes head. Caption: 'Middle ear, endoscopic.'",
+      "question": "How do you reconstruct the chain and the drum?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Cholesteatoma is a rapidly dividing malignant sarcoma that directly devours surrounding bone."
+          "text": "(A) Total ossicular replacement prosthesis from the drum to the footplate"
         },
         {
           "id": "B",
-          "text": "(B) Cholesteatoma is not a true neoplasm; it is a keratinizing squamous epithelial trap that secretes osteolytic enzymes.",
+          "text": "(B) Partial ossicular replacement prosthesis from the drum to the stapes head, capped with cartilage, and a tragal cartilage-perichondrium composite graft for the drum",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) Cholesteatoma itself does not damage bone; bone dissolves only from long-term soaking in pus."
+          "text": "(C) Reposition the removed incus between the malleus and the stapes"
         },
         {
           "id": "D",
-          "text": "(D) Cholesteatoma is a fungal infection that releases strong acid to corrode middle ear bone."
+          "text": "(D) Graft the drum with fascia alone and leave the chain for a later operation"
         }
       ],
-      "feedback": "Correct answer: B\n\nCore concept: Despite the name, cholesteatoma is not a true tumor. It is a misplaced keratinizing squamous epithelial trap, and the epithelial tissue plus associated inflammation produce osteolytic enzymes that erode nearby ossicles and temporal bone."
+      "feedback": "Correct answer: B\n\nThe reconstruction is decided by what is left.\n\nWhat is left:\n• The stapes superstructure is present and mobile. The positive round window reflex confirms it: pressing the stapes moves the round window membrane, so the footplate is free and the inner ear window is open.\n• The incus has lost its long process and the incudostapedial joint is gone, so the sound stops at the incus.\n\nSo the sound has to get from the drum to the stapes head. That is a partial prosthesis: a PORP sits on the stapes head and reaches the drum. If the superstructure were gone and only the footplate remained, it would be a total prosthesis, a TORP, to the footplate. Drum onto stapes with something in between is a modified type III tympanoplasty.\n\nTwo details make it last:\n• A cartilage cap between the prosthesis and the drum. A prosthesis touching the drum directly erodes through it and extrudes; a thin disc of cartilage between them stops that.\n• A cartilage-perichondrium composite graft for the drum rather than fascia alone. Cartilage resists retraction. The disease started as a retraction pocket, and a fascia graft in a poorly ventilated ear will retract again. Cartilage holds its shape, and the perichondrium is laid as an underlay to seal the perforation.\n\nBoth pieces come from the tragus through a small incision on its inner surface, which leaves no visible scar.\n\nWhy the others fail:\n(A) A TORP is for a missing superstructure. His stapes is intact and mobile; bypassing it wastes the best part of the chain and gives a less stable result.\n(C) An incus that has been sitting in cholesteatoma with its long process eaten is not reliable graft material: it may carry squamous epithelium, and the part you would need to reach the stapes is the part that is gone. Autologous incus interposition is for an intact incus removed for access, not for one the disease has destroyed.\n(D) Staging the hearing to a second operation is reasonable when the mucosa is too diseased to expect a prosthesis to survive. His stapes is mobile and the mastoid is clean; there is no reason to send him home with a 46 dB gap.\n\nKeypoint: stapes present means PORP, footplate only means TORP; cap the prosthesis and graft the drum with cartilage, because the ear that retracted once will try to retract again.\n\nReference: Dornhoffer JL. Cartilage tympanoplasty: indications, techniques, and outcomes in a 1,000-patient series. Laryngoscope. 2003;113(11):1844-1856. Gulya AJ, Minor LB, Poe DS, eds. Glasscock-Shambaugh Surgery of the Ear. 6th ed. Shelton, CT: People's Medical Publishing House; 2010."
     },
     {
-      "title": "Step 6/6: Final Management & Surgical Decision Making",
-      "scenario": "After explaining the condition, you reach the final management crossroads. For this confirmed left-sided secondary acquired middle ear cholesteatoma, you must provide the most accurate treatment recommendation.",
-      "media": "Load image: clinical decision tree for management",
-      "question": "For this 56-year-old woman with secondary acquired cholesteatoma, which treatment choice and concept is completely incorrect?",
+      "title": "Step 6/7: Congenital or Acquired",
+      "scenario": "One week after surgery. The pathology report is back: keratinizing squamous epithelium with keratin debris. Cholesteatoma confirmed.\n\nThe referral had said congenital cholesteatoma: a white mass behind the drum in a teenager.\n\nWhat the surgeon found:\n\n    Perforation     small, in the pars flaccida at the attic\n    Disease         attic and mastoid\n    Bone            superior wall of the ear canal eroded\n    Ossicles        incus eroded; malleus and stapes intact\n    Mucosa          granular and adhesive",
+      "media": "Load image: Intraoperative photograph from this patient, de-identified, unannotated: tympanomeatal flap raised, cholesteatoma in the attic with the eroded scutum, incus long process eroded. Caption: 'Attic, intraoperative.'",
+      "question": "Cholesteatoma is confirmed. What is the final diagnosis: congenital, primary acquired, or secondary acquired?",
       "options": [
         {
           "id": "A",
-          "text": "(A) If the disease is extensive or the posterior canal wall is already damaged, canal wall down tympanomastoidectomy (CWD) can be selected."
-        },
-        {
-          "id": "B",
-          "text": "(B) To preserve more normal anatomy, canal wall up tympanomastoidectomy (CWU) may be considered, but close postoperative follow-up is essential."
-        },
-        {
-          "id": "C",
-          "text": "(C) Because cholesteatoma is benign, regular observation and ear water precautions during bathing are sufficient; surgery is unnecessary.",
+          "text": "(A) Acquired, primary: a retraction of the pars flaccida into the attic",
           "correct": true
         },
         {
+          "id": "B",
+          "text": "(B) Congenital: a white mass in a young patient is congenital by definition"
+        },
+        {
+          "id": "C",
+          "text": "(C) Acquired, secondary: skin migrated in through a perforation of the pars tensa"
+        },
+        {
           "id": "D",
-          "text": "(D) Cholesteatoma is locally invasive, and surgical clearance is mandatory."
+          "text": "(D) Iatrogenic: from the earlier treatment with otic drops"
         }
       ],
-      "feedback": "Correct answer: C\n\nSurgical consensus: Option C is absolutely incorrect. Although cholesteatoma is not malignant, it is locally invasive and can continue to destroy ossicles, injure the facial nerve, and even spread intracranially. Surgical clearance is the only required standard treatment; observation and water precautions alone are ineffective and dangerous."
+      "feedback": "Correct answer: A\n\nThe consensus classification separates cholesteatoma by how the skin got in.\n\nCongenital:\n• a pearl behind an intact drum, classically in the anterior-superior quadrant,\n• no history of otorrhea, perforation or ear surgery,\n• usually found in a young child, often by chance.\n\nAcquired, primary:\n• the pars flaccida retracts into the attic, keratin collects in the pocket, and the pocket erodes its way backward through Prussak's space toward the antrum,\n• the drum is retracted or has an attic perforation, and there is a history of otorrhea.\n\nAcquired, secondary:\n• squamous epithelium migrates in through a pars tensa perforation, usually posterior-superior.\n\nHis findings are primary acquired disease: an attic perforation, Prussak's space full on the CT, disease tracking from attic to mastoid, the superior canal wall eroded, six months of discharge. The referral diagnosis was reasonable from a white mass alone, but the location, the perforation and the history all say retraction pocket. The label changed in the operating room, and it matters, because congenital and acquired disease behave differently and are staged differently.\n\nBy the consensus staging: sites are the tympanic cavity (T), attic (A), mastoid (M), and the difficult-access sites S1 (supratubal recess) and S2 (sinus tympani). He has attic plus mastoid: stage II, two or more sites, no complication.\n\nWhy the others fail:\n(B) Age does not decide. Congenital disease needs an intact drum and no history of discharge; he has an attic perforation and six months of otorrhea.\n(C) Secondary acquired means a pars tensa perforation. His is in the pars flaccida, which is the primary route.\n(D) Drops do not cause cholesteatoma. Iatrogenic disease follows surgery or a ventilation tube.\n\nKeypoint: pars flaccida retraction or attic perforation with a history of discharge is primary acquired cholesteatoma; congenital means an intact drum and no history.\n\nReference: Yung M, Tono T, Olszewska E, et al. EAONO/JOS joint consensus statements on the definitions, classification and staging of middle ear cholesteatoma. J Int Adv Otol. 2017;13(1):1-8. Derlacki EL, Clemis JD. Congenital cholesteatoma of the middle ear and mastoid. Ann Otol Rhinol Laryngol. 1965;74(3):706-727."
+    },
+    {
+      "title": "Step 7/7: Watching It",
+      "scenario": "The ear is dry at the first visit and the graft takes. Final diagnosis: primary acquired cholesteatoma, left, stage II, after canal wall-up tympanomastoidectomy.\n\nHis mother asks whether it is finished.",
+      "media": "",
+      "question": "How do you follow a canal wall-up ear?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Discharge at six months if the ear is dry; a dry ear means no disease"
+        },
+        {
+          "id": "B",
+          "text": "(B) High-resolution CT every year"
+        },
+        {
+          "id": "C",
+          "text": "(C) A second-look operation only if discharge or hearing loss returns"
+        },
+        {
+          "id": "D",
+          "text": "(D) Otoscopy and audiometry at intervals, and non-echo-planar diffusion-weighted MRI at about a year, with a second-look operation if it shows restricted diffusion",
+          "correct": true
+        }
+      ],
+      "feedback": "Correct answer: D\n\nCanal wall-up surgery bought him a normal ear at a known price: disease can come back in two ways, and neither announces itself.\n• Residual disease is a fragment of matrix left behind, growing quietly in the closed mastoid or behind the prosthesis. It is silent until it is large.\n• Recurrent disease is a new retraction pocket of the pars flaccida, which the cartilage graft was placed to prevent but cannot guarantee.\n\nSo the follow-up has to look for something that gives no symptoms.\n• Otoscopy at each visit, looking at the attic for a new pocket.\n• Audiometry, because a rising air-bone gap can be a prosthesis problem or disease around it.\n• Non-echo-planar diffusion-weighted MRI at about 12 months, and again later. Cholesteatoma restricts diffusion; granulation, scar and fluid do not. In pooled studies the sequence detects residual disease down to a few millimeters with high sensitivity and specificity, and it has largely replaced the routine second-look operation that used to be done on every canal wall-up ear.\n• A second-look operation if the MRI is positive or equivocal, or if a pocket appears.\n\nWhy the others fail:\n(A) A dry ear is the goal of the operation, not proof of cure. Residual cholesteatoma in a closed mastoid does not discharge until it is big enough to erode something.\n(B) CT cannot tell residual cholesteatoma from scar, and a yearly CT of a teenager's head is radiation for no answer.\n(C) Waiting for symptoms means waiting for erosion. The point of surveillance is to find it before it costs him the hearing you just rebuilt.\n\nKeypoint: a canal wall-up ear is followed with the scope, the audiogram and diffusion MRI, because residual disease is silent; second look when the MRI says so.\n\nReference: Lingam RK, Bassett P. A meta-analysis on the diagnostic performance of non-echoplanar diffusion-weighted imaging in detecting middle ear cholesteatoma. Otol Neurotol. 2017;38(4):521-528. Yung M, Tono T, Olszewska E, et al. J Int Adv Otol. 2017;13(1):1-8."
     }
   ]
 }

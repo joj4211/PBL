@@ -1,148 +1,173 @@
 {
-  "id": "throat_recurrent_tonsillitis",
-  "title": "反覆燃燒的咽喉 (The Burning Throat: Recurrent Tonsillitis)",
-  "subtitle": "反覆性扁桃腺炎與扁桃腺切除術",
-  "description": "反覆性扁桃腺炎的手術適應症、微生物學、手術器械、圍手術期藥物、止痛與延遲性出血處置。",
-  "estimatedTime": "20-30 分鐘",
-  "difficulty": "中階",
+  "id": "throat_tonsillitis",
+  "title": "又喉嚨痛了",
+  "subtitle": "一位反覆喉嚨痛的年輕男性，從第一次門診到術後六週",
+  "description": "發作頻率的標準、什麼樣的發作才算數、成人術後恢復要怎麼交代、誘導時給什麼、出院止痛，以及成人最大型試驗告訴我們的效益。",
+  "estimatedTime": "15-20 min",
+  "difficulty": "Intermediate",
   "tags": [
-    "喉科",
-    "Tonsillitis",
-    "Tonsillectomy",
-    "Post-op bleeding"
+    "General Otolaryngology",
+    "Throat infection",
+    "Guideline criteria",
+    "Perioperative care",
+    "NATTINA"
   ],
   "steps": [
     {
-      "title": "Step 1/6: 手術適應症與臨床評估 (Surgical Indications)",
-      "scenario": "一位 25 歲男性來到門診，主訴過去 2 年來深受「反覆性扁桃腺發炎 (recurrent tonsillitis)」所苦，每次發作都伴隨嚴重喉嚨痛、化膿與發燒，且即使去診所與醫院吃抗生素依然反覆發作。理學檢查發現雙側扁桃腺為 Grade III 腫大。",
-      "media": "載入圖片：Grade III 腫大的扁桃腺與咽部發炎照片",
-      "question": "在與患者討論手術介入時，你提及了他的病史符合著名的「Paradise criteria」以及 SIGN guidelines。根據該指引，下列何種發作頻率符合建議進行扁桃腺切除術的標準？",
+      "title": "Step 1/6：標準",
+      "scenario": "一位 25 歲男性因反覆扁桃腺炎來門診。過去兩年反覆發作嚴重喉嚨痛合併發燒和扁桃腺化膿，在好幾家診所吃過抗生素還是一直復發。\n\n理學檢查：雙側扁桃腺 grade III。",
+      "media": "載入圖片：口咽照，顯示 grade III 扁桃腺。圖說：「口咽」",
+      "question": "你跟他討論手術時提到 Paradise criteria。下列哪一種發作頻率符合 tonsillectomy 的標準？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 過去 6 個月內發生 3 次發炎。"
+          "text": "(A) 過去六個月發作 3 次"
         },
         {
           "id": "B",
-          "text": "(B) 1 年內發作至少 7 次；或連續 2 年每年發作至少 5 次；或連續 3 年每年發作至少 3 次。",
+          "text": "(B) 一年內至少 7 次；或連續兩年每年至少 5 次；或連續三年每年至少 3 次",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) 只要曾發生過一次伴隨發燒的扁桃腺炎即可。"
+          "text": "(C) 只要曾經發作過一次合併發燒"
+        },
+        {
+          "id": "D",
+          "text": "(D) 一年內至少 5 次"
         }
       ],
-      "feedback": "正確答案：B\n\n主治醫師的 Tip： 根據 Paradise criteria 與 SIGN guidelines，扁桃腺發炎必須達到特定頻率（1年7次 / 2年每年5次 / 3年每年3次），且臨床症狀明顯、影響正常功能並有良好的病歷記載時，進行扁桃腺切除術 (Tonsillectomy) 才能顯著改善患者的生活品質 (QOL)。"
+      "feedback": "正確答案：B\n\n這三個門檻是 Paradise trial 訂出來的：過去一年發作 7 次以上，或連續兩年每年 5 次以上，或連續三年每年 3 次以上。三個裡面符合任何一個就算數。英國的 SIGN guideline 對成人用的是同一組數字，只是多加了一句：發作要嚴重到影響正常生活。成人規模最大的 NATTINA trial，收案條件用的也是這一組。\n\n其他選項為什麼不對：\n(A) 六個月三次，換算起來頻率確實不低，但這套標準是以整年為單位在數的，六個月三次三個門檻一個都沒碰到。\n(C) 不管那一次發作多嚴重，一次就是一次，從來不構成手術適應症。\n(D) 一年五次差一點點。五次這個數字要連續兩年都達到才算。\n\nKeypoint：一年 7 次、連兩年每年 5 次、連三年每年 3 次，記這三組就夠了。\n\nReference: Paradise JL, Bluestone CD, Bachman RZ, et al. Efficacy of tonsillectomy for recurrent throat infection in severely affected children: results of parallel randomized and nonrandomized clinical trials. N Engl J Med. 1984;310(11):674-683. doi:10.1056/NEJM198403153101102. Scottish Intercollegiate Guidelines Network. Management of Sore Throat and Indications for Tonsillectomy. SIGN publication no. 117. Edinburgh: SIGN; 2010."
     },
     {
-      "title": "Step 2/6: 微生物學的陷阱 (Microbiology of Recurrent Tonsillitis)",
-      "scenario": "患者不解地問：「我每次發炎去診所，醫生都開針對鏈球菌的抗生素給我吃，為什麼還是會一直復發？」你向他解釋「急性」與「反覆性」扁桃腺炎的致病菌其實有所不同。",
-      "media": "載入圖片：顯微鏡下細菌抹片的示意圖",
-      "question": "雖然 A群 β-溶血性鏈球菌 (GABHS) 是「急性扁桃腺炎 (Acute tonsillitis)」最常見的致病菌，但在「反覆性扁桃腺炎 (Recurrent tonsillitis)」中，最主要的致病微生物其實是下列何者？",
+      "title": "Step 2/6：什麼才算數",
+      "scenario": "他說今年發作超過十次。你打開病歷開始數。\n\n要算進標準裡，發作必須在當次就有紀錄。",
+      "media": "",
+      "question": "下列哪一項才算是「有紀錄的發作」？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 僅為 GABHS 與黴漿菌 (Mycoplasma)"
+          "text": "(A) 打電話到診所說喉嚨痛，開了抗生素"
         },
         {
           "id": "B",
-          "text": "(B) 嗜血桿菌 (Haemophilus influenzae) 與金黃色葡萄球菌 (S. aureus, 包含 MRSA)",
-          "correct": true
+          "text": "(B) 他在之後的門診回述曾經喉嚨痛"
         },
         {
           "id": "C",
-          "text": "(C) 僅為 EB 病毒 (Epstein-Barr virus)"
+          "text": "(C) 喉嚨痛，而且當次紀錄至少有下列之一：體溫 >38.3°C、頸部淋巴結腫大、扁桃腺 exudate、或 strep test 陽性",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) 喉嚨痛，但理學檢查正常、沒有發燒紀錄"
         }
       ],
-      "feedback": "正確答案：B\n\n臨床地雷： 這是許多臨床醫師常忽略的點！急性感染最常見是 GABHS；但對於像這位患者反覆發作 (Recurrent tonsillitis) 的情況，最主要的致病菌其實是 Haemophilus influenzae 以及 S. aureus (包含 MRSA)，GABHS 反而較不常見。這也是為什麼單純針對鏈球菌的短期抗生素往往無法根除問題。"
+      "feedback": "正確答案：C\n\n一次發作要算進去，那一次的病歷必須同時寫到「喉嚨痛」，加上這四項裡的任何一項：體溫超過 38.3°C、頸部淋巴結腫、扁桃腺有 exudate、或 strep test 陽性。\n\n他今年因為喉嚨痛看了九次門診。其中七次有記到上面其中一項，另外兩次病歷上只有「喉嚨痛，開抗生素」這幾個字。所以他算得出來的是七次，剛好碰到第一個門檻。\n\n其他選項為什麼不對：\n(A) 電話裡沒有人檢查他、也沒有量到任何數據，就沒有東西可以拿來算。\n(B) 病人自己回想不算紀錄。會有這個要求，是因為當初證實手術有效的那些試驗，收的都是發作當下就留下這些紀錄的病人；沒有紀錄的那些，本來就不在研究裡面。\n(D) 檢查起來什麼都正常的喉嚨痛，多半是病毒感染，不是那些試驗在數的東西。\n\nKeypoint：數的是當時病歷寫了什麼，不是病人說他痛過幾次。\n\nReference: Paradise JL, Bluestone CD, Bachman RZ, et al. Efficacy of tonsillectomy for recurrent throat infection in severely affected children: results of parallel randomized and nonrandomized clinical trials. N Engl J Med. 1984;310(11):674-683. doi:10.1056/NEJM198403153101102. Scottish Intercollegiate Guidelines Network. Management of Sore Throat and Indications for Tonsillectomy. SIGN publication no. 117. Edinburgh: SIGN; 2010."
     },
     {
-      "title": "Step 3/6: 手術器械與出血率評估 (Surgical Techniques & Bleeding)",
-      "scenario": "患者同意於 2026/01/15 接受雙側扁桃腺切除術。在術前說明時，患者非常擔憂「術後大出血」的風險。你必須根據大型統計數據選擇適當的手術器械。",
-      "media": "載入表格：Table 38.1 Surgical techniques and post-operative haemorrhage",
-      "question": "根據英國 NPTA (National Prospective Tonsillectomy Audit) 的大型統計與 Best Clinical Practice 指引，下列哪一種手術器械/方式擁有「最低的」術後出血率 (post-operative haemorrhage rates)？",
+      "title": "Step 3/6：恢復期長什麼樣子",
+      "scenario": "一年七次有紀錄的發作符合標準，他決定手術。排刀之前你跟他談恢復。\n\n他有全職工作，問要請多久的假。",
+      "media": "",
+      "question": "關於成人的恢復期，你會怎麼跟他說？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 傳統冷械分離法 (Cold steel dissection tonsillectomy)",
+          "text": "(A) 疼痛比小孩更嚴重也更久，通常約兩週；在最大型的試驗中，約每五位成人就有一位回報術後出血",
           "correct": true
         },
         {
           "id": "B",
-          "text": "(B) 單極電燒剝離 (Monopolar diathermy dissection)"
+          "text": "(B) 跟小孩差不多：兩三天不舒服，一週內就能回去上班"
         },
         {
           "id": "C",
-          "text": "(C) 雙極電燒剪刀 (Bipolar diathermy scissors)"
+          "text": "(C) 成人出血少見，因為 tonsillar bed 較大、比較好止血"
+        },
+        {
+          "id": "D",
+          "text": "(D) 要有住院好幾天的心理準備"
         }
       ],
-      "feedback": "正確答案：A\n\n術式解析： 根據 NPTA 的統計，傳統的「Cold steel tonsillectomy」出血率比其他高溫熱能方式低 (Primary 0.5-0.8%, Secondary 1.0-2.4%)，且術後疼痛程度也較低。相對而言，完全依賴單極電燒 (Monopolar) 的術後出血率與疼痛感都是最高的。"
+      "feedback": "正確答案：A\n\n成人開完扁桃腺比小孩痛得多，也痛得久，大概要兩週。NATTINA 這個試驗裡，39% 的人出現手術相關的不良事件，最多的是出血，有 19% 回報過。這個數字比以前講的 5 到 10% 高很多，一部分原因是這個試驗會主動打電話問病人，不是等病人回來才知道。所以請他直接排兩週的假，而且要告訴他出血長什麼樣子、真的出血要去哪裡。\n\n其他選項為什麼不對：\n(B) 這是小孩的恢復狀況。成人每一項都比較差：更痛、更久才能正常吃東西、要請更多天假。\n(C) 剛好講反了。成人的出血率比小孩高，不是低。\n(D) 單純的成人扁桃腺切除是當天回家或住一晚。不會住到好幾天。\n\nKeypoint：兩週的疼痛，加上一個他必須在簽同意書之前就知道的出血風險。\n\nReference: Wilson JA, O'Hara J, Fouweather T, et al. Conservative management versus tonsillectomy in adults with recurrent acute tonsillitis in the UK (NATTINA). Lancet. 2023;401(10393):2051-2059. doi:10.1016/S0140-6736(23)00519-6."
     },
     {
-      "title": "Step 4/6: 圍手術期的藥物優化 (Peri-operative Glucocorticoids)",
-      "scenario": "患者進入開刀房。麻醉科醫師在進行麻醉誘導 (induction) 時詢問你，是否需要給予某些預防性藥物來減少術後的疼痛與不適。",
-      "media": "載入圖片：Dexamethasone 的藥物小瓶",
-      "question": "根據 Cochrane review 與現代最佳臨床實踐 (Best Clinical Practice)，在扁桃腺手術圍手術期常規給予下列哪一種藥物，被證實可以安全且有效地「降低術後發病率 (morbidity)、疼痛與噁心嘔吐」？",
+      "title": "Step 4/6：誘導時",
+      "scenario": "他已經躺上手術台。麻醉科問你要給什麼。",
+      "media": "",
+      "question": "術中你會給什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 連續七天的術後預防性抗生素"
+          "text": "(A) 一劑 IV antibiotic，不給 steroid"
         },
         {
           "id": "B",
-          "text": "(B) 術中給予單一劑量的靜脈注射類固醇 (A single dose of intravenous dexamethasone)",
-          "correct": true
+          "text": "(B) 兩個都不給，因為都被認為會增加術後出血"
         },
         {
           "id": "C",
-          "text": "(C) 大劑量的阿斯匹靈 (High-dose aspirin)"
+          "text": "(C) 一劑 dexamethasone 加一劑 IV antibiotic，兩個都給"
+        },
+        {
+          "id": "D",
+          "text": "(D) 一劑 IV dexamethasone，不給 antibiotic",
+          "correct": true
         }
       ],
-      "feedback": "正確答案：B\n\n治療共識： 醫學證據強烈支持在手術期間給予單一劑量 (A single dose) 的 dexamethasone 作為輔助治療，能顯著降低術後疼痛與噁心嘔吐 (PONV)。相反地，2012 年的文獻已明確反對術後常規使用抗生素，且抗生素對於降低術後併發症並無幫助。"
+      "feedback": "正確答案：D\n\n這兩件事的答案剛好是相反的。Dexamethasone 術中給一劑，可以減少術後噁心嘔吐，也讓病人比較早能吃東西，該給。抗生素則相反：Cochrane review 看過了，它不會讓病人比較不痛、不會減少出血、也不會讓病人比較快恢復正常飲食，該省下來的就省下來，不然只是白白承擔副作用和抗藥性。\n\n其他選項為什麼不對：\n(A) 兩件事剛好都做反了。沒有好處的是抗生素，有好處的是類固醇。\n(B) 會擔心類固醇造成出血是合理的，這也是當初去研究它的原因，但術中單獨給一劑並沒有被證實會增加需要處理的出血。不給它只是白白放棄一個已經確立的好處。\n(C) 類固醇那一半是對的。抗生素那一半是沿用了很多年、但一直沒有證據支持的習慣。\n\nKeypoint：類固醇給，抗生素不給。\n\nReference: Dhiwakar M, Clement WA, Supriya M, McKerrow W. Antibiotics to reduce post-tonsillectomy morbidity. Cochrane Database Syst Rev. 2012;12(12):CD005607. doi:10.1002/14651858.CD005607.pub4."
     },
     {
-      "title": "Step 5/6: 術後止痛藥物的選擇 (Post-op Analgesia)",
-      "scenario": "手術順利結束。扁桃腺切除術後最大的問題就是「疼痛 (Pain)」，通常需要 1-2 週才能恢復。你需要開立出院的止痛藥物。",
-      "media": "載入圖片：術後疼痛管理的藥物選擇示意圖",
-      "question": "關於扁桃腺術後的止痛藥物選擇，下列敘述何者正確？",
+      "title": "Step 5/6：回家",
+      "scenario": "手術順利。當天晚上就可以出院，他問止痛要吃什麼。",
+      "media": "",
+      "question": "你會開什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 鴉片類藥物 (Opioids) 是首選，因為它們不會引起噁心嘔吐。"
+          "text": "(A) 只開 opioid，因為抗發炎藥物會增加出血風險"
         },
         {
           "id": "B",
-          "text": "(B) 非類固醇消炎止痛藥 (NSAIDs) 術後噁心嘔吐較鴉片類少，且「不會」增加傷口流血的風險，是安全有效的選擇。",
+          "text": "(B) Acetaminophen 加 ibuprofen 定時服用，另外開少量 opioid 只做 breakthrough pain 用",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) 為了達到最佳止痛效果，所有兒童術後都應常規使用可待因 (Codeine)。"
+          "text": "(C) 只開 acetaminophen，因為 ibuprofen 會增加出血風險"
+        },
+        {
+          "id": "D",
+          "text": "(D) 開一個療程的抗生素，藉由降低 tonsillar bed 的細菌量來減輕疼痛"
         }
       ],
-      "feedback": "正確答案：B\n\n臨床衛教： 術後止痛極度重要！NSAIDs 是安全且有效的，不僅噁心嘔吐的副作用少於鴉片類，文獻也證實它「不會增加傷口流血的風險」。另外要特別注意，Codeine (可待因) 在兒童是絕對禁忌 (可能致命)，Aspirin 則要避免雷氏症候群 (Reye syndrome)。"
+      "feedback": "正確答案：B\n\nAcetaminophen 和 ibuprofen 兩種一起、按時間吃，第一週尤其不要等到痛了才吃，這是止痛的基礎。成人扁桃腺術後是真的很痛，所以額外開少量的 opioid 讓他痛到受不了的時候用是合理的——講好幾顆，不再續開。\n\n其他選項為什麼不對：\n(A) 沒有證據顯示 ibuprofen 會增加需要回來處理的出血。不給它，結果是他吃更多 opioid，出血並不會比較少。\n(C) 一樣的問題。少了 ibuprofen 止痛效果就變差，出血風險卻沒有因此降低。\n(D) 抗生素不會讓術後比較不痛，Step 4 引的那篇 Cochrane review 直接回答了這件事。\n\nKeypoint：兩種非鴉片類定時吃，opioid 只留給真的撐不住的時候。\n\nReference: Dhiwakar M, Clement WA, Supriya M, McKerrow W. Antibiotics to reduce post-tonsillectomy morbidity. Cochrane Database Syst Rev. 2012;12(12):CD005607. doi:10.1002/14651858.CD005607.pub4. Mitchell RB, Archer SM, Ishman SL, et al. Otolaryngol Head Neck Surg. 2019;160(1_suppl):S1-S42, Key Action Statement 13."
     },
     {
-      "title": "Step 6/6: 延遲性出血的處置 (Managing Secondary Haemorrhage)",
-      "scenario": "術後第 8 天，患者突然跑來急診，主訴嘴巴裡有少許血絲，吞嚥時也覺得特別痛。你檢查發現兩側 tonsillar fossa 有偽膜，且有輕微的滲血。此為「次發性出血 (Secondary haemorrhage)」。",
-      "media": "載入圖片：術後扁桃腺窩 (Tonsillar fossa) 偽膜形成與輕微滲血的照片",
-      "question": "扁桃腺術後的「次發性出血 (Secondary bleeding，發生於術後 24 小時至 2 週內)」最常與下列哪種狀況有關？且標準的第一線治療為何？",
+      "title": "Step 6/6：六週後",
+      "scenario": "Tonsillar fossa 已經癒合，過程中沒有出血。他已經回去上班。\n\n他問：這樣是不是以後就不會喉嚨痛了？",
+      "media": "載入圖片：口咽照，顯示已癒合的 tonsillar fossa。圖說：「六週後」",
+      "question": "你會怎麼跟他說？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 與未發現的血友病有關；需立即輸注凝血因子。"
+          "text": "(A) 扁桃腺已經拿掉了，以後不會再喉嚨痛"
         },
         {
           "id": "B",
-          "text": "(B) 常與 Streptococcus 局部感染有關；第一線治療為「單純使用抗生素 (antibiotic therapy alone)」，極少需要再次進開刀房。",
-          "correct": true
+          "text": "(B) Tonsillectomy 對成人沒有被證實有效，這次手術是為了讓每次發作變輕"
         },
         {
           "id": "C",
-          "text": "(C) 與縫線脫落有關；必須立即推進開刀房重新縫合。"
+          "text": "(C) 喉嚨痛的天數會變少但不會歸零：在成人最大型的試驗中，兩年約 23 天，沒開刀則是 30 天",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) 免疫力會變差，之後其他感染會變多"
         }
       ],
-      "feedback": "正確答案：B\n\n急診地雷： Secondary haemorrhage 常發生在術後 5-10 天偽膜脫落期，這通常與局部的鏈球菌 (Streptococcus) 感染有關。對於大多數次發性出血，處置上通常只需要給予抗生素治療 (Bleeding usually settles with antibiotic therapy alone)，很少需要再次進行外科手術止血。"
+      "feedback": "正確答案：C\n\nNATTINA 把 453 位符合標準的成人隨機分成開刀組和保守治療組，追蹤兩年，數他們總共喉嚨痛幾天。開刀組中位數 23 天，沒開刀的 30 天，校正之後大約是少一半。而且算下來手術是划算的。所以開刀是有效的，但效果是「痛的天數變少」，不是「從此不痛」。\n\n其他選項為什麼不對：\n(A) 拿掉扁桃腺並不等於拿掉咽喉。他還是會咽喉炎，包括鏈球菌感染。\n(B) 兩件事都說錯了。NATTINA 明確顯示喉嚨痛的天數變少；而且當初開刀是因為發作太頻繁，不是為了讓每次痛得輕一點。\n(D) 沒有任何研究顯示拿掉扁桃腺會讓免疫功能出現有臨床意義的下降。\n\nKeypoint：跟他說天數大概少一半，不要說以後不會痛。\n\nReference: Wilson JA, O'Hara J, Fouweather T, et al. Lancet. 2023;401(10393):2051-2059. doi:10.1016/S0140-6736(23)00519-6."
     }
   ]
 }

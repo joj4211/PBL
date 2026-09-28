@@ -1,148 +1,172 @@
 {
-  "id": "nose_epistaxis_hht",
-  "title": "The Unstoppable Red Tide",
-  "subtitle": "Severe Epistaxis and HHT",
-  "description": "Severe epistaxis, CTA, SPA, packing complications, and HHT treatment.",
-  "estimatedTime": "20-30 min",
-  "difficulty": "Advanced",
+  "id": "nose_hht",
+  "title": "The Nose That Bleeds Every Week",
+  "subtitle": "A woman with a lifetime of nosebleeds, from the first scope to the organs you cannot see",
+  "description": "Scope first, read the pattern, count the criteria without a family history, read the rest of her chart as one disease, control an acute bleed without making the next one worse, and what is left when the ladder has failed.",
+  "estimatedTime": "20-25 min",
+  "difficulty": "Intermediate",
   "tags": [
     "Rhinology",
     "Epistaxis",
-    "HHT",
-    "SPA"
+    "Nasal endoscopy",
+    "Vascular lesions"
   ],
   "steps": [
     {
-      "title": "Step 1/6: Warning Signs & CTA",
-      "scenario": "A 57-year-old woman with no significant past medical history presents with extremely severe epistaxis for three consecutive days. In the emergency department, nasal endoscopy shows multiple active bleeding points in the left inferior meatus and anterior inferior turbinate. There is also massive bleeding from the left middle meatus and superior meatus, raising suspicion for a sphenoid sinus lesion.",
-      "media": "Load image: emergency triage monitor (BP 149/103) and CT angiography (CTA) images",
-      "question": "In this type of unexplained massive epistaxis with suspected deep posterior disease, why is arranging CT angiography (CTA) immediately in the emergency department a life-saving warning-sign step?",
+      "title": "Step 1/6: First Move",
+      "scenario": "A 66-year-old woman is referred to the ENT clinic for nosebleeds.\n\n    Current         intermittent bleeding from both sides for one month\n    History         nosebleeds on and off for years; several laser treatments elsewhere, each helped for a while\n    Anticoagulant   none\n    Hypertension    yes, treated\n\nOther history, from the referral letter:\n\n    Stomach         bleeding lesions clipped at endoscopy three times, described as angiodysplasia-like\n    Liver           tortuous intrahepatic vessels and an aneurysm of the superior mesenteric artery, under observation\n    Heart           pulmonary hypertension and heart failure, functional class II to III\n    Blood           microcytic anemia and low platelets; splenomegaly\n\nShe is not bleeding while she talks to you.",
+      "media": "",
+      "question": "What do you do first?",
       "options": [
         {
           "id": "A",
-          "text": "(A) To confirm whether the nasal septum is deviated, so nasal packing can be placed more easily."
+          "text": "(A) Arrange CT angiography to find the bleeding artery"
         },
         {
           "id": "B",
-          "text": "(B) To exclude fatal vascular abnormalities such as carotid blowout syndrome or aneurysm.",
-          "correct": true
+          "text": "(B) Cauterize Little's area on both sides with silver nitrate, since that is where most nosebleeds come from"
         },
         {
           "id": "C",
-          "text": "(C) CTA is the gold standard for diagnosing simple anterior epistaxis from Kiesselbach's area."
+          "text": "(C) Nasal endoscopy, to find the bleeding point and see what the mucosa looks like",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) A coagulation screen and platelet count before any examination"
         }
       ],
-      "feedback": "Correct answer: B\n\nAttending’s tip: In severe, recurrent, unusually massive epistaxis, especially in patients with a history of head and neck cancer radiotherapy (NPC history) or suspected deep lesions, always be alert for carotid blowout syndrome or pseudoaneurysm.\n\nProceeding blindly to the operating room can cause disaster, so obtaining preoperative CTA to confirm there is no abnormal enhancing lesion is a very appropriate decision."
+      "feedback": "Correct answer: C\n\nAn ENT doctor looks before anything else. A patient with recurrent epistaxis who is not bleeding right now is the ideal moment for a careful endoscopic examination: anterior rhinoscopy for Little's area, then the flexible or rigid scope for the rest of the septum, the turbinates, the middle meatus and the posterior nasal cavity. You are looking for a bleeding point, a mass, a vascular lesion, a perforation, and, just as important, for the pattern: one spot or many, one side or both, ordinary mucosa or something else.\n\nHer history already argues against ordinary epistaxis: years of bilateral bleeding, repeated laser treatments that each worked for a while and then failed, bleeding lesions in the stomach, abnormal vessels in the liver, and an anemia. A patient who bleeds from more than one organ has a disease, not a nosebleed. The scope is how you start to find out which.\n\nWhy the others fail:\n(A) CT angiography is for a massive bleed you cannot localize, or for a suspected vascular lesion such as a pseudoaneurysm after radiotherapy. It is not the first test for a stable patient with recurrent bleeding you have not yet looked at.\n(B) Blind cautery of Little's area, or another laser session, has been tried repeatedly and has not fixed her. Cauterizing again without finding the source is how septal perforations happen.\n(D) A coagulation screen is reasonable in the workup, but it is not the first move and it will not tell you where she bleeds from. Examination comes before tests.\n\nKeypoint: recurrent epistaxis, patient not bleeding: scope the nose before you order or cauterize anything.\n\nReference: Tunkel DE, Anne S, Payne SC, et al. Clinical practice guideline: nosebleed (epistaxis). Otolaryngol Head Neck Surg. 2020;162(1_suppl):S1-S38. doi:10.1177/0194599819890327."
     },
     {
-      "title": "Step 2/6: Anatomy of Posterior Epistaxis",
-      "scenario": "CTA shows blood accumulation in both maxillary sinuses (L > R), but no abnormal vascular enhancing lesion. Because the bleeding is massive and originates from the posterior nasal cavity, you admit the patient and prepare for bilateral endoscopic sinus surgery (ESS) and left sphenopalatine artery cauterization (SPA cauterization).",
-      "media": "Load image: lateral nasal wall vascular anatomy diagram marking the SPA location",
-      "question": "Before ligating or cauterizing the sphenopalatine artery (SPA), you must understand its anatomy. SPA is the terminal branch of which major arterial system?",
+      "title": "Step 2/6: What the Scope Shows",
+      "scenario": "Nasal endoscopy, both sides:\n\n    Right septum        mucosa pale and scarred; several small red vascular spots along its edge\n    Right turbinate     multiple small red spots on the inferior turbinate\n    Left septum         a shallow anterior ulcer with fresh crust; similar red spots around it\n    Left turbinate      scattered red spots\n    Middle meatus       clear, both sides\n    Posterior cavity    clear; no mass\n    Perforation         none",
+      "media": "Load image: Nasal endoscopy of the right nasal cavity from this patient, de-identified, unannotated; crop the timestamp and scale bar. Caption: 'Right nasal cavity.'",
+      "question": "What does this pattern tell you, and where do you look next?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Internal carotid artery -> ophthalmic artery -> SPA"
+          "text": "(A) Multiple bleeding points; arrange CT angiography to map the supplying arteries before treatment"
         },
         {
           "id": "B",
-          "text": "(B) External carotid artery -> facial artery -> SPA"
+          "text": "(B) Multiple mucosal telangiectasias on both sides: look at her lips, tongue, mouth and fingertips, and ask who else in the family bleeds",
+          "correct": true
         },
         {
           "id": "C",
-          "text": "(C) External carotid artery -> internal maxillary artery (IMA) -> SPA",
-          "correct": true
+          "text": "(C) A vascular tumor; biopsy one of the lesions"
+        },
+        {
+          "id": "D",
+          "text": "(D) Chronic irritation from nose-picking; advise moisturizing and review"
         }
       ],
-      "feedback": "Correct answer: C\n\nAnatomy review: The major blood supply to the posterior nasal cavity comes from branches of the external carotid artery. After the internal maxillary artery (IMA) enters the pterygopalatine fossa, its terminal branch is the sphenopalatine artery (SPA).\n\nSPA passes through the sphenopalatine foramen into the nasal cavity. It is the main arterial supply to the posterior nasal mucosa and the most common culprit in major posterior epistaxis."
+      "feedback": "Correct answer: B\n\nThe pattern is the finding. On the right, the septal mucosa is pale and scarred, which is what repeated laser leaves behind, and along its edge and across the inferior turbinate are small, discrete, red vascular lesions in otherwise normal mucosa, with no mass and no single source. The left is the same, plus an ulcer where a telangiectasia has broken down after repeated bleeding and treatment; the ulcer is a consequence, not the cause. Those are mucosal telangiectasias: dilated, thin-walled vessels just under the epithelium, which is why they bleed spontaneously and why cautery of any one of them fixes nothing for long.\n\nMultiple telangiectasias in the nose of a patient with lifelong spontaneous epistaxis raise one diagnosis above the others, and the way to test it is not in the nose. It is on the outside:\n• the lips, especially the vermilion border,\n• the tongue and the oral mucosa,\n• the fingertips and nail beds,\nand it is in the history you already have: the stomach and the liver. Ask about the family too, because the condition is inherited, but her referral letter may already contain two of the answers.\n\nThe scope image is what makes the differential: a single vascular mass would be a tumor, a septal spur with a crust would be local trauma, a posterior single bleeder would be a sphenopalatine branch. None of those look like this.\n\nWhy the others fail:\n(A) There is no artery to map. Telangiectasias are diffuse, superficial, and fed by collaterals; CT angiography shows nothing useful and delays the question that matters.\n(C) A biopsy of a telangiectasia bleeds, tells you it was a telangiectasia, and does not change the diagnosis. The lesions are recognized by their appearance and distribution.\n(D) Nose-picking produces a crusted anterior septum on one side, not bilateral discrete vascular lesions on septum and turbinates.\n\nKeypoint: many small red vascular spots on both sides is a pattern, not a bleeding point; look at the lips, tongue and fingers, and read the rest of her history as part of the same disease.\n\nReference: Faughnan ME, Mager JJ, Hetts SW, et al. Ann Intern Med. 2020;173(12):989-1001. Shovlin CL, Guttmacher AE, Buscarini E, et al. Diagnostic criteria for hereditary hemorrhagic telangiectasia (Rendu-Osler-Weber syndrome). Am J Med Genet. 2000;91(1):66-67."
     },
     {
-      "title": "Step 3/6: Posterior Packing Pitfalls",
-      "scenario": "While waiting for the operating room, the bleeding is so severe that you temporarily use a 14Fr Foley catheter as a posterior nasal packing balloon to compress the bleeding.",
-      "media": "Load image: illustration of a Foley catheter balloon inflated for posterior nasal packing",
-      "question": "When using a Foley balloon for posterior nasal packing, which important nursing order must be clearly specified to avoid severe ischemic complications?",
+      "title": "Step 3/6: Counting the Criteria",
+      "scenario": "You look outside the nose.\n\n    Lips              two small red spots on the lower lip\n    Tongue            none seen\n    Hands and arms    several small red spots on the fingertips and forearms\n\nYou ask about the family.\n\n    Parents           both died in their sixties; she does not recall nosebleeds\n    Siblings          two, neither with nosebleeds as far as she knows\n    Children          one son, well\n\nFrom her records: gastric angiodysplasia-like lesions clipped three times; tortuous intrahepatic vessels on imaging.",
+      "media": "Load image: Photograph of the fingertips and forearm from this patient, consented, de-identified, unannotated, showing small red telangiectasias. Caption: 'Hand and forearm.'",
+      "question": "How many Curacao criteria does she meet, and what is her diagnosis?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Inflate the balloon continuously with 50 mL normal saline and pull tightly for 7 days."
-        },
-        {
-          "id": "B",
-          "text": "(B) Release tension every 6 hours (Q6H), and loosen the balloon after 24-48 hours.",
+          "text": "(A) Three: definite HHT. Epistaxis, telangiectasias at characteristic sites, and visceral lesions; a family history is one criterion, not a requirement",
           "correct": true
         },
         {
+          "id": "B",
+          "text": "(B) Two: possible HHT, because there is no family history and the diagnosis cannot be definite without one"
+        },
+        {
           "id": "C",
-          "text": "(C) Add high-concentration silver nitrate into the balloon fluid for chemical cauterization."
+          "text": "(C) Two: possible HHT, because the liver and stomach findings have not been proven to be HHT lesions"
+        },
+        {
+          "id": "D",
+          "text": "(D) Four: definite HHT"
         }
       ],
-      "feedback": "Correct answer: B\n\nClinical pitfall: A Foley balloon can temporarily control posterior bleeding, but continuous high-pressure compression without releasing tension every 6 hours, and placement beyond 24-48 hours, can easily cause avascular necrosis of the nostril and nasopharyngeal mucosa."
+      "feedback": "Correct answer: A\n\nThe lesions on her lip, fingertips and forearms are the same as the ones in her nose: 1 to 3 mm, red, flat, blanching, at characteristic sites. This is hereditary hemorrhagic telangiectasia, and the Curacao criteria say how sure you can be.\n\nThe criteria are four:\n1. Spontaneous, recurrent epistaxis.\n2. Multiple telangiectasias at characteristic sites: lips, oral cavity, fingers, nose.\n3. Visceral lesions: gastrointestinal telangiectasias, or pulmonary, hepatic, cerebral or spinal arteriovenous malformations.\n4. A first-degree relative with HHT.\n\nThree or more: definite. Two: possible. Fewer: unlikely.\n\nCount hers. Epistaxis: yes, for years. Telangiectasias: lips, fingertips, nose. Visceral lesions: gastric angiodysplasia-like lesions that have needed clipping three times, and tortuous intrahepatic vessels, which are the gastrointestinal telangiectasias and hepatic vascular malformations of HHT. That is three. The family history is negative, or at least unknown, and it does not matter: the fourth criterion is one of four, not a gate. Some patients carry a new variant; some come from families where nobody was ever asked. Three of any four is definite.\n\nThis is the criteria question worth getting right, because the reflex is to doubt the diagnosis when the family history is blank. The reflex is wrong.\n\nWhy the others fail:\n(B) A family history is a criterion, not a requirement. Definite HHT is three of four, and she has three without it.\n(C) Angiodysplasia-like bleeding lesions in the stomach and tortuous hepatic vessels are exactly what HHT does to those organs. In a patient with epistaxis and mucocutaneous telangiectasias they are counted as the visceral criterion; they do not need a separate proof.\n(D) She has no first-degree relative known to have HHT, so the fourth criterion is not met. Three, not four.\n\nKeypoint: epistaxis, telangiectasias, visceral lesions, relative; three of four is definite, and a blank family history does not take the diagnosis away.\n\nReference: Shovlin CL, Guttmacher AE, Buscarini E, et al. Diagnostic criteria for hereditary hemorrhagic telangiectasia (Rendu-Osler-Weber syndrome). Am J Med Genet. 2000;91(1):66-67. Faughnan ME, Mager JJ, Hetts SW, et al. Ann Intern Med. 2020;173(12):989-1001."
     },
     {
-      "title": "Step 4/6: Specific Interventions for HHT",
-      "scenario": "During surgery, you find multiple abnormally dilated small vascular clusters on the left nasal mucosa. Considering the overall history, you strongly suspect hereditary hemorrhagic telangiectasia (HHT).",
-      "media": "Load image: endoscopic view showing typical red telangiectatic HHT lesions",
-      "question": "For multifocal microvascular bleeding in the nose of an HHT patient, in addition to traditional bipolar cautery, which laser-assisted cautery has been reported to have good hemostatic effect?",
+      "title": "Step 4/6: What the Rest of Her Chart Means",
+      "scenario": "Definite HHT. Look again at her other diagnoses:\n\n    Heart      pulmonary hypertension, heart failure, functional class II to III; ejection fraction 67 percent, impaired compliance\n    Liver      tortuous intrahepatic vessels; superior mesenteric artery aneurysm\n    Stomach    bleeding lesions clipped three times\n    Blood      microcytic anemia, low platelets, splenomegaly\n    Lungs      never screened\n    Brain      never imaged",
+      "media": "",
+      "question": "Which of these are complications of her HHT, and what still needs to be done?",
       "options": [
         {
           "id": "A",
-          "text": "(A) CO2 laser"
+          "text": "(A) None; the heart, liver and stomach problems are separate diseases of an older woman"
         },
         {
           "id": "B",
-          "text": "(B) KTP-assisted cautery",
-          "correct": true
+          "text": "(B) The stomach lesions only; the heart and liver findings are unrelated"
         },
         {
           "id": "C",
-          "text": "(C) Excimer laser"
+          "text": "(C) The stomach lesions, the hepatic vascular malformations, and the heart failure with pulmonary hypertension that hepatic shunting causes; and she still needs screening for pulmonary and cerebral arteriovenous malformations",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) All of them are HHT, and since she is already followed by cardiology and gastroenterology no further screening is needed"
         }
       ],
-      "feedback": "Correct answer: B\n\nAttending’s tip: Standard bipolar cautery can further damage the fragile mucosa in HHT. KTP-assisted cautery, a green-light laser, is selectively absorbed by hemoglobin and can precisely treat abnormal dilated vessels while sparing more surrounding normal mucosa. It is considered effective for nasal vascular bleeding in HHT."
+      "feedback": "Correct answer: C\n\nHer chart is a textbook of what HHT does outside the nose, and reading it as one disease changes her care.\n\nThe liver. Hepatic vascular malformations are common in HHT and usually silent. When the shunts are large, blood passes from hepatic artery to hepatic vein or portal vein without meeting resistance, cardiac output rises to keep up, and the result is high-output heart failure and, over time, pulmonary hypertension. A preserved ejection fraction with heart failure and pulmonary hypertension in a woman with HHT and abnormal liver vessels is that picture. It matters for two reasons: it makes anesthesia and fluid shifts riskier, so the surgical team and the anesthetist need to know, and it is one of the indications for systemic antiangiogenic therapy, which can reduce the shunting.\n\nThe stomach. Gastrointestinal telangiectasias bleed slowly and continuously. With the nose, they account for her iron-deficiency anemia. Endoscopic treatment when they bleed, and iron, are the management.\n\nThe spleen and platelets. Splenomegaly with low platelets fits the portal and cardiac congestion that hepatic shunting produces. It is a consequence, not a separate disease.\n\nWhat is missing. She has never been screened for the two lesions that can kill suddenly.\n• Pulmonary AVM: contrast echocardiography, the agitated saline bubble study, then chest CT if positive. A pulmonary shunt sends clots and bacteria straight to the brain. Until it is excluded she needs antibiotic prophylaxis for procedures and an air filter on every intravenous line, including during her nasal surgery.\n• Cerebral AVM: MRI of the brain with contrast, once.\n\nWhy the others fail:\n(A) Heart failure with a normal ejection fraction, tortuous liver vessels, and stomach lesions that bleed, in a patient with HHT, is one disease seen from three sides.\n(B) The liver lesions are the classic hepatic involvement of HHT, and the heart failure is the classic consequence of the liver lesions.\n(D) Being followed for the organs that have already declared themselves is not the same as screening the ones that have not. The lungs and brain are the ones that matter most and the ones nobody has looked at.\n\nKeypoint: hepatic shunting causes high-output heart failure and pulmonary hypertension; gastric lesions cause the anemia; and the lungs and brain still need screening before anyone operates.\n\nReference: Faughnan ME, Mager JJ, Hetts SW, et al. Second International Guidelines for the Diagnosis and Management of Hereditary Hemorrhagic Telangiectasia. Ann Intern Med. 2020;173(12):989-1001. doi:10.7326/M20-1443."
     },
     {
-      "title": "Step 5/6: Complications of Packing - TSS",
-      "scenario": "Suppose that before surgery, the emergency physician packed her nasal cavity with non-absorbable petroleum gauze. On postoperative day 1, the patient suddenly develops high fever (>38.9°C), hypotension, and diffuse macular erythroderma on both palms.",
-      "media": "Load image: table - CDC's case definition of toxic shock syndrome (fever, hypotension, palmar erythema/desquamation)",
-      "question": "What is this emergency caused by nasal packing called, and what is its pathophysiology?",
+      "title": "Step 5/6: In the Emergency Department",
+      "scenario": "Before the planned surgery she comes to the emergency department at 2 a.m.\n\n    Bleeding      right side, on and off for 40 minutes, slowed but not stopped with pressure\n    BP            152/88, pulse 98\n    Hemoglobin    8.4 g/dL\n    Endoscopy     an oozing point on the right inferior turbinate and the adjacent septum; multiple telangiectasias on the surrounding mucosa, which is thin and friable\n\nThe emergency physician has a non-absorbable pack ready and asks whether to use it.",
+      "media": "Load image: Nasal endoscopy of the right nasal cavity from this patient during the bleed, de-identified, unannotated, wide view and close-up. Caption: 'Right nasal cavity: oozing point over the inferior turbinate and the adjacent septum, with multiple telangiectasias on the mucosa.'",
+      "question": "How do you control this bleed?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Nasopulmonary reflex; hypoxia caused by hyperventilation."
+          "text": "(A) Tight bilateral non-absorbable packing for 72 hours"
         },
         {
           "id": "B",
-          "text": "(B) Septic shock; caused by direct bloodstream infection with Pseudomonas."
+          "text": "(B) Bipolar cautery of both sides of the septum under local anesthesia"
         },
         {
           "id": "C",
-          "text": "(C) Toxic shock syndrome (TSS); caused by staphylococcal exotoxin.",
+          "text": "(C) Emergency sphenopalatine artery ligation"
+        },
+        {
+          "id": "D",
+          "text": "(D) Head up, topical vasoconstrictor and tranexamic acid, gentle absorbable or lubricated packing if needed, and targeted bipolar or laser to the bleeding points only",
           "correct": true
         }
       ],
-      "feedback": "Correct answer: C\n\nClinical pitfall: Toxic shock syndrome (TSS) is one of the most dangerous complications of nasal packing, especially traditional gauze packing. It is caused by systemic immune activation triggered by Staphylococcus aureus exotoxin. It often occurs within 24 hours after packing, but it may also occur weeks later. This is one reason modern practice increasingly favors absorbable hemostatic materials such as FloSeal or earlier surgical control of bleeding."
+      "feedback": "Correct answer: D\n\nAn HHT nose is not an ordinary nose, and the emergency department's reflexes can make it worse. In her case there is a further reason to be careful: she has pulmonary hypertension and heart failure, and a tight bilateral pack that forces mouth breathing overnight is not harmless in that chest. The mucosa is thin, the vessels are superficial, and every pack that goes in and every pack that comes out tears more of them.\n\nWhat works, in order:\n• Sit her up, pinch the soft part of the nose, ten minutes by the clock. Most HHT bleeds stop with that.\n• Topical vasoconstrictor, oxymetazoline on a pledget, and topical or oral tranexamic acid.\n• If packing is needed, use a dissolvable hemostatic material or a lubricated, low-pressure pack, and remove it early. Never pack tightly, never pack for days.\n• If an oozing point can be seen, as it can here, treat that point: bipolar at low power, or KTP or diode laser, to the telangiectasia and nothing around it. The lesions beside it are left alone unless they are bleeding too.\n\nWhat to avoid, and why:\n• Non-absorbable packing tears the mucosa on removal and starts the next bleed; it also carries the risk of toxic shock. The nosebleed guideline says packing is a bridge, not a treatment, and in HHT the bridge is more expensive than usual.\n• Cautery of both sides of the septum in one sitting, or cautery of wide areas, leads to perforation. A septal perforation in HHT is permanent and bleeds more than the septum did.\n• Silver nitrate on friable HHT mucosa is imprecise and spreads.\n\nWhy the others fail:\n(A) Tight packing for three days will stop this bleed and cause the next one, and in the meantime she cannot breathe through her nose and is at risk of toxic shock. In HHT the aim is to avoid packing, not to prolong it.\n(B) Bilateral septal cautery at the same sitting is the classic way to make a septal perforation. One side, and only the bleeding points.\n(C) Sphenopalatine artery ligation is an operation for a single arterial bleeding point in ordinary posterior epistaxis. Her bleeding is from many superficial vessels supplied by collaterals; ligating one artery does not stop them for long, and it takes away an embolization route.\n\nKeypoint: pressure, vasoconstrictor, tranexamic acid, gentle packing only if you must and out early; cautery to the bleeding point, never to the whole septum, never both sides.\n\nReference: Faughnan ME, Mager JJ, Hetts SW, et al. Ann Intern Med. 2020;173(12):989-1001. Tunkel DE, Anne S, Payne SC, et al. Clinical practice guideline: nosebleed (epistaxis). Otolaryngol Head Neck Surg. 2020;162(1_suppl):S1-S38. doi:10.1177/0194599819890327."
     },
     {
-      "title": "Step 6/6: Ultimate Surgical Therapy for HHT",
-      "scenario": "This ESS plus SPA ligation procedure is successful. However, during rounds, you explain to the patient that HHT is a genetic disease, and future recurrent major bleeding remains possible.",
-      "media": "Load image: septodermoplasty illustration",
-      "question": "If this HHT patient develops refractory epistaxis that cannot be controlled after repeated cautery, packing, or even SPA ligation, which ultimate surgical procedure can an otolaryngologist consider?",
+      "title": "Step 6/6: When the Ladder Has Failed",
+      "scenario": "The bleed is controlled. Now the long view.\n\n    Moisturizers      liquid paraffin drops for weeks; no change\n    Tranexamic acid   used; some benefit\n    Iron              intravenous, ongoing\n    Laser             many sessions over the years, each helpful for a while, then recurrence\n    Now               bleeding from a left septal ulcer and a right oozing point, hemoglobin 8.4, transfused twice this year\n\nThe management algorithm for HHT epistaxis is shown. She asks what is left.",
+      "media": "Load image: Management algorithm for epistaxis in HHT, acute pathway on the left, chronic recurrent pathway on the right. Dür et al., Eur Arch Otorhinolaryngol 2021, Figure 3; obtain Springer Nature permission via RightsLink, or redraw the flowchart in your own software with the same boxes. Caption: 'Management of epistaxis in HHT. Adapted from Dür C et al. Eur Arch Otorhinolaryngol 2021, with permission.'",
+      "question": "Where is she on the algorithm, and what is the next step?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Total rhinectomy"
+          "text": "(A) Acute bleeding, bilateral: pack both sides, and embolize if that fails"
         },
         {
           "id": "B",
-          "text": "(B) Septodermoplasty",
+          "text": "(B) Chronic bleeding, laser has failed: the next step is septal dermoplasty, with bevacizumab as the other option to discuss",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) Internal carotid artery endovascular embolization"
+          "text": "(C) Chronic bleeding, conservative: start tranexamic acid"
+        },
+        {
+          "id": "D",
+          "text": "(D) Chronic bleeding, surgical: go straight to Young's procedure"
         }
       ],
-      "feedback": "Correct answer: B\n\nProcedure explanation: Septodermoplasty is an advanced procedure for refractory HHT epistaxis. The fragile bleeding mucosa is widely excised down to the supramucoperichondrium, then covered and sutured with an allograft or split-thickness skin graft (STSG).\n\nThis replaces fragile respiratory mucosa with a tougher skin graft, reducing the chance of future bleeding."
+      "feedback": "Correct answer: B\n\nRead the algorithm from the top. Hemoglobin checked, transfusion need assessed: done. She is not in the acute arm tonight; the bleed is controlled. She is in the chronic recurrent arm, and on both of its branches she is already some way down. Conservative branch: tranexamic acid tried, maintenance humidifiers tried. Surgical branch: laser photocoagulation, recurrence. The box the surgical branch points to after recurrence is septal dermoplasty. The box the conservative branch points to, in parallel, is intravenous bevacizumab. Those two are where she is, and they are discussed together, not in sequence.\n\nSeptodermoplasty. The mucosa of the anterior septum, where most of the bleeding lesions sit, is excised down to the perichondrium and replaced with a skin graft. Skin does not form telangiectasias the way respiratory mucosa does, and it is thicker and tougher. The graft can be split-thickness from the thigh or full-thickness from the neck; a full-thickness supraclavicular graft, as used here, is thicker and contracts less, at the cost of a small donor scar. It is done one side at a time, to keep one side of the septum vascularized and avoid a perforation. The evidence is uncontrolled case series from a single high-volume center, and it is honest about the trade. Bleeding and transfusion requirement fall substantially, and most patients report a better quality of life. But at long-term follow-up the majority have crusting, an odor from the graft, and a reduced sense of smell; these are the expected outcomes, not occasional ones, and she needs to hear that before she agrees. Telangiectasias eventually appear at the edges of the graft, and a second procedure years later is not unusual. The operation dates from the 1960s and has changed little since.\n\nSystemic antiangiogenic therapy. Intravenous bevacizumab reduces epistaxis and transfusion need in severe HHT, and the guidelines recommend considering it for bleeding not controlled by local therapy and iron. In her case there is an additional reason to raise it: it also reduces hepatic shunting and can improve the high-output heart failure. It is not either-or with surgery; the two are often combined.\n\nYoung's procedure, closing the nostrils, is the most effective operation for HHT epistaxis and the most radical. It is reserved for the patient for whom the bleeding has become the whole of life and everything else has failed, and it comes after septodermoplasty, not instead of it.\n\nWhy the others fail:\n(A) More of what has already failed, and each session thins the mucosa further. The ulcer on her left septum is what repeated ablation eventually produces.\n(C) She has already passed that box. Tranexamic acid was tried with some benefit and is continued; it is not the next step, it is the floor she is standing on.\n(D) Young's procedure is the last box on the surgical branch, reached only after septal dermoplasty and recurrence after it. She has not had a dermoplasty. Skipping to nasal closure commits her to lifelong mouth breathing, which in a woman with pulmonary hypertension is a serious cost, before the step above it has been tried.\n\nKeypoint: place the patient on the map before choosing; after laser and recurrence the surgical branch says septal dermoplasty, the conservative branch says bevacizumab, and Young's procedure is the last box, not the next one.\n\nReference: Faughnan ME, Mager JJ, Hetts SW, et al. Second International Guidelines for the Diagnosis and Management of Hereditary Hemorrhagic Telangiectasia. Ann Intern Med. 2020;173(12):989-1001. doi:10.7326/M20-1443. Fiorella ML, Ross D, Henderson KJ, White RI. Outcome of septal dermoplasty in patients with hereditary hemorrhagic telangiectasia. Laryngoscope. 2005;115(2):301-305. Levine CG, Ross DA, Henderson KJ, Leder SB, White RI. Long-term complications of septal dermoplasty in patients with hereditary hemorrhagic telangiectasia. Otolaryngol Head Neck Surg. 2008;138(6):721-724. Whitehead KJ, Sautter NB, McWilliams JP, et al. JAMA. 2016;316(9):943-951. Dür C, Anschuetz L, Negoias S, et al. Long-term efficacy assessment of current treatment options for epistaxis in HHT. Eur Arch Otorhinolaryngol. 2021;278(12):4801-4813. Figure 3. Reprinted with permission from Springer Nature. Verify volume and pages."
     }
   ]
 }

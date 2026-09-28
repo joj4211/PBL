@@ -1,147 +1,172 @@
 {
   "id": "ear_sudden_hearing_loss",
-  "title": "The Silent World",
-  "subtitle": "Evaluation and salvage treatment for sudden sensorineural hearing loss",
-  "description": "Definition, prognostic factors, imaging exclusion, steroid therapy, hyperbaric oxygen therapy, and intratympanic salvage treatment for sudden sensorineural hearing loss.",
-  "estimatedTime": "20-30 min",
+  "title": "Deaf on One Side by Morning",
+  "subtitle": "A woman who woke without hearing in her left ear, from the tuning fork to the hearing aid",
+  "description": "Telling sensorineural from conductive at the bedside, what to order and what not to, treating within the window, excluding the tumor, salvage when recovery stalls, and what to do when it stops.",
+  "estimatedTime": "15-20 min",
   "difficulty": "Intermediate",
   "tags": [
     "Otology",
-    "SSNHL",
-    "Steroid",
-    "HBOT"
+    "Hearing loss",
+    "Corticosteroids",
+    "AAO-HNSF guideline"
   ],
   "steps": [
     {
-      "title": "Step 1/6: Clinical Presentation and Definition",
-      "scenario": "A 70-year-old woman is brought to the emergency department because she suddenly could not hear from her right ear starting yesterday. She also reports left-sided tinnitus. Brain CT in the emergency department has excluded hemorrhage. Pure-tone audiometry shows severe right hearing loss up to 95 dB and 60 dB in the left ear. Tympanograms are type A bilaterally, indicating normal middle-ear pressure.",
-      "media": "Load image: Pure-tone audiogram showing profound right sensorineural hearing loss",
-      "question": "According to the standard clinical definition of sudden sensorineural hearing loss (SSNHL), which statement is correct?",
+      "title": "Step 1/6: The Tuning Fork",
+      "scenario": "A 48-year-old woman comes to the clinic at 9 in the morning.\n\n    Complaint       woke two hours ago unable to hear from the left ear\n    Ear fullness    yes, left\n    Tinnitus        yes, left, a high hiss\n    Vertigo         none\n    Pain            none\n    Discharge       none\n    Recent illness  none\n    Medications     none\n    Past history    no ear disease, no previous episode\n\nOtoscopy: both drums normal, no wax, no fluid.\n\n    Weber 512 Hz    lateralizes to the right\n    Rinne           air louder than bone, both ears",
+      "media": "Load image: Otoendoscopy of the left ear from this patient, de-identified, unannotated: normal tympanic membrane. Caption: 'Left ear.'",
+      "question": "What do the tuning forks tell you?",
       "options": [
         {
           "id": "A",
-          "text": "(A) More than 20 dB hearing loss at a single frequency within 1 week."
+          "text": "(A) The right ear is the problem, because that is where the Weber goes"
         },
         {
           "id": "B",
-          "text": "(B) Conductive hearing loss greater than 40 dB with tympanic membrane rupture within 24 hours."
+          "text": "(B) A conductive loss on the left, probably wax or fluid you have missed"
         },
         {
           "id": "C",
-          "text": "(C) More than 30 dB hearing loss over 3 contiguous audiometric frequencies within 72 hours.",
+          "text": "(C) A sensorineural loss on the left: the Weber goes to the better ear and the Rinne is normal on both sides",
           "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) Nothing reliable; tuning forks cannot localize a hearing loss"
         }
       ],
-      "feedback": "Correct answer: C\n\nClinical definition: SSNHL is an otologic emergency. The standard definition is rapid onset within 72 hours with more than 30 dB hearing loss across 3 contiguous audiometric frequencies. Up to 99% of cases are unilateral, and most have no identifiable cause, so they are classified as idiopathic SSNHL."
+      "feedback": "Correct answer: C\n\nWith a normal drum, the first decision is the one the guideline puts first: is this sensorineural or conductive? The forks answer it in a minute.\n\nWeber. The fork on the forehead is heard in the ear with the better cochlea, or in the ear with the conductive block, because a block shuts out room noise.\n• Lateralizes to the better ear: sensorineural loss on the other side.\n• Lateralizes to the worse ear: conductive loss on that side.\nHers goes right, and the right ear is fine. So the left cochlea or nerve has lost function.\n\nRinne. Air conduction louder than bone is normal, and it stays normal in a sensorineural loss because both routes fall together. It reverses, bone louder than air, only when there is a conductive block.\nHers is normal on both sides. No conductive block.\n\nTwo normal drums, Weber away from the deaf ear, Rinne normal: a sudden sensorineural hearing loss on the left. This is an otologic emergency, because the treatment window is short and the prognosis is worse the longer it waits.\n\nWhy the others fail:\n(A) The commonest error with the Weber. Sound goes to the better ear in a sensorineural loss. Her right ear is where she hears the fork, not where the problem is.\n(B) A conductive loss would send the Weber to the left and reverse the Rinne on the left. Neither happened, and the drum is normal.\n(D) The forks are exactly the tool for the sensorineural-versus-conductive question, and the guideline's first statement is to make that distinction at presentation.\n\nKeypoint: normal drum, Weber to the good ear, Rinne normal: sudden sensorineural loss, and the clock is running.\n\nReference: Chandrasekhar SS, Tsai Do BS, Schwartz SR, et al. Clinical practice guideline: sudden hearing loss (update). Otolaryngol Head Neck Surg. 2019;161(1_suppl):S1-S45. doi:10.1177/0194599819859885. Key Action Statement 1."
     },
     {
-      "title": "Step 2/6: Prognostic Factors",
-      "scenario": "While explaining the condition to this 70-year-old patient's family, they anxiously ask, \"Doctor, is there a chance her hearing will fully recover?\"",
-      "media": "Load image: Prognostic-factor radar chart including age, vertigo, hearing-loss severity, and treatment timing",
-      "question": "Based on the literature, which poor prognostic factors does this patient have when estimating the chance of recovery in ISSNHL?",
+      "title": "Step 2/6: What to Order Today",
+      "scenario": "Sensorineural loss on the left, sudden, this morning. No vertigo, no facial weakness, no other neurological symptom. Right ear normal. First episode.\n\nShe asks what tests she needs.",
+      "media": "",
+      "question": "What do you order today, and what do you not?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Female sex and pre-existing hearing loss in the left ear only."
-        },
-        {
-          "id": "B",
-          "text": "(B) Age over 60, associated vertigo or dizziness, and extremely severe initial hearing loss at 95 dB.",
+          "text": "(A) A pure-tone audiogram today; no CT, no routine blood tests",
           "correct": true
         },
         {
+          "id": "B",
+          "text": "(B) A CT of the head to exclude a stroke, then the audiogram"
+        },
+        {
           "id": "C",
-          "text": "(C) Very short time to presentation only."
+          "text": "(C) A full blood panel, including lipids, glucose, syphilis and autoimmune serology, before any treatment"
+        },
+        {
+          "id": "D",
+          "text": "(D) Nothing today; review in two weeks, since most sudden losses recover on their own"
         }
       ],
-      "feedback": "Correct answer: B\n\nAttending tip: Four key factors influence recovery in ISSNHL. Earlier treatment improves prognosis, but age greater than 60 years, associated vertigo or dizziness, severe hearing loss such as 95 dB, and a downward-sloping audiogram suggest poor prognosis. This patient unfortunately has several adverse factors."
+      "feedback": "Correct answer: A\n\nThe audiogram is the test that makes the diagnosis and starts the clock. Sudden sensorineural hearing loss is defined as a loss of at least 30 dB at three consecutive frequencies, developing within 72 hours, and the guideline asks for the audiogram within 14 days of onset. Get it today. It confirms the sensorineural loss, measures its size, sets the baseline that every later audiogram is compared with, and shapes the counseling about prognosis.\n\nTwo things the guideline says not to do.\n• No CT of the head. It does not show the cochlea, the nerve or the brainstem in useful detail, it does not change management, and it delays treatment. Retrocochlear disease is looked for with MRI, in Step 4.\n• No routine laboratory tests. Blood work in an otherwise well patient with a first unilateral loss does not change what you do. Targeted tests are for a patient with a history that points somewhere: bilateral or recurrent loss, systemic symptoms, or a known disease.\n\nBefore you leave the room, check the modifying factors that would change the pathway: is the loss bilateral, is it recurrent, is there vertigo or any focal neurological sign? She has none. An isolated first unilateral loss follows the standard pathway.\n\nWhy the others fail:\n(B) An isolated sudden hearing loss with no vertigo and no neurological sign is not a stroke presentation, and CT is the wrong test for the posterior fossa anyway. The guideline recommends against CT in the initial evaluation.\n(C) Routine serology and metabolic screens do not change management in a first, unilateral, uncomplicated loss. The guideline recommends against ordering them routinely.\n(D) Some do recover on their own, but the ones that are treated within two weeks do better, and you cannot tell in advance which she will be. Waiting two weeks spends the treatment window.\n\nKeypoint: audiogram today; no CT, no routine bloods; ask about the other ear, previous episodes and neurological symptoms.\n\nReference: Chandrasekhar SS, Tsai Do BS, Schwartz SR, et al. Otolaryngol Head Neck Surg. 2019;161(1_suppl):S1-S45. Key Action Statements 2, 3, 4 and 5."
     },
     {
-      "title": "Step 3/6: Imaging and Differential Diagnosis",
-      "scenario": "Although brain CT in the emergency department excluded hemorrhage, as an otolaryngologist you must exclude dangerous non-idiopathic retrocochlear causes of unilateral sensorineural hearing loss.",
-      "media": "Load image: Imaging features of a cerebellopontine angle tumor",
-      "question": "To exclude acoustic neuroma or multiple sclerosis, which imaging study is the required gold-standard examination?",
+      "title": "Step 3/6: The Window",
+      "scenario": "Audiogram, same day:\n\n    Left     sensorineural loss, 55 dB average at 500 to 4000 Hz, all frequencies affected\n    Right    normal\n    Speech discrimination, left    64 percent\n\nSudden sensorineural hearing loss confirmed. Onset this morning. She is otherwise well, not diabetic, not pregnant.",
+      "media": "Load image: Pure-tone audiogram from this patient, de-identified, unannotated. Caption: 'Audiogram, day 1.'",
+      "question": "What treatment do you offer, and by when?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Non-contrast high-resolution CT of the temporal bone"
+          "text": "(A) An antiviral and a vasodilator, since the cause is probably viral or vascular"
         },
         {
           "id": "B",
-          "text": "(B) Carotid echo"
+          "text": "(B) No treatment; observe for two weeks and treat only if there is no recovery"
         },
         {
           "id": "C",
-          "text": "(C) MRI with gadolinium enhancement",
+          "text": "(C) Intravenous antibiotics and admission"
+        },
+        {
+          "id": "D",
+          "text": "(D) A course of systemic corticosteroid started now, within two weeks of onset, after explaining what it can and cannot do",
           "correct": true
         }
       ],
-      "feedback": "Correct answer: C\n\nDiagnostic pitfall: About 10-20% of patients with acoustic neuroma or vestibular schwannoma can present with sudden hearing loss. Although the overall proportion is not high, contrast-enhanced MRI is essential to exclude these tumors and central nervous system disease. If MRI is contraindicated, contrast-enhanced CT is the fallback option."
+      "feedback": "Correct answer: D\n\nCorticosteroids are the only initial treatment with evidence behind them, and the evidence is time-dependent: the benefit is seen when treatment starts within two weeks of onset, and it fades after that. The guideline grades this as an option, not a mandate: the evidence is real but not strong, some patients recover without treatment, and the decision belongs to a patient who has heard the numbers. So the offer, and the conversation, happen today.\n\nTwo routes, equally supported as first-line:\n• Oral prednisolone or prednisone, about 1 mg per kg per day up to 60 mg, for 7 to 14 days, then taper. Higher doses add nothing: a 325-patient randomized trial found no benefit from 250 mg a day over 60 mg, with more side effects.\n• Intratympanic dexamethasone, injected through the drum. A randomized comparison and a Cochrane review found no difference in hearing outcome between the two routes as primary therapy. It avoids systemic exposure, which makes it the natural choice for a diabetic or anyone who should not take systemic steroids, but it is not a second-line substitute; it is an alternative.\n• Hyperbaric oxygen combined with steroids is a further option within the first two weeks where it is available.\n\nWhat to say: about a third to two thirds of patients recover some hearing without treatment, steroids improve the odds but do not guarantee recovery, and the alternative to treating is accepting whatever recovery happens on its own. The guideline asks that this conversation happens before treatment starts, because the decision is hers.\n\nWhy the others fail:\n(A) Antivirals, vasodilators, vasoactive drugs, thrombolytics and antioxidants have all been tried and none has shown benefit. The guideline recommends against prescribing them routinely.\n(B) Waiting until day 14 to decide is waiting until the window has closed. Observation is a legitimate choice if she declines steroids after counseling, but not a way to decide whether to use them.\n(C) There is no infection. A normal drum, no pain, no fever, no discharge.\n\nKeypoint: offer steroids within two weeks, oral or intratympanic, after the patient has heard what they can and cannot do; megadoses add nothing, and nothing else has evidence.\n\nReference: Chandrasekhar SS, Tsai Do BS, Schwartz SR, et al. Otolaryngol Head Neck Surg. 2019;161(1_suppl):S1-S45. Key Action Statements 7, 8, 9 and 11. Rauch SD, Halpin CF, Antonelli PJ, et al. Oral vs intratympanic corticosteroid therapy for idiopathic sudden sensorineural hearing loss: a randomized trial. JAMA. 2011;305(20):2071-2079. Plontke SK, Meisner C, Agrawal S, et al. Intratympanic corticosteroids for sudden sensorineural hearing loss. Cochrane Database Syst Rev. 2022;7:CD008080. Plontke SK, Girndt M, Meisner C, et al. High-dose glucocorticoids for the treatment of sudden hearing loss (HODOKORT). NEJM Evid. 2024;3(1). Verify citation."
     },
     {
-      "title": "Step 4/6: Primary Medical Therapy and Monitoring",
-      "scenario": "The patient is admitted. You decide to give her a 1-week course of intravenous or oral steroid therapy.",
-      "question": "What is the most widely accepted initial steroid dose for ISSNHL, and what should be closely monitored in this 70-year-old patient with hypertension?",
+      "title": "Step 4/6: The Tumor Question",
+      "scenario": "She starts oral prednisolone the same day.\n\nAt the one-week visit her hearing is a little better. She asks whether anything else needs to be done.",
+      "media": "",
+      "question": "Does she need imaging, and which?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Prednisolone 5 mg/kg/day, monitoring asthma attacks."
+          "text": "(A) No imaging; the loss is improving, so it was not a tumor"
         },
         {
           "id": "B",
-          "text": "(B) Prednisolone 1 mg/kg/day, usually up to 60 mg/day, for 10-14 days; closely monitor blood glucose and blood pressure.",
+          "text": "(B) MRI of the internal auditory canals and brain with gadolinium, to look for a vestibular schwannoma and other retrocochlear disease",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) Dexamethasone 60 mg/day for 1 month; monitor auditory nerve atrophy."
+          "text": "(C) CT of the temporal bones"
+        },
+        {
+          "id": "D",
+          "text": "(D) Imaging only if the loss recurs"
         }
       ],
-      "feedback": "Correct answer: B\n\nTreatment consensus: The systemic steroid regimen with the best supporting evidence is oral prednisolone 1 mg/kg/day, usually capped at 60 mg/day, for 10-14 days. Because high-dose steroids can cause hypertension, hyperglycemia even in non-diabetic patients, insomnia, and gastric ulceration, admission with close blood pressure and glucose monitoring is strongly recommended in elderly patients."
+      "feedback": "Correct answer: B\n\nMost sudden sensorineural hearing losses are idiopathic. A few are the first sign of something on the nerve: a vestibular schwannoma, a meningioma, a demyelinating plaque, a small stroke in the anterior inferior cerebellar artery territory. The proportion is small, but it is not zero, and the tumor is treatable if found. The guideline recommends evaluating every patient with sudden sensorineural loss for retrocochlear pathology, and the test that does it is MRI of the internal auditory canals and brain with gadolinium. Auditory brainstem response is the fallback for a patient who cannot have MRI.\n\nTwo things about timing and improvement.\n• The MRI is not an emergency and does not delay treatment; it is ordered at the first visit and done in the following weeks.\n• Recovery does not exclude a tumor. Hearing can improve, with or without steroids, in a patient with a schwannoma. The imaging is done regardless of how the hearing behaves.\n\nWhy the others fail:\n(A) Improvement is reassuring for the hearing, not for the nerve. Schwannomas present with sudden loss that partly recovers often enough that improvement cannot be used to skip the scan.\n(C) CT shows bone. A schwannoma sits in the canal and the cerebellopontine angle and is soft tissue; CT misses small ones entirely. The guideline recommends against CT for this question.\n(D) Recurrence would raise the suspicion, but the recommendation is to image after the first event, because a first event is how most schwannomas with sudden loss present.\n\nKeypoint: every sudden sensorineural loss gets an MRI of the internal auditory canals with contrast, whether or not the hearing comes back.\n\nReference: Chandrasekhar SS, Tsai Do BS, Schwartz SR, et al. Otolaryngol Head Neck Surg. 2019;161(1_suppl):S1-S45. Key Action Statement 6."
     },
     {
-      "title": "Step 5/6: Adjuvant Therapy: Hyperbaric Oxygen",
-      "scenario": "Because the patient's hearing loss is very severe, you also arrange 5 sessions of hyperbaric oxygen therapy.",
-      "media": "Load image: Hyperbaric chamber treatment setting",
-      "question": "Hyperbaric oxygen therapy is thought to increase oxygen delivery to inner-ear tissue and counter cochlear ischemia. Before treatment, which common adverse effect must you warn the patient about?",
+      "title": "Step 5/6: When Recovery Stalls",
+      "scenario": "Four weeks after onset. She finished the oral steroid course. The MRI is normal.\n\n    Audiogram, left    40 dB average, improved from 55\n    Speech discrimination, left    76 percent, improved from 64\n\nShe says it is better but not right, and asks whether anything more can be done.",
+      "media": "Load image: Pure-tone audiogram from this patient at four weeks, de-identified, unannotated, alongside the day-1 audiogram. Caption: 'Day 1 and week 4.'",
+      "question": "What do you offer now?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Permanent retinal detachment"
+          "text": "(A) A second course of oral steroid at a higher dose"
         },
         {
           "id": "B",
-          "text": "(B) Difficulty equalizing middle-ear pressure, causing ear fullness, pain, or Eustachian tube dysfunction",
-          "correct": true
+          "text": "(B) Nothing more; partial recovery is the final result"
         },
         {
           "id": "C",
-          "text": "(C) Pneumothorax and irreversible pulmonary fibrosis"
+          "text": "(C) Intratympanic corticosteroid as salvage, offered because recovery is incomplete and she is within six weeks of onset",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) An antiviral, since the steroid did not finish the job"
         }
       ],
-      "feedback": "Correct answer: B\n\nCounseling point: Hyperbaric oxygen therapy is time-consuming and expensive. Serious complications are uncommon, but 17-45% of patients experience middle-ear pressure equalization difficulty or Eustachian tube dysfunction. Claustrophobia is also a common reason for treatment interruption."
+      "feedback": "Correct answer: C\n\nIncomplete recovery after initial treatment is the one situation where the guideline moves from option to recommendation: offer intratympanic steroid as salvage, in the window of two to six weeks after onset. Dexamethasone is injected through the drum into the middle ear, diffuses across the round window into the cochlea, and reaches concentrations in the inner ear that systemic dosing cannot, without the systemic side effects. It is done in clinic, usually as a short series of injections a few days to a week apart.\n\nHyperbaric oxygen combined with steroids is the other salvage option within the first month, where a chamber is available. Newer data point the same way and harder: a 2025 multicenter cohort found intratympanic salvage independently associated with better recovery than observation, and a 2025 meta-analysis of salvage strategies found intratympanic steroid and hyperbaric oxygen, especially together, the most effective options, with earlier salvage doing better than later. The window matters; do not wait until week six to start.\n\nWhat counts as incomplete: a gap of 10 dB or more from the other ear, or speech discrimination that has not returned to normal, or a loss the patient still notices. She meets all three.\n\nWhy the others fail:\n(A) A second systemic course adds the side effects of the first without evidence of added benefit, and the systemic route is what has already been tried. The salvage evidence is for the intratympanic route.\n(B) Four weeks is inside the salvage window. Calling the result final before the window closes gives up a treatment with a recommendation behind it.\n(D) Antivirals have no evidence at any stage. The guideline recommends against them.\n\nKeypoint: incomplete recovery at two to six weeks means intratympanic steroid salvage; do not repeat the oral course and do not call it finished early.\n\nReference: Chandrasekhar SS, Tsai Do BS, Schwartz SR, et al. Otolaryngol Head Neck Surg. 2019;161(1_suppl):S1-S45. Key Action Statements 9b and 10. Kitoh R, Takumi Y. Clinical impact of adherence to a standardized treatment algorithm for idiopathic sudden sensorineural hearing loss: a multicenter cohort study. Front Neurol. 2025. Complete citation. Meliante PG, D'Avino L, Barba G, et al. Salvage treatment strategies for refractory sudden sensorineural hearing loss: a comprehensive review and meta-analysis with practical recommendations. Front Neurol. 2025. Complete citation."
     },
     {
-      "title": "Step 6/6: Salvage Therapy: Intratympanic Steroid",
-      "scenario": "After systemic steroids and 5 sessions of hyperbaric oxygen therapy, the patient has only a poor response and her right-sided hearing remains very poor. You suggest intratympanic steroid injection to the family.",
-      "media": "Load image: Microscopic transtympanic steroid injection through the tympanic membrane",
-      "question": "For intratympanic steroid as salvage therapy, what are its major advantage and main complication?",
+      "title": "Step 6/6: When It Stops",
+      "scenario": "Six months after onset. Three intratympanic injections between weeks four and six. The MRI was normal.\n\n    Audiogram, left    35 dB average, unchanged since week eight\n    Speech discrimination, left    80 percent\n    Right              normal\n\nShe says she manages, but she cannot tell where sounds are coming from and struggles in restaurants.",
+      "media": "",
+      "question": "What do you do now?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Advantage: avoids systemic steroid adverse effects such as hyperglycemia and achieves higher local inner-ear concentration; complication: persistent tympanic membrane perforation.",
+          "text": "(A) Document the final audiogram, explain that further recovery is unlikely, and refer for hearing rehabilitation: a hearing aid on the left, or a CROS system if the aid does not help",
           "correct": true
         },
         {
           "id": "B",
-          "text": "(B) Advantage: one injection guarantees 100% hearing recovery; complication: irreversible facial paralysis."
+          "text": "(B) Another series of intratympanic injections"
         },
         {
           "id": "C",
-          "text": "(C) Advantage: completely covered by insurance and painless; complication: middle-ear cholesteatoma."
+          "text": "(C) Repeat the MRI, since a normal scan can miss a tumor"
+        },
+        {
+          "id": "D",
+          "text": "(D) Discharge; a 35 dB loss on one side does not need anything"
         }
       ],
-      "feedback": "Correct answer: A\n\nProcedure interpretation: When systemic steroids fail or when patients have severe diabetes or hypertension that makes systemic therapy unsuitable, intratympanic steroid injection is an excellent salvage option. It increases inner-ear drug concentration and avoids systemic adverse effects. Its main complications are persistent tympanic membrane perforation after repeated injections, along with temporary dizziness and pain."
+      "feedback": "Correct answer: A\n\nRecovery from sudden sensorineural loss happens in the first weeks and is essentially complete by three months. Her hearing has not moved since week eight. The guideline asks for a follow-up audiogram at the end of treatment and within six months of onset, and this is it: the final result, documented, compared with day one, and explained to her as such.\n\nThen the conversation turns from recovery to rehabilitation, which the guideline lists as its last statement because it is the one most often skipped. A one-sided loss is not trivial. She has lost the ability to localize sound and to separate speech from background noise, which is exactly what she describes. The options are:\n• A conventional hearing aid on the left, which works if the residual hearing and discrimination are usable; hers are.\n• A CROS or BiCROS system, which routes sound from the deaf side to the good ear, if the left ear cannot be aided.\n• A bone-conduction device or, for a profound loss, a cochlear implant, neither of which she needs at 35 dB.\n• Counseling and communication strategies for noisy environments.\n\nWhy the others fail:\n(B) The salvage window closed months ago and her hearing has been stable since week eight. More injections add risk of a persistent perforation without any evidence of benefit at this stage.\n(C) A gadolinium MRI of the internal auditory canals is the definitive test and it was normal. There is no reason to repeat it without a new event.\n(D) Thirty-five dB on one side with a normal other ear is what she is describing: cannot localize, cannot manage a restaurant. It is a loss that affects her life, and it is one that a hearing aid addresses.\n\nKeypoint: final audiogram within six months; when recovery has stopped, the job is rehabilitation, and a one-sided loss is worth aiding.\n\nReference: Chandrasekhar SS, Tsai Do BS, Schwartz SR, et al. Otolaryngol Head Neck Surg. 2019;161(1_suppl):S1-S45. Key Action Statements 12 and 13."
     }
   ]
 }

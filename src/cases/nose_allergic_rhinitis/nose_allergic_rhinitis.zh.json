@@ -1,143 +1,193 @@
 {
   "id": "nose_allergic_rhinitis",
-  "title": "鼻水背後的拼圖",
-  "subtitle": "過敏性鼻炎分類與治療",
-  "description": "過敏性鼻炎分類、共病評估、診斷工具與治療決策。",
-  "estimatedTime": "20-30 分鐘",
+  "title": "流鼻水的背後",
+  "subtitle": "鼻塞多年，從第一次門診到手術室",
+  "description": "讀第一次的內視鏡、分類鼻炎、選對 IgE 檢查、判讀結果、依 2024-2025 ARIA 指引開第一張處方、處理一個用了去充血劑回來的病人、以及正確治療仍然不夠時該怎麼辦。",
+  "estimatedTime": "20-25 分鐘",
   "difficulty": "中階",
   "tags": [
     "鼻科",
-    "Allergic Rhinitis",
-    "ARIA",
-    "INCS"
+    "過敏性鼻炎",
+    "ARIA 2024-2025",
+    "INCS",
+    "INAH"
   ],
   "steps": [
     {
-      "title": "Step 1/6: 臨床表現與疾病分類",
-      "scenario": "一位 41 歲男性初診，主訴「多年來」深受雙側鼻塞、流鼻水以及鼻涕倒流所苦，嚴重影響白天的專注力與晚上的睡眠。",
-      "media": "載入圖片：ARIA 過敏性鼻炎分類圖",
-      "question": "請參考上方 ARIA 分類圖，這位患者的症狀應被歸類為哪個區塊？",
+      "title": "Step 1/7：內視鏡看到什麼",
+      "scenario": "41 歲男性，第一次來門診，主訴鼻塞、流鼻水。你放入內視鏡。",
+      "media": "載入圖片：第一次就診的鼻內視鏡，不加標註：下鼻甲蒼白、水腫，表面有清澈的水樣分泌物。說明文字：「初診。」",
+      "question": "內視鏡看到什麼？最符合哪一種診斷？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 間歇性 & 輕度 (Intermittent & Mild)"
+          "text": "(A) 下鼻甲蒼白、腫脹，帶清澈水樣分泌物，符合過敏性鼻炎",
+          "correct": true
         },
         {
           "id": "B",
-          "text": "(B) 持續性 & 中重度 (Persistent & Moderate-severe)",
+          "text": "(B) 下鼻甲暗紅、充血，符合去充血劑噴劑的反彈性鼻塞"
+        },
+        {
+          "id": "C",
+          "text": "(C) 中鼻道有膿性分泌物流出，符合細菌性鼻竇炎"
+        },
+        {
+          "id": "D",
+          "text": "(D) 中鼻道被息肉樣黏膜填滿，符合慢性鼻竇炎合併鼻息肉"
+        }
+      ],
+      "feedback": "正確答案：A\n\n過敏的鼻子有它的長相。下鼻甲腫，但是蒼白的，有時候接近淡藍色，黏膜濕潤、上面是稀薄清澈的分泌物。這種腫是過敏反應造成的水腫，不是血管充血。第一次就診就看到這個畫面，還沒有任何檢查回來，你已經知道自己在治療什麼，而且留下了一個之後可以對照的基準。\n\n其他選項為什麼不對：\n(B) 局部去充血劑造成的反彈性鼻塞長得剛好相反：鼻甲肥厚、暗紅，黏膜看起來乾、發炎，不是濕的。把這個畫面記住，後面會用到。\n(C) 中鼻道有膿是感染，指向鼻竇而不是鼻甲。稀薄清澈的分泌物不是膿。\n(D) 息肉是光滑、灰色、半透明、沒有感覺的，長在中鼻道。蒼白的鼻甲不是息肉。\n\nKeypoint：蒼白、濕、腫是過敏；暗紅、乾、腫是反彈；膿或息肉是鼻竇的事。\n\nReference: Bousquet J, Khaltaev N, Cruz AA, et al. Allergic Rhinitis and its Impact on Asthma (ARIA) 2008 update. Allergy. 2008;63(Suppl 86):8-160. doi:10.1111/j.1398-9995.2007.01620.x."
+    },
+    {
+      "title": "Step 2/7：多嚴重、多常發生",
+      "scenario": "你問病史。他兩側鼻塞、水樣鼻涕、鼻涕倒流已經很多年，一週大部分的日子都有，全年都是。症狀讓他上班無法專心，晚上會被弄醒。",
+      "media": "載入圖片：你自己重繪的 ARIA 分類表。間歇性：每週少於 4 天，或連續少於 4 週。持續性：每週超過 4 天，且連續超過 4 週。輕度：睡眠正常、日常活動／運動／休閒不受影響、工作／上學不受影響、症狀不困擾，四項全部符合。中重度：睡眠受干擾、日常活動／運動／休閒受影響、工作／上學受影響、症狀困擾，任一項符合。不要標示任何一格。說明文字：「ARIA 分類。」",
+      "question": "依照圖中的分類，他的鼻炎屬於哪一類？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 間歇性、輕度"
+        },
+        {
+          "id": "B",
+          "text": "(B) 間歇性、中重度"
+        },
+        {
+          "id": "C",
+          "text": "(C) 持續性、中重度",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) 持續性、輕度"
+        }
+      ],
+      "feedback": "正確答案：C\n\nARIA 從兩個軸分類。時間：持續性是每週超過 4 天、而且連續超過 4 週；間歇性是每週少於 4 天、或連續少於 4 週。嚴重度：中重度是睡眠受干擾、日常活動運動休閒受影響、工作上學受影響、症狀困擾，四項任一項符合就算；輕度是四項都不符合。他兩個軸都到了：症狀多年來大部分日子都有，而且賠上睡眠和專注力。\n\n分類決定治療從哪裡起步。輕度間歇性可以從單一抗組織胺開始；中重度、尤其是持續性，起點要高一些。\n\n開處方之前，再多問一分鐘病史。這份指引叫做「Allergic Rhinitis and its Impact on Asthma」是有原因的：上下呼吸道共用同一套發炎，很多過敏性鼻炎的病人有沒被診斷出來的氣喘。問他有沒有喘鳴、咳嗽、胸悶，問他眼睛會不會癢、流淚。答案會改變你開什麼藥、以及他還需要看誰。\n\n其他選項為什麼不對：\n(A) 兩個軸都錯。多年來大部分日子都有不是間歇性；睡不好不是輕度。\n(B) 嚴重度對、時間錯。間歇性是每週少於 4 天、或一次少於 4 週。\n(D) 時間對、嚴重度錯。會把他弄醒、影響工作的症狀，依定義就是中重度。\n\nKeypoint：一週幾天、連續幾週、有沒有影響睡眠或工作，還有胸部和眼睛有沒有故事。\n\nReference: Bousquet J, Khaltaev N, Cruz AA, et al. Allergic Rhinitis and its Impact on Asthma (ARIA) 2008 update. Allergy. 2008;63(Suppl 86):8-160. doi:10.1111/j.1398-9995.2007.01620.x. Sousa-Pinto B, Bousquet J, Vieira RJ, et al. ARIA-EAACI Guidelines 2024-2025 Revision: Part I, Intranasal Treatments. Allergy. 2026;81:954-976. doi:10.1111/all.70131."
+    },
+    {
+      "title": "Step 3/7：驗哪一項",
+      "scenario": "你想知道這是不是過敏、對什麼過敏。他提到昨天鼻子很癢，所以吃了一顆抗組織胺。",
+      "media": "載入圖片：前臂的皮膚點刺試驗，15 分鐘時拍攝，去識別化：編號的過敏原點位、histamine 陽性對照處隆起的膨疹、生理食鹽水陰性對照處平坦。說明文字：「皮膚點刺試驗。」",
+      "question": "今天你安排哪一項檢查？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 血清 total IgE"
+        },
+        {
+          "id": "B",
+          "text": "(B) 今天就做皮膚點刺試驗；一顆藥不會影響"
+        },
+        {
+          "id": "C",
+          "text": "(C) 今天做皮膚點刺試驗，用更高濃度的過敏原去壓過抗組織胺的效果"
+        },
+        {
+          "id": "D",
+          "text": "(D) 今天抽血驗 allergen-specific IgE，或等抗組織胺代謝掉之後再回來做皮膚點刺試驗",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：D\n\n你要問的問題是：這是過敏嗎？對什麼過敏？有兩個檢查能回答，而且答的是同一件事：皮膚點刺試驗，或血清 allergen-specific IgE，兩個都是針對他可能接觸的過敏原逐一檢驗，回報的都是對個別過敏原的致敏狀態。皮膚點刺便宜、15 分鐘出結果；血清 IgE 不受藥物和皮膚狀況影響。今天是抗組織胺在做決定：它會壓掉皮膚點刺賴以判讀的膨疹和紅暈，如果 histamine 陽性對照都沒反應，整片都不能讀。所以要嘛現在抽血，要嘛等藥退了再回來，第二代抗組織胺通常幾天就夠。\n\n其他選項為什麼不對：\n(A) 這是要避開的混淆。Total IgE 不會告訴你他有沒有過敏、對什麼過敏；很多疾病會讓它升高，很多過敏病人它是正常的。它在另一個疾病有角色：慢性鼻竇炎合併鼻息肉，那裡它是決定生物製劑時的 type 2 發炎指標之一。在過敏性鼻炎，不應該拿它取代 allergen-specific IgE。\n(B) 一顆就足以壓掉皮膚反應。第二代抗組織胺作用大約一天，有些更久。\n(C) 問題不在過敏原，在皮膚有沒有能力反應。被壓抑的皮膚上打更濃的萃取液，得到的是讀不出來的結果，還多了刺激反應的風險。\n\nKeypoint：過敏性鼻炎驗的是對特定過敏原的 IgE，永遠不是 total IgE；吃了抗組織胺，就抽血或改天再來。\n\nReference: Seidman MD, Gurgel RK, Lin SY, et al. Clinical Practice Guideline: Allergic Rhinitis. Otolaryngol Head Neck Surg. 2015;152(1 Suppl):S1-S43. Bousquet J, Anto JM, Bachert C, et al. Allergic rhinitis. Nat Rev Dis Primers. 2020;6(1):95. doi:10.1038/s41572-020-00227-0. Bernstein JA, Bernstein JS, Makol R, Ward S. Allergic rhinitis: a review. JAMA. 2024;331(10):866-877."
+    },
+    {
+      "title": "Step 4/7：讀結果",
+      "scenario": "Allergen-specific 血清 IgE 回來了：\n\n    塵蟎 (D. pteronyssinus)   class 4\n    貓皮屑                    class 2\n    禾本科花粉                陰性\n\n他從來沒養過貓，在貓旁邊也沒有反應。他睡的房間鋪地毯、床頭是布的，症狀一整年都一樣。",
+      "media": "",
+      "question": "你的結論是什麼？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 他對塵蟎和貓都過敏，兩個都要避開"
+        },
+        {
+          "id": "B",
+          "text": "(B) 塵蟎過敏確認；貓的結果不相關。用這個結果給塵蟎的避免建議，噴劑無效時規劃塵蟎免疫療法。它不改變現在要開哪一種噴劑",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) 間歇性 & 中重度 (Intermittent & Moderate-severe)"
+          "text": "(C) 治療之前應該再驗一個 total IgE 來確認過敏"
+        },
+        {
+          "id": "D",
+          "text": "(D) Class 4 代表嚴重，直接做免疫療法"
         }
       ],
-      "feedback": "正確答案：B\n\n解析： 根據定義，持續性鼻炎 (Persistent) 為每個禮拜連續超過 4 天有症狀，且連續 4 個星期都有症狀\n\n。患者長達多年的症狀完全符合。此外，症狀嚴重程度若影響到日常活動、工作或是學業表現及睡眠，則歸類為中重度 (Moderate-severe)\n\n。"
+      "feedback": "正確答案：B\n\nSpecific IgE 陽性證明他對那個過敏原致敏，本身不證明那個過敏原就是症狀的來源。診斷是三件事對上：病史、Step 1 的內視鏡、以及對一個他真的會接觸到的過敏原的陽性結果。塵蟎三件都對：全年症狀、地毯臥室、class 4。貓只對一件：致敏，但沒接觸、沒症狀，所以那個結果沒有臨床意義。\n\n結果改變什麼。它確認這是過敏性鼻炎。它告訴你哪一種避免建議值得他花力氣：防蟎寢具套、熱水洗床單、能拆地毯就拆。而且藥物控制不住的時候，它讓他成為過敏原免疫療法的候選人，因為免疫療法需要一個確認有關的過敏原當目標。\n\n結果不改變什麼。第一張處方。2024-2025 ARIA 對鼻噴劑和口服藥的建議，不管找到的是哪一種過敏原、specific IgE 多高，都一樣。治療是由嚴重度和持續時間決定的，那是 Step 2 已經定案的事。\n\n其他選項為什麼不對：\n(A) 致敏但沒接觸、沒症狀很常見，不需要處理。叫他避開他從來不會遇到的貓，是沒有好處的建議。\n(C) Step 3 你沒有開這個，現在也不需要。Total IgE 不能診斷過敏性鼻炎：很多疾病會升高、很多過敏病人正常，而 specific IgE 加上病史已經回答了問題。Total IgE 在另一個疾病有角色，慢性鼻竇炎合併鼻息肉，在那裡 100 kU/L 以上是決定生物製劑時的 type 2 發炎指標之一，而且就算在那裡，它也比血中嗜酸性球弱得多。\n(D) Specific IgE 的 class 報的是 IgE 有多少，不是症狀有多重。嚴重度是 Step 2 的 ARIA 分類。免疫療法是藥物治療失敗時才考慮，不是因為一個數字高就當第一步。\n\nKeypoint：IgE 結果告訴你要避開哪個過敏原、免疫療法要對準哪個過敏原；它不告訴你要開哪種噴劑，那是由症狀多嚴重決定的。\n\nReference: Seidman MD, Gurgel RK, Lin SY, et al. Clinical Practice Guideline: Allergic Rhinitis. Otolaryngol Head Neck Surg. 2015;152(1 Suppl):S1-S43, Key Action Statement 2. Bousquet J, Anto JM, Bachert C, et al. Allergic rhinitis. Nat Rev Dis Primers. 2020;6(1):95. doi:10.1038/s41572-020-00227-0. Sousa-Pinto B, Bousquet J, Vieira RJ, et al. Allergy. 2026;81:954-976. doi:10.1111/all.70131. Cho A, Cho HJ, Kim CH, Kwak K, Rha MS. Eur Arch Otorhinolaryngol. 2026."
     },
     {
-      "title": "Step 2/6: 深入病史與共病評估",
-      "scenario": "確認為持續性中重度鼻炎後，你準備開立處方。但在此之前，主治醫師提醒你：「不要只看著病人的鼻子！」",
-      "question": "根據「一致性過敏性呼吸道 (Unified allergic airway)」的概念，你在門診還必須常規詢問該名患者是否具有下列哪種症狀或病史？",
+      "title": "Step 5/7：第一張處方",
+      "scenario": "持續性、中重度過敏性鼻炎，塵蟎確認。沒有氣喘症狀。目前沒用任何藥，也從來沒有正確用過鼻噴劑。",
+      "media": "",
+      "question": "你第一個開什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 慢性腹瀉與腸躁症"
+          "text": "(A) 單用第二代口服抗組織胺"
         },
         {
           "id": "B",
-          "text": "(B) 氣喘症狀 (如喘鳴與咳嗽) 與過敏性結膜炎",
-          "correct": true
+          "text": "(B) Omalizumab，因為 IgE 媒介的疾病已經確認"
         },
         {
           "id": "C",
-          "text": "(C) 偏頭痛與眩暈"
+          "text": "(C) Montelukast 加口服抗組織胺"
+        },
+        {
+          "id": "D",
+          "text": "(D) 固定複方的鼻用抗組織胺加類固醇噴劑，例如 azelastine-fluticasone",
+          "correct": true
         }
       ],
-      "feedback": "正確答案：B\n\n解析： 過敏性結膜炎 (allergic conjunctivitis) 和過敏性氣喘 (allergic asthma) 都是過敏性鼻炎常見的共病\n\n。目前醫學界也逐漸有 unified allergic airway 的共識，把上下呼吸道疾病視為同一種疾病，因為有相同的流行病學與病生理機轉\n\n。"
+      "feedback": "正確答案：D\n\n2024-2025 的 ARIA 修訂把這題的答案改了。對於單一藥物不太可能控制得住的病人，指引對固定複方 INAH+INCS 相較於不治療給了強烈建議，對 INAH+INCS 相較於單用 INCS 給了有條件建議，而且症狀比較嚴重的病人特別偏好複方。同類之中，建議 azelastine-fluticasone 優於 olopatadine-mometasone。複方比單用 INCS 起效快，病人滿意度較高、額外用藥的需求較少。\n\n單用 INCS 在費用或取得有困難的地方仍然合理；指引自己也這麼說。\n\n其他選項為什麼不對：\n(A) 口服抗組織胺有效，指引也給了它相較於不治療的強烈建議。但指引同時給了 INCS 相較於口服抗組織胺的強烈建議，因為 INCS 控制鼻部症狀和生活品質更好。中重度持續性的病人，單用口服抗組織胺是治療不足。\n(B) 這是 IgE 的混淆套用到治療上。Anti-IgE 核准的適應症是鼻噴類固醇控制不住的慢性鼻竇炎合併鼻息肉的加成治療，以及氣喘。它不是過敏性鼻炎的治療，確認他的鼻炎是 IgE 媒介並不讓他成為候選人。他連鼻噴劑都還沒試過。\n(C) Montelukast 有重要的安全疑慮，指引給了口服抗組織胺相較於白三烯拮抗劑的強烈建議，還加了一個「不要在口服抗組織胺上再加它」的有條件建議。\n\nKeypoint：中重度從 INAH+INCS 複方開始；拿不到就單用 INCS；IgE 陽性是一個診斷，不是打生物製劑的理由。\n\nReference: Sousa-Pinto B, Bousquet J, Vieira RJ, et al. ARIA-EAACI Guidelines 2024-2025 Revision: Part I, Intranasal Treatments. Allergy. 2026;81:954-976. doi:10.1111/all.70131. Vieira RJ, Sousa-Pinto B, Bousquet J, et al. ARIA-EAACI Guidelines 2024-2025 Revision: Part II, Oral and Ocular Treatments. Allergy. 2026;81:1947-1970. doi:10.1111/all.70305. Chhiba KD, Patel GB, Peters AT. Anti-IgE therapy in chronic rhinosinusitis with nasal polyps. J Allergy Clin Immunol. 2025."
     },
     {
-      "title": "Step 3/6: 診斷工具的陷阱",
-      "scenario": "你建議患者接受皮膚點刺測試 (Skin prick testing)。患者順口提到：「我昨天鼻子太癢，有吃了一顆抗組織胺 (Antihistamine)，應該不影響今天的檢查吧？」",
-      "question": "面對剛服用過抗組織胺的患者，下列處置何者最正確？",
+      "title": "Step 6/7：兩週後",
+      "scenario": "兩週後他回來，塞得跟之前一樣。他用了複方噴劑三天，沒感覺，就停了。他改回一種幾年前用過、幾分鐘就能通的藥局噴劑，一天噴三四次，已經十天。現在要噴得更頻繁才有同樣的效果。\n\n內視鏡下，下鼻甲暗紅、充血，黏膜看起來是乾的。",
+      "media": "載入圖片：第二次就診的鼻內視鏡，不加標註：下鼻甲肥厚、暗紅、充血。說明文字：「兩週後。」",
+      "question": "你怎麼做？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 不受影響，可以直接進行皮膚點刺測試。"
+          "text": "(A) 讓他再用兩週去充血劑當過渡，等複方噴劑發揮效果"
         },
         {
           "id": "B",
-          "text": "(B) 暫緩檢查，或改抽血檢測血清特異性 IgE (RAST)。",
-          "correct": true
+          "text": "(B) 加一個短期口服類固醇，把充血打斷"
         },
         {
           "id": "C",
-          "text": "(C) 增加過敏原注射的劑量來蓋過抗組織胺的效果。"
+          "text": "(C) 現在就停掉去充血劑，重新開始複方噴劑，教他正確技巧、告訴他要多久才有效，四週後回診",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) 改成第二代口服抗組織胺，因為他不能耐受噴劑"
         }
       ],
-      "feedback": "正確答案：B\n\n解析： 這是門診常見的陷阱！病人在 7-10 天前若服用過抗過敏藥物 (如 antihistamine)，會無法表現出過敏反應\n\n。若 testing 的 negative control 有反應或是 positive control 沒反應，則必須檢測血中 IgE levels\n\n。"
+      "feedback": "正確答案：C\n\n把這次的內視鏡跟第一次比。那時鼻甲是蒼白、濕、腫的；現在是暗紅、乾、腫的。這是局部去充血劑的反彈性鼻塞：血管不再反應，每一劑退掉的時候擴張得更厲害，鼻子比原本更塞，病人就噴得越來越多。2024-2025 ARIA 修訂現在建議這類噴劑不要用超過 5 天，最好更短。\n\n處理方式是停掉去充血劑，重新開始他放棄的那個治療，加上兩件第一次沒有告訴他的事。複方噴劑要幾天才有效，不是幾分鐘，所以三天不算試過。還有技巧很重要：頭擺正、噴嘴朝外側避開鼻中隔、輕輕吸。指引明講它的建議是以正確使用為前提。先警告他，停掉去充血劑的第一週會先變糟再變好。\n\n其他選項為什麼不對：\n(A) 指引建議不要把 INCS 和去充血劑併用：療效沒有增加，副作用增加。過渡使用能容忍的是 5 天以內；他已經十天了。再兩週只會讓反彈更深。\n(B) 口服類固醇可能讓黏膜短暫縮小，但療程結束充血就回來，而且他還在用去充血劑。這是治錯問題。\n(D) 他不是不能耐受噴劑，他是有一支從來沒給過機會的噴劑。口服抗組織胺相較於不治療是有建議的，但 INCS 相較於口服抗組織胺是有建議的，中重度單用口服抗組織胺是治療不足。\n\nKeypoint：暗紅又乾是反彈；停去充血劑、重開對的噴劑，這次把期待講清楚。\n\nReference: Sousa-Pinto B, Bousquet J, Vieira RJ, et al. ARIA-EAACI Guidelines 2024-2025 Revision: Part I, Intranasal Treatments. Allergy. 2026;81:954-976. doi:10.1111/all.70131."
     },
     {
-      "title": "Step 4/6: 藥物治療的迷思",
-      "scenario": "患者抱怨：「我之前買過一種噴了『馬上通』的鼻噴劑，但連續噴了一個月後完全沒效，反而塞得更嚴重。你開的類固醇鼻噴劑 (INCS) 也會這樣嗎？」",
-      "media": "載入表格：Table 91.2 Pharmacological treatments",
-      "question": "你該如何向患者解釋「速效鼻噴劑」與「類固醇鼻噴劑 (INCS)」的差異？",
+      "title": "Step 7/7：三個月後",
+      "scenario": "他用了三個月複方噴劑回來。流鼻水和癢好很多，鼻塞完全沒有改善。你看他噴：頭擺正、噴嘴朝外側避開鼻中隔、輕輕吸。技巧正確。\n\n你做鼻內視鏡。",
+      "media": "載入互動圖片：三個月時的鼻內視鏡，不加標註，在 app 裡設定兩個點擊區域：(1) 後側鼻中隔往右偏的位置，(2) 肥大的下鼻甲。說明文字：「三個月後。」",
+      "question": "在影像上標出兩個解釋為什麼藥物無法改善鼻塞的結構性發現。",
+      "constructionNote": "互動 hotspot 步驟。兩個目標都要點到。在 app 裡設定影像上的兩個點擊區域；下面的選項 id 標記兩個目標，兩個都是 correct: true。",
       "options": [
         {
           "id": "A",
-          "text": "(A) 速效的是「局部去充血劑」，連續使用極限為 7-10 天否則會反彈；類固醇鼻噴劑則是第一線治療，需要約兩週才達最大效果。",
+          "text": "Hit 1：後側鼻中隔往右偏曲",
           "correct": true
         },
         {
           "id": "B",
-          "text": "(B) 兩者都是抗組織胺，噴越久效果越差。"
-        },
-        {
-          "id": "C",
-          "text": "(C) 類固醇鼻噴劑長期使用會導致鼻黏膜變薄，不建議超過一週。"
-        }
-      ],
-      "feedback": "正確答案：A\n\n解析： 局部去充血劑 (Topical decongestants) 能迅速緩解鼻塞，但連續使用極限為 7-10 天，否則會引發反彈性血管擴張 (rebound vasodilation)\n\n。相反地，局部類固醇鼻噴劑需要一段時間（兩周）才能達到最大效果，因長期使用並無黏膜變薄之證據\n\n。"
-    },
-    {
-      "title": "Step 5/6: 內視鏡互動挑戰 (尋找阻塞元凶)",
-      "scenario": "經過衛教正確使用 INCS 三個月後，患者回診表示「雙側鼻塞」依然嚴重。你為他安排鼻咽內視鏡檢查。",
-      "media": "載入互動圖片：真實鼻內視鏡影像，設定兩個 Hotspot 點擊區",
-      "question": "請在畫面上，點擊標示出 2 個造成藥物無效的「物理性結構異常」。",
-      "constructionNote": "此步驟原始設計為互動圖片 Hotspot。現在先以施工中媒體欄位與正確解析呈現。",
-      "options": [
-        {
-          "id": "A",
-          "text": "🎯 命中 1： 向右彎曲的後段鼻中膈 (Posterior DNS to right)",
-          "correct": true
-        },
-        {
-          "id": "B",
-          "text": "🎯 命中 2： 慢性肥厚腫大的下鼻甲 (Bilateral CHR)",
+          "text": "Hit 2：下鼻甲肥厚，噴局部去充血劑後沒有縮小",
           "correct": true
         }
       ],
-      "feedback": "🎯 命中 1： 向右彎曲的後段鼻中膈 (Posterior DNS to right)\n\n🎯 命中 2： 慢性肥厚腫大的下鼻甲 (Bilateral CHR)\n\n主治醫師的臨床解析： 過敏性鼻炎的鼻鏡檢查常見鼻黏膜白且腫，covered in thin mucus\n\n。長期單側鼻塞有可能是鼻中膈彎曲等解剖異常造成\n\n。在嚴重或非典型的案例中，內視鏡檢查排除其他發炎、腫瘤疾病或解剖異常是非常重要的\n\n。"
-    },
-    {
-      "title": "Step 6/6: 最終處置與手術決策",
-      "scenario": "確認結構阻塞後，患者決定接受「雙側鼻中膈鼻道成形術與後鼻神經截斷術」。",
-      "question": "根據 ARIA 治療指引，手術在過敏性鼻炎的治療中扮演什麼角色？",
-      "options": [
-        {
-          "id": "A",
-          "text": "(A) 手術切除下鼻甲後，過敏性鼻炎即可根治，永不復發。"
-        },
-        {
-          "id": "B",
-          "text": "(B) 作為第一線治療，優先於所有藥物。"
-        },
-        {
-          "id": "C",
-          "text": "(C) 減少鼻黏膜下組織的手術能改善鼻塞並增進藥物進入，但通常仍必須搭配藥物治療。",
-          "correct": true
-        }
-      ],
-      "feedback": "正確答案：C\n\n解析： 減少鼻黏膜下組織的手術方法對於鼻塞具有治療效果，也能增進藥物進入的效果，但通常必須搭配藥物治療\n\n。指引也指出下鼻甲的減積手術在臨床上偶爾是有用的 (may be of use occasionally)\n\n。"
+      "feedback": "Hit 1：後側鼻中隔往右偏曲。\nHit 2：下鼻甲肥厚，噴局部去充血劑後沒有縮小。\n\n藥物能做的都做到了。把這次內視鏡跟第一次比：黏膜不再蒼白水腫，水樣分泌物不見了。癢和流鼻水都好了，因為過敏發炎控制住了。剩下的是固定的結構性阻塞，任何噴劑都改變不了。偏曲的鼻中隔是骨頭和軟骨。噴去充血劑不會縮小的下鼻甲，是黏膜下組織把它撐大的，不是可逆的腫脹。兩個都是手術的問題。\n\n你的建議：septoplasty 加下鼻甲縮減，術後鼻噴劑繼續用。手術解除阻塞，把鼻子打開之後，噴劑也才到得了它該治療的黏膜。手術不會拿掉過敏。他還是塵蟎致敏、還是會發炎；噴劑繼續。\n\n決定手術前要確認兩件事。技巧，因為 ARIA 指引假設鼻噴劑是正確使用的，技巧不對是「看起來無效」最常見的原因；這裡你看過了，沒問題。還有去充血劑測試，因為噴了會縮的鼻甲仍然是腫脹，腫脹用藥治，不用刀。\n\nKeypoint：癢和流鼻水控制了、鼻塞沒有，就進去看；藥物不治解剖，手術不治過敏。\n\nReference: Bousquet J, Khaltaev N, Cruz AA, et al. Allergy. 2008;63(Suppl 86):8-160. doi:10.1111/j.1398-9995.2007.01620.x. Seidman MD, Gurgel RK, Lin SY, et al. Clinical Practice Guideline: Allergic Rhinitis. Otolaryngol Head Neck Surg. 2015;152(1 Suppl):S1-S43. Sousa-Pinto B, Bousquet J, Vieira RJ, et al. Allergy. 2026;81:954-976. doi:10.1111/all.70131."
     }
   ]
 }

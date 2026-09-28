@@ -1,148 +1,198 @@
 {
   "id": "nose_npc",
-  "title": "隱匿的危機：頸部腫塊與無聲的鼻咽癌",
-  "subtitle": "頸部腫塊與無聲鼻咽癌",
-  "description": "鼻咽癌臨床警訊、病理、EBV DNA、影像分期、治療與晚期併發症。",
+  "title": "看不見的威脅：鼻咽癌",
+  "subtitle": "一顆不痛的頸部腫塊，和一個安靜的鼻咽",
+  "description": "一顆頸部腫塊加一隻塞住的耳朵、流行區的病理、EBV DNA、第 9 版的 MRI 分期、新的第 II 期怎麼選治療、以及推動降階治療的晚期併發症。",
   "estimatedTime": "20-30 分鐘",
   "difficulty": "進階",
   "tags": [
     "鼻科",
-    "NPC",
+    "鼻咽癌",
     "EBV DNA",
     "CCRT"
   ],
   "steps": [
     {
-      "title": "Step 1/6: 臨床表現與解剖學 (Symptoms & Anatomy)",
-      "scenario": "一位 40 歲男性初診，平時有抽菸習慣，無其他慢性病。他主訴左側脖子有一個「無痛性腫塊」已經持續兩個月且漸漸變大。進一步詢問發現，他最近一個月常覺得左耳有「悶塞感」與單側聽力下降，但他沒有喉嚨痛或牙痛。",
-      "media": "載入圖片：鼻咽表面解剖圖，標示 Fossa of Rosenmüller 與 Eustachian tube orifice",
-      "question": "考慮到患者有上頸部腫塊 (Level II) 合併單側中耳積液 (OME) 的耳悶症狀，你最必須仔細檢查下列哪個深部解剖位置以排除原發惡性腫瘤？",
+      "title": "Step 1/7：症狀與解剖",
+      "scenario": "58 歲男性，到耳鼻喉科門診，主訴右頸一顆不痛的腫塊，注意到兩三個月了，吞嚥時感覺得到。追問之下，他承認右耳有輕微的悶脹感，大概同一段時間，他以為是感冒。否認流鼻血、鼻塞、聽力改變、夜間盜汗或體重減輕。抽菸十年，六個月前戒了；不吃檳榔、不喝酒。\n\n理學檢查：右側 level II 一顆 2 公分、硬、不壓痛的腫塊。口腔和口咽看起來正常。右耳膜暗濁，有液面。",
+      "media": "載入圖片：你自己畫的鼻咽軸向剖面線稿，不加標註，畫出耳咽管開口、torus tubarius、外側隱窩、後壁和頂部，但不標名稱。說明文字：「鼻咽。」",
+      "question": "你把軟式內視鏡放進鼻咽。你最仔細看哪裡？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 梨狀竇 (Piriform sinus)"
+          "text": "(A) 頂部，腺樣體所在的位置"
         },
         {
           "id": "B",
-          "text": "(B) 鼻咽側隱窩 (Fossa of Rosenmüller)",
+          "text": "(B) Fossa of Rosenmüller，torus tubarius 後方",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) 腭扁桃腺 (Palatine tonsil)"
+          "text": "(C) 耳咽管開口本身，torus 前方"
+        },
+        {
+          "id": "D",
+          "text": "(D) 後壁"
         }
       ],
-      "feedback": "正確答案：B\n\n主治醫師的 Tip： 高達 70% 的鼻咽癌患者就診時呈現頸部淋巴腫大 (常為 Level II/V)\n\n。此外，起源於鼻咽側隱窩 (Rosenmüller fossa) 的腫瘤容易侵犯前方的耳咽管 (Eustachian tube) 開口，導致單側積液性中耳炎 (OME)\n\n。對於無法解釋的持續性單側中耳積液合併頸部腫塊，務必安排內視鏡檢查鼻咽！"
+      "feedback": "正確答案：B\n\n同一側的兩個發現，各自指向一個地方。成人不痛、硬的 level II 淋巴結，在證明不是之前都當轉移，而 level II 是鼻咽的第一站。成人單側中耳積液又沒有感染，代表有東西堵住耳咽管，而耳咽管開口在鼻咽。一個位置同時解釋兩者：fossa of Rosenmüller，torus tubarius 後方的外側隱窩。大部分鼻咽癌從這裡開始，它就在耳咽管開口的正後方，而且是內視鏡快速掃過最容易漏掉的地方，因為 torus 會遮住它。把內視鏡轉到右側 torus 後面。看到一個隆起的腫塊，切片就在門診透過內視鏡完成。\n\n其他選項為什麼不對：\n(A) 頂部是腺樣體所在，那裡的淋巴組織是內視鏡最常見的正常發現。癌症可以從那裡長，但不常見，而且頂部的腫瘤不會靠在耳咽管上，解釋不了單側的耳朵。\n(C) 這是陷阱。開口是被堵住的地方，所以眼睛會先看它，而且它可能看起來腫、被往前推。但開口是受害者，不是來源。壓它的東西在 torus 後面，內視鏡停在開口就會錯過。\n(D) 後壁是癌症的位置之一，但比較少見。後壁的腫瘤在正中線，離兩側耳咽管都遠，解釋不了只有一側塞住。\n\nKeypoint：Level II 淋巴結加單側中耳積液，就是看 torus tubarius 後面；開口顯示結果，fossa 藏著原因。\n\nReference: Chen YP, Chan ATC, Le QT, Blanchard P, Sun Y, Ma J. Nasopharyngeal carcinoma. Lancet. 2019;394(10192):64-80. National Comprehensive Cancer Network. NCCN Clinical Practice Guidelines in Oncology: Head and Neck Cancers. Updated May 12, 2026. https://www.nccn.org/professionals/physician_gls/pdf/head-and-neck.pdf"
     },
     {
-      "title": "Step 2/6: 組織切片與內在病理型態 (Pathology & WHO Classification)",
-      "scenario": "你在門診為他進行鼻咽內視鏡檢查，發現在左側 Fossa of Rosenmüller 有一處表面充滿異常微血管且容易接觸性出血 (easy contact bleeding) 的腫瘤，並立刻進行切片\n\n。",
-      "media": "載入圖片：組織學 H&E 染色，顯示癌細胞被豐富淋巴細胞浸潤",
-      "question": "在鼻咽癌好發地區 (如華南、台灣)，超過 95% 的鼻咽癌屬於哪一種組織學亞型？且該亞型在顯微鏡下常呈現被 CD8+ T 細胞與漿細胞大量浸潤的特徵？",
+      "title": "Step 2/7：病理與 WHO 分類",
+      "scenario": "鼻咽內視鏡看到右側鼻咽一個隆起的腫塊，表面血管異常，一碰就出血。你透過內視鏡切片。\n\n病理：non-keratinizing squamous cell carcinoma，undifferentiated subtype。EBER in situ hybridization 陽性。",
+      "media": "載入圖片：自家病理科的切片 H&E 影像，去識別化，不加標註。說明文字：「切片。」",
+      "question": "在鼻咽癌流行的地區，如華南和台灣，超過 95% 的鼻咽癌屬於哪一種組織亞型？這種亞型在顯微鏡下常有大量 CD8+ T 細胞和漿細胞浸潤。",
       "options": [
         {
           "id": "A",
-          "text": "(A) 分化型角質化鱗狀上皮癌 (Keratinizing squamous cell carcinoma)"
+          "text": "(A) Keratinizing squamous cell carcinoma"
         },
         {
           "id": "B",
-          "text": "(B) 非角化鱗狀上皮癌 / 淋巴上皮癌 (Non-keratinizing carcinoma / Lymphoepithelial carcinoma)",
-          "correct": true
+          "text": "(B) Basaloid squamous cell carcinoma"
         },
         {
           "id": "C",
-          "text": "(C) 腺樣囊狀癌 (Adenoid cystic carcinoma)"
+          "text": "(C) Non-keratinizing carcinoma / lymphoepithelial carcinoma",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) Adenoid cystic carcinoma"
         }
       ],
-      "feedback": "正確答案：B\n\n病理重點： 在流行地區，超過 95% 屬於非角化鱗狀上皮癌 (Non-keratinizing carcinoma)。其獨特的特徵是惡性細胞會被淋巴細胞浸潤，故又稱「淋巴上皮癌 (Lymphoepithelial carcinoma)」。這種亞型幾乎所有癌細胞中都可發現 EB 病毒 (EBV) 的存在\n\n。"
+      "feedback": "正確答案：C\n\nWHO 分類把鼻咽癌分三型：keratinizing squamous cell carcinoma、non-keratinizing carcinoma、basaloid squamous cell carcinoma。Non-keratinizing carcinoma 再分 differentiated 和 undifferentiated，是流行區的型。在華南和台灣佔遠超過 95%。顯微鏡下惡性細胞被大量淋巴球和漿細胞包圍，所以又叫 lymphoepithelial carcinoma，而 Epstein-Barr 病毒幾乎在每一個腫瘤細胞裡都找得到，EBER in situ hybridization 確認的就是這件事。它是三型中對放射線最敏感的。\n\n其他選項為什麼不對：\n(A) Keratinizing carcinoma 是低發生率地區和吸菸者的型，跟 EBV 的關聯較弱、對放射線較不敏感。他抽了十年菸是個干擾；在台灣，不管怎樣都是流行型佔主導。\n(B) Basaloid squamous cell carcinoma 是 WHO 對鼻咽真實存在的分類，這正是它成為陷阱的原因，但它罕見，而且不是題目描述的那種富含淋巴球的腫瘤。\n(D) Adenoid cystic carcinoma 是唾液腺腫瘤，可以從鼻咽的小唾液腺長出來，但在那裡不常見，而且它不是鱗狀細胞。\n\nKeypoint：流行區的鼻咽癌是 non-keratinizing、富含淋巴球、EBV 陽性、對放射線敏感。\n\nReference: WHO Classification of Tumours Editorial Board. Head and Neck Tumours. 5th ed. Lyon, France: International Agency for Research on Cancer; 2022. Chen YP, Chan ATC, Le QT, Blanchard P, Sun Y, Ma J. Nasopharyngeal carcinoma. Lancet. 2019;394(10192):64-80."
     },
     {
-      "title": "Step 3/6: 精準的腫瘤標記 (Tumor Markers: EBV DNA)",
-      "scenario": "病理報告證實為鼻咽癌 (EBV-encoded RNA, EBER 呈陽性)\n\n。為了後續評估腫瘤負荷量 (Tumor load) 以及作為治療成效的追蹤指標，你需要抽血檢驗腫瘤標記。",
-      "media": "載入圖表：比較各類 EBV 檢測之敏感度與特異度表格",
-      "question": "下列哪一種抽血檢驗項目的敏感性 (96%) 與特異性 (93%) 最高，且能在治療後迅速下降，是目前監測鼻咽癌復發與預後「最實用的多用途腫瘤標記」？",
+      "title": "Step 3/7：腫瘤標記：EBV DNA",
+      "scenario": "病理確認鼻咽癌，EBV-encoded RNA (EBER) 陽性。為了評估腫瘤負荷、並提供治療反應追蹤的指標，你需要開一個血液腫瘤標記。\n\n他的基準血漿 EBV DNA：40.1 copies/mL。",
+      "media": "",
+      "question": "哪一項血液檢查敏感度最高 (96%)、特異度最高 (93%)、治療後快速下降，而且是目前追蹤鼻咽癌復發和預後最實用的多用途腫瘤標記？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 血液 EB 病毒 IgG/IgM 抗體效價 (EBV IgG/IgM titer)"
+          "text": "(A) 血中 EBV IgG/IgM 抗體效價"
         },
         {
           "id": "B",
-          "text": "(B) 癌胚抗原 (CEA)"
+          "text": "(B) Carcinoembryonic antigen (CEA)"
         },
         {
           "id": "C",
-          "text": "(C) 血漿 EB 病毒 DNA 濃度 (Plasma EBV DNA titer by rt-PCR)",
+          "text": "(C) EBV VCA-IgA 和 EBNA1-IgA 血清學"
+        },
+        {
+          "id": "D",
+          "text": "(D) 以 rt-PCR 定量的血漿 EBV DNA",
           "correct": true
         }
       ],
-      "feedback": "正確答案：C\n\n檢驗地雷： EBV IgG/IgM 只代表曾感染或近期感染，對診斷鼻咽癌「無意義」，因為多數成人都感染過\n\n。相反地，利用 rt-PCR 檢測血漿中的 EBV DNA 濃度，不僅準確度極高，還能反映腫瘤負荷量。若治療後 EBV DNA 無法下降或日後再度升高，通常暗示局部殘留病灶或遠端轉移\n\n。"
+      "feedback": "正確答案：D\n\n腫瘤細胞帶著 EBV，細胞更替時把病毒 DNA 的短片段釋放到血液裡。血漿的定量 real-time PCR 測的就是這些片段。在最早的系列中，這個檢查在 96% 的鼻咽癌病人陽性、在 93% 的對照組陰性，而且數值跟腫瘤負荷走：分期越晚越高、有效治療後幾天內就下降、復發在臨床上看得見之前就會再升。這讓一個檢查做三件事：基準時的預後、治療後的反應、以及之後多年的追蹤。它現在就要抽，在治療開始之前，讓之後每一個數值都有東西可以比。\n\n他的是 40.1 copies/mL：測得到，但低。基準低在預後上是好事，而且少數確診鼻咽癌的病人在診斷時血漿 EBV DNA 是低的、甚至測不到，所以數值低永遠不是反對切片的理由。對他來說，這個檢查最有用的是之後，當追蹤的基準：從這裡往上升就是訊號。\n\n其他選項為什麼不對：\n(A) 幾乎每個成人都感染過 EBV，IgG 幾乎人人陽性，IgM 對腫瘤什麼都不說。這些是診斷傳染性單核球增多症的檢查，不是癌症。\n(B) CEA 是大腸直腸癌和一些腺癌的標記，在鼻咽癌沒有角色。\n(C) 這是陷阱。VCA-IgA 和 EBNA1-IgA 是真的鼻咽癌標記，台灣和華南的族群篩檢就是用它們挑出高風險的人。但抗體效價變動慢，腫瘤消失後還會維持高很久，而且不跟腫瘤負荷走。它們篩檢，不追蹤。\n\nKeypoint：血漿 EBV DNA 測的是腫瘤；EBV 抗體測的是免疫系統對病毒的反應。\n\nReference: Lo YMD, Chan LYS, Lo KW, et al. Quantitative analysis of cell-free Epstein-Barr virus DNA in plasma of patients with nasopharyngeal carcinoma. Cancer Res. 1999;59(6):1188-1191. Chan KCA, Woo JKS, King A, et al. Analysis of plasma Epstein-Barr virus DNA to screen for nasopharyngeal cancer. N Engl J Med. 2017;377(6):513-522."
     },
     {
-      "title": "Step 4/6: 影像學分期首選 (Imaging & Staging)",
-      "scenario": "你需要為這名 40 歲患者進行精準的 AJCC 第九版癌症分期，以制定後續的放射線治療計畫 (IMRT)。你必須評估腫瘤是否侵犯咽旁間隙、顱神經或骨髓。",
-      "media": "載入圖片：MRI 橫斷切面顯示腫瘤侵犯咽旁間隙",
-      "question": "為了精確界定腫瘤侵犯的軟組織範圍，並輔助 3D 放射治療計畫的繪製，下列哪一種影像學檢查是「局部影像分期」的黃金標準 (首選)？",
+      "title": "Step 4/7：讀 MRI",
+      "scenario": "顯影劑鼻咽與頸部 MRI 是局部分期的標準，因為 T 分期是由軟組織和骨髓決定的：咽旁脂肪面、翼肌、斜坡和岩尖的骨髓訊號、顱底的孔道。\n\n他的軸向和冠狀影像如圖。顯影的腫瘤填滿右側鼻咽。兩側咽旁脂肪面都保留。翼肌正常。斜坡和岩尖骨髓訊號正常。沒有神經周圍或顱內侵犯。",
+      "media": "載入圖片：這位病人的顯影劑、脂肪抑制 T1 鼻咽 MRI，軸向和冠狀，去識別化，不加標註。說明文字：「MRI，T1 post-contrast with fat suppression，軸向與冠狀。」",
+      "question": "這張 MRI 上哪一個發現決定他是 T1 而不是 T2？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 無顯影劑的電腦斷層 (Non-contrast CT)"
-        },
-        {
-          "id": "B",
-          "text": "(B) 磁振造影 (MRI)",
+          "text": "(A) 兩側咽旁脂肪面都保留",
           "correct": true
         },
         {
+          "id": "B",
+          "text": "(B) 腫瘤在顯影劑下顯影"
+        },
+        {
           "id": "C",
-          "text": "(C) 骨骼掃描 (Bone scan)"
+          "text": "(C) 斜坡骨髓訊號正常"
+        },
+        {
+          "id": "D",
+          "text": "(D) 腫瘤只在右側"
         }
       ],
-      "feedback": "正確答案：B\n\n影像重點： MRI 具備極優越的軟組織解析度，是鼻咽癌分期和治療評估的首選。MRI 可以精確評估腫瘤是否侵犯咽旁間隙 (parapharyngeal space)、神經周圍擴散 (perineural spread) 及骨髓浸潤 (marrow infiltration)，這對保護腦幹與視神經等重要構造、制定現代強度調控放射治療 (IMRT) 計畫至關重要\n\n。"
+      "feedback": "正確答案：A\n\nT 分期只問一個問題：腫瘤走出鼻咽多遠了？T1 是侷限在鼻咽，或只延伸到口咽或鼻腔、沒有咽旁侵犯。T2 是侵犯咽旁間隙、內側或外側翼肌、或椎前肌。T3 是骨頭：顱底、翼板、頸椎、鼻竇，而且第 9 版要求明確的侵犯證據。T4 是顱內、顱神經、下咽、眼眶、腮腺、或超過外側翼肌外緣。\n\nT1 和 T2 的界線是咽旁脂肪。在脂肪抑制、打完顯影劑的 T1 影像上，正常脂肪是黑的、腫瘤是亮的，所以穿過 pharyngobasilar fascia 進到咽旁間隙的腫瘤，會顯示為亮的組織取代鼻咽外側原本黑的脂肪。他的影像上兩側黑的脂肪都完整。這一個發現就是把他留在 T1 的東西。報告上其他所有的都在確認他不超過 T2：翼肌正常、骨髓正常、沒有神經周圍侵犯。\n\n這就是 MRI 的用處。CT 只看得到骨皮質，漏掉脂肪面、神經周圍侵犯和早期骨髓變化。骨掃描敏感但不特異，第 9 版沒有 MRI 或 PET 佐證不接受它當 T3 的證據。PET/CT 分期頸部和全身，不畫原發腫瘤的邊界。MRI 定義原發腫瘤，和治療計畫 CT 融合後畫出照射範圍。\n\n其他選項為什麼不對：\n(B) 所有鼻咽癌都會顯影。顯影告訴你腫瘤在哪裡，不是它走了多遠。\n(C) 斜坡骨髓正常排除 T3，對 T2 什麼都沒說；T2 是離鼻咽更近一步的軟組織問題。\n(D) 側別會記錄，對放射治療的照射範圍也重要，但它不是 T 的標準。腫瘤在一側、兩側、或跨過中線，只要沒離開鼻咽就是 T1。\n\nKeypoint：咽旁脂肪面決定 T1 還是 T2；骨髓訊號決定 T3；脂肪抑制的顯影劑 T1 是同時看得到兩者的序列。\n\nReference: Pan JJ, Mai HQ, Ng WT, et al. Ninth version of the AJCC and UICC nasopharyngeal cancer TNM staging classification. JAMA Oncol. 2024;10(12):1627-1635. doi:10.1001/jamaoncol.2024.4354. National Comprehensive Cancer Network. NCCN Clinical Practice Guidelines in Oncology: Head and Neck Cancers. Updated May 12, 2026. https://www.nccn.org/professionals/physician_gls/pdf/head-and-neck.pdf"
     },
     {
-      "title": "Step 5/6: 核心治療策略 (Primary Treatment Strategy)",
-      "scenario": "病理切片證實該名 40 歲男性罹患「非角化型鼻咽癌 (Non-keratinizing NPC)」。影像學顯示腫瘤侵犯咽旁間隙，並伴隨雙側頸部淋巴結轉移 (cT2N2M0)。 根據最新的 AJCC 第九版 (2026年現行標準)，由於分期系統的改版，此病患從舊版的 Stage III 被重新歸類為 Stage II。然而，他的治療前 EBV DNA 數值偏高 (> 4000 copies/ml)。你準備向家屬解釋這個處於「精準分層」轉折點的治療計畫。",
-      "media": "載入圖表：IMRT 鼻咽部與頸部輻射劑量分佈圖 (Dose-painting)",
-      "question": "在 2026 年的臨床共識中，Stage II 鼻咽癌的治療取決於「風險分層 (Risk Stratification)」。面對這名 cT2N2M0 (Stage II) 且 EBV DNA 偏高的病患，下列何者是目前公認最適當的「標準主要治療」？",
+      "title": "Step 5/7：分期",
+      "scenario": "最終 TNM：cT1 N2 M0。原發腫瘤侷限在鼻咽，兩側 level II 淋巴結小於 6 公分、在環狀軟骨以上，沒有淋巴結外侵犯，沒有遠端轉移。\n\n一位受第 8 版訓練的同事說他是第 III 期。",
+      "media": "載入圖片：你自己重繪的 AJCC 第 9 版鼻咽癌分期表，不要複製原圖：IA T1-2 N0；IB T1-2 N1；II T3 或 N2；III T4 或 N3；IVA M1 三個病灶以內；IVB M1 超過三個。不要標示任何一格。說明文字：「AJCC 第 9 版分期。」",
+      "question": "用圖中第 9 版的分組，他是第幾期？為什麼跟同事說的不一樣？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 為了減毒與維持生活品質，應全面降階 (De-escalation) 為單純強度調控放射治療 (IMRT alone)。"
+          "text": "(A) 第 III 期；N2 一直都是第 III 期"
         },
         {
           "id": "B",
-          "text": "(B) 廣泛性內視鏡鼻咽腫瘤切除手術，合併雙側頸部淋巴廓清術。"
+          "text": "(B) 第 II 期；第 9 版把 T3 和 N2 從第 III 期降到第 II 期，第 III 期現在指 T4 或 N3",
+          "correct": true
         },
         {
           "id": "C",
-          "text": "(C) 屬於中高風險組，標準方案為同步化學放射線治療 (CCRT)，並可考慮加入誘導化療 (Induction Chemotherapy)。",
-          "correct": true
+          "text": "(C) 第 IB 期；T1 的腫瘤永遠是第 I 期"
+        },
+        {
+          "id": "D",
+          "text": "(D) 第 IIA 期；N2 進到較高的亞期"
         }
       ],
-      "feedback": "正確答案：C\n\n在 AJCC 第九版 (2026) 中，Stage II 的治療已走向精準化。\n中高風險組 (Intermediate to High Risk)：如本例的 N2 淋巴結轉移或 高 EBV DNA，CCRT (IMRT + Cisplatin) 仍是絕對的標準基石，且常會考慮加入誘導化療 (IC) 以處理微小轉移。\n低風險組 (Low Risk)：只有在 T1-2, N1 且 低 EBV DNA 的病患，才考慮「降階治療 (De-escalation)」為單純放療 (RT alone) 以減少血液與腸胃毒性。絕不可將所有新版 Stage II 皆視為低風險而貿然減去化療！\n\n。"
+      "feedback": "正確答案：B\n\n同事對腫瘤的判斷沒錯。在第 8 版，T1N2M0 是第 III 期。第 9 版在 2024 年底發表、2025 年 1 月起使用，T 和 N 的定義幾乎沒動，但重畫了分組。第 I 期現在是 T1-2 合併 N0 或 N1，分成 IA 和 IB。第 II 期是 T3 或 N2。第 III 期是 T4 或 N3，而 N3 現在包括影像上進階的淋巴結外侵犯。第 IV 期只剩遠端轉移，IVA 是三個病灶以內、IVB 是更多。理由是 IMRT 時代近五千位病人的存活資料：舊的分組已經分不開預後，T3 和 N2 的病人比舊的第 III 期標籤暗示的好。\n\n所以他今天是第 II 期，2024 年會是第 III 期。腫瘤沒變，地圖變了。兩個後果。讀舊病歷、舊試驗時，那時的第 II 期和第 III 期跟現在不是同一群病人。選治療時，光靠期別不夠，因為新的第 II 期同時裝著舊的第 II 期和一部分舊的第 III 期。那是下一步。\n\n其他選項為什麼不對：\n(A) 在第 8 版是對的，第 9 版不是。第 III 期現在需要 T4 或 N3。\n(C) T1 只有在 N0 或 N1 時才是第 I 期。N2 把任何 T 都帶到第 II 期。\n(D) 第 9 版沒有 IIA 或 IIB。亞期只有第 I 期的 IA、IB，和第 IV 期的 IVA、IVB。\n\nKeypoint：第 9 版，N2 是第 II 期，第 III 期是 T4 或 N3；腫瘤沒變，地圖變了，而地圖本身不選治療。\n\nReference: Pan JJ, Mai HQ, Ng WT, et al. Ninth version of the AJCC and UICC nasopharyngeal cancer TNM staging classification. JAMA Oncol. 2024;10(12):1627-1635. doi:10.1001/jamaoncol.2024.4354."
     },
     {
-      "title": "Step 6/6: 晚期放射線致命併發症 (Late Fatal Complications)",
-      "scenario": "患者順利完成 CCRT，腫瘤完全緩解。然而在 6 年後，他突然因為幾次輕微的流鼻血 (前哨性出血, sentinel bleeds)，接著在急診發生「極度大量且難以控制的鼻出血 (Massive epistaxis)」，血壓開始不穩。",
-      "media": "載入圖片：血管攝影顯示破裂的動脈瘤",
-      "question": "發生在接受過高劑量鼻咽放射治療多年後的患者身上，這類致命性大出血最可能源自於哪一種放射治療的晚期併發症？",
+      "title": "Step 6/7：主要治療策略",
+      "scenario": "Non-keratinizing carcinoma，undifferentiated subtype。cT1 N2 M0：侷限在鼻咽的小原發腫瘤，加兩側 level II 淋巴結。\n\n第 9 版第 II 期，第 8 版第 III 期。他的血漿 EBV DNA 40.1 copies/mL。他有已痊癒的 B 型肝炎（表面抗原陰性、核心抗體陽性）。你正準備向他和家人說明治療計畫。",
+      "media": "",
+      "question": "目前的臨床共識中，第 II 期鼻咽癌的治療取決於風險分層。對這位 cT1N2M0（第 9 版第 II 期）的病人，下列何者是最適當的標準主要治療？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 顳骨放射性骨壞死 (Osteoradionecrosis of temporal bone)"
+          "text": "(A) 為了減少毒性、維持生活品質，治療應一律降階為單獨 IMRT。"
         },
         {
           "id": "B",
-          "text": "(B) 內頸動脈動脈瘤 / 假性動脈瘤破裂 (Internal carotid artery aneurysm blowout)",
-          "correct": true
+          "text": "(B) 廣泛的內視鏡鼻咽腫瘤切除，合併兩側頸部廓清。"
         },
         {
           "id": "C",
-          "text": "(C) 放射線誘發性肉瘤 (Radiation-induced sarcoma)"
+          "text": "(C) 歸類為中高風險群，標準是同步化放療 (CCRT)，並考慮加上誘導化療。",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) 只做 IMRT 加同步 cisplatin；第 II 期永遠不需要誘導化療。"
         }
       ],
-      "feedback": "正確答案：B\n\n急診夢魘： 內頸動脈動脈瘤破裂是鼻咽癌放射治療後罕見但極度致命的晚期併發症。典型症狀就是病患會先有輕微的「前哨性出血」，數小時到數天後突然爆發大量鼻血。處理方式需迅速維持呼吸道，並照會放射線科進行血管腔內支架置放或血管栓塞\n\n。"
+      "feedback": "正確答案：C\n\n第 9 版把 T3 和 N2 從第 III 期移到第 II 期。變的是標籤，不是疾病。一個 T1 腫瘤加兩側淋巴結，跟去年的第 III 期是同一個腫瘤，附在它身上的試驗證據沒有移動。確立誘導化療的 gemcitabine-cisplatin 試驗收案的是第 8 版第 III 到 IVB 期，T1N2 在裡面，而且顯示存活效益，主要來自遠端轉移減少。這正是腫瘤團隊對他的推論：三個療程的誘導 gemcitabine 加 cisplatin，然後同步化放療。他誘導化療的 cisplatin 用 60 而不是 80 mg/m²，58 歲加上後面還有同步階段，這是合理的調整。\n\n降階的證據適用於另一種病人，而他的 EBV DNA 就是陷阱。40.1 copies/mL 遠低於 4,000 的門檻，很容易讀成可以降階的許可。但證明單獨放療不劣於同步化放療的試驗收的是 T1-2 N1 和 T2-3 N0，所有淋巴結小於 3 公分、沒有 level IV 或 Vb 淋巴結、沒有淋巴結外侵犯、EBV DNA 低於 4,000。這些條件是同時要滿足的，不是擇一。兩側淋巴結是 N2，N2 從來不在那個試驗裡。EBV DNA 好看，不會把一個 N2 病人搬進一個排除 N2 的研究。\n\n化療開始前還有一件事。他有已痊癒的 B 型肝炎。細胞毒性化療會讓它再活化，治療期間的再活化可能致命。第一個療程之前就要驗 HBV DNA、會診肝膽科，決定預防性抗病毒或密切監測，不是之後。\n\n其他選項為什麼不對：\n(A) 一律降階正是新分期會誘發的錯誤，而他的低 EBV DNA 讓這個錯誤更誘人。第 9 版的第 II 期有的是低風險、有的是舊的第 III 期。兩側淋巴結讓他是後者，不管 EBV DNA 怎麼說。\n(B) 鼻咽癌在診斷時不做手術。原發腫瘤切不出安全邊緣，淋巴結對放射治療有反應。內視鏡鼻咽切除和頸部廓清是復發時的救援手術。\n(D) 這是陷阱。同步化放療那一半是對的，「永遠」那個字是錯的。新第 II 期的低風險端不需要誘導，但 N2 那一端，也就是過去的第 III 期，有第三期試驗支持。期別的數字不是全部的答案，風險特徵才是。\n\nKeypoint：第 9 版的第 II 期裝著兩種不同的病人；N2 把他放進舊的第 III 期那群，那群是同步化放療、考慮誘導，而且 B 型肝炎要先處理好。\n\nReference: Pan JJ, Mai HQ, Ng WT, et al. Ninth version of the AJCC and UICC nasopharyngeal cancer TNM staging classification. JAMA Oncol. 2024;10(12):1627-1635. doi:10.1001/jamaoncol.2024.4354. Zhang Y, Chen L, Hu GQ, et al. Gemcitabine and cisplatin induction chemotherapy in nasopharyngeal carcinoma. N Engl J Med. 2019;381(12):1124-1135. Tang LL, Guo R, Zhang N, et al. Effect of radiotherapy alone vs radiotherapy with concurrent chemoradiotherapy on survival without disease relapse in patients with low-risk nasopharyngeal carcinoma. JAMA. 2022;328(8):728-736. doi:10.1001/jama.2022.13997. National Comprehensive Cancer Network. NCCN Clinical Practice Guidelines in Oncology: Head and Neck Cancers. Updated May 12, 2026. https://www.nccn.org/professionals/physician_gls/pdf/head-and-neck.pdf"
+    },
+    {
+      "title": "Step 7/7：開始之前",
+      "scenario": "放射治療開始前，你跟他說明晚期副作用。鼻咽 70 Gy 把顱底、顳葉、唾液腺、甲狀腺和內頸動脈都放在照射範圍內，晚期副作用會在多年後出現。這些副作用的負擔，就是目前試驗在對誘導化療反應良好的病人測試降劑量放療的原因。\n\n其中一種的表現是：幾天內幾次小量鼻出血，然後突然大量出血合併休克。",
+      "media": "",
+      "question": "鼻咽放射治療的哪一種晚期併發症，表現為前哨性鼻出血、接著大量致命出血？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 顳骨放射性骨壞死"
+        },
+        {
+          "id": "B",
+          "text": "(B) 放射線誘發的肉瘤"
+        },
+        {
+          "id": "C",
+          "text": "(C) 復發腫瘤侵蝕蝶顎動脈"
+        },
+        {
+          "id": "D",
+          "text": "(D) 內頸動脈動脈瘤／假性動脈瘤破裂 (carotid blowout)",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：D\n\n內頸動脈穿過照射範圍。它經過鼻咽外側壁、穿過岩骨和海綿竇，離腫瘤床只有幾毫米，接受了全劑量。多年後被照射過的血管壁變弱，有時是顱底的放射性骨壞死讓它暴露、或慢性感染侵蝕它，形成假性動脈瘤。表現是經典的：小的前哨性出血，那是血管壁分階段撐不住，然後從鼻咽噴出大量出血合併血液動力學崩潰。這是 carotid blowout，很快就會致命。\n\n他現在要知道兩件事。第一，治療多年後任何鼻出血都不能忽略；前哨性出血是他唯一會得到的警告，是當天的急診。第二，發生的時候順序是氣道，因為他會吸入血液；填塞、大口徑靜脈通路、備血；立刻找介入放射科做覆膜支架或阻斷動脈。從鼻子做的任何事都止不住頸動脈。\n\n這也是這個領域在往前走的原因。對誘導反應良好的病人做降劑量放療、低風險病人單獨放療，之所以在研究，是因為全劑量治療的晚期毒性是真的：頸動脈損傷、顳葉壞死、聽力喪失、甲狀腺功能低下、吞嚥困難、終生口乾。他不是降階的候選人，但降階存在的理由，就是他需要這段說明的理由。\n\n其他選項為什麼不對：\n(A) 顱底的放射性骨壞死是真的，也可能是讓動脈暴露的原因，但骨頭不會這樣出血。出血量和前哨的模式是動脈性的。\n(B) 放射線誘發的肉瘤是晚期併發症、也會出血，但它的表現是一個腫塊加幾週的症狀，不是突然失血。\n(C) 這是陷阱。鼻咽癌治療後的晚期鼻出血，第一個想到的是復發腫瘤，而蝶顎動脈是鼻腔腫瘤通常出血的來源。但復發在內視鏡和影像上是一個腫塊，而且是滲血；前哨接著大量的模式是大血管的簽名。\n\nKeypoint：鼻咽放射治療多年後的前哨性出血就是頸動脈；先氣道、再介入放射科；而全劑量治療的晚期毒性正是降階被研究的原因。\n\nReference: Chen YP, Chan ATC, Le QT, Blanchard P, Sun Y, Ma J. Nasopharyngeal carcinoma. Lancet. 2019;394(10192):64-80. Tang LL, Guo R, Zhang N, et al. JAMA. 2022;328(8):728-736. doi:10.1001/jama.2022.13997. National Comprehensive Cancer Network. NCCN Clinical Practice Guidelines in Oncology: Head and Neck Cancers. Updated May 12, 2026. https://www.nccn.org/professionals/physician_gls/pdf/head-and-neck.pdf Carotid blowout after nasopharyngeal radiotherapy: 待補具體文獻。"
     }
   ]
 }

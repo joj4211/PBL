@@ -1,148 +1,172 @@
 {
   "id": "throat_ludwigs_angina_airway",
-  "title": "The Deadly Swell: Ludwig's Angina Airway Rescue",
-  "subtitle": "Ludwig's angina and difficult-airway management",
-  "description": "Airway adjuncts, definitive airway principles, CICO emergency management, tracheostomy anatomy, and postoperative complications in Ludwig's angina.",
-  "estimatedTime": "20-30 min",
+  "title": "The Floor of the Mouth",
+  "subtitle": "A man in respiratory distress after a toothache, from the emergency department to the ICU",
+  "description": "Deciding whether a patient in distress can go to CT, choosing how to secure the airway, managing a can't-intubate-can't-oxygenate emergency, reading the CT once it is safe to get one, choosing the definitive airway, and a first-night complication.",
+  "estimatedTime": "15-20 min",
   "difficulty": "Intermediate",
   "tags": [
-    "Laryngology",
-    "Ludwig's angina",
-    "CICO",
-    "Tracheostomy"
+    "Airway",
+    "Deep neck infection",
+    "Emergency surgical airway",
+    "DAS 2015"
   ],
   "steps": [
     {
-      "title": "Step 1/6: Initial Airway Adjunct",
-      "scenario": "A 58-year-old man is brought to the emergency department with respiratory distress after several days of severe mandibular toothache and fever. Physical examination shows severe woody swelling of the submandibular floor of mouth, pushing the tongue upward and backward and nearly obstructing the oropharynx. You diagnose severe Ludwig's angina. The patient is conscious and has a gag reflex, but breathing is extremely labored.",
-      "media": "Load image: Figure 72.2 Nasopharyngeal airway illustration",
-      "question": "Before preparing a more advanced airway intervention, which airway adjunct is the safest and most appropriate choice to temporarily bypass the posteriorly displaced tongue base and maintain airflow?",
+      "title": "Step 1/6: The Scanner Is Ready",
+      "scenario": "A 58-year-old man is brought to the emergency department with a fever and several days of severe pain in a lower molar. He is sitting bolt upright, drooling, with a muffled voice and labored breathing. On room air the saturation is fluctuating between 89 and 92 percent. The floor of his mouth is tense and woody on both sides, and the tongue is pushed up and back.\n\nThe emergency physician has booked a contrast CT of the neck and the porter is waiting to take him.",
+      "media": "Load image: Intraoral photograph of tense, elevated floor of mouth with the tongue displaced upward, consented patient. Caption: 'Floor of mouth.'",
+      "question": "What do you do?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Oral/Guedel airway"
+          "text": "(A) Send him for the CT; the scan takes five minutes and will show whether there is an abscess to drain"
         },
         {
           "id": "B",
-          "text": "(B) Nasopharyngeal airway",
-          "correct": true
+          "text": "(B) Send him for the CT with a nurse and a pulse oximeter, and intubate afterward if the scan shows airway narrowing"
         },
         {
           "id": "C",
-          "text": "(C) Immediately give high-dose sedatives to make the patient sleep and relax the muscles."
+          "text": "(C) Cancel the scan for now, keep him upright, call anesthesia, and prepare to secure the airway with a surgical airway set open at the bedside",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) Give intravenous antibiotics and dexamethasone, and reassess in an hour before deciding on imaging"
         }
       ],
-      "feedback": "Correct answer: B\n\nEmergency tool: Ludwig's angina pushes the tongue base backward and causes oropharyngeal obstruction. A nasopharyngeal airway is well suited for obstruction at the oropharyngeal level and can bypass the tongue base to establish airflow. In contrast, an oral/Guedel airway is inappropriate when the gag reflex is still present."
+      "feedback": "Correct answer: C\n\nHe already has the signs of impending obstruction: sitting upright, drooling, muffled voice, labored breathing, and a tongue displaced by bilateral floor-of-mouth swelling. Lying flat in a scanner, away from the people and equipment that can rescue him, is where these patients die. The airway comes first. The CT comes after the tube is in.\n\nWhy the others fail:\n(A) The scan will not change what happens in the next ten minutes, and it requires him to lie flat with nobody able to intervene.\n(B) A nurse and an oximeter cannot secure an airway. A saturation that drops in the scanner is a crisis in the worst possible place.\n(D) Antibiotics and steroids are given, but they do not reverse established swelling within an hour, and waiting converts a controlled situation into an emergency one.\n\nKeypoint: a patient with signs of upper airway obstruction does not go to the scanner until the airway is secured.\n\nReference: Cook TM, Woodall N, Frerk C. Fourth National Audit Project. Br J Anaesth. 2011;106(5):617-631."
     },
     {
-      "title": "Step 2/6: Principles of Intervention",
-      "scenario": "After placing the nasopharyngeal airway, the patient's oxygen saturation temporarily stabilizes, but swelling is visibly worsening and complete airway obstruction could occur at any moment. You must establish a definitive airway as soon as possible.",
-      "media": "Load image: Box 72.2 Principles of intervention in upper airway obstruction",
-      "question": "According to the principles of intervention in upper airway obstruction, what is the core decision-making concept in this emergency airway obstruction?",
+      "title": "Step 2/6: Securing the Airway",
+      "scenario": "He is upright and on high-flow oxygen, but the saturation is still fluctuating between 80 and 89 percent and is not improving. Anesthesia is at the bedside. You are scrubbed with a tracheostomy set open. He is still conscious and can follow instructions.",
+      "media": "Load image: The double setup as you would stage it: flexible scope and topical anesthesia on one side of the bed, tracheostomy tray open and scalpel-bougie-tube kit laid out on the other. Caption: 'Double setup.'",
+      "question": "How do you secure the airway?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Always perform emergency open tracheostomy directly on the emergency stretcher."
-        },
-        {
-          "id": "B",
-          "text": "(B) Secure and protect the airway using the most straightforward and least invasive method.",
+          "text": "(A) Awake flexible fiberoptic nasal intubation with topical anesthesia, with the surgical airway team ready at the neck",
           "correct": true
         },
         {
+          "id": "B",
+          "text": "(B) Rapid sequence induction with a videolaryngoscope, since he is cooperative and there is no time to topicalize"
+        },
+        {
           "id": "C",
-          "text": "(C) Incise and drain the deep neck abscess first, and only then consider securing the airway."
+          "text": "(C) A nasopharyngeal airway and observation in the resuscitation bay, since he is still moving air"
+        },
+        {
+          "id": "D",
+          "text": "(D) Blind nasal intubation, since the mouth cannot be opened"
         }
       ],
-      "feedback": "Correct answer: B\n\nDecision key: The principle is to secure the airway with the most straightforward and least invasive method. For Ludwig's angina, this usually means attempting awake fiberoptic nasotracheal intubation first. If that fails or is absolutely contraindicated, proceed to a surgical airway."
+      "feedback": "Correct answer: A\n\nAn awake technique keeps him breathing for himself throughout. The scope follows the air passage past the swelling, and if it cannot be done, he is still breathing and the surgical airway can proceed under control. Having the surgeon ready at the neck before starting is the point: the plan for failure is in place before the first attempt.\n\nWhy the others fail:\n(B) A falling saturation makes this feel urgent, and urgency is the argument for staying awake, not against it. Induction and paralysis remove the muscle tone that is keeping what airway he has open. If the videolaryngoscope cannot pass the swelling, and it often cannot, he is now apneic with an airway you cannot see. Head and neck infection was one of the highest-risk groups for exactly this sequence in the national audit.\n(C) A nasopharyngeal airway bypasses the tongue base but not swelling below it, and it can bleed into an already compromised airway. Moving some air at 80 to 89 percent on high-flow oxygen is not a stable airway, and observation is not a plan when the swelling is progressing.\n(D) Blind passage through distorted, swollen tissue risks trauma and bleeding and has no way to confirm the route. If the mouth cannot open, that is a reason for a scope, not for going blind.\n\nKeypoint: keep him breathing, look with a scope, and have the neck ready before you start.\n\nReference: Cook TM, Woodall N, Frerk C. Fourth National Audit Project. Br J Anaesth. 2011;106(5):617-631. Frerk C, Mitchell VS, McNarry AF, et al. Difficult Airway Society 2015 guidelines. Br J Anaesth. 2015;115(6):827-848. doi:10.1093/bja/aev371."
     },
     {
-      "title": "Step 3/6: Managing the CICO Emergency",
-      "scenario": "You attempt awake nasotracheal intubation, but massive deep neck swelling has distorted the anatomy and the tube cannot pass. The patient suddenly becomes agitated, loses consciousness, and desaturates to 60%. Bag-valve-mask ventilation cannot deliver oxygen. This is a classic can't intubate, can't oxygenate (CICO) emergency.",
-      "media": "Load image: Instruments and steps for the scalpel-bougie technique of cricothyroidotomy",
-      "question": "In a CICO crisis, which front-of-neck access method is most strongly supported by the Difficult Airway Society because it improves outcomes?",
+      "title": "Step 3/6: Where Do You Cut",
+      "scenario": "The scope reaches the swelling and cannot advance. He becomes agitated, then unresponsive. The saturation reads 60 percent and falling. Bag-valve-mask ventilation does not move the chest. A supraglottic airway does not seat.\n\nYou declare a can't-intubate, can't-oxygenate situation.",
+      "media": "Load image: Your own unlabeled line drawing of the anterior neck: thyroid cartilage, cricoid, thyroid isthmus, tracheal rings. No annotations, no arrows. The same drawing is reused at Step 5. Caption: 'Anterior neck.'",
+      "question": "Saturation is 60 percent and falling. Where do you cut?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Continue blind oral intubation attempts until successful."
+          "text": "(A) Through the thyroid cartilage in the midline, the most prominent landmark"
         },
         {
           "id": "B",
-          "text": "(B) Traditional large-bore needle cricothyroidotomy."
+          "text": "(B) Below the cricoid, through the second and third tracheal rings"
         },
         {
           "id": "C",
-          "text": "(C) Scalpel-bougie technique of cricothyroidotomy.",
+          "text": "(C) Needle through the cricothyroid membrane with a large-bore cannula, then jet oxygenation"
+        },
+        {
+          "id": "D",
+          "text": "(D) Through the cricothyroid membrane, between the thyroid cartilage and the cricoid",
           "correct": true
         }
       ],
-      "feedback": "Correct answer: C\n\nAirway guideline update: For CICO patients, the Difficult Airway Society strongly supports the scalpel-bougie technique of cricothyroidotomy. Compared with traditional needle cricothyroidotomy, this technique can establish the airway more quickly and reliably and improve patient outcomes."
+      "feedback": "Correct answer: D\n\nThe cricothyroid membrane is the most superficial point of the airway. There is no thyroid isthmus over it, it can be felt through the skin even in a swollen neck, and it takes seconds to open. Stabilize the larynx with the non-dominant hand, make a horizontal stab through skin and membrane, rotate the blade, pass a bougie, railroad a 6.0 cuffed tube, inflate the cuff. The Difficult Airway Society names this scalpel technique as the preferred rescue in a can't-intubate, can't-oxygenate emergency.\n\nWhy the others fail:\n(A) The thyroid cartilage is the landmark you hold, not the one you cut. It is solid cartilage, it does not open into the airway, and cutting it damages the larynx above the folds.\n(B) This is the tracheostomy site, and it is right for the definitive airway later. Now it is deeper, under the isthmus, and takes minutes. He has seconds.\n(C) About 60 percent of needle attempts failed in the national audit that shaped the 2015 guideline. A cannula gives no cuff, no reliable ventilation, and no protection from aspiration.\n\nKeypoint: the membrane between thyroid cartilage and cricoid is where you cut in an emergency; the tracheal rings are where you cut when there is time.\n\nReference: Frerk C, Mitchell VS, McNarry AF, et al. Difficult Airway Society 2015 guidelines. Br J Anaesth. 2015;115(6):827-848. doi:10.1093/bja/aev371. Cook TM, Woodall N, Frerk C. Br J Anaesth. 2011;106(5):617-631."
     },
     {
-      "title": "Step 4/6: Open Surgical Tracheostomy",
-      "scenario": "You decisively perform scalpel-bougie cricothyroidotomy and successfully rescue the airway. After the patient stabilizes, the team moves him rapidly to the operating room to convert to a formal open surgical tracheostomy.",
-      "media": "Load image: Tracheal and thyroid anatomy showing the cricoid cartilage and tracheal rings",
-      "question": "When making the tracheotomy, where should the ideal tracheal opening be placed to avoid injuring the cricoid cartilage and causing future severe subglottic stenosis?",
+      "title": "Step 4/6: Now the CT",
+      "scenario": "The cricothyroidotomy tube is in. Saturation is 99 percent and he is being ventilated. He is now stable enough to lie flat, and the contrast CT of the neck is obtained.\n\nThe report reads: swelling of the tongue and tongue base, ill-defined soft tissue density across the floor of the mouth with abscess formation, subcutaneous fat stranding in the submental region consistent with cellulitis, and several inflammatory-appearing nodes in both submandibular regions. No enhancing mass.",
+      "media": "Load image: Axial and coronal contrast-enhanced CT of the neck, unannotated. Caption: 'Post-contrast.'",
+      "question": "What does the CT show, and what does it change?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Through the cricothyroid membrane"
+          "text": "(A) A peritonsillar abscess; needle aspiration or incision and drainage through the mouth"
         },
         {
           "id": "B",
-          "text": "(B) Between the 1st and 2nd tracheal rings"
+          "text": "(B) Bilateral floor-of-mouth infection with abscess formation and surrounding cellulitis; incision and drainage of the floor of the mouth, removal of the source tooth, and intravenous antibiotics",
+          "correct": true
         },
         {
           "id": "C",
-          "text": "(C) Between the 2nd and 4th tracheal rings",
-          "correct": true
+          "text": "(C) A parapharyngeal abscess; drainage through the neck under general anesthesia"
+        },
+        {
+          "id": "D",
+          "text": "(D) Cellulitis only, with no collection; intravenous antibiotics alone"
         }
       ],
-      "feedback": "Correct answer: C\n\nSurgical pitfall: The ideal opening for formal tracheostomy is between the 2nd and 4th tracheal rings. Injury to the cricoid cartilage or first tracheal ring must be avoided because it can cause mucosal inflammation and cartilage damage, leading to severe future subglottic stenosis."
+      "feedback": "Correct answer: B\n\nThe CT confirms the diagnosis and answers the question it was ordered for. Both sides of the floor of the mouth are involved, the tongue base is swollen, which is what was closing the airway, and there is a collection to drain. The plan is incision and drainage of the floor of the mouth, extraction of the source tooth, and intravenous antibiotics covering oral flora. The scan also confirms the infection has not tracked laterally to the parapharyngeal space.\n\nOne thing about the report: the findings section describes the collection as ill-defined rather than as a clean rim-enhancing abscess. That is typical of the floor of the mouth, where early pus is loculated and poorly walled off. Read the impression and the clinical picture together, and explore with a low threshold.\n\nWhy the others fail:\n(A) A peritonsillar abscess sits between the tonsil and the constrictor, on one side, at the level of the oropharynx. This is bilateral and in the floor of the mouth.\n(C) A parapharyngeal abscess is lateral to the constrictor near the carotid sheath and would show as an enhancing collection there. The report describes neither.\n(D) Antibiotics alone is reasonable for early Ludwig's angina with cellulitis only and no airway compromise. This patient has a collection on the report and has already lost his airway to the infection. Pus is drained.\n\nKeypoint: the CT decides what gets drained; it never decides whether the airway gets secured.\n\nReference: Vieira F, Allen SM, Stocks RM, Thompson JW. Deep neck infection. Otolaryngol Clin North Am. 2008;41(3):459-483."
     },
     {
-      "title": "Step 5/6: Subcutaneous Emphysema",
-      "scenario": "The formal tracheostomy is completed successfully, and the abscess is incised and drained. The patient is transferred to the ICU. On postoperative day 1, the nurse urgently calls you because his neck and upper chest are abnormally swollen with crepitus on palpation, consistent with subcutaneous emphysema.",
-      "media": "Load image: Chest and neck swelling in subcutaneous emphysema",
-      "question": "If the tracheostomy tube becomes partially obstructed, which improper wound-closure step can worsen subcutaneous emphysema and even lead to tube displacement from excessive air pressure?",
+      "title": "Step 5/6: The Definitive Airway",
+      "scenario": "The floor of the mouth is incised and drained and the source tooth is removed. The swelling will take days to settle and he will need the airway for at least a week, so you convert the cricothyroidotomy to a formal tracheostomy in the same sitting.",
+      "media": "Load image: Your own line drawing of the anterior neck: thyroid cartilage, cricothyroid membrane, cricoid, thyroid isthmus, tracheal rings numbered 1 to 6, innominate artery crossing low. No labels on which level is correct. Caption: 'Anterior neck.'",
+      "question": "Where do you enter the trachea?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Hemostatic suturing of the thyroid isthmus is too thorough."
+          "text": "(A) Through the existing cricothyroidotomy, enlarging the opening"
         },
         {
           "id": "B",
-          "text": "(B) The skin around the tracheostomy stoma is sutured too tightly.",
-          "correct": true
+          "text": "(B) Between the cricoid cartilage and the first tracheal ring"
         },
         {
           "id": "C",
-          "text": "(C) The tracheostomy tube cuff is inflated with too much air."
+          "text": "(C) Between the second and third tracheal rings, below the thyroid isthmus",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) Between the fifth and sixth tracheal rings, as low as possible to keep the tube away from the swelling"
         }
       ],
-      "feedback": "Correct answer: B\n\nClinical detail: The skin around the tracheostomy stoma must not be sutured too tightly; usually only one stitch is placed. If the tube is partially obstructed and the skin is tight, high-pressure air cannot escape and can dissect into surrounding soft tissue, causing severe subcutaneous emphysema from the lower eyelids to the upper chest and even tube displacement."
+      "feedback": "Correct answer: C\n\nThe tracheostomy goes in below the cricoid, through the second and third rings. The cricoid is the only complete ring in the airway and the narrowest point below the vocal folds. A tube that sits against it, or an opening that damages it, leads to subglottic stenosis that is very hard to treat. The cricothyroidotomy is closed once the tracheostomy is in.\n\nWhy the others fail:\n(A) This leaves a tube resting on the cricoid for a week or more, which is the stenosis risk the conversion is meant to remove.\n(B) Same problem. The cricoid and first ring are protected precisely because injury there produces stenosis at the narrowest part of the airway.\n(D) Too low. Below the third or fourth ring the trachea drops behind the sternum, the innominate artery crosses in front of it, and a tube sitting there can erode into the vessel.\n\nKeypoint: below the cricoid, above the innominate, which puts you at rings two and three.\n\nReference: Mitchell RB, Hussey HM, Setzen G, et al. Clinical consensus statement: tracheostomy care. Otolaryngol Head Neck Surg. 2013;148(1):6-20."
     },
     {
-      "title": "Step 6/6: Converting to Tracheostomy",
-      "scenario": "Looking back on the dramatic rescue, a junior resident asks, \"Since the emergency cricothyroidotomy already restored the oxygen saturation to 99%, why can't we just keep that tube instead of converting to formal tracheostomy?\"",
-      "media": "Load image: Neck anatomy showing the cricothyroid membrane and cricoid cartilage",
-      "question": "After the patient stabilizes, why should an emergency cricothyroidotomy be converted to formal tracheostomy as soon as possible?",
+      "title": "Step 6/6: The First Night",
+      "scenario": "He is in the ICU. At 3 a.m. the nurse calls: his neck and upper chest have swollen up over the last hour and crackle on palpation. The ventilator is showing high airway pressures.",
+      "media": "Load image: Chest radiograph showing subcutaneous air outlining the neck and chest wall muscles, de-identified. Caption: 'Postoperative day 1.'",
+      "question": "What has most likely happened?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Ongoing tube friction against the cricoid cartilage can cause irreversible subglottic stenosis, and carbon dioxide clearance is less effective.",
+          "text": "(A) The skin around the stoma was closed tightly, and air leaking around a partly blocked tube has been forced into the soft tissues",
           "correct": true
         },
         {
           "id": "B",
-          "text": "(B) It accelerates deep neck pus drainage into the lungs and causes severe aspiration pneumonia."
+          "text": "(B) The cuff has been overinflated and is injuring the tracheal wall"
         },
         {
           "id": "C",
-          "text": "(C) It directly compresses both recurrent laryngeal nerves and causes permanent aphonia."
+          "text": "(C) The thyroid isthmus was oversewn and is bleeding into the neck"
+        },
+        {
+          "id": "D",
+          "text": "(D) The abscess has re-accumulated and the neck swelling is pus"
         }
       ],
-      "feedback": "Correct answer: A\n\nFollow-up care point: Cricothyroidotomy is only a temporary lifesaving procedure. Once the patient stabilizes, it should be converted to formal tracheostomy because cricothyroidotomy does not clear carbon dioxide as effectively, and prolonged tube contact with the cricoid cartilage can cause severe subglottic stenosis, making later decannulation difficult."
+      "feedback": "Correct answer: A\n\nThis is subcutaneous emphysema: air in the soft tissues of the neck and chest wall, felt as crepitus under the skin. Air gets there when it cannot get out through the tube, usually because the tube is partly blocked by secretions or malpositioned, and cannot get out around the tube either because the skin is closed tightly around it. The pressure then dissects into the neck and chest and can push the tube out of the trachea. The fix is to check the tube position and patency immediately, and to leave the stoma loosely closed or open in the first place.\n\nWhy the others fail:\n(B) An overinflated cuff damages the tracheal mucosa over days. It does not put air into the neck in an hour.\n(C) Bleeding gives a firm, expanding swelling without crepitus. Air crackles; blood does not.\n(D) Re-accumulated pus would be tender, warm and firm, and would not produce crepitus or high ventilator pressures.\n\nKeypoint: subcutaneous emphysema after tracheostomy means air is going the wrong way, and the first check is whether the tube is patent and in the trachea.\n\nReference: Mitchell RB, Hussey HM, Setzen G, et al. Clinical consensus statement: tracheostomy care. Otolaryngol Head Neck Surg. 2013;148(1):6-20."
     }
   ]
 }

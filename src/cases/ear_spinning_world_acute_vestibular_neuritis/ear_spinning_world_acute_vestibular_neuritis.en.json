@@ -1,148 +1,173 @@
 {
-  "id": "ear_spinning_world_acute_vestibular_neuritis",
-  "title": "The Spinning World: An Emergency Department Challenge",
-  "subtitle": "Acute Vestibular Neuritis",
-  "description": "Central stroke exclusion in acute vertigo, HINTS interpretation, audiometric differentiation, caloric testing, and rehabilitation planning.",
-  "estimatedTime": "20-30 min",
+  "id": "ear_vestibular_neuritis",
+  "title": "The Room Will Not Stop",
+  "subtitle": "Two days of spinning, from the emergency department to the rehabilitation plan",
+  "description": "Recognizing acute vestibular syndrome, the bedside HINTS examination, why hearing is checked, making the diagnosis, deciding which side, and what to do now and later.",
+  "estimatedTime": "15-20 min",
   "difficulty": "Intermediate",
   "tags": [
     "Otology",
-    "Emergency",
-    "Vestibular Neuritis",
-    "HINTS"
+    "Vertigo",
+    "Acute vestibular syndrome",
+    "HINTS",
+    "Vestibular rehabilitation"
   ],
   "steps": [
     {
-      "title": "Step 1/6: History Taking & Neurologic Landmines",
-      "scenario": "A 42-year-old woman is brought to the emergency department with sudden, severe, and constant vertigo for the past 12 hours. She has intense nausea and has vomited twice. She also had upper respiratory infection symptoms in the past week. To rapidly exclude a dangerous central stroke, you must ask key essential negative findings.",
-      "media": "Load image: emergency physician taking a focused history",
-      "question": "To rule out possible brainstem involvement, which question is the single most important one to ask right now?",
+      "title": "Step 1/6: What Kind of Dizzy",
+      "scenario": "A 45-year-old woman is brought to the emergency department by her husband.\n\nShe woke two days ago with the room spinning.\n\n    Onset             sudden, on waking\n    Duration          two days so far\n    Pattern           constant since it started, never stopped\n    Vomiting          several times\n    Walking           only with a hand on the wall\n    Head movement     makes it worse\n\nNo headache. No hearing change, no ringing.\nNo weakness, numbness or double vision.\nA cold last week.\n\nIn her words: \"The room moves. I don't feel faint.\"",
+      "media": "",
+      "question": "What is this, and what do you need to find out next?",
       "options": [
         {
           "id": "A",
-          "text": "(A) \"Have you ever taken any ototoxic antibiotics in the past?\""
+          "text": "(A) Presyncope; the next question is cardiac, so check orthostatic blood pressure and an ECG"
         },
         {
           "id": "B",
-          "text": "(B) \"Do you currently have any slurred speech or difficulty swallowing?\"",
+          "text": "(B) Acute vestibular syndrome; the next question is peripheral or central, and you answer it by examining her eyes, not by imaging",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) \"When you change head position, does the vertigo last only a few seconds?\""
+          "text": "(C) Episodic vestibular syndrome; the next question is which ear, so do a Dix-Hallpike"
+        },
+        {
+          "id": "D",
+          "text": "(D) Acute vestibular syndrome; the next question is stroke or not, so send her for an urgent MRI before you examine her"
         }
       ],
-      "feedback": "Correct answer: B\n\nClinical reasoning: In emergency care for acute vertigo, the first priority is excluding brainstem stroke. Asking about focal neurologic symptoms such as dysarthria, swallowing difficulty, or limb weakness/numbness is a life-saving check for essential negative findings."
+      "feedback": "Correct answer: B\n\nThree sorting questions, in order.\n\n1. Is it vertigo?\n• Vertigo is an illusion of motion: the room spins, the ground tilts, the world bounces with each step (oscillopsia). The vestibular system, ear or brain, is the source.\n• Dizziness that is lightheadedness or near-fainting is presyncope. It belongs to the heart and circulation, not the ear.\nHers is vertigo.\n\n2. What is the time course?\n• Acute vestibular syndrome: sudden vertigo, continuous for days, with nausea, vomiting, unsteadiness, intolerance of head movement, and nystagmus. That is her.\n• Episodic vestibular syndrome: attacks with normal periods between, minutes to hours each. BPPV, Meniere's disease, vestibular migraine.\n• Chronic vestibular syndrome: weeks to months of imbalance without discrete attacks.\n\n3. Peripheral or central?\nThis is the question that matters most, and it starts now. Acute vestibular syndrome has two families of cause:\n• Peripheral: the labyrinth or the vestibular nerve. Vestibular neuritis and labyrinthitis. Miserable but benign.\n• Central: the brainstem or cerebellum. Posterior circulation stroke, occasionally demyelination. Can look identical at first glance and can kill.\n\nFrom the history, the features that push toward central are a headache or neck pain of sudden onset, any focal neurological symptom, inability to stand at all even with support, and vascular risk factors in an older patient. She has none of them, and she had a cold last week, which favors a peripheral cause. But the history only raises or lowers suspicion; it cannot settle it. The bedside examination in Step 2 is what separates the two, and it is more reliable in the first two days than an MRI.\n\nWhy the others fail:\n(A) She does not feel faint; she feels the world move. Presyncope does not cause nystagmus or vomiting with head turning, and the cardiac workup answers a question she is not asking.\n(C) Episodes have gaps. She has had two days without one, and a Dix-Hallpike tests for a positional vertigo she does not have.\n(D) The framing is right and the reflex is wrong. Stroke is the central cause to fear, but an MRI in the first 48 hours misses a proportion of posterior fossa infarcts, and a normal early scan can falsely reassure. The bedside examination is more sensitive than early imaging at this stage. Examine first; image if the examination says central, or if it cannot be interpreted.\n\nKeypoint: vertigo, continuous for days, is acute vestibular syndrome; its causes are peripheral or central, and the bedside examination, not the scanner, is what decides which.\n\nReference: Strupp M, Bisdorff A, Furman J, et al. Acute unilateral vestibulopathy/vestibular neuritis: diagnostic criteria. J Vestib Res. 2022;32(5):389-406. Kattah JC, Talkad AV, Wang DZ, Hsieh YH, Newman-Toker DE. HINTS to diagnose stroke in the acute vestibular syndrome. Stroke. 2009;40(11):3504-3510."
     },
     {
-      "title": "Step 2/6: Nystagmus Interpretation & Alexander's Law",
-      "scenario": "The patient is alert and has no speech or swallowing problems. You begin the HINTS exam (Head Impulse, Nystagmus, Test of Skew). You observe spontaneous left-beating horizontal-torsional nystagmus.",
-      "media": "Load video: spontaneous left-beating nystagmus",
-      "question": "Based on the principle that the slow phase points toward the lesion and the fast phase toward the healthy side, the lesion is likely on the right. According to Alexander's Law, when will the nystagmus intensity increase?",
+      "title": "Step 2/6: Three Things at the Bedside",
+      "scenario": "You examine her eyes.\n\nNystagmus\n    Horizontal with a torsional component, fast phase to the left in primary gaze.\n    Stronger on left gaze, weaker but still left-beating on right gaze.\n    Reduced when she fixates on your finger.\n\nHead impulse\n    Head turned quickly to the right: the eyes slip with the head, then a corrective saccade brings them back to your nose.\n    Head turned to the left: the eyes stay fixed on your nose.\n\nSkew\n    Alternate cover test: no vertical correction.",
+      "media": "Load video: Nystagmus under Frenzel goggles from your own patient, 10 seconds, muted, de-identified: left-beating horizontal nystagmus increasing on left gaze. Caption: 'Nystagmus, primary and left gaze.'",
+      "question": "What does the HINTS examination show?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Looking to the left",
-          "correct": true
+          "text": "(A) A central pattern; she needs an urgent MRI before anything else"
         },
         {
           "id": "B",
-          "text": "(B) Looking to the right"
+          "text": "(B) The findings are contradictory and cannot be interpreted"
         },
         {
           "id": "C",
-          "text": "(C) Looking up"
+          "text": "(C) A normal examination; the vertigo is not vestibular"
+        },
+        {
+          "id": "D",
+          "text": "(D) A peripheral pattern: abnormal head impulse, unidirectional nystagmus that follows Alexander's law, no skew",
+          "correct": true
         }
       ],
-      "feedback": "Correct answer: A\n\nClinical reasoning: By Alexander's Law, nystagmus intensifies when gaze is directed toward the fast phase. In this case, the nystagmus beats left (fast phase left), suggesting a right-sided lesion, and becomes stronger with left gaze."
+      "feedback": "Correct answer: D\n\nHINTS is three bedside tests, and all three point the same way here.\n\nHead impulse. A quick passive head turn tests the vestibulo-ocular reflex on that side.\n• Working side: the eyes stay locked on the target.\n• Weak side: the eyes go with the head, and a catch-up saccade brings them back.\nHer catch-up saccade is on rightward turns, so the right side is weak. Note the trap: a normal head impulse in acute vestibular syndrome is the dangerous result, because it means the periphery is intact and the cause is central.\n\nNystagmus. Peripheral nystagmus beats one way, away from the weak side, and obeys Alexander's law:\n• strongest looking toward the fast phase,\n• weaker looking the other way,\n• but it never reverses,\n• and it is suppressed by visual fixation, which is why you use Frenzel goggles.\nHers is left-beating in every gaze, stronger on left gaze, damped by fixation. Direction-changing, purely vertical, or purely torsional nystagmus would be central.\n\nSkew. A vertical misalignment on cover testing is a brainstem sign. She has none.\n\nPut together: abnormal head impulse, unidirectional nystagmus, no skew. This is the benign combination. In the original study HINTS identified stroke more accurately than early MRI, which misses some posterior fossa infarcts in the first 48 hours; so a central HINTS pattern is not reassured by a normal early scan.\n\nWhy the others fail:\n(A) The central pattern is the opposite: normal head impulse, direction-changing nystagmus, or a skew. She has none of these.\n(B) The three findings agree with each other and with Alexander's law.\n(C) Spontaneous nystagmus and a catch-up saccade are not normal; they are the signs of a damaged vestibular periphery.\n\nKeypoint: catch-up saccade on head turn, nystagmus that beats one way and grows toward its fast phase, no skew, is peripheral. A normal head impulse in acute vestibular syndrome is the finding that means stroke.\n\nReference: Kattah JC, Talkad AV, Wang DZ, Hsieh YH, Newman-Toker DE. HINTS to diagnose stroke in the acute vestibular syndrome: three-step bedside oculomotor examination more sensitive than early MRI diffusion-weighted imaging. Stroke. 2009;40(11):3504-3510."
     },
     {
-      "title": "Step 3/6: Reverse Thinking in the Head Impulse Test",
-      "scenario": "You then perform the Head Impulse Test (HIT). When you rapidly turn her head to the right, her eyes move with the head first, followed by an obvious catch-up saccade back to center.",
-      "media": "Load image: HIT diagram showing a catch-up saccade",
-      "question": "In this patient with acute persistent vertigo, what major clinical implication does this abnormal (positive) HIT finding have?",
+      "title": "Step 3/6: The Tuning Fork",
+      "scenario": "Before you leave the bedside you take out a 512 Hz tuning fork.\n\n    Weber     midline\n    Rinne     air conduction louder than bone, both ears\n\nThe next morning, a pure-tone audiogram.",
+      "media": "Load image: Pure-tone audiogram from your own patient, de-identified: normal symmetric thresholds. Caption: 'Audiogram.'",
+      "question": "Why did you check her hearing, and what does a normal result tell you?",
       "options": [
         {
           "id": "A",
-          "text": "(A) It strongly suggests a brainstem or cerebellar stroke."
+          "text": "(A) To separate the labyrinth from the nerve: normal hearing means the cochlea is spared, which points to the vestibular nerve rather than the whole labyrinth",
+          "correct": true
         },
         {
           "id": "B",
-          "text": "(B) It confirms benign paroxysmal positional vertigo (BPPV)."
+          "text": "(B) Normal hearing rules out any inner ear cause and makes the vertigo central"
         },
         {
           "id": "C",
-          "text": "(C) It strongly supports a peripheral vestibular etiology rather than a central stroke.",
-          "correct": true
+          "text": "(C) Hearing is unrelated to vertigo; the fork test was unnecessary"
+        },
+        {
+          "id": "D",
+          "text": "(D) Normal hearing today excludes Meniere's disease permanently"
         }
       ],
-      "feedback": "Correct answer: C\n\nHINTS pearl: In acute persistent vertigo, an abnormal unilateral HIT with a catch-up saccade indicates ipsilateral peripheral vestibular hypofunction, supporting a benign peripheral lesion such as vestibular neuritis. In contrast, a completely normal HIT in this setting strongly raises concern for a dangerous central stroke."
+      "feedback": "Correct answer: A\n\nThe cochlea and the vestibular labyrinth share a bony capsule, a blood supply, and part of a nerve. That shared anatomy is what the tuning fork exploits:\n• A process that hits the whole inner ear takes hearing with it: labyrinthitis, a labyrinthine infarct, a first Meniere's attack.\n• A process confined to the vestibular nerve leaves hearing alone.\n\nHer hearing is normal on both sides, so the cochlea is spared and the lesion is vestibular without the cochlea.\n\nThe laboratory tests add detail rather than change the diagnosis, and they come later, once she can tolerate them:\n• Caloric: reduced response on the weak side.\n• Video head impulse test: measures VOR gain per canal and records the catch-up saccades.\n• VEMPs: tell you whether the superior division, the inferior division, or both are involved.\n\nWhy the others fail:\n(B) Normal hearing does not make vertigo central. Vestibular neuritis, the commonest peripheral cause of acute vestibular syndrome, has normal hearing by definition.\n(C) Hearing is how you separate neuritis from labyrinthitis at the bedside. The fork takes thirty seconds and changes the diagnosis.\n(D) One normal audiogram does not exclude Meniere's, which is diagnosed on documented low-frequency loss during attacks over time; but a two-day continuous course does not fit Meniere's anyway.\n\nKeypoint: check hearing in every acute vertigo; spared hearing means the nerve, lost hearing means the whole labyrinth.\n\nReference: Strupp M, Bisdorff A, Furman J, et al. Acute unilateral vestibulopathy/vestibular neuritis: diagnostic criteria. J Vestib Res. 2022;32(5):389-406."
     },
     {
-      "title": "Step 4/6: Audiometry & Differential Diagnosis",
-      "scenario": "After initial stabilization in the emergency department, you arrange pure-tone audiometry (PTA). The audiogram shows completely normal hearing in both ears.",
-      "media": "Load image: PTA showing normal bilateral hearing",
-      "question": "This key negative finding of no hearing loss helps distinguish this case from which other peripheral ear disorder that can also cause acute vertigo?",
+      "title": "Step 4/6: The Diagnosis",
+      "scenario": "What you have so far:\n\n    Vertigo           continuous, two days\n    Nystagmus         left-beating, one direction only\n    Head impulse      catch-up saccade to the right\n    Skew              none\n    Hearing           normal, both ears\n    Neurology         no deficit, no headache\n\nA cold the week before.",
+      "media": "",
+      "question": "What is the diagnosis?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Vestibular migraine"
+          "text": "(A) Meniere's disease"
         },
         {
           "id": "B",
-          "text": "(B) Benign paroxysmal positional vertigo (BPPV)"
+          "text": "(B) Benign paroxysmal positional vertigo"
         },
         {
           "id": "C",
-          "text": "(C) Labyrinthitis",
+          "text": "(C) Labyrinthitis"
+        },
+        {
+          "id": "D",
+          "text": "(D) Vestibular neuritis",
           "correct": true
         }
       ],
-      "feedback": "Correct answer: C\n\nDiagnostic key: Labyrinthitis and vestibular neuritis can appear very similar, but the major distinction is hearing loss. If this patient had ipsilateral hearing loss, the diagnosis would shift toward labyrinthitis. Normal hearing effectively excludes labyrinthitis."
+      "feedback": "Correct answer: D\n\nVestibular neuritis is an acute, sustained loss of one vestibular nerve, usually the superior division, with the cochlea spared. Her picture is the textbook one:\n• continuous vertigo for days, with nausea and vomiting,\n• unsteadiness toward the weak side,\n• spontaneous unidirectional nystagmus obeying Alexander's law,\n• abnormal head impulse on the weak side,\n• normal hearing,\n• no central signs,\n• a viral illness the week before.\n\nThe diagnosis is clinical; the vHIT and caloric confirm the side and severity.\n\nWhy the others fail:\n(A) Meniere's disease is episodic: vertigo lasting minutes to hours, with fluctuating low-frequency hearing loss, tinnitus and aural fullness, and normal periods between. Two days of continuous vertigo with normal hearing is not a Meniere's attack.\n(B) BPPV is brief, seconds to a minute, provoked by head position, with no spontaneous nystagmus at rest. She has both. The Dix-Hallpike is still worth doing later, because BPPV can follow neuritis.\n(C) Labyrinthitis is the same acute picture plus hearing loss, because the whole labyrinth is inflamed. Her hearing is normal; that one finding separates the two, which is why Step 3 mattered.\n\nKeypoint: continuous vertigo for days, peripheral HINTS, and normal hearing is vestibular neuritis; add hearing loss and it is labyrinthitis; make it episodic and it is Meniere's or BPPV.\n\nReference: Strupp M, Bisdorff A, Furman J, et al. Acute unilateral vestibulopathy/vestibular neuritis: diagnostic criteria. J Vestib Res. 2022;32(5):389-406."
     },
     {
-      "title": "Step 5/6: Caloric Testing & Canal Paresis",
-      "scenario": "To further confirm the diagnosis and quantify vestibular impairment, you arrange a caloric test. The result shows markedly reduced nystagmus response when the right ear is irrigated.",
-      "media": "Load image: ENG/VNG report from caloric testing",
-      "question": "When interpreting a caloric test report, which value should be calculated, and if it is greater than 25%, indicates significant right vestibular hypofunction?",
+      "title": "Step 5/6: Which Side",
+      "scenario": "Day four. She can sit up. The vestibular laboratory reports:\n\nCaloric\n    Right warm and cool responses 17 deg/s total, left 51 deg/s total\n    Unilateral weakness 50 percent, right ear\n    Directional preponderance 26 percent to the left\n\nvHIT\n    Right lateral canal gain 0.45 with overt and covert saccades; left canals normal\n\nVEMP\n    cVEMP present bilaterally, symmetric\n    oVEMP absent on the right",
+      "media": "Load image: Caloric test report from this patient, de-identified: bithermal responses for each ear, butterfly chart, and analysis showing right unilateral weakness 50 percent and directional preponderance 26 percent to the left. Caption: 'Caloric testing.'",
+      "question": "Which side is affected, and which findings tell you?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Fixation Index (FI)"
+          "text": "(A) Left, because the nystagmus beats to the left"
         },
         {
           "id": "B",
-          "text": "(B) Directional Preponderance (DP)"
+          "text": "(B) Cannot be determined without MRI"
         },
         {
           "id": "C",
-          "text": "(C) Canal Paresis (CP)",
+          "text": "(C) Right: the nystagmus beats away from it, the head impulse is abnormal toward it, the caloric is weak on it, and the absent right oVEMP points to the superior vestibular nerve",
           "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) Both sides, because the caloric asymmetry is under 100 percent"
         }
       ],
-      "feedback": "Correct answer: C\n\nInterpretation: Caloric testing primarily compares horizontal semicircular canal function between both sides. A Canal Paresis (CP) value over 25% indicates clear unilateral vestibular hypofunction on that side."
+      "feedback": "Correct answer: C\n\nEvery finding points right, and each one for a reason worth knowing.\n\n• Nystagmus beats away from the weak side. The two labyrinths normally push the eyes in opposite directions and cancel. Lose the right, the intact left drives the eyes slowly rightward, and the fast corrective jerk, the phase we name, goes left. Left-beating means a right lesion.\n• Head impulse is abnormal toward the weak side. A rightward head turn tests the right lateral canal, and her catch-up saccade was on rightward turns.\n• Caloric is weak on the weak side. Warm and cool water in the right ear together produced 17 degrees per second of nystagmus; the left produced 51. That is a unilateral weakness of 50 percent in the right ear, where anything over about 25 percent is significant.\n• The directional preponderance points the same way. All four irrigations produced more left-beating than right-beating nystagmus, by 26 percent. That is her spontaneous left-beating nystagmus from Step 2 adding itself to every response. It is not a second lesion; it is the same one seen from another angle.\n• VEMPs localize within the nerve. The ocular VEMP tests the utricle and superior division; the cervical VEMP tests the saccule and inferior division. Her oVEMP is absent on the right, cVEMP normal.\n\nThat combination is superior vestibular neuritis, the commonest pattern: the superior division supplies the lateral and anterior canals and the utricle and runs through a longer, narrower bony channel, which is thought to be why it is hit more often.\n\nWhy the others fail:\n(A) The commonest error. The fast phase is the correction, not the lesion; it beats away from the damaged side.\n(B) The side is written across the whole examination and the laboratory. MRI has no role in localizing a peripheral lesion.\n(D) A unilateral weakness is an asymmetry between the two ears. Fifty percent is a clear one-sided deficit, and her left ear responded normally at 51 degrees per second. Bilateral loss would show low responses on both sides and little asymmetry.\n\nKeypoint: nystagmus beats away, head impulse fails toward, caloric is weak on the affected side; VEMPs tell you superior or inferior division.\n\nReference: Strupp M, Bisdorff A, Furman J, et al. Acute unilateral vestibulopathy/vestibular neuritis: diagnostic criteria. J Vestib Res. 2022;32(5):389-406."
     },
     {
-      "title": "Step 6/6: Management Decisions & Vestibular Rehabilitation",
-      "scenario": "The diagnosis is confirmed as right acute vestibular neuritis. You are discussing immediate treatment and long-term recovery planning with the patient.",
-      "media": "Load image: patient performing vestibular rehabilitation therapy (VRT)",
-      "question": "Regarding immediate care and long-term recovery planning for vestibular neuritis, which medical decision is most appropriate?",
+      "title": "Step 6/6: Now and Later",
+      "scenario": "Day four. She can sit up.\nStill nauseated when she turns her head.\nWalking, but with a hand on the wall.\n\nShe asks: \"What happens now? Will I get better?\"",
+      "media": "",
+      "question": "What do you do now, and what do you plan for later?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Perform an immediate Epley maneuver and prescribe prolonged absolute bed rest."
+          "text": "(A) Supportive care for about a week: antiemetic and a vestibular suppressant for the first few days only, then off; get her up and moving; at review, assess whether she is compensating and start vestibular rehabilitation",
+          "correct": true
         },
         {
           "id": "B",
-          "text": "(B) Continue long-term vestibular suppressants until vertigo completely disappears."
+          "text": "(B) A course of oral steroid; rehabilitation is not needed because the nerve will recover on its own"
         },
         {
           "id": "C",
-          "text": "(C) Use high-dose corticosteroids in the acute phase, and start early VRT once symptoms improve.",
-          "correct": true
+          "text": "(C) Start vestibular rehabilitation today and give a vestibular suppressant to take as needed for the next month"
+        },
+        {
+          "id": "D",
+          "text": "(D) Bed rest with regular vestibular suppressants until the vertigo has fully stopped"
         }
       ],
-      "feedback": "Correct answer: C\n\nManagement consensus: High-dose corticosteroids in the acute phase may support neural recovery. Early vestibular rehabilitation therapy (VRT) is strongly recommended to promote central compensation. Absolute bed rest or prolonged vestibular suppressants can hinder central adaptation. This condition is not otolith displacement, so Epley maneuver is ineffective."
+      "feedback": "Correct answer: A\n\nRecovery from vestibular neuritis is mostly not the nerve healing. It is the brain recalibrating to a permanently weaker signal from one side, which is central compensation, and compensation is driven by movement: every head turn that provokes a moment of vertigo shows the brain the mismatch it needs to correct. The plan has two phases.\n\nNow, for the first few days:\n• Control the nausea so she can eat and drink.\n• Give a vestibular suppressant (diphenidol or a benzodiazepine) for no more than about 3 days. These drugs damp the sensory mismatch, but that mismatch is the very signal the brain learns from, so beyond the acute phase they hold compensation back. After three days, stop, and use them only as an emergency rescue if needed, never on a regular schedule.\n• Get her out of bed as soon as she can stand.\n• Steroids are optional: a randomized trial found methylprednisolone improved caloric recovery at one year, but the clinical benefit is uncertain, so consider rather than require.\n\nLater, at the one-week review:\n• Assess compensation: fading spontaneous nystagmus, walking without support, tolerating head turns.\n• If she is compensating on her own, encourage activity and review again.\n• If she is not, or she is anxious and avoiding movement, refer for vestibular rehabilitation: a structured program of gaze-stabilization and balance exercises that shortens recovery and lowers the risk of chronic dizziness.\n\nWhy the others fail:\n(B) Steroids are at most an option and do nothing for compensation. Leaving out rehabilitation is what turns a two-week illness into a six-month one in patients who do not compensate on their own.\n(C) Rehabilitation on day four is fine, but a suppressant taken as needed for a month undoes it. Every dose past the acute phase delays compensation. Suppressants are for the first days, then stopped.\n(D) Two mistakes in one. Bed rest denies the brain the movement that drives compensation, and regular suppressants block the sensory mismatch the brain needs to learn from. Vestibular sedatives such as diphenidol work by damping that mismatch, which is exactly why they must not be given on a standing schedule: used for more than a few days they hold compensation back and prolong the dizziness. They are an acute-phase drug and, after that, a rescue drug only.\n\nKeypoint: suppressants for days not weeks, and never on a standing schedule; move early; at one week decide whether she is compensating and refer to rehabilitation if she is not.\n\nReference: Strupp M, Zingler VC, Arbusow V, et al. Methylprednisolone, valacyclovir, or the combination for vestibular neuritis. N Engl J Med. 2004;351(4):354-361. Hall CD, Herdman SJ, Whitney SL, et al. Vestibular rehabilitation for peripheral vestibular hypofunction: an updated clinical practice guideline. J Neurol Phys Ther. 2022;46(2):118-177. Strupp M, Bisdorff A, Furman J, et al. Acute unilateral vestibulopathy/vestibular neuritis: diagnostic criteria. J Vestib Res. 2022;32(5):389-406."
     }
   ]
 }

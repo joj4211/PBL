@@ -1,148 +1,172 @@
 {
-  "id": "nose_epistaxis_hht",
-  "title": "血流不止的危機：嚴重鼻出血與 HHT",
-  "subtitle": "嚴重鼻出血與 HHT",
-  "description": "嚴重鼻出血、CTA、SPA、填塞併發症與 HHT 治療。",
-  "estimatedTime": "20-30 分鐘",
-  "difficulty": "進階",
+  "id": "nose_hht",
+  "title": "每週都在流血的鼻子",
+  "subtitle": "一個流了一輩子鼻血的女人，從第一次內視鏡到看不見的器官",
+  "description": "先用內視鏡看、讀出型態、沒有家族史也數得出標準、把病歷的其他部分讀成同一個疾病、控制急性出血而不讓下一次更糟、以及階梯都失敗之後還剩什麼。",
+  "estimatedTime": "20-25 分鐘",
+  "difficulty": "中階",
   "tags": [
     "鼻科",
-    "Epistaxis",
-    "HHT",
-    "SPA"
+    "鼻出血",
+    "鼻內視鏡",
+    "血管病灶"
   ],
   "steps": [
     {
-      "title": "Step 1/6: 危機識讀與影像學評估 (Warning Signs & CTA)",
-      "scenario": "一位 57 歲女性，無特殊過去病史。主訴連續三天發生極度嚴重的鼻出血 (Massive epistaxis)。你在急診為她進行鼻內視鏡檢查，發現左側下鼻道、下鼻甲前方有多處活動性出血點，且左側中鼻道與上鼻道有大量湧血，懷疑是蝶竇病灶 (sphenoid sinus lesion)。",
-      "media": "載入圖片：急診 triage 監視器畫面 (BP 149/103) 與電腦斷層 (CTA) 影像",
-      "question": "面對這類「不明原因的大量流血 (Massive epistaxis)」且懷疑有後部深層病灶時，為何在急診第一時間安排「血管攝影電腦斷層 (CTA)」是保命的關鍵步驟（Warning sign）？",
+      "title": "Step 1/6：第一步",
+      "scenario": "66 歲女性，因為流鼻血轉介到耳鼻喉科門診。\n\n    目前          兩側間歇性出血一個月\n    病史          流鼻血斷斷續續很多年；在別處做過幾次雷射，每次都有效一陣子\n    抗凝血劑      無\n    高血壓        有，治療中\n\n轉介單上的其他病史：\n\n    胃            出血病灶在內視鏡下夾過三次，報告寫 angiodysplasia-like\n    肝            肝內血管扭曲，加上腸繫膜上動脈瘤，觀察中\n    心臟          肺高壓、心衰竭，功能分級 II 到 III\n    血液          小球性貧血、血小板低；脾腫大\n\n跟你談話的時候她沒有在流血。",
+      "media": "",
+      "question": "你第一件事做什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 為了確認鼻中膈是否彎曲，以利後續置放鼻塞紗布。"
+          "text": "(A) 安排 CT angiography 找出血的動脈"
         },
         {
           "id": "B",
-          "text": "(B) 必須排除頸動脈破裂症候群 (Carotid Blowout Syndrome) 或動脈瘤等致命性血管異常\n\n。",
-          "correct": true
+          "text": "(B) 用硝酸銀燒兩側的 Little's area，因為大部分鼻血都從那裡來"
         },
         {
           "id": "C",
-          "text": "(C) CTA 是診斷單純前鼻孔出血 (Kiesselbach's area) 的黃金標準。"
+          "text": "(C) 鼻內視鏡，找出血點、看黏膜長什麼樣子",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) 檢查之前先驗凝血功能和血小板"
         }
       ],
-      "feedback": "正確答案：B\n\n主治醫師的 Tip： 遇到嚴重、反覆、異常大量的鼻出血，尤其是有頭頸癌放療病史 (NPC history) 或懷疑深部病灶時，務必小心 Carotid Blowout Syndrome 或 pseudoaneurysm\n\n。直接盲目進入開刀房可能引發大災難，因此術前切 CTA 確認沒有異常的 enhancing lesion 是非常正確的決策\n\n！"
+      "feedback": "正確答案：C\n\n耳鼻喉科醫師先看再說。一個反覆流鼻血、此刻沒在流的病人，正是仔細做內視鏡檢查的好時機：先前鼻鏡看 Little's area，再用軟式或硬式內視鏡看鼻中隔的其餘部分、鼻甲、中鼻道、後鼻腔。你在找出血點、腫塊、血管病灶、穿孔，還有同樣重要的，型態：一個點還是很多個、一側還是兩側、正常黏膜還是別的東西。\n\n她的病史已經不像普通的鼻出血：多年的兩側出血、反覆雷射每次有效一陣子又失敗、胃裡有出血病灶、肝裡有異常血管、還有貧血。一個從不只一個器官出血的病人，有的是一個疾病，不是一次鼻血。內視鏡是你開始找出是哪個疾病的方法。\n\n其他選項為什麼不對：\n(A) CT angiography 是給定位不了的大出血、或懷疑血管病灶（例如放射治療後的假性動脈瘤）用的。一個穩定、反覆出血、你還沒看過的病人，它不是第一個檢查。\n(B) Little's area 盲目燒灼、或再一次雷射，已經反覆試過、沒有治好她。沒找到來源就再燒，鼻中隔穿孔就是這樣來的。\n(D) 凝血功能在整個評估裡是合理的，但不是第一步，也不會告訴你她從哪裡出血。檢查在檢驗之前。\n\nKeypoint：反覆鼻出血、病人沒在流：先做內視鏡，再開任何檢查或做任何燒灼。\n\nReference: Tunkel DE, Anne S, Payne SC, et al. Clinical practice guideline: nosebleed (epistaxis). Otolaryngol Head Neck Surg. 2020;162(1_suppl):S1-S38. doi:10.1177/0194599819890327."
     },
     {
-      "title": "Step 2/6: 尋根溯源：後鼻孔出血的解剖學 (Anatomy of Posterior Epistaxis)",
-      "scenario": "CTA 結果顯示雙側上頜竇積血 (L > R)，但沒有發現異常的血管增生病灶。由於出血量極大且源自後部鼻腔，你將患者收治入院，準備進行「雙側內視鏡鼻竇手術 (ESS) 及左側蝶顎動脈電燒術 (SPA Cauterization)」。",
-      "media": "載入圖片：Lateral nasal wall 血管解剖圖，標示 SPA 位置",
-      "question": "在進行蝶顎動脈 (Sphenopalatine Artery, SPA) 結紮或電燒前，你必須清楚它的解剖來源。SPA 是哪一條主要動脈系統的終末分支 (Terminal branch)？",
+      "title": "Step 2/6：內視鏡看到什麼",
+      "scenario": "鼻內視鏡，兩側：\n\n    右鼻中隔      黏膜蒼白、有疤痕；邊緣有幾個小紅點\n    右鼻甲        下鼻甲上多個小紅點\n    左鼻中隔      前方一個淺潰瘍、有新鮮痂皮；周圍有類似的小紅點\n    左鼻甲        散在的小紅點\n    中鼻道        兩側都乾淨\n    後鼻腔        乾淨；沒有腫塊\n    穿孔          無",
+      "media": "載入圖片：這位病人右鼻腔的鼻內視鏡影像，去識別化，不加標註；裁掉時間戳記和比例尺。說明文字：「右鼻腔。」",
+      "question": "這個型態告訴你什麼？接下來看哪裡？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 內頸動脈 (Internal Carotid Artery) -> 眼動脈 (Ophthalmic artery) -> SPA"
+          "text": "(A) 多個出血點；治療前先安排 CT angiography 描繪供應的動脈"
         },
         {
           "id": "B",
-          "text": "(B) 外頸動脈 (External Carotid Artery) -> 面動脈 (Facial artery) -> SPA"
+          "text": "(B) 兩側多發的黏膜 telangiectasia：看她的嘴唇、舌頭、口腔和指尖，並問家裡還有誰在流鼻血",
+          "correct": true
         },
         {
           "id": "C",
-          "text": "(C) 外頸動脈 (External Carotid Artery) -> 內頷動脈 (Internal Maxillary Artery, IMA) -> SPA",
-          "correct": true
+          "text": "(C) 血管性腫瘤；切一個病灶做切片"
+        },
+        {
+          "id": "D",
+          "text": "(D) 挖鼻子造成的慢性刺激；建議保濕、追蹤"
         }
       ],
-      "feedback": "正確答案：C\n\n解剖複習： 後鼻腔的主要血流供應來自外頸動脈的分支。內頷動脈 (IMA) 進入翼顎窩 (pterygopalatine fossa) 後，其終末分支即為蝶顎動脈 (SPA)\n\n。SPA 穿過蝶顎孔進入鼻腔，是支配後鼻腔黏膜最主要的血管，也是後鼻孔大出血最常見的元凶\n\n。"
+      "feedback": "正確答案：B\n\n型態就是發現。右側，鼻中隔黏膜蒼白、有疤痕，那是反覆雷射留下的，而沿著它的邊緣、遍布下鼻甲的是小的、分散的、紅色的血管病灶，長在其他部分正常的黏膜上，沒有腫塊、沒有單一來源。左側一樣，多了一個潰瘍，那是一個 telangiectasia 反覆出血和治療之後破掉的地方；潰瘍是結果，不是原因。這些是黏膜的 telangiectasia：擴張、管壁薄、就在上皮底下的血管，這就是它們會自發性出血、也是燒掉任何一個都撐不久的原因。\n\n一個一輩子自發性流鼻血的病人，鼻子裡有多發的 telangiectasia，一個診斷就浮到其他之上，而驗證它的方法不在鼻子裡，在外面：\n• 嘴唇，尤其是唇紅緣，\n• 舌頭和口腔黏膜，\n• 指尖和甲床，\n也在你已經有的病史裡：胃和肝。也要問家族，因為這個疾病會遺傳，但她的轉介單可能已經寫著兩個答案了。\n\n內視鏡的影像就是鑑別診斷的依據：單一血管性腫塊會是腫瘤，帶痂皮的鼻中隔棘突會是局部創傷，後方單一出血點會是蝶顎動脈的分支。這些都不長這樣。\n\n其他選項為什麼不對：\n(A) 沒有動脈可以描繪。Telangiectasia 是瀰漫、表淺、由側枝供應的；CT angiography 看不出有用的東西，還延誤真正重要的問題。\n(C) 切 telangiectasia 會流血，告訴你它是 telangiectasia，不改變診斷。這些病灶是靠外觀和分布認出來的。\n(D) 挖鼻子造成的是單側前方鼻中隔的痂皮，不是兩側鼻中隔和鼻甲上分散的血管病灶。\n\nKeypoint：兩側很多小紅點是一個型態，不是一個出血點；看嘴唇、舌頭、手指，然後把她其他的病史當成同一個疾病來讀。\n\nReference: Faughnan ME, Mager JJ, Hetts SW, et al. Ann Intern Med. 2020;173(12):989-1001. Shovlin CL, Guttmacher AE, Buscarini E, et al. Diagnostic criteria for hereditary hemorrhagic telangiectasia (Rendu-Osler-Weber syndrome). Am J Med Genet. 2000;91(1):66-67."
     },
     {
-      "title": "Step 3/6: 後鼻孔填塞的陷阱 (Posterior Packing Pitfalls)",
-      "scenario": "在等待進開刀房前，由於出血實在太猛烈，你暫時使用了 14Fr Foley 尿管作為後鼻孔水球填塞 (Posterior nasal packing/balloon) 來壓迫止血。",
-      "media": "載入圖片：Foley 尿管於後鼻孔水球充氣壓迫的示意圖",
-      "question": "使用 Foley balloon 進行後鼻孔填塞時，你在護理醫囑 (Order) 上必須特別註明下列哪一項重要指示，以避免嚴重的缺血併發症？",
+      "title": "Step 3/6：數標準",
+      "scenario": "你看鼻子以外的地方。\n\n    嘴唇          下唇兩個小紅點\n    舌頭          沒看到\n    手和手臂      指尖和前臂幾個小紅點\n\n你問家族。\n\n    父母          都在六十幾歲過世；她不記得他們流鼻血\n    兄弟姊妹      兩個，據她所知都沒有流鼻血\n    子女          一個兒子，健康\n\n她的病歷：胃的 angiodysplasia-like 病灶夾過三次；影像上肝內血管扭曲。",
+      "media": "載入圖片：這位病人指尖和前臂的照片，已取得同意、去識別化、不加標註，顯示小的紅色 telangiectasia。說明文字：「手與前臂。」",
+      "question": "她符合幾項 Curaçao 標準？診斷是什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 水球必須連續打滿 50ml 的 Normal Saline 並且用力往外拉緊維持 7 天。"
-        },
-        {
-          "id": "B",
-          "text": "(B) 每 6 小時 (Q6H) 必須釋放張力 (release tension)，且 24-48 小時後必須鬆開 balloon\n\n。",
+          "text": "(A) 三項：definite HHT。鼻出血、特徵部位的 telangiectasia、內臟病灶；家族史是四項之一，不是必要條件",
           "correct": true
         },
         {
+          "id": "B",
+          "text": "(B) 兩項：possible HHT，因為沒有家族史，沒有家族史就不能 definite"
+        },
+        {
           "id": "C",
-          "text": "(C) 必須同時在水中加入高濃度硝酸銀 (Silver nitrate) 進行化學燒灼。"
+          "text": "(C) 兩項：possible HHT，因為肝和胃的發現沒有證明是 HHT 的病灶"
+        },
+        {
+          "id": "D",
+          "text": "(D) 四項：definite HHT"
         }
       ],
-      "feedback": "正確答案：B\n\n臨床地雷： Foley balloon 雖然能暫時止住後方出血，但持續的高壓壓迫若不每 6 小時稍微釋放張力，且放置超過 24-48 小時，極易造成鼻孔 (nostril) 及鼻咽 (NP) 黏膜的缺血性壞死 (Avascular necrosis)\n\n。"
+      "feedback": "正確答案：A\n\n她嘴唇、指尖、前臂的病灶跟鼻子裡的是同一種東西：1 到 3 mm、紅色、平的、壓會退色、在特徵部位。這是遺傳性出血性血管擴張症 (HHT)，而 Curaçao 標準告訴你可以多確定。\n\n標準有四項：\n1. 自發性、反覆的鼻出血。\n2. 特徵部位的多發 telangiectasia：嘴唇、口腔、手指、鼻子。\n3. 內臟病灶：腸胃道 telangiectasia，或肺、肝、腦、脊髓的動靜脈畸形。\n4. 一位一等親有 HHT。\n\n三項以上：definite。兩項：possible。更少：unlikely。\n\n數她的。鼻出血：有，很多年了。Telangiectasia：嘴唇、指尖、鼻子。內臟病灶：胃的 angiodysplasia-like 病灶需要夾過三次、肝內血管扭曲，這正是 HHT 在那些器官的腸胃道 telangiectasia 和肝血管畸形。三項。家族史是陰性的、或至少不清楚，而這不重要：第四項是四項之一，不是門檻。有些病人帶的是新的變異；有些來自從來沒人問過的家庭。任三項就是 definite。\n\n這是值得答對的標準題，因為反射動作是家族史空白就懷疑診斷。這個反射是錯的。\n\n其他選項為什麼不對：\n(B) 家族史是一項標準，不是必要條件。Definite HHT 是四項中三項，她沒有家族史也有三項。\n(C) 胃裡 angiodysplasia-like 的出血病灶和扭曲的肝血管，正是 HHT 對那些器官做的事。一個有鼻出血和皮膚黏膜 telangiectasia 的病人，這些就算內臟病灶那一項；它們不需要另外的證明。\n(D) 她沒有已知的一等親有 HHT，所以第四項不符合。三項，不是四項。\n\nKeypoint：鼻出血、telangiectasia、內臟病灶、一等親；四項中三項就是 definite，而空白的家族史不會拿走這個診斷。\n\nReference: Shovlin CL, Guttmacher AE, Buscarini E, et al. Diagnostic criteria for hereditary hemorrhagic telangiectasia (Rendu-Osler-Weber syndrome). Am J Med Genet. 2000;91(1):66-67. Faughnan ME, Mager JJ, Hetts SW, et al. Ann Intern Med. 2020;173(12):989-1001."
     },
     {
-      "title": "Step 4/6: HHT 的特殊止血兵器 (Specific Interventions for HHT)",
-      "scenario": "在手術中，你發現左側鼻腔黏膜有多處異常擴張的微小血管叢。綜合病史，你高度懷疑患者罹患「遺傳性出血性微血管擴張症 (HHT, Hereditary Hemorrhagic Telangiectasia)」。",
-      "media": "載入圖片：內視鏡下呈現 HHT 典型的紅色毛細血管擴張病灶",
-      "question": "對於 HHT 患者鼻部多發性的微血管出血，除了傳統的 Bipolar 電燒外，文獻特別指出哪一種「雷射輔助電燒」具有相當良好的止血效果？",
+      "title": "Step 4/6：她病歷的其餘部分代表什麼",
+      "scenario": "Definite HHT。再看一次她的其他診斷：\n\n    心臟      肺高壓、心衰竭，功能分級 II 到 III；射出分率 67%，順應性受損\n    肝        肝內血管扭曲；腸繫膜上動脈瘤\n    胃        出血病灶夾過三次\n    血液      小球性貧血、血小板低、脾腫大\n    肺        從沒篩檢過\n    腦        從沒做過影像",
+      "media": "",
+      "question": "這些之中哪些是她 HHT 的併發症？還需要做什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) CO2 Laser (二氧化碳雷射)"
+          "text": "(A) 都不是；心臟、肝、胃的問題是一位年長女性各自獨立的疾病"
         },
         {
           "id": "B",
-          "text": "(B) KTP-assisted cautery (KTP 雷射)",
-          "correct": true
+          "text": "(B) 只有胃的病灶；心臟和肝的發現無關"
         },
         {
           "id": "C",
-          "text": "(C) Excimer Laser (準分子雷射)"
+          "text": "(C) 胃的病灶、肝的血管畸形、以及肝分流造成的心衰竭合併肺高壓；而且她還需要篩檢肺和腦的動靜脈畸形",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) 全部都是 HHT，而她已經在心臟科和腸胃科追蹤，不需要再篩檢"
         }
       ],
-      "feedback": "正確答案：B\n\n主治醫師的 Tip： 一般電燒 (Bipolar) 在處理 HHT 時常常會讓脆弱的黏膜越燒越爛。KTP-assisted cautery (綠光雷射) 因為對血紅素有高度選擇性吸收，能精準破壞異常擴張的血管而不傷及太多周邊正常黏膜，在 HHT 的鼻部血管出血治療上效果備受肯定\n\n。"
+      "feedback": "正確答案：C\n\n她的病歷就是 HHT 在鼻子以外做了什麼的教科書，而把它讀成一個疾病會改變她的照護。\n\n肝。HHT 的肝血管畸形很常見，通常沒有症狀。分流大的時候，血從肝動脈直接進肝靜脈或門靜脈、沒有遇到阻力，心輸出量為了跟上而升高，結果是高輸出型心衰竭，久了變成肺高壓。一個有 HHT、肝血管異常的女性，射出分率保留卻有心衰竭和肺高壓，就是這個畫面。它重要有兩個原因：麻醉和體液變動的風險更高，所以手術團隊和麻醉科要知道；而且它是全身性抗血管新生治療的適應症之一，那類治療可以減少分流。\n\n胃。腸胃道的 telangiectasia 緩慢、持續地出血，跟鼻子一起造成她的缺鐵性貧血。出血時做內視鏡處理，加上補鐵，就是治療。\n\n脾臟和血小板。脾腫大加血小板低，符合肝分流造成的門脈和心臟鬱血。它是結果，不是另一個疾病。\n\n缺的東西。她從沒篩檢過兩個會突然致命的病灶。\n• 肺動靜脈畸形：對比劑心臟超音波，也就是 agitated saline 的 bubble study，陽性再做胸部 CT。肺分流把血塊和細菌直接送到腦。排除之前，她做任何處置都需要預防性抗生素、每一條靜脈點滴都要接空氣濾器，包括鼻子的手術。\n• 腦動靜脈畸形：顯影劑腦部 MRI，做一次。\n\n其他選項為什麼不對：\n(A) 射出分率正常的心衰竭、扭曲的肝血管、會出血的胃病灶，在一個 HHT 病人身上，是同一個疾病從三個面看。\n(B) 肝的病灶是 HHT 經典的肝侵犯，心衰竭是肝病灶經典的後果。\n(D) 追蹤已經宣告自己存在的器官，跟篩檢還沒有的不一樣。肺和腦是最重要的、也是沒人看過的。\n\nKeypoint：肝分流造成高輸出型心衰竭和肺高壓；胃的病灶造成貧血；而任何人開刀之前，肺和腦還需要篩檢。\n\nReference: Faughnan ME, Mager JJ, Hetts SW, et al. Second International Guidelines for the Diagnosis and Management of Hereditary Hemorrhagic Telangiectasia. Ann Intern Med. 2020;173(12):989-1001. doi:10.7326/M20-1443."
     },
     {
-      "title": "Step 5/6: 填塞物引發的全身風暴 (Complications of Packing - TSS)",
-      "scenario": "假設手術前，急診醫師曾在她的鼻腔塞滿了不可吸收的凡士林紗布 (Petroleum gauze)。術後第一天，病患突然發高燒 (>38.9℃)、血壓下降 (Hypotension)，且雙手手掌出現瀰漫性紅斑 (diffuse macular erythroderma)。",
-      "media": "載入圖片：Table - CDC's case definition of Toxic shock syndrome (發燒、低血壓、紅斑手掌脫皮)",
-      "question": "這種因為鼻腔填塞物引發的急症稱為什麼？其致病機轉為何？",
+      "title": "Step 5/6：在急診",
+      "scenario": "排定手術之前，她凌晨兩點來急診。\n\n    出血          右側，斷斷續續 40 分鐘，壓迫後變慢但沒停\n    血壓          152/88，脈搏 98\n    血紅素        8.4 g/dL\n    內視鏡        右下鼻甲和相鄰鼻中隔上一個滲血點；周圍黏膜有多發 telangiectasia，薄而脆弱\n\n急診醫師拿著非吸收性填塞物準備好了，問你要不要用。",
+      "media": "載入圖片：這位病人出血時右鼻腔的鼻內視鏡影像，去識別化，不加標註，廣角與近距離各一。說明文字：「右鼻腔：下鼻甲與相鄰鼻中隔上的滲血點，黏膜上多發 telangiectasia。」",
+      "question": "你怎麼控制這次出血？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 鼻肺反射 (Nasopulmonary reflex)；因過度換氣導致缺氧。"
+          "text": "(A) 兩側緊的非吸收性填塞，放 72 小時"
         },
         {
           "id": "B",
-          "text": "(B) 敗血性休克；由綠膿桿菌 (Pseudomonas) 直接感染血液引起。"
+          "text": "(B) 局部麻醉下雙極電燒兩側鼻中隔"
         },
         {
           "id": "C",
-          "text": "(C) 毒性休克症候群 (Toxic Shock Syndrome, TSS)；由葡萄球菌外毒素 (Staphylococcal exotoxin) 引起\n\n。",
+          "text": "(C) 緊急蝶顎動脈結紮"
+        },
+        {
+          "id": "D",
+          "text": "(D) 頭抬高、局部血管收縮劑加 tranexamic acid、需要時用可吸收或潤滑的溫和填塞、只對出血點做雙極或雷射",
           "correct": true
         }
       ],
-      "feedback": "正確答案：C\n\n臨床地雷： Toxic shock syndrome (TSS) 是鼻腔填塞物（尤其是傳統紗布）最可怕的併發症之一。它是由金黃色葡萄球菌的外毒素 (Staphylococcal exotoxin) 所引發的全身性免疫風暴，常在塞完 24 小時內發生，但也可能數週後才發生。這也是為什麼現在臨床上越來越傾向使用可吸收止血材 (如 FloSeal) 或儘早手術止血的原因\n\n。"
+      "feedback": "正確答案：D\n\nHHT 的鼻子不是普通的鼻子，急診的反射動作可能讓它更糟。她還有另一個要小心的理由：她有肺高壓和心衰竭，兩側緊塞、整晚被迫用嘴呼吸，對那個胸腔不是無害的。黏膜薄、血管表淺，每一個放進去和拿出來的填塞物都會撕破更多。\n\n有效的做法，依序：\n• 讓她坐起來，捏住鼻子軟的部分，看著時鐘十分鐘。大部分 HHT 的出血這樣就停。\n• 局部血管收縮劑，oxymetazoline 沾棉片，加上局部或口服 tranexamic acid。\n• 真的需要填塞，用可溶解的止血材料、或潤滑過的低壓填塞，並且早點拿掉。永遠不要塞緊、永遠不要塞好幾天。\n• 看得到滲血點的話，像這裡就看得到，就處理那一點：低功率雙極、或 KTP 或 diode 雷射，只對那個 telangiectasia，周圍不碰。旁邊的病灶除非也在出血，否則不動。\n\n要避免的事，和原因：\n• 非吸收性填塞拿出來時會撕破黏膜、引發下一次出血；還有毒性休克的風險。鼻出血指引說填塞是過渡不是治療，而在 HHT 這座橋的代價比平常更高。\n• 一次燒兩側鼻中隔、或燒大面積，會穿孔。HHT 的鼻中隔穿孔是永久的，而且比原本的鼻中隔流更多血。\n• 硝酸銀用在脆弱的 HHT 黏膜上不精確、會擴散。\n\n其他選項為什麼不對：\n(A) 塞緊三天會止住這次出血、也會造成下一次，而這段時間她不能用鼻子呼吸、還有毒性休克的風險。HHT 的目標是避免填塞，不是延長它。\n(B) 同一次燒兩側鼻中隔，是製造鼻中隔穿孔的經典方法。一側，而且只燒出血點。\n(C) 蝶顎動脈結紮是普通後鼻出血、單一動脈出血點的手術。她的出血來自很多條由側枝供應的表淺血管；結紮一條動脈止不了多久，還拿掉了栓塞的路。\n\nKeypoint：壓迫、血管收縮劑、tranexamic acid、真的必要才溫和填塞而且早點拿掉；燒灼只對出血點，絕不燒整個鼻中隔、絕不兩側一起。\n\nReference: Faughnan ME, Mager JJ, Hetts SW, et al. Ann Intern Med. 2020;173(12):989-1001. Tunkel DE, Anne S, Payne SC, et al. Clinical practice guideline: nosebleed (epistaxis). Otolaryngol Head Neck Surg. 2020;162(1_suppl):S1-S38. doi:10.1177/0194599819890327."
     },
     {
-      "title": "Step 6/6: HHT 的終極外科手段 (Ultimate Surgical Therapy for HHT)",
-      "scenario": "這次的 ESS 加上 SPA 結紮手術很成功。但你在查房時告訴患者，HHT 是一種基因疾病，未來仍有復發大出血的風險。",
-      "media": "載入圖片：鼻中膈皮瓣移植 (Septodermoplasty) 示意圖",
-      "question": "如果該名 HHT 患者未來經過多次電燒、填塞、甚至是 SPA 結紮都無法控制反覆大出血 (Refractory epistaxis)，耳鼻喉科醫師可以考慮進行哪一項終極的外科手術？",
+      "title": "Step 6/6：階梯失敗之後",
+      "scenario": "出血控制住了。現在看長遠。\n\n    保濕          液態石蠟鼻滴劑幾週；沒有變化\n    Tranexamic acid   用過；有些幫助\n    鐵劑          靜脈注射，持續中\n    雷射          多年來很多次，每次有效一陣子，然後復發\n    現在          左鼻中隔潰瘍和右側滲血點在出血，血紅素 8.4，今年輸血兩次\n\nHHT 鼻出血的處理流程圖如圖。她問還剩什麼。",
+      "media": "載入圖片：HHT 鼻出血處理流程圖，左邊是急性路徑、右邊是慢性反覆路徑。Dür 等人，Eur Arch Otorhinolaryngol 2021，Figure 3；透過 RightsLink 取得 Springer Nature 授權，或用自己的軟體以相同的方格重繪。說明文字：「HHT 鼻出血的處理。改繪自 Dür C et al. Eur Arch Otorhinolaryngol 2021，經授權。」",
+      "question": "她在流程圖上的哪裡？下一步是什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 全鼻切除術 (Total rhinectomy)"
+          "text": "(A) 急性出血，雙側：兩邊都填塞，不行就栓塞"
         },
         {
           "id": "B",
-          "text": "(B) 鼻黏膜皮膚移植術 (Septodermoplasty)",
+          "text": "(B) 慢性出血，雷射已經失敗：下一步是 septal dermoplasty，bevacizumab 是另一個要討論的選項",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) 內頸動脈血管栓塞術 (ICA endovascular embolization)"
+          "text": "(C) 慢性出血，保守：開始 tranexamic acid"
+        },
+        {
+          "id": "D",
+          "text": "(D) 慢性出血，手術：直接做 Young's procedure"
         }
       ],
-      "feedback": "正確答案：B\n\n術式解析： Septodermoplasty (鼻中膈皮瓣成形/移植術) 是針對頑固型 HHT 鼻出血的進階術式。作法是將容易出血的脆弱黏膜廣泛切除 (widely excise)，直到軟骨膜上層 (supramucoperichondrium)，然後使用異體移植 (allograft) 或裂層皮膚移植 (STSG) 覆蓋並縫合\n\n，藉此將脆弱的呼吸道黏膜替換成較堅韌的皮瓣，以減少未來的出血機率。"
+      "feedback": "正確答案：B\n\n從流程圖的最上面讀下來。血紅素驗了、輸血需求評估了：做了。今晚她不在急性那一支；出血控制住了。她在慢性反覆那一支，而在它的兩條分枝上她都已經走了一段。保守分枝：tranexamic acid 試過、保濕維持試過。手術分枝：雷射光凝固，復發。手術分枝在復發之後指向的格子是 septal dermoplasty。保守分枝平行指向的格子是靜脈 bevacizumab。這兩個就是她所在的位置，而且是一起討論的，不是先後順序。\n\nSeptodermoplasty。前鼻中隔的黏膜，也就是大部分出血病灶所在的地方，切除到軟骨膜，換成皮膚移植。皮膚不會像呼吸道黏膜那樣長出 telangiectasia，而且比較厚、比較強韌。移植可以是大腿的分層皮，或頸部的全層皮；這裡用的鎖骨上全層皮比較厚、收縮比較少，代價是一個小的取皮疤痕。一次做一側，讓鼻中隔有一側保持血液供應，避免穿孔。證據是單一大量中心的非對照病例系列，而它對交換條件是誠實的。出血和輸血需求明顯下降，大部分病人的生活品質改善。但長期追蹤下，大多數人有結痂、移植皮膚的異味、嗅覺減退；這些是預期中的結果，不是偶爾的，她同意之前必須聽到。移植邊緣最後還是會長出 telangiectasia，幾年後再做一次並不少見。這個手術是 1960 年代的，之後改變不多。\n\n全身性抗血管新生治療。靜脈 bevacizumab 在嚴重 HHT 減少鼻出血和輸血需求，指引建議對局部治療和鐵劑控制不住的出血考慮它。她的情況多了一個提出它的理由：它也減少肝分流、可以改善高輸出型心衰竭。它跟手術不是二選一；兩者常常合併。\n\nYoung's procedure，把鼻孔關起來，是 HHT 鼻出血最有效的手術、也是最激烈的。它留給出血已經變成整個人生、其他都失敗的病人，而且它在 septodermoplasty 之後，不是取代它。\n\n其他選項為什麼不對：\n(A) 走錯支了。急性路徑是給今晚的出血的，而今晚的出血控制住了。把慢性問題放到急性那一支，會導向填塞和栓塞，而那治不了這個疾病。\n(C) 那一格她已經走過了。Tranexamic acid 試過、有些幫助、繼續用；它不是下一步，是她現在站著的地板。\n(D) Young's procedure 是手術分枝最後一格，只有在 septal dermoplasty 之後又復發才到。她沒做過 dermoplasty。跳到關鼻孔讓她終生用嘴呼吸，對一個有肺高壓的女性是嚴重的代價，而上一格還沒試過。\n\nKeypoint：選擇之前先把病人放到圖上；雷射復發之後，手術分枝說 septal dermoplasty、保守分枝說 bevacizumab，而 Young's procedure 是最後一格，不是下一格。\n\nReference: Faughnan ME, Mager JJ, Hetts SW, et al. Second International Guidelines for the Diagnosis and Management of Hereditary Hemorrhagic Telangiectasia. Ann Intern Med. 2020;173(12):989-1001. doi:10.7326/M20-1443. Fiorella ML, Ross D, Henderson KJ, White RI. Outcome of septal dermoplasty in patients with hereditary hemorrhagic telangiectasia. Laryngoscope. 2005;115(2):301-305. Levine CG, Ross DA, Henderson KJ, Leder SB, White RI. Long-term complications of septal dermoplasty in patients with hereditary hemorrhagic telangiectasia. Otolaryngol Head Neck Surg. 2008;138(6):721-724. Whitehead KJ, Sautter NB, McWilliams JP, et al. JAMA. 2016;316(9):943-951. Dür C, Anschuetz L, Negoias S, et al. Long-term efficacy assessment of current treatment options for epistaxis in HHT. Eur Arch Otorhinolaryngol. 2021;278(12):4801-4813. Figure 3. Reprinted with permission from Springer Nature. 卷期頁碼請確認。"
     }
   ]
 }

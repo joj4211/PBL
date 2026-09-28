@@ -1,171 +1,198 @@
 {
-  "id": "ear_cholesteatoma_silent_erosion",
-  "title": "膽脂瘤",
-  "subtitle": "Cholesteatoma — The Silent Bone-Eroding Crisis in the Middle Ear",
-  "description": "慢性中耳疾病的紅旗徵象、耳內視鏡與聽力判讀、HRCT 定位、骨侵蝕機轉與手術決策。",
-  "estimatedTime": "20-30 分鐘",
-  "difficulty": "中高階",
+  "id": "ear_cholesteatoma",
+  "title": "一直在流的耳朵",
+  "subtitle": "一個耳朵濕又聾了半年的少年，從第一次耳鏡到追蹤計畫",
+  "description": "讀耳膜、聽力圖對聽小骨說了什麼、CT 能決定什麼又不能決定什麼、選手術、重建聽力、病理回來後判斷先天還是後天、以及怎麼盯著它會不會回來。",
+  "estimatedTime": "20-25 分鐘",
+  "difficulty": "中階",
   "tags": [
     "耳科",
-    "膽脂瘤",
-    "中耳",
-    "乳突手術"
+    "慢性中耳炎",
+    "鼓室乳突切除術",
+    "聽小骨成形術"
   ],
   "steps": [
     {
-      "title": "Step 1/6: 病史詢問與危險徵兆 (History Taking & Red Flags)",
-      "scenario": "一位 56 歲女性來到門診，主訴左耳有持續超過 1 年的耳鳴 (tinnitus)，且她覺得左耳的聽力有逐漸變差的趨勢 (progressive hearing loss)。面對這類慢性中耳疾病的患者，你必須在病史詢問時篩檢出可能危及生命的「危險徵兆 (Critical Red Flags)」。",
-      "question": "為了排除膽脂瘤已經產生嚴重的局部侵犯與併發症，下列哪一個問題是你在問診時「最必須」詢問病患的？",
+      "title": "Step 1/7：耳膜",
+      "scenario": "16 歲男孩，跟媽媽一起來門診。\n\n    主訴          左耳悶、聽起來「水水的」\n    病程          六個月\n    分泌物        斷斷續續，不臭，沒有血\n    疼痛          無\n    發燒          無\n    聽力          左邊比較差\n\n別家診所開的耳滴劑讓分泌物好了一陣子。\n\n你看左耳。",
+      "media": "載入圖片：這位病人左耳的耳內視鏡影像，去識別化，不加標註。說明文字：「左耳。」",
+      "question": "你看到什麼？代表什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 「你最近有沒有吃太鹹，或是喝太多咖啡？」"
+          "text": "(A) 耳膜暗濁、內陷、有液面：中耳積液，用鼻用類固醇治療後追蹤"
         },
         {
           "id": "B",
-          "text": "(B) 「你最近有沒有突然覺得臉部肌肉無力、不對稱，或是常常感到天旋地轉的眩暈？」",
-          "correct": true
+          "text": "(B) 耳膜上白色斑塊：舊感染留下的鼓膜硬化，不用處理"
         },
         {
           "id": "C",
-          "text": "(C) 「你小時候有沒有得過腮腺炎？」"
+          "text": "(C) 耳膜後方白色腫塊，上鼓室有痂皮和碎屑：在證明不是之前都當膽脂瘤",
+          "correct": true
         },
         {
           "id": "D",
-          "text": "(D) 「你的耳鳴是像心跳一樣『噗通、噗通』的聲音嗎？」"
+          "text": "(D) 耳膜後方紅色搏動性腫塊：glomus tympanicum，碰它之前先做影像"
         }
       ],
-      "feedback": "正確答案：B\n\n主治醫師的 Tip： 面對懷疑有中耳膽脂瘤的患者，必須立刻篩檢三大 Red Flags：1. 眩暈或不平衡 (暗示可能侵蝕半規管形成 Labyrinthine fistula)；2. 顏面神經麻痺/不對稱 (暗示侵犯顏面神經管)；3. 對抗生素點耳液無效的持續性流膿 (暗示有抗藥性生物膜或膽脂瘤)。"
+      "feedback": "正確答案：C\n\n六個月不痛的分泌物、滴了藥又回來、耳朵悶、聽力變差，這就是膽脂瘤的病史。耳膜證實了它：\n• 中耳上半部、耳膜後方一個白色腫塊，\n• 上鼓室有痂皮或角質碎屑，也就是槌骨短突上方的 pars flaccida，\n• 周圍有積液。\n\n膽脂瘤是長錯地方的角化鱗狀上皮，在中耳或乳突裡。它不是腫瘤，但局部行為像腫瘤：它會長、會侵蝕骨頭、不會自己消失。「不痛」是重點。痛代表急性感染；膽脂瘤是慢性、安靜的，直到它蝕掉了什麼東西。\n\n其他選項為什麼不對：\n(A) 單純積液是耳膜暗濁、有時有液面，沒有腫塊。白色腫塊和上鼓室碎屑不是積液。而且 16 歲單側積液本身就該讓你看得更仔細。\n(B) 鼓膜硬化是耳膜「裡面」的白堊色斑塊，平的，不是「後面」，而且不會流分泌物。\n(D) Glomus 是紅色或藍色、在完整耳膜後方、常常搏動，病史是搏動性耳鳴。這個是白的。\n\nKeypoint：不痛的慢性耳漏加上鼓室白色腫塊，在證明不是之前都當膽脂瘤；看 pars flaccida。\n\nReference: Yung M, Tono T, Olszewska E, et al. EAONO/JOS joint consensus statements on the definitions, classification and staging of middle ear cholesteatoma. J Int Adv Otol. 2017;13(1):1-8."
     },
     {
-      "title": "Step 2/6: 內視鏡理學檢查 (Otoendoscopy & Physical Exam)",
-      "scenario": "你為她安排了耳內視鏡檢查 (Otoendoscopy)。你仔細檢視了耳膜的各個區域，特別是上方靠近聽小骨鏈的解剖位置。",
-      "media": "載入圖片：真實耳內視鏡影像 (Otoendoscopy)，顯示上鼓室的異常結構",
-      "question": "在耳內視鏡檢查中，下列哪一項發現是「次發性後天型膽脂瘤 (Secondary acquired cholesteatoma)」最具特異性 (pathognomonic) 的典型特徵？",
+      "title": "Step 2/7：數字",
+      "scenario": "聽力檢查，都是外院做的：\n\n    純音聽力圖，左    傳導性聽損，氣骨導差 46 dB\n    純音聽力圖，右    正常\n    鼓室圖，左        type B，耳道容積正常\n    鼓室圖，右        type A",
+      "media": "載入圖片：這位病人的純音聽力圖與鼓室圖，去識別化。說明文字：「聽力圖與鼓室圖。」",
+      "question": "46 dB 的氣骨導差，告訴你什麼是 20 dB 不會告訴你的？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 緊張部 (Pars Tensa) 出現紅腫外凸。"
+          "text": "(A) 沒有多告訴你什麼；差距大小不能定位問題"
         },
         {
           "id": "B",
-          "text": "(B) 鬆弛部 (Pars Flaccida) 的內陷袋 (Retraction pocket) 中發現角質碎屑 (Keratin debris)。",
+          "text": "(B) 聽小骨鏈很可能斷了，不只是被液體或腫塊壓住",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) 中耳腔出現清澈積液與氣液面 (Air-fluid levels)。"
+          "text": "(C) 耳蝸也受損了"
         },
         {
           "id": "D",
-          "text": "(D) 耳膜表面出現出血性水泡 (Bullae formation)。"
+          "text": "(D) 耳咽管塞住了"
         }
       ],
-      "feedback": "正確答案：B\n\n臨床解析： 檢查慢性耳疾時，「上鼓室 (Attic)」也就是耳膜的「鬆弛部 (Pars Flaccida)」是關鍵區域。在鬆弛部的內陷袋中積聚的角質碎屑 (Keratin debris) 是後天型膽脂瘤最標準的特徵。"
+      "feedback": "正確答案：B\n\n傳導性聽損就是氣骨導差：骨導繞過中耳，正常；氣導需要耳膜和聽小骨，比較差。差距大小說明聽小骨鏈壞到什麼程度。\n• 中耳有液體、或腫塊壓著耳膜，是把鏈子壓住：差距大約 20 到 30 dB。\n• 單純耳膜穿孔：通常小於 30 dB。\n• 鏈子斷了、耳膜完整，可以到 50 到 60 dB，接近傳導性聽損的上限。\n\n46 dB 對液體或小腫塊來說太大了。它說聲音沒有從耳膜傳到鐙骨，也就是膽脂瘤已經蝕掉了一塊聽小骨，最常見是砧骨長突。手術找到的就是這個。\n\nType B 鼓室圖加上耳道容積正常，補充了耳膜是完整的、中耳被什麼東西填滿了，液體或軟組織。Type B 加上耳道容積很大，就代表穿孔。\n\n其他選項為什麼不對：\n(A) 氣骨導差的大小是耳科最有用的數字之一。它在你打開耳朵之前就把「濕的耳朵」和「斷的鏈子」分開了。\n(C) 骨導正常。耳蝸沒事。感音神經的成分會表現為骨導下降。\n(D) 耳咽管塞住會有積液和 type B，但單靠積液做不出 46 dB 的差距。\n\nKeypoint：耳膜完整、氣骨導差超過 40 dB，代表聽小骨鏈中斷；準備找到一根被蝕掉的砧骨。\n\nReference: Gulya AJ, Minor LB, Poe DS, eds. Glasscock-Shambaugh Surgery of the Ear. 6th ed. Shelton, CT: People's Medical Publishing House; 2010."
     },
     {
-      "title": "Step 3/6: 音叉測試與聽力學判讀 (Tuning Fork & Audiometry)",
-      "scenario": "在門診，你拿出了音叉 (Tuning Fork) 進行初步測試。結果顯示：韋伯氏測驗 (Weber Test) 聲音偏向左側 (患耳)；林內氏測驗 (Rinne Test) 在左耳呈現陰性 (Bone Conduction > Air Conduction)，右耳呈現陽性 (AC > BC)。隨後的純音聽力檢查 (PTA) 也證實了這個發現。",
-      "media": "載入圖片：PTA 純音聽力圖，顯示左耳有明顯的 Air-Bone Gap",
-      "question": "根據音叉測試結果與聽力圖的表現，這位病患左耳的聽力喪失最可能屬於下列哪一種型態？",
+      "title": "Step 3/7：CT 決定什麼",
+      "scenario": "顳骨高解析度 CT，1 mm 切面，無顯影劑：\n\n    左中耳          軟組織密度，包括 Prussak's space\n    左聽小骨        疑似侵蝕\n    左 aditus/antrum 不透光\n    左耳道          小的軟組織病灶\n    右耳            正常，氣化良好\n    兩側            耳蝸、半規管、顏面神經管、頸動脈管、頸靜脈孔正常\n\n報告結尾：「Related to otomastoiditis with cholesteatoma?」",
+      "media": "載入圖片：這位病人左側顳骨冠狀面 HRCT，去識別化，不加標註。說明文字：「HRCT，冠狀面。」",
+      "question": "這張 CT 決定了什麼？沒決定什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 感音神經性聽力喪失 (Sensorineural Hearing Loss, SNHL)"
+          "text": "(A) 它確認了膽脂瘤；上鼓室有軟組織就是診斷"
         },
         {
           "id": "B",
-          "text": "(B) 傳導性聽力喪失 (Conductive Hearing Loss, CHL)",
-          "correct": true
+          "text": "(B) 它是多餘的；診斷靠臨床，開刀時外科醫師自然會看到"
         },
         {
           "id": "C",
-          "text": "(C) 中樞性聽覺處理障礙 (Central Auditory Processing Disorder)"
+          "text": "(C) 它排除了膽脂瘤；報告沒有描述骨頭侵蝕"
         },
         {
           "id": "D",
-          "text": "(D) 聽神經病變 (Auditory Neuropathy)"
+          "text": "(D) 它描繪出範圍和手術的危險區，但分不出膽脂瘤、肉芽組織和液體",
+          "correct": true
         }
       ],
-      "feedback": "正確答案：B\n\n判讀重點： 韋伯氏測驗偏向患耳，且林內氏測驗在患耳為陰性 (BC > AC)，這代表標準的「傳導性聽損 (CHL)」。在一個長期發炎流湯的「濕耳 (wet ear)」中看到明顯的氣骨導差 (Air-Bone Gap)，要高度懷疑是膽脂瘤侵蝕了聽小骨 (ossicular erosion)。"
+      "feedback": "正確答案：D\n\n放射科的問號是誠實的。在 CT 上，膽脂瘤、肉芽組織、黏液、液體長得一模一樣：軟組織密度。CT 不做診斷。診斷是 Step 1 的耳鏡做的。CT 做的是回答外科醫師打開耳朵之前需要知道的問題。\n\n它在哪裡？\n• Prussak's space、上鼓室、aditus、antrum：上鼓室膽脂瘤往後擴進乳突的經典路徑。\n\n它蝕掉了什麼？\n• 聽小骨，對得上 46 dB 的差距。\n• Scutum 和耳道上壁，手術證實了。\n\n外科醫師不能碰到什麼？\n• Tegmen：有沒有裂開通到中顱窩？\n• 外半規管：有沒有瘻管？瘻管會改變手術。\n• 顏面神經管：鼓室段有沒有裂開？\n• 乙狀竇和頸靜脈球：位置是不是高、是不是往前？\n這裡全部完整，所以你可以規劃標準的手術。\n\n如果問題是「這團軟組織到底是不是膽脂瘤」，檢查是 non-echo-planar diffusion-weighted MRI，膽脂瘤會擴散受限、肉芽不會。那是 Step 7 追蹤用的工具。\n\n其他選項為什麼不對：\n(A) 上鼓室有軟組織「符合」膽脂瘤，不是「診斷」膽脂瘤。肉芽長得一樣。\n(B) 診斷是臨床的，但地圖不是。不知道 tegmen 或外半規管有沒有開就開刀，併發症就是這樣來的。\n(C) 報告有描述聽小骨侵蝕和氣化喪失，而且就算 CT 上沒有侵蝕的耳朵也可能藏著膽脂瘤。CT 排除不了它。\n\nKeypoint：CT 不診斷膽脂瘤；它描繪範圍，和四個你不能進去的構造。\n\nReference: Yung M, Tono T, Olszewska E, et al. J Int Adv Otol. 2017;13(1):1-8. Lingam RK, Bassett P. A meta-analysis on the diagnostic performance of non-echoplanar diffusion-weighted imaging in detecting middle ear cholesteatoma. Otol Neurotol. 2017;38(4):521-528."
     },
     {
-      "title": "Step 4/6: 影像學定位與骨骼破壞 (HRCT Temporal Bone)",
-      "scenario": "為了確立手術計畫，你安排了「顳骨高解析度電腦斷層 (HRCT)」。影像顯示左側中耳腔上鼓室有一團軟組織陰影，且周圍的骨頭有被侵蝕的跡象。",
-      "media": "載入圖片：HRCT 冠狀切面影像，標示出上鼓室與盾狀骨的位置",
-      "question": "在判讀中耳膽脂瘤的 CT 影像時，下列哪一個位於上鼓室外側壁的骨性構造，最常在早期就被觀察到遭受「侵蝕破壞 (erosion)」？",
+      "title": "Step 4/7：手術",
+      "scenario": "16 歲。六個月不痛的耳漏，46 dB 傳導性聽損。\n\nCT：上鼓室、aditus、antrum 有軟組織，疑似聽小骨侵蝕；乳突氣化良好；tegmen、外半規管、顏面神經管完整。\n\n轉診診斷是先天性膽脂瘤。你計畫手術。",
+      "media": "",
+      "question": "哪一種手術？為什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 鼓岬 (Promontory)"
+          "text": "(A) 繼續耳滴劑，三個月後追蹤；分泌物持續才手術"
         },
         {
           "id": "B",
-          "text": "(B) 內聽道 (Internal auditory canal)"
+          "text": "(B) Canal wall-down 乳突切除，因為復發率最低，那才是最重要的"
         },
         {
           "id": "C",
-          "text": "(C) 盾狀骨 (Scutum)",
+          "text": "(C) Canal wall-up 鼓室乳突切除，接受較高的殘留和復發率，換取正常的耳道和乾燥的耳朵，並且計畫好追蹤",
           "correct": true
         },
         {
           "id": "D",
-          "text": "(D) 乙狀竇骨壁 (Sigmoid sinus plate)"
+          "text": "(D) 只從耳道做聽小骨成形術，不做乳突切除"
         }
       ],
-      "feedback": "正確答案：C\n\n影像重點： 盾狀骨 (Scutum) 是上鼓室外側壁的尖端骨骼。在後天型膽脂瘤 (Attic retraction pocket) 的進展中，Scutum erosion 是最早期且最典型的 CT 影像學徵象。同時也必須檢查聽小骨鏈 (Ossicular chain) 與鼓室蓋 (Tegmen Tympani) 是否完整。"
+      "feedback": "正確答案：C\n\n膽脂瘤只有一種治療：拿掉它。耳滴劑控制它周圍的感染，拿不掉乳突裡的角化皮膚，而它每多留一個月就多蝕一點。問題不是要不要開，是怎麼開。\n\n選擇在後耳道壁。\n\nCanal wall-up：\n• 骨性耳道保留，乳突從它後面打開，上鼓室從乳突和耳道兩邊進去，\n• 術後耳朵看起來、用起來像正常的耳朵：沒有腔洞、不用終生清理、不用限制碰水、助聽器好戴，\n• 代價是殘留的病灶可以藏在完整的耳道壁後面、pars flaccida 也可能再內陷，所以復發率比 canal wall-down 高，必須盯著。\n\nCanal wall-down：\n• 後耳道壁拿掉，乳突和耳道變成一個腔，門診就能檢查，\n• 復發率較低，代價是一個要終生清理、常常流水的腔洞。\n\n對一個乳突氣化良好、CT 上病灶侷限在上鼓室和乳突、危險區完整的 16 歲，canal wall-up 是標準選擇。Canal wall-down 留給範圍廣泛的病灶、硬化的乳突、外半規管瘻管、唯一有聽力的耳朵、或不會回來追蹤的病人。Canal wall-up 的復發代價在 Step 7 付。\n\n其他選項為什麼不對：\n(A) 滴劑治分泌物，不治疾病。再三個月就是再三個月的骨頭侵蝕。\n(B) 復發只是多個結果之一。對一個少年，終生的腔洞是真實的代價，而他的解剖不需要這樣。\n(D) 病灶在乳突。不拿掉後面的膽脂瘤就重建聽力，是在火場上蓋房子。\n\nKeypoint：膽脂瘤是拿掉，不是治療；canal wall-up 為年輕病人保留正常的耳朵，代價是追蹤。\n\nReference: Tomlin J, Chang D, McCutcheon B, Harris J. Surgical technique and recurrence in cholesteatoma: a meta-analysis. Audiol Neurootol. 2013;18(3):135-142. Yung M, Tono T, Olszewska E, et al. J Int Adv Otol. 2017;13(1):1-8."
     },
     {
-      "title": "Step 5/6: 疾病機轉的核心概念 (Pathophysiology of Bone Destruction)",
-      "scenario": "病患看到 CT 報告後非常恐慌，詢問你：「醫生，你說我的骨頭被吃掉了，這是不是代表我長了惡性的骨癌？」你必須用正確的病生理學觀念向她解釋。",
-      "media": "載入圖片：膽脂瘤細胞分泌酵素侵蝕骨頭的動畫示意圖",
-      "question": "關於「膽脂瘤 (Cholesteatoma)」會吃掉骨頭的原因，下列何種解釋在醫學上是最正確的？",
+      "title": "Step 5/7：重建聽力",
+      "scenario": "手術室。上鼓室和乳突的膽脂瘤和肉芽都清乾淨了。你把內視鏡帶進中耳：\n\n    槌骨                  在，柄完整\n    砧骨                  長突被蝕掉；砧鐙關節毀了\n    鐙骨                  上部結構完整、可動\n    圓窗反射              陽性\n    黏膜                  水腫、肉芽狀\n    耳膜                  上鼓室小穿孔；pars tensa 需要移植\n\n被蝕掉的砧骨取出。",
+      "media": "載入圖片：內視鏡術中照片，去識別化，不加標註：取出砧骨後的中耳，看得到鐙骨上部結構，人工聽小骨正放在耳膜和鐙骨頭之間。說明文字：「中耳，內視鏡。」",
+      "question": "你怎麼重建聽小骨鏈和耳膜？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 膽脂瘤是一種快速分裂的惡性肉瘤 (Sarcoma)，會直接吞噬周邊骨頭。"
+          "text": "(A) 從耳膜到足板的全聽小骨置換 (TORP)"
         },
         {
           "id": "B",
-          "text": "(B) 膽脂瘤並非真正的腫瘤，而是一個會分泌「溶骨酶 (Osteolytic enzymes)」的角質化鱗狀上皮陷阱。",
+          "text": "(B) 從耳膜到鐙骨頭的部分聽小骨置換 (PORP)，上面蓋一片軟骨，耳膜用耳屏軟骨-軟骨膜複合移植",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) 膽脂瘤本身不會破壞骨頭，骨頭是因為長期泡在膿液中被「溶化」的。"
+          "text": "(C) 把取出的砧骨放回槌骨和鐙骨之間"
         },
         {
           "id": "D",
-          "text": "(D) 膽脂瘤是一種黴菌感染，會釋放強酸腐蝕中耳骨骼。"
+          "text": "(D) 耳膜只用筋膜移植，聽小骨鏈留到下一次手術"
         }
       ],
-      "feedback": "正確答案：B\n\n核心觀念： 膽脂瘤 (Cholesteatoma) 在字面上雖有「瘤」，但它不是真正的腫瘤。它是一個迷路的角質化鱗狀上皮陷阱 (epithelial trap)，這些上皮組織與伴隨的發炎反應會分泌「溶骨酶 (osteolytic enzymes)」，進而侵蝕周邊的聽小骨與顳骨。"
+      "feedback": "正確答案：B\n\n重建是由剩下什麼決定的。\n\n剩下什麼：\n• 鐙骨上部結構在、可動。圓窗反射陽性證實了：壓鐙骨，圓窗膜會動，所以足板是自由的、內耳的窗是開的。\n• 砧骨失去長突、砧鐙關節沒了，所以聲音在砧骨就停了。\n\n所以聲音要從耳膜傳到鐙骨頭。那就是部分置換：PORP 坐在鐙骨頭上，往上接到耳膜。如果上部結構沒了、只剩足板，就是全置換，TORP，接到足板。耳膜接鐙骨、中間墊一個東西，是 modified type III tympanoplasty。\n\n兩個細節讓它撐得久：\n• 人工聽小骨和耳膜之間墊一片軟骨。人工聽小骨直接碰耳膜會磨穿、擠出來；中間一片薄軟骨就擋住了。\n• 耳膜用軟骨-軟骨膜複合移植，不只用筋膜。軟骨抗內陷。這個病是從內陷袋開始的，通氣不好的耳朵放一片筋膜還會再內陷。軟骨保持形狀，軟骨膜當 underlay 封住穿孔。\n\n兩片都從耳屏內側一個小切口取，不留看得見的疤。\n\n其他選項為什麼不對：\n(A) TORP 是給上部結構沒了的情況。他的鐙骨完整可動；繞過它是浪費鏈子最好的一段，結果也比較不穩。\n(C) 一根泡在膽脂瘤裡、長突被吃掉的砧骨，不是可靠的移植材料：它可能帶著鱗狀上皮，而且你需要用來接到鐙骨的那一段正是沒了的那一段。自體砧骨 interposition 是給為了進路而取下的完整砧骨，不是給被疾病毀掉的。\n(D) 把聽力留到第二次手術，在黏膜病得太重、人工聽小骨活不下來時是合理的。他的鐙骨可動、乳突乾淨；沒有理由讓他帶著 46 dB 的差距回家。\n\nKeypoint：鐙骨在就 PORP、只剩足板就 TORP；人工聽小骨要蓋軟骨、耳膜要用軟骨，因為內陷過一次的耳朵會再試一次。\n\nReference: Dornhoffer JL. Cartilage tympanoplasty: indications, techniques, and outcomes in a 1,000-patient series. Laryngoscope. 2003;113(11):1844-1856. Gulya AJ, Minor LB, Poe DS, eds. Glasscock-Shambaugh Surgery of the Ear. 6th ed. Shelton, CT: People's Medical Publishing House; 2010."
     },
     {
-      "title": "Step 6/6: 最終處置與外科決策 (Surgical Decision Making)",
-      "scenario": "向病患解釋完病情後，來到了最終的醫療決策十字路口。面對這個確診的左耳中耳膽脂瘤，你必須給予最正確的治療建議。",
-      "media": "載入圖片：Clinical Decision Tree 治療決策樹",
-      "question": "針對這位 56 歲女性的次發性後天型膽脂瘤，下列哪一個治療選項與觀念是完全錯誤的？",
+      "title": "Step 6/7：先天還是後天",
+      "scenario": "術後一週。病理報告回來了：keratinizing squamous epithelium with keratin debris。膽脂瘤確認。\n\n轉診單寫的是先天性膽脂瘤：一個少年耳膜後方的白色腫塊。\n\n手術找到的：\n\n    穿孔          小的，在上鼓室的 pars flaccida\n    病灶          上鼓室和乳突\n    骨頭          耳道上壁被蝕\n    聽小骨        砧骨被蝕；槌骨和鐙骨完整\n    黏膜          肉芽狀、沾黏",
+      "media": "載入圖片：這位病人的術中照片，去識別化，不加標註：鼓膜耳道瓣掀起，上鼓室內的膽脂瘤和被蝕的 scutum，砧骨長突被蝕。說明文字：「上鼓室，術中。」",
+      "question": "膽脂瘤確認了。最終診斷是先天性、原發性後天、還是續發性後天？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 若病灶範圍很大或後側耳道壁已遭破壞，可選擇保留外耳道後壁被削低的「開放式乳突鑿開術 (Canal Wall Down Tympanomastoidectomy, CWD)」。"
-        },
-        {
-          "id": "B",
-          "text": "(B) 為了保留正常解剖構造，可考慮進行「保留耳道後壁乳突鑿開術 (Canal Wall Up Tympanomastoidectomy, CWU)」，但術後需要病患高度配合追蹤。"
-        },
-        {
-          "id": "C",
-          "text": "(C) 因為膽脂瘤是良性的，只要定期回診觀察 (Observation)，並在洗澡時做好耳朵防水 (Water precautions) 即可，不需要開刀。",
+          "text": "(A) 後天、原發性：pars flaccida 內陷進上鼓室",
           "correct": true
         },
         {
+          "id": "B",
+          "text": "(B) 先天性：年輕病人的白色腫塊依定義就是先天的"
+        },
+        {
+          "id": "C",
+          "text": "(C) 後天、續發性：皮膚從 pars tensa 的穿孔長進去"
+        },
+        {
           "id": "D",
-          "text": "(D) 膽脂瘤具備局部侵入性 (Locally invasive)，外科手術清除 (Surgical clearance) 是必須的處置。"
+          "text": "(D) 醫源性：之前用耳滴劑造成的"
         }
       ],
-      "feedback": "正確答案：C\n\n手術共識： 選項 C 是絕對錯誤的 (Incorrect)！膽脂瘤雖然不是惡性腫瘤，但它具有「局部侵入性 (Locally invasive)」，會持續破壞聽小骨、顏面神經甚至侵入顱內。因此，「外科手術清除 (Surgical clearance)」是唯一且必須的標準處置，單純觀察與防水是無效且危險的。"
+      "feedback": "正確答案：A\n\n共識分類是依「皮膚怎麼進去的」來分。\n\n先天性：\n• 完整耳膜後方一顆珍珠，經典位置在前上象限，\n• 沒有耳漏、穿孔或耳部手術的病史，\n• 通常在幼童身上、常常是偶然發現。\n\n後天、原發性：\n• pars flaccida 內陷進上鼓室，角質在袋子裡堆積，袋子往後蝕穿 Prussak's space 朝 antrum 去，\n• 耳膜內陷或有上鼓室穿孔，有耳漏病史。\n\n後天、續發性：\n• 鱗狀上皮從 pars tensa 的穿孔長進去，通常在後上方。\n\n他的發現是原發性後天：上鼓室穿孔、CT 上 Prussak's space 滿的、病灶從上鼓室走到乳突、耳道上壁被蝕、六個月的耳漏。轉診診斷只憑一個白色腫塊來看是合理的，但位置、穿孔和病史都說是內陷袋。標籤在手術室裡改了，而這有差，因為先天和後天的疾病行為不同、分期也不同。\n\n依共識分期：部位是鼓室 (T)、上鼓室 (A)、乳突 (M)，和難進入的部位 S1（supratubal recess）、S2（sinus tympani）。他是上鼓室加乳突：第 II 期，兩個以上部位，沒有併發症。\n\n其他選項為什麼不對：\n(B) 年齡不決定。先天性需要完整的耳膜和沒有耳漏病史；他有上鼓室穿孔和六個月耳漏。\n(C) 續發性後天是 pars tensa 穿孔。他的在 pars flaccida，那是原發性的路徑。\n(D) 滴劑不會造成膽脂瘤。醫源性的是手術或通氣管之後才有。\n\nKeypoint：pars flaccida 內陷或上鼓室穿孔加上耳漏病史是原發性後天膽脂瘤；先天性是完整耳膜、沒有病史。\n\nReference: Yung M, Tono T, Olszewska E, et al. EAONO/JOS joint consensus statements on the definitions, classification and staging of middle ear cholesteatoma. J Int Adv Otol. 2017;13(1):1-8. Derlacki EL, Clemis JD. Congenital cholesteatoma of the middle ear and mastoid. Ann Otol Rhinol Laryngol. 1965;74(3):706-727."
+    },
+    {
+      "title": "Step 7/7：盯著它",
+      "scenario": "第一次回診耳朵是乾的，移植片存活。最終診斷：原發性後天膽脂瘤，左，第 II 期，canal wall-up 鼓室乳突切除術後。\n\n他媽媽問是不是結束了。",
+      "media": "",
+      "question": "Canal wall-up 的耳朵要怎麼追蹤？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 六個月耳朵乾就結案；乾的耳朵就是沒有病灶"
+        },
+        {
+          "id": "B",
+          "text": "(B) 每年一次高解析度 CT"
+        },
+        {
+          "id": "C",
+          "text": "(C) 只有分泌物或聽力變差回來時才做 second-look 手術"
+        },
+        {
+          "id": "D",
+          "text": "(D) 定期耳鏡和聽力檢查，大約一年時做 non-echo-planar diffusion-weighted MRI，有擴散受限就做 second-look 手術",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：D\n\nCanal wall-up 手術用一個已知的代價買到了正常的耳朵：病灶可以用兩種方式回來，兩種都不會事先通知。\n• 殘留病灶是留下來的一小片 matrix，在關起來的乳突裡或人工聽小骨後面安靜地長。它在變大之前是沉默的。\n• 復發病灶是 pars flaccida 的新內陷袋，軟骨移植就是為了防這個，但不能保證。\n\n所以追蹤要找的是一個沒有症狀的東西。\n• 每次回診做耳鏡，看上鼓室有沒有新的袋子。\n• 聽力檢查，因為氣骨導差變大可能是人工聽小骨的問題、也可能是周圍的病灶。\n• 大約 12 個月時做 non-echo-planar diffusion-weighted MRI，之後再做。膽脂瘤擴散受限；肉芽、疤痕、液體不會。彙整研究顯示這個序列能以高敏感度和特異度偵測到幾毫米的殘留病灶，它已經大幅取代了以前每一個 canal wall-up 耳朵都要做的常規 second-look 手術。\n• MRI 陽性或模稜兩可、或出現內陷袋時，做 second-look 手術。\n\n其他選項為什麼不對：\n(A) 乾的耳朵是手術的目標，不是治癒的證明。關起來的乳突裡的殘留膽脂瘤，要大到蝕掉東西才會流。\n(B) CT 分不出殘留膽脂瘤和疤痕，而一個少年每年照一次頭部 CT，是沒有答案的輻射。\n(C) 等症狀就是等侵蝕。監測的意義是在它吃掉你剛重建的聽力之前找到它。\n\nKeypoint：Canal wall-up 的耳朵用耳鏡、聽力圖和 diffusion MRI 追蹤，因為殘留病灶是沉默的；MRI 說了才 second look。\n\nReference: Lingam RK, Bassett P. A meta-analysis on the diagnostic performance of non-echoplanar diffusion-weighted imaging in detecting middle ear cholesteatoma. Otol Neurotol. 2017;38(4):521-528. Yung M, Tono T, Olszewska E, et al. J Int Adv Otol. 2017;13(1):1-8."
     }
   ]
 }

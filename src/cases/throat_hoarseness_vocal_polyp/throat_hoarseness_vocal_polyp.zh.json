@@ -1,148 +1,173 @@
 {
   "id": "throat_hoarseness_vocal_polyp",
-  "title": "油漆工的沙啞嗓音 (The Painter's Hoarse Voice)",
-  "subtitle": "聲音沙啞、聲帶息肉與喉顯微手術",
-  "description": "聲音障礙量表、GRBAS、聲帶息肉鑑別、KTP 雷射、微瓣技術與術後照護。",
-  "estimatedTime": "20-30 分鐘",
-  "difficulty": "中階",
+  "title": "油漆工的聲音",
+  "subtitle": "一位靠吼聲工作的男性，沙啞六個月",
+  "description": "什麼時候該看喉部、用病人自評量表建立 baseline、判讀聽覺知覺評估、用 stroboscopy 鑑別良性聲帶病灶、選擇手術層次，以及術後照護。",
+  "estimatedTime": "20-25 min",
+  "difficulty": "Intermediate",
   "tags": [
-    "喉科",
-    "Hoarseness",
-    "Vocal fold polyp",
-    "Phonomicrosurgery"
+    "Laryngology",
+    "Dysphonia",
+    "Stroboscopy",
+    "Phonosurgery",
+    "AAO-HNSF 2018"
   ],
   "steps": [
     {
-      "title": "Step 1/6: 主觀音聲評估與生活品質 (Subjective Voice Assessment)",
-      "scenario": "一位 57 歲的男性油漆工來到門診。他每天抽一包菸長達 40 年 (1 PPD for 40+ years)。他主訴聲音沙啞 (hoarseness) 已經好幾年了。為了量化這個聲音問題對他日常工作與社交的影響，你請他填寫了一份「華文版語音障礙指數表 (VHI-10)」。",
-      "media": "載入圖片：華文版 VHI-10 量表問卷範例",
-      "question": "根據台灣學者的研究，為了判斷這名患者在未來的治療中是否有「有意義的臨床改善」，華文版 VHI-10 的「最小臨床重要差異 (Minimal Clinically Important Difference, MCID)」被設定為幾分？",
+      "title": "Step 1/6：什麼時候該看喉部",
+      "scenario": "一位 52 歲油漆工沙啞六個月。他在施工中的工地工作，整天要蓋過空壓機的噪音大聲喊話。抽菸每天半包，抽了 20 年。\n\n他的家醫診斷為 reflux laryngitis，給了 omeprazole 20 mg BID 共八週，之後又給了一個療程的 methylprednisolone dose pack。兩者都沒有改善。\n\n喉部從來沒有被檢查過。沒有吞嚥困難、沒有吞嚥疼痛、沒有耳痛、沒有體重減輕。頸部觸診正常。",
+      "media": "",
+      "question": "你的下一步是什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 10 分"
+          "text": "(A) 把 PPI 延長到 12 週並加上抗逆流的生活衛教，之後再評估"
         },
         {
           "id": "B",
-          "text": "(B) 4 分",
-          "correct": true
+          "text": "(B) 先安排 contrast-enhanced CT of neck 排除腫瘤，再考慮做內視鏡"
         },
         {
           "id": "C",
-          "text": "(C) 1 分"
+          "text": "(C) 今天就做 laryngoscopy",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) 先轉介 voice therapy，療效不好再檢查喉部"
         }
       ],
-      "feedback": "正確答案：B\n\n主治醫師的 Tip： VHI-10 是一份評估聲音障礙患者主觀感受的極佳問卷。根據研究，華文版 VHI-10 的最佳 MCID 設定為 4 分。這代表未來不論是做語言治療或手術，只要患者的 VHI-10 分數進步超過 4 分，我們就可以視為「治療有正向反應 (positive or responsive)」。"
+      "feedback": "正確答案：C\n\n沙啞六個月、到現在還在抽菸、已經被試過兩種經驗性治療，而喉部從頭到尾沒有人看過。2018 AAO-HNSF guideline 的立場是：dysphonia 任何時候都可以做 laryngoscopy，而四週還沒改善就變成必須做；如果懷疑有嚴重的原因，還要更早。他早在好幾個月前就過了這兩道線。\n\n其他選項為什麼不對：\n(A) 指引明確反對在還沒看過喉部的情況下，因為聲音沙啞就給抗逆流藥。八週已經證明沒用了，再延長只是把同一步再走一次，不是修正它。\n(B) 指引也明確反對在看過喉部之前先做 CT 或 MRI。大部分 dysphonia 的病灶在黏膜層，影像照不出來。\n(D) Voice therapy 很可能是他最後需要的治療，但那是知道診斷之後的事。在那之前你不知道要治療什麼。\n\n指引同樣反對在看過喉部之前給類固醇，理由很實際：類固醇常常會讓症狀短暫好轉，然後所有人都更相信那個從來沒有被證實過的診斷。\n\nKeypoint：經驗性治療只是在猜病因，laryngoscopy 才是在確定病因。\n\nReference: Stachler RJ, Francis DO, Schwartz SR, et al. Clinical Practice Guideline: Hoarseness (Dysphonia) (Update). Otolaryngol Head Neck Surg. 2018;158(1_suppl):S1-S42."
     },
     {
-      "title": "Step 2/6: 聽覺知覺評估 (Perceptual Evaluation: GRBAS)",
-      "scenario": "患者回診時，你為他進行了標準的聽覺知覺評估 (Auditory-perceptual evaluation)。你在病歷上紀錄了他的聲音分數為：「GRB: 323」。",
-      "media": "載入圖片：GRBAS 評分表與各項參數定義",
-      "question": "根據 GRBAS 評估系統，病歷上紀錄的「B: 3」代表這名患者的聲音具有嚴重 (Severe) 的何種特徵？其對應的聲帶生理狀態為何？",
+      "title": "Step 2/6：基準分數",
+      "scenario": "檢查之前你先請他填 Voice Handicap Index-10（VHI-10）。總分 24 分（滿分 40）。\n\n他說聲音的問題讓他很難在吵雜的工地指揮工班。你打算治療後再測一次來判斷療效。",
+      "media": "載入圖片：填好的 VHI-10 表格，判讀分級區間已裁掉。圖說：「Voice Handicap Index-10」",
+      "question": "在一般成人 dysphonia 族群中，總分變化多少才算是 minimal important difference？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 粗糙聲 (Roughness)；代表聲帶震動極度不規律。"
+          "text": "(A) 4 分"
         },
         {
           "id": "B",
-          "text": "(B) 緊繃聲 (Strain)；代表發聲時過度用力。"
+          "text": "(B) 11 分"
         },
         {
           "id": "C",
-          "text": "(C) 氣息聲 (Breathiness)；代表發聲時有漏氣聲，通常起因於聲帶無法完全閉合 (incomplete closure of vocal folds)。",
+          "text": "(C) 尚未建立 minimal important difference，只能以嚴重度分級來報告"
+        },
+        {
+          "id": "D",
+          "text": "(D) 6 分",
           "correct": true
         }
       ],
-      "feedback": "正確答案：C\n\n評估解析： GRBAS 分別代表 Grade (整體嚴重度), Roughness (粗糙), Breathiness (氣息/漏氣聲), Asthenia (無力), Strain (緊繃)。該患者 GRB 為 323，代表有嚴重的沙啞 (G=3) 與嚴重的漏氣聲 (B=3)，強烈暗示他的聲帶上有病灶阻礙了聲門的完全閉合，導致發聲時空氣大量漏出。"
+      "feedback": "正確答案：D\n\nVHI-10 共 10 題，每題 0 到 4 分，總分 0 到 40。分數越高代表聲音對生活的影響越大。要注意它量的是「這個聲音問題造成他多大困擾」，不是「病因是什麼」。\n\n分數區間：\n• 0 到 10    Normal\n• 11 到 15   Mild\n• 16 到 25   Moderate\n• 26 到 40   Severe\n\n他 24 分，落在 moderate。真正拿來用的是兩個數字：\n• 超過 11 分算異常。Arffa 找了 190 位沒有聲音問題的人來填，平均只有 2.83 分。\n• 前後差 6 分以上才算真的有變化。Misono 研究了 273 位嗓音門診病人得到這個數字，差距比 6 分小的話，跟「根本沒變」分不出來。\n\n其他選項為什麼不對：\n(A) 4 分這個數字是真的有人發表過，但那是在聲帶麻痺的病人身上算出來的。族群不一樣，門檻就不一樣，不能直接搬過來用。\n(B) 11 分是「單次測量」的切點，用來判斷這個人正不正常，不是用來判斷他有沒有進步。\n(C) MID 是存在的。而且如果只報告落在哪一個區間，同一區間內的變化就完全看不出來了。\n\n註：11 分這個切點出自 Arffa。上面那四個區間是臨床上通用的分法，不是哪一篇研究驗證過的單一版本，不同來源的邊界會有一點出入。\n\nKeypoint：切點是拿來判斷誰不正常的，MID 是拿來判斷誰有進步的，兩者不能混用。\n\nReference: Rosen CA, Lee AS, Osborne J, Zullo T, Murry T. Laryngoscope. 2004;114(9):1549-1556. Arffa RE, Krishna P, Gartner-Schmidt J, Rosen CA. J Voice. 2012;26(4):462-465. doi:10.1016/j.jvoice.2011.04.006. Misono S, Yueh B, Stockness AN, House ME, Marmor S. JAMA Otolaryngol Head Neck Surg. 2017;143(11):1098-1103. doi:10.1001/jamaoto.2017.1621."
     },
     {
-      "title": "Step 3/6: 內視鏡與病灶鑑別 (Stroboscopy & Benign Lesions)",
-      "scenario": "你安排了喉閃頻攝影 (Stroboscopy) 檢查，發現患者右側聲帶前 1/3 有一個「非出血性息肉 (Right VF non-hemorrhagic polyp)」，而左側聲帶則有微血管擴張 (Lt VF telangiectasia)。",
-      "media": "載入圖片：內視鏡下顯示單側外突性 (exophytic) 的聲帶息肉",
-      "question": "相較於好發在雙側的聲帶結節 (Nodules)，關於「聲帶息肉 (Vocal fold polyps)」的臨床特徵，下列敘述何者最正確？",
+      "title": "Step 3/6：聽這個聲音",
+      "scenario": "同一次門診你做了標準的聽覺知覺評估（auditory-perceptual evaluation），病歷上記錄：\n\n    G3  R2  B3",
+      "media": "載入圖片：GRBAS 參考表。圖說：「聽覺知覺量表」",
+      "question": "B3 是什麼意思？它告訴你聲帶處於什麼狀態？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 多為雙側對稱性病灶，且多數只要靠保守的語言治療即可痊癒。"
-        },
-        {
-          "id": "B",
-          "text": "(B) 可以是單側或雙側，外觀多呈清澈外突狀或帶血色，且通常對語言治療效果不好 (poor response to voice therapy)。",
+          "text": "(A) Breathiness（氣息聲），嚴重：發聲時有漏氣，通常是因為聲帶無法完全閉合",
           "correct": true
         },
         {
+          "id": "B",
+          "text": "(B) Roughness（粗糙聲），嚴重：聲帶震動非常不規則"
+        },
+        {
           "id": "C",
-          "text": "(C) 是因對側病灶不斷撞擊產生的杯狀凹陷，又稱「cup and saucer」變形。"
+          "text": "(C) Strain（緊繃聲），嚴重：發聲時過度用力"
+        },
+        {
+          "id": "D",
+          "text": "(D) Asthenia（虛弱聲），嚴重：聲音虛弱無力"
         }
       ],
-      "feedback": "正確答案：B\n\n診斷重點： 聲帶息肉 (Polyps) 可以是單側或雙側，外觀常呈 clear exophytic 或 heme-colored。與結節 (Nodules) 不同的是，息肉通常對單純的語言治療 (voice therapy) 效果不佳，這也是為什麼該患者在使用類固醇與胃藥治療後依舊無效，最終需要尋求手術介入的原因。"
+      "feedback": "正確答案：A\n\nGRBAS 評的是聲音的五個面向，每一項都是 0 分（正常）到 3 分（嚴重）：\n• G   Grade，整體有多沙啞\n• R   Roughness，聽起來粗粗的、震動不規則\n• B   Breathiness，聽得到漏氣的聲音\n• A   Asthenia，聲音無力、撐不起來\n• S   Strain，聽得出來很用力\n\nB 就是 breathiness，3 分代表嚴重。氣息聲是空氣從聲門漏出去的聲音，通常代表聲帶沒有完全閉起來——也就是有東西卡在中間把它們撐開。那個東西就是你等一下要在喉鏡下找的。\n\n其他選項為什麼不對：\n(B) Roughness 是 R，他的 R 是 2 分。它講的是震動不規則，跟漏不漏氣是兩回事。\n(C) Strain 是 S，講的是發聲有多用力，肌肉緊張型發聲障礙才會高。氣息聲是完全相反的狀況：不是太用力，是閉不起來。\n(D) Asthenia 是 A，講的是聲音又細又沒力，萎縮或麻痺才會這樣。那不是 B 在量的東西。\n\nKeypoint：B3 就是漏氣很嚴重，而漏氣很嚴重就代表聲帶關不起來。\n\nReference: Hirano M. Clinical Examination of Voice. Springer-Verlag; 1981. Yamauchi EJ, Imaizumi S, Maruyama H, Haji T. Logoped Phoniatr Vocol. 2010;35(3):121-128. doi:10.3109/14015430903334269."
     },
     {
-      "title": "Step 4/6: 血管性病灶的特殊雷射治療 (Vascular Lesions & KTP Laser)",
-      "scenario": "你注意到患者左側聲帶有血管擴張 (Telangiectasia)。這類血管性病灶 (Vascular lesions) 常呈垂直於聲帶縱軸的分佈，容易因發聲創傷引發聲帶出血。",
-      "media": "載入圖片：聲帶表面的靜脈湖 (venous lakes) 與微血管擴張",
-      "question": "若決定使用雷射來處理聲帶表面這類微血管擴張的病灶，目前臨床上首選哪一種雷射，因為它能精準被「血紅素 (hemoglobin)」吸收，有效破壞血管同時降低對周圍黏膜的熱傷害 (thermal injury risk)？",
+      "title": "Step 4/6：Stroboscopy 看到什麼",
+      "scenario": "你做了 laryngoscopy 加 stroboscopy。\n\n左側聲帶前中三分之一交界處有一個單一、半透明、外突（exophytic）的病灶。右側聲帶光滑。兩側活動度完全正常。Glottic closure 不完全，病灶周圍呈現沙漏狀（hourglass）缺口。Mucosal wave 存在且對稱，連病灶本身上方也是。",
+      "media": "載入影片：發聲時的 videostroboscopy，不加標註。10 秒，靜音。圖說：「Stroboscopy」",
+      "question": "哪一個診斷符合這些發現？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 二氧化碳雷射 (CO2 Laser)"
+          "text": "(A) Vocal fold nodules：雙側對稱、位在 mid-membranous 點，通常單用 voice therapy 就會改善"
         },
         {
           "id": "B",
-          "text": "(B) 磷酸鈦鉀雷射 (KTP Laser)",
-          "correct": true
+          "text": "(B) Reinke's edema：雙側整段 membranous fold 瀰漫性息肉樣變化，與抽菸高度相關，會使慣用音調下降"
         },
         {
           "id": "C",
-          "text": "(C) 銣雅各雷射 (Nd:YAG Laser)"
+          "text": "(C) Vocal fold polyp：單側、半透明或出血性、外突，mucosal wave 通常保留，單用 voice therapy 效果差",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) Intracordal cyst：上皮下的包膜性病灶，病灶上方的 mucosal wave 通常減弱，對側常有 reactive lesion"
         }
       ],
-      "feedback": "正確答案：B\n\n術式解析： 一般的聲帶良性病灶使用冷器械 (cold instrumentation) 即可處理。但在面對血管性病灶 (Vascular ectasias) 時，KTP laser 具有極大優勢。因為 KTP 雷射的波長能被血紅素高度選擇性吸收，達到精準血管溶解 (angiolytic) 的效果，同時大幅降低周圍聲帶組織的熱傷害。"
+      "feedback": "正確答案：C\n\n單一顆、只長在一側、半透明、往外突，而且病灶上面的 mucosal wave 還在、左右對稱，閉合的缺口呈沙漏狀。會這樣是因為病灶長在很表淺的地方，沒有把下面幾層一起拉住，所以 wave 才傳得過去。那個沙漏狀的缺口，就是 Step 3 聽到嚴重氣息聲的原因。Polyp 通常不會靠 voice therapy 自己消掉，這也解釋了為什麼之前的藥物治療沒效，以及為什麼現在可以跟他談手術——同時要搭配 voice therapy，處理那個讓病灶長出來的大聲喊話。\n\n其他選項為什麼不對：\n(A) Nodules 是兩側都有、大致對稱，長在撞擊最厲害的 mid-membranous 點，而且它正好是 voice therapy 有效的那一種。單一顆往外突的病灶不是 nodule。\n(B) Reinke's edema 是兩側整段 membranous fold 瀰漫性的變化，不是局部一顆，而且典型的抱怨是聲音變低沉。他有抽菸史，會讓人很想選這個，但分布的型態完全不對。\n(D) Cyst 和 polyp 要不要分清楚，直接影響手術怎麼做，而分辨的關鍵就是 mucosal wave。Cyst 長在上皮下面，會把 cover 拉住，病灶上面的 wave 就會變弱。這裡的 wave 是好的。\n\nKeypoint：外觀讓你猜到診斷，mucosal wave 才幫你確定診斷。\n\nReference: Hirano M. Folia Phoniatr (Basel). 1974;26(2):89-94. 註：區分 polyp、nodule、Reinke's edema 和 cyst 的 stroboscopy 特徵來自共識描述，沒有單一試驗作為依據。"
     },
     {
-      "title": "Step 5/6: 喉顯微手術與微瓣技術 (Phonomicrosurgery & Microflap)",
-      "scenario": "患者決定接受手術，你安排了「喉顯微手術合併切片 (MLS with biopsy)」。由於患者有長達 40 年的抽菸史，切片是絕對必要的，以排除角化症 (Keratosis) 或惡性轉變 (malignant degeneration)。手術中你採用了「微瓣技術 (Microflap approach)」。",
-      "media": "載入圖片：Microflap approach，展示在病灶旁劃開上皮的步驟",
-      "question": "在執行 Microflap approach 移除黏膜下病灶 (如息肉) 時，最重要的手術核心原則是什麼？",
+      "title": "Step 5/6：在開刀房",
+      "scenario": "討論之後他選擇手術。\n\n你已經完成 subepithelial infusion，正在規劃上皮的切口。",
+      "media": "載入圖片：顯微喉鏡視野下的左側聲帶，病灶在術野中，不加標註。圖說：「Microlaryngoscopy」",
+      "question": "哪一種技術是正確的？為什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 大範圍切除病灶周圍的正常組織，以確保沒有殘留。"
+          "text": "(A) 連同周圍一圈正常黏膜一起切除，確保不留下顯微鏡下的殘餘病灶"
         },
         {
           "id": "B",
-          "text": "(B) 深切直到聲帶韌帶 (Vocal ligament) 與肌肉層，徹底挖除。"
+          "text": "(B) 在病灶外側切開上皮，在 superficial lamina propria 層內剝離取出病灶，再把保留下來的上皮重新覆蓋回去",
+          "correct": true
         },
         {
           "id": "C",
-          "text": "(C) 切口應盡量靠近病灶，剝離時盡可能維持在極淺的層次 (Staying in as superficial plane as possible)，並將對周圍組織的破壞降到最低。",
-          "correct": true
+          "text": "(C) 剝離深至 vocal ligament 和 thyroarytenoid muscle，確保黏膜下的成分被完全清除"
+        },
+        {
+          "id": "D",
+          "text": "(D) 用 CO2 laser 燒灼病灶，可以止血又不用處理檢體"
         }
       ],
-      "feedback": "正確答案：C\n\n手術地雷： Phonomicrosurgery 的精神就是「保留正常黏膜」。Microflap 的關鍵原則包括：在最靠近病灶處切開上皮、盡可能在極淺層剝離 (superficial plane)，並最小化對周圍組織的破壞 (minimal disrupting surrounding tissue)。過度切除會導致嚴重的聲帶結疤 (scar formation)，造成永久性發聲障礙。"
+      "feedback": "正確答案：B\n\nHirano 把聲帶分成三層：cover（上皮加 superficial lamina propria），是產生 mucosal wave 的那一層；transition，也就是 vocal ligament；body，也就是 thyroarytenoid muscle。關鍵在於 superficial lamina propria 一旦結疤就回不去了。所以切口開在病灶外側，剝離只停在剛好能把病灶挖出來的那一層，上皮是掀開再蓋回去，不是切掉。檢體一定要送病理：他現在還在抽菸，keratosis 或 dysplasia 長起來也可能是這種往外突的樣子。\n\n其他選項為什麼不對：\n(A) 連著一圈正常黏膜一起切，那是開癌症的思維。這顆是良性的，多切掉的都是還在振動的好組織，一點好處都沒有。\n(C) 剝到 ligament，等於把原本只在 cover 層的問題，變成 body 層的傷害，結果一定是結疤加上永久沙啞。\n(D) 燒掉就沒有檢體可以送病理了，而且雷射的熱剛好打在你最需要保護的那一層。以前的 vocal cord stripping 犯的就是同一個錯，只是規模更大，後來被淘汰也是因為這個。\n\n術前就要先講清楚：suspension 可能造成暫時的舌頭麻或味覺改變，通常一個月內會好；另外有少數病人開完聲音不會變好。\n\nKeypoint：把病灶拿掉，把 cover 留住——因為 superficial lamina propria 的疤是補不回來的。\n\nReference: Hirano M. Folia Phoniatr (Basel). 1974;26(2):89-94. 註：Microflap 技術來自顯微嗓音手術的技術文獻與共識，沒有單一隨機試驗作為依據。"
     },
     {
-      "title": "Step 6/6: 術後照護與併發症預防 (Post-op Care & Complications)",
-      "scenario": "手術順利結束，息肉被完整移除且微瓣復位良好。你在術後前往病房對患者進行出院衛教。",
-      "media": "載入圖片：術後禁聲 (Voice Rest) 與多喝水衛教圖",
-      "question": "關於喉顯微手術 (MLS) 的術後照護與潛在併發症，下列何項指導是正確且必須告知患者的？",
+      "title": "Step 6/6：回家之前",
+      "scenario": "手術順利。病灶取出，flap 覆蓋良好。病理報告為良性 vocal fold polyp 合併上皮下水腫，沒有 dysplasia。\n\n出院前你去看他。",
+      "media": "",
+      "question": "你會怎麼安排？要跟他說什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 術後需完全禁水三天以保護聲帶傷口。"
+          "text": "(A) 完全禁聲四週、禁食 72 小時，並給抗生素保護癒合中的邊緣"
         },
         {
           "id": "B",
-          "text": "(B) 術後需進行 2-14 天不等的「噤聲休息 (Voice rest)」，且需保持充足水分攝取；另外需注意插管與懸吊可能引起的暫時性舌神經損傷 (舌頭麻木或味覺改變)。",
-          "correct": true
+          "text": "(B) 不限制用聲，立刻恢復正常工作，因為病灶是良性而且已經完全切除"
         },
         {
           "id": "C",
-          "text": "(C) 術後保證聲音 100% 恢復，不會有任何變差的風險。"
+          "text": "(C) 完全禁聲約三天，加上常規的 PPI 和一個療程的 corticosteroid taper"
+        },
+        {
+          "id": "D",
+          "text": "(D) 完全禁聲約三天，之後在語言治療師指導下漸進式恢復用聲，加上補充水分、戒菸支持，以及處理工地的用聲負荷",
+          "correct": true
         }
       ],
-      "feedback": "正確答案：B\n\n臨床衛教： 術後絕對需要充分的 Voice rest (2-14天) 與保持身體水分充足，並常規使用胃藥 (PPI) 預防胃酸逆流刺激傷口。此外，必須在術前/術後告知病患，喉懸吊 (Suspension) 過程可能壓迫神經，導致暫時性的舌頭麻木或味覺改變 (Lingual nerve injury)，一般在一個月內會慢慢恢復。同時，仍有 1-2% 的患者術後聲音可能不會進步甚至變差。"
+      "feedback": "正確答案：D\n\n術後要禁聲多久，是嗓音手術裡少數有隨機試驗可以參考的問題，而結果並不支持禁得越久越好。Kaneko 把接受 microflap 的病人隨機分成完全禁聲 3 天和 7 天兩組，結果 3 天後就開始接受 voice therapy 的那一組，六個月時振動功能恢復得比較好。Fan 則是比較完全禁聲 7 天，和完全禁聲 3 天再相對禁聲 4 天，一個月時兩組沒有差別。看起來早期有節制地用聲，反而讓組織長得比較有秩序，不容易形成疤痕。\n\n另外，行為的處理和手術本身一樣重要。這顆息肉是在吵雜的工地一直大聲喊話喊出來的，手術並不會讓他不用再喊。\n\n其他選項為什麼不對：\n(A) 禁聲四週和上面兩個試驗的結果相反，而且聲音太久不用會退化、引發代償性的肌肉緊張，病人也很難真的做到。禁食和常規給抗生素則完全沒有必要。\n(B) 這個選項把漸進式恢復和用聲負荷的管理都省掉了，而那正是避免再長一顆的關鍵。\n(C) 禁聲三天這部分是對的，問題出在後面。不管有沒有適應症都給制酸劑和類固醇，就是 Step 1 那個錯誤又犯了一次。\n\n回診時記得再測一次 VHI-10。他術前是 24 分，要降 6 分以上才算真的有改善。\n\nKeypoint：短期禁聲加上早期治療，效果比長期不說話好；而能不能避免下一顆息肉，靠的是行為改變。\n\nReference: Kaneko M, Shiromoto O, Fujiu-Kurachi M, Kishimoto Y, Tateya I, Hirano S. J Voice. 2017;31(1):97-103. doi:10.1016/j.jvoice.2016.02.009. Fan RS, Yiu Y, Kulesz PA, et al. Laryngoscope. 2024;134(6):2812-2818. doi:10.1002/lary.31250."
     }
   ]
 }

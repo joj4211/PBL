@@ -1,114 +1,156 @@
 {
   "id": "nose_caudal_deviation",
-  "title": "The Complex Blockage: Beyond the Mucosa",
-  "subtitle": "Caudal deviation and nasal obstruction",
-  "description": "Internal nasal valve stenosis, functional rhinoplasty, grafting, turbinoplasty, and splinting.",
-  "estimatedTime": "20-30 minutes",
-  "difficulty": "Advanced",
+  "title": "Not Just the Lining",
+  "subtitle": "A blocked nose that a spray cannot fix, from the first visit to the second postoperative day",
+  "description": "Taking a history that separates lining from structure, reading a positive Cottle test, finding an S-shaped septum on endoscopy, planning three moves in one operation, how much septum to leave, protecting the inferior turbinate, and recognizing a septal hematoma on day two.",
+  "estimatedTime": "20-25 min",
+  "difficulty": "Intermediate",
   "tags": [
     "Rhinology",
-    "Nasal Obstruction",
-    "Functional Rhinoplasty",
-    "INV"
+    "Nasal obstruction",
+    "Functional rhinoplasty",
+    "Internal nasal valve"
   ],
   "steps": [
     {
-      "title": "Step 1/6: Initial Assessment & Differentiating Obstruction",
-      "scenario": "A 50-year-old male presents to your OPD reporting long-standing chronic nasal obstruction, intermittent nasal congestion, and watery rhinorrhea. His rTNSS score is CRIS\\_S:2000\\_1. The nasal mucosa appears boggy. He denies facial pressure or anosmia.",
-      "media": "Load image: Illustration of nasal airflow resistance and mucosal hypertrophy vs. structural deformity",
-      "question": "Before prescribing an intranasal corticosteroid spray (INCS), what simple in-office clinical step can help you distinguish if the obstruction is primarily due to reversible mucosal hypertrophy versus a fixed structural deformity?",
+      "title": "Step 1/7: The History",
+      "scenario": "A 50-year-old man comes to clinic with years of nasal obstruction. You start with the history.\n\nThe block is worse on the left, it is there every day, and it does not move from side to side, though the right is not fully clear either. He used an intranasal corticosteroid correctly for four months on his family doctor's advice and noticed almost no change. He also gets a watery nose some mornings. No facial pressure, no loss of smell.",
+      "media": "",
+      "question": "Which feature of the history points to a fixed structural cause rather than swollen lining?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Performing a Rinne and Weber test."
+          "text": "(A) The watery rhinorrhea in the mornings"
         },
         {
           "id": "B",
-          "text": "(B) Re-evaluating the nasal airway after the application of topical nasal decongestants.",
+          "text": "(B) A constant block on one side that does not switch sides and did not change after four months of a correctly used steroid spray",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) Ordering an immediate computed tomography (CT) scan of the sinuses."
+          "text": "(C) Symptoms lasting for years"
+        },
+        {
+          "id": "D",
+          "text": "(D) The absence of facial pressure"
         }
       ],
-      "feedback": "Correct Answer: B\n\nClinical Pearl: Significant improvement in nasal obstruction after the application of topical nasal decongestants indicates that mucosal elements (hypertrophy/congestion) play a major role\n\n. If the obstruction remains unchanged after decongestion, it strongly points to a fixed structural blockage, such as a deviated septum or valve collapse\n\n."
+      "feedback": "Correct answer: B\n\nSwollen lining behaves in a recognizable way. It follows the nasal cycle, so the block moves from side to side through the day. It fluctuates with the season, with lying down, with exercise. And it responds to a steroid spray. A block that sits on one side, every day, and ignores four months of correct treatment is behaving like something that does not move: a deviated septum, a narrow valve, or both. That is the history of a structural obstruction, and it tells you what to look for when you examine him.\n\nWhy the others fail:\n(A) A watery nose in the morning is a mucosal symptom, and he may well have some rhinitis alongside. But rhinitis alternates and responds to treatment. It does not explain a fixed left-sided block.\n(C) Duration alone does not distinguish. Allergic rhinitis also lasts for years.\n(D) No facial pressure argues against sinusitis, which is useful, but it does not tell you whether the remaining obstruction is lining or structure.\n\nKeypoint: a one-sided block that never moves and never responds to a spray is structural until proven otherwise.\n\nReference: Han JK, Stringer SP, Rosenfeld RM, et al. Clinical consensus statement: septoplasty with or without inferior turbinate reduction. Otolaryngol Head Neck Surg. 2015;153(5):708-720. doi:10.1177/0194599815606435. Clement PA, Gordts F; Standardisation Committee on Objective Assessment of the Nasal Airway, IRS, and ERS. Consensus report on acoustic rhinometry and rhinomanometry. Rhinology. 2005;43(3):169-179."
     },
     {
-      "title": "Step 2/6: Identifying the Structural Deficit (Anatomy)",
-      "scenario": "After 4 months of adequate INCS therapy, the patient reports only slight improvement. A structural evaluation with nasal endoscopy reveals significant caudal deviated nasal septum (DNS) to the left, high septal deviation, and bilateral internal nasal valve (INV) stenosis.",
-      "media": "Load diagram: Cross-sectional anatomy of the Internal Nasal Valve (INV)",
-      "question": "To properly understand and correct this patient's internal nasal valve stenosis, you must know its boundaries. Which of the following structures forms the superior/lateral boundary of the internal nasal valve?",
+      "title": "Step 2/7: The Cottle Test",
+      "scenario": "Before the endoscope, you test the nasal valve with your hands. You ask him to breathe in through the nose and rate the left side. Then you place a finger on his left cheek, draw the skin outward toward the ear, and ask him to breathe in again.\n\nHe says: better, clearly, but not all the way.\n\nYou try the modified Cottle on the left: a cotton-tipped probe under the upper lateral cartilage, then supporting the ala.\n\nHe says: better with the probe under the cartilage, and better again with it under the ala.",
+      "media": "Load image: Cottle maneuver, the examiner's fingers drawing the cheek laterally. Cummings Otolaryngology, 7th ed, Fig. 34-6, reproduced with Elsevier permission (obtain RightsLink license before deployment). Caption: 'Cottle maneuver. Reprinted from Kridel RWH et al. Cummings Otolaryngology, 7th ed. Elsevier; 2021, with permission.'",
+      "question": "How do you read these results, and what do they tell you about where the block is?",
       "options": [
         {
           "id": "A",
-          "text": "(A) The caudal margin of the upper lateral cartilage (ULC).",
+          "text": "(A) Classic Cottle positive, modified positive at both the upper lateral cartilage and the ala: the left internal valve is narrowed and the vestibule is obstructed too. Expect a valve problem and a caudal septal problem, and plan for both",
           "correct": true
         },
         {
           "id": "B",
-          "text": "(B) The medial crus of the lower lateral cartilage (LLC)."
+          "text": "(B) Positive on every test means the whole lateral wall has collapsed; alar batten grafts alone will fix it"
         },
         {
           "id": "C",
-          "text": "(C) The perpendicular plate of the ethmoid."
+          "text": "(C) Because he was not fully relieved, the tests are negative and the block is posterior"
+        },
+        {
+          "id": "D",
+          "text": "(D) The modified results are artifacts of the probe; only the classic Cottle counts"
         }
       ],
-      "feedback": "Correct Answer: A\n\nClinical Pearl: The internal nasal valve is the narrowest portion of the nasal airway\n\n. It is bounded medially by the cartilaginous septum, superiorly/laterally by the caudal aspect of the upper lateral cartilage (ULC), inferiorly by the floor of the nose, and posteriorly by the head of the inferior turbinate\n\n."
+      "feedback": "Correct answer: A\n\nWhat the two tests do. The classic Cottle draws the cheek laterally, which pulls the lateral nasal wall outward and widens the angle between the upper lateral cartilage and the septum: the internal nasal valve. The modified Cottle puts a probe inside the nose and supports one structure at a time: under the upper lateral cartilage to test the internal valve, under the ala to test the vestibule and external valve. It is the more specific of the two and the more useful for planning surgery.\n\nHow to read them. Classic positive means widening the internal valve helps, so the valve is narrowed. Modified positive under the upper lateral cartilage confirms it. Modified positive under the ala means the vestibule is also obstructed, and the thing filling a vestibule is usually a dislocated caudal septum. Clear improvement that stops short of full relief means more than one site is contributing.\n\nHis result. Pulling the cheek helped clearly, so the left internal valve is narrow. The probe under the upper lateral cartilage helped, confirming it. The probe under the ala helped again, so the vestibule is blocked as well. Two sites, and the second is where a caudal septum would be. Before you have put the scope in, the examination is already telling you the operation will need to open the left valve and reposition the caudal septum, and that a single maneuver at either site alone will not be enough.\n\nWhy the others fail:\n(B) Positive tests localize the problem to the valve and vestibule. They do not say the lateral wall has collapsed; the wall may be fine and the septum pushing into it. Alar battens treat a collapsing external valve on inspiration, which is not what you found.\n(C) Incomplete relief is not a negative test. He improved clearly on each maneuver. Negative means no change, and there was change every time.\n(D) The modified Cottle is the more specific test, not an artifact, and it is what separated the valve from the vestibule here.\n\nKeypoint: classic positive plus modified positive at both sites means the valve and the vestibule are both blocked; plan for both.\n\nReference: Cottle MH. Rhino-sphygmo-manometry: an aid in physical diagnosis. Int Rhinol. 1968;6:7-26. Rhee JS, Poetker DM, Smith TL, et al. Nasal valve surgery improves disease-specific quality of life. Laryngoscope. 2005;115(3):437-440. Kasperbauer JL, Kern EB. Nasal valve physiology: implications in nasal surgery. Otolaryngol Clin North Am. 1987;20(4):699-719. Kridel RWH, Kelly PE, Holzapfel AM. The nasal septum. In: Flint PW, Francis HW, Haughey BH, et al, eds. Cummings Otolaryngology: Head and Neck Surgery. 7th ed. Philadelphia, PA: Elsevier; 2021:484, Fig. 34-6. Reprinted with permission from Elsevier. Confirm edition and chapter number against the title page."
     },
     {
-      "title": "Step 3/6: Interactive Challenge - Physical Examination",
-      "scenario": "You want to physically demonstrate the dynamic contribution of the nasal valve stenosis to the patient's symptoms before recommending functional rhinoplasty.",
-      "media": "Load interactive animation: A patient's face where the user must drag their finger to perform a clinical maneuver",
-      "question": "Which classic physical examination maneuver involves placing lateral traction on the patient's cheek to open the nasal valve, and what does a \"negative\" result mean?",
+      "title": "Step 3/7: The Endoscopy",
+      "scenario": "You pass a rigid endoscope:\n\n    Caudal septal deviation to the left, with left nasal valve stenosis\n    Posterior septal deviation to the right\n    Bilateral inferior turbinate hypertrophy\n\nHis complaint is a fixed block, worse on the left, and both Cottle tests were positive on that side.",
+      "media": "Load image: Endoscopic views of both nasal cavities, unannotated: left, caudal septum in the vestibule with a narrow valve angle; right, posterior septal deviation. Caption: 'Left and right.'",
+      "question": "Where is the narrowest point of the nasal airway, and what is narrowing it in this patient?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Valsalva Maneuver; a negative test means the eustachian tube is blocked."
+          "text": "(A) The nostril (external nasal valve); the enlarged turbinate is pushing the ala inward"
         },
         {
           "id": "B",
-          "text": "(B) Cottle's Maneuver; a negative test suggests the cause of the blockage does NOT rest in the lateral nasal wall.",
+          "text": "(B) The posterior choana; the posterior septal deviation is blocking it"
+        },
+        {
+          "id": "C",
+          "text": "(C) The olfactory cleft; the high septum is closing it"
+        },
+        {
+          "id": "D",
+          "text": "(D) The internal nasal valve, between the septum and the upper lateral cartilage; on the left the caudal septal deviation has closed that angle",
+          "correct": true
+        }
+      ],
+      "feedback": "Correct answer: D\n\nThe internal nasal valve is the narrowest part of the airway, so it is where a small change makes the biggest difference. Its walls are the septum on the inside, the upper lateral cartilage on the outside, the floor below, and the head of the inferior turbinate behind. The normal angle between septum and upper lateral cartilage is 10 to 15 degrees.\n\nOn his left, the caudal septum has moved into that valve from the inside and closed the angle. That is his left nasal valve stenosis, and it is why the left is his worse side. It also fits the Cottle results: pulling the cheek opened the angle a little, and supporting the ala made room in the vestibule.\n\nThe posterior deviation to the right is real and will be fixed, but it sits behind the valve where the airway is wider, so it costs him less and it is on the other side. The turbinates are enlarged and will be reduced, but they sit behind the valve too.\n\nWhy the others fail:\n(A) The external valve is the nostril opening, framed by the ala and the columella. It is not the narrowest point, and turbinates sit far behind it and cannot push the ala.\n(B) The choana is at the back of the nose and is wide. The posterior deviation is real, but it narrows the right cavity in front of the choana, and it is not the narrowest point of the airway.\n(C) The olfactory cleft is narrow but it is not a breathing passage, and he has no high deviation and no smell complaint.\n\nKeypoint: the narrowest point of the nasal airway is the internal nasal valve, the angle between the septum and the upper lateral cartilage; his caudal septum has closed that angle on the left.\n\nReference: Kasperbauer JL, Kern EB. Nasal valve physiology: implications in nasal surgery. Otolaryngol Clin North Am. 1987;20(4):699-719. Rhee JS, Poetker DM, Smith TL, et al. Nasal valve surgery improves disease-specific quality of life. Laryngoscope. 2005;115(3):437-440. Han JK, Stringer SP, Rosenfeld RM, et al. Clinical consensus statement: septoplasty with or without inferior turbinate reduction. Otolaryngol Head Neck Surg. 2015;153(5):708-720. doi:10.1177/0194599815606435. Daniel RK, Pálházi P. Septum, turbinates, valves. In: Rhinoplasty: An Anatomical and Clinical Atlas. Cham, Switzerland: Springer; 2018:193, Fig. 4.31. Reprinted with permission from Springer Nature."
+    },
+    {
+      "title": "Step 4/7: The Operation",
+      "scenario": "Caudal septal deviation to the left with a narrow left internal valve, and a posterior septal deviation to the right. The cartilage is thin. You plan an open functional rhinoplasty.",
+      "media": "Load image: Intraoperative photograph, open approach, unannotated: spreader grafts sutured between the dorsal septum and the upper lateral cartilages, with the caudal septum repositioned over the anterior nasal spine. Caption: 'Spreaders and caudal septum.'",
+      "question": "What does the operation need to do?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Resect the dislocated caudal centimeter and the posterior deviation, and close"
+        },
+        {
+          "id": "B",
+          "text": "(B) Spreader grafts alone; they will open the valve and the rest will follow"
+        },
+        {
+          "id": "C",
+          "text": "(C) Three things: remove the posterior deviated segment behind the L-strut, which straightens the right side and supplies the graft material; reposition the caudal septum onto the spine and fix it with a batten cut from that material; and place spreader grafts between the dorsal septum and the upper lateral cartilages to open the left valve",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) Score the concave side of the caudal septum until it straightens, and leave the posterior deviation"
+        }
+      ],
+      "feedback": "Correct answer: C\n\nThree lesions, three moves, and the order matters because the first move supplies the other two.\n\nThe posterior deviation first. It sits behind the L-strut, so it can simply be removed, and removing it straightens the right side. The cartilage and bone that come out are the stock for everything that follows: they are cut into the spreader grafts and the batten. Nothing can be sutured in until this has been harvested, so it is where the operation begins. Step 5 is about how much can be taken.\n\nThe caudal septum second, because it is the foundation for the tip. Release it from its false position off the spine, bring it back to the midline over the anterior nasal spine, suture it to the periosteum so it cannot swing back, and splint it with a batten from the harvested cartilage or, for the strongest support in a thin septum, a bony batten from the perpendicular plate of the ethmoid. A caudal septal extension graft does the same job when the septum also needs length. Never resect the caudal strut.\n\nThe valve third. Spreader grafts are strips of the harvested cartilage placed between the dorsal septum and the upper lateral cartilages and sutured through all three. They straighten a deviated dorsal septum and widen the internal nasal valve angle from the dorsal, middle-vault side. That is the lesion the classic Cottle found on the left. In a thin septum, an extended spreader that reaches forward to the caudal septum also stiffens the whole dorsal strut, and where the midline itself is displaced, a caudal septal extension graft with a single extended spreader on the concave side sets a new center.\n\nWhy the others fail:\n(A) The posterior segment can be resected, and is. The caudal one cannot: it holds the tip, and taking it drops the tip, retracts the columella, and trades a deviation for a saddle.\n(B) Spreaders open the valve from the dorsal side. They do not move a caudal septum that is sitting in the vestibule, and they do nothing for a posterior deviation on the other side. The Cottle told you there were two sites; one graft treats one.\n(D) Scoring weakens cartilage that is already thin and cartilage memory pulls it back. And leaving the posterior deviation leaves the right side blocked.\n\nKeypoint: harvest the posterior deviation, reposition and fix the caudal septum, spread the valve; three lesions, three moves, and the harvest comes first because it feeds the other two.\n\nReference: Han JK, Stringer SP, Rosenfeld RM, et al. Clinical consensus statement: septoplasty with or without inferior turbinate reduction. Otolaryngol Head Neck Surg. 2015;153(5):708-720. doi:10.1177/0194599815606435. Sheen JH. Spreader graft: a method of reconstructing the roof of the middle nasal vault following rhinoplasty. Plast Reconstr Surg. 1984;73(2):230-239. Gubisch W. Twenty-five years experience with extracorporeal septoplasty. Facial Plast Surg. 2006;22(4):230-239. Chung YS, Seol JH, Choi JM, et al. How to resolve the caudal septal deviation? Clinical outcomes after septoplasty with bony batten grafting. Laryngoscope. 2014;124(8):1771-1776. Kim D, Nam SH, Al-harethy S, et al. Surgical outcomes of bony batten to correct caudal septal deviation in septoplasty. JAMA Facial Plast Surg. 2017;19(6):470-475. Chen YY, Kim SA, Jang YJ. Centering a deviated nose by caudal septal extension graft and unilaterally extended spreader grafts. Ann Otol Rhinol Laryngol. 2020;129(5):448-455. doi:10.1177/0003489419894617."
+    },
+    {
+      "title": "Step 5/7: How Much Septum to Leave",
+      "scenario": "You are inside the septum. The posterior deviated segment is coming out anyway, and it is the cartilage you will use for the spreader grafts and the batten. You need to know how much you can take.",
+      "media": "Load image: Your own line drawing of the quadrangular cartilage in profile, unannotated: dorsal edge, caudal edge, keystone junction with the nasal bones, and the anterior nasal spine. Caption: 'Septum in profile.'",
+      "question": "How much septum must you leave behind?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) None; the mucoperichondrial flaps hold the nose up"
+        },
+        {
+          "id": "B",
+          "text": "(B) An L-shaped strut of at least 10 mm along both the dorsal and the caudal edge, kept attached at the keystone and at the spine",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) Modified Cottle's Maneuver; a negative test proves the septum is perfectly straight."
+          "text": "(C) An L-shaped strut of 5 to 8 mm along each edge; that is enough in a small nose"
+        },
+        {
+          "id": "D",
+          "text": "(D) The caudal strut only, since that is what holds the tip"
         }
       ],
-      "feedback": "Correct Answer: B\n\nClinical Pearl: The Cottle maneuver involves pulling the cheek skin laterally. Relief of obstruction with this maneuver pinpoints the issue to the nasal valve area\n\n. However, a negative Cottle's test is often more informative, suggesting that the cause of the nasal blockage does NOT rest in the lateral nasal wall, but rather in the septum or deeper structures\n\n."
+      "feedback": "Correct answer: B\n\nThe septum holds the nose up in two directions. The dorsal strut supports the middle vault: lose it and the dorsum drops into a saddle. The caudal strut supports the tip: lose it and the tip falls, the columella retracts, and the nose looks shorter. The L-strut is the part of the quadrangular cartilage that keeps both jobs, and the two places it must stay attached are the keystone, where cartilage meets nasal bone, and the anterior nasal spine. The usual minimum is 10 mm along each limb; in thin Asian cartilage 15 mm is safer. Everything posterior and inferior to that L can be harvested, and in his case that includes the deviated posterior segment: removing it straightens the right side and supplies the grafts for the left, one move doing two jobs.\n\nWhen the septum is not enough, which is common in Asian noses, you do not take more of the L-strut. You go elsewhere: conchal cartilage, or a bony batten from the perpendicular plate of the ethmoid.\n\nWhy the others fail:\n(A) The flaps are lining, not structure. A nose without an L-strut collapses.\n(C) This is the trap. An L of 5 to 8 mm looks like a strut and is not one. Below 10 mm the cartilage flexes under the load of the dorsum and the tip, and over months it warps or fractures. Ten millimeters is the minimum on each limb whatever the size of the nose, and in thin Asian cartilage 15 mm is safer.\n(D) The caudal strut alone leaves nothing under the middle vault. Both limbs are needed, and the corner between them at the keystone is the most important part.\n\nKeypoint: leave an L, at least 10 to 15 mm on each limb, attached at the keystone and the spine; when you need more cartilage, take it from somewhere else.\n\nReference: Gubisch W. Twenty-five years experience with extracorporeal septoplasty. Facial Plast Surg. 2006;22(4):230-239. Han JK, Stringer SP, Rosenfeld RM, et al. Clinical consensus statement: septoplasty with or without inferior turbinate reduction. Otolaryngol Head Neck Surg. 2015;153(5):708-720. doi:10.1177/0194599815606435."
     },
     {
-      "title": "Step 4/6: Surgical Strategy & Grafting Techniques",
-      "scenario": "Due to the severe caudal and high dorsal septal deviation causing valve stenosis, standard submucosal resection (SMR) is insufficient. You plan a functional rhinoplasty (open approach).",
-      "media": "Load illustration: Placement of Spreader Grafts vs. Alar Batten Grafts",
-      "question": "To correct the high dorsal deviation and simultaneously widen the angle of the internal nasal valve, which specific grafting technique should you utilize during the functional rhinoplasty?",
+      "title": "Step 6/7: The Turbinate",
+      "scenario": "His inferior turbinates are enlarged and are part of the picture. You will reduce them in the same operation as the septum and the valve.\n\nYou choose a submucosal technique rather than removing the turbinate.",
+      "media": "Load image: Endoscopic view of submucosal inferior turbinate reduction, mucosa preserved, unannotated. Caption: 'Submucosal reduction.'",
+      "question": "Which complication are you avoiding by preserving the mucosa?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Columellar strut graft"
-        },
-        {
-          "id": "B",
-          "text": "(B) Spreader grafts",
-          "correct": true
-        },
-        {
-          "id": "C",
-          "text": "(C) Alar batten grafts"
-        }
-      ],
-      "feedback": "Correct Answer: B\n\nClinical Pearl: Spreader grafts (typically harvested from the quadrangular cartilage) are placed in a submucosal pocket between the septum and the upper lateral cartilages (ULC)\n\n. They are the gold standard for reconstructing the dorsal \"T\" junction, splinting dorsal deviations, and effectively widening the internal nasal valve angle\n\n. Alar batten grafts, on the other hand, are used to strengthen the external nasal valve\n\n."
-    },
-    {
-      "title": "Step 5/6: Addressing the Turbinates (Surgical Pitfalls)",
-      "scenario": "While correcting the septum and valves, you must also perform a bilateral submucosal turbinoplasty (SMT) to address his refractory chronic hypertrophic rhinitis (CHR).",
-      "media": "Load image: Endoscopic view of a microdebrider reducing the inferior turbinate",
-      "question": "As a surgeon, you choose a conservative submucosal approach (like using a microdebrider) rather than performing an aggressive total inferior turbinectomy. What debilitating postoperative complication are you trying to avoid?",
-      "options": [
-        {
-          "id": "A",
-          "text": "(A) Cerebrospinal fluid (CSF) rhinorrhea"
+          "text": "(A) Cerebrospinal fluid leak"
         },
         {
           "id": "B",
@@ -116,33 +158,41 @@
         },
         {
           "id": "C",
-          "text": "(C) Empty nose syndrome (loss of sensation of airflow)",
+          "text": "(C) Anosmia"
+        },
+        {
+          "id": "D",
+          "text": "(D) Empty nose syndrome",
           "correct": true
         }
       ],
-      "feedback": "Correct Answer: C\n\nClinical Pearl: The inferior turbinate mucosa must be spared as much as possible\n\n. Over-aggressive resection or complete removal of the inferior turbinate can lead to a paradoxical sensation of severe nasal obstruction despite a wide-open airway, known as \"Empty Nose Syndrome\" (or rhinitis sicca)\n\n."
+      "feedback": "Correct answer: D\n\nThe inferior turbinate is not just a lump in the airway. Its mucosa warms and humidifies air and, more importantly, senses it: the feeling of breathing through the nose comes from receptors in that lining. Remove too much and you get a paradox. The airway is wide open on the scope, and the patient says he cannot breathe. That is empty nose syndrome, and there is no good treatment for it. So the turbinate is reduced from underneath, taking bone and submucosal tissue and leaving the surface intact. The consensus statement says the same: when the turbinate is reduced, the mucosa should be preserved.\n\nWhy the others fail:\n(A) A CSF leak comes from the skull base, well above the inferior turbinate. It is not a turbinate surgery complication.\n(B) Toxic shock is a complication of prolonged nasal packing, not of how much turbinate is removed. It is one of the reasons packing is avoided in Step 6.\n(C) Smell lives on the olfactory cleft, high in the nose. The inferior turbinate does not carry it.\n\nKeypoint: reduce the turbinate from underneath and keep the lining; a wide nose that cannot feel air is worse than the block you started with.\n\nReference: Han JK, Stringer SP, Rosenfeld RM, et al. Otolaryngol Head Neck Surg. 2015;153(5):708-720. doi:10.1177/0194599815606435. Coste A, Dessi P, Serrano E. Empty nose syndrome. Eur Ann Otorhinolaryngol Head Neck Dis. 2012;129(2):93-97."
     },
     {
-      "title": "Step 6/6: Post-Operative Management & Splinting",
-      "scenario": "The functional rhinoplasty and bilateral SMT are completed. You want to ensure the septal flaps adhere properly, prevent hematomas, and avoid the severe discomfort of traditional nasal packing.",
-      "media": "Load image: Doyle splints and septal quilting sutures in place",
-      "question": "Based on modern rhinologic practices, what is the preferred method to prevent postoperative septal hematoma and synechiae while sparing the patient the discomfort of nasal packing?",
+      "title": "Step 7/7: Day Two",
+      "scenario": "Septum straightened and grafted, valves open, turbinates reduced. You placed septal splints and sent him home the same day, breathing through his nose.\n\nOn the second postoperative day he calls. Both sides have blocked up completely since last night, and the pain across the bridge is worse than yesterday.",
+      "media": "Load image: Endoscopic view of a septal hematoma, unannotated: smooth, bulging, bluish swelling of the septum on both sides. Caption: 'Day two.'",
+      "question": "What do you do?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Using septal quilting sutures or inserting soft silicone septal splints (e.g., Doyle splints).",
+          "text": "(A) See him today and look at the septum. A bilateral fluctuant swelling is a hematoma: incise and drain it, close the dead space with quilting sutures or splints, cover with an anti-staphylococcal antibiotic, and see him again within one to two days",
           "correct": true
         },
         {
           "id": "B",
-          "text": "(B) Prescribing 4 weeks of high-dose systemic corticosteroids."
+          "text": "(B) Reassure him; swelling and blockage are expected for the first week"
         },
         {
           "id": "C",
-          "text": "(C) Leaving the mucoperichondrial flaps completely open to drain freely."
+          "text": "(C) Aspirate it with a needle in clinic and send him home"
+        },
+        {
+          "id": "D",
+          "text": "(D) Start oral antibiotics by phone and review at the planned one-week visit"
         }
       ],
-      "feedback": "Correct Answer: A\n\nClinical Pearl: Careful dissection minimizes bleeding, frequently obviating the need for uncomfortable nasal packing\n\n. Septal quilting sutures have demonstrated a great reduction in postoperative hematomas and improved patient satisfaction\n\n. Alternatively, soft septal splints (like Doyle splints) compress the flaps, eliminate the need for packing, prevent hematoma, and prevent synechiae (adhesions) between the septum and newly operated turbinates"
+      "feedback": "Correct answer: A\n\nA nose that was open on the day of surgery and has closed on both sides by day two is a septal hematoma until you have looked and proved otherwise. Blood collects between the cartilage and the mucoperichondrial flap. The cartilage has no blood supply of its own; it lives off that flap, and once the flap is lifted away the cartilage starts to die. Left alone, the collection becomes an abscess within days, and the end result is a saddle nose. The examination takes a minute: a smooth, bulging, often bluish swelling of the septum, soft to a probe, usually on both sides because blood tracks across the dissection plane.\n\nManagement is the same everywhere. In a systematic review of 503 patients, every case was treated by incision and drainage. A short inferior mucosal incision on one or both sides, evacuate the clot, then close the dead space so it cannot refill: through-and-through quilting sutures or splints pressed against both flaps, either one, the point is to hold the flap back down on the cartilage. Cover with an anti-staphylococcal antibiotic while the splints are in, because the space is now at risk of infection. If you find pus instead of blood, or he has a fever, it has already become an abscess: culture it, leave a small drain, and continue antibiotics until it stops draining. A hematoma on its own does not cause fever; fever means it is infected. Then see him again in one to two days to make sure it has not reaccumulated; in the review the re-collection rate was 3.6 percent.\n\nWhy the others fail:\n(B) Some congestion in week one is normal. Complete bilateral obstruction that appeared overnight, with pain getting worse instead of better, is not.\n(C) Needle aspiration on its own is often not enough; clot re-forms and the space refills. A formal incision that lets it drain, followed by closure of the dead space, is what holds.\n(D) Antibiotics do not drain a hematoma. By the one-week visit the cartilage may already be lost.\n\nKeypoint: bilateral obstruction after septoplasty that gets worse instead of better is a hematoma until proven otherwise; drain it today, close the space, and look again in two days.\n\nReference: Jackson R, Jia W, Edafe O. Evaluation of the management of nasal septal haematoma and abscess: a systematic review. J Laryngol Otol. 2025. PMID: 39434415. Han JK, Stringer SP, Rosenfeld RM, et al. Clinical consensus statement: septoplasty with or without inferior turbinate reduction. Otolaryngol Head Neck Surg. 2015;153(5):708-720. doi:10.1177/0194599815606435. Cheng LH, Wu PC, Shih CP, et al. Nasal septal abscess: a 10-year retrospective study. Eur Arch Otorhinolaryngol. 2019. doi:10.1007/s00405-018-5212-0."
     }
   ]
 }

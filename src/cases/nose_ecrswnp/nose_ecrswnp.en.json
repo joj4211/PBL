@@ -1,148 +1,199 @@
 {
-  "id": "nose_ecrswnp",
-  "title": "The Silent Polyposis",
-  "subtitle": "Eosinophilic CRS with Nasal Polyps",
-  "description": "eCRSwNP, Type 2 CRS, imaging, biomarkers, surgical strategy, and postoperative care.",
-  "estimatedTime": "20-30 min",
-  "difficulty": "Advanced",
+  "id": "nose_crswnp_biologics",
+  "title": "The Nose That Keeps Closing",
+  "subtitle": "A man who cannot smell, from the first scope to the choice of a biologic",
+  "description": "Reading the endoscopy, deciding whether he needs a CT, defining type 2 inflammation, appropriate medical therapy, when surgery comes, whether he qualifies for a biologic under EPOS/EUFOREA 2023, and how to choose one.",
+  "estimatedTime": "20-25 min",
+  "difficulty": "Intermediate",
   "tags": [
     "Rhinology",
-    "CRSwNP",
-    "Type 2 CRS",
-    "FESS"
+    "Chronic rhinosinusitis",
+    "Type 2 inflammation",
+    "Biologics",
+    "EPOS/EUFOREA 2023"
   ],
   "steps": [
     {
-      "title": "Step 1/6: Clinical Presentation & EPOS Criteria",
-      "scenario": "A 45-year-old man comes to clinic. He has no significant underlying disease. He reports bilateral nasal obstruction, especially on the right side, for many years. However, he denies purulent rhinorrhea, hyposmia, facial fullness or pain, postnasal drip, or allergic symptoms. His SNOT-22 total score is unusually low, only 6. However, physical examination and nasal endoscopy clearly show bilateral nasal polyps, bilateral inferior turbinate hypertrophy, and septal deviation.",
-      "media": "Load chart: EPOS Table 94.1 Clinical definition of rhinosinusitis",
-      "question": "Despite the very low SNOT-22 score and lack of symptoms such as facial pain or smell loss, does this patient meet the clinical diagnostic criteria for chronic rhinosinusitis (CRS) according to EPOS?",
+      "title": "Step 1/7: What the Scope Shows",
+      "scenario": "A 48-year-old man is referred with a year of bilateral nasal obstruction and loss of smell. He has asthma on a daily inhaled corticosteroid. He has been using a steroid nasal spray for six months without much change.\n\nYou pass the endoscope.",
+      "media": "Load image: Nasal endoscopy, unannotated: smooth, gray, glistening masses filling both middle meatuses. Caption: 'First visit.'",
+      "question": "What does the endoscopy show, and what is it most consistent with?",
       "options": [
         {
           "id": "A",
-          "text": "(A) No. CRS requires nasal obstruction, purulent nasal discharge, and facial pain all at the same time."
-        },
-        {
-          "id": "B",
-          "text": "(B) Yes. He has a major symptom, nasal obstruction, for more than 12 weeks, plus objective endoscopic evidence of nasal polyps.",
+          "text": "(A) Bilateral smooth gray masses in the middle meatuses, consistent with chronic rhinosinusitis with nasal polyps",
           "correct": true
         },
         {
+          "id": "B",
+          "text": "(B) Pale, swollen inferior turbinates with clear secretion, consistent with allergic rhinitis"
+        },
+        {
           "id": "C",
-          "text": "(C) No. His SNOT-22 score is only 6, below the disease severity threshold."
+          "text": "(C) A unilateral fleshy mass with surface bleeding, which needs biopsy before anything else"
+        },
+        {
+          "id": "D",
+          "text": "(D) Dark red, congested turbinates, consistent with rebound from a decongestant spray"
         }
       ],
-      "feedback": "Correct answer: B\n\nExplanation: According to EPOS criteria, rhinosinusitis requires at least one major subjective symptom, nasal blockage/obstruction or nasal discharge, together with objective evidence on endoscopy, such as nasal polyps, or CT changes for more than 3 months.\n\nAlthough this patient has only one subjective symptom, he has clear objective bilateral nasal polyps, so the diagnosis of CRS is established."
+      "feedback": "Correct answer: A\n\nPolyps are smooth, gray, glistening, and they do not hurt when you touch them. They come from the middle meatus, and in chronic rhinosinusitis with nasal polyps they are on both sides. Bilateral polyps in an adult with asthma and loss of smell is a recognizable picture before any test comes back.\n\nWhy the others fail:\n(B) The allergic nose has pale, wet, swollen turbinates. Polyps sit higher, in the middle meatus, and look nothing like a turbinate.\n(C) A unilateral mass is a different problem. One-sided disease, surface bleeding, or bone destruction on imaging is a mass until proven otherwise, and it is biopsied before treatment. His disease is on both sides, and that is what makes it polyps rather than a tumor.\n(D) Rebound congestion is a turbinate finding, not a middle meatus finding, and the mucosa is red and dry, not gray and wet.\n\nKeypoint: bilateral, gray, glistening, in the middle meatus: polyps. Unilateral: biopsy.\n\nReference: Fokkens WJ, Lund VJ, Hopkins C, et al. European Position Paper on Rhinosinusitis and Nasal Polyps 2020. Rhinology. 2020;58(Suppl S29):1-464."
     },
     {
-      "title": "Step 2/6: CT Imaging & Differential Diagnosis",
-      "scenario": "For further evaluation, you arrange sinus CT. The report shows soft tissue density in the bilateral nasal cavities, ostiomeatal complexes (OMC), bilateral ethmoid sinuses, maxillary sinuses, and sphenoid sinuses. More notably, the soft tissue contains **high density and/or faint calcification**.",
-      "media": "Load image: Figure 94.4 CT showing high-density/faint calcification within the sinuses",
-      "question": "When high-density shadows, double density signs, or calcification are seen on CT in a patient with diffuse nasal polyps, which subtype or pathologic feature is most strongly suggested?",
+      "title": "Step 2/7: Does He Need a CT",
+      "scenario": "He has had nasal obstruction and loss of smell for more than 12 weeks, and you have seen polyps in both middle meatuses. That is chronic rhinosinusitis with nasal polyps by definition.\n\nHe asks whether he needs a scan.",
+      "media": "",
+      "question": "What do you tell him?",
       "options": [
         {
           "id": "A",
-          "text": "(A) A specific manifestation of cystic fibrosis"
+          "text": "(A) Yes, a CT is required before the diagnosis can be made"
         },
         {
           "id": "B",
-          "text": "(B) Eosinophilic mucin or fungal antigen deposition in allergic fungal rhinosinusitis (AFRS)",
+          "text": "(B) Not now. The diagnosis is made on symptoms plus endoscopy. CT is for planning surgery or when endoscopy is inconclusive",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) Early bony erosion from inverted papilloma"
+          "text": "(C) Yes, an MRI, because it shows soft tissue better than CT"
+        },
+        {
+          "id": "D",
+          "text": "(D) No imaging is ever needed for polyps"
         }
       ],
-      "feedback": "Correct answer: B\n\nExplanation: Double density signs or faint calcification on CT are typical features of AFRS or aspirin-exacerbated respiratory disease (AERD). These high-density areas usually represent extremely thick granular eosinophilic mucin or fungal antigen deposition.\n\nThis suggests that a strong Type 2 immune response may be involved in this patient."
+      "feedback": "Correct answer: B\n\nEPOS 2020 defines chronic rhinosinusitis as two or more symptoms for 12 weeks or longer, one of which is nasal obstruction or discharge, with or without facial pain and loss of smell, plus objective evidence: endoscopic signs or CT changes. You already have the objective evidence. Bilateral polyps on endoscopy make the diagnosis; a CT would only confirm what you can see. CT earns its place later, to map the extent of disease with the Lund-Mackay score and to plan surgery, or at the start if endoscopy is normal and you still suspect sinus disease.\n\nWhy the others fail:\n(A) Endoscopy is one of the two accepted forms of objective evidence. When it is positive, CT is not required for the diagnosis.\n(C) MRI does not show bone, which is what surgery needs, and it overcalls mucosal thickening. CT is the imaging of choice for the sinuses.\n(D) Imaging is not needed now. It is needed before surgery, and it should be done if endoscopy is inconclusive or if there is anything to suggest a mass or complication.\n\nKeypoint: symptoms for 12 weeks plus polyps on endoscopy is the diagnosis; CT comes when you are planning to operate.\n\nReference: Fokkens WJ, Lund VJ, Hopkins C, et al. Rhinology. 2020;58(Suppl S29):1-464. Orlandi RR, Kingdom TT, Smith TL, et al. International consensus statement on allergy and rhinology: rhinosinusitis 2021. Int Forum Allergy Rhinol. 2021;11(3):213-739."
     },
     {
-      "title": "Step 3/6: Biomarkers & Endotyping",
-      "scenario": "To confirm your suspicion, you arrange blood tests. The pre-lab results show a total eosinophil count of 377, while IgE (109) and ECP (4.99) are within normal limits. You classify this patient as eosinophilic chronic rhinosinusitis with nasal polyps (eCRSwNP / Type 2 CRS).",
-      "media": "Load chart: Identifying Biomarkers in Type 2 CRS pie chart",
-      "question": "Regarding biomarkers in Type 2 inflammation, which statement about eosinophil cationic protein (ECP) is correct?",
+      "title": "Step 3/7: What Kind of Inflammation",
+      "scenario": "Before starting treatment you send blood and take a swab of secretion from the middle meatus:\n\n    Blood eosinophils            420 cells/uL\n    Total IgE                    180 kU/L\n    Specific IgE, mite           class 3\n    Nasal secretion ECP          96 ug/mL",
+      "media": "",
+      "question": "Is this type 2 inflammation, and on what basis?",
       "options": [
         {
           "id": "A",
-          "text": "(A) ECP is a cytotoxic protein stored in eosinophil granules and released by activated eosinophils; high preoperative levels suggest a higher risk of polyp recurrence.",
-          "correct": true
+          "text": "(A) It cannot be determined without polyp tissue"
         },
         {
           "id": "B",
-          "text": "(B) ECP is an exotoxin found only on the surface of fungi and rises only with fungal infection."
+          "text": "(B) Yes, because the specific IgE to mite is positive"
         },
         {
           "id": "C",
-          "text": "(C) If ECP is within the normal range, Type 2 inflammation can be completely excluded."
+          "text": "(C) Yes, because the secretion ECP is above the cutoff; that is the criterion the guidelines use"
+        },
+        {
+          "id": "D",
+          "text": "(D) Yes. Blood eosinophils of 150 or more, or total IgE of 100 or more, each count on their own; the raised ECP supports it but is not itself a criterion",
+          "correct": true
         }
       ],
-      "feedback": "Correct answer: A\n\nExplanation: ECP, eosinophil cationic protein, is a toxic protein stored in eosinophil granules and released by activated eosinophils. High preoperative ECP predicts a higher risk of nasal polyp recurrence after endoscopic sinus surgery (ESS).\n\nAlthough ECP is normal in this case, the peripheral blood eosinophil count of 377 still strongly suggests Type 2 inflammation, a phenotype often associated with high recurrence rates."
+      "feedback": "Correct answer: D\n\nYes. EPOS/EUFOREA 2023 accepts any one of three markers as evidence of type 2 inflammation: tissue eosinophils of 10 or more per high-power field, blood eosinophils of 150 or more per microliter, or total serum IgE of 100 kU/L or more. He clears two of the three without any tissue. The ECP agrees with them, and that is worth having, but it is not what qualifies him.\n\nWhat is happening in the polyp. A damaged epithelial barrier releases alarmins, mainly TSLP, IL-33 and IL-25, which switch on group 2 innate lymphoid cells and Th2 cells. Those cells make IL-4, IL-5 and IL-13. IL-5 recruits eosinophils and keeps them alive; IL-4 and IL-13 drive local IgE and mucus. The eosinophils degranulate, releasing major basic protein, eosinophil cationic protein (ECP), eosinophil peroxidase (EPX) and eosinophil-derived neurotoxin, which damage the epithelium and drive edema and fibrosis. That loop is the polyp. The biologics in Step 7 each cut it at a different point: TSLP at the top, IL-5 in the middle, IL-4 and IL-13 downstream, IgE at the end.\n\nWhat the ECP adds. Blood eosinophils and total IgE are systemic and can be pushed around by allergy, asthma or infection. Tissue eosinophils are the reference standard but need a biopsy. Secretion ECP sits between the two: it is what activated eosinophils are releasing in the nose right now. Against tissue histology it identifies eosinophilic disease with an area under the curve of 0.82 in a 78-patient multicenter cohort, at a cutoff of about 74 micrograms per milliliter, and it is not affected by whether the patient also has allergic rhinitis. It also outperforms a simple eosinophil count on a nasal smear, because eosinophils sit in the submucosa while neutrophils dominate the surface. Two cautions. ECP is not eosinophil-specific: neutrophils release it too, so in neutrophil-heavy disease it loses specificity. And it is a research marker, not a guideline criterion. Where it earns its place is in endotyping when blood is borderline and tissue is unavailable, in predicting recurrence after surgery, and in tracking response to treatment.\n\nThis is the second place in your training where total IgE appears, and it means something different here than it did in allergic rhinitis. In rhinitis, total IgE was useless. In polyps it is one of the markers that decides whether a biologic is on the table. Same test, different disease, different job.\n\nWhy the others fail:\n(A) Tissue eosinophils are the reference standard, but the criteria accept blood markers precisely because tissue is not always available, and the ECP adds local confirmation without a biopsy. You can answer the question today.\n(B) The mite result proves he is sensitized to mite. It says nothing about the endotype of his polyps. Type 2 polyps occur in non-allergic patients, and allergic patients can have non-type 2 polyps.\n(C) Right conclusion, wrong basis. The ECP does point to eosinophilic inflammation, but neither EPOS/EUFOREA nor AAO-HNS uses it as a criterion, and it has no validated threshold for biologic eligibility. If you write a biologic request on the ECP alone, it will be refused. The criteria are blood eosinophils, total IgE, or tissue eosinophils, and he meets two of them.\n\nKeypoint: blood eosinophils 150 or more, or total IgE 100 or more, or tissue eosinophils 10 or more per field decide eligibility; secretion ECP tells you the same story locally, without a biopsy, and helps predict recurrence and track response.\n\nReference: Fokkens WJ, Viskens AS, Backer V, et al. EPOS/EUFOREA update on indication and evaluation of biologics in chronic rhinosinusitis with nasal polyps 2023. Rhinology. 2023;61(3):194-202. Cao PP, Li HB, Wang BF, et al. J Allergy Clin Immunol. 2009;124(3):478-484. Cho A, Cho HJ, Kim CH, Kwak K, Rha MS. Eur Arch Otorhinolaryngol. 2026. Jin J, Guo B, Zhang W, et al. Predictive value of eosinophil cationic protein in nasal secretions in eosinophilic chronic rhinosinusitis. Laryngoscope. 2023. doi:10.1002/lary.30692."
     },
     {
-      "title": "Step 4/6: Surgical Strategy - FHFESS",
-      "scenario": "Based on objective data, including severe right-sided obstruction on rhinomanometry and diffuse Type 2 inflammation, you discuss treatment with the patient and decide to arrange bilateral full-house functional endoscopic sinus surgery (Full House FESS, FHFESS) combined with septomeatoplasty.",
-      "media": "Load chart: Preferred Surgery vs Preferred Biologics flowchart",
-      "question": "For a patient like this with widespread diffuse inflammation and Type 2 / eCRS features, why does recent clinical consensus favor wide surgery such as full-house ESS or even re-boot surgery rather than simply removing local polyps?",
+      "title": "Step 4/7: Appropriate Medical Therapy",
+      "scenario": "Type 2 chronic rhinosinusitis with nasal polyps, comorbid asthma, no previous surgery. He has been using his steroid spray as a single squirt in each nostril most mornings.",
+      "media": "",
+      "question": "What do you start?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Because extensive surgery can completely remove all allergic nerves and cure Type 2 inflammation permanently."
+          "text": "(A) A biologic now, since he has type 2 inflammation"
         },
         {
           "id": "B",
-          "text": "(B) In diffuse inflammation, simply relieving local obstruction has limited value; wide surgery opens the sinus cavities so postoperative topical medications, such as steroid irrigations, can reach all sinuses effectively.",
-          "correct": true
+          "text": "(B) A three-month course of a macrolide antibiotic"
         },
         {
           "id": "C",
-          "text": "(C) To prevent unilateral antrochoanal polyps from developing."
+          "text": "(C) Daily intranasal corticosteroid at full dose, high-volume saline irrigation, and one short course of oral corticosteroid; reassess in three months",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) Book him for surgery"
         }
       ],
-      "feedback": "Correct answer: B\n\nExplanation: In typical Type 2 / eCRSwNP patients, simply relieving a local blockage or removing isolated polyps is of less value, and recurrence rates are high.\n\nWide surgery such as full-house ESS or re-boot surgery is the recommended option.\n\nThe key purpose of surgery is to fully open the sinus cavities so that long-term topical anti-inflammatory therapy, such as corticosteroid irrigation, can effectively control the disease."
+      "feedback": "Correct answer: C\n\nEvery pathway to surgery or a biologic runs through appropriate medical therapy first. That means an intranasal corticosteroid used every day at the labeled dose, not a squirt when he remembers; high-volume saline irrigation, which clears secretion and delivers the steroid better; and one short course of oral corticosteroid, which shrinks polyps quickly and restores smell for a while. Reassess in three months with endoscopy and a SNOT-22. If he is controlled, keep going. If not, he has failed medical therapy, and that is what opens the next door.\n\nWhy the others fail:\n(A) EPOS/EUFOREA requires failed medical therapy and prior sinus surgery before a biologic. He has had neither. His spray use has been half-hearted, so he has not yet failed medical therapy, and he has never been operated on.\n(B) Macrolides have their supporters in non-type 2 disease, where neutrophils dominate. His disease is eosinophilic. Long-term macrolides are not effective in type 2 polyps, and he carries the resistance and cardiac risks for nothing.\n(D) Surgery is the next step after medical therapy fails, not before it has been tried properly.\n\nKeypoint: intranasal steroid every day, saline every day, one oral steroid burst, three months, then decide.\n\nReference: Fokkens WJ, Lund VJ, Hopkins C, et al. Rhinology. 2020;58(Suppl S29):1-464. Rank MA, Chu DK, Bognanni A, et al. The Joint Task Force on Practice Parameters GRADE guidelines for the medical management of chronic rhinosinusitis with nasal polyposis. J Allergy Clin Immunol. 2023;151(2):386-398."
     },
     {
-      "title": "Step 5/6: Histopathology Interpretation",
-      "scenario": "The surgery is completed successfully, and the removed polyp tissue is sent for pathology. Your attending reminds you: “For eCRSwNP patients, pathology is not only about ruling out cancer. Structured histologic analysis can predict how refractory the disease may be.”",
-      "media": "Load chart: Figure 97.6 Chronic Rhinosinusitis Histopathology Report table",
-      "question": "In structured histopathology, in addition to counting eosinophils per high-power field (>10/hpf), which crystal composed of eosinophil Galectin-10 protein in tissue mucus strongly suggests severe Type 2 immune response?",
+      "title": "Step 5/7: Three Months Later",
+      "scenario": "He has used the spray and irrigation correctly; you watched him. The oral steroid gave him three weeks of smell and then it went.\n\n    Total nasal polyp score      6 of 8\n    SNOT-22                      62\n    Smell test                   anosmic\n\nCT shows opacification of both ethmoid systems and both maxillary sinuses, Lund-Mackay 18.",
+      "media": "Load image: Coronal sinus CT, unannotated, showing bilateral ethmoid and maxillary opacification. Caption: 'Three months.'",
+      "question": "What is the next step?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Cholesterol crystals"
-        },
-        {
-          "id": "B",
-          "text": "(B) Charcot-Leyden crystals (CLCs)",
+          "text": "(A) Endoscopic sinus surgery",
           "correct": true
         },
         {
+          "id": "B",
+          "text": "(B) Start a biologic instead of surgery, since his last operation did not last"
+        },
+        {
           "id": "C",
-          "text": "(C) Uric acid crystals"
+          "text": "(C) Repeat the oral corticosteroid course every two months"
+        },
+        {
+          "id": "D",
+          "text": "(D) Continue the spray and irrigation for another six months"
         }
       ],
-      "feedback": "Correct answer: B\n\nExplanation: Charcot-Leyden crystals (CLCs) are composed of galectin-10 protein, which is abundant in eosinophil cytoplasm.\n\nIn CRS, asthma, and allergic bronchopulmonary aspergillosis, these crystals are often found embedded in extremely thick eosinophil-rich allergic mucin and serve as a marker of severe Type 2 inflammation."
+      "feedback": "Correct answer: A\n\nHe has failed appropriate medical therapy: full-dose spray, irrigation, an oral steroid burst, three months, and his polyps score 6, his SNOT-22 is 62, and he cannot smell. Surgery is the next step. It removes the polyps, opens the sinuses so that topical steroid reaches the mucosa, and gives you tissue for eosinophil counting, which you did not have.\n\nWhy the others fail:\n(B) EPOS/EUFOREA 2023 requires prior sinus surgery as a condition for a biologic, unless the patient is unfit for surgery. He has never been operated on. Surgery also gives you the tissue eosinophil count that makes the type 2 case airtight.\n(C) Repeated oral steroid courses are the problem biologics were designed to replace. Each burst carries harm, the effect wears off in weeks, and two or more courses a year is itself one of the criteria that says the disease is out of control.\n(D) More of what has already failed. Six more months of anosmia for no expected gain.\n\nKeypoint: failed medical therapy means surgery; the surgery is also where you collect the tissue that defines the endotype.\n\nReference: Fokkens WJ, Lund VJ, Hopkins C, et al. Rhinology. 2020;58(Suppl S29):1-464. Fokkens WJ, Viskens AS, Backer V, et al. Rhinology. 2023;61(3):194-202."
     },
     {
-      "title": "Step 6/6: Post-surgical Medical Management",
-      "scenario": "At follow-up, the patient’s nasal patency is markedly improved, and right-sided nasal resistance has returned to normal. However, your attending emphasizes: “Surgery only changed the drug delivery pathway. The long-term battle against Type 2 inflammation begins now.”",
-      "media": "Load image: Figure 97.3 Corticosteroid irrigations",
-      "question": "According to treatment guidelines, what is the main and effective maintenance topical anti-inflammatory therapy after surgery for this type of eCRSwNP patient?",
+      "title": "Step 6/7: Fourteen Months After Surgery",
+      "scenario": "Surgery went well. Tissue eosinophils were 45 per high-power field. He used his spray and irrigation daily afterward.\n\nAt 14 months the polyps are back:\n\n    Total nasal polyp score      5 of 8\n    SNOT-22                      58\n    Smell                        anosmic\n    Oral corticosteroid          2 courses in the past year\n    Asthma                       on daily inhaled corticosteroid\n    Blood eosinophils            420 cells/uL\n    Total IgE                    180 kU/L",
+      "media": "Load image: Nasal endoscopy 14 months after surgery, unannotated: recurrent bilateral polyps in the opened ethmoid cavities. Caption: 'Fourteen months.'",
+      "question": "Does he qualify for a biologic?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Long-term oral macrolide antibiotics for three months"
+          "text": "(A) No. He needs a second operation before a biologic can be considered"
         },
         {
           "id": "B",
-          "text": "(B) Corticosteroid irrigations / steroid nasal irrigation",
-          "correct": true
+          "text": "(B) No. Tissue eosinophils must be 70 or more per field"
         },
         {
           "id": "C",
-          "text": "(C) Daily topical decongestants"
+          "text": "(C) No. A biologic needs a positive allergen-specific IgE"
+        },
+        {
+          "id": "D",
+          "text": "(D) Yes. He has bilateral polyps after surgery and meets all five criteria; three would have been enough",
+          "correct": true
         }
       ],
-      "feedback": "Correct answer: B\n\nExplanation: Corticosteroid irrigations are the main common effective delivery mechanism for topical anti-inflammatory therapy after endoscopic sinus surgery.\n\nAfter the sinuses are opened surgically, high-volume irrigation can penetrate all opened spaces, similar to a prophylactic inhaler for asthma patients.\n\nThis can effectively suppress Type 2 inflammation and prevent polyp recurrence. For Type 2 / eCRS patients, long-term macrolides lack proven efficacy."
+      "feedback": "Correct answer: D\n\nEPOS/EUFOREA 2023: a patient with bilateral polyps who has had sinus surgery qualifies for a biologic if three of five criteria are met. Evidence of type 2 inflammation: tissue eosinophils 10 or more per field, or blood eosinophils 150 or more, or total IgE 100 or more. He has all three. Need for systemic corticosteroids: two or more courses a year, or long-term low dose. He has had two. Significantly impaired quality of life: SNOT-22 of 40 or more. His is 58. Significant loss of smell: anosmic on testing. He is. Comorbid asthma needing regular inhaled corticosteroid. He has it. Five of five, and three would have been enough.\n\nWhy the others fail:\n(A) The criterion is one prior surgery, which he has, with recurrence on full medical therapy. A second operation before a biologic is not required.\n(B) Seventy eosinophils per field is the Japanese JESREC threshold for eosinophilic chronic rhinosinusitis. The EPOS/EUFOREA threshold is 10. His 45 clears it comfortably, and he qualifies on blood markers even without tissue.\n(C) This is the IgE mix-up in its last form. A biologic for polyps is chosen on the endotype, not on allergy. Omalizumab in the POLYP trials worked regardless of allergic status, and dupilumab, mepolizumab and tezepelumab do not target IgE at all. His mite result is irrelevant to this decision.\n\nKeypoint: bilateral polyps, prior surgery, and three of five: type 2 markers, steroid need, SNOT-22 of 40 or more, smell loss, asthma.\n\nReference: Fokkens WJ, Viskens AS, Backer V, et al. EPOS/EUFOREA update on indication and evaluation of biologics in chronic rhinosinusitis with nasal polyps 2023. Rhinology. 2023;61(3):194-202."
+    },
+    {
+      "title": "Step 7/7: Which One",
+      "scenario": "He qualifies. Four biologics are approved for chronic rhinosinusitis with nasal polyps:\n\n    Dupilumab       anti-IL-4 receptor alpha\n    Mepolizumab     anti-IL-5\n    Omalizumab      anti-IgE\n    Tezepelumab     anti-TSLP, approved October 2025\n\nHis profile:\n\n    Asthma                  on daily inhaled corticosteroid\n    Blood eosinophils       420 cells/uL\n    Anaphylaxis history     none",
+      "media": "",
+      "question": "Which statement about choosing his biologic is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Mepolizumab is the choice regardless of eosinophil count, since it targets IL-5 directly"
+        },
+        {
+          "id": "B",
+          "text": "(B) Two biologics together are the standard for a patient with both asthma and polyps"
+        },
+        {
+          "id": "C",
+          "text": "(C) Any of the four is reasonable; choose by comorbid asthma, biomarkers and access. In WAYPOINT, tezepelumab reduced the polyp score by 2.08 more than placebo and cut the need for surgery from 22 percent to 0.5 percent",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) Omalizumab is preferred because his total IgE is above 100"
+        }
+      ],
+      "feedback": "Correct answer: C\n\nNo guideline ranks the four against each other, and the trials were placebo-controlled, not head-to-head. All four reduce polyp size and congestion. Dupilumab in SINUS-24 and SINUS-52 reduced the polyp score by about 2 points and improved CT scores. Mepolizumab in SYNAPSE reduced the polyp score by 0.73. Omalizumab in POLYP 1 and 2 reduced it by about 1 point. Tezepelumab in WAYPOINT, 408 patients over 52 weeks, reduced the polyp score by 2.08 and the congestion score by 1.04 versus placebo, improved SNOT-22 by 27 points, and reduced the need for polyp surgery from 22 percent to 0.5 percent and the use of systemic steroids from 19 percent to 5 percent. Its target, TSLP, sits upstream of IL-4, IL-5 and IL-13, and the benefit held even in patients with blood eosinophils below 150.\n\nOne more thing the local markers can do. Nasal eosinophil peroxidase (EPX) falls sharply after surgery and on dupilumab, and in a small cohort a baseline EPX above roughly 118 nanograms per microliter predicted a clinically meaningful SNOT-22 response with an area under the curve of 0.93, while an undetectable baseline pointed to non-type 2 disease and little to gain from a type 2 biologic. Local markers track the nose better than blood does.\n\nIn practice the choice turns on what else the patient has. Comorbid asthma favors an agent licensed for both, which all four are. Aspirin-exacerbated respiratory disease has the strongest dupilumab data. A low eosinophil count argues against mepolizumab. Cost and what the payer will cover often decide it.\n\nWhy the others fail:\n(A) In SYNAPSE, patients with blood eosinophils below 150 did not show a significant improvement in polyp score or obstruction with mepolizumab. The count matters for that drug in particular. His 420 would be fine, but the statement is wrong as a rule.\n(B) Dual biologic therapy exists in case reports, not in guidelines or trials. One agent, chosen well, is the standard.\n(D) Total IgE above 100 is one of the type 2 markers that got him to eligibility. It does not point to omalizumab over the others. The POLYP trials did not select patients by IgE level, and the other three agents work whether IgE is high or not.\n\nKeypoint: four approved agents, none ranked above the others; choose by comorbidity, biomarkers and access, and know that the newest one, tezepelumab, has the largest single trial.\n\nReference: Lipworth BJ, Han JK, Desrosiers M, et al. Tezepelumab in adults with severe chronic rhinosinusitis with nasal polyps. N Engl J Med. 2025;392(12):1178-1188. doi:10.1056/NEJMoa2414482. Bachert C, Han JK, Desrosiers M, et al. Lancet. 2019;394(10209):1638-1650. Han JK, Bachert C, Fokkens W, et al. Lancet Respir Med. 2021;9(10):1141-1153. Gevaert P, Omachi TA, Corren J, et al. J Allergy Clin Immunol. 2020;146(3):595-605. Callander JK, Charbit AR, Marshall C, et al. Eosinophil peroxidase as a dynamic indicator of treatment response in eosinophilic chronic rhinosinusitis. Int Forum Allergy Rhinol. 2025. doi:10.1002/alr.70076."
     }
   ]
 }

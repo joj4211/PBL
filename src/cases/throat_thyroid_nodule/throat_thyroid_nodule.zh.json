@@ -1,148 +1,199 @@
 {
   "id": "throat_thyroid_nodule",
-  "title": "頸部的隱形炸彈：甲狀腺結節的精準評估 (The Hidden Nodule: Precision Evaluation)",
-  "subtitle": "甲狀腺結節風險評估與手術決策",
-  "description": "甲狀腺結節的 TSH 起始評估、超音波惡性特徵、FNA、分子檢測與 2025 ATA 手術建議。",
-  "estimatedTime": "20-30 分鐘",
-  "difficulty": "中階",
+  "title": "追蹤，還是開刀",
+  "subtitle": "一顆甲狀腺結節，從第一次抽血到最後一份報告",
+  "description": "判讀甲狀腺指標、為深部結節選擇穿刺針、決定什麼時候該結束追蹤、術前紀錄與影像、風險分層，以及手術之後的決定。",
+  "estimatedTime": "20-25 min",
+  "difficulty": "Intermediate",
   "tags": [
-    "喉科",
+    "Head and Neck",
     "Thyroid nodule",
     "FNA",
-    "ATA"
+    "Risk stratification",
+    "ATA 2025"
   ],
   "steps": [
     {
-      "title": "Step 1/6: 意外發現的結節與初步評估 (Incidental Nodule & Initial Workup)",
-      "scenario": "一位 45 歲女性在員工健檢時，頸部超音波意外發現右側甲狀腺有一個 1.8 公分的結節。她平時沒有任何吞嚥困難、聲音沙啞或頸部疼痛的症狀。她帶著健檢報告來到你的門診諮詢。",
-      "media": "載入圖片：門診醫師觸診甲狀腺的示意圖",
-      "question": "面對臨床懷疑或影像學發現的甲狀腺結節，除了安排詳細的甲狀腺專門超音波 (Thyroid Ultrasound) 之外，第一線「必須」抽血檢驗下列哪一個荷爾蒙指標，以決定後續的評估流程？",
+      "title": "Step 1/7：判讀這組指標",
+      "scenario": "一位 44 歲女性因頸部超音波發現右側甲狀腺結節被轉介到你的門診。沒有壓迫症狀、沒有聲音改變、沒有放射線暴露史、沒有甲狀腺癌家族史。\n\n她的甲狀腺指標（括號內為本院參考值）：\n\n    TSH                     1.76 uIU/mL      [0.34 - 5.60]\n    Free T4                 0.98 ng/dL       [0.61 - 1.44]\n    T3                      105 ng/dL        [87 - 178]\n    Anti-TPO antibody       40.2 IU/mL   (H) [< 34]\n    Thyroglobulin           > 300 ng/mL  (H) [1.4 - 78]\n    Anti-thyroglobulin      1.8 IU/mL        [< 4]\n    TSH receptor antibody   0.8 IU/L         [< 1.75]",
+      "media": "",
+      "question": "這組指標你會怎麼判讀？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 血清甲狀腺刺激素 (Serum TSH)",
-          "correct": true
+          "text": "(A) Thyroglobulin 超過 300 ng/mL 代表腫瘤負荷高，支持盡快手術"
         },
         {
           "id": "B",
-          "text": "(B) 降鈣素 (Calcitonin)"
+          "text": "(B) Anti-TPO 升高指向甲狀腺炎，使惡性的可能性降低"
         },
         {
           "id": "C",
-          "text": "(C) 甲狀腺球蛋白 (Thyroglobulin, Tg)"
+          "text": "(C) TSH 正常代表這顆結節不是 autonomously functioning；其餘的數值都不改變處置",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) Anti-thyroglobulin 正常，代表這個 thyroglobulin 數值可以當腫瘤指標來信任"
         }
       ],
-      "feedback": "正確答案：A\n\n主治醫師的 Tip： 在超音波檢查之後，評估血清 TSH 是所有甲狀腺結節的標準起手式。如果 TSH 受到抑制 (低於正常值)，代表結節可能具有自主分泌功能 (Toxic adenoma)，此時應安排放射性碘掃描 (123I scintigraphy)；若證實為「熱結節 (Hot nodule)」，其惡性機率極低，通常不需要進行細針穿刺 (FNA)。"
+      "feedback": "正確答案：C\n\n這組指標裡只有 TSH 會改變接下來要做什麼。如果 TSH 被抑制，代表這顆可能是 autonomously functioning nodule，也就是會自己分泌荷爾蒙的結節，這一類很少是惡性的，下一步要安排核醫掃描而不是直接做超音波導引細針抽吸。她的 TSH 正常，代表不是這一類，所以直接走超音波加細針抽吸這條路。Free T4 和 T3 只有在 TSH 異常時，才用來判斷功能失調到什麼程度；TSH receptor antibody 只有在 TSH 被抑制、要分辨 Graves 或毒性結節時才有意義。\n\n這組指標裡沒有任何一項能診斷癌症。術前抽血能診斷甲狀腺惡性腫瘤的只有 calcitonin，而且只用在髓質癌，這次沒有開這項檢查。\n\n其他選項為什麼不對：\n(A) Thyroglobulin 是正常甲狀腺組織就會製造的東西，良性惡性都會分泌，所以數值高低看不出是不是癌症。\n• 它的數值反映的是腺體有多大、有沒有甲狀腺炎，甚至觸診或做過切片都會讓它上升。\n• 只要甲狀腺還沒有被切掉，就找不到一個 Tg 數值可以拿來分良性和惡性，兩邊的數值範圍重疊太多。\n• 現行 ATA 指引不建議術前常規驗 Tg 或 TgAb 來做診斷。\n• Tg 要等甲狀腺和所有會製造 Tg 的組織都拿掉之後，數值才開始有意義、才能據以處置。\n• 所以術前抽 Tg 是為了留一個她個人的起始值，不是為了診斷或分期。\n• 甲狀腺切掉之後，連續追蹤的 Tg 數值和它的變化趨勢，對照這個起始值和當時的 TSH 狀態，才用來判斷有沒有殘存、復發或轉移。\n(B) Anti-TPO 高代表她有甲狀腺炎，也可以拿來預測她葉切除後容易變成甲狀腺低下。但這顆結節超音波看起來就是可疑的，不會因為她同時有甲狀腺炎，這顆就比較不可能是癌。\n(D) Anti-Tg 是用來確認「這個 Tg 數值可不可以相信」，因為這個抗體會干擾檢驗，讓 Tg 驗出來偏低。她的抗體正常，代表 Tg 那個數值是真的。但數值是真的，不等於它可以當腫瘤指標用。\n\nKeypoint：TSH 決定接下來走核醫掃描還是超音波這條路；抗體告訴你腺體本身的狀況；Tg 要等甲狀腺拿掉之後才有判讀價值。\n\nReference: Haugen BR, Alexander EK, Bible KC, et al. Thyroid. 2016;26(1):1-133. doi:10.1089/thy.2015.0020. Giovanella L, D'Aurizio F, Petranovic Ovcaricek P, Gorges R. Diagnostic, theranostic and prognostic value of thyroglobulin in thyroid cancer. J Clin Med. 2024;13(9):2463. doi:10.3390/jcm13092463."
     },
     {
-      "title": "Step 2/6: 辨識超音波的惡性特徵 (Sonographic Risk Assessment)",
-      "scenario": "患者的抽血報告顯示 TSH 在正常範圍內 (Normal TSH)。你親自為她進行了甲狀腺超音波檢查，仔細評估這個 1.8 公分結節的型態。",
-      "media": "載入圖片：甲狀腺超音波影像，顯示一個實心、低回音、邊緣不規則且帶有微小鈣化的結節",
-      "question": "根據超音波特徵來評估癌症風險時，下列哪一組超音波發現 (Sonographic features) 強烈暗示該結節為惡性，且強烈建議進行細針穿刺 (FNA)？",
+      "title": "Step 2/7：要夠長才搆得到",
+      "scenario": "你自己幫她做超音波。右葉有一顆 0.51 x 0.63 x 0.58 cm 的結節：實質性、明顯低回音、邊界不清且不規則、halo 不完整。\n\n它貼在右葉的後緣，位在腺體主體的深部。\n\n你在自己的超音波導引下做穿刺。",
+      "media": "載入圖片 1：右葉橫切超音波，顯示結節位在後緣。圖說：「右葉，橫切」\n載入圖片 2：22G 和 25G 針並排靠著尺規。圖說：「針號」",
+      "question": "你會用哪一種針？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 純囊腫 (Purely cystic)、邊緣平滑 (smooth margins)、後方回音增強 (posterior enhancement)。"
+          "text": "(A) 25 到 27 gauge"
         },
         {
           "id": "B",
-          "text": "(B) 海綿狀外觀 (Spongiform appearance)、等回音 (isoechoic)、周邊血液豐富 (peripheral vascularity)。"
+          "text": "(B) 22 到 23 gauge",
+          "correct": true
         },
         {
           "id": "C",
-          "text": "(C) 實心 (Solid)、低回音 (hypoechogenicity)、邊緣不規則 (irregular margins) 與微小鈣化 (microcalcifications)。",
-          "correct": true
+          "text": "(C) 18 gauge core needle"
+        },
+        {
+          "id": "D",
+          "text": "(D) 20 gauge，搭配持續強力抽吸"
         }
       ],
-      "feedback": "正確答案：C\n\n影像學地雷： 超音波是風險評估的利器。研究證實，當結節呈現實心組成 (solid composition)、邊緣不規則 (irregular margins)、實質低回音 (parenchymal hypoechogenicity) 以及微小鈣化 (microcalcification) 時，預測甲狀腺癌的準確率極高。相反地，純囊腫 (Purely cystic) 的結節幾乎可以認定為良性。"
+      "feedback": "正確答案：B\n\n這根針要同時滿足兩個條件，而這兩個條件是互相衝突的。針要細，因為抽出來的檢體如果混到血，病理常常就判讀不出來；但針也要夠長，才搆得到躲在葉子後面的這顆。偏偏越細的針做得越短。22 到 23 號就是在這兩者之間取平衡。\n\n其他選項為什麼不對：\n(A) 這顆如果長在表淺處，25 到 27 號是標準答案。問題是她這顆很深，針根本到不了，抽回來的只會是正常的甲狀腺組織。\n(C) Core needle 是留給那種抽了好幾次都判讀不出來、或是懷疑淋巴瘤的狀況。這兩種她都不是。\n(D) 檢體混到血主要是抽吸負壓太大和穿刺造成的出血，跟針粗細關係不大。一直用力抽，是最快把檢體弄壞的方法。\n\nKeypoint：針怎麼選看的是結節有多深，不是看它有多可疑。\n\nReference: Haugen BR, Alexander EK, Bible KC, et al. Thyroid. 2016;26(1):1-133. doi:10.1089/thy.2015.0020."
     },
     {
-      "title": "Step 3/6: 穿刺技術與囊液處置迷思 (FNA Technique & Cystic Fluid)",
-      "scenario": "患者同意接受超音波導引細針穿刺 (US-FNA)。在準備器械時，學生準備了支粗針 (18-gauge Core-needle) 給你抽取組織「這顆結節裡面有一部分是液體，如果等一下抽到囊腫液體 (cystic fluid)，我們應該把液體全部送去細胞學化驗，這樣診斷率才會高！」",
-      "media": "載入圖片：Ultrasound-guided FNA 的操作實況，展示 25-g 細針與空針 (Figure 11-1)",
-      "question": "根據甲狀腺細針穿刺 (FNA) 的標準操作規範與臨床實證，下列對於穿刺針具選擇與囊腫液體 (Cystic fluid) 的處置，何者最為正確？",
+      "title": "Step 3/7：六個月後",
+      "scenario": "細胞學結果是 papillary thyroid carcinoma。\n\n結節大小為 0.51 x 0.63 x 0.58 cm。小於 1 cm，就大小而言符合 active surveillance 的條件，討論之後她選擇了追蹤。\n\n六個月後：\n\n    Baseline     0.51 x 0.63 x 0.58 cm\n    6 個月       0.81 x 0.83 x 0.90 cm\n\n追蹤的超音波顯示病灶現在貼到了甲狀腺後被膜。",
+      "media": "載入圖片：baseline 與六個月的超音波並排，同平面同比例。圖說：「Baseline 與六個月」",
+      "question": "哪一項發現使 active surveillance 結束？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 為了取得足夠細胞，應常規使用 18-gauge 粗針 (Core-needle)；且抽出的囊腫液體必須常規送細胞學檢驗。"
+          "text": "(A) 最大徑增加超過 3 mm"
         },
         {
           "id": "B",
-          "text": "(B) 應使用 25 至 27-gauge 的細針進行穿刺；抽除囊腫液體雖可緩解症狀，但該液體「不具備」細胞學分析的臨床價值 (no role for cytologic analysis)。",
-          "correct": true
+          "text": "(B) 結節已經接近 1 cm 的追蹤上限"
         },
         {
           "id": "C",
-          "text": "(C) 穿刺時應避免任何針頭抽動 (undulation) 以防出血；若初次穿刺檢體不足 (nondiagnostic)，應立即安排診斷性手術切除。"
+          "text": "(C) 第一次追蹤區間結節就長大了"
+        },
+        {
+          "id": "D",
+          "text": "(D) 單一維度成長超過 3 mm、體積增加超過 50%，而且病灶現在貼到後被膜",
+          "correct": true
         }
       ],
-      "feedback": "正確答案：B\n\n主治醫師的臨床實務 (Clinical Pearl)： 這題考驗的是真實的操作細節！甲狀腺 FNA 的標準操作是使用 5-10 cc 空針配合 25 到 27-gauge 的細針，並在病灶內進行約 5 秒的抽插動作 (undulation)。粗針 (Core-needle) 在常規低風險結節評估中目前並無角色。 另外，雖然抽掉囊腫液體能讓結節縮小，但文獻明確指出「囊腫液體的細胞學分析毫無臨床價值 (there is no role for the cytologic analysis of cystic fluid)」。若因囊腫成分過多導致檢體不足 (nondiagnostic)，正確做法是等待組織癒合後「再次穿刺 (repeat FNA)」，通常有高達 50% 的機率能在第二次取得具有診斷價值的檢體。"
+      "feedback": "正確答案：D\n\n成長和位置兩個條件她都達到了。\n\n成長：Kuma 的定義是任一軸向增加 3 mm 以上。她的縱徑從 0.58 長到 0.90，是 3.2 mm。NCCN 用同樣的 3 mm 門檻，另外加上體積增加 50% 以上；她的體積從 0.098 變成 0.317 mL，超過兩倍。\n\n位置：病灶現在貼到後被膜，離喉返神經很近。位置不理想本來就是一開始不該收進追蹤的理由，也是為什麼那條放寬條款對她不適用——Kuma 可以觀察到 13 mm 的前提是位置不危險，而她的位置危險。\n\n其他選項為什麼不對：\n(A) 拿最大徑來比是 0.63 到 0.90，只有 2.7 mm，還不到門檻。3 mm 是在縱軸上達成的，不是這一個。\n(B) 0.90 確實快到 1 cm 了，但光是變大並不是結束追蹤的理由。條件寫的是成長幅度、轉移、和甲狀腺外侵犯這幾項。\n(C) 追蹤本來就預期它會長一點。整套追蹤是圍繞著明確的門檻設計的，不是一有變化就要開刀。\n\nKeypoint：每一個軸都要量；而且腫瘤一旦貼到後被膜，不管數字怎麼算，追蹤就該結束。\n\nReference: National Comprehensive Cancer Network. NCCN Clinical Practice Guidelines in Oncology: Thyroid Carcinoma. Version 2.2026, June 2, 2026. Miyauchi A, Ito Y, Fujishima M, et al. Long-term outcomes of active surveillance and immediate surgery for adult patients with low-risk papillary thyroid microcarcinoma: 30-year experience. Thyroid. 2023;33(7):817-825. doi:10.1089/thy.2023.0076. Tuttle RM, Fagin JA, Minkowitz G, et al. Natural history and tumor volume kinetics of papillary thyroid cancers during active surveillance. JAMA Otolaryngol Head Neck Surg. 2017;143(10):1015-1020."
     },
     {
-      "title": "Step 4/6: 不確定細胞學的分子標記 (Molecular Testing for Indeterminate Cytology)",
-      "scenario": "一週後，FNA 的細胞學報告出爐，結果為「非典型細胞，意義不明 (Atypia of Undetermined Significance, AUS / Bethesda Category III)」。這種不確定的報告讓患者非常焦慮。為了進一步精準評估風險，你提議對穿刺檢體進行「分子標記測試 (Molecular Testing)」。",
-      "media": "載入圖片：基因檢測報告示意圖，列出常見突變基因",
-      "question": "在評估細胞學結果為「不確定 (Indeterminate)」的檢體時，若驗出下列哪一組基因突變，會顯著提高甲狀腺癌的診斷率並改變後續的手術決策？",
+      "title": "Step 4/7：手術之前",
+      "scenario": "她同意接受右側甲狀腺切除加峽部切除。沒有聲音方面的主訴，也沒有頸部手術史。你打算使用術中神經監測（IONM）。",
+      "media": "",
+      "question": "手術之前必須留下什麼紀錄？",
       "options": [
         {
           "id": "A",
-          "text": "(A) BRCA1 與 BRCA2 突變"
-        },
-        {
-          "id": "B",
-          "text": "(B) BRAF、RET-PTC、RAS 或 PAX8/PPARg 突變",
+          "text": "(A) 喉鏡下的聲帶活動度，以及 baseline 的 thyroglobulin 加 anti-thyroglobulin antibody",
           "correct": true
         },
         {
+          "id": "B",
+          "text": "(B) 只要記錄聲帶活動度；腺體完整時的 thyroglobulin 在任何階段都沒有用"
+        },
+        {
           "id": "C",
-          "text": "(C) BCR-ABL 融合基因"
+          "text": "(C) Baseline 的鈣和副甲狀腺素，因為副甲狀腺低下是這台手術的主要風險"
+        },
+        {
+          "id": "D",
+          "text": "(D) 不需要再做什麼；她沒有聲音主訴，而且術中神經監測會找到神經"
         }
       ],
-      "feedback": "正確答案：B\n\n精準醫學： 當 FNA cytologic analysis 為 indeterminate 時，高達 29% 的檢體可以驗出 BRAF、RET-PTC、RAS 或 PAX8/PPARg 基因的突變。此外，免疫染色 Galectin-3 也有極高的預測價值。術前偵測到這些突變能大幅幫助醫師確認惡性風險並決定手術範圍。"
+      "feedback": "正確答案：A\n\n做喉鏡是為了在開刀前留下聲帶活動度的紀錄。聲音聽起來正常，不代表兩側聲帶都動得好。萬一術後發現一側不動，而術前沒有任何紀錄，就沒有人能說得清楚是不是手術造成的——這對病人和對你都不利。2025 指引也支持術中神經監測來改善術後聲音。\n\n至於 Tg：她一直在 active surveillance，而 2025 指引建議 AS 期間要測 Tg 和 TgAb，所以她本來就有一系列數值在檔案裡。術前再抽一次，是留一個乾淨的起始值。葉切除之後，指引建議測一次 Tg 確認沒有異常升高，但不建議連續追蹤，因為剩下那一葉會一直製造 Tg。抗體要一起看，因為 TgAb 陽性的話，任何 Tg 數值都沒辦法判讀。\n\n其他選項為什麼不對：\n(B) 這個選項對了一半：Tg 確實不能診斷、也不能分期，但說它任何階段都沒用是錯的。AS 期間要測，葉切除後也要測一次。\n(C) 只拿掉一葉，副甲狀腺低下並不常見，而且術前先驗鈣也不會改變手術怎麼做。\n(D) 神經監測是在術中幫你找神經、開完給你一個參考，但它沒辦法告訴你開刀前一天她的聲帶是什麼狀態。\n\nKeypoint：聲帶要在開刀前記錄下來；Tg 則要知道它在每個階段各是拿來做什麼的。\n\nReference: Ringel MD, Sosa JA, Baloch Z, et al. Thyroid. 2025;35(8):841-985. Praw SS, Gigliotti BJ, Tessnow A, Kang H, Margulies DJ. Executive summary of the 2025 American Thyroid Association management guidelines for adult patients with differentiated thyroid cancer. Thyroid. 2025;35(11):1214-1220. doi:10.1177/10507256251390877. Giovanella L, D'Aurizio F, Petranovic Ovcaricek P, Gorges R. J Clin Med. 2024;13(9):2463. doi:10.3390/jcm13092463."
     },
     {
-      "title": "Step 5/6: 2025 ATA 手術範圍新準則 (Surgical Extent - 2025 ATA Guidelines)",
-      "scenario": "患者的分子檢測結果呈現 BRAF 突變陽性，證實為甲狀腺乳突癌 (PTC)。考量腫瘤大小為 1.8 公分 (cT1b)，超音波無甲狀腺外侵犯 (no ETE)，且對側甲狀腺完全正常，無可疑淋巴結。患者決定接受手術，並詢問是否需要將「整個甲狀腺」都切除。",
-      "media": "載入圖片：甲狀腺單葉切除 (Lobectomy) 與全切除 (Total Thyroidectomy) 的對照圖",
-      "question": "根據最新發布的 2025 年美國甲狀腺學會 (ATA) 治療指引，對於小於 2 公分且沒有甲狀腺外圍侵犯 (ETE) 或可疑淋巴結的腫瘤，首選 (Preferred) 的手術範圍為何？",
+      "title": "Step 5/7：要做哪一種影像",
+      "scenario": "病灶貼到甲狀腺後被膜，因此引發 extrathyroidal extension 的疑問。她的超音波沒有看到異常的頸部淋巴結。",
+      "media": "載入圖片：甲狀腺高度的 contrast-enhanced CT of neck，不加標註。圖說：「Axial, post-contrast」",
+      "question": "手術之前你會安排什麼影像？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 單側甲狀腺葉切除術 (Lobectomy) 即可。",
-          "correct": true
+          "text": "(A) 非顯影 CT，以避免碘負荷影響之後可能要做的碘治療"
         },
         {
           "id": "B",
-          "text": "(B) 必須執行甲狀腺全切除術 (Total Thyroidectomy)，以便後續進行放射碘 (RAI) 治療。"
+          "text": "(B) 不做斷層影像；超音波已經涵蓋了頸部"
         },
         {
           "id": "C",
-          "text": "(C) 只需使用無線電頻率燒灼 (RFA) 即可，嚴禁開刀。"
+          "text": "(C) 頸部與縱膈的 contrast-enhanced CT",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) 重做側頸超音波，因為超音波是偵測頸部淋巴結最敏感的檢查"
         }
       ],
-      "feedback": "正確答案：A\n\n2025 ATA 最新指引： 2025 年 ATA 指引擴大了單葉切除 (Lobectomy) 的適應症。對於 < 2 公分的腫瘤 (且無 ETE 或可疑淋巴結)，強烈建議首選 Lobectomy；甚至 2-4 公分的腫瘤也可以考慮。單葉切除的復發率與全切除相當，但能大幅降低併發症 (如副甲狀腺低下) 與終身依賴甲狀腺素補充的機率。"
+      "feedback": "正確答案：C\n\n2025 ATA 指引的 R8 建議：有 bulky 淋巴結、或懷疑侵犯到 aerodigestive tract 或縱膈時，術前要做頸部加縱膈的 CT 或 MRI，而且要打顯影劑。她的病灶貼到後被膜，等於貼著氣管食道溝，這張 CT 就是要回答「有沒有碰到氣管食道」這個問題。PET/CT 不建議常規使用。\n\n其他選項為什麼不對：\n(A) 不打顯影劑，就看不出腫瘤有沒有包住血管、淋巴結有沒有增強或壞死，而這些正好是會改變手術做法的東西。至於碘會不會影響之後的碘治療，這個顧慮被講得太嚴重了：顯影劑的碘四到六週就排掉了，ATA 的立場是影像看清楚比較重要，晚幾週做碘治療沒關係。真的不放心可以驗個尿碘。\n(B) 超音波照不到咽後、咽旁、鎖骨下和縱膈這些地方，也看不出病灶往下延伸到哪裡。\n(D) 超音波看側頸確實很準，她被判定 N0 就是靠超音波。問題不在超音波準不準，而是有些地方它照不到。\n\nKeypoint：這裡非打顯影劑不可，因為會影響手術怎麼開的那些東西，不打就看不見。\n\nReference: Ringel MD, Sosa JA, Baloch Z, et al. Thyroid. 2025;35(8):841-985, Recommendation 8. Praw SS, Gigliotti BJ, Tessnow A, Kang H, Margulies DJ. Executive summary of the 2025 American Thyroid Association management guidelines for adult patients with differentiated thyroid cancer. Thyroid. 2025;35(11):1214-1220. doi:10.1177/10507256251390877."
     },
     {
-      "title": "Step 6/6: 預防性淋巴結廓清的爭議 (Prophylactic Central Neck Dissection)",
-      "scenario": "在確定進行「單側甲狀腺葉切除術 (Lobectomy)」後，患者的丈夫擔心地問：「既然都開刀了，為了保險起見，能不能把腫瘤旁邊的『中央區淋巴結』全部順便清除乾淨 (預防性廓清)？」",
-      "media": "載入圖片：頸部中央區淋巴結 (Central Compartment, Level VI) 的解剖位置圖",
-      "question": "針對臨床上沒有發現淋巴結轉移 (cN0) 的 T1-T2 早期腫瘤，根據 2025 ATA 指引，關於「預防性中央頸部淋巴結廓清術 (Prophylactic CLND)」的建議為何？",
+      "title": "Step 6/7：判讀這份報告",
+      "scenario": "最終病理報告：\n\n    Papillary thyroid carcinoma，tall cell subtype，well differentiated\n    右葉兩個病灶：1.1 cm 與 0.3 cm\n    Extrathyroidal extension：未發現\n    血管與淋巴管侵犯：未發現\n    切緣：腫瘤接近周邊切緣，距離小於 0.1 mm\n    淋巴結：perithyroid 0/1，level VI 0/2\n    pT1b(m) pN0",
+      "media": "載入圖片：最終病理報告，所有病人與機構識別資料已塗銷。圖說：「最終病理」",
+      "question": "依 2025 ATA 的復發風險分層，她落在哪一級？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 強烈建議執行，因為能顯著提升患者的整體存活率 (Overall survival)。"
+          "text": "(A) 低風險，因為腫瘤小於 2 cm 且淋巴結陰性"
         },
         {
           "id": "B",
-          "text": "(B) 強烈不建議執行 (More strongly discouraged)，因為它無法改善長期預後，反而會增加神經損傷與副甲狀腺低下的併發症風險。",
+          "text": "(B) 中高風險（intermediate-high），因為是 tall cell subtype",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) 建議只清除左側的淋巴結作為抽樣代表。"
+          "text": "(C) 低中風險（low-intermediate），因為是單側多發"
+        },
+        {
+          "id": "D",
+          "text": "(D) 高風險，因為切緣距離小於 0.1 mm"
         }
       ],
-      "feedback": "正確答案：B\n\n2025 ATA 觀念更新： 中央區頸部淋巴廓清 (CLND) 會增加喉返神經損傷與副甲狀腺低下的風險。最新的 2025 ATA 指引更強烈地反對 (more strongly discouraged) 在沒有臨床證據 (cN0) 的 T1-T2 腫瘤進行預防性 CLND (pCLND)，因為它不僅無法改善長期預後 (does not improve long-term outcomes)，還徒增手術併發症"
+      "feedback": "正確答案：B\n\n2025 ATA 把結構性復發風險分成四級：low（<10%）、low-intermediate（10 到 15%）、intermediate-high（16 到 30%）、high（>30%）。\n\nT1 或 T2 的腫瘤只要有侵襲性組織亞型，單憑這一項就落到 intermediate-high，而 tall cell 就是被列名的侵襲性亞型之一。她另外還有單側多發，這一項自己只會到 low-intermediate，但分級是由組織型決定的。\n\n其他選項為什麼不對：\n(A) 要算低風險，腫瘤要是單一病灶的 T1 或 T2、淋巴結陰性、而且沒有侵襲性組織型。她有兩點不符：兩個病灶，以及 tall cell。\n(C) 單側多發是 low-intermediate 的因子，如果她只有這一項，就會落在這一級。但 tall cell 蓋過它。\n(D) 切緣很近但邊緣沒有腫瘤細胞，就是陰性切緣。2025 的系統裡，就算是顯微鏡下陽性的切緣，也要看位置才決定要不要升級：前側的 R1 留在低風險，跟陰性切緣一樣，因為前被膜再往前就是帶狀肌，本來就不會有很大的安全距離，而且那裡的復發少見、也容易處理。後側的 R1 才升到 low-intermediate，因為腺體後面是喉返神經、氣管和食道。只有肉眼可見的殘留（R2）才算高風險。她的切緣是陰性的，距離不到 0.1 mm 完全不會改變她的分級。\n\nKeypoint：光是侵襲性組織型就能把一顆小的、淋巴結陰性的腫瘤拉到 intermediate-high；切緣近但陰性仍然是陰性，而且就算切緣陽性，也要在後側才有影響。\n\nReference: Ringel MD, Sosa JA, Baloch Z, et al. 2025 American Thyroid Association Management Guidelines for Adult Patients with Differentiated Thyroid Cancer. Thyroid. 2025;35(8):841-985, Figure 2."
+    },
+    {
+      "title": "Step 7/7：接下來呢",
+      "scenario": "她已經做完右側甲狀腺切除加峽部切除，左葉還在。病理報告是 tall cell subtype，兩個病灶。她問接下來要做什麼。",
+      "media": "",
+      "question": "下一步是什麼？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 現在就做放射碘"
+        },
+        {
+          "id": "B",
+          "text": "(B) 開 levothyroxine，把 TSH 壓到 0.1 以下"
+        },
+        {
+          "id": "C",
+          "text": "(C) 只做年度超音波追蹤"
+        },
+        {
+          "id": "D",
+          "text": "(D) 討論 completion thyroidectomy，因為可能需要放射碘，而左葉還在就不能做",
+          "correct": true
+        }
+      ],
+      "feedback": "正確答案：D\n\n她報告上有兩項發現讓第二次手術值得討論：tall cell subtype、兩個病灶。這兩項都提高了她需要放射碘的可能性。而左葉還在的時候放射碘不能做，因為碘會被正常的左葉吸收，而不是去找殘存的病灶。所以第一個要決定的是左葉要不要拿掉，而這是要跟病人討論的，不是自動要做的步驟。\n\n2025 ATA 指引把 tall cell 列為葉切除後可以考慮 completion thyroidectomy 的亞型之一。指引還新增了一條建議：要開對側之前，先確認開過那一側的喉返神經功能正常（R16）。這也是為什麼她術前的喉鏡有意義。NCCN 對切緣陽性、淋巴管侵犯、高惡性度組織型也給同樣的建議。\n\n其他選項為什麼不對：\n(A) 放射碘現在還不能做，因為左葉還在。而且 2015 年之後放射碘是選擇性使用，不是術後常規。\n(B) 這是舊的做法。2015 年以前甲狀腺癌術後常規壓 TSH。2025 指引把目標簡化成兩種：維持在正常參考範圍內，或壓到正常範圍以下；壓到正常以下只留給生化或結構上反應不完全的病人。她沒有疾病證據，目標就是正常範圍。長期抑制也會增加心房顫動風險、降低骨密度。\n(C) 低風險、小於 2 cm 的腫瘤，葉切除加超音波追蹤就足夠。但她不是低風險：tall cell 和多發性讓她落在 intermediate-high。切緣近但陰性，不改變分級。只做超音波等於把「需不需要進一步治療」這個問題擱著。\n\nKeypoint：先決定左葉要不要拿，因為左葉還在，放射碘就不是選項。\n\nReference: Ringel MD, Sosa JA, Baloch Z, et al. Thyroid. 2025;35(8):841-985. Praw SS, Gigliotti BJ, Tessnow A, Kang H, Margulies DJ. Executive summary of the 2025 American Thyroid Association management guidelines for adult patients with differentiated thyroid cancer. Thyroid. 2025;35(11):1214-1220. doi:10.1177/10507256251390877. National Comprehensive Cancer Network. NCCN Clinical Practice Guidelines in Oncology: Thyroid Carcinoma. Version 2.2026, June 2, 2026."
     }
   ]
 }

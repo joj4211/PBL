@@ -1,148 +1,198 @@
 {
-  "id": "ear_menieres_disease",
-  "title": "天旋地轉與低鳴的浪潮 (The Waves of Vertigo: Ménière’s Disease)",
-  "subtitle": "梅尼爾氏症診斷、檢查與治療決策",
-  "description": "梅尼爾氏症的診斷標準、聽力學表現、電生理檢查、影像排除與分階段治療。",
-  "estimatedTime": "20-30 分鐘",
+  "id": "ear_menieres",
+  "title": "幾小時，不是幾秒，也不是幾天",
+  "subtitle": "一個左耳一直出狀況的男人，從第三次發作到第一張處方",
+  "description": "用持續時間分類眩暈、讀低頻聽力圖、在舊病歷裡找到波動、把相似的疾病一個一個問清楚、掃描那個問不掉的、數標準、以及第一線處置和什麼不能天天給。",
+  "estimatedTime": "15-20 分鐘",
   "difficulty": "中階",
   "tags": [
     "耳科",
-    "Ménière’s disease",
-    "Vertigo",
-    "Endolymphatic hydrops"
+    "眩暈",
+    "陣發性前庭症候群",
+    "聽力檢查"
   ],
   "steps": [
     {
-      "title": "Step 1/6: 臨床診斷標準 (Diagnostic Criteria)",
-      "scenario": "一位 38 歲女性來到門診，主訴過去三個月來，發生過 3 次嚴重的「天旋地轉 (Vertigo)」。每次發作時，右耳都會有明顯的悶塞感 (aural fullness) 與低頻的「轟轟聲 (tinnitus)」。發作期間她只能躺在床上，並伴隨嚴重的噁心嘔吐。",
-      "media": "載入表格：Table 63.1 Diagnostic criteria for Ménière’s disease",
-      "question": "根據 2015 年的診斷準則，若要將此病患診斷為「確定性梅尼爾氏症 (Definite Ménière’s disease)」，其自發性眩暈發作的「時間長度」必須符合下列哪一個條件？",
+      "title": "Step 1/7：持續多久",
+      "scenario": "62 歲男性，太太陪同。\n\n    主訴          一陣一陣天旋地轉\n    每次          2 到 4 小時，會吐\n    之後          不穩一天，然後正常\n    頻率          一個月 2 或 3 次，一年了\n    今天          沒有發作\n\n左耳\n    耳鳴          轟轟聲，大部分時間都有\n    悶脹          發作前會加重\n    聽力          發作時掉下去，之後部分恢復\n\n右耳          正常\n頭痛          發作時沒有；不怕光、不怕吵\n\n過去\n    住院兩次      因為左側「突發性聽損」，每次都合併眩暈；給過類固醇\n    急診 CT       某次發作後做的腦部 CT：正常",
+      "media": "",
+      "question": "時間過程告訴你什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 至少發作 5 次，每次持續 5 分鐘到 72 小時。"
+          "text": "(A) 隨頭部位置發作、持續數秒：良性陣發性姿勢性眩暈 (BPPV)"
         },
         {
           "id": "B",
-          "text": "(B) 至少 2 次自發性眩暈發作，每次持續 20 分鐘至 12 小時。",
-          "correct": true
+          "text": "(B) 單次發作持續數天：前庭神經炎"
         },
         {
           "id": "C",
-          "text": "(C) 眩暈發作持續超過 24 小時，且伴隨劇烈頭痛。"
+          "text": "(C) 反覆發作、每次數小時，同一耳的聽力、耳鳴和悶脹隨發作變化：梅尼爾氏症的型態，需要有紀錄的聽損才能確認",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) 任何長度的發作加頭痛：前庭性偏頭痛"
         }
       ],
-      "feedback": "正確答案：B\n\n主治醫師的 Tip： 梅尼爾氏症的診斷高度仰賴病史。Definite Ménière’s disease 的標準為：≥ 2 次的自發性眩暈，每次持續 20 分鐘到 12 小時；且必須伴隨聽力學證實的患耳低/中頻感音神經性聽損，以及波動性的耳部症狀 (耳鳴、聽力下降或耳悶)。選項 A 其實是前庭性偏頭痛 (Vestibular migraine) 的標準。"
+      "feedback": "正確答案：C\n\n持續時間比任何東西都先把眩暈分類。\n• 幾秒，翻身或抬頭引發：BPPV。\n• 幾分鐘到幾小時，反覆，發作之間耳朵正常，常常有頭痛：前庭性偏頭痛。\n• 幾小時，反覆，同一耳的聽損、耳鳴、悶脹隨發作波動：梅尼爾氏症。\n• 幾天，單次持續，聽力正常：前庭神經炎。\n\n他的發作持續數小時、會再來，而左耳說了剩下的故事：轟轟的耳鳴、發作前加重的悶脹、掉下去又部分恢復的聽力。那是內淋巴水腫在做它會做的事，也是梅尼爾氏症的臨床圖像。它還不是診斷，因為標準要求聽損要在聽力圖上有紀錄，不只是病人的描述。\n\n那兩次突發性聽損的住院值得再看一眼。突發性感音神經聽損合併眩暈和轟轟耳鳴、部分恢復、然後同一耳又發生一次，這是梅尼爾氏症常見的初次表現。每一次住院治的是一次發作；還沒有人把發作連起來。\n\n其他選項為什麼不對：\n(A) BPPV 持續幾秒到一分鐘，跟姿勢有關。幾小時的天旋地轉加嘔吐不是半規管的問題。\n(B) 前庭神經炎是一次持續幾天的發作，不會一個月回來三次。他的是反覆、而且比較短。\n(D) 前庭性偏頭痛是最主要的替代診斷，一定要問，但他發作時沒頭痛、不怕光不怕吵，而且偏頭痛不會製造一耳波動的聽損。\n\nKeypoint：幾小時、反覆、一耳的聽力耳鳴悶脹在波動：懷疑梅尼爾氏症，下一步是能確認或推翻它的聽力圖。\n\nReference: Lopez-Escamez JA, Carey J, Chung WH, et al. Diagnostic criteria for Meniere's disease. J Vestib Res. 2015;25(1):1-7. Basura GJ, Adams ME, Monfared A, et al. Clinical practice guideline: Meniere's disease. Otolaryngol Head Neck Surg. 2020;162(2_suppl):S1-S55. doi:10.1177/0194599820909438."
     },
     {
-      "title": "Step 2/6: 聽力學表現與病生理機轉 (Audiometry & Pathophysiology)",
-      "scenario": "在患者眩暈發作過後，你為她安排了純音聽力檢查 (PTA)。聽力圖顯示右耳呈現典型的「低頻感音神經性聽力喪失 (Low tone sensorineural hearing loss)」。",
-      "media": "載入圖片：梅尼爾氏症早期的向上傾斜 (upward-sloping) 聽力圖",
-      "question": "梅尼爾氏症的臨床症狀（眩暈、低頻聽損、耳悶），在組織病理學上最主要被認為與內耳的哪一種現象有關？",
+      "title": "Step 2/7：今天的聽力圖",
+      "scenario": "耳鏡          兩側耳膜正常\nWeber         偏右\nRinne         兩側正常\n\n今天的聽力圖，發作之間：\n\n    左     250 Hz 55 / 500 Hz 50 / 1 kHz 45 / 2 kHz 20 / 4 kHz 20 / 8 kHz 20 dB HL\n    右     全頻 10 到 20 dB HL\n    左耳語音辨識    72%",
+      "media": "載入圖片：這位病人的純音聽力圖，去識別化，不加標註。說明文字：「聽力圖，發作之間。」",
+      "question": "型態是什麼？為什麼重要？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 半規管內耳石脫落 (Canalithiasis)"
+          "text": "(A) 左耳上升型的低頻感音神經聽損，250 到 1000 Hz 最差：內淋巴水腫的聽力學簽名，也是定出患側耳的那條標準",
+          "correct": true
         },
         {
           "id": "B",
-          "text": "(B) 聽神經的微血管缺血 (Microvascular ischemia)"
+          "text": "(B) 左耳高頻聽損：工作的噪音傷害"
         },
         {
           "id": "C",
-          "text": "(C) 內淋巴液水腫 (Endolymphatic hydrops)",
-          "correct": true
+          "text": "(C) 左耳平坦型聽損：兩次突發性聽損留下的殘餘，跟眩暈無關"
+        },
+        {
+          "id": "D",
+          "text": "(D) 左耳傳導性聽損，耳膜後面有積液"
         }
       ],
-      "feedback": "正確答案：C\n\n病生理學解析： 自發性的「內淋巴液水腫 (Endolymphatic hydrops)」被認為是 Ménière’s disease 的核心組織病理特徵。雖然內淋巴水腫不是梅尼爾氏症獨有，但這種膜性迷路體積的異常擴張與壓力變化，完美解釋了患者波動性的聽力喪失與耳悶感。"
+      "feedback": "正確答案：A\n\n大部分感音神經聽損是往下掉的：高頻先走，老化、噪音、大多數耳毒性都是。梅尼爾氏症相反。水腫先扭曲耳蝸頂端，也就是編碼低頻的地方，所以早期的聽力圖是上升的：250 到 1000 Hz 最差，往 4000 和 8000 越來越好。病程久了聽損會變平、擴散，但頭幾年，上升的形狀就是線索。\n\nBárány 標準把這一條當決定性標準。Definite 梅尼爾氏症要求一耳有低到中頻的感音神經聽損，在發作前、中、後至少一次於聽力檢查上有紀錄。他的左耳，250 Hz 55 dB 上升到 2 kHz 以上 20 dB，右耳正常，就是這個。這張聽力圖做了兩件事：符合標準，並且定出患側耳。\n\n音叉也一致：Weber 偏右，也就是較好的那側耳蝸，Rinne 兩側正常。感音神經性，左。\n\n其他選項為什麼不對：\n(B) 噪音和老化先傷高頻。他的高頻是左耳最好的部分。這是噪音缺口的反面。\n(C) 聽損不是平的，是上升的。兩次突發性聽損是不是無關，是下一步的問題，而這條曲線的形狀已經暗示了答案。\n(D) Rinne 正常、耳膜正常、Weber 偏向對側。這裡沒有任何傳導性的東西。\n\nKeypoint：一耳上升型的低頻感音神經聽損加陣發性眩暈，符合聽力標準、也定出患側耳。\n\nReference: Lopez-Escamez JA, Carey J, Chung WH, et al. Diagnostic criteria for Meniere's disease. J Vestib Res. 2015;25(1):1-7. Basura GJ, Adams ME, Monfared A, et al. Otolaryngol Head Neck Surg. 2020;162(2_suppl):S1-S55, Key Action Statement 3."
     },
     {
-      "title": "Step 3/6: 特殊電生理檢查 (Electrocochleography, ECoG)",
-      "scenario": "為了尋找內淋巴水腫的電生理學證據，你為她安排了「耳蝸電圖 (Electrocochleography, ECoG)」檢查。",
-      "media": "載入圖片：Figure 63.2 Electrocochleogram 顯示異常升高的 SP 波",
-      "question": "在評估梅尼爾氏症患者的 ECoG 報告時，下列哪一項數值異常升高是內淋巴水腫 (Endolymphatic hydrops) 的典型特徵？",
+      "title": "Step 3/7：舊病歷",
+      "scenario": "他離開前，你調出上一次「突發性聽損」住院的紀錄。\n那張聽力圖是發作當天做的。\n\n發作中，左\n    250 Hz 65 / 500 Hz 65 / 1 kHz 65 / 2 kHz 40 / 4 kHz 25 / 8 kHz 20 dB HL\n\n今天，發作之間，左\n    250 Hz 55 / 500 Hz 50 / 1 kHz 45 / 2 kHz 20 / 4 kHz 20 / 8 kHz 20 dB HL\n\n右耳    兩次都是全頻 10 到 20 dB HL",
+      "media": "載入圖片：這位病人的兩張聽力圖並排，住院發作當天和今天發作之間，去識別化，不加標註。說明文字：「聽力圖，發作中與發作之間。」",
+      "question": "舊的聽力圖多告訴你什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 聽性腦幹反應 (ABR) 的 Wave I 潛伏期延長"
+          "text": "(A) 住院以來聽力已經惡化成固定的聽損"
         },
         {
           "id": "B",
-          "text": "(B) 總合電位與動作電位的振幅比值升高 (Elevated SP/AP ratio)",
-          "correct": true
+          "text": "(B) 那是另一次已經恢復的突發性感音神經聽損，跟今天的圖像無關"
         },
         {
           "id": "C",
-          "text": "(C) 頸部前庭誘發肌電位 (cVEMP) 振幅異常變大"
+          "text": "(C) 當時右耳也有牽涉"
+        },
+        {
+          "id": "D",
+          "text": "(D) 聽損會波動：發作時 250 Hz 到 2 kHz 差 10 到 20 dB，4 和 8 kHz 不變，發作之間部分恢復；而且「突發性聽損」就是同一個疾病的一次發作",
+          "correct": true
         }
       ],
-      "feedback": "正確答案：B\n\n檢查判讀： 耳蝸電圖 (ECoG) 可以用來展示內淋巴水腫的電生理基礎。在梅尼爾氏症中，基底膜 (basilar membrane) 的位移會導致總合電位 (Summating Potential, SP) 變大。臨床上常使用 Click 刺激，若 Extratympanic 的 SP/AP ratio > 0.42，或 Transtympanic 的 SP/AP ratio > 0.35，即強烈暗示有內淋巴水腫的存在。"
+      "feedback": "正確答案：D\n\n把兩條曲線疊在一起。發作中，左耳在 250、500、1000 Hz 都是 65 dB、2 kHz 是 40；發作之間是 55、50、45 和 20。4 和 8 kHz 兩天都是 20 到 25。這就是波動：聽損在耳蝸頂端和中段隨每次發作擺動、部分恢復，底端不動。一張聽力圖定出患側耳、符合標準。兩張聽力圖顯示疾病在做它會做的事，而且是在紙上，比他說的「聽力掉下去又部分回來」更有力。\n\n舊病歷也把一個圈閉上了。那張被歸檔成突發性感音神經聽損的聽力圖，就是同一條上升型低頻曲線，在擺動的頂點拍的。突發性聽損合併眩暈和轟轟耳鳴、部分恢復、然後同一耳再發生，是梅尼爾氏症常見的初次表現。每一次住院治一次發作；沒有人把它們連起來。診斷幾年前就在他的病歷裡。\n\n從這裡開始，追蹤時要重複聽力圖。連續的檢查做三件事：記錄低頻擺動多大，顯示它們什麼時候不再擺動、隨疾病成熟固定成一個不變的聽損，還有盯著另一耳，少數病人多年後對側會牽涉進來。\n\n其他選項為什麼不對：\n(A) 相反。今天的聽力比住院時好，而且差異只在 250 Hz 到 2 kHz。那是發作之間的恢復，不是惡化。\n(B) 一次已經恢復的突發性感音神經聽損，會是平的或往下掉的，不會在同一耳用同樣上升的形狀再回來。同一耳、同一條曲線、同樣的發作：一個疾病。\n(C) 右耳兩次都是全頻 10 到 20 dB。單側。\n\nKeypoint：兩張聽力圖，一張發作中、一張發作之間，顯示低頻中頻在擺、高頻不動；波動有紀錄了，而那幾次住院就是最早的發作。\n\nReference: Lopez-Escamez JA, Carey J, Chung WH, et al. Diagnostic criteria for Meniere's disease. J Vestib Res. 2015;25(1):1-7. Basura GJ, Adams ME, Monfared A, et al. Otolaryngol Head Neck Surg. 2020;162(2_suppl):S1-S55, Key Action Statement 3."
     },
     {
-      "title": "Step 4/6: 影像學鑑別診斷 (Exclusion by MRI)",
-      "scenario": "儘管臨床症狀與聽力圖都非常符合梅尼爾氏症，但主任在查房時提醒你：「在下 Definite Ménière’s disease 的診斷前，必須先排除其他原因 (other causes excluded)。」",
-      "media": "載入圖片：MRI 顯示小腦骨髓角 (CP angle) 腫瘤的影像",
-      "question": "為了排除其他可能導致類似症狀的「次發性病灶 (如神經血管壓迫或後顱窩腫瘤)」，最敏感且必要的影像學檢查為何？",
+      "title": "Step 4/7：還有什麼長得像這樣",
+      "scenario": "反覆眩暈，一次幾小時。\n左耳：會波動的低頻聽損、耳鳴、悶脹。\n\n在命名任何東西之前，你把長得像的疾病一個一個問過。\n\n    發作時頭痛            無\n    怕光／怕吵            無\n    偏頭痛病史            無，本人和家族都沒有\n    大聲音引發眩暈        無\n    用力引發眩暈          無\n    自聲過強 (autophony)  無\n    神經學徵象            無；發作之間步態正常\n    右耳                  正常\n    全身性疾病            無\n    氣壓傷／頭部外傷      無",
+      "media": "",
+      "question": "你必須考慮哪些疾病？每一個要怎麼處理才能排除？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 施打顯影劑的核磁共振造影 (MRI of CP angle with contrast enhancement)",
-          "correct": true
+          "text": "(A) 只有前庭神經鞘瘤；一張 MRI 就解決整個鑑別"
         },
         {
           "id": "B",
-          "text": "(B) 顳骨高解析度電腦斷層 (HRCT of temporal bone)"
+          "text": "(B) 五個：前庭性偏頭痛、半規管裂、神經上的病灶、中樞原因、自體免疫內耳疾病。病史和聽力圖處理前兩個；一張 MRI 處理接下來兩個；聽損變快或變雙側才驗血清",
+          "correct": true
         },
         {
           "id": "C",
-          "text": "(C) 頸部都卜勒超音波 (Carotid Doppler ultrasound)"
+          "text": "(C) 不用；圖像夠清楚，不用考慮其他可能就能診斷"
+        },
+        {
+          "id": "D",
+          "text": "(D) 先做溫差測試和耳蝸電圖；它們會把這些疾病分開"
         }
       ],
-      "feedback": "正確答案：A\n\n診斷地雷： 梅尼爾氏症是一個「排除性診斷」。施打顯影劑的 MRI 是排除內耳畸形、第八對腦神經血管衝突、小腦骨髓角腫瘤 (尤其是前庭神經鞘瘤 vestibular schwannoma) 最敏感的影像學方法。只有在排除這些潛在病灶後，才能確立梅尼爾氏症的診斷。"
+      "feedback": "正確答案：B\n\n病史降低懷疑；它不證明不存在。它做的是告訴你該開哪些檢查。\n\n前庭性偏頭痛\n• 懷疑的線索：發作時頭痛、怕光或怕吵；偏頭痛病史\n• 他：都沒有，而且有一耳波動的低頻聽損，那是偏頭痛不會造成的\n• 怎麼處理：病史對照偏頭痛的標準；沒有檢查可做；追蹤期間留在清單上\n\n上半規管裂\n• 懷疑的線索：大聲音或用力引發眩暈；自聲過強；低頻氣骨導差\n• 他：都沒有，Rinne 正常\n• 怎麼處理：顳骨 CT 和頸肌 VEMP，只在那些特徵出現時才開\n\n神經上的病灶（前庭神經鞘瘤）\n• 懷疑的線索：不對稱的感音神經聽損，有或沒有耳鳴和眩暈；它可以模仿這個圖像很多年\n• 他：病史裡沒有任何東西處理得了它\n• 怎麼處理：內耳道顯影劑 MRI；每一個不對稱感音神經聽損都該提供\n\n中樞原因\n• 懷疑的線索：神經學徵象；突然發作合併共濟失調或複視\n• 他：檢查正常\n• 怎麼處理：神經學檢查，加同一張 MRI 看後顱窩\n\n自體免疫內耳疾病\n• 懷疑的線索：快速進展、雙側、全身性疾病\n• 他：慢、單側\n• 怎麼處理：只在另一耳開始動的時候才做血清學和類固醇試驗\n\n其他選項為什麼不對：\n(A) MRI 處理神經和後顱窩。它對偏頭痛或半規管裂什麼都沒說，那兩個需要病史、標準，以及懷疑時另一種掃描。\n(C) 第四條診斷標準就是「沒有別的更能解釋這個圖像」。跳過鑑別診斷就是跳過那條標準。\n(D) 溫差測試量的是耳朵失去多少功能；耳蝸電圖是間接找水腫。兩者都分不開這些疾病，而且指引說不要用它們做診斷。\n\nKeypoint：偏頭痛靠標準和聽力圖；半規管裂靠 CT 和 VEMP，但只在症狀出現時；神經和後顱窩靠一張 MRI。病史告訴你該開哪些檢查，不是告訴你可以跳過哪些診斷。\n\nReference: Basura GJ, Adams ME, Monfared A, et al. Clinical practice guideline: Meniere's disease. Otolaryngol Head Neck Surg. 2020;162(2_suppl):S1-S55, Key Action Statements 2, 4 and 5. Lopez-Escamez JA, Carey J, Chung WH, et al. Diagnostic criteria for Meniere's disease. J Vestib Res. 2015;25(1):1-7."
     },
     {
-      "title": "Step 5/6: 第一線藥物與生活型態改變 (First-Line Management)",
-      "scenario": "確診後，你準備為病患開立處方並進行門診衛教，希望能預防她未來眩暈的反覆發作。",
-      "media": "載入圖片：低鹽飲食與 Betahistine 藥物示意圖",
-      "question": "根據目前的治療指引，梅尼爾氏症患者「預防復發」的第一線常規治療 (First-line medical treatment) 應包含下列何者？",
+      "title": "Step 5/7：掃描",
+      "scenario": "病史處理不了的那一個：\n不對稱感音神經聽損後面，神經上的病灶。\n\n他提到急診的腦部 CT 是正常的。\n他問這樣算不算已經排除了。",
+      "media": "載入圖片：這位病人經過內耳道的軸向 T1 顯影劑 MRI，去識別化，不加標註。說明文字：「MRI，內耳道。」",
+      "question": "哪一項檢查能處理它？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 鼓勵大量飲用咖啡以利尿，並常規服用高劑量類固醇。"
+          "text": "(A) 溫差測試；左側反應減弱就確認了患側耳、也排除了腫瘤"
         },
         {
           "id": "B",
-          "text": "(B) 嚴格控制鹽分與避免咖啡因 (low-salt and caffeine-free diet)，並可合併使用利尿劑與 Betahistine (16mg TID)。",
-          "correct": true
+          "text": "(B) 不用；正常的腦部 CT 已經排除腫瘤"
         },
         {
           "id": "C",
-          "text": "(C) 立即安排前庭神經切斷術。"
+          "text": "(C) 顳骨顯影劑 CT"
+        },
+        {
+          "id": "D",
+          "text": "(D) 內耳道與後顱窩的顯影劑 MRI",
+          "correct": true
         }
       ],
-      "feedback": "正確答案：B\n\n治療共識： 預防梅尼爾氏症發作的第一線治療包含：嚴格的低鹽與無咖啡因飲食控制 (Counselling includes a low-salt and caffeine-free diet)。藥物方面，利尿劑 (如 hydrochlorothiazide) 可降低內淋巴水腫；而 Betahistine (一種 histamine analog，建議 16mg TID) 也常被合併使用以預防眩暈復發。"
+      "feedback": "正確答案：D\n\n前庭神經鞘瘤的表現是不對稱的感音神經聽損、耳鳴、有時陣發性眩暈，它可以模仿陣發性內耳疾病很多年。指引說任何不對稱感音神經聽損的病人都應該提供內耳道與後顱窩的顯影劑 MRI，而他有。這張掃描不是為了確認診斷；是為了拿掉那個會改變一切的替代診斷。他的是正常的，大多數都是。\n\n其他檢查的位置：\n• 前庭功能檢查。溫差測試、video head impulse、VEMP 描述左耳失去多少功能、迷路的哪些部分牽涉。這是有用的資訊，很多中心會做基準值。它做不到的是把「一個弱的耳朵」的各種原因分開，所以它取代不了 MRI。\n• 耳蝸電圖。SP/AP 比值升高支持水腫，但這個檢查在不同實驗室之間變異大，指引不靠它做診斷。\n• CT。它看骨頭。急診的 CT 回答的是中風的問題；它看不到神經、看不到內耳道裡的東西。\n\n其他選項為什麼不對：\n(A) 溫差反應減弱告訴你左耳弱，這你已經知道了。它不告訴你為什麼，而神經鞘瘤可以做出一模一樣的結果。\n(B) 正常的腦部 CT 排除不了內耳道裡的神經鞘瘤。小的在 CT 上看不見。\n(C) 顳骨 CT 是給半規管裂或骨頭的檢查；還開著的病灶是內耳道裡的軟組織，MRI 才是那個檢查。\n\nKeypoint：不對稱感音神經聽損就做內耳道 MRI；前庭檢查描述耳朵，它們排除不了腫瘤。\n\nReference: Basura GJ, Adams ME, Monfared A, et al. Clinical practice guideline: Meniere's disease. Otolaryngol Head Neck Surg. 2020;162(2_suppl):S1-S55, Key Action Statements 4, 5 and 6."
     },
     {
-      "title": "Step 6/6: 針對猝倒發作的末期救援 (End-Stage & Tumarkin Crisis)",
-      "scenario": "兩年後，該患者的右耳聽力已嚴重退化 (大於 70dB)。更可怕的是，她最近發生了數次「沒有失去意識，但突然感覺被推倒而重摔在地」的發作，被診斷為危險的 Tumarkin crisis (Drop attacks)。傳統藥物與飲食控制已完全失效。",
-      "media": "載入圖片：耳內注射 (Intratympanic injection) 的示意圖",
-      "question": "面對這種聽力已經極差，且出現危險猝倒發作 (Tumarkin crises) 的頑固型/末期梅尼爾氏症病患，下列哪一種「耳內注射治療」是強烈建議的有效手段，藉由破壞前庭功能來停止眩暈？",
+      "title": "Step 6/7：Definite 還是 Probable",
+      "scenario": "你手上有的：\n\n    發作          自發性，2 到 4 小時，一年很多次\n    聽力          左，低頻，感音神經性\n                  兩張聽力圖；發作時更差\n    左耳          耳鳴、悶脹、聽力：都隨發作變動\n    相似疾病      病史上處理過\n    MRI           內耳道正常\n\nBárány Society 的標準如圖。",
+      "media": "載入圖片：你自己重繪的 Bárány Society 2015 標準表：Definite = 兩次以上自發性眩暈，每次 20 分鐘到 12 小時；一耳有聽力檢查記錄的低到中頻感音神經聽損，發作前、中、後至少一次；該耳有波動的耳部症狀；沒有更好的解釋。Probable = 兩次以上發作，每次 20 分鐘到 24 小時；波動的耳部症狀；沒有更好的解釋。不要標示任何一列。說明文字：「Bárány Society 標準，2015。」",
+      "question": "用圖中的標準，診斷是什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 耳內注射類固醇 (Intratympanic dexamethasone)"
-        },
-        {
-          "id": "B",
-          "text": "(B) 耳內注射慶大黴素 (Intratympanic gentamicin)",
+          "text": "(A) Definite 梅尼爾氏症：兩次以上 20 分鐘到 12 小時的發作、患側耳有聽力檢查記錄的低到中頻聽損、該耳有波動的耳部症狀、沒有更好的解釋",
           "correct": true
         },
         {
+          "id": "B",
+          "text": "(B) Probable 梅尼爾氏症，因為聽損是在發作之間記錄的，不是發作當中"
+        },
+        {
           "id": "C",
-          "text": "(C) 耳內注射玻尿酸 (Intratympanic hyaluronic acid)"
+          "text": "(C) Probable 梅尼爾氏症，因為標準要求影像上有水腫的證據"
+        },
+        {
+          "id": "D",
+          "text": "(D) 沒有耳蝸電圖不能診斷梅尼爾氏症"
         }
       ],
-      "feedback": "正確答案：B\n\n進階處置： 耳內注射類固醇 (Dexamethasone) 適用於想「保留聽力」的救援治療；但對於已經進入末期 (end-stage)、聽力已喪失，或出現極度危險的 Tumarkin crisis (Drop attack) 病人，利用 aminoglycoside 耳毒性破壞前庭神經的「耳內注射 Gentamicin」是非常有效的手段 (In refractory or end-stage cases, intratympanic injection of gentamicin can be offered)，但須警告患者有伴隨聽力完全喪失的風險。"
+      "feedback": "正確答案：A\n\nDefinite 梅尼爾氏症四條都要。一條一條打勾。\n\n1. 兩次以上自發性眩暈，20 分鐘到 12 小時\n   他：很多次 2 到 4 小時的發作。符合。\n\n2. 一耳的低到中頻感音神經聽損，在發作前、中、後至少一次於聽力檢查上有紀錄\n   他：左耳，上升型曲線，兩張聽力圖。符合。一張就夠了；兩張還顯示了波動。\n\n3. 該耳有波動的耳部症狀：聽力、耳鳴或悶脹\n   他：三個都有，左耳，隨發作變動。符合。\n\n4. 沒有其他前庭診斷更能解釋\n   他：相似疾病在 Step 4 處理過；MRI 在 Step 5 正常。符合。\n\n四條全中：definite。\n\nProbable 梅尼爾氏症，對照用：\n• 兩次以上發作，20 分鐘到 24 小時\n• 患側耳有波動的耳部症狀\n• 沒有別的解釋\n• 不需要聽力圖\n\n第四條標準就是為什麼這個名字等到現在才用。診斷不是一次門診做出來的；是在替代診斷都被合理處理過之後做出來的。\n\n其他選項為什麼不對：\n(B) 標準接受發作前、中、後的聽力圖。發作之間算數，而且他還有一張發作當中的。\n(C) 標準是臨床的。影像是用來處理替代診斷的，這已經做了，不是用來證明水腫。水腫 MRI 是研究工具。\n(D) 耳蝸電圖不在標準裡，指引也說不要用它建立診斷。\n\nKeypoint：兩次 20 分鐘到 12 小時的發作、一張定出患側耳的低頻聽損紀錄、波動的耳部症狀、沒有別的能解釋：definite。\n\nReference: Lopez-Escamez JA, Carey J, Chung WH, et al. Diagnostic criteria for Meniere's disease. J Vestib Res. 2015;25(1):1-7. Basura GJ, Adams ME, Monfared A, et al. Clinical practice guideline: Meniere's disease. Otolaryngol Head Neck Surg. 2020;162(2_suppl):S1-S55, Key Action Statements 1, 2 and 5."
+    },
+    {
+      "title": "Step 7/7：開始什麼",
+      "scenario": "MRI 正常。\n\n    發作          一個月 2 或 3 次\n    目前用藥      每天吃 diphenidol，上次急診之後開的\n    原因          他怕下一次發作\n\n他問有沒有更好的辦法。",
+      "media": "",
+      "question": "你開始什麼？停掉什麼？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 繼續每天的 diphenidol，再加每天一顆 benzodiazepine"
+        },
+        {
+          "id": "B",
+          "text": "(B) 每次發作給一個口服類固醇療程，像處理突發性聽損一樣"
+        },
+        {
+          "id": "C",
+          "text": "(C) 衛教和生活型態：限鹽、限咖啡因、睡眠、壓力；試用利尿劑或 betahistine 預防；前庭鎮靜劑和止吐藥只留給發作時用，每天的 diphenidol 停掉",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) 現在就打鼓室內 gentamicin，一勞永逸止住發作"
+        }
+      ],
+      "feedback": "正確答案：C\n\n梅尼爾氏症是分階處理的，第一階不是藥。\n\n衛教。這是什麼病、它會發作也會緩解、大部分人不需要侵入性治療就能控制、患側耳的聽力不管怎樣多年後大概會下降。指引把這列為建議，不是選項。\n\n生活型態。限鈉、少咖啡因和酒精、規律睡眠、注意壓力。證據薄弱但成本是零，有些病人會找到自己的誘因。\n\n預防，當成選項。利尿劑如 hydrochlorothiazide，或 betahistine。兩者的證據都薄，指引把它們列為選項，不是建議。試幾個月是合理的；發作沒減少就停。\n\n救援，給發作本身。前庭鎮靜劑如 diphenidol 或 benzodiazepine，加止吐藥，發作開始時吃、結束就停。這是今天最重要的修正：每天吃鎮靜劑不會預防發作，只會讓他在發作之間昏沉，而在一個大腦需要代償一個波動的耳朵的疾病裡，它會拖延代償。指引說它們只給急性發作用。\n\n前庭復健是給有些病人在發作之間發展出的慢性不穩用的，不是給發作本身。\n\n這些都做了發作還繼續，下一階是鼓室內注射：類固醇先，因為它不用耳朵付任何代價；gentamicin 會摧毀耳朵的平衡功能、可能賠上聽力，只在類固醇失敗後才用。那是之後的門診。\n\n其他選項為什麼不對：\n(A) 每天的鎮靜劑只鎮靜不預防，還擋住代償。再加第二種是雪上加霜。\n(B) 口服類固醇是給突發性感音神經聽損的。一旦診斷是梅尼爾氏症，一年三十次發作每次一個類固醇療程，是沒有證據的傷害。\n(D) Gentamicin 摧毀耳朵的前庭功能，對聽力也有真實的風險。它是給非破壞性治療失敗的發作用的，不是給一個什麼都還沒試過的病人。\n\nKeypoint：衛教、限鹽限咖啡因、試利尿劑或 betahistine，鎮靜劑留給發作、發作之間停掉。\n\nReference: Basura GJ, Adams ME, Monfared A, et al. Clinical practice guideline: Meniere's disease. Otolaryngol Head Neck Surg. 2020;162(2_suppl):S1-S55, Key Action Statements 7, 8 and 13."
     }
   ]
 }

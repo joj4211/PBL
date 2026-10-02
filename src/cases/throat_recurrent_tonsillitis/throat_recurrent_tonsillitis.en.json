@@ -1,148 +1,173 @@
 {
-  "id": "throat_recurrent_tonsillitis",
-  "title": "The Burning Throat: Recurrent Tonsillitis",
-  "subtitle": "Recurrent tonsillitis and tonsillectomy",
-  "description": "Surgical indications, microbiology, surgical instruments, perioperative medication, analgesia, and management of delayed bleeding in recurrent tonsillitis.",
-  "estimatedTime": "20-30 min",
+  "id": "throat_tonsillitis",
+  "title": "Sore Throat, Again",
+  "subtitle": "A young man with repeated sore throats, from the first visit to six weeks after surgery",
+  "description": "The frequency criteria, what counts as a documented episode, what to tell an adult about recovery, what goes in at induction, discharge analgesia, and what the largest adult trial says about the benefit.",
+  "estimatedTime": "15-20 min",
   "difficulty": "Intermediate",
   "tags": [
-    "Laryngology",
-    "Tonsillitis",
-    "Tonsillectomy",
-    "Post-op bleeding"
+    "General Otolaryngology",
+    "Throat infection",
+    "Guideline criteria",
+    "Perioperative care",
+    "NATTINA"
   ],
   "steps": [
     {
-      "title": "Step 1/6: Surgical Indications",
-      "scenario": "A 25-year-old man visits clinic because recurrent tonsillitis has bothered him for the past 2 years. Each episode causes severe sore throat, exudate, and fever, and attacks recur despite antibiotics from clinics and hospitals. Physical examination shows bilateral grade III tonsillar hypertrophy.",
-      "media": "Load image: Grade III tonsillar hypertrophy with pharyngeal inflammation",
-      "question": "When discussing surgery, you mention that his history meets the Paradise criteria and SIGN guidelines. Which attack frequency supports tonsillectomy?",
+      "title": "Step 1/6: The Criteria",
+      "scenario": "A 25-year-old man comes to clinic with recurrent tonsillitis. For the past two years he has had repeated episodes of severe sore throat with fever and pus on the tonsils, and courses of antibiotics from several clinics have not stopped them coming back.\n\nOn examination both tonsils are grade III.",
+      "media": "Load image: Oropharyngeal photograph showing grade III tonsils. Caption: 'Oropharynx.'",
+      "question": "When you discuss surgery with him, you refer to the Paradise criteria. Which frequency of episodes meets the criteria for tonsillectomy?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Three infections within the past 6 months."
+          "text": "(A) Three episodes in the past six months"
         },
         {
           "id": "B",
-          "text": "(B) At least 7 episodes in 1 year, at least 5 episodes per year for 2 consecutive years, or at least 3 episodes per year for 3 consecutive years.",
+          "text": "(B) At least 7 in one year; or at least 5 per year for two years; or at least 3 per year for three years",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) Any single episode of tonsillitis with fever."
+          "text": "(C) A single episode with fever"
+        },
+        {
+          "id": "D",
+          "text": "(D) At least 5 in one year"
         }
       ],
-      "feedback": "Correct answer: B\n\nAttending tip: Paradise criteria and SIGN guidelines require a specific frequency of tonsillitis, documented clinically and severe enough to affect normal function, before tonsillectomy is expected to significantly improve quality of life."
+      "feedback": "Correct answer: B\n\nThe three thresholds come from the Paradise trial: 7 or more episodes in the past year, or 5 or more per year for two years, or 3 or more per year for three years. Any one of the three is enough. The UK guideline (SIGN) uses the same numbers for adults and adds that the episodes must be disabling and prevent normal functioning. The NATTINA trial, the largest adult tonsillectomy trial, used exactly these entry criteria.\n\nWhy the others fail:\n(A) Three in six months is a high rate, but the criteria count full years, and three in six months does not reach any of the three thresholds.\n(C) One episode is never an indication, however severe.\n(D) Five in one year falls short. Five per year counts only when it happens two years running.\n\nKeypoint: 7 in one year, 5 a year for two years, or 3 a year for three years.\n\nReference: Paradise JL, Bluestone CD, Bachman RZ, et al. Efficacy of tonsillectomy for recurrent throat infection in severely affected children: results of parallel randomized and nonrandomized clinical trials. N Engl J Med. 1984;310(11):674-683. doi:10.1056/NEJM198403153101102. Scottish Intercollegiate Guidelines Network. Management of Sore Throat and Indications for Tonsillectomy. SIGN publication no. 117. Edinburgh: SIGN; 2010."
     },
     {
-      "title": "Step 2/6: Microbiology of Recurrent Tonsillitis",
-      "scenario": "The patient asks, \"Every time I get tonsillitis, doctors prescribe antibiotics for streptococcus. Why does it keep coming back?\" You explain that the microbiology of acute and recurrent tonsillitis differs.",
-      "media": "Load image: Microscopic bacterial smear illustration",
-      "question": "Although group A beta-hemolytic streptococcus is the most common pathogen in acute tonsillitis, what are the main pathogens in recurrent tonsillitis?",
+      "title": "Step 2/6: What Counts",
+      "scenario": "He says there have been more than ten episodes this year. You open the chart to count them.\n\nTo count toward the criteria, an episode has to be documented at the time it happened.",
+      "media": "",
+      "question": "Which of these counts as a documented episode?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Only group A beta-hemolytic streptococcus and Mycoplasma"
+          "text": "(A) A phone call to the clinic for sore throat, with antibiotics prescribed"
         },
         {
           "id": "B",
-          "text": "(B) Haemophilus influenzae and Staphylococcus aureus, including MRSA",
-          "correct": true
+          "text": "(B) A sore throat he reports at a later visit"
         },
         {
           "id": "C",
-          "text": "(C) Only Epstein-Barr virus"
+          "text": "(C) A sore throat with at least one of: temperature above 38.3 C, cervical adenopathy, tonsillar exudate, or a positive strep test recorded at that visit",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) A sore throat with a normal examination and no fever recorded"
         }
       ],
-      "feedback": "Correct answer: B\n\nClinical pitfall: Acute tonsillitis is most commonly caused by group A beta-hemolytic streptococcus, but recurrent tonsillitis is more often associated with Haemophilus influenzae and Staphylococcus aureus, including MRSA. This is why short courses targeting streptococcus alone often fail to eradicate the problem."
+      "feedback": "Correct answer: C\n\nAn episode counts only when the note from that visit records a sore throat plus at least one of four findings: temperature above 38.3 C (101 F), cervical adenopathy, tonsillar exudate, or a positive test for group A streptococcus.\n\nHis chart has nine visits for sore throat this year. Seven have one of those findings recorded. Two say only \"sore throat, antibiotic prescribed.\" So he has seven documented episodes, which meets the first threshold.\n\nWhy the others fail:\n(A) Nothing was examined or measured, so nothing can be counted.\n(B) Recall is not documentation. The requirement exists because the trials that showed benefit enrolled patients whose episodes had these recorded features.\n(D) A sore throat with a normal examination is most likely viral, and it is not one of the episodes the trials counted.\n\nKeypoint: count what the chart recorded at the time, not what the patient remembers.\n\nReference: Paradise JL, Bluestone CD, Bachman RZ, et al. Efficacy of tonsillectomy for recurrent throat infection in severely affected children: results of parallel randomized and nonrandomized clinical trials. N Engl J Med. 1984;310(11):674-683. doi:10.1056/NEJM198403153101102. Scottish Intercollegiate Guidelines Network. Management of Sore Throat and Indications for Tonsillectomy. SIGN publication no. 117. Edinburgh: SIGN; 2010."
     },
     {
-      "title": "Step 3/6: Surgical Techniques and Bleeding",
-      "scenario": "The patient agrees to bilateral tonsillectomy. During preoperative counseling, he is very worried about postoperative hemorrhage. You need to choose an appropriate surgical technique based on large audit data.",
-      "media": "Load table: Table 38.1 Surgical techniques and postoperative hemorrhage",
-      "question": "According to the UK National Prospective Tonsillectomy Audit and best clinical practice guidance, which surgical technique has the lowest postoperative hemorrhage rate?",
+      "title": "Step 3/6: What Recovery Looks Like",
+      "scenario": "Seven documented episodes in one year meets the criteria, and he wants surgery. Before booking it you talk about recovery.\n\nHe works full time and asks how long he will be off.",
+      "media": "",
+      "question": "What do you tell him about recovery in an adult?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Cold steel dissection tonsillectomy",
+          "text": "(A) Pain is worse and lasts longer than in children, usually around two weeks, and about one in five adults in the largest trial reported some postoperative bleeding",
           "correct": true
         },
         {
           "id": "B",
-          "text": "(B) Monopolar diathermy dissection"
+          "text": "(B) Recovery is like a child's: two or three days of discomfort and back to work within a week"
         },
         {
           "id": "C",
-          "text": "(C) Bipolar diathermy scissors"
+          "text": "(C) Bleeding is rare in adults because the tonsillar bed is larger and easier to cauterize"
+        },
+        {
+          "id": "D",
+          "text": "(D) He should expect to stay in hospital for several days"
         }
       ],
-      "feedback": "Correct answer: A\n\nProcedure interpretation: NPTA data show that traditional cold steel tonsillectomy has lower bleeding rates than thermal techniques, with primary bleeding around 0.5-0.8% and secondary bleeding around 1.0-2.4%. It also causes less postoperative pain. Fully monopolar techniques have the highest postoperative bleeding and pain burden."
+      "feedback": "Correct answer: A\n\nAdults have more pain after tonsillectomy than children and it lasts longer, usually about two weeks. In NATTINA, 39 percent of participants had an adverse event related to the surgery, and the most common was bleeding, reported by 19 percent. That is higher than older reports of 5 to 10 percent, partly because the trial contacted patients proactively to ask. Plan two weeks off work and tell him what a bleed looks like and where to go.\n\nWhy the others fail:\n(B) This is the child's course, and adults do worse on every measure: pain, time to eating normally, and days off.\n(C) The opposite of the evidence. Adult bleeding rates are higher than children's, not lower.\n(D) Uncomplicated adult tonsillectomy is a day case or overnight stay. Several days is not expected.\n\nKeypoint: two weeks of significant pain, and a real bleeding risk he needs to be told about before he agrees.\n\nReference: Wilson JA, O'Hara J, Fouweather T, et al. Conservative management versus tonsillectomy in adults with recurrent acute tonsillitis in the UK (NATTINA). Lancet. 2023;401(10393):2051-2059. doi:10.1016/S0140-6736(23)00519-6."
     },
     {
-      "title": "Step 4/6: Perioperative Glucocorticoids",
-      "scenario": "The patient enters the operating room. During induction, the anesthesiologist asks whether any preventive medication should be given to reduce postoperative pain and discomfort.",
-      "media": "Load image: Dexamethasone vial",
-      "question": "According to Cochrane review and best clinical practice, which perioperative medication safely and effectively reduces postoperative morbidity, pain, nausea, and vomiting after tonsillectomy?",
+      "title": "Step 4/6: At Induction",
+      "scenario": "He is on the operating table. The anesthesiologist asks what you want given.",
+      "media": "",
+      "question": "What do you give intraoperatively?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Seven days of postoperative prophylactic antibiotics"
+          "text": "(A) A single dose of intravenous antibiotic, and no steroid"
         },
         {
           "id": "B",
-          "text": "(B) A single intraoperative intravenous dose of dexamethasone",
-          "correct": true
+          "text": "(B) Neither, since both have been linked to postoperative bleeding"
         },
         {
           "id": "C",
-          "text": "(C) High-dose aspirin"
+          "text": "(C) Both a single dose of dexamethasone and a single dose of intravenous antibiotic"
+        },
+        {
+          "id": "D",
+          "text": "(D) A single dose of intravenous dexamethasone, and no antibiotic",
+          "correct": true
         }
       ],
-      "feedback": "Correct answer: B\n\nTreatment consensus: Evidence strongly supports a single perioperative dose of dexamethasone as adjunctive therapy to reduce postoperative pain and postoperative nausea/vomiting. In contrast, routine postoperative antibiotics are not recommended and do not reduce complications."
+      "feedback": "Correct answer: D\n\nA single intraoperative dose of dexamethasone reduces postoperative nausea and vomiting and helps early oral intake. Perioperative antibiotics do not: a Cochrane review found they do not reduce pain, bleeding, or time to normal diet, and they carry the usual costs of adverse effects and resistance.\n\nWhy the others fail:\n(A) Reverses both. The antibiotic has no benefit and the steroid does.\n(B) A single steroid dose has not been shown to increase bleeding that requires intervention, and withholding it gives up a real benefit.\n(C) The steroid half is right. The antibiotic half is the routine that persisted for years without evidence.\n\nKeypoint: give the steroid, withhold the antibiotic.\n\nReference: Dhiwakar M, Clement WA, Supriya M, McKerrow W. Antibiotics to reduce post-tonsillectomy morbidity. Cochrane Database Syst Rev. 2012;12(12):CD005607. doi:10.1002/14651858.CD005607.pub4."
     },
     {
-      "title": "Step 5/6: Postoperative Analgesia",
-      "scenario": "The surgery is completed smoothly. The biggest problem after tonsillectomy is pain, and recovery usually takes 1-2 weeks. You need to prescribe discharge analgesics.",
-      "media": "Load image: Postoperative pain management medication choices",
-      "question": "Which statement about postoperative analgesia after tonsillectomy is correct?",
+      "title": "Step 5/6: Going Home",
+      "scenario": "The operation is uncomplicated. He is ready to go home the same evening and asks what to take for the pain.",
+      "media": "",
+      "question": "What do you prescribe?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Opioids are preferred because they do not cause nausea or vomiting."
+          "text": "(A) An opioid alone, since anti-inflammatory drugs increase the risk of bleeding"
         },
         {
           "id": "B",
-          "text": "(B) NSAIDs cause less postoperative nausea and vomiting than opioids and do not increase wound bleeding risk, so they are safe and effective.",
+          "text": "(B) Scheduled acetaminophen and ibuprofen, with a small supply of an opioid only for breakthrough pain",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) Codeine should be routinely used in all children after surgery for best pain control."
+          "text": "(C) Acetaminophen alone, since ibuprofen increases the risk of bleeding"
+        },
+        {
+          "id": "D",
+          "text": "(D) A course of antibiotics, which reduces pain by reducing bacterial load in the tonsillar bed"
         }
       ],
-      "feedback": "Correct answer: B\n\nClinical counseling: Postoperative pain control is crucial. NSAIDs are safe and effective, with fewer nausea and vomiting effects than opioids, and evidence shows they do not increase wound bleeding risk. Codeine is absolutely contraindicated in children because it can be fatal, and aspirin should be avoided because of Reye syndrome."
+      "feedback": "Correct answer: B\n\nScheduled acetaminophen and ibuprofen together are the base of pain control, taken by the clock for the first week rather than as needed. Adult pain is severe enough that a short supply of an opioid for breakthrough is reasonable, with a set number of tablets and no refill.\n\nWhy the others fail:\n(A) Ibuprofen has not been shown to increase post-tonsillectomy bleeding that requires intervention. Leaving it out means more opioid, not less bleeding.\n(C) Same error. Withholding ibuprofen weakens the regimen without lowering the bleeding risk.\n(D) Antibiotics do not reduce post-tonsillectomy pain. The Cochrane review from Step 4 covers this directly.\n\nKeypoint: acetaminophen and ibuprofen by the clock, opioid only for breakthrough.\n\nReference: Dhiwakar M, Clement WA, Supriya M, McKerrow W. Antibiotics to reduce post-tonsillectomy morbidity. Cochrane Database Syst Rev. 2012;12(12):CD005607. doi:10.1002/14651858.CD005607.pub4. Mitchell RB, Archer SM, Ishman SL, et al. Otolaryngol Head Neck Surg. 2019;160(1_suppl):S1-S42, Key Action Statement 13."
     },
     {
-      "title": "Step 6/6: Managing Secondary Hemorrhage",
-      "scenario": "On postoperative day 8, the patient comes to the emergency department because of a small amount of blood in the mouth and worse pain with swallowing. Examination shows pseudomembrane over both tonsillar fossae with mild oozing, consistent with secondary hemorrhage.",
-      "media": "Load image: Post-tonsillectomy tonsillar fossa pseudomembrane with mild bleeding",
-      "question": "Secondary bleeding after tonsillectomy occurs from 24 hours to 2 weeks postoperatively. What is it most commonly associated with, and what is the standard first-line treatment?",
+      "title": "Step 6/6: Six Weeks Later",
+      "scenario": "The fossae are healed and there was no bleeding. He is back at work.\n\nHe asks whether this means the sore throats are over.",
+      "media": "Load image: Oropharyngeal photograph showing healed tonsillar fossae. Caption: 'Six weeks.'",
+      "question": "What do you tell him?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Undiagnosed hemophilia; immediately transfuse clotting factor."
+          "text": "(A) He should not get sore throats again, since the tonsils have been removed"
         },
         {
           "id": "B",
-          "text": "(B) Local Streptococcus infection; first-line treatment is antibiotic therapy alone, and return to the operating room is rarely needed.",
-          "correct": true
+          "text": "(B) Tonsillectomy has not been shown to help adults, and it was done to make each episode milder"
         },
         {
           "id": "C",
-          "text": "(C) Suture dehiscence; immediately return to the operating room for re-suturing."
+          "text": "(C) He will have fewer sore throat days, not none: in the largest adult trial, about 23 days over two years compared with 30 without surgery",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) His immune defenses are now weaker, so he should expect more infections of other kinds"
         }
       ],
-      "feedback": "Correct answer: B\n\nEmergency pitfall: Secondary hemorrhage often occurs around postoperative days 5-10 during pseudomembrane sloughing and is commonly related to local Streptococcus infection. In most cases, bleeding settles with antibiotic therapy alone, and repeat surgical hemostasis is rarely needed."
+      "feedback": "Correct answer: C\n\nNATTINA randomized 453 adults who met the criteria to tonsillectomy or conservative management and counted sore throat days for two years. The tonsillectomy group had a median of 23 days against 30 in the conservative group, and after adjustment the rate was about half. The surgery was also cost-effective. So the benefit is real, but it is fewer days, not zero.\n\nWhy the others fail:\n(A) Removing the tonsils does not remove the pharynx. He can still get pharyngitis, including streptococcal pharyngitis.\n(B) Wrong on both counts. NATTINA showed a clear reduction in sore throat days, and the operation was done for frequency, not for severity of individual episodes.\n(D) No study has shown a clinically meaningful effect of tonsillectomy on immune function.\n\nKeypoint: about half the sore throat days, not none of them.\n\nReference: Wilson JA, O'Hara J, Fouweather T, et al. Lancet. 2023;401(10393):2051-2059. doi:10.1016/S0140-6736(23)00519-6."
     }
   ]
 }

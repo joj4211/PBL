@@ -1,143 +1,193 @@
 {
   "id": "nose_allergic_rhinitis",
-  "title": "The Allergic Puzzle",
-  "subtitle": "Behind the Runny Nose",
-  "description": "Allergic rhinitis classification, comorbidity assessment, diagnostic pitfalls, and treatment decisions.",
-  "estimatedTime": "20-30 min",
+  "title": "Behind the Runny Nose",
+  "subtitle": "Many years of a blocked nose, from the first visit to the operating room",
+  "description": "Reading the first endoscopy, classifying the rhinitis, choosing the right IgE test, interpreting the result, choosing the first prescription under the 2024-2025 ARIA guidelines, managing a patient who came back on a decongestant, and what to do when correct treatment is not enough.",
+  "estimatedTime": "20-25 min",
   "difficulty": "Intermediate",
   "tags": [
     "Rhinology",
-    "Allergic Rhinitis",
-    "ARIA",
-    "INCS"
+    "Allergic rhinitis",
+    "ARIA 2024-2025",
+    "INCS",
+    "INAH"
   ],
   "steps": [
     {
-      "title": "Step 1/6: Clinical Presentation and Disease Classification",
-      "scenario": "A 41-year-old man presents to clinic for the first time. He reports that for “many years” he has suffered from bilateral nasal obstruction, rhinorrhea, and postnasal drip, which have severely affected his daytime concentration and nighttime sleep.",
-      "media": "Load image: ARIA allergic rhinitis classification chart",
-      "question": "Based on the ARIA classification chart above, which category best describes this patient’s symptoms?",
+      "title": "Step 1/7: What the Scope Shows",
+      "scenario": "A 41-year-old man comes to clinic for the first time with a blocked, runny nose. You pass the endoscope.",
+      "media": "Load image: Nasal endoscopy at the first visit, unannotated: pale, boggy inferior turbinates with clear watery secretion. Caption: 'First visit.'",
+      "question": "What does the endoscopy show, and what is it most consistent with?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Intermittent & mild"
+          "text": "(A) Pale, swollen inferior turbinates with clear watery secretion, consistent with allergic rhinitis",
+          "correct": true
         },
         {
           "id": "B",
-          "text": "(B) Persistent & moderate-severe",
+          "text": "(B) Dark red, congested turbinates, consistent with rebound from a decongestant spray"
+        },
+        {
+          "id": "C",
+          "text": "(C) Purulent secretion draining from the middle meatus, consistent with bacterial rhinosinusitis"
+        },
+        {
+          "id": "D",
+          "text": "(D) Polypoid mucosa filling the middle meatus, consistent with chronic rhinosinusitis with nasal polyps"
+        }
+      ],
+      "feedback": "Correct answer: A\n\nThe allergic nose has a look. The inferior turbinates are swollen but pale, sometimes almost bluish, and the mucosa is wet with thin clear secretion. The swelling is edema from the allergic reaction, not congestion from blood. Seeing this on the first visit tells you what you are treating before any test comes back, and it gives you a baseline to compare against later.\n\nWhy the others fail:\n(B) Rebound congestion from a topical decongestant looks the opposite: the turbinates are beefy and dark red, and the mucosa looks dry and angry rather than wet. Keep this picture in mind; it comes up later.\n(C) Pus in the middle meatus is infection, and it points to the sinuses rather than the turbinates. Thin clear secretion is not pus.\n(D) Polyps are smooth, gray, glistening and insensate, and they sit in the middle meatus. Pale turbinates are not polyps.\n\nKeypoint: pale, wet and swollen is allergy; red, dry and swollen is rebound; pus or polyps mean the sinuses.\n\nReference: Bousquet J, Khaltaev N, Cruz AA, et al. Allergic Rhinitis and its Impact on Asthma (ARIA) 2008 update. Allergy. 2008;63(Suppl 86):8-160. doi:10.1111/j.1398-9995.2007.01620.x."
+    },
+    {
+      "title": "Step 2/7: How Bad, How Often",
+      "scenario": "You take the history. He has had bilateral nasal obstruction, watery rhinorrhea and postnasal drip for many years. The symptoms are there most days of the week, all year round. They wreck his concentration at work and wake him at night.",
+      "media": "Load image: Your own ARIA classification chart, redrawn. Intermittent: fewer than 4 days per week OR fewer than 4 consecutive weeks. Persistent: more than 4 days per week AND more than 4 consecutive weeks. Mild: ALL of normal sleep, no impairment of daily activities, sport or leisure, no impairment of work or school, symptoms not troublesome. Moderate-severe: ANY of sleep disturbance, impaired daily activities, sport or leisure, impaired work or school, troublesome symptoms. No cell highlighted. Caption: 'ARIA classification.'",
+      "question": "Using the classification shown, how do you classify his rhinitis?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Intermittent, mild"
+        },
+        {
+          "id": "B",
+          "text": "(B) Intermittent, moderate to severe"
+        },
+        {
+          "id": "C",
+          "text": "(C) Persistent, moderate to severe",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) Persistent, mild"
+        }
+      ],
+      "feedback": "Correct answer: C\n\nARIA classifies rhinitis on two axes. Duration: persistent means symptoms on more than 4 days a week and for more than 4 consecutive weeks; intermittent means fewer than 4 days a week or fewer than 4 consecutive weeks. Severity: moderate to severe means any one of sleep disturbance, impaired daily activities, sport or leisure, impaired work or school, or troublesome symptoms; mild means none of the four. He has both: symptoms most days for years, and they cost him sleep and concentration.\n\nThe classification sets the starting point for treatment. Mild intermittent disease can start with an antihistamine alone. Moderate to severe disease, especially persistent, starts higher.\n\nBefore you prescribe, one more minute of history. The guideline is called Allergic Rhinitis and its Impact on Asthma for a reason: the upper and lower airway share the same inflammation, and many patients with allergic rhinitis have asthma that nobody has named. Ask about wheeze, cough and chest tightness, and ask about itchy, watery eyes. The answers change what you prescribe and who else he needs to see.\n\nWhy the others fail:\n(A) Fails on both axes. Most days for years is not intermittent, and lost sleep is not mild.\n(B) Right on severity, wrong on duration. Intermittent means fewer than 4 days a week, or fewer than 4 weeks at a time.\n(D) Right on duration, wrong on severity. Symptoms that wake him and affect his work are moderate to severe by definition.\n\nKeypoint: how many days a week, how many weeks in a row, does it affect sleep or work, and is there a chest or an eye story too.\n\nReference: Bousquet J, Khaltaev N, Cruz AA, et al. Allergic Rhinitis and its Impact on Asthma (ARIA) 2008 update. Allergy. 2008;63(Suppl 86):8-160. doi:10.1111/j.1398-9995.2007.01620.x. Sousa-Pinto B, Bousquet J, Vieira RJ, et al. ARIA-EAACI Guidelines 2024-2025 Revision: Part I, Intranasal Treatments. Allergy. 2026;81:954-976. doi:10.1111/all.70131."
+    },
+    {
+      "title": "Step 3/7: Which Test",
+      "scenario": "You want to know whether this is allergic and, if so, to what. He mentions that his nose was itchy yesterday, so he took an antihistamine tablet.",
+      "media": "Load image: Skin prick test panel on a forearm at 15 minutes, de-identified: numbered allergen sites, a raised wheal at the histamine positive control, a flat saline negative control. Caption: 'Skin prick test.'",
+      "question": "Which test do you order today?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Total serum IgE"
+        },
+        {
+          "id": "B",
+          "text": "(B) Skin prick test today; one tablet does not affect it"
+        },
+        {
+          "id": "C",
+          "text": "(C) Skin prick test today with higher-concentration extracts to overcome the antihistamine"
+        },
+        {
+          "id": "D",
+          "text": "(D) Allergen-specific serum IgE today, or a skin prick test at a later visit once the antihistamine has cleared",
+          "correct": true
+        }
+      ],
+      "feedback": "Correct answer: D\n\nThe question you are asking is: is this allergic, and to what? Two tests answer it, and they answer it the same way: a skin prick test or allergen-specific serum IgE, each run against the allergens he is likely exposed to. Both report sensitization to individual allergens. The skin test is cheaper and gives a result in 15 minutes; serum IgE is not affected by medication or skin condition. Today the antihistamine decides: it suppresses the wheal and flare the skin test depends on, and if the histamine positive control does not react, nothing on the panel can be read. So either send blood now or bring him back once the drug has cleared, usually a few days for a second-generation antihistamine.\n\nWhy the others fail:\n(A) This is the mix-up to avoid. Total IgE does not tell you whether he is allergic or to what. It is raised in many conditions and normal in many allergic patients. It has a role in a different disease, chronic rhinosinusitis with nasal polyps, where it is used as one marker of type 2 inflammation when deciding on a biologic. In allergic rhinitis it should not be ordered in place of allergen-specific IgE.\n(B) One tablet is enough to blunt the skin response. Second-generation antihistamines act for about a day, and some persist longer.\n(C) The extract is not the problem; the skin's ability to respond is. A stronger extract on suppressed skin gives an unreadable result and a higher chance of an irritant reaction.\n\nKeypoint: in allergic rhinitis, order IgE against specific allergens, never total IgE; and if he took an antihistamine, use blood or come back.\n\nReference: Seidman MD, Gurgel RK, Lin SY, et al. Clinical Practice Guideline: Allergic Rhinitis. Otolaryngol Head Neck Surg. 2015;152(1 Suppl):S1-S43. Bousquet J, Anto JM, Bachert C, et al. Allergic rhinitis. Nat Rev Dis Primers. 2020;6(1):95. doi:10.1038/s41572-020-00227-0. Bernstein JA, Bernstein JS, Makol R, Ward S. Allergic rhinitis: a review. JAMA. 2024;331(10):866-877."
+    },
+    {
+      "title": "Step 4/7: Reading the Result",
+      "scenario": "Allergen-specific serum IgE comes back:\n\n    House dust mite (D. pteronyssinus)   class 4\n    Cat dander                            class 2\n    Grass pollen                          negative\n\nHe has never owned a cat and does not react around them. He sleeps in a carpeted bedroom with a fabric headboard, and his symptoms are the same all year.",
+      "media": "",
+      "question": "What do you conclude?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) He is allergic to mite and cat, and should avoid both"
+        },
+        {
+          "id": "B",
+          "text": "(B) Dust mite allergy confirmed; the cat result is not relevant. Use it to give mite avoidance advice, and to plan mite immunotherapy if sprays fail later. It does not change which spray to prescribe now",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) Intermittent & moderate-severe"
+          "text": "(C) A total IgE should be checked to confirm the allergy before treating"
+        },
+        {
+          "id": "D",
+          "text": "(D) Class 4 means severe disease, so go straight to immunotherapy"
         }
       ],
-      "feedback": "Correct answer: B\n\nExplanation: By definition, persistent rhinitis means symptoms occur for more than 4 days per week and for more than 4 consecutive weeks.\n\nThis patient’s many years of symptoms clearly fit that definition. In addition, symptoms are classified as moderate-severe when they affect daily activities, work or school performance, or sleep."
+      "feedback": "Correct answer: B\n\nA positive specific IgE proves he is sensitized to that allergen. It does not by itself prove the allergen is causing his symptoms. The diagnosis is the match between three things: the history, the endoscopy from Step 1, and a positive test to something he is actually exposed to. Mite matches all three: year-round symptoms, a carpeted bedroom, class 4. Cat matches only one: he is sensitized, but no exposure and no symptoms, so that result is not clinically relevant.\n\nWhat the result changes. It confirms the rhinitis is allergic. It tells you which avoidance advice is worth his effort: mite covers, hot-washing bedding, losing the carpet if he can. And it makes him a candidate for allergen immunotherapy later if medication does not control him, because immunotherapy needs a confirmed relevant allergen to target.\n\nWhat it does not change. The first prescription. The 2024-2025 ARIA recommendations for intranasal and oral treatment are the same whatever the allergen and however high the specific IgE. Treatment is driven by severity and duration, which you settled in Step 2.\n\nWhy the others fail:\n(A) Sensitization without exposure or symptoms is common and needs no action. Telling him to avoid cats he never meets is advice with no benefit.\n(C) You did not order it in Step 3 and you do not need it now. Total IgE does not diagnose allergic rhinitis: it is raised in many conditions and normal in many allergic patients, and the specific IgE plus his history have already answered the question. Total IgE has a role in a different disease, chronic rhinosinusitis with nasal polyps, where a level of 100 kU/L or more is one marker of type 2 inflammation when deciding on a biologic, and even there it is a weak one next to the blood eosinophil count.\n(D) Specific IgE class reports how much IgE is present, not how bad his symptoms are. Severity is the ARIA classification from Step 2. Immunotherapy is considered when pharmacotherapy fails, not as a first step because a number is high.\n\nKeypoint: the IgE result tells you which allergen to avoid and which allergen to target with immunotherapy; it does not tell you which spray to prescribe, because that is decided by how severe the symptoms are.\n\nReference: Seidman MD, Gurgel RK, Lin SY, et al. Clinical Practice Guideline: Allergic Rhinitis. Otolaryngol Head Neck Surg. 2015;152(1 Suppl):S1-S43, Key Action Statement 2. Bousquet J, Anto JM, Bachert C, et al. Allergic rhinitis. Nat Rev Dis Primers. 2020;6(1):95. doi:10.1038/s41572-020-00227-0. Sousa-Pinto B, Bousquet J, Vieira RJ, et al. Allergy. 2026;81:954-976. doi:10.1111/all.70131. Cho A, Cho HJ, Kim CH, Kwak K, Rha MS. Eur Arch Otorhinolaryngol. 2026."
     },
     {
-      "title": "Step 2/6: Focused History and Comorbidity Assessment",
-      "scenario": "After confirming persistent moderate-severe rhinitis, you are preparing to prescribe treatment. Before doing so, your attending reminds you: “Do not only look at the patient’s nose!”",
-      "question": "Based on the concept of the unified allergic airway, which symptoms or history should you routinely ask about in this outpatient visit?",
+      "title": "Step 5/7: The First Prescription",
+      "scenario": "Persistent, moderate to severe allergic rhinitis, house dust mite confirmed. No asthma symptoms. He is on no medication and has never used a nasal spray properly.",
+      "media": "",
+      "question": "What do you prescribe first?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Chronic diarrhea and irritable bowel syndrome"
+          "text": "(A) A second-generation oral antihistamine alone"
         },
         {
           "id": "B",
-          "text": "(B) Asthma symptoms, such as wheezing and cough, and allergic conjunctivitis",
-          "correct": true
+          "text": "(B) Omalizumab, since IgE-mediated disease is now confirmed"
         },
         {
           "id": "C",
-          "text": "(C) Migraine and vertigo"
+          "text": "(C) Montelukast plus an oral antihistamine"
+        },
+        {
+          "id": "D",
+          "text": "(D) A fixed-combination intranasal antihistamine and corticosteroid spray, such as azelastine-fluticasone",
+          "correct": true
         }
       ],
-      "feedback": "Correct answer: B\n\nExplanation: Allergic conjunctivitis and allergic asthma are common comorbidities of allergic rhinitis.\n\nThere is also growing consensus around the unified allergic airway concept, which views upper and lower airway diseases as part of the same disease process because they share epidemiologic and pathophysiologic mechanisms."
+      "feedback": "Correct answer: D\n\nThe 2024-2025 ARIA revision changed this answer. For patients whose symptoms are unlikely to be controlled by a single agent, it gives a strong recommendation for the fixed INAH+INCS combination over no treatment, and a conditional recommendation for INAH+INCS over INCS alone, with the combination particularly favored in patients with more severe symptoms. Within the class it suggests azelastine-fluticasone over olopatadine-mometasone. The combination works faster than INCS alone, and patients report higher satisfaction and less need for extra medication.\n\nAn INCS alone remains reasonable where cost or availability is a problem; the guideline says so.\n\nWhy the others fail:\n(A) Oral antihistamines work, and the guideline recommends them over nothing. But it also gives a strong recommendation for INCS over oral antihistamines, because INCS control nasal symptoms and quality of life better. For moderate to severe persistent disease, an oral antihistamine alone is under-treatment.\n(B) This is the IgE mix-up applied to treatment. Anti-IgE therapy is approved as add-on treatment for chronic rhinosinusitis with nasal polyps that is uncontrolled on intranasal steroids, and for asthma. It is not a treatment for allergic rhinitis, and confirming that his rhinitis is IgE-mediated does not make him a candidate. He has not yet tried a nasal spray.\n(C) Montelukast carries important safety concerns, and the guideline gives a strong recommendation for oral antihistamines over leukotriene antagonists, plus a conditional recommendation against adding one to the other.\n\nKeypoint: for moderate to severe disease, start with the INAH+INCS combination; if that is not available, INCS alone; a positive IgE is a diagnosis, not a reason for a biologic.\n\nReference: Sousa-Pinto B, Bousquet J, Vieira RJ, et al. ARIA-EAACI Guidelines 2024-2025 Revision: Part I, Intranasal Treatments. Allergy. 2026;81:954-976. doi:10.1111/all.70131. Vieira RJ, Sousa-Pinto B, Bousquet J, et al. ARIA-EAACI Guidelines 2024-2025 Revision: Part II, Oral and Ocular Treatments. Allergy. 2026;81:1947-1970. doi:10.1111/all.70305. Chhiba KD, Patel GB, Peters AT. Anti-IgE therapy in chronic rhinosinusitis with nasal polyps. J Allergy Clin Immunol. 2025."
     },
     {
-      "title": "Step 3/6: Pitfalls in Diagnostic Testing",
-      "scenario": "You recommend skin prick testing. The patient casually mentions, “My nose was very itchy yesterday, so I took one antihistamine tablet. That should not affect today’s test, right?”",
-      "question": "For a patient who recently took an antihistamine, which management is most appropriate?",
+      "title": "Step 6/7: Two Weeks Later",
+      "scenario": "He is back after two weeks, as blocked as ever. He used the combination spray for three days, felt nothing, and stopped. He went back to a pharmacy spray he had used years ago that opens his nose within minutes, and has been using it three or four times a day for ten days. He now needs it more often to get the same effect.\n\nOn endoscopy the inferior turbinates are dark red and congested, and the mucosa looks dry.",
+      "media": "Load image: Nasal endoscopy at the second visit, unannotated: beefy, dark red, congested inferior turbinates. Caption: 'Two weeks later.'",
+      "question": "What do you do?",
       "options": [
         {
           "id": "A",
-          "text": "(A) It does not affect the test; proceed directly with skin prick testing."
+          "text": "(A) Let him continue the decongestant for another two weeks as a bridge while the combination spray takes effect"
         },
         {
           "id": "B",
-          "text": "(B) Postpone the test, or perform serum-specific IgE testing (RAST) instead.",
-          "correct": true
+          "text": "(B) Add a short course of oral corticosteroid to break the congestion"
         },
         {
           "id": "C",
-          "text": "(C) Increase the allergen injection dose to overcome the effect of the antihistamine."
+          "text": "(C) Stop the decongestant now, restart the combination spray with instruction on technique and on how long it takes to work, and review in four weeks",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) Switch to an oral second-generation antihistamine, since he does not tolerate sprays"
         }
       ],
-      "feedback": "Correct answer: B\n\nExplanation: This is a common outpatient pitfall. If a patient has taken anti-allergic medication, such as an antihistamine, within the previous 7-10 days, the allergic reaction may not be expressed.\n\nIf the negative control reacts or the positive control fails to react, serum IgE levels should be checked instead."
+      "feedback": "Correct answer: C\n\nCompare this scope with the first visit. Then the turbinates were pale, wet and swollen. Now they are dark red, dry and swollen. That is rebound congestion from a topical decongestant: the vessels stop responding and dilate harder as each dose wears off, so the nose ends up more blocked than before and the patient uses the spray more and more. The 2024-2025 ARIA revision now suggests against using these sprays for more than 5 days, and preferably less.\n\nThe fix is to stop the decongestant and restart the treatment he abandoned, with two things he was not told the first time. The combination spray takes days, not minutes, to work, so three days was not a fair trial. And technique matters: head neutral, nozzle angled away from the septum, gentle sniff. The guideline is explicit that its recommendations assume correct use. Warn him that the first week off the decongestant will feel worse before it feels better.\n\nWhy the others fail:\n(A) The guideline suggests against combining an INCS with a decongestant: no added efficacy, more adverse events. Bridging is tolerated for under 5 days; he is already at ten. Two more weeks deepens the rebound.\n(B) Oral steroids may shrink the mucosa briefly, but the congestion returns when the course ends, and he would still be on the decongestant. It treats the wrong problem.\n(D) He does not have a spray intolerance; he has a spray he never gave a chance. Oral antihistamines are recommended over nothing, but INCS are recommended over oral antihistamines, and for moderate to severe disease an oral antihistamine alone is under-treatment.\n\nKeypoint: dark red and dry is rebound; stop the decongestant, restart the right spray, and set expectations this time.\n\nReference: Sousa-Pinto B, Bousquet J, Vieira RJ, et al. ARIA-EAACI Guidelines 2024-2025 Revision: Part I, Intranasal Treatments. Allergy. 2026;81:954-976. doi:10.1111/all.70131."
     },
     {
-      "title": "Step 4/6: Misconceptions About Medical Treatment",
-      "scenario": "The patient says, “I once bought a nasal spray that opened my nose immediately, but after using it continuously for a month it stopped working and my obstruction got even worse. Will the steroid nasal spray (INCS) you prescribe do the same thing?”",
-      "media": "Load table: Table 91.2 Pharmacological treatments",
-      "question": "How should you explain the difference between the “fast-acting nasal spray” and an intranasal corticosteroid spray (INCS)?",
+      "title": "Step 7/7: Three Months Later",
+      "scenario": "He returns after three months on the combination spray. Rhinorrhea and itch are much better. The blockage is no better at all. You watch him use the spray: head neutral, nozzle angled away from the septum, gentle sniff. Technique is correct.\n\nYou perform nasal endoscopy.",
+      "media": "Load interactive image: Nasal endoscopy at three months, unannotated, with two hotspot click areas set in the app: (1) the posterior septum where it deviates to the right, (2) the enlarged inferior turbinate. Caption: 'Three months later.'",
+      "question": "On the image, mark the two structural findings that explain why the medication has not relieved his obstruction.",
+      "constructionNote": "Interactive hotspot step. Both targets must be hit. Set the two click areas on the image in the app; the option ids below label the targets and both carry correct: true.",
       "options": [
         {
           "id": "A",
-          "text": "(A) The fast-acting spray is a topical decongestant, which should be used for no more than 7-10 days because of rebound symptoms; INCS is first-line therapy and takes about two weeks to reach maximal effect.",
+          "text": "Hit 1: Posterior septal deviation to the right",
           "correct": true
         },
         {
           "id": "B",
-          "text": "(B) Both are antihistamines, and the longer they are used, the weaker the effect becomes."
-        },
-        {
-          "id": "C",
-          "text": "(C) Long-term INCS use thins the nasal mucosa, so it should not be used for more than one week."
-        }
-      ],
-      "feedback": "Correct answer: A\n\nExplanation: Topical decongestants can rapidly relieve nasal obstruction, but continuous use should be limited to 7-10 days; otherwise rebound vasodilation can occur.\n\nBy contrast, topical intranasal corticosteroids require time, about two weeks, to reach maximal effect, and there is no evidence that long-term use causes mucosal thinning."
-    },
-    {
-      "title": "Step 5/6: Endoscopic Interactive Challenge (Finding the Cause of Obstruction)",
-      "scenario": "After three months of education and correct INCS use, the patient returns and says his “bilateral nasal obstruction” remains severe. You arrange nasopharyngoscopy.",
-      "media": "Load interactive image: real nasal endoscopic image with two hotspot click areas",
-      "question": "On the image, identify the 2 physical structural abnormalities that explain why medication was ineffective.",
-      "constructionNote": "This step was originally designed as an interactive image hotspot task. For now, the media field and correct explanation are shown as a work-in-progress placeholder.",
-      "options": [
-        {
-          "id": "A",
-          "text": "Hit 1: Posterior deviated nasal septum to the right (Posterior DNS to right)",
-          "correct": true
-        },
-        {
-          "id": "B",
-          "text": "Hit 2: Chronically hypertrophic inferior turbinates (Bilateral CHR)",
+          "text": "Hit 2: Hypertrophic inferior turbinate, no shrinkage after topical decongestant",
           "correct": true
         }
       ],
-      "feedback": "Hit 1: Posterior deviated nasal septum to the right (Posterior DNS to right)\n\nHit 2: Chronically hypertrophic inferior turbinates (Bilateral CHR)\n\nAttending’s clinical explanation: On nasal examination, allergic rhinitis commonly shows pale and swollen nasal mucosa covered in thin mucus.\n\nLong-standing unilateral nasal obstruction may be caused by an anatomic abnormality such as septal deviation.\n\nIn severe or atypical cases, endoscopic examination is very important to exclude other inflammatory disease, tumors, or anatomic abnormalities."
-    },
-    {
-      "title": "Step 6/6: Final Management and Surgical Decision-Making",
-      "scenario": "After confirming structural obstruction, the patient decides to undergo bilateral septomeatoplasty and posterior nasal neurectomy.",
-      "question": "According to the ARIA treatment guideline, what role does surgery play in the treatment of allergic rhinitis?",
-      "options": [
-        {
-          "id": "A",
-          "text": "(A) After inferior turbinate resection, allergic rhinitis is cured and will never recur."
-        },
-        {
-          "id": "B",
-          "text": "(B) Surgery is first-line therapy and should be prioritized over all medications."
-        },
-        {
-          "id": "C",
-          "text": "(C) Surgery that reduces submucosal tissue can improve nasal obstruction and improve drug delivery, but it usually still needs to be combined with medical therapy.",
-          "correct": true
-        }
-      ],
-      "feedback": "Correct answer: C\n\nExplanation: Surgical reduction of submucosal tissue can treat nasal obstruction and improve drug delivery, but it usually must be combined with medical therapy.\n\nThe guideline also notes that inferior turbinate reduction may occasionally be useful in clinical practice."
+      "feedback": "Hit 1: Posterior septal deviation to the right.\nHit 2: Hypertrophic inferior turbinate, no shrinkage after topical decongestant.\n\nThe medication has done what medication can do. Compare this scope with the first visit: the mucosa is no longer pale and boggy, and the watery secretion is gone. The itch and the running have settled because the allergic inflammation is controlled. What is left is a fixed obstruction that no spray will change. A deviated septum is bone and cartilage. An inferior turbinate that does not shrink after a decongestant is enlarged by submucosal tissue, not by reversible swelling. Both are surgical problems.\n\nWhat you recommend: septoplasty with inferior turbinate reduction, and continue the intranasal treatment afterward. Surgery relieves the obstruction and, by opening the nose, also lets the spray reach the mucosa it is meant to treat. It does not remove the allergy. He still has house dust mite sensitization and he will still have inflammation; the spray continues.\n\nTwo things to check before deciding on surgery. Technique, because the ARIA guidelines assume correct use of intranasal sprays and poor technique is a common reason for apparent failure; here you watched him and it was fine. And the decongestant test, because a turbinate that shrinks with a decongestant is still swelling, and swelling is treated with medication, not a knife.\n\nKeypoint: when the itch and the running are controlled but the blockage is not, look inside; medication does not treat anatomy, and surgery does not treat allergy.\n\nReference: Bousquet J, Khaltaev N, Cruz AA, et al. Allergy. 2008;63(Suppl 86):8-160. doi:10.1111/j.1398-9995.2007.01620.x. Seidman MD, Gurgel RK, Lin SY, et al. Otolaryngol Head Neck Surg. 2015;152(1 Suppl):S1-S43. Sousa-Pinto B, Bousquet J, Vieira RJ, et al. Allergy. 2026;81:954-976. doi:10.1111/all.70131."
     }
   ]
 }

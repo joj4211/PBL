@@ -1,148 +1,172 @@
 {
   "id": "ear_pulsatile_tinnitus",
-  "title": "The Pulsating Noise & Blocked Ears",
-  "subtitle": "Pulsatile tinnitus and sigmoid sinus dehiscence",
-  "description": "Venous causes of pulsatile tinnitus, exclusion of SSCD, imaging confirmation, rhythmic classification, surgical treatment, and Eustachian tube disorders.",
-  "estimatedTime": "20-30 min",
+  "title": "A Heartbeat in Your Ear",
+  "subtitle": "A woman who hears her pulse in one ear, from the first question to the scan that explains it",
+  "description": "Telling pulsatile from non-pulsatile tinnitus, the bedside maneuvers that split venous from arterial, choosing the scan, reading a venous sinus wall on CT, excluding raised intracranial pressure, and what can be offered.",
+  "estimatedTime": "15-20 min",
   "difficulty": "Intermediate",
   "tags": [
     "Otology",
-    "Pulsatile tinnitus",
-    "Sigmoid sinus",
-    "ETD"
+    "Tinnitus",
+    "Temporal bone CT",
+    "Venous sinus"
   ],
   "steps": [
     {
-      "title": "Step 1/6: Initial Assessment",
-      "scenario": "A 63-year-old man visits clinic with bilateral aural fullness for 2 years and right-sided low-tone pulsatile tinnitus for 1 year. On physical examination, when the physician compresses the right jugular vein, the tinnitus completely disappears.",
-      "media": "Load image: Neck vascular anatomy showing the jugular compression test",
-      "question": "The finding that ipsilateral internal jugular vein compression relieves tinnitus strongly suggests that this patient's pulsatile tinnitus comes from which source?",
+      "title": "Step 1/6: What Kind of Noise",
+      "scenario": "A 37-year-old woman comes to clinic.\n\n    Complaint       a sound in the left ear\n    Character       a whooshing that beats with her pulse; she can count her heart rate from it\n    Duration        3 to 4 years, slowly louder\n    Side            left only\n    Worse           lying on the left; quiet rooms at night\n    Better           no position makes it stop\n    Left ear        fullness, some aching\n    Hearing         she thinks it is normal\n    Headache        yes, frequent; sensitive to sound when it is bad\n    Weight          BMI 31\n    Medications     none",
+      "media": "Load audio: pulsatile_tinnitus_72bpm.mp3 (or .wav), a 6-second synthesized pulse-synchronous whoosh at 72 beats per minute; low-pass filtered noise with a systolic envelope. Autoplay off; play button with the caption. Caption: 'What she hears. Count the beats.'",
+      "question": "What kind of tinnitus is this, and what does that change?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Arterial anomaly, such as carotid artery stenosis"
+          "text": "(A) Ordinary subjective tinnitus; reassure, and offer sound therapy if it bothers her"
         },
         {
           "id": "B",
-          "text": "(B) Venous anomaly",
+          "text": "(B) Pulse-synchronous tinnitus: a rhythm that matches the heartbeat means a vascular or flow cause until proven otherwise, and the workup is structural, not a hearing-loss workup",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) Muscular myoclonus"
+          "text": "(C) Palatal myoclonus; the rhythm is muscular"
+        },
+        {
+          "id": "D",
+          "text": "(D) A somatic tinnitus from her jaw; refer to dentistry first"
         }
       ],
-      "feedback": "Correct answer: B\n\nAttending tip: Venous sources, such as a high-riding jugular bulb or dehiscence/diverticulum of venous structures, classically improve when the ipsilateral internal jugular vein is compressed. This physical finding strongly guides the subsequent imaging workup."
+      "feedback": "Correct answer: B\n\nThe first question for any tinnitus is whether it has a rhythm, and if so, whose.\n\nNon-pulsatile tinnitus. A continuous tone or hiss. Almost always subjective, almost always linked to a hearing loss, and worked up with an audiogram and reassurance.\n\nPulsatile tinnitus. A rhythm the patient can count. Two kinds:\n• Pulse-synchronous: matches the heartbeat. The sound is blood moving, and something has made the flow turbulent or brought a vessel closer to the cochlea. Venous causes are the majority; arterial causes are rarer but include the ones that can bleed.\n• Not synchronous with the pulse: an irregular clicking or fluttering. That is muscle, palatal or middle-ear myoclonus, and it is a different workup.\n\nHers is pulse-synchronous, one-sided, three years, getting louder, worse lying on that side. That description is a vascular lesion until the imaging says otherwise, and the tinnitus guideline's first statement is exactly this: separate pulsatile from non-pulsatile at the first visit, because the pathways diverge from here.\n\nTwo things in her history are already pointing. Worse lying on the left and better in no position is common with a venous cause. And a young woman with a raised BMI, headaches and sound sensitivity has a second diagnosis on the list from the start, which is Step 5.\n\nWhy the others fail:\n(A) Subjective tinnitus does not keep time with the heart. Reassuring a pulse-synchronous tinnitus without imaging can miss a lesion that is treatable, or one that is dangerous.\n(C) Myoclonus is a click or a flutter, irregular, not locked to the pulse, and often visible on the palate or audible as a clicking. She counts her heart rate from it.\n(D) Jaw problems can modulate tinnitus, but they do not create a sound that beats with the heart. Her jaw is noted, not blamed.\n\nKeypoint: if the patient can count her pulse from the sound, it is pulse-synchronous, and the question is where the blood is making noise.\n\nReference: Tunkel DE, Bauer CA, Sun GH, et al. Clinical practice guideline: tinnitus. Otolaryngol Head Neck Surg. 2014;151(2_suppl):S1-S40, Key Action Statement 1. Hofmann E, Behr R, Neumann-Haefelin T, Schwager K. Pulsatile tinnitus: imaging and differential diagnosis. Dtsch Arztebl Int. 2013;110(26):451-458."
     },
     {
-      "title": "Step 2/6: Ruling Out SSCD",
-      "scenario": "An earlier petrous CT raised concern for right superior semicircular canal dehiscence (SSCD). To test this suspicion in clinic, you check for Tullio phenomenon and Hennebert sign; both are negative.",
-      "media": "Load image: Endoscopy and VNG illustration for observing nystagmus",
-      "question": "In addition to pulsatile tinnitus in about 50% of cases, what is the typical clinical symptom of SSCD that the Tullio phenomenon is meant to provoke?",
+      "title": "Step 2/6: At the Bedside",
+      "scenario": "You examine her.\n\n    Otoscopy            both drums normal; no mass behind either\n    Tuning forks        Weber midline; Rinne normal both sides\n    Auscultation        no bruit over the ear, mastoid, neck or orbit\n    Jaw                 tender masseters both sides, limited opening\n    Blood pressure      124/78\n\nYou press gently on the left side of her neck over the internal jugular vein.\n\n    She says            the sound stops\n\nYou release, and turn her head to the right.\n\n    She says            it is louder",
+      "media": "Load image: Photograph of the jugular compression maneuver taken on a colleague, examiner's fingers over the left internal jugular vein, patient seated, unannotated. Caption: 'Jugular compression.'",
+      "question": "What do the maneuvers tell you?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Sound- or pressure-induced vertigo",
-          "correct": true
+          "text": "(A) Nothing reliable; compression tests are subjective"
         },
         {
           "id": "B",
-          "text": "(B) Swallowing-induced otalgia"
+          "text": "(B) The sound is arterial, because turning the head changed it"
         },
         {
           "id": "C",
-          "text": "(C) Neck-rotation-induced blurred vision"
+          "text": "(C) The sound is objective and the examiner should hear it; since you did not, it is not vascular"
+        },
+        {
+          "id": "D",
+          "text": "(D) The sound is venous: it stops when the ipsilateral jugular is compressed and changes with head position, and there is no retrotympanic mass and no bruit",
+          "correct": true
         }
       ],
-      "feedback": "Correct answer: A\n\nNeurotology interpretation: SSCD typically causes sound- or pressure-induced vertigo, and about 50% of patients also have pulsatile tinnitus. Because this patient has negative Tullio and Hennebert signs and no vertigo complaint, we should look for another structural cause of pulsatile tinnitus."
+      "feedback": "Correct answer: D\n\nThe examination of a pulse-synchronous tinnitus has four jobs.\n\nLook behind the drum. A red or blue mass in the middle ear is a glomus tumor, an aberrant carotid artery, or a high or dehiscent jugular bulb. A normal drum removes these from the front of the list; it does not remove the vascular causes that sit behind bone.\n\nListen. A bruit over the mastoid, the neck or the orbit makes the tinnitus objective and points to an arterial lesion or a fistula. Silence does not exclude a venous cause, which is usually inaudible to anyone but the patient.\n\nCompress the jugular. Light pressure over the internal jugular vein on the same side stops a venous tinnitus, because it stops the flow that is making the noise. An arterial tinnitus does not change. Hers stops. That is the single most useful bedside finding, and it is why the scan you choose next will be aimed at the venous side.\n\nTurn the head. Venous flow changes with position; rotating the head away from the affected side can make a venous tinnitus louder as the contralateral jugular is compressed. Hers did.\n\nPut together: normal drum, no bruit, stops with jugular compression, changes with position. Venous, and the lesion is somewhere along the sigmoid or transverse sinus, the jugular bulb, or the emissary veins. The tender jaw is real and can be treated, but it is not the source of a sound that stops when a vein is compressed.\n\nWhy the others fail:\n(A) Compression is subjective in that the patient reports it, but the finding is reproducible and it separates venous from arterial reliably enough to direct imaging.\n(B) Head turning changes venous flow more than arterial. Combined with the compression test, it points to venous.\n(C) Most venous pulsatile tinnitus is subjective; the patient hears it and the examiner does not. Inaudibility to you does not mean it is not vascular.\n\nKeypoint: normal drum, no bruit, stops with jugular pressure: venous. Now image the venous sinuses.\n\nReference: Hofmann E, Behr R, Neumann-Haefelin T, Schwager K. Dtsch Arztebl Int. 2013;110(26):451-458. Narsinh KH, Hui F, Saloner D, et al. Diagnostic approach to pulsatile tinnitus: a narrative review. JAMA Otolaryngol Head Neck Surg. 2022;148(5):476-483."
     },
     {
-      "title": "Step 3/6: Pathophysiology and Imaging",
-      "scenario": "To better evaluate the relationship between vessels and bone, you arrange CT angiography. The true lesion is confirmed as right sigmoid sinus dehiscence.",
-      "media": "Load image: Coronal temporal-bone CTA with an arrow indicating lack of bony shielding over the sigmoid sinus",
-      "question": "Based on the pathophysiology of tinnitus, why can venous vascular anatomic abnormalities near the peripheral auditory system, such as sigmoid sinus abnormalities, cause pulsatile tinnitus?",
+      "title": "Step 3/6: Which Scan",
+      "scenario": "Pure-tone audiogram: normal both sides. Tympanograms: type A both sides.\n\nVenous-pattern pulsatile tinnitus, left, with a normal drum and no bruit.",
+      "media": "Load image: Pure-tone audiogram from this patient, de-identified, unannotated: normal thresholds both sides. Caption: 'Audiogram.'",
+      "question": "Which imaging do you order first?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Venous blood refluxes into the cochlea and destroys hair cells."
-        },
-        {
-          "id": "B",
-          "text": "(B) The vascular abnormality creates turbulent flow, and the bony dehiscence allows that sound to transmit directly to the nearby auditory system.",
+          "text": "(A) Thin-section, non-contrast temporal bone CT, to look at the sigmoid and transverse sinus walls, the jugular bulb, the emissary veins and the bony labyrinth; CT venography added if a flow abnormality or sinus stenosis needs characterizing",
           "correct": true
         },
         {
+          "id": "B",
+          "text": "(B) No imaging; the audiogram is normal, so there is nothing to find"
+        },
+        {
           "id": "C",
-          "text": "(C) Venous compression causes ischemia and abnormal firing of the eighth cranial nerve."
+          "text": "(C) Carotid duplex ultrasound"
+        },
+        {
+          "id": "D",
+          "text": "(D) MRI of the brain without contrast"
         }
       ],
-      "feedback": "Correct answer: B\n\nAnatomic pitfall: Pulsatile tinnitus often arises from vascular anatomic abnormalities near the peripheral auditory system. Sigmoid sinus dehiscence removes the bony barrier that should insulate venous flow noise, allowing the sound to transmit into the middle and inner ear and be perceived as pulsatile tinnitus."
+      "feedback": "Correct answer: A\n\nThe examination has told you what family of lesion to look for, and that decides the scan.\n\nVenous pattern, normal drum: the lesion is in the bone around the venous sinuses. The commonest findings are a sigmoid sinus diverticulum or a dehiscence of the sigmoid sinus wall, a high or dehiscent jugular bulb, and an enlarged emissary vein. Each is a place where the sinus wall has lost its bony cover and the pulsing vein is in contact with the mastoid air cells or the cochlea. These are bone findings, and the test that shows bone at that resolution is a thin-section, non-contrast temporal bone CT. The American College of Radiology names it the key initial study when otoscopy is normal: it defines whether the sinus wall is thinned, absent, or breached by a true outpouching, and contrast is not needed for that. The same scan shows the other bony causes of pulsatile tinnitus: superior canal dehiscence, a glomus eroding the jugular plate, otosclerosis, Paget disease. CT venography, or a combined CT angiography and venography, is added when the flow itself needs characterizing, above all to look for transverse sinus stenosis, which is the question in Step 5.\n\nWhen the pattern is arterial, with a bruit or a tinnitus unchanged by jugular compression, the first scan is different: CT or MR angiography of the head and neck, looking for a dural arteriovenous fistula, carotid stenosis or dissection, fibromuscular dysplasia, or an aberrant carotid. A dural fistula can bleed, which is why an arterial pattern is not left unimaged.\n\nA normal audiogram does not remove the need to look. Most venous causes leave hearing alone; a normal audiogram narrows the list, it does not close it.\n\nWhy the others fail:\n(B) A normal audiogram excludes the causes that damage hearing. It says nothing about a sinus wall, a fistula, or intracranial pressure. Pulse-synchronous tinnitus is imaged.\n(C) Duplex looks at the carotid in the neck. Her pattern is venous and her lesion is in the skull base, above where the probe can see.\n(D) MRI without contrast shows brain and, incidentally, the sinuses, but not the bony wall, and it does not show the vein well. If the CT is normal, MRI with venography is the next step, particularly for the question in Step 5.\n\nKeypoint: venous pattern gets a non-contrast temporal bone CT aimed at the sinus walls, with venography added for flow; arterial pattern gets angiography; a normal audiogram is not a reason to skip either.\n\nReference: Jain V, Policeni B, Juliano AF, et al. ACR Appropriateness Criteria: Tinnitus, 2023 update. J Am Coll Radiol. 2023;20(11S):S574-S591. doi:10.1016/j.jacr.2023.08.017. Narsinh KH, Hui F, Saloner D, et al. Diagnostic approach to pulsatile tinnitus: a narrative review. JAMA Otolaryngol Head Neck Surg. 2022;148(5):476-483. Hofmann E, Behr R, Neumann-Haefelin T, Schwager K. Dtsch Arztebl Int. 2013;110(26):451-458."
     },
     {
-      "title": "Step 4/6: Synchronous vs. Non-Synchronous Pitfalls",
-      "scenario": "The patient's pulsatile tinnitus worsens with exercise. Tinnitus that changes with the heartbeat or increased cardiac output is classified as synchronous pulsatile tinnitus.",
-      "media": "Load image: ECG synchronized with tinnitus waveform",
-      "question": "Clinically, which condition usually causes non-synchronous pulsatile tinnitus, meaning it is not synchronized with the heartbeat?",
+      "title": "Step 4/6: Reading the CT",
+      "scenario": "Temporal bone CT, left:\n\n    Sigmoid sinus plate    intact along the mastoid segment\n    Jugular bulb           normal position, covered\n    Semicircular canals    intact\n    Middle ear             clear; no mass\n    Transverse-sigmoid     focal thinning and a gap in the inner cortex at the junction,\n    junction               with a rounded venous outpouching through the defect toward the temporal squama\n\nRight side: normal throughout.",
+      "media": "Load image: Axial and coronal temporal bone CT from this patient, your poster Figure 1, de-identified, with the arrows and labels cropped out. Caption: 'Temporal bone CT, axial and coronal.'",
+      "question": "What is the finding?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Atherosclerotic carotid artery disease"
+          "text": "(A) A classic sigmoid sinus diverticulum bulging into the mastoid air cells"
         },
         {
           "id": "B",
-          "text": "(B) Temporal-bone dural arteriovenous malformation"
+          "text": "(B) Superior semicircular canal dehiscence"
         },
         {
           "id": "C",
-          "text": "(C) Palatal or middle-ear myoclonus",
+          "text": "(C) A dehiscence of the temporal bone at the transverse-sigmoid junction with an emissary vein diverticulum through it, sitting above and medial to where a sigmoid sinus diverticulum usually is",
           "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) A glomus jugulare eroding the jugular plate"
         }
       ],
-      "feedback": "Correct answer: C\n\nClassification point: Pulsatile tinnitus is classified by whether it synchronizes with the cardiac pulse. Vascular sources are usually synchronous. Non-synchronous pulsatile tinnitus is commonly caused by middle-ear myoclonus, palatal myoclonus, or Eustachian tube abnormalities."
+      "feedback": "Correct answer: C\n\nStart with what is normal, because it rules things out. The sigmoid plate along the mastoid is intact, so this is not the usual sigmoid sinus dehiscence. The jugular bulb is covered and in place. The canals are intact. The middle ear is empty. The classic locations are clear.\n\nTwo words the report will use, and they are not interchangeable. Dehiscence is a focal absence or thinning of the bony plate over the sinus, so that the vein lies against the mastoid air cells with nothing between. Diverticulum is a true outpouching of the sinus wall through such a defect. A dehiscence is reshaped and covered; a diverticulum is reduced and then covered. Both come from the same process: turbulent flow in an enlarged or asymmetric sinus, sometimes with a stenosis upstream, thins the bone over years from the inside, and the same turbulence is what the patient hears. Sigmoid sinus wall anomalies of this kind are the commonest identifiable structural cause of venous pulsatile tinnitus, found in roughly one in five cases, more often on the right, where venous outflow is usually dominant, and more often in women with a higher BMI. On a CT ordered for this complaint they are the diagnosis, not an incidental finding.\n\nThe abnormality here is one step upstream. At the junction of the transverse and sigmoid sinuses the inner cortex is thinned and then absent, and through the gap a rounded venous structure bulges toward the squamous temporal bone. That is a dehiscence with a diverticulum, but of an emissary vein at the transverse-sigmoid junction rather than of the sigmoid sinus itself. The mechanism is the same as for the classic lesion: a pulsing vein that has lost its bony cover, close enough to the petrous bone and the cochlea to be heard. The location is not. It sits superior and medial to the mastoid, which matters for what can be done about it.\n\nThe erosion pattern is worth noting: smooth thinning of the cortex from the venous side, the bone remodeled by pressure over years, not destroyed. That is a vessel, not a tumor.\n\nWhy the others fail:\n(A) The sigmoid plate is intact where a sigmoid sinus diverticulum would be. The lesion is at the junction above it.\n(B) The semicircular canals are intact, and superior canal dehiscence gives sound- and pressure-induced vertigo and a conductive gap, none of which she has.\n(D) A glomus destroys bone irregularly, sits at the jugular foramen, and shows as a mass behind the drum. Her jugular plate is intact, her drum is normal, and the bone is smoothly thinned, not eaten.\n\nKeypoint: dehiscence is missing bone, diverticulum is vein through the gap, and both are caused by the same turbulent flow the patient hears; check the classic sites first, then follow the sinus upstream.\n\nReference: Wang GP, Zeng R, Liu ZH, et al. Clinical characteristics of pulsatile tinnitus caused by sigmoid sinus diverticulum and wall dehiscence: a study of 54 patients. Acta Otolaryngol. 2014;134(1):7-13. Lee SH, Kim SS, Sung KY, Nam EC. Pulsatile tinnitus caused by a dilated mastoid emissary vein. J Korean Med Sci. 2013;28(4):628-630. Grewal AK, Kim HY, Comstock RH, et al. Clinical presentation and imaging findings in patients with pulsatile tinnitus and sigmoid sinus diverticulum/dehiscence. Otol Neurotol. 2014;35(1):16-21."
     },
     {
-      "title": "Step 5/6: Surgical Treatment for Venous Tinnitus",
-      "scenario": "After right sigmoid sinus dehiscence is confirmed, the tinnitus severely affects sleep and quality of life. The patient chooses right transmastoid sigmoid sinus wall resurfacing with bone cement.",
-      "media": "Load image: Surgical microscopic view showing bone cement covering the sigmoid sinus",
-      "question": "For sigmoid sinus diverticulum or dehiscence, which surgical treatments are recommended in the literature?",
+      "title": "Step 5/6: Before You Blame the Bone",
+      "scenario": "A structural lesion that explains the sound.\n\nBut she is a woman of 37, BMI 31, with frequent headaches and sound sensitivity.",
+      "media": "Load image: Fundus photograph from this patient, de-identified, unannotated: sharp disc margins, no papilledema. Caption: 'Fundus.'",
+      "question": "What must you exclude before attributing the tinnitus to the dehiscence alone?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Transmastoid reconstruction of the sigmoid wall or endovascular coil embolization.",
-          "correct": true
+          "text": "(A) Nothing; the CT finding is sufficient"
         },
         {
           "id": "B",
-          "text": "(B) Vestibulocochlear nerve section."
+          "text": "(B) Idiopathic intracranial hypertension: fundoscopy for papilledema, MR venography for transverse sinus stenosis, and lumbar puncture with opening pressure if either is abnormal",
+          "correct": true
         },
         {
           "id": "C",
-          "text": "(C) Cochlear implantation to mask the sound."
+          "text": "(C) A dural arteriovenous fistula, by catheter angiography"
+        },
+        {
+          "id": "D",
+          "text": "(D) Otosclerosis, by exploratory tympanotomy"
         }
       ],
-      "feedback": "Correct answer: A\n\nProcedure interpretation: The surgical principle is to rebuild the sound-insulating wall. Management of sigmoid sinus abnormalities includes observation, transmastoid reconstruction of the sigmoid wall, or endovascular coil embolization and stenting."
+      "feedback": "Correct answer: B\n\nA young woman with a raised BMI, headaches, sound sensitivity and a venous pulsatile tinnitus is the demographic of idiopathic intracranial hypertension, and it has to be addressed before anyone reconstructs a sinus wall. Two reasons.\n\nIt is the commonest cause of venous pulsatile tinnitus in this group. Raised intracranial pressure narrows the transverse sinuses, the flow through the narrowing becomes turbulent, and the tinnitus is the noise of that. Sinus wall dehiscence is more common in these patients too, because chronically raised venous pressure thins bone. So a dehiscence on CT does not settle whether the bone is the cause or a consequence.\n\nIf the pressure is the problem, sealing the bone does not fix it. Untreated intracranial hypertension is the recognized predictor of recurrence after sinus wall repair, and the papilledema, if present, goes on damaging vision. Treatment of intracranial hypertension is weight loss, acetazolamide, and in some cases venous sinus stenting or CSF diversion.\n\nHow to address it:\n• Fundoscopy for papilledema. Hers is normal.\n• MR venography, or the CT venography from the initial scan, looking for bilateral transverse sinus stenosis, an empty sella, flattening of the posterior globes. Hers showed no stenosis.\n• Lumbar puncture with opening pressure, if either of the above is abnormal or the suspicion is high. Not needed here.\n\nWith those clear, the dehiscence is the diagnosis and not a bystander.\n\nWhy the others fail:\n(A) A dehiscence can be the consequence of raised venous pressure, not its cause. Operating on the bone in a patient with untreated intracranial hypertension can fail and misses a treatable disease.\n(C) A fistula is an arterial cause: bruit, tinnitus unchanged by jugular compression. Her pattern is venous and her contrast CT showed no fistula. Catheter angiography is not needed.\n(D) Otosclerosis gives a conductive loss with a normal drum. Her audiogram is normal and her CT showed no otospongiotic bone.\n\nKeypoint: venous pulsatile tinnitus in a young woman with headaches and a raised BMI is intracranial hypertension until the fundus and the venogram say otherwise; only then is the bone the cause.\n\nReference: Friedman DI, Liu GT, Digre KB. Revised diagnostic criteria for the pseudotumor cerebri syndrome in adults and children. Neurology. 2013;81(13):1159-1165. Narsinh KH, Hui F, Saloner D, et al. JAMA Otolaryngol Head Neck Surg. 2022;148(5):476-483. Jain V, Policeni B, Juliano AF, et al. ACR Appropriateness Criteria: Tinnitus, 2023 update. J Am Coll Radiol. 2023;20(11S):S574-S591. doi:10.1016/j.jacr.2023.08.017."
     },
     {
-      "title": "Step 6/6: Concomitant Eustachian Tube Issues",
-      "scenario": "During the same anesthesia, you also perform bilateral Eustachian tube balloon dilation to treat his 2-year history of obstructive Eustachian tube dysfunction. However, another extreme on the Eustachian tube disease spectrum can also cause tinnitus.",
-      "media": "Load image: Eustachian tube anatomy and airflow entering the middle ear",
-      "question": "When differentiating non-vascular, non-synchronous pulsatile tinnitus, which Eustachian tube abnormality should be strongly suspected if tinnitus synchronizes with breathing and improves when lying down because venous stasis passively compresses the tube?",
+      "title": "Step 6/6: What Can Be Offered",
+      "scenario": "Fundus normal. MR venography: no transverse sinus stenosis. No other vascular anomaly.\n\nDiagnosis: temporal bone dehiscence at the left transverse-sigmoid junction with an emissary vein diverticulum.\n\nThree years of tinnitus, louder every year. It wakes her.",
+      "media": "Load image: Two intraoperative photographs from this patient, your poster Figures 2A and 2B, arrows cropped: the exposed dehiscence with the diverticulum, and the layered reconstruction. Caption: 'Before and after reconstruction.'",
+      "question": "What do you offer?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Serous otitis media"
+          "text": "(A) Ligation of the left internal jugular vein"
         },
         {
           "id": "B",
-          "text": "(B) Otosclerosis"
+          "text": "(B) Sound therapy and cognitive behavioral therapy only; venous lesions are not treated"
         },
         {
           "id": "C",
-          "text": "(C) Patulous Eustachian tube",
+          "text": "(C) Anticoagulation to reduce turbulence"
+        },
+        {
+          "id": "D",
+          "text": "(D) Explain the mechanism and the options; for a lesion that is symptomatic and localized, surgical resurfacing of the dehiscence to dampen the vein, planned with neurosurgery because this one sits beyond the mastoid",
           "correct": true
         }
       ],
-      "feedback": "Correct answer: C\n\nClinical pitfall: Although this case involves obstructive Eustachian tube dysfunction, patulous Eustachian tube can also cause aural fullness and pulsatile tinnitus. Its features include autophony, tinnitus synchronized with breathing due to pressure changes, and symptom improvement when lying down because venous stasis passively narrows the Eustachian tube."
+      "feedback": "Correct answer: D\n\nA venous pulsatile tinnitus with a defined bony defect is one of the few tinnituses with a mechanical fix. The principle is simple: put bone or tissue back between the pulsing vein and the ear, so the sound is no longer conducted.\n\nFor the classic lesion, a sigmoid sinus diverticulum or dehiscence, the operation is transmastoid sinus wall reconstruction: open the mastoid, expose the defect, reduce the diverticulum, and rebuild the wall with a rigid layer, bone chips or powder, cartilage, or bone cement, over fascia. Series with long-term follow-up report sustained resolution in the majority, and the procedure is standardized. Restoring a rigid, sound-proof wall converts the turbulent, audible flow back into something the cochlea cannot hear; that is why it works, and why the repair is durable when the underlying pressure is normal.\n\nHers is not at the classic site. The transverse-sigmoid junction sits above and medial to the mastoid cavity, beyond the transmastoid field, so the same principle needs a different corridor: a small temporal craniotomy, with neurosurgery, and layered reconstruction over the defect. That is what was done, and the tinnitus stopped.\n\nBefore surgery, the conversation: what the sound is, that it is not dangerous now that the arterial causes and intracranial hypertension are excluded, that it can be left alone if it is bearable, and what the operation involves. Some patients, once they know the noise is a vein and nothing worse, choose to live with it. Hers was waking her and had been getting louder for three years, and she chose to have it fixed.\n\nWhy the others fail:\n(A) Jugular ligation was tried historically and abandoned. It does not address the dehiscence, the venous drainage reroutes, and the tinnitus returns or moves.\n(B) Sound therapy and CBT are the right treatment for subjective tinnitus without a structural cause. She has a structural cause with a surgical fix, and withholding that option because most tinnitus is not fixable is the wrong generalization.\n(C) Anticoagulation does not change flow turbulence and adds bleeding risk. There is no thrombus.\n\nKeypoint: a venous lesion with a bony defect can be resurfaced, transmastoid for the classic site and by another corridor when it is not; the conversation comes first, because once the dangerous causes are excluded, living with it is also a choice.\n\nReference: Eisenman DJ. Sinus wall reconstruction for sigmoid sinus diverticulum and dehiscence: a standardized surgical procedure for a range of radiographic findings. Otol Neurotol. 2011;32(7):1116-1119. Song JJ, Kim YJ, Kim SY, et al. Sinus wall resurfacing for patients with temporal bone venous sinus diverticulum and ipsilateral pulsatile tinnitus. Neurosurgery. 2015;77(5):709-717. Wang GP, Zeng R, Liu ZH, et al. Acta Otolaryngol. 2014;134(1):7-13."
     }
   ]
 }

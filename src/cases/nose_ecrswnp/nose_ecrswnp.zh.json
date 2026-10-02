@@ -1,148 +1,199 @@
 {
-  "id": "nose_ecrswnp",
-  "title": "無聲蔓延的鼻息肉",
-  "subtitle": "嗜酸性慢性鼻竇炎合併鼻息肉",
-  "description": "eCRSwNP、Type 2 CRS、影像、生物標記、手術策略與術後照護。",
-  "estimatedTime": "20-30 分鐘",
-  "difficulty": "進階",
+  "id": "nose_crswnp_biologics",
+  "title": "一直關起來的鼻子",
+  "subtitle": "一個聞不到味道的男人，從第一次內視鏡到選擇生物製劑",
+  "description": "讀內視鏡、決定要不要 CT、定義 type 2 發炎、適當的藥物治療、什麼時候手術、依 EPOS/EUFOREA 2023 判斷是否符合生物製劑、以及怎麼選。",
+  "estimatedTime": "20-25 分鐘",
+  "difficulty": "中階",
   "tags": [
     "鼻科",
-    "CRSwNP",
-    "Type 2 CRS",
-    "FESS"
+    "慢性鼻竇炎",
+    "Type 2 發炎",
+    "生物製劑",
+    "EPOS/EUFOREA 2023"
   ],
   "steps": [
     {
-      "title": "Step 1/6: 臨床表現與診斷標準 (Clinical Presentation & EPOS Criteria)",
-      "scenario": "一位 45 歲男性來到門診，過去無特殊潛在疾病。他主訴雙側鼻塞（尤其是右側）已經很多年了。然而，他否認有膿性鼻涕、嗅覺減退、臉部脹痛、鼻涕倒流或過敏症狀。填寫 SNOT-22 問卷的總分異常的低，僅有 6 分。但理學檢查與鼻內視鏡 (Sinuscopy) 卻清楚看到雙側鼻息肉 (bilateral nasal polyps)、雙側下鼻甲肥厚與鼻中膈彎曲。",
-      "media": "載入圖表：EPOS Table 94.1 Clinical definition of rhinosinusitis",
-      "question": "儘管病人的 SNOT-22 分數極低且缺乏臉部疼痛或嗅覺喪失等症狀，根據 EPOS 的臨床診斷標準，他是否符合「慢性鼻竇炎 (CRS)」的診斷？",
+      "title": "Step 1/7：內視鏡看到什麼",
+      "scenario": "48 歲男性，轉介過來，兩側鼻塞加嗅覺喪失一年。有氣喘，每天用吸入型類固醇。類固醇鼻噴劑用了六個月，沒什麼變化。\n\n你放入內視鏡。",
+      "media": "載入圖片：鼻內視鏡，不加標註：兩側中鼻道都被光滑、灰色、半透明的腫塊填滿。說明文字：「初診。」",
+      "question": "內視鏡看到什麼？最符合哪一種診斷？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 不符合，因為診斷 CRS 必須同時具備鼻塞、膿鼻涕與臉部疼痛三大症狀。"
-        },
-        {
-          "id": "B",
-          "text": "(B) 符合，因為具備主要症狀（鼻塞）大於 12 週，且內視鏡客觀發現鼻息肉。",
+          "text": "(A) 兩側中鼻道光滑的灰色腫塊，符合慢性鼻竇炎合併鼻息肉",
           "correct": true
         },
         {
+          "id": "B",
+          "text": "(B) 下鼻甲蒼白、腫脹，帶清澈分泌物，符合過敏性鼻炎"
+        },
+        {
           "id": "C",
-          "text": "(C) 不符合，因為患者的 SNOT-22 只有 6 分，未達疾病嚴重度門檻。"
+          "text": "(C) 單側肉色腫塊、表面出血，什麼都不做之前先切片"
+        },
+        {
+          "id": "D",
+          "text": "(D) 下鼻甲暗紅充血，符合去充血劑噴劑的反彈"
         }
       ],
-      "feedback": "正確答案：B\n\n解析： 根據 EPOS 標準，診斷鼻竇炎需要病人主觀具備「鼻塞/阻塞」或「鼻涕(前/後)」至少一項主要症狀（此病人有長年鼻塞），並配合客觀的內視鏡發現（如：鼻息肉）或 CT 影像變化大於 3 個月\n\n。該患者雖然主觀症狀單一，但客觀上有明確的雙側鼻息肉，因此 CRS 診斷成立。"
+      "feedback": "正確答案：A\n\n息肉是光滑、灰色、半透明的，碰它不會痛。它從中鼻道長出來，慢性鼻竇炎合併鼻息肉是兩側都有。一個有氣喘、聞不到味道的成人，兩側都是息肉，任何檢查回來之前這個畫面就認得出來。\n\n其他選項為什麼不對：\n(B) 過敏的鼻子是蒼白、濕、腫的鼻甲。息肉長在更高的中鼻道，長得一點都不像鼻甲。\n(C) 單側腫塊是另一個問題。單側、表面出血、影像上骨頭破壞，在證明不是之前都當腫瘤，治療前先切片。他兩側都有，這正是它是息肉而不是腫瘤的原因。\n(D) 反彈性鼻塞是鼻甲的發現，不是中鼻道的，而且黏膜是紅而乾的，不是灰而濕的。\n\nKeypoint：兩側、灰色、半透明、在中鼻道：息肉。單側：切片。\n\nReference: Fokkens WJ, Lund VJ, Hopkins C, et al. European Position Paper on Rhinosinusitis and Nasal Polyps 2020. Rhinology. 2020;58(Suppl S29):1-464."
     },
     {
-      "title": "Step 2/6: 影像學發現與鑑別診斷 (CT Imaging & Differential Diagnosis)",
-      "scenario": "為了進一步評估，你安排了鼻竇電腦斷層 (CT)。報告顯示：雙側鼻腔、竇口鼻道複合體 (OMC)、雙側篩竇、上頜竇與蝶竇皆有軟組織密度影。更特別的是，軟組織中帶有**「高密度影與微弱鈣化 (high density and/or faint calcification)」**。",
-      "media": "載入圖片：Figure 94.4 CT 顯示鼻竇內高密度/微弱鈣化影像",
-      "question": "在瀰漫性鼻息肉患者的 CT 中發現「高密度影 (Double density signs) 或鈣化」時，最常強烈暗示下列哪一種次分類或病理特徵？",
+      "title": "Step 2/7：需不需要 CT",
+      "scenario": "他鼻塞加嗅覺喪失超過 12 週，你已經看到兩側中鼻道的息肉。依定義這就是慢性鼻竇炎合併鼻息肉。\n\n他問要不要做掃描。",
+      "media": "",
+      "question": "你怎麼告訴他？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 囊性纖維化 (Cystic fibrosis) 的特異性表現"
+          "text": "(A) 要，診斷確立之前必須先做 CT"
         },
         {
           "id": "B",
-          "text": "(B) 過敏性黴菌性鼻竇炎 (AFRS) 中的嗜酸性黏蛋白 (eosinophilic mucin) 或黴菌抗原沉積",
+          "text": "(B) 現在不用。診斷靠症狀加內視鏡。CT 是為了規劃手術，或內視鏡看不清楚的時候",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) 倒置性乳頭狀瘤 (Inverted papilloma) 的早期骨骼侵蝕"
+          "text": "(C) 要，做 MRI，因為軟組織看得比 CT 清楚"
+        },
+        {
+          "id": "D",
+          "text": "(D) 息肉永遠不需要影像"
         }
       ],
-      "feedback": "正確答案：B\n\n解析： 電腦斷層上的「雙重密度徵象 (double density signs)」或微弱鈣化，是典型 AFRS 或伴隨阿斯匹靈加重性呼吸道疾病 (AERD) 的特徵，這些高密度影通常代表著極度黏稠的「嗜酸性黏蛋白 (granular eosinophilic mucin)」或是黴菌抗原的沉積\n\n。這暗示了此患者可能有強烈的 Type 2 免疫反應參與其中。"
+      "feedback": "正確答案：B\n\nEPOS 2020 對慢性鼻竇炎的定義：兩個以上症狀持續 12 週以上，其中一個必須是鼻塞或鼻涕，可伴隨顏面疼痛和嗅覺喪失，加上客觀證據：內視鏡發現或 CT 變化。客觀證據你已經有了。內視鏡看到兩側息肉就是診斷；CT 只會確認你已經看到的東西。CT 的位置在後面：用 Lund-Mackay 評分描繪疾病範圍、規劃手術；或一開始內視鏡正常但你仍懷疑鼻竇疾病時。\n\n其他選項為什麼不對：\n(A) 內視鏡是兩種被接受的客觀證據之一。內視鏡陽性時，診斷不需要 CT。\n(C) MRI 看不到骨頭，而骨頭是手術需要的；而且 MRI 會把黏膜增厚看得過頭。鼻竇的影像首選是 CT。\n(D) 現在不需要，不代表永遠不需要。手術前需要；內視鏡看不清楚、或任何跡象指向腫塊或併發症時，也應該做。\n\nKeypoint：症狀 12 週加內視鏡看到息肉就是診斷；CT 是準備開刀時才做。\n\nReference: Fokkens WJ, Lund VJ, Hopkins C, et al. Rhinology. 2020;58(Suppl S29):1-464. Orlandi RR, Kingdom TT, Smith TL, et al. International consensus statement on allergy and rhinology: rhinosinusitis 2021. Int Forum Allergy Rhinol. 2021;11(3):213-739."
     },
     {
-      "title": "Step 3/6: 生物標記與內在型分類 (Biomarkers & Endotyping)",
-      "scenario": "為了確認你的懷疑，你安排了抽血檢驗 (Pre-lab)。結果顯示：總嗜酸性球計數 (Total Eosinophil Count) 高達 377，但 IgE (109) 與 ECP (4.99) 皆在正常範圍內。你將此患者歸類為嗜酸性慢性鼻竇炎合併鼻息肉 (eCRSwNP / Type 2 CRS)。",
-      "media": "載入圖表：Identifying Biomarkers in Type 2 CRS 圓餅圖",
-      "question": "關於 Type 2 炎症中的生物標記，下列何者對嗜酸性陽離子蛋白 (ECP) 的描述是正確的？",
+      "title": "Step 3/7：哪一種發炎",
+      "scenario": "開始治療前你抽了血，也從中鼻道採了分泌物：\n\n    血中嗜酸性球            420 cells/uL\n    Total IgE               180 kU/L\n    Specific IgE，塵蟎      class 3\n    鼻分泌物 ECP            96 ug/mL",
+      "media": "",
+      "question": "這是 type 2 發炎嗎？根據是什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) ECP 是一種儲存於嗜酸性球顆粒中的細胞毒性蛋白，由活化的嗜酸性球釋放；術前高濃度暗示著較高的息肉復發風險。",
-          "correct": true
+          "text": "(A) 沒有息肉組織無法判斷"
         },
         {
           "id": "B",
-          "text": "(B) ECP 是一種只存在於黴菌表面的外毒素，必須感染真菌才會升高。"
+          "text": "(B) 是，因為對塵蟎的 specific IgE 是陽性的"
         },
         {
           "id": "C",
-          "text": "(C) 只要 ECP 在正常範圍內，就絕對可以排除 Type 2 炎症的可能。"
+          "text": "(C) 是，因為分泌物 ECP 超過切點；那就是指引用的標準"
+        },
+        {
+          "id": "D",
+          "text": "(D) 是。血中嗜酸性球 150 以上、或 total IgE 100 以上，各自單獨就算數；ECP 升高是支持證據，但本身不是標準",
+          "correct": true
         }
       ],
-      "feedback": "正確答案：A\n\n解析： ECP (Eosinophil cationic protein) 是一種儲存於嗜酸性球顆粒中的毒性蛋白，釋放自被活化的嗜酸性球。術前高濃度的 ECP 預示著內視鏡手術 (ESS) 後較高的息肉復發風險\n\n。雖然本案例的 ECP 正常，但其高達 377 的周邊血液嗜酸性球 (EOS) 依然強烈指向 Type 2 炎症，這類患者通常具有高復發率\n\n。"
+      "feedback": "正確答案：D\n\n是。EPOS/EUFOREA 2023 接受三個指標的任何一個當 type 2 發炎的證據：組織嗜酸性球每高倍視野 10 個以上、血中嗜酸性球每微升 150 以上、或血清 total IgE 100 kU/L 以上。他不需要任何組織就過了其中兩項。ECP 跟它們一致，這值得有，但不是讓他符合資格的東西。\n\n息肉裡在發生什麼。受損的上皮屏障釋放 alarmin，主要是 TSLP、IL-33、IL-25，啟動第二群先天淋巴細胞 (ILC2) 和 Th2 細胞，它們製造 IL-4、IL-5、IL-13。IL-5 把嗜酸性球招來並維持存活；IL-4 和 IL-13 驅動局部 IgE 和黏液。嗜酸性球脫顆粒，釋出 major basic protein、eosinophil cationic protein (ECP)、eosinophil peroxidase (EPX)、eosinophil-derived neurotoxin，破壞上皮、造成水腫和纖維化。這個迴圈就是息肉。Step 7 的生物製劑各在不同的點切斷它：TSLP 在最上游、IL-5 在中間、IL-4 和 IL-13 在下游、IgE 在末端。\n\nECP 加了什麼。血中嗜酸性球和 total IgE 是全身性的，會被過敏、氣喘或感染推動。組織嗜酸性球是參考標準，但要切片。分泌物 ECP 介於兩者之間：它是活化的嗜酸性球此刻在鼻子裡釋放的東西。對照組織病理，它在一個 78 人的多中心世代中辨識嗜酸性疾病的曲線下面積是 0.82，切點大約 74 微克/毫升，而且不受病人有沒有合併過敏性鼻炎影響。它也贏過鼻腔抹片上單純數嗜酸性球，因為嗜酸性球在黏膜下，表面是嗜中性球在主導。兩個提醒。ECP 不是嗜酸性球專有的：嗜中性球也會釋放，所以嗜中性球為主的疾病裡它的特異性會掉。而且它是研究用指標，不是指引標準。它的位置是：血液指標在邊緣、又拿不到組織時協助分型，預測術後復發，以及追蹤治療反應。\n\n這是你的訓練中第二次出現 total IgE，而它在這裡的意義跟在過敏性鼻炎不一樣。在鼻炎，total IgE 沒有用；在息肉，它是決定生物製劑能不能上桌的指標之一。同一個檢查、不同的疾病、不同的工作。\n\n其他選項為什麼不對：\n(A) 組織嗜酸性球是參考標準，但標準之所以接受血液指標，正是因為組織不是每次都拿得到，而 ECP 不需要切片就加上了局部的確認。今天就能回答這個問題。\n(B) 塵蟎的結果證明他對塵蟎致敏，對息肉的分型什麼都沒說。Type 2 息肉在非過敏的病人身上也會有，過敏的病人也可能是非 type 2 息肉。\n(C) 結論對、根據錯。ECP 確實指向嗜酸性發炎，但 EPOS/EUFOREA 和 AAO-HNS 都不拿它當標準，它也沒有經過驗證的生物製劑資格門檻。只憑 ECP 寫生物製劑申請，會被退回。標準是血中嗜酸性球、total IgE、或組織嗜酸性球，他符合其中兩項。\n\nKeypoint：血中嗜酸性球 150 以上、或 total IgE 100 以上、或組織嗜酸性球每視野 10 個以上決定資格；分泌物 ECP 不用切片就在局部說同一個故事，還能幫忙預測復發、追蹤反應。\n\nReference: Fokkens WJ, Viskens AS, Backer V, et al. EPOS/EUFOREA update on indication and evaluation of biologics in chronic rhinosinusitis with nasal polyps 2023. Rhinology. 2023;61(3):194-202. Cao PP, Li HB, Wang BF, et al. J Allergy Clin Immunol. 2009;124(3):478-484. Cho A, Cho HJ, Kim CH, Kwak K, Rha MS. Eur Arch Otorhinolaryngol. 2026. Jin J, Guo B, Zhang W, et al. Predictive value of eosinophil cationic protein in nasal secretions in eosinophilic chronic rhinosinusitis. Laryngoscope. 2023. doi:10.1002/lary.30692."
     },
     {
-      "title": "Step 4/6: 手術策略決策 (Surgical Strategy - FHFESS)",
-      "scenario": "經由客觀數據（鼻阻力測量右側嚴重阻塞，且有瀰漫性 Type 2 發炎），在與患者討論後，你決定為他安排「雙側全鼻竇內視鏡手術 (Full House FESS, FHFESS) 合併鼻中膈鼻道成形術」。",
-      "media": "載入圖表：Preferred Surgery vs Preferred Biologics 流程圖",
-      "question": "面對如同本例「廣泛瀰漫性發炎且具有 Type 2 / eCRS 特徵」的鼻息肉患者，為何近期的臨床共識更傾向於執行大範圍的「Full house ESS」甚至「Re-boot surgery」，而非僅僅摘除局部息肉？",
+      "title": "Step 4/7：適當的藥物治療",
+      "scenario": "Type 2 慢性鼻竇炎合併鼻息肉，合併氣喘，沒開過刀。他的類固醇噴劑是大部分早上每邊噴一下。",
+      "media": "",
+      "question": "你開始什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 因為大範圍手術可以徹底切除所有過敏神經，從此治癒 Type 2 發炎反應。"
+          "text": "(A) 現在就上生物製劑，因為他是 type 2 發炎"
         },
         {
           "id": "B",
-          "text": "(B) 對於瀰漫性發炎，僅解除局部阻塞意義不大；大範圍手術能徹底打開鼻竇空間，使術後的「局部藥物（如類固醇沖洗）」能順利進入所有鼻竇發揮作用。",
-          "correct": true
+          "text": "(B) 三個月的 macrolide 抗生素"
         },
         {
           "id": "C",
-          "text": "(C) 為了預防單側上頜竇後鼻孔息肉 (antrochoanal polyps) 的發生。"
+          "text": "(C) 每天足量的鼻用類固醇、高容量生理食鹽水沖洗、加一個短期口服類固醇；三個月後重新評估",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) 幫他排手術"
         }
       ],
-      "feedback": "正確答案：B\n\n解析： 在典型的 Type 2 / eCRSwNP 患者中，單純解除局部阻塞或只切除獨立息肉的價值很低 (is of less value)，復發率極高\n\n。廣泛的大範圍手術 (Full house ESS 或 Re-boot surgery) 才是建議選項\n\n。手術的關鍵核心目的，是將鼻竇腔室「徹底敞開」，讓患者能有效接受長期的「局部抗炎治療（如皮質類固醇沖洗）」以控制疾病\n\n。"
+      "feedback": "正確答案：C\n\n通往手術或生物製劑的每一條路，都先經過適當的藥物治療。意思是鼻用類固醇每天用、用到標示劑量，不是想到才噴一下；高容量生理食鹽水沖洗，清掉分泌物、讓類固醇送得更好；加一個短期口服類固醇，快速縮小息肉、讓嗅覺回來一陣子。三個月後用內視鏡和 SNOT-22 重新評估。控制住就繼續；控制不住，他就是藥物治療失敗，那才打開下一扇門。\n\n其他選項為什麼不對：\n(A) EPOS/EUFOREA 要求生物製劑之前要有藥物治療失敗和鼻竇手術。他兩個都沒有。噴劑用得半吊子，所以還不算藥物治療失敗；而且他從來沒開過刀。\n(B) Macrolide 在非 type 2、嗜中性球主導的疾病有支持者。他的疾病是嗜酸性的。長期 macrolide 對 type 2 息肉無效，而抗藥性和心臟風險他要白白承擔。\n(D) 手術是藥物治療失敗之後的下一步，不是還沒好好試過之前。\n\nKeypoint：鼻用類固醇每天、生理食鹽水每天、一次口服類固醇、三個月、再決定。\n\nReference: Fokkens WJ, Lund VJ, Hopkins C, et al. Rhinology. 2020;58(Suppl S29):1-464. Rank MA, Chu DK, Bognanni A, et al. The Joint Task Force on Practice Parameters GRADE guidelines for the medical management of chronic rhinosinusitis with nasal polyposis. J Allergy Clin Immunol. 2023;151(2):386-398."
     },
     {
-      "title": "Step 5/6: 病理報告的解讀 (Histopathology Interpretation)",
-      "scenario": "手術順利完成，切下來的息肉組織送交病理科化驗。主治醫師提醒你：「對 eCRSwNP 病人來說，病理報告不只是看有沒有癌症，結構化的組織學分析能預測疾病的難治程度。」",
-      "media": "載入圖表：Figure 97.6 Chronic Rhinosinusitis Histopathology Report 表格",
-      "question": "根據結構化組織病理學，除了觀察每高倍視野的嗜酸性球數量 (>10/hpf)，若在組織黏液中觀察到下列哪一種「由嗜酸性球內 Galectin-10 蛋白組成的結晶體」，高度暗示嚴重的 Type 2 免疫反應？",
+      "title": "Step 5/7：三個月後",
+      "scenario": "噴劑和沖洗他都正確使用；你看過了。口服類固醇讓他有三週的嗅覺，然後就沒了。\n\n    鼻息肉總分        6 / 8\n    SNOT-22           62\n    嗅覺測試          嗅覺喪失\n\nCT：兩側篩竇和兩側上頜竇都不透光，Lund-Mackay 18。",
+      "media": "載入圖片：冠狀面鼻竇 CT，不加標註，顯示兩側篩竇和上頜竇不透光。說明文字：「三個月。」",
+      "question": "下一步是什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 膽固醇結晶 (Cholesterol crystals)"
-        },
-        {
-          "id": "B",
-          "text": "(B) 夏科-雷登氏結晶 (Charcot-Leyden Crystals, CLCs)",
+          "text": "(A) 內視鏡鼻竇手術",
           "correct": true
         },
         {
+          "id": "B",
+          "text": "(B) 用生物製劑取代手術，因為他上一次手術效果沒有持續"
+        },
+        {
           "id": "C",
-          "text": "(C) 尿酸結晶 (Uric acid crystals)"
+          "text": "(C) 每兩個月重複一次口服類固醇"
+        },
+        {
+          "id": "D",
+          "text": "(D) 噴劑和沖洗再繼續六個月"
         }
       ],
-      "feedback": "正確答案：B\n\n解析： 夏科-雷登氏結晶 (Charcot-Leyden crystals, CLCs) 是由嗜酸性球細胞質內富含的 galectin-10 蛋白所組成\n\n。在 CRS、氣喘及過敏性支氣管肺麴菌病中，這種結晶常被發現包埋在極度黏稠、富含嗜酸性球的「過敏性黏蛋白 (allergic mucin)」中，是 Type 2 嚴重發炎的標誌\n\n。"
+      "feedback": "正確答案：A\n\n他已經對適當的藥物治療失敗：足量噴劑、沖洗、口服類固醇、三個月，息肉還是 6 分、SNOT-22 62、聞不到味道。下一步是手術。手術拿掉息肉、打開鼻竇讓局部類固醇到得了黏膜，還給你組織去算嗜酸性球，那是你之前沒有的東西。\n\n其他選項為什麼不對：\n(B) EPOS/EUFOREA 2023 把「做過鼻竇手術」列為生物製劑的條件，除非病人不適合手術。他從來沒開過刀。手術也給你組織嗜酸性球數，讓 type 2 的證據無懈可擊。\n(C) 反覆的口服類固醇正是生物製劑被設計來取代的問題。每一次療程都有傷害，效果幾週就退，而且一年兩次以上本身就是「疾病失控」的標準之一。\n(D) 已經失敗的東西再做一次。再六個月聞不到，換不到任何可預期的好處。\n\nKeypoint：藥物治療失敗就是手術；手術也是你採集定義分型的組織的地方。\n\nReference: Fokkens WJ, Lund VJ, Hopkins C, et al. Rhinology. 2020;58(Suppl S29):1-464. Fokkens WJ, Viskens AS, Backer V, et al. Rhinology. 2023;61(3):194-202."
     },
     {
-      "title": "Step 6/6: 術後藥物照顧 (Post-surgical Medical Management)",
-      "scenario": "患者回診時鼻腔通暢度大幅改善，右側鼻阻力恢復正常。但主治醫師強調：「手術只是改變了給藥通道，Type 2 發炎的長期抗戰現在才開始。」",
-      "media": "載入圖片：Figure 97.3 局部皮質類固醇沖洗 (Corticosteroid irrigations)",
-      "question": "根據治療指引，手術後針對此類 eCRSwNP 病患，最主要且有效的「維持期局部抗炎治療」手段為何？",
+      "title": "Step 6/7：術後十四個月",
+      "scenario": "手術順利。組織嗜酸性球每高倍視野 45 個。他術後每天噴劑加沖洗。\n\n14 個月時息肉又回來了：\n\n    鼻息肉總分        5 / 8\n    SNOT-22           58\n    嗅覺              嗅覺喪失\n    口服類固醇        過去一年 2 次\n    氣喘              每天吸入型類固醇\n    血中嗜酸性球      420 cells/uL\n    Total IgE         180 kU/L",
+      "media": "載入圖片：術後 14 個月的鼻內視鏡，不加標註：已開放的篩竇腔內兩側復發的息肉。說明文字：「十四個月。」",
+      "question": "他符合生物製劑的資格嗎？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 長期口服巨環類抗生素 (Macrolides) 三個月"
+          "text": "(A) 不符合。考慮生物製劑之前他需要第二次手術"
         },
         {
           "id": "B",
-          "text": "(B) 局部皮質類固醇沖洗 (Corticosteroid irrigations / 類固醇洗鼻)",
-          "correct": true
+          "text": "(B) 不符合。組織嗜酸性球必須每視野 70 個以上"
         },
         {
           "id": "C",
-          "text": "(C) 每天使用局部去充血劑 (Topical decongestants)"
+          "text": "(C) 不符合。生物製劑需要 allergen-specific IgE 陽性"
+        },
+        {
+          "id": "D",
+          "text": "(D) 符合。他術後兩側息肉復發，五項標準全部符合；三項就夠了",
+          "correct": true
         }
       ],
-      "feedback": "正確答案：B\n\n解析： 皮質類固醇沖洗 (Corticosteroid irrigations) 是鼻竇內視鏡手術後局部抗炎治療的「主要手段 (common effective delivery mechanism)」\n\n。手術打開鼻竇後，大容量的沖洗液能穿透所有被打開的空間，這就像是氣喘患者使用預防性吸入劑一樣 (similar to a prophylactic inhaler for asthma patients)\n\n，能有效壓制 Type 2 發炎並預防息肉復發。對於 Type 2 / eCRS 患者，長期使用巨環類抗生素 (Macrolides) 缺乏療效\n\n。"
+      "feedback": "正確答案：D\n\nEPOS/EUFOREA 2023：兩側息肉、做過鼻竇手術的病人，五項標準符合三項就有生物製劑的資格。Type 2 發炎的證據：組織嗜酸性球每視野 10 個以上、或血中嗜酸性球 150 以上、或 total IgE 100 以上。他三個都有。需要全身性類固醇：一年兩次以上、或長期低劑量。他有兩次。生活品質明顯受損：SNOT-22 40 以上。他是 58。明顯嗅覺喪失：測試為嗅覺喪失。他是。合併氣喘需要規律吸入型類固醇。他有。五項全中，而三項就夠了。\n\n其他選項為什麼不對：\n(A) 標準是一次手術，他有了，而且是在足量藥物治療下復發。生物製劑之前不需要第二次手術。\n(B) 每視野 70 個是日本 JESREC 對嗜酸性慢性鼻竇炎的門檻。EPOS/EUFOREA 的門檻是 10。他的 45 綽綽有餘，而且就算沒有組織他也靠血液指標符合。\n(C) 這是 IgE 混淆的最後一種形式。息肉的生物製劑是依分型選的，不是依過敏。Omalizumab 在 POLYP 試驗中不論過敏狀態都有效，而 dupilumab、mepolizumab、tezepelumab 根本不針對 IgE。他的塵蟎結果跟這個決定無關。\n\nKeypoint：兩側息肉、做過手術、五項中三項：type 2 指標、類固醇需求、SNOT-22 40 以上、嗅覺喪失、氣喘。\n\nReference: Fokkens WJ, Viskens AS, Backer V, et al. EPOS/EUFOREA update on indication and evaluation of biologics in chronic rhinosinusitis with nasal polyps 2023. Rhinology. 2023;61(3):194-202."
+    },
+    {
+      "title": "Step 7/7：選哪一個",
+      "scenario": "他符合資格。慢性鼻竇炎合併鼻息肉核准的生物製劑有四個：\n\n    Dupilumab       anti-IL-4 receptor alpha\n    Mepolizumab     anti-IL-5\n    Omalizumab      anti-IgE\n    Tezepelumab     anti-TSLP，2025 年 10 月核准\n\n他的狀況：\n\n    氣喘                  每天吸入型類固醇\n    血中嗜酸性球          420 cells/uL\n    過敏性休克病史        無",
+      "media": "",
+      "question": "關於他的生物製劑選擇，哪一個敘述是對的？",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) 不管嗜酸性球多少都選 mepolizumab，因為它直接針對 IL-5"
+        },
+        {
+          "id": "B",
+          "text": "(B) 同時有氣喘和息肉的病人，標準是兩種生物製劑併用"
+        },
+        {
+          "id": "C",
+          "text": "(C) 四個都合理；依合併氣喘、生物標記和取得方便性來選。WAYPOINT 試驗中 tezepelumab 讓息肉分數比安慰劑多降 2.08，手術需求從 22% 降到 0.5%",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) 因為他 total IgE 超過 100，優先選 omalizumab"
+        }
+      ],
+      "feedback": "正確答案：C\n\n沒有任何指引把四個排出高下，而且試驗都是跟安慰劑比，沒有頭對頭。四個都能縮小息肉、改善鼻塞。Dupilumab 在 SINUS-24 和 SINUS-52 讓息肉分數降大約 2 分、改善 CT 分數。Mepolizumab 在 SYNAPSE 降 0.73。Omalizumab 在 POLYP 1 和 2 降大約 1 分。Tezepelumab 在 WAYPOINT，408 位病人、52 週，息肉分數比安慰劑多降 2.08、鼻塞分數多降 1.04、SNOT-22 改善 27 分，息肉手術需求從 22% 降到 0.5%，全身性類固醇使用從 19% 降到 5%。它的目標 TSLP 在 IL-4、IL-5、IL-13 的上游，而且血中嗜酸性球低於 150 的病人效果仍然成立。\n\n局部指標還能多做一件事。鼻腔 eosinophil peroxidase (EPX) 在手術後和 dupilumab 治療下會明顯下降，在一個小型世代中，基準 EPX 高於大約 118 ng/µL 預測有臨床意義的 SNOT-22 反應，曲線下面積 0.93；基準測不到則指向非 type 2 疾病，type 2 生物製劑能得到的好處有限。局部指標比血液更貼近鼻子。\n\n實務上選擇看病人還有什麼。合併氣喘偏好兩種適應症都有的藥，四個都是。Aspirin 加重的呼吸道疾病 dupilumab 的資料最強。嗜酸性球低的病人不利於 mepolizumab。費用和保險給付常常是最後決定的因素。\n\n其他選項為什麼不對：\n(A) SYNAPSE 裡血中嗜酸性球低於 150 的病人，mepolizumab 在息肉分數和鼻塞上沒有顯著改善。這個數字對這個藥特別重要。他的 420 沒問題，但這句話當成通則是錯的。\n(B) 兩種生物製劑併用只有病例報告，不在指引也不在試驗裡。一個藥、選得好，才是標準。\n(D) Total IgE 超過 100 是讓他取得資格的 type 2 指標之一，不會讓 omalizumab 優於其他三個。POLYP 試驗沒有依 IgE 篩選病人，其他三個藥不管 IgE 高低都有效。\n\nKeypoint：四個核准的藥，沒有誰排在誰之上；依合併症、生物標記和取得方便性選，並且知道最新的 tezepelumab 有最大的單一試驗。\n\nReference: Lipworth BJ, Han JK, Desrosiers M, et al. Tezepelumab in adults with severe chronic rhinosinusitis with nasal polyps. N Engl J Med. 2025;392(12):1178-1188. doi:10.1056/NEJMoa2414482. Bachert C, Han JK, Desrosiers M, et al. Lancet. 2019;394(10209):1638-1650. Han JK, Bachert C, Fokkens W, et al. Lancet Respir Med. 2021;9(10):1141-1153. Gevaert P, Omachi TA, Corren J, et al. J Allergy Clin Immunol. 2020;146(3):595-605. Callander JK, Charbit AR, Marshall C, et al. Eosinophil peroxidase as a dynamic indicator of treatment response in eosinophilic chronic rhinosinusitis. Int Forum Allergy Rhinol. 2025. doi:10.1002/alr.70076."
     }
   ]
 }

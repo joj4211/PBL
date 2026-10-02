@@ -1,148 +1,172 @@
 {
   "id": "ear_pulsatile_tinnitus",
-  "title": "搏動的雜訊與耳悶之謎 (The Pulsating Noise & Blocked Ears)",
-  "subtitle": "搏動性耳鳴與乙狀竇骨壁缺損",
-  "description": "搏動性耳鳴的靜脈性鑑別、SSCD 排除、影像確診、節律分類與手術治療。",
-  "estimatedTime": "20-30 分鐘",
+  "title": "耳朵裡的心跳",
+  "subtitle": "一個在一耳聽見自己脈搏的女人，從第一個問題到解釋一切的那張掃描",
+  "description": "分辨搏動性與非搏動性耳鳴、用床邊手法分開靜脈與動脈、選掃描、在 CT 上讀靜脈竇壁、排除顱內壓升高、以及能提供什麼。",
+  "estimatedTime": "15-20 分鐘",
   "difficulty": "中階",
   "tags": [
     "耳科",
-    "Pulsatile tinnitus",
-    "Sigmoid sinus",
-    "ETD"
+    "耳鳴",
+    "顳骨 CT",
+    "靜脈竇"
   ],
   "steps": [
     {
-      "title": "Step 1/6: 搏動性耳鳴的初步鑑別 (Initial Assessment)",
-      "scenario": "一位 63 歲男性來到門診，主訴雙耳悶塞感長達 2 年，且右耳有持續一年的「低頻搏動性耳鳴 (low-tone pulsatile tinnitus)」。理學檢查發現：當醫師對其右側頸靜脈施加壓迫 (jugular vein compression) 時，耳鳴的聲音會完全消失 (cease the tinnitus)。",
-      "media": "載入圖片：頸部血管解剖圖，標示頸靜脈壓迫測試 (Jugular compression test)",
-      "question": "根據理學檢查中「壓迫同側頸靜脈 (Compression of ipsilateral IJV) 可緩解耳鳴」的特徵，這強烈暗示該患者的搏動性耳鳴屬於下列哪一種來源？",
+      "title": "Step 1/6：哪一種聲音",
+      "scenario": "37 歲女性來到門診。\n\n    主訴          左耳有聲音\n    性質          咻咻聲，跟著脈搏跳；她可以從聲音數出自己的心跳\n    病程          3 到 4 年，慢慢變大聲\n    側別          只有左邊\n    加重          左側躺；晚上安靜的房間\n    減輕          沒有任何姿勢能讓它停\n    左耳          悶脹，有點痛\n    聽力          她覺得正常\n    頭痛          有，常常；痛的時候怕吵\n    體重          BMI 31\n    用藥          無",
+      "media": "載入音檔：pulsatile_tinnitus_72bpm.mp3（或 .wav），6 秒合成的、與脈搏同步的咻咻聲，每分鐘 72 下；低通濾波的噪音加收縮期包絡。不自動播放；播放鍵旁附說明文字。說明文字：「她聽到的。數一數有幾下。」",
+      "question": "這是哪一種耳鳴？這改變了什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 動脈性異常 (Arterial anomalies，如頸動脈狹窄)"
+          "text": "(A) 普通的主觀性耳鳴；安撫她，困擾的話提供聲音治療"
         },
         {
           "id": "B",
-          "text": "(B) 靜脈性異常 (Venous anomalies)",
+          "text": "(B) 與脈搏同步的耳鳴：節奏對得上心跳，在證明不是之前都當血管或血流的原因，而檢查走的是結構的路，不是聽損的路",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) 肌肉性陣攣 (Muscular myoclonus)"
+          "text": "(C) 顎肌陣攣；節奏是肌肉的"
+        },
+        {
+          "id": "D",
+          "text": "(D) 下顎引起的體感性耳鳴；先轉牙科"
         }
       ],
-      "feedback": "正確答案：B\n\n主治醫師的 Tip： 靜脈來源的異常（如高位頸靜脈球或血管壁異常突出）最經典的理學檢查特徵就是「壓迫同側頸靜脈 (Compression of ipsilateral IJV) 會緩解耳鳴」。這對後續的影像學安排具有高度導向性！"
+      "feedback": "正確答案：B\n\n任何耳鳴的第一個問題是它有沒有節奏，有的話，是誰的節奏。\n\n非搏動性耳鳴。持續的單音或嘶嘶聲。幾乎都是主觀的、幾乎都跟聽損有關，用聽力圖和安撫處理。\n\n搏動性耳鳴。病人數得出來的節奏。兩種：\n• 與脈搏同步：對得上心跳。聲音是血在動，有東西讓血流變亂、或把血管帶到離耳蝸更近的地方。靜脈原因佔多數；動脈原因較少，但包括會出血的那些。\n• 與脈搏不同步：不規則的喀噠或顫動。那是肌肉，顎或中耳肌陣攣，是另一套檢查。\n\n她的是與脈搏同步、單側、三年、越來越大聲、躺那一側更糟。這個描述在影像說不是之前都是血管病灶，而耳鳴指引的第一條就是這個：第一次門診就把搏動性和非搏動性分開，因為從這裡路就分岔了。\n\n她的病史裡有兩件事已經在指方向。左側躺更糟、沒有姿勢能減輕，在靜脈原因很常見。而一個 BMI 偏高、有頭痛、怕吵的年輕女性，從一開始清單上就有第二個診斷，那是 Step 5。\n\n其他選項為什麼不對：\n(A) 主觀性耳鳴不會跟心跳走。沒做影像就安撫一個與脈搏同步的耳鳴，可能錯過一個能治的病灶、或一個危險的。\n(C) 肌陣攣是喀噠或顫動，不規則、不鎖在脈搏上，常常在軟顎看得到或聽得到喀噠聲。她是從聲音數出心跳的。\n(D) 下顎的問題可以調節耳鳴，但不會製造一個跟心跳走的聲音。她的下顎要記下來，不是怪罪它。\n\nKeypoint：病人能從聲音數出脈搏，就是與脈搏同步，問題變成血在哪裡發出聲音。\n\nReference: Tunkel DE, Bauer CA, Sun GH, et al. Clinical practice guideline: tinnitus. Otolaryngol Head Neck Surg. 2014;151(2_suppl):S1-S40, Key Action Statement 1. Hofmann E, Behr R, Neumann-Haefelin T, Schwager K. Pulsatile tinnitus: imaging and differential diagnosis. Dtsch Arztebl Int. 2013;110(26):451-458."
     },
     {
-      "title": "Step 2/6: 排除內耳第三窗症候群 (Ruling Out SSCD)",
-      "scenario": "患者早先的顳骨電腦斷層 (Petrous CT) 曾懷疑有「右側上半規管裂症候群 (SSCD)」。為了在門診驗證這個懷疑，你測試了 Tullio phenomenon 與 Hennebert sign，結果皆為陰性 (negative findings)。",
-      "media": "載入圖片：內視鏡與眼震電圖 (VNG) 觀察眼震的示意圖",
-      "question": "根據文獻，上半規管裂症候群 (Semicircular canal dehiscence, SSCD) 除了有大約 50% 的機率會產生搏動性耳鳴外，最典型的臨床症狀（即 Tullio phenomenon 欲誘發的反應）為何？",
+      "title": "Step 2/6：在床邊",
+      "scenario": "你檢查她。\n\n    耳鏡              兩側耳膜正常；後面都沒有腫塊\n    音叉              Weber 居中；Rinne 兩側正常\n    聽診              耳朵、乳突、頸部、眼眶都沒有雜音\n    下顎              兩側咀嚼肌壓痛，張口受限\n    血壓              124/78\n\n你在她左頸內頸靜脈上輕輕壓。\n\n    她說              聲音停了\n\n你放開，把她的頭轉向右邊。\n\n    她說              更大聲了",
+      "media": "載入圖片：在同事身上拍攝的頸靜脈壓迫手法，檢查者的手指在左內頸靜脈上，受檢者坐著，不加標註。說明文字：「頸靜脈壓迫。」",
+      "question": "這些手法告訴你什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 聲音或壓力誘發的眩暈 (Sound/pressure-induced vertigo)",
-          "correct": true
+          "text": "(A) 沒有可靠的資訊；壓迫測試是主觀的"
         },
         {
           "id": "B",
-          "text": "(B) 吞嚥時誘發的中耳疼痛 (Swallowing-induced otalgia)"
+          "text": "(B) 聲音是動脈的，因為轉頭讓它改變了"
         },
         {
           "id": "C",
-          "text": "(C) 頸部轉動誘發的視力模糊 (Neck rotation-induced blurred vision)"
+          "text": "(C) 聲音是客觀的，檢查者應該聽得到；你沒聽到，所以它不是血管性的"
+        },
+        {
+          "id": "D",
+          "text": "(D) 聲音是靜脈的：壓同側頸靜脈就停、隨頭部位置改變，而且耳膜後方沒有腫塊、沒有雜音",
+          "correct": true
         }
       ],
-      "feedback": "正確答案：A\n\n神經耳科解析： SSCD 的典型症狀包含聲音或壓力誘發的眩暈 (sound/pressure-induced vertigo)，以及大約 50% 會合併搏動性耳鳴。由於患者理學檢查 (Tullio/Hennebert sign) 皆為陰性且無眩暈主訴，這讓我們更傾向尋找其他導致搏動性耳鳴的結構異常。"
+      "feedback": "正確答案：D\n\n與脈搏同步的耳鳴，理學檢查有四件事要做。\n\n看耳膜後面。中耳裡紅色或藍色的腫塊是 glomus 腫瘤、異位頸動脈、或高位／裂開的頸靜脈球。正常的耳膜把這些從清單最前面拿掉；它拿不掉藏在骨頭後面的血管原因。\n\n聽。乳突、頸部或眼眶上的雜音讓耳鳴變成客觀的，指向動脈病灶或瘻管。沒有雜音排除不了靜脈原因，靜脈的通常除了病人以外誰都聽不到。\n\n壓頸靜脈。同側內頸靜脈上輕壓，靜脈性耳鳴會停，因為製造聲音的血流被停掉了。動脈性耳鳴不會變。她的停了。這是床邊最有用的單一發現，也是接下來選的掃描要對準靜脈側的原因。\n\n轉頭。靜脈血流隨姿勢改變；頭轉離患側，對側頸靜脈被壓，靜脈性耳鳴會變大聲。她的變了。\n\n合起來：耳膜正常、沒有雜音、壓頸靜脈就停、隨姿勢改變。靜脈性，病灶在乙狀竇或橫竇、頸靜脈球、或導靜脈的某處。下顎的壓痛是真的、可以治，但它不是一個壓住靜脈就停的聲音的來源。\n\n其他選項為什麼不對：\n(A) 壓迫是主觀的，因為是病人在報告，但這個發現可重複，而且它把靜脈和動脈分得夠可靠，足以引導影像。\n(B) 轉頭改變靜脈血流多過動脈。加上壓迫測試，指向靜脈。\n(C) 大多數靜脈性搏動性耳鳴是主觀的；病人聽得到、檢查者聽不到。你聽不到不代表它不是血管性的。\n\nKeypoint：耳膜正常、沒有雜音、壓頸靜脈就停：靜脈性。現在去照靜脈竇。\n\nReference: Hofmann E, Behr R, Neumann-Haefelin T, Schwager K. Dtsch Arztebl Int. 2013;110(26):451-458. Narsinh KH, Hui F, Saloner D, et al. Diagnostic approach to pulsatile tinnitus: a narrative review. JAMA Otolaryngol Head Neck Surg. 2022;148(5):476-483."
     },
     {
-      "title": "Step 3/6: 影像學確診與致病機轉 (Pathophysiology & Imaging)",
-      "scenario": "為了更精確評估血管與骨骼的關係，你安排了血管攝影電腦斷層 (CTA)，最終確認患者真正的病灶為「右側乙狀竇骨壁缺損 (Right sigmoid sinus dehiscence)」。",
-      "media": "載入圖片：顳骨 CTA 冠狀切面，箭頭指出乙狀竇缺乏骨質屏蔽",
-      "question": "根據耳鳴的病生理學機轉，周圍聽覺系統附近的「靜脈血管解剖結構異常 (如 sigmoid sinus 異常)」，為何會產生搏動性耳鳴？",
+      "title": "Step 3/6：哪一種掃描",
+      "scenario": "純音聽力圖：兩側正常。鼓室圖：兩側 type A。\n\n靜脈型態的搏動性耳鳴，左側，耳膜正常、沒有雜音。",
+      "media": "載入圖片：這位病人的純音聽力圖，去識別化，不加標註：兩側閾值正常。說明文字：「聽力圖。」",
+      "question": "你先安排哪一種影像？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 靜脈血流逆流進入耳蝸，導致毛細胞破壞。"
-        },
-        {
-          "id": "B",
-          "text": "(B) 血管解剖異常產生血流擾動，加上骨壁缺損，使聲音不受阻礙地傳遞至周圍聽覺系統。",
+          "text": "(A) 薄切、不打顯影劑的顳骨 CT，看乙狀竇和橫竇的壁、頸靜脈球、導靜脈和骨性迷路；血流異常或竇狹窄需要進一步描述時再加 CT 靜脈攝影",
           "correct": true
         },
         {
+          "id": "B",
+          "text": "(B) 不用影像；聽力圖正常，沒什麼好找的"
+        },
+        {
           "id": "C",
-          "text": "(C) 靜脈壓迫導致第八對腦神經 (聽神經) 缺血與不正常放電。"
+          "text": "(C) 頸動脈超音波"
+        },
+        {
+          "id": "D",
+          "text": "(D) 不打顯影劑的腦部 MRI"
         }
       ],
-      "feedback": "正確答案：B\n\n解剖地雷： 搏動性耳鳴的病生理機轉主要來自周圍聽覺系統附近血管解剖結構的異常。乙狀竇骨壁缺損 (dehiscence) 導致原本該被骨頭屏蔽的靜脈血流噪音，毫無阻礙地傳導至中耳與內耳，進而產生患者主觀聽到的搏動性耳鳴。"
+      "feedback": "正確答案：A\n\n理學檢查已經告訴你要找哪一類病灶，那決定了掃描。\n\n靜脈型態、耳膜正常：病灶在靜脈竇周圍的骨頭裡。最常見的是乙狀竇憩室或乙狀竇壁裂開、高位或裂開的頸靜脈球、擴大的導靜脈。每一個都是竇壁失去骨頭覆蓋、搏動的靜脈直接貼著乳突氣房或耳蝸的地方。這些是骨頭的發現，能以那個解析度看骨頭的檢查是薄切、不打顯影劑的顳骨 CT。美國放射學會把它列為耳鏡正常時的首要初始檢查：它能分辨竇壁是變薄、缺損、還是被真正的外凸突破，而這些不需要顯影劑。同一張掃描也顯示其他骨性的搏動性耳鳴原因：上半規管裂、侵蝕頸靜脈板的 glomus、耳硬化、Paget 病。CT 靜脈攝影，或合併的 CT 動脈與靜脈攝影，是在血流本身需要描述時才加上，最重要的是找橫竇狹窄，那是 Step 5 的問題。\n\n型態是動脈的時候，有雜音、或壓頸靜脈不變，第一張掃描就不同：頭頸部的 CT 或 MR 血管攝影，找硬腦膜動靜脈瘻管、頸動脈狹窄或剝離、纖維肌性發育不良、或異位頸動脈。硬腦膜瘻管會出血，這就是為什麼動脈型態不能不照。\n\n聽力圖正常不代表不用看。大多數靜脈原因不影響聽力；正常的聽力圖縮小了清單，沒有關掉它。\n\n其他選項為什麼不對：\n(B) 正常的聽力圖排除的是傷害聽力的原因。它對竇壁、瘻管、顱內壓什麼都沒說。與脈搏同步的耳鳴要照影像。\n(C) 超音波看的是頸部的頸動脈。她的型態是靜脈的，病灶在顱底，探頭看不到的地方。\n(D) 不打顯影劑的 MRI 看腦，順便看得到竇，但看不到骨壁，靜脈也看不清楚。CT 正常的話，下一步是 MRI 加靜脈攝影，特別是為了 Step 5 的問題。\n\nKeypoint：靜脈型態做不打顯影劑的顳骨 CT、對準竇壁，血流再加靜脈攝影；動脈型態做血管攝影；正常的聽力圖不是跳過任何一個的理由。\n\nReference: Jain V, Policeni B, Juliano AF, et al. ACR Appropriateness Criteria: Tinnitus, 2023 update. J Am Coll Radiol. 2023;20(11S):S574-S591. doi:10.1016/j.jacr.2023.08.017. Narsinh KH, Hui F, Saloner D, et al. Diagnostic approach to pulsatile tinnitus: a narrative review. JAMA Otolaryngol Head Neck Surg. 2022;148(5):476-483. Hofmann E, Behr R, Neumann-Haefelin T, Schwager K. Dtsch Arztebl Int. 2013;110(26):451-458."
     },
     {
-      "title": "Step 4/6: 節律性分類的陷阱 (Synchronous vs. Non-synchronous)",
-      "scenario": "患者的搏動性耳鳴在「運動時會加劇 (exacerbated by exercise)」。這類隨心搏或心輸出量增加而改變的耳鳴，屬於「同步性 (Synchronous)」搏動性耳鳴。",
-      "media": "載入圖片：心電圖與耳鳴聲波同步的示意圖",
-      "question": "在臨床分類上，下列哪一種疾病通常引起的是「與心臟脈搏不同步 (Non-synchronous pulsatile tinnitus)」的搏動性耳鳴？",
+      "title": "Step 4/6：讀 CT",
+      "scenario": "顳骨 CT，左側：\n\n    乙狀竇板          沿乳突段完整\n    頸靜脈球          位置正常，有覆蓋\n    半規管            完整\n    中耳              乾淨；沒有腫塊\n    橫竇-乙狀竇       交界處內側皮質局部變薄、有一個缺口，\n    交界              一個圓形的靜脈外凸穿過缺損朝顳骨鱗部方向\n\n右側：全部正常。",
+      "media": "載入圖片：這位病人的軸向與冠狀顳骨 CT，也就是你壁報的 Figure 1，去識別化，把箭頭和標籤裁掉。說明文字：「顳骨 CT，軸向與冠狀。」",
+      "question": "發現是什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 頸動脈粥狀硬化疾病 (Atherosclerotic carotid artery disease)"
+          "text": "(A) 經典的乙狀竇憩室，凸進乳突氣房"
         },
         {
           "id": "B",
-          "text": "(B) 顳骨硬腦膜動靜脈畸形 (Dural arteriovenous malformation)"
+          "text": "(B) 上半規管裂"
         },
         {
           "id": "C",
-          "text": "(C) 軟顎肌陣攣或中耳肌陣攣 (Palatal or middle ear myoclonus)",
+          "text": "(C) 橫竇-乙狀竇交界處的顳骨裂開，導靜脈憩室穿過它，位置在乙狀竇憩室通常所在的上方內側",
           "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) 侵蝕頸靜脈板的 glomus jugulare"
         }
       ],
-      "feedback": "正確答案：C\n\n分類盲點： 搏動性耳鳴依據是否與患者心臟脈搏同步，分為 synchronous 與 non-synchronous。血管性來源（動脈或靜脈）通常是同步的；而非同步性 (Non-synchronous) 搏動性耳鳴的常見原因包含中耳肌陣攣、軟顎肌陣攣 (Palatal myoclonus) 以及耳咽管異常。"
+      "feedback": "正確答案：C\n\n先看正常的地方，因為那排除了東西。乳突段的乙狀竇板完整，所以這不是常見的乙狀竇壁裂開。頸靜脈球有覆蓋、位置正常。半規管完整。中耳是空的。經典的位置都乾淨。\n\n報告會用的兩個字，不能互換。裂開 (dehiscence) 是竇上方的骨板局部缺損或變薄，靜脈貼著乳突氣房、中間什麼都沒有。憩室 (diverticulum) 是竇壁真正穿過這種缺損外凸。裂開是重新塑形再覆蓋；憩室是先縮小再覆蓋。兩者來自同一個過程：擴大或不對稱的竇裡的亂流，有時上游還有狹窄，多年來從裡面把骨頭磨薄，而同樣的亂流就是病人聽到的東西。這類乙狀竇壁異常是靜脈性搏動性耳鳴最常見的可辨識結構性原因，大約五分之一的病例找得到，右側較多（靜脈回流通常以右側為主），BMI 較高的女性較多。在一張為了這個主訴安排的 CT 上，它們是診斷，不是偶然發現。\n\n這裡的異常在上游一步。在橫竇和乙狀竇交界處，內側皮質變薄然後缺損，一個圓形的靜脈結構穿過缺口朝顳骨鱗部凸出。那是裂開加憩室，但是橫竇-乙狀竇交界處的導靜脈，不是乙狀竇本身。機制跟經典病灶一樣：一條失去骨頭覆蓋、搏動的靜脈，離岩骨和耳蝸近到聽得見。位置不一樣。它在乳突的上方內側，這對能做什麼有影響。\n\n侵蝕的型態值得注意：從靜脈側平滑地把皮質磨薄，骨頭是被多年的壓力重塑，不是被破壞。那是血管，不是腫瘤。\n\n其他選項為什麼不對：\n(A) 乙狀竇憩室該在的地方，乙狀竇板是完整的。病灶在它上方的交界處。\n(B) 半規管完整，而且上半規管裂會有聲音和壓力引發的眩暈、還有傳導性的差距，她都沒有。\n(D) Glomus 不規則地破壞骨頭、坐在頸靜脈孔、在耳膜後面看得到腫塊。她的頸靜脈板完整、耳膜正常、骨頭是平滑變薄，不是被吃掉。\n\nKeypoint：裂開是骨頭不見了，憩室是靜脈穿過缺口，兩者都是病人聽到的那股亂流造成的；先看經典位置，再沿著竇往上游找。\n\nReference: Wang GP, Zeng R, Liu ZH, et al. Clinical characteristics of pulsatile tinnitus caused by sigmoid sinus diverticulum and wall dehiscence: a study of 54 patients. Acta Otolaryngol. 2014;134(1):7-13. Lee SH, Kim SS, Sung KY, Nam EC. Pulsatile tinnitus caused by a dilated mastoid emissary vein. J Korean Med Sci. 2013;28(4):628-630. Grewal AK, Kim HY, Comstock RH, et al. Clinical presentation and imaging findings in patients with pulsatile tinnitus and sigmoid sinus diverticulum/dehiscence. Otol Neurotol. 2014;35(1):16-21."
     },
     {
-      "title": "Step 5/6: 針對靜脈性耳鳴的外科介入 (Surgical Treatment)",
-      "scenario": "確診右側乙狀竇骨壁缺損後，因為耳鳴嚴重影響睡眠與生活品質，患者決定接受「右側經乳突乙狀竇骨壁重建手術 (Right transmastoid sigmoid sinus wall resurfacing)」，使用骨水泥 (bone cement) 覆蓋。",
-      "media": "載入圖片：手術顯微鏡視野，顯示骨水泥覆蓋於乙狀竇上的畫面",
-      "question": "針對 Sigmoid sinus diverticulum 或是 Dehiscence (骨壁缺損)，文獻建議的外科處置 (Surgery) 方式為何？",
+      "title": "Step 5/6：怪罪骨頭之前",
+      "scenario": "一個能解釋聲音的結構性病灶。\n\n但她是 37 歲的女性，BMI 31，常常頭痛、怕吵。",
+      "media": "載入圖片：這位病人的眼底照片，去識別化，不加標註：視盤邊緣清楚，沒有視乳頭水腫。說明文字：「眼底。」",
+      "question": "把耳鳴歸因於這個裂開之前，你必須排除什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 經乳突重建乙狀竇壁 (Transmastoid reconstruction of the sigmoid wall) 或血管內栓塞 (Endovascular coil embolization)。",
-          "correct": true
+          "text": "(A) 不用；CT 的發現就夠了"
         },
         {
           "id": "B",
-          "text": "(B) 聽神經切斷術 (Vestibulocochlear nerve section)。"
+          "text": "(B) 特發性顱內高壓：眼底鏡看視乳頭水腫、MR 靜脈攝影看橫竇狹窄、任一異常就做腰椎穿刺量開放壓",
+          "correct": true
         },
         {
           "id": "C",
-          "text": "(C) 裝設人工耳蝸 (Cochlear implantation) 以聲音掩蔽 (Masking)。"
+          "text": "(C) 硬腦膜動靜脈瘻管，用導管血管攝影"
+        },
+        {
+          "id": "D",
+          "text": "(D) 耳硬化，用探查性鼓室切開"
         }
       ],
-      "feedback": "正確答案：A\n\n術式解析： 手術的精髓在於「重建隔音牆」。針對乙狀竇異常，臨床上的處置包含觀察、經乳突乙狀竇壁重建手術 (Transmastoid reconstruction of the sigmoid wall)，或是血管內線圈栓塞與支架置放 (Endovascular coil embolization and stenting)。"
+      "feedback": "正確答案：B\n\n一個 BMI 偏高、頭痛、怕吵、有靜脈性搏動性耳鳴的年輕女性，就是特發性顱內高壓的族群，而這必須在任何人重建竇壁之前先處理。兩個理由。\n\n它是這個族群靜脈性搏動性耳鳴最常見的原因。顱內壓升高把橫竇壓窄，通過狹窄處的血流變亂，耳鳴就是那個聲音。這些病人的竇壁裂開也更常見，因為長期升高的靜脈壓會把骨頭磨薄。所以 CT 上的裂開不能決定骨頭是原因還是結果。\n\n如果壓力才是問題，封住骨頭不能解決。未治療的顱內高壓是竇壁修補後復發的已知預測因子，而視乳頭水腫如果有，會繼續傷害視力。顱內高壓的治療是減重、acetazolamide，有些病例做靜脈竇支架或腦脊髓液分流。\n\n怎麼處理：\n• 眼底鏡看視乳頭水腫。她的正常。\n• MR 靜脈攝影，或初始掃描的 CT 靜脈攝影，找雙側橫竇狹窄、空蝶鞍、眼球後極變平。她的沒有狹窄。\n• 腰椎穿刺量開放壓，任一上述異常或懷疑高時做。這裡不需要。\n\n這些都乾淨之後，裂開才是診斷，不是旁觀者。\n\n其他選項為什麼不對：\n(A) 裂開可能是靜脈壓升高的結果，不是原因。在未治療的顱內高壓病人身上開骨頭的刀可能失敗，還錯過一個能治的疾病。\n(C) 瘻管是動脈原因：有雜音、壓頸靜脈不變。她的型態是靜脈的，顯影劑 CT 也沒有瘻管。不需要導管血管攝影。\n(D) 耳硬化是耳膜正常的傳導性聽損。她的聽力圖正常，CT 也沒有海綿狀骨質變化。\n\nKeypoint：頭痛、BMI 偏高的年輕女性的靜脈性搏動性耳鳴，在眼底和靜脈攝影說不是之前都是顱內高壓；那之後骨頭才是原因。\n\nReference: Friedman DI, Liu GT, Digre KB. Revised diagnostic criteria for the pseudotumor cerebri syndrome in adults and children. Neurology. 2013;81(13):1159-1165. Narsinh KH, Hui F, Saloner D, et al. JAMA Otolaryngol Head Neck Surg. 2022;148(5):476-483. Jain V, Policeni B, Juliano AF, et al. ACR Appropriateness Criteria: Tinnitus, 2023 update. J Am Coll Radiol. 2023;20(11S):S574-S591. doi:10.1016/j.jacr.2023.08.017."
     },
     {
-      "title": "Step 6/6: 另一種耳悶與非同步耳鳴的元兇 (Concomitant ET Issues)",
-      "scenario": "同一次麻醉中，你繼續為他執行「雙側耳咽管氣球擴張術」，以解決他長達 2 年的阻塞性耳咽管功能障礙 (Obstructive ETD)。但在耳咽管疾病的頻譜中，另一種極端也會造成耳鳴。",
-      "media": "載入圖片：耳咽管解剖與呼吸氣流進入中耳的示意圖",
-      "question": "在鑑別非血管性、非同步性的搏動性耳鳴時，若患者主訴耳鳴「隨呼吸同步」且「躺下時症狀減輕 (因靜脈鬱積而被動壓迫)」，必須強烈懷疑下列哪一種耳咽管異常？",
+      "title": "Step 6/6：能提供什麼",
+      "scenario": "眼底正常。MR 靜脈攝影：沒有橫竇狹窄。沒有其他血管異常。\n\n診斷：左側橫竇-乙狀竇交界處顳骨裂開，合併導靜脈憩室。\n\n三年的耳鳴，一年比一年大聲。會把她吵醒。",
+      "media": "載入圖片：這位病人的兩張術中照片，也就是你壁報的 Figure 2A 和 2B，把箭頭裁掉：暴露的裂開處和憩室，以及分層重建。說明文字：「重建前與重建後。」",
+      "question": "你提供什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 中耳積水 (Serous otitis media)"
+          "text": "(A) 結紮左內頸靜脈"
         },
         {
           "id": "B",
-          "text": "(B) 耳硬化症 (Otosclerosis)"
+          "text": "(B) 只做聲音治療和認知行為治療；靜脈病灶不治療"
         },
         {
           "id": "C",
-          "text": "(C) 耳咽管開放症 (Patulous Eustachian tube)",
+          "text": "(C) 抗凝血劑減少亂流"
+        },
+        {
+          "id": "D",
+          "text": "(D) 解釋機制和選項；對一個有症狀、位置明確的病灶，手術重建裂開處以壓住靜脈，並且因為這一個在乳突之外，和神經外科一起規劃",
           "correct": true
         }
       ],
-      "feedback": "正確答案：C\n\n臨床地雷： 本案例雖然是阻塞性 ETD，但不可不知「耳咽管開放症 (Patulous ET)」也會造成耳脹與搏動性耳鳴。其特徵為自聽增強 (autophony)、耳鳴隨呼吸同步（因壓力變化），且躺下時因靜脈鬱積 (venous stasis) 被動壓迫耳咽管，症狀反而會減輕"
+      "feedback": "正確答案：D\n\n有明確骨性缺損的靜脈性搏動性耳鳴，是少數有機械性解法的耳鳴之一。原理很簡單：把骨頭或組織放回搏動的靜脈和耳朵之間，聲音就不再被傳導。\n\n經典病灶，也就是乙狀竇憩室或裂開，手術是經乳突的竇壁重建：打開乳突、暴露缺損、把憩室縮小、用堅硬的一層重建竇壁，骨屑或骨粉、軟骨、或骨水泥，鋪在筋膜上。長期追蹤的系列報告大多數人症狀持續消失，而且這個手術已經標準化。恢復一道堅硬、隔音的壁，把亂而聽得到的血流變回耳蝸聽不到的東西；這就是它有效的原因，也是在底下壓力正常時修補能持久的原因。\n\n她的不在經典位置。橫竇-乙狀竇交界在乳突腔的上方內側，經乳突的視野到不了，所以同樣的原理需要另一條路：一個小的顳骨開顱，和神經外科一起，在缺損上做分層重建。做的就是這個，耳鳴停了。\n\n手術之前，那段談話：這個聲音是什麼、動脈原因和顱內高壓排除之後它不危險、受得了的話可以不管它、手術要做什麼。有些病人一旦知道那個聲音是一條靜脈、不是更糟的東西，選擇跟它共處。她的把她吵醒、三年來越來越大聲，她選擇修。\n\n其他選項為什麼不對：\n(A) 頸靜脈結紮歷史上試過、已經放棄。它不處理裂開，靜脈回流改道，耳鳴回來或換地方。\n(B) 聲音治療和 CBT 是給沒有結構性原因的主觀性耳鳴的正確治療。她有一個結構性原因、有手術解法，因為大多數耳鳴治不好就不給這個選項，是錯的推廣。\n(C) 抗凝血劑不改變血流亂流，還增加出血風險。沒有血栓。\n\nKeypoint：有骨性缺損的靜脈病灶可以重建，經典位置經乳突、不是的時候走另一條路；談話先於手術，因為危險的原因排除之後，跟它共處也是一個選擇。\n\nReference: Eisenman DJ. Sinus wall reconstruction for sigmoid sinus diverticulum and dehiscence: a standardized surgical procedure for a range of radiographic findings. Otol Neurotol. 2011;32(7):1116-1119. Song JJ, Kim YJ, Kim SY, et al. Sinus wall resurfacing for patients with temporal bone venous sinus diverticulum and ipsilateral pulsatile tinnitus. Neurosurgery. 2015;77(5):709-717. Wang GP, Zeng R, Liu ZH, et al. Acta Otolaryngol. 2014;134(1):7-13."
     }
   ]
 }

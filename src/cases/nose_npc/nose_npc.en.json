@@ -1,8 +1,8 @@
 {
   "id": "nose_npc",
   "title": "The Hidden Threat: Nasopharyngeal Carcinoma",
-  "subtitle": "Neck Mass and Silent NPC",
-  "description": "NPC warning signs, pathology, EBV DNA, imaging staging, treatment, and late fatal complications.",
+  "subtitle": "A painless neck node and a silent nasopharynx",
+  "description": "A neck node with a blocked ear, the endemic pathology, EBV DNA, MRI staging under the 9th edition, choosing treatment for the new stage II, and the late complication that drives de-escalation.",
   "estimatedTime": "20-30 min",
   "difficulty": "Advanced",
   "tags": [
@@ -13,31 +13,35 @@
   ],
   "steps": [
     {
-      "title": "Step 1/6: Symptoms & Anatomy",
-      "scenario": "A 40-year-old man presents for his first clinic visit. He smokes and has no other chronic disease. He reports a painless mass on the left side of his neck that has persisted for two months and is gradually enlarging. Further questioning reveals that over the past month he has often felt fullness in the left ear and unilateral hearing loss, but he has no sore throat or toothache.",
-      "media": "Load image: nasopharyngeal surface anatomy diagram marking the Fossa of Rosenmüller and Eustachian tube orifice",
-      "question": "Given upper neck mass (Level II) plus unilateral middle ear effusion symptoms, which deep anatomic site must you carefully examine to exclude a primary malignancy?",
+      "title": "Step 1/7: Symptoms & Anatomy",
+      "scenario": "A 58-year-old man comes to the ENT clinic with a painless lump on the right side of his neck that he has noticed for two to three months. He feels it when he swallows. On questioning he admits to mild fullness in the right ear for about the same period, which he had put down to a cold. He denies epistaxis, nasal obstruction, hearing change, night sweats or weight loss. He smoked for ten years and stopped six months ago; no betel nut, no alcohol.\n\nOn examination: a 2 cm firm, non-tender mass at right level II. The oral cavity and oropharynx look normal. The right tympanic membrane is dull with a fluid level.",
+      "media": "Load image: Your own line drawing of the nasopharynx in axial section, unannotated, with the eustachian tube orifice, torus tubarius, lateral recess, posterior wall and roof drawn but not labeled. Caption: 'Nasopharynx.'",
+      "question": "You pass the flexible scope into the nasopharynx. Where do you look most carefully?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Piriform sinus"
+          "text": "(A) The roof, where the adenoid sits"
         },
         {
           "id": "B",
-          "text": "(B) Fossa of Rosenmüller",
+          "text": "(B) The fossa of Rosenmüller, behind the torus tubarius",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) Palatine tonsil"
+          "text": "(C) The eustachian tube orifice, in front of the torus"
+        },
+        {
+          "id": "D",
+          "text": "(D) The posterior wall"
         }
       ],
-      "feedback": "Correct answer: B\n\nAttending’s tip: Up to 70% of patients with nasopharyngeal carcinoma present with cervical lymphadenopathy, often Level II/V.\n\nTumors arising from the Fossa of Rosenmüller can easily invade the Eustachian tube opening anteriorly, causing unilateral otitis media with effusion (OME).\n\nFor unexplained persistent unilateral OME with a neck mass, nasopharyngeal endoscopy is essential."
+      "feedback": "Correct answer: B\n\nTwo findings on the same side, and each one points somewhere. A painless, firm level II node in an adult is a metastasis until proven otherwise, and level II is the first echelon for the nasopharynx. A unilateral middle ear effusion in an adult with no infection means something is blocking the eustachian tube, and the tube opens into the nasopharynx. One site explains both: the fossa of Rosenmuller, the lateral recess behind the torus tubarius. It is where most nasopharyngeal carcinomas start, it sits directly behind the tube orifice, and it is the easiest place to miss on a quick pass with the scope because the torus hides it. Angle the scope behind the torus on the right. It shows a bulging mass, and the biopsy is done in clinic through it.\n\nWhy the others fail:\n(A) The roof is where the adenoid sits, and lymphoid tissue there is the commonest normal finding on a scope. Carcinoma can arise there but it is uncommon, and a roof tumor does not sit against the tube, so it would not explain a one-sided ear.\n(C) This is the trap. The orifice is what is blocked, so it is where the eye goes first, and it may look swollen or pushed forward. But the orifice is the victim, not the source. The thing pressing on it is behind the torus, and a scope that stops at the orifice misses it.\n(D) The posterior wall is a site for carcinoma but a less common one. A posterior wall tumor is midline, far from either tube, and would not explain a block on one side only.\n\nKeypoint: a level II node plus a one-sided middle ear effusion means look behind the torus tubarius; the orifice shows the effect, the fossa holds the cause.\n\nReference: Chen YP, Chan ATC, Le QT, Blanchard P, Sun Y, Ma J. Nasopharyngeal carcinoma. Lancet. 2019;394(10192):64-80. National Comprehensive Cancer Network. NCCN Clinical Practice Guidelines in Oncology: Head and Neck Cancers. Updated May 12, 2026. https://www.nccn.org/professionals/physician_gls/pdf/head-and-neck.pdf"
     },
     {
-      "title": "Step 2/6: Pathology & WHO Classification",
-      "scenario": "You perform nasopharyngeal endoscopy in clinic and find a tumor at the left Fossa of Rosenmüller with abnormal surface microvasculature and easy contact bleeding. You immediately perform a biopsy.",
-      "media": "Load image: H&E histology showing carcinoma cells with abundant lymphocytic infiltration",
+      "title": "Step 2/7: Pathology & WHO Classification",
+      "scenario": "The nasopharyngoscopy shows a bulging mass in the right nasopharynx with abnormal surface vessels that bleeds on contact. You biopsy it through the scope.\n\nPathology: non-keratinizing squamous cell carcinoma, undifferentiated subtype. EBER in situ hybridization positive.",
+      "media": "Load image: H&E section of the biopsy from your own pathology department, de-identified, unannotated. Caption: 'Biopsy.'",
       "question": "In areas where nasopharyngeal carcinoma is endemic, such as South China and Taiwan, more than 95% of NPC belongs to which histologic subtype, which often shows abundant CD8+ T-cell and plasma-cell infiltration under microscopy?",
       "options": [
         {
@@ -46,20 +50,24 @@
         },
         {
           "id": "B",
-          "text": "(B) Non-keratinizing carcinoma / lymphoepithelial carcinoma",
-          "correct": true
+          "text": "(B) Basaloid squamous cell carcinoma"
         },
         {
           "id": "C",
-          "text": "(C) Adenoid cystic carcinoma"
+          "text": "(C) Non-keratinizing carcinoma / lymphoepithelial carcinoma",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) Adenoid cystic carcinoma"
         }
       ],
-      "feedback": "Correct answer: B\n\nPathology point: In endemic regions, more than 95% of NPC is non-keratinizing carcinoma. Its distinctive feature is lymphocytic infiltration around malignant cells, so it is also called lymphoepithelial carcinoma. EBV can be found in nearly all carcinoma cells of this subtype."
+      "feedback": "Correct answer: C\n\nThe WHO classification divides nasopharyngeal carcinoma into three types: keratinizing squamous cell carcinoma, non-keratinizing carcinoma, and basaloid squamous cell carcinoma. Non-keratinizing carcinoma, subdivided into differentiated and undifferentiated, is the endemic type. In southern China and Taiwan it accounts for well over 95 percent of cases. Under the microscope the malignant cells are surrounded by a dense infiltrate of lymphocytes and plasma cells, which is why it is also called lymphoepithelial carcinoma, and Epstein-Barr virus is found in essentially every tumor cell, which is what EBER in situ hybridization confirms. It is the most radiosensitive of the three types.\n\nWhy the others fail:\n(A) Keratinizing carcinoma is the type seen in low-incidence regions and in smokers. It is less strongly linked to EBV and less radiosensitive. His ten years of smoking is a distraction; in Taiwan the endemic type dominates regardless.\n(B) Basaloid squamous cell carcinoma is a real WHO category for the nasopharynx, which is what makes it a trap, but it is rare and it is not the lymphocyte-rich tumor described.\n(D) Adenoid cystic carcinoma is a salivary gland tumor. It can arise in the nasopharynx from minor salivary tissue, but it is uncommon there and it is not squamous.\n\nKeypoint: endemic nasopharyngeal carcinoma is non-keratinizing, lymphocyte-rich, EBV-positive and radiosensitive.\n\nReference: WHO Classification of Tumours Editorial Board. Head and Neck Tumours. 5th ed. Lyon, France: International Agency for Research on Cancer; 2022. Chen YP, Chan ATC, Le QT, Blanchard P, Sun Y, Ma J. Nasopharyngeal carcinoma. Lancet. 2019;394(10192):64-80."
     },
     {
-      "title": "Step 3/6: Tumor Markers: EBV DNA",
-      "scenario": "Pathology confirms nasopharyngeal carcinoma, and EBV-encoded RNA (EBER) is positive. To evaluate tumor load and provide a marker for treatment response monitoring, you need to order a blood tumor marker.",
-      "media": "Load chart: comparison table of sensitivity and specificity for EBV tests",
+      "title": "Step 3/7: Tumor Markers: EBV DNA",
+      "scenario": "Pathology confirms nasopharyngeal carcinoma, and EBV-encoded RNA (EBER) is positive. To evaluate tumor load and provide a marker for treatment response monitoring, you need to order a blood tumor marker.\n\nHis baseline plasma EBV DNA: 40.1 copies per mL.",
+      "media": "",
       "question": "Which blood test has the highest sensitivity (96%) and specificity (93%), rapidly decreases after treatment, and is currently the most practical multipurpose tumor marker for monitoring NPC recurrence and prognosis?",
       "options": [
         {
@@ -72,39 +80,73 @@
         },
         {
           "id": "C",
-          "text": "(C) Plasma EBV DNA titer by rt-PCR",
+          "text": "(C) EBV VCA-IgA and EBNA1-IgA serology"
+        },
+        {
+          "id": "D",
+          "text": "(D) Plasma EBV DNA titer by rt-PCR",
           "correct": true
         }
       ],
-      "feedback": "Correct answer: C\n\nTesting pitfall: EBV IgG/IgM only indicates prior or recent infection and is not meaningful for diagnosing NPC because most adults have been infected.\n\nBy contrast, rt-PCR detection of plasma EBV DNA is highly accurate and reflects tumor burden. If EBV DNA does not fall after treatment or rises again later, it often suggests residual local disease or distant metastasis."
+      "feedback": "Correct answer: D\n\nThe tumor cells carry EBV, and as they turn over they shed short fragments of viral DNA into the blood. Quantitative real-time PCR of plasma measures those fragments. In the original series the test was positive in 96 percent of patients with nasopharyngeal carcinoma and negative in 93 percent of controls, and the level tracks tumor burden: it is highis in advanced stage, it falls within days of effective treatment, and it rises again before recurrence is clinically visible. That makes one test useful for three jobs: prognosis at baseline, response after treatment, and surveillance for years afterward. It is drawn now, before treatment starts, so that every later value has a comparison.\n\nHis is 40.1 copies per mL: detectable but low. A low baseline is prognostically favorable, and a minority of patients with confirmed nasopharyngeal carcinoma have low or even undetectable plasma EBV DNA at diagnosis, so a low value never argues against the biopsy. What it means for him is that the test will be most useful afterward, as a surveillance baseline: any rise from here is a signal.\n\nWhy the others fail:\n(A) Nearly every adult has been infected with EBV, so IgG is positive in almost everyone and IgM says nothing about a tumor. These tests diagnose mononucleosis, not cancer.\n(B) CEA is a marker for colorectal and some othis adenocarcinomas. It has no role in nasopharyngeal carcinoma.\n(C) This is the trap. VCA-IgA and EBNA1-IgA are real nasopharyngeal carcinoma markers, and they are what the population screening programs in Taiwan and southern China use to pick out high-risk people. But antibody titers move slowly, they stay raised long after the tumor is gone, and they do not track tumor burden. They screen; they do not monitor.\n\nKeypoint: plasma EBV DNA measures the tumor; EBV antibodies measure the immune response to the virus.\n\nReference: Lo YMD, Chan LYS, Lo KW, et al. Quantitative analysis of cell-free Epstein-Barr virus DNA in plasma of patients with nasopharyngeal carcinoma. Cancer Res. 1999;59(6):1188-1191. Chan KCA, Woo JKS, King A, et al. Analysis of plasma Epstein-Barr virus DNA to screen for nasopharyngeal cancer. N Engl J Med. 2017;377(6):513-522."
     },
     {
-      "title": "Step 4/6: Imaging & Staging",
-      "scenario": "You need accurate AJCC 9th edition staging for this 40-year-old patient to plan intensity-modulated radiation therapy (IMRT). You must evaluate whether the tumor invades the parapharyngeal space, cranial nerves, or bone marrow.",
-      "media": "Load image: axial MRI showing tumor invasion of the parapharyngeal space",
-      "question": "To precisely define the local soft tissue extent of tumor invasion and assist 3D radiotherapy planning, which imaging modality is the gold standard and first choice for local staging?",
+      "title": "Step 4/7: Reading the MRI",
+      "scenario": "MRI of the nasopharynx and neck with contrast is the standard for local staging, because the T category is decided by soft tissue and marrow: the parapharyngeal fat plane, the pterygoid muscles, the marrow signal of the clivus and petrous apex, and the foramina at the skull base.\n\nHis axial and coronal images are shown. Enhancing tumor fills the right nasopharynx. The parapharyngeal fat planes are preserved on both sides. The pterygoid muscles are normal. The clivus and petrous apices show normal marrow signal. No perineural or intracranial extension.",
+      "media": "Load image: Contrast-enhanced, fat-suppressed T1-weighted MRI of the nasopharynx from this patient, axial and coronal, de-identified, unannotated. Caption: 'MRI, T1 post-contrast with fat suppression, axial and coronal.'",
+      "question": "Which finding on this MRI decides that he is T1 and not T2?",
       "options": [
         {
           "id": "A",
-          "text": "(A) Non-contrast CT"
+          "text": "(A) The parapharyngeal fat plane is preserved on both sides",
+          "correct": true
         },
         {
           "id": "B",
-          "text": "(B) MRI",
+          "text": "(B) The tumor enhances after contrast"
+        },
+        {
+          "id": "C",
+          "text": "(C) The clivus shows normal marrow signal"
+        },
+        {
+          "id": "D",
+          "text": "(D) The tumor is on the right side only"
+        }
+      ],
+      "feedback": "Correct answer: A\n\nThe T category asks one question: how far beyond the nasopharynx has the tumor gone? T1 is confined to the nasopharynx, or extending only into the oropharynx or nasal cavity without parapharyngeal involvement. T2 is extension into the parapharyngeal space, the medial or lateral pterygoid, or the prevertebral muscle. T3 is bone: skull base, pterygoid plates, cervical vertebra, paranasal sinus, and the 9th edition requires unequivocal involvement. T4 is intracranial, cranial nerve, hypopharynx, orbit, parotid, or beyond the lateral pterygoid.\n\nThe line between T1 and T2 is the parapharyngeal fat. On a fat-suppressed post-contrast T1 image, normal fat is dark and tumor is bright, so a tumor that has crossed the pharyngobasilar fascia into the parapharyngeal space shows as enhancing tissue replacing the dark fat lateral to the nasopharynx. On his scan the dark fat is intact on both sides. That single finding is what keeps him at T1. Everything else on the report confirms that he is not higher than T2: normal pterygoids, normal marrow, no perineural spread.\n\nThis is what MRI is for. CT shows bone cortex and little else and misses the fat plane, perineural spread and early marrow change. A bone scan is sensitive and not specific, and the 9th edition does not accept it as evidence of T3 without MRI or PET. PET/CT stages the neck and the body; it does not draw the margin of the primary. MRI defines the primary and, fused with the planning CT, draws the target.\n\nWhy the others fail:\n(B) All nasopharyngeal carcinomas enhance. Enhancement tells you where the tumor is, not how far it has gone.\n(C) Normal clivus marrow rules out T3. It says nothing about T2, which is a soft tissue question one step closer to the nasopharynx.\n(D) Laterality is recorded and it matters for the radiotherapy target, but it is not a T criterion. A tumor on one side, or on both, or across the midline, is T1 as long as it has not left the nasopharynx.\n\nKeypoint: the parapharyngeal fat plane decides T1 versus T2; marrow signal decides T3; and fat-suppressed post-contrast T1 is the sequence that shows both.\n\nReference: Pan JJ, Mai HQ, Ng WT, et al. Ninth version of the AJCC and UICC nasopharyngeal cancer TNM staging classification. JAMA Oncol. 2024;10(12):1627-1635. doi:10.1001/jamaoncol.2024.4354. National Comprehensive Cancer Network. NCCN Clinical Practice Guidelines in Oncology: Head and Neck Cancers. Updated May 12, 2026. https://www.nccn.org/professionals/physician_gls/pdf/head-and-neck.pdf"
+    },
+    {
+      "title": "Step 5/7: The Stage",
+      "scenario": "Final TNM: cT1 N2 M0. A primary confined to the nasopharynx, bilateral level II nodes under 6 cm and above the cricoid, no extranodal extension, no distant disease.\n\nA colleague trained on the 8th edition calls him stage III.",
+      "media": "Load image: Your own table of the AJCC 9th edition nasopharyngeal carcinoma stage groups, redrawn, not reproduced: IA T1-2 N0; IB T1-2 N1; II T3 or N2; III T4 or N3; IVA M1 with three or fewer lesions; IVB M1 with more than three. No cell highlighted. Caption: 'AJCC 9th edition stage groups.'",
+      "question": "Using the 9th edition grouping shown, what is his stage, and why does it differ from what your colleague said?",
+      "options": [
+        {
+          "id": "A",
+          "text": "(A) Stage III; N2 has always been stage III"
+        },
+        {
+          "id": "B",
+          "text": "(B) Stage II; the 9th edition moved T3 and N2 down from stage III to stage II, and stage III now means T4 or N3",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) Bone scan"
+          "text": "(C) Stage IB; a T1 tumor is always stage I"
+        },
+        {
+          "id": "D",
+          "text": "(D) Stage IIA; N2 goes to the highis substage"
         }
       ],
-      "feedback": "Correct answer: B\n\nImaging point: MRI has excellent soft-tissue resolution and is the preferred modality for NPC staging and treatment assessment. MRI can accurately evaluate parapharyngeal space invasion, perineural spread, and marrow infiltration, which is crucial for protecting important structures such as the brainstem and optic nerves and for planning modern IMRT."
+      "feedback": "Correct answer: B\n\nYour colleague is not wrong about the tumor. Under the 8th edition, T1N2M0 was stage III. The 9th edition, published in late 2024 and in use since January 2025, redrew the groups without changing the T and N definitions much. Stage I is now T1-2 with N0 or N1, split into IA and IB. Stage II is T3 or N2. Stage III is T4 or N3, and N3 now includes advanced extranodal extension on imaging. Stage IV is metastatic disease only, IVA for three or fewer lesions and IVB for more. The reason was survival data from nearly five thousand patients in the IMRT era: the old stage groups no longer separated outcomes cleanly, and T3 and N2 patients did better than the old stage III label implied.\n\nSo he is stage II today and would have been stage III in 2024. The tumor did not change; the map did. Two consequences follow. When you read older charts and older trials, a stage II and a stage III are not the same patients they are now. And when you choose treatment, the stage number alone is not enough, because the new stage II contains both the old stage II and part of the old stage III. That is the next step.\n\nWhy the others fail:\n(A) True under the 8th edition, not the 9th. Stage III now requires T4 or N3.\n(C) T1 is stage I only with N0 or N1. N2 takes any T category to stage II.\n(D) There is no stage IIA or IIB in the 9th edition system. The subdivisions are IA and IB for stage I, and IVA and IVB for stage IV.\n\nKeypoint: 9th edition, N2 is stage II and stage III is T4 or N3; the tumor did not change, the map did, and the map alone does not choose the treatment.\n\nReference: Pan JJ, Mai HQ, Ng WT, et al. Ninth version of the AJCC and UICC nasopharyngeal cancer TNM staging classification. JAMA Oncol. 2024;10(12):1627-1635. doi:10.1001/jamaoncol.2024.4354."
     },
     {
-      "title": "Step 5/6: Primary Treatment Strategy",
-      "scenario": "The pathology confirmed that the 40-year-old male is suffering from non-keratinizing nasopharyngeal carcinoma (NPC). Imaging reveals tumor invasion into the parapharyngeal space, accompanied by bilateral cervical lymph node metastasis (cT2N2M0).\n\nUnder the latest AJCC 9th Edition (the current 2026 standard), due to the revision of the staging system, this patient has been reclassified from the old Stage III to Stage II. However, his pre-treatment EBV DNA level is elevated (> 4000 copies/ml). You are preparing to explain the treatment plan, which sits at a \"precision stratification\" turning point, to the family.",
-      "media": "Load chart: IMRT dose-painting distribution for the nasopharynx and neck",
-      "question": "In the 2026 clinical consensus, the treatment for Stage II nasopharyngeal carcinoma (NPC) depends on \"Risk Stratification.\" For this patient with cT2N2M0 (Stage II) and an elevated EBV DNA level, which of the following is currently recognized as the most appropriate \"Standard Primary Treatment\"?",
+      "title": "Step 6/7: Primary Treatment Strategy",
+      "scenario": "Non-keratinizing carcinoma, undifferentiated subtype. cT1 N2 M0: a small primary confined to the nasopharynx, with bilateral level II nodes.\n\nStage II by the 9th edition, stage III by the 8th. His plasma EBV DNA is 40.1 copies per mL. He has resolved hepatitis B (surface antigen negative, core antibody positive). You are preparing to explain the treatment plan to him and his family.",
+      "media": "",
+      "question": "In current clinical consensus, the treatment for stage II nasopharyngeal carcinoma depends on risk stratification. For this patient with cT1N2M0 (stage II by the 9th edition), which of the following is the most appropriate standard primary treatment?",
       "options": [
         {
           "id": "A",
@@ -118,15 +160,19 @@
           "id": "C",
           "text": "(C) Classified as a medium-to-high risk group, the standard regimen is concurrent chemoradiotherapy (CCRT), with the consideration of adding induction chemotherapy.",
           "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) IMRT with concurrent cisplatin only; induction chemotherapy is never indicated for stage II disease."
         }
       ],
-      "feedback": "Correct answer: C\n\nIn the AJCC 9th Edition (2026), Stage II treatment has become more precise.\n\nIntermediate to High Risk Group: As in this case with N2 lymph node metastasis or high EBV DNA, CCRT (IMRT + Cisplatin) remains the absolute cornerstone, and induction chemotherapy (IC) is often considered to treat micrometastases.\n\nLow Risk Group: Only patients with T1-2, N1, and low EBV DNA are considered for \"de-escalation\" (RT alone) to reduce blood and gastrointestinal toxicity. Never assume all new Stage II cases are low-risk and hastily remove chemotherapy!"
+      "feedback": "Correct answer: C\n\nThe 9th edition moved T3 and N2 from stage III to stage II. That was a change in the label, not in the disease. A T1 tumor with bilateral nodes is the same tumor that was stage III last year, and the trial evidence attached to it did not move. The gemcitabine-cisplatin induction trial that established induction chemotherapy enrolled stage III to IVB disease by the 8th edition, which included T1N2, and showed a survival benefit driven by fewer distant metastases. That is exactly the tumor board's reasoning for him: three cycles of induction gemcitabine and cisplatin, then concurrent chemoradiation. The cisplatin in his induction was dosed at 60 rathis than 80 mg per square meter, a reasonable adjustment at 58 with the concurrent phase still to come.\n\nThe de-escalation evidence applies to a different patient, and his EBV DNA is the trap. At 40.1 copies per mL he is far below the 4,000 threshold, and it is tempting to read that as permission to de-escalate. But the trial that showed radiotherapy alone was non-inferior enrolled T1-2 N1 and T2-3 N0 disease, with all nodes under 3 cm, no level IV or Vb nodes, no extranodal extension, and EBV DNA under 4,000. The criteria are joint, not alternative. Bilateral nodes are N2, and N2 was never in that trial. A favorable EBV DNA does not move an N2 patient into a study that excluded N2.\n\nOne more thing before chemotherapy starts. He has resolved hepatitis B. Cytotoxic chemotherapy can reactivate it, and reactivation during treatment can be fatal. Check HBV DNA, involve hepatology, and decide on prophylactic antiviral therapy or close monitoring before the first cycle, not after.\n\nWhy the others fail:\n(A) Universal de-escalation is the mistake the new staging invites, and his low EBV DNA makes it more tempting. Some 9th edition stage II patients are low risk and some are the old stage III. Bilateral nodes make him the second kind, whatever the EBV DNA says.\n(B) Nasopharyngeal carcinoma is not treated surgically at diagnosis. The primary cannot be resected with margins and the nodes respond to radiotherapy. Endoscopic nasopharyngectomy and neck dissection are salvage operations for recurrence.\n(D) This is the trap. The chemoradiation half is right. The word never is wrong. Induction is not indicated for the low-risk end of the new stage II, but for the N2 end, which used to be stage III, it is supported by a phase 3 trial. The stage number is not the whole answer; the risk features are.\n\nKeypoint: the 9th edition stage II holds two different patients; N2 puts him in the old stage III group, and that group gets chemoradiation with induction considered, after the hepatitis B has been dealt with.\n\nReference: Pan JJ, Mai HQ, Ng WT, et al. Ninth version of the AJCC and UICC nasopharyngeal cancer TNM staging classification. JAMA Oncol. 2024;10(12):1627-1635. doi:10.1001/jamaoncol.2024.4354. Zhang Y, Chen L, Hu GQ, et al. Gemcitabine and cisplatin induction chemotherapy in nasopharyngeal carcinoma. N Engl J Med. 2019;381(12):1124-1135. Tang LL, Guo R, Zhang N, et al. Effect of radiotherapy alone vs radiotherapy with concurrent chemoradiotherapy on survival without disease relapse in patients with low-risk nasopharyngeal carcinoma. JAMA. 2022;328(8):728-736. doi:10.1001/jama.2022.13997. National Comprehensive Cancer Network. NCCN Clinical Practice Guidelines in Oncology: Head and Neck Cancers. Updated May 12, 2026. https://www.nccn.org/professionals/physician_gls/pdf/head-and-neck.pdf"
     },
     {
-      "title": "Step 6/6: Late Fatal Complications",
-      "scenario": "The patient completes CCRT successfully and achieves complete remission. Six years later, however, he suddenly has several episodes of mild epistaxis, known as sentinel bleeds, followed by massive and uncontrollable epistaxis in the emergency department with unstable blood pressure.",
-      "media": "Load image: angiography showing a ruptured aneurysm",
-      "question": "In a patient who received high-dose nasopharyngeal radiotherapy years earlier, this fatal massive bleeding most likely arises from which late complication of radiotherapy?",
+      "title": "Step 7/7: Before He Starts",
+      "scenario": "Before his radiotherapy begins, you counsel him on late effects. Seventy gray to the nasopharynx puts the skull base, the temporal lobes, the salivary glands, the thyroid and the internal carotid arteries in the field, and the late effects arrive years afterward. The burden of these effects is the reason current trials are testing reduced-dose radiotherapy in patients who respond well to induction chemotherapy.\n\nOne of them presents as several small nosebleeds over a few days, then sudden torrential bleeding with collapse.",
+      "media": "",
+      "question": "Which late complication of nasopharyngeal radiotherapy presents with sentinel epistaxis followed by massive, life-threatening hemorrhage?",
       "options": [
         {
           "id": "A",
@@ -134,15 +180,19 @@
         },
         {
           "id": "B",
-          "text": "(B) Internal carotid artery aneurysm / pseudoaneurysm blowout",
-          "correct": true
+          "text": "(B) Radiation-induced sarcoma"
         },
         {
           "id": "C",
-          "text": "(C) Radiation-induced sarcoma"
+          "text": "(C) Recurrent tumor eroding the sphenopalatine artery"
+        },
+        {
+          "id": "D",
+          "text": "(D) Internal carotid artery aneurysm / pseudoaneurysm blowout",
+          "correct": true
         }
       ],
-      "feedback": "Correct answer: B\n\nEmergency nightmare: Internal carotid artery aneurysm rupture is a rare but extremely fatal late complication after radiotherapy for NPC. The classic presentation is mild sentinel bleeding followed hours to days later by sudden massive epistaxis. Management requires rapid airway stabilization and urgent consultation with interventional radiology for endovascular stenting or embolization."
+      "feedback": "Correct answer: D\n\nThe internal carotid artery runs through the field. It passes the lateral wall of the nasopharynx, through the petrous bone and the cavernous sinus, a few millimeters from the tumor bed, and it receives a full dose. Years later the irradiated wall weakens, sometimes with osteoradionecrosis of the skull base exposing it or a chronic infection eroding it, and it forms a pseudoaneurysm. The presentation is the classic one: small sentinel bleeds, which are the wall giving way in stages, then a torrential bleed through the nasopharynx with hemodynamic collapse. This is carotid blowout, and it kills quickly.\n\nWhat he should know now is two things. First, any nosebleed years after treatment is not to be ignored; a sentinel bleed is the only warning he will get, and it is a same-day emergency. Second, when it happens the order is airway, because he will aspirate blood; packing, large-bore access and blood; and interventional radiology at once, for a covered stent or occlusion of the artery. Nothing done through the nose stops a carotid.\n\nThis is also why the field is moving. Reduced-dose radiotherapy for patients who respond well to induction, and radiotherapy alone for low-risk disease, are being studied because the late toxicity of full-dose treatment is real: carotid injury, temporal lobe necrosis, hearing loss, hypothyroidism, dysphagia, and the lifelong dry mouth. He is not a candidate for de-escalation, but the reason it exists is the reason he needs this counseling.\n\nWhy the others fail:\n(A) Osteoradionecrosis of the skull base is real and it can be what exposes the artery, but bone does not bleed like this. The volume and the sentinel pattern are arterial.\n(B) A radiation-induced sarcoma is a late complication that can bleed, but it presents as a mass with weeks of symptoms, not as sudden exsanguination.\n(C) This is the trap. Recurrent tumor is the first thing to think of with late epistaxis after nasopharyngeal carcinoma, and the sphenopalatine artery is what usually bleeds from a nasal tumor. But recurrence is a mass on the scope and the scan, and it oozes; the sentinel-then-torrential pattern is the signature of a great vessel.\n\nKeypoint: sentinel bleeds years after nasopharyngeal radiotherapy mean the carotid; airway first, then interventional radiology; and the late toxicity of full-dose treatment is why de-escalation is being studied.\n\nReference: Chen YP, Chan ATC, Le QT, Blanchard P, Sun Y, Ma J. Nasopharyngeal carcinoma. Lancet. 2019;394(10192):64-80. Tang LL, Guo R, Zhang N, et al. JAMA. 2022;328(8):728-736. doi:10.1001/jama.2022.13997. National Comprehensive Cancer Network. NCCN Clinical Practice Guidelines in Oncology: Head and Neck Cancers. Updated May 12, 2026. https://www.nccn.org/professionals/physician_gls/pdf/head-and-neck.pdf Carotid blowout after nasopharyngeal radiotherapy: add a specific reference; see note."
     }
   ]
 }

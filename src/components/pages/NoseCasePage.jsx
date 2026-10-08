@@ -94,7 +94,9 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
   const correctIds = step.options.filter((option) => option.correct).map((option) => option.id);
   const isMultiSelect = correctIds.length > 1;
   const draftSelectedIds = draftSelections[stepIndex] ?? [];
-  const isNoseHotspotStep = caseData.id === 'nose_allergic_rhinitis' && stepIndex === 6;
+  const isHotspotCandidateStep = caseData.id === 'nose_allergic_rhinitis' && stepIndex === 6;
+  // Learners fall back to the step's options until an admin has drawn both targets.
+  const isNoseHotspotStep = isHotspotCandidateStep && (isAdmin || hotspotTargets.length === 2);
   const currentHotspotSelections = hotspotSelections[stepIndex] ?? [];
   const isZh = lang === 'zh';
   const text = {
@@ -419,6 +421,8 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
                         onUserHotspotsChange: (points) => {
                           setHotspotSelections((prev) => ({ ...prev, [stepIndex]: points }));
                         },
+                      } : isHotspotCandidateStep ? {
+                        onHotspotsLoaded: setHotspotTargets,
                       } : {}}
                     />
 
@@ -514,7 +518,7 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
                       {text.previous}
                     </Button>
                     <Button onClick={goNext} disabled={(!selectedAnswer && !isNoseHotspotStep) || saveState === 'saving'} className="w-full sm:w-auto">
-                      {saveState === 'saving' ? text.saving : isLastStep ? text.finish : text.next}
+                      {saveState === 'saving' ? text.saving : isNoseHotspotStep && !selectedAnswer ? text.confirm : isLastStep ? text.finish : text.next}
                       <ChevronRight className="inline w-4 h-4 ml-1" />
                     </Button>
                   </div>

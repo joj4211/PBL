@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { BarChart2, Wrench } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { domains, domainColorMap } from '../../config/domains';
+import { listDomainCases } from '../../cases/catalogue';
 
 const container = {
   animate: { transition: { delayChildren: 0.1, staggerChildren: 0.08 } },
@@ -139,7 +140,8 @@ export default function LandingPage({
           {domains.map((topic) => {
             const c = domainColorMap[topic.color];
             const t = topic[lang];
-            const hasCase = topic.cases.length > 0;
+            const domainCaseCount = listDomainCases(topic.id, lang).length;
+            const hasCase = domainCaseCount > 0;
 
             return (
               <motion.button
@@ -176,7 +178,7 @@ export default function LandingPage({
                 {/* Case count */}
                 {hasCase ? (
                   <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${c.countBg}`}>
-                    {caseCount(topic.cases.length)}
+                    {caseCount(domainCaseCount)}
                   </span>
                 ) : (
                   <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-warm-100 text-warm-400">

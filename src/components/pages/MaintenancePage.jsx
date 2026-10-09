@@ -214,7 +214,7 @@ export default function MaintenancePage({
                       variant="secondary"
                       size="sm"
                       className="w-full mt-3"
-                      onClick={() => onSelectArchivedCase('ear_vestibular_neuritis')}
+                      onClick={onSelectArchivedCase}
                     >
                       {text.openArchive}
                     </Button>

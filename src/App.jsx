@@ -7,7 +7,7 @@ import { useAuth } from './hooks/useAuth';
 import { PHASES } from './logic/stateMachine';
 import { useDomainProgress } from './hooks/useDomainProgress';
 import { getDomainAssessment } from './config/domainAssessments';
-import { defaultCaseId, getStepCase } from './cases/index';
+import { getCase } from './cases/catalogue';
 import AppShell from './components/layout/AppShell';
 import LandingPage from './components/pages/LandingPage';
 import TopicPage from './components/pages/TopicPage';
@@ -61,9 +61,9 @@ const InteractivePages = {
   report:      CaseReport,
 };
 
-function ArchivedCaseDemo({ caseId, onBackToMaintenance }) {
+function ArchivedCaseDemo({ onBackToMaintenance }) {
   const { lang } = useLanguage();
-  const caseState = useCase(caseId, lang);
+  const caseState = useCase(lang);
   const { currentPhase, goBackPhase } = caseState;
   const CurrentPhase = PhaseComponents[currentPhase];
 
@@ -133,12 +133,10 @@ function MaintenancePerformancePage({ onBack }) {
 function AppContent({ onShowMaintenance }) {
   const { lang } = useLanguage();
   const auth = useAuth();
-  const [screen, setScreen]               = useState('landing'); // 'landing' | 'topic' | 'performance' | 'case' | 'stepCase' | 'domainAssessment'
+  const [screen, setScreen]               = useState('landing'); // 'landing' (default) | 'topic' | 'performance' | 'stepCase' | 'domainAssessment'
   const [selectedTopic, setSelectedTopic] = useState(null);
-  const [selectedCaseId, setSelectedCaseId] = useState(defaultCaseId);
+  const [selectedCaseId, setSelectedCaseId] = useState(null);
   const [assessmentKind, setAssessmentKind] = useState('preTest');
-  const caseState = useCase(selectedCaseId, lang);
-  const { currentPhase, goBackPhase, exitToIntro } = caseState;
 
   const { progress, assessmentStats, caseAttempts, loading: progressLoading, refresh: refreshDomainProgress } = useDomainProgress(
     auth.user?.id,
@@ -151,15 +149,8 @@ function AppContent({ onShowMaintenance }) {
   };
 
   const handleSelectCase = (caseId) => {
-    const isStepCase = Boolean(getStepCase(caseId, lang));
-
     setSelectedCaseId(caseId);
-
-    if (!isStepCase) {
-      caseState.startAtPhase(PHASES.INTRO);
-    }
-
-    setScreen(isStepCase ? 'stepCase' : 'case');
+    setScreen('stepCase');
   };
 
   const handleSelectPerformance = () => {
@@ -175,12 +166,6 @@ function AppContent({ onShowMaintenance }) {
     setScreen('landing');
     setSelectedTopic(null);
     setAssessmentKind('preTest');
-  };
-
-  const handleExitCase = async () => {
-    exitToIntro();
-    setScreen('topic');
-    await refreshDomainProgress();
   };
 
   const handleSignOut = async () => {
@@ -211,20 +196,6 @@ function AppContent({ onShowMaintenance }) {
           loading={auth.loading}
         />
       </AppShell>
-    );
-  }
-
-  if (screen === 'landing') {
-    return (
-      <LandingPage
-        lang={lang}
-        onSelectTopic={handleSelectTopic}
-        onSelectPerformance={handleSelectPerformance}
-        onShowMaintenance={auth.isAdmin ? onShowMaintenance : null}
-        isAdmin={auth.isAdmin}
-        onSignOut={handleSignOut}
-        displayName={auth.appUser?.user_account ?? auth.user?.user_metadata?.user_account ?? auth.user?.email?.split('@')[0]}
-      />
     );
   }
 
@@ -277,12 +248,10 @@ function AppContent({ onShowMaintenance }) {
     );
   }
 
-  if (screen === 'stepCase') {
-    const stepCase = getStepCase(selectedCaseId, lang);
-
+  if (screen === 'stepCase' && selectedCaseId) {
     return (
       <NoseCasePage
-        caseData={stepCase}
+        caseData={getCase(selectedCaseId, lang)}
         user={auth.user}
         isAdmin={auth.isAdmin}
         lang={lang}
@@ -295,35 +264,22 @@ function AppContent({ onShowMaintenance }) {
     );
   }
 
-  const CurrentPhase = PhaseComponents[currentPhase];
-
   return (
-    <AppShell
-      showCaseControls={true}
-      showBackControl={currentPhase !== PHASES.INTRO && currentPhase !== PHASES.PRE_TEST}
-      showExitControl={currentPhase !== PHASES.ANALYTICS}
-      onBack={goBackPhase}
-      onExit={handleExitCase}
+    <LandingPage
+      lang={lang}
+      onSelectTopic={handleSelectTopic}
+      onSelectPerformance={handleSelectPerformance}
+      onShowMaintenance={auth.isAdmin ? onShowMaintenance : null}
+      isAdmin={auth.isAdmin}
       onSignOut={handleSignOut}
-    >
-      <AnimatePresence mode="wait">
-        <CurrentPhase
-          key={currentPhase}
-          {...caseState}
-          user={auth.user}
-          isAdmin={auth.isAdmin}
-          lang={lang}
-          onExit={handleExitCase}
-        />
-      </AnimatePresence>
-    </AppShell>
+      displayName={auth.appUser?.user_account ?? auth.user?.user_metadata?.user_account ?? auth.user?.email?.split('@')[0]}
+    />
   );
 }
 
 function AppRouter() {
   const [screen,       setScreen]       = useState('main');
   const [selectedPage, setSelectedPage] = useState(null);
-  const [archivedCaseId, setArchivedCaseId] = useState(null);
 
   const handleShowGallery = () => setScreen('interactive-gallery');
   const handleShowMaintenance = () => setScreen('maintenance');
@@ -334,10 +290,7 @@ function AppRouter() {
     setScreen('interactive-page');
   };
 
-  const handleSelectArchivedCase = (caseId) => {
-    setArchivedCaseId(caseId);
-    setScreen('archived-case');
-  };
+  const handleSelectArchivedCase = () => setScreen('archived-case');
 
   const handleBackToGallery = () => setScreen('interactive-gallery');
   const handleBackToMaintenance = () => setScreen('maintenance');
@@ -360,13 +313,8 @@ function AppRouter() {
     return <MaintenancePerformancePage onBack={handleBackToMaintenance} />;
   }
 
-  if (screen === 'archived-case' && archivedCaseId) {
-    return (
-      <ArchivedCaseDemo
-        caseId={archivedCaseId}
-        onBackToMaintenance={handleBackToMaintenance}
-      />
-    );
+  if (screen === 'archived-case') {
+    return <ArchivedCaseDemo onBackToMaintenance={handleBackToMaintenance} />;
   }
 
   if (screen === 'interactive-gallery') {

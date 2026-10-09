@@ -12,7 +12,8 @@ import ImagePlaceholder from '../ui/ImagePlaceholder';
 import { supabase } from '../../lib/supabaseClient';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { stripOptionPrefix } from '../../utils/text';
-import { domainColorMap, getDomainByCaseId } from '../../config/domains';
+import { domainColorMap } from '../../config/domains';
+import { domainOf } from '../../cases/catalogue';
 import { buildCaseAttemptAnswers, buildOverallFromSteps } from '../../logic/attemptPayload';
 
 function MediaPlaceholder({ media, text, mediaContext, hotspotProps }) {
@@ -77,7 +78,7 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
     iso: new Date().toISOString(),
     ms: Date.now(),
   });
-  const domain = getDomainByCaseId(caseData.id);
+  const domain = domainOf(caseData.id);
   const domainText = domain[lang] ?? domain.zh;
   const domainStyles = domainColorMap[domain.color] ?? domainColorMap.sage;
 

@@ -1,15 +1,7 @@
 import { useState, useCallback } from 'react';
 import { PHASES, getNextPhase, getPrevPhase } from '../logic/stateMachine';
 import { scoreMultipleChoice, scoreTextInput } from '../logic/scoring';
-import legacyExampleZh from '../cases/ear_vestibular_neuritis/ear_vestibular_neuritis.zh.json';
-import legacyExampleEn from '../cases/ear_vestibular_neuritis/ear_vestibular_neuritis.en.json';
-
-// The archived phase-flow example lives outside the Case Catalogue and loads its own JSON.
-const LEGACY_EXAMPLE_ID = 'ear_vestibular_neuritis';
-const legacyExampleByLang = {
-  zh: { ...legacyExampleZh, id: LEGACY_EXAMPLE_ID },
-  en: { ...legacyExampleEn, id: LEGACY_EXAMPLE_ID },
-};
+import { getLegacyExample } from '../cases/legacyExample';
 
 function createAttemptStart() {
   return {
@@ -19,7 +11,7 @@ function createAttemptStart() {
 }
 
 export const useCase = (lang = 'zh') => {
-  const caseData = legacyExampleByLang[lang] ?? legacyExampleByLang.zh;
+  const caseData = getLegacyExample(lang);
 
   const [currentPhase, setCurrentPhase] = useState(PHASES.INTRO);
   const [preTestAnswer, setPreTestAnswer] = useState(null);

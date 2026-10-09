@@ -1,2 +1,283 @@
 {
+  "id": "ear_vestibular_neuritis",
+  "title": "Case 01: The Spinning World",
+  "subtitle": "Acute Vestibular Neuritis (Right Side)",
+  "coverDescription": "Target learners: PGY residents / medical students\n\nLearning objectives: Distinguish peripheral from central vertigo using the HINTS exam, interpret canal paresis on caloric testing, and understand how VEMP helps localize the site of vestibular nerve involvement.",
+  "estimatedTime": "30–45 min",
+  "difficulty": "Intermediate",
+  "tags": [
+    "ENT",
+    "Emergency",
+    "HINTS",
+    "Vertigo"
+  ],
+  "preTest": {
+    "title": "Pre-Test (Baseline Assessment)",
+    "instructions": "Before starting the case, answer the following question to assess your baseline knowledge.",
+    "questions": [
+      {
+        "id": "pre-q1",
+        "type": "multiple-choice",
+        "text": "A patient presents with acute-onset, continuous vertigo and nausea, with spontaneous left-beating nystagmus. Which of the following findings most strongly supports a peripheral cause?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Vertical nystagmus."
+          },
+          {
+            "id": "B",
+            "text": "A corrective \"catch-up\" saccade on the Head Impulse Test (HIT) to the right.",
+            "correct": true
+          },
+          {
+            "id": "C",
+            "text": "Skew deviation (vertical misalignment of the eyes)."
+          },
+          {
+            "id": "D",
+            "text": "Nystagmus that changes direction with gaze."
+          }
+        ],
+        "explanation": null
+      }
+    ]
+  },
+  "chiefComplaint": {
+    "slides": [
+      {
+        "slideIndex": 1,
+        "type": "narrative",
+        "content": "A 42-year-old woman presents to the emergency department with sudden, severe, constant vertigo that began 12 hours ago. She is markedly nauseated and has vomited twice. She denies hearing loss, tinnitus, or focal neurological symptoms (no limb weakness or numbness), but she had symptoms of an upper respiratory infection during the past week."
+      },
+      {
+        "slideIndex": 2,
+        "type": "history-taking",
+        "title": "Problem List & History Taking",
+        "instruction": "Identify the \"pertinent negatives\" that help rule out a stroke:",
+        "questionsAndRationales": [
+          {
+            "question": "1. \"Do you have any difficulty speaking or swallowing?\"",
+            "rationale": "→ Rules out brainstem involvement"
+          },
+          {
+            "question": "2. \"Did the vertigo start suddenly, or did it build up gradually?\"",
+            "rationale": "→ Acute onset is typical of vestibular neuritis"
+          },
+          {
+            "question": "3. \"Have you had a recent viral infection or cold symptoms?\"",
+            "rationale": "→ Vestibular neuritis often follows an upper respiratory infection"
+          }
+        ]
+      }
+    ]
+  },
+  "physicalExam": {
+    "title": "Physical Examination (The HINTS Exam)",
+    "videoPlaceholder": {
+      "label": "HINTS Exam Demonstration Video",
+      "note": "Video placeholder — to be replaced with: nystagmus, Head Impulse Test, test of skew",
+      "filename": "video_hints_exam.mp4",
+      "aspectRatio": "16 / 9"
+    },
+    "steps": [
+      {
+        "stepNumber": 1,
+        "name": "Nystagmus Observation",
+        "description": "The patient has spontaneous horizontal-torsional nystagmus with the fast phase beating to the left.",
+        "question": "Does the nystagmus become stronger or weaker when the patient looks to the left?",
+        "correctAnswer": "Stronger — consistent with Alexander's law"
+      },
+      {
+        "stepNumber": 2,
+        "name": "Head Impulse Test (HIT)",
+        "description": "Perform a virtual rapid head turn to the right.",
+        "visual": "The eyes are carried off target with the head, followed by a refixation saccade back to the central target."
+      },
+      {
+        "stepNumber": 3,
+        "name": "Test of Skew",
+        "description": "No vertical ocular misalignment is observed."
+      }
+    ],
+    "clinicalDecision": {
+      "question": "Is this a \"dangerous\" or a \"benign\" HINTS pattern?",
+      "reasoning": "→ When the dangerous signs are absent, the findings favor a peripheral cause.",
+      "answer": "Benign / Peripheral"
+    }
+  },
+  "workup": {
+    "title": "Vestibular Function Tests (Data Interpretation)",
+    "investigations": [
+      {
+        "id": "pta",
+        "name": "PTA (Pure Tone Audiometry)",
+        "image": "image_pta.png",
+        "aspectRatio": "4 / 3",
+        "question": "Does the patient have hearing loss?",
+        "answer": "No. Hearing is within normal limits, which helps rule out labyrinthitis."
+      },
+      {
+        "id": "caloric",
+        "name": "Caloric Test",
+        "images": [
+          "image_caloric_1.png",
+          "image_caloric_2.png"
+        ],
+        "aspectRatio": "4 / 3",
+        "observation": "Irrigation of the right ear produces a markedly reduced response.",
+        "task": "Calculate the canal paresis (CP).",
+        "result": "A right CP greater than 25% indicates right-sided vestibular hypofunction."
+      },
+      {
+        "id": "vemp",
+        "name": "VEMP (cVEMP / oVEMP)",
+        "image": "image_vemp.png",
+        "aspectRatio": "4 / 3",
+        "task": "Which nerve is most likely affected?",
+        "rules": [
+          "1. The color code (the golden rule)",
+          "🔴 Red line: the right ear.",
+          "🔵 Blue line: the left ear."
+        ]
+      }
+    ]
+  },
+  "management": {
+    "title": "Treatment & Rehabilitation",
+    "clinicalDecisionTree": [
+      {
+        "stage": "Acute Treatment",
+        "options": [
+          {
+            "id": "A",
+            "text": "Epley canalith repositioning maneuver.",
+            "feedback": "→ Incorrect. This is not benign paroxysmal positional vertigo (BPPV)!",
+            "correct": false
+          },
+          {
+            "id": "B",
+            "text": "High-dose corticosteroids plus a short course of vestibular suppressants.",
+            "feedback": "→ Correct! Steroids may help the nerve recover.",
+            "correct": true
+          }
+        ]
+      },
+      {
+        "stage": "Long-term Management",
+        "options": [
+          {
+            "id": "A",
+            "text": "Strict bed rest.",
+            "feedback": "→ Incorrect. Bed rest hinders central compensation.",
+            "correct": false
+          },
+          {
+            "id": "B",
+            "text": "Early vestibular rehabilitation therapy (VRT).",
+            "feedback": "→ Correct! Early movement helps the brain adapt.",
+            "correct": true
+          }
+        ]
+      }
+    ]
+  },
+  "interactive": {
+    "instructions": "Use the case data to explain your clinical reasoning, focusing on the clues that distinguish peripheral from central causes.",
+    "questions": [
+      {
+        "id": "interactive-q1",
+        "type": "text-input",
+        "text": "Which HINTS findings in this case support a peripheral vestibular lesion?",
+        "keywords": [
+          "head impulse",
+          "catch-up",
+          "skew",
+          "direction"
+        ],
+        "hint": "Think about the HIT, skew deviation, and the direction of the nystagmus.",
+        "feedbackTemplate": {
+          "excellent": "Good reasoning. You linked key HINTS clues such as {keyword} to a peripheral vestibular lesion.",
+          "good": "You're on the right track. You identified {keyword}; adding the other HINTS components would make your argument more complete.",
+          "hint": "Review the HINTS findings: an abnormal HIT, no skew deviation, and unidirectional horizontal-torsional nystagmus all support a peripheral lesion."
+        }
+      },
+      {
+        "id": "interactive-q2",
+        "type": "text-input",
+        "text": "Why does normal hearing make vestibular neuritis more likely than labyrinthitis?",
+        "keywords": [
+          "hearing",
+          "labyrinthitis",
+          "neuritis",
+          "cochlea"
+        ],
+        "hint": "Compare purely vestibular symptoms with cochlear involvement.",
+        "feedbackTemplate": {
+          "excellent": "Exactly right. Mentioning {keyword} shows you understand that labyrinthitis usually involves the cochlea as well.",
+          "good": "You're on the right track with {keyword}. Now state the contrast explicitly: vestibular neuritis affects vestibular function but does not cause hearing loss.",
+          "hint": "Vestibular neuritis causes vertigo without affecting hearing; labyrinthitis usually causes hearing symptoms as well, because the cochlea is also involved."
+        }
+      }
+    ]
+  },
+  "postTest": {
+    "instructions": "Now that you have completed the case, answer the following questions. They review the most important learning points of this case.",
+    "questions": [
+      {
+        "id": "post-q1",
+        "type": "multiple-choice",
+        "text": "In acute vestibular syndrome, which HINTS pattern is most consistent with a peripheral lesion?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Normal head impulse test, direction-changing nystagmus, and skew deviation."
+          },
+          {
+            "id": "B",
+            "text": "Abnormal head impulse test, unidirectional nystagmus, and no skew deviation.",
+            "correct": true
+          },
+          {
+            "id": "C",
+            "text": "Vertical nystagmus with a severe headache."
+          },
+          {
+            "id": "D",
+            "text": "New focal limb weakness with a normal vestibular exam."
+          }
+        ],
+        "explanation": "A peripheral HINTS pattern consists of an abnormal head impulse test, unidirectional nystagmus, and no skew deviation."
+      },
+      {
+        "id": "post-q2",
+        "type": "multiple-choice",
+        "text": "Which of the following findings would shift the diagnosis from vestibular neuritis toward labyrinthitis?",
+        "options": [
+          {
+            "id": "A",
+            "text": "A recent upper respiratory infection."
+          },
+          {
+            "id": "B",
+            "text": "Nausea and vomiting."
+          },
+          {
+            "id": "C",
+            "text": "Hearing loss or tinnitus.",
+            "correct": true
+          },
+          {
+            "id": "D",
+            "text": "Right canal paresis on caloric testing."
+          }
+        ],
+        "explanation": "Labyrinthitis affects the inner ear labyrinth and often comes with cochlear symptoms such as hearing loss or tinnitus."
+      }
+    ]
+  },
+  "learningPoints": [
+    "In acute vestibular syndrome, use HINTS to distinguish peripheral vestibular neuritis from central causes.",
+    "Normal hearing favors vestibular neuritis over labyrinthitis.",
+    "A weak caloric response and VEMP results help localize the site of vestibular nerve involvement."
+  ]
 }

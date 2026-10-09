@@ -303,7 +303,7 @@ export default function PerformancePage({
 
   const topicStats = useMemo(() => domains.map((topic) => {
     const topicAttempts = attempts.filter((attempt) => (
-      attempt.domain === topic.id || topic.cases.some((caseItem) => caseItem.id === attempt.case_id)
+      attempt.domain === topic.id || topic.caseIds.includes(attempt.case_id)
     ));
     const scores = topicAttempts.map((attempt) => average([
       attempt.pre_test_score,

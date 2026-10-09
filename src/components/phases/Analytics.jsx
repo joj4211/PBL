@@ -6,12 +6,14 @@ import ProgressIndicator from '../ui/ProgressIndicator';
 import Button from '../ui/Button';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { supabase } from '../../lib/supabaseClient';
-import { getDomainByCaseId } from '../../config/domains';
 import {
   buildCaseAttemptAnswers,
   buildOverallFromSteps,
   mapPhaseAnswersToSteps,
 } from '../../logic/attemptPayload';
+
+// Only the archived phase-flow example reaches Analytics, and it is an ear Case.
+const LEGACY_EXAMPLE_DOMAIN = 'ear';
 
 const stagger = {
   animate: { transition: { staggerChildren: 0.12, delayChildren: 0.2 } },
@@ -35,7 +37,6 @@ export default function Analytics({
   const { ui, lang } = useLanguage();
   const [saveStatus, setSaveStatus] = useState('');
   const saveStartedRef = useRef(false);
-  const domain = getDomainByCaseId(caseData.id);
 
   const answersByPhase = useMemo(() => ({
     preTest: getPhaseAnswers('preTest'),
@@ -49,10 +50,10 @@ export default function Analytics({
   const answersPayload = useMemo(() => buildCaseAttemptAnswers({
     caseId: caseData.id,
     caseTitle: caseData.title,
-    domain: domain.id,
+    domain: LEGACY_EXAMPLE_DOMAIN,
     language: lang,
     steps,
-  }), [caseData.id, caseData.title, domain.id, lang, steps]);
+  }), [caseData.id, caseData.title, lang, steps]);
 
   useEffect(() => {
     if (!user || !attemptStartedAt || attemptSaved || saveStartedRef.current) return;
@@ -76,7 +77,7 @@ export default function Analytics({
       const { error } = await supabase.from('case_attempts').insert({
         user_id: user.id,
         case_id: caseData.id,
-        domain: domain.id,
+        domain: LEGACY_EXAMPLE_DOMAIN,
         language: lang,
         pre_test_score: null,
         interactive_score: overall.percentage,
@@ -108,7 +109,7 @@ export default function Analytics({
     return () => {
       cancelled = true;
     };
-  }, [answersPayload, attemptSaved, attemptStartedAt, caseData.id, domain.id, lang, markAttemptSaved, overall.percentage, user]);
+  }, [answersPayload, attemptSaved, attemptStartedAt, caseData.id, lang, markAttemptSaved, overall.percentage, user]);
 
   return (
     <PhaseTransition>

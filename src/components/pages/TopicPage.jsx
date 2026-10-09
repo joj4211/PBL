@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '../../contexts/LanguageContext';
-import { getCase } from '../../cases/index';
+import { listDomainCases } from '../../cases/catalogue';
 
 const container = {
   animate: { transition: { delayChildren: 0.1, staggerChildren: 0.08 } },
@@ -26,11 +26,12 @@ export default function TopicPage({
   const { setLang } = useLanguage();
   const isZh = lang === 'zh';
   const t = topic[lang];
-  const hasCases = topic.cases.length > 0;
+  const cases = listDomainCases(topic.id, lang);
+  const hasCases = cases.length > 0;
 
   const preDone = Boolean(progress?.pretest_completed || assessmentStats?.preTestLatest != null);
   const postDone = Boolean(progress?.posttest_completed || assessmentStats?.postTestLatest != null);
-  const allCasesDone = topic.cases.every((caseItem) => (caseAttempts?.[caseItem.id] ?? 0) >= 1);
+  const allCasesDone = cases.every((caseItem) => (caseAttempts?.[caseItem.id] ?? 0) >= 1);
   const showPostPanel = preDone && allCasesDone;
 
   const text = {
@@ -155,15 +156,12 @@ export default function TopicPage({
               animate="animate"
               className="flex flex-col gap-4"
             >
-              {topic.cases.map((c) => {
-                const caseContent = getCase(c.id, lang);
-                const title = caseContent?.title ?? c[lang];
-                const subtitle = caseContent?.subtitle ?? '';
-                const attempts = caseAttempts?.[c.id] ?? 0;
+              {cases.map(({ id, title, subtitle }) => {
+                const attempts = caseAttempts?.[id] ?? 0;
 
                 return (
                   <motion.div
-                    key={c.id}
+                    key={id}
                     variants={item}
                     className="glass-card p-5 flex items-center justify-between gap-4"
                   >
@@ -177,7 +175,7 @@ export default function TopicPage({
                       <div className="text-xs text-sage-600 mt-2">{text.attempts}：{attempts}</div>
                     </div>
                     <button
-                      onClick={() => onSelectCase(c.id)}
+                      onClick={() => onSelectCase(id)}
                       className="action-pill flex-shrink-0"
                     >
                       {isZh ? '開始學習' : 'Start'}

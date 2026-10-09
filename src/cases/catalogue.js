@@ -8,9 +8,10 @@ const caseFiles = import.meta.glob('./*/*.json', { eager: true, import: 'default
 
 const contentByLang = { zh: {}, en: {} };
 for (const [path, content] of Object.entries(caseFiles)) {
-  const [, id, fileName] = path.split('/');
-  const lang = fileName.slice(id.length + 1, -'.json'.length);
-  if (id === LEGACY_EXAMPLE_ID || !contentByLang[lang]) continue;
+  // Every Case file must be named <folder>/<folder>.<lang>.json.
+  const [, id, fileId, lang] = path.match(/^\.\/([^/]+)\/([^/]+)\.([a-z]+)\.json$/) ?? [];
+  if (id === LEGACY_EXAMPLE_ID) continue;
+  if (!id || fileId !== id || !contentByLang[lang]) throw new Error(`Malformed case file name "${path}"`);
   contentByLang[lang][id] = { ...content, id };
 }
 

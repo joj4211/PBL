@@ -94,8 +94,9 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
   const correctIds = step.options.filter((option) => option.correct).map((option) => option.id);
   const isMultiSelect = correctIds.length > 1;
   const draftSelectedIds = draftSelections[stepIndex] ?? [];
-  const isNoseHotspotStep = caseData.id === 'nose_allergic_rhinitis' && stepIndex === 4;
-  const isEpistaxisTriageCtaStep = caseData.id === 'nose_epistaxis_hht' && stepIndex === 0;
+  const isHotspotCandidateStep = caseData.id === 'nose_allergic_rhinitis' && stepIndex === 6;
+  // Learners fall back to the step's options until an admin has drawn both targets.
+  const isNoseHotspotStep = isHotspotCandidateStep && (isAdmin || hotspotTargets.length === 2);
   const currentHotspotSelections = hotspotSelections[stepIndex] ?? [];
   const isZh = lang === 'zh';
   const text = {
@@ -408,43 +409,22 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
                   </div>
 
                   <div className="mt-5 space-y-4">
-                    {isEpistaxisTriageCtaStep ? (
-                      <div className="grid gap-4 sm:grid-cols-2">
-                        <ImagePlaceholder
-                          label={isZh ? '載入圖片：急診 triage 監視器畫面 (BP 149/103)' : 'Load image: emergency triage monitor (BP 149/103)'}
-                          note={text.mediaNote}
-                          caseId={caseData.id}
-                          lang={lang}
-                          isAdmin={isAdmin}
-                          user={user}
-                          assetKey="steps.0.media.triage"
-                        />
-                        <ImagePlaceholder
-                          label={isZh ? '載入圖片：電腦斷層血管攝影 (CTA) 影像' : 'Load image: CT angiography (CTA) image'}
-                          note={text.mediaNote}
-                          caseId={caseData.id}
-                          lang={lang}
-                          isAdmin={isAdmin}
-                          user={user}
-                          assetKey="steps.0.media.cta"
-                        />
-                      </div>
-                    ) : (
-                      <MediaPlaceholder
-                        media={step.media}
-                        text={text}
-                        mediaContext={mediaContext}
-                        hotspotProps={isNoseHotspotStep ? {
-                          hotspotTask: true,
-                          hotspotTargets,
-                          userHotspots: currentHotspotSelections,
-                          onHotspotsLoaded: setHotspotTargets,
-                          onUserHotspotsChange: (points) => {
-                            setHotspotSelections((prev) => ({ ...prev, [stepIndex]: points }));
-                          },
-                        } : {}}
-                      />
-                    )}
+                    <MediaPlaceholder
+                      media={step.media}
+                      text={text}
+                      mediaContext={mediaContext}
+                      hotspotProps={isNoseHotspotStep ? {
+                        hotspotTask: true,
+                        hotspotTargets,
+                        userHotspots: currentHotspotSelections,
+                        onHotspotsLoaded: setHotspotTargets,
+                        onUserHotspotsChange: (points) => {
+                          setHotspotSelections((prev) => ({ ...prev, [stepIndex]: points }));
+                        },
+                      } : isHotspotCandidateStep ? {
+                        onHotspotsLoaded: setHotspotTargets,
+                      } : {}}
+                    />
 
                     {step.constructionNote && (
                       <p className="rounded-2xl border border-warm-200 bg-warm-50/70 px-4 py-3 text-xs text-warm-600 leading-relaxed">
@@ -538,7 +518,7 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
                       {text.previous}
                     </Button>
                     <Button onClick={goNext} disabled={(!selectedAnswer && !isNoseHotspotStep) || saveState === 'saving'} className="w-full sm:w-auto">
-                      {saveState === 'saving' ? text.saving : isLastStep ? text.finish : text.next}
+                      {saveState === 'saving' ? text.saving : isNoseHotspotStep && !selectedAnswer ? text.confirm : isLastStep ? text.finish : text.next}
                       <ChevronRight className="inline w-4 h-4 ml-1" />
                     </Button>
                   </div>

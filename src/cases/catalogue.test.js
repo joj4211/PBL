@@ -1,4 +1,4 @@
-import { readdirSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { domains } from '../config/domains';
 import { domainOf, getCase, listDomainCases } from './catalogue';
@@ -22,6 +22,15 @@ describe('getCase', () => {
     const enSteps = getCase(id, 'en').steps;
     expect(zhSteps.length).toBeGreaterThan(0);
     expect(enSteps.length).toBe(zhSteps.length);
+  });
+});
+
+describe('Case JSON', () => {
+  it.each(caseFolders)('has no id field in %s, since the folder name is the identity', (id) => {
+    for (const lang of LANGS) {
+      const raw = JSON.parse(readFileSync(new URL(`./${id}/${id}.${lang}.json`, import.meta.url), 'utf8'));
+      expect(raw).not.toHaveProperty('id');
+    }
   });
 });
 

@@ -5,6 +5,13 @@ export const domains = [
     en: { title: 'Otology', subtitle: 'Vestibular, hearing, and middle ear disorders', tags: ['Vertigo', 'Hearing Loss', 'Otitis', 'Vestibular'] },
     icon: '👂',
     color: 'amber',
+    caseIds: [
+      'ear_menieres_disease',
+      'ear_sudden_hearing_loss',
+      'ear_pulsatile_tinnitus',
+      'ear_spinning_world_acute_vestibular_neuritis',
+      'ear_cholesteatoma_silent_erosion',
+    ],
     cases: [
       { id: 'ear_menieres_disease', zh: '天旋地轉與低鳴的浪潮', en: 'The Waves of Vertigo' },
       { id: 'ear_sudden_hearing_loss', zh: '世界突然安靜', en: 'The Silent World' },
@@ -19,6 +26,13 @@ export const domains = [
     en: { title: 'Rhinology', subtitle: 'Rhinitis, sinusitis, and nasal obstruction', tags: ['Rhinitis', 'Sinusitis', 'Epistaxis', 'Nasal Obstruction'] },
     icon: '👃',
     color: 'sage',
+    caseIds: [
+      'nose_allergic_rhinitis',
+      'nose_ecrswnp',
+      'nose_epistaxis_hht',
+      'nose_npc',
+      'nose_caudal_deviation',
+    ],
     cases: [
       { id: 'nose_allergic_rhinitis', zh: '鼻水背後的拼圖', en: 'The Allergic Puzzle' },
       { id: 'nose_ecrswnp', zh: '無聲蔓延的鼻息肉', en: 'The Silent Polyposis' },
@@ -33,6 +47,13 @@ export const domains = [
     en: { title: 'Laryngology', subtitle: 'Voice, swallowing, and airway problems', tags: ['Hoarseness', 'Dysphagia', 'Airway', 'Laryngitis'] },
     icon: '🗣️',
     color: 'rose',
+    caseIds: [
+      'throat_hoarseness_vocal_polyp',
+      'throat_osas',
+      'throat_thyroid_nodule',
+      'throat_recurrent_tonsillitis',
+      'throat_ludwigs_angina_airway',
+    ],
     cases: [
       { id: 'throat_hoarseness_vocal_polyp', zh: '油漆工的沙啞嗓音', en: "The Painter's Hoarse Voice" },
       { id: 'throat_osas', zh: '沉睡中的窒息與危機', en: 'The Silent Choke & Surgical Crisis' },

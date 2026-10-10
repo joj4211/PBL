@@ -23,6 +23,19 @@ describe('getCase', () => {
     expect(zhSteps.length).toBeGreaterThan(0);
     expect(enSteps.length).toBe(zhSteps.length);
   });
+
+  const stepAnswers = (id, lang) =>
+    getCase(id, lang).steps.map((step) => ({
+      optionIds: step.options.map((option) => option.id),
+      correctIds: step.options.filter((option) => option.correct).map((option) => option.id),
+    }));
+
+  it.each(listedCaseIds)(
+    'has the same option ids and correct options in zh and en for every step of %s',
+    (id) => {
+      expect(stepAnswers(id, 'zh')).toEqual(stepAnswers(id, 'en'));
+    },
+  );
 });
 
 describe('Case JSON', () => {

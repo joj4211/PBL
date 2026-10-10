@@ -5,9 +5,6 @@ import { domainOf, getCase, listDomainCases } from './catalogue';
 
 const LANGS = ['zh', 'en'];
 const LEGACY_EXAMPLE_ID = 'ear_vestibular_neuritis';
-// Temporary: these Cases' zh content does not yet match en. Remove each entry once its zh
-// version is rewritten as a translation of en (ear_sudden_hearing_loss: issue #34).
-const ZH_EN_MISMATCH_EXEMPT = ['ear_sudden_hearing_loss'];
 const listedCaseIds = domains.flatMap((domain) => domain.caseIds);
 const caseFolders = readdirSync(new URL('.', import.meta.url), { withFileTypes: true })
   .filter((entry) => entry.isDirectory() && entry.name !== LEGACY_EXAMPLE_ID)
@@ -33,7 +30,7 @@ describe('getCase', () => {
       correctIds: step.options.filter((option) => option.correct).map((option) => option.id),
     }));
 
-  it.each(listedCaseIds.filter((id) => !ZH_EN_MISMATCH_EXEMPT.includes(id)))(
+  it.each(listedCaseIds)(
     'has the same option ids and correct options in zh and en for every step of %s',
     (id) => {
       expect(stepAnswers(id, 'zh')).toEqual(stepAnswers(id, 'en'));

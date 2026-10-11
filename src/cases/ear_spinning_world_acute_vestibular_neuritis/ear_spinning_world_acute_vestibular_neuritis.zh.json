@@ -1,147 +1,172 @@
 {
-  "title": "天旋地轉的急診挑戰",
-  "subtitle": "急性前庭神經炎 (The Spinning World: Acute Vestibular Neuritis)",
-  "description": "急性眩暈中的中樞排除、HINTS 判讀、聽力鑑別、卡路里測試與復健決策。",
-  "estimatedTime": "20-30 分鐘",
+  "title": "停不下來的房間",
+  "subtitle": "天旋地轉兩天，從急診到復健計畫",
+  "description": "辨認急性前庭症候群、床邊 HINTS 檢查、為什麼要檢查聽力、做出診斷、判斷是哪一側，以及現在和之後該做什麼。",
+  "estimatedTime": "15-20 分鐘",
   "difficulty": "中階",
   "tags": [
     "耳科",
-    "急診",
-    "前庭神經炎",
-    "HINTS"
+    "眩暈",
+    "急性前庭症候群",
+    "HINTS",
+    "前庭復健"
   ],
   "steps": [
     {
-      "title": "Step 1/6: 病史詢問與神經學地雷 (History & Essential Negative Findings)",
-      "scenario": "一位 42 歲女性被送到急診室，主訴突發性、嚴重且持續的「天旋地轉 (constant vertigo)」，發作至今已 12 小時。她感到強烈的噁心並吐了兩次。她最近一週有上呼吸道感染 (URI) 的症狀。為了快速排除危險的中樞型中風 (Stroke)，你必須詢問關鍵的「陰性發現 (Essential Negative Findings)」。",
-      "media": "載入圖片：急診醫師詢問病史的示意圖",
-      "question": "為了排除腦幹 (Brainstem) 受到侵犯的可能性，下列哪一個問題是你此時「最必須」詢問病患的？",
+      "title": "Step 1/6：哪一種頭暈",
+      "scenario": "45 歲女性，由先生送到急診。\n\n她兩天前一醒來就天旋地轉。\n\n    發作          突然，醒來時\n    持續          到目前兩天\n    型態          開始後一直持續，從沒停過\n    嘔吐          好幾次\n    走路          要扶著牆才能走\n    頭部移動      會更嚴重\n\n沒有頭痛。聽力沒有改變，沒有耳鳴。\n沒有無力、麻木或複視。\n上週感冒。\n\n她自己的話：「是房間在動。我沒有快昏倒的感覺。」",
+      "media": "",
+      "question": "這是什麼？接下來你需要釐清什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 「你以前有吃過任何耳毒性抗生素嗎？」"
+          "text": "(A) 暈厥前期 (presyncope)；下一個問題是心臟，所以測姿勢性血壓並做心電圖"
         },
         {
           "id": "B",
-          "text": "(B) 「你目前有任何說話不清楚，或是吞嚥困難的狀況嗎？」",
+          "text": "(B) 急性前庭症候群；下一個問題是周邊還是中樞，而你要靠檢查她的眼睛來回答，不是靠影像",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) 「當你改變頭部姿勢時，眩暈會只持續幾秒鐘嗎？」"
+          "text": "(C) 陣發性前庭症候群；下一個問題是哪一耳，所以做 Dix-Hallpike"
+        },
+        {
+          "id": "D",
+          "text": "(D) 急性前庭症候群；下一個問題是不是中風，所以在檢查她之前先送緊急 MRI"
         }
       ],
-      "feedback": "正確答案：B\n\n臨床解析： 在急診面對急性眩暈，首要任務是排除腦幹中風。詢問是否有構音障礙 (difficulty speaking)、吞嚥困難 (swallowing difficulty) 或肢體無力/麻木等局部神經學症狀，是確認 \"Essential Negative Findings\" 的保命關鍵。"
+      "feedback": "正確答案：B\n\n三個分類問題，依序問。\n\n1. 這是眩暈嗎？\n• 眩暈是一種動的錯覺：房間在轉、地面在傾斜、每走一步世界都在晃動（振動幻視，oscillopsia）。來源是前庭系統，耳朵或腦。\n• 頭暈若是頭重腳輕或快要昏倒，那是暈厥前期。它屬於心臟和循環，不屬於耳朵。\n她的是眩暈。\n\n2. 時間過程是什麼？\n• 急性前庭症候群：突發的眩暈，持續數天不停，合併噁心、嘔吐、不穩、無法忍受頭部移動，以及眼震。這就是她。\n• 陣發性前庭症候群：一陣一陣發作，發作之間正常，每次數分鐘到數小時。BPPV、梅尼爾氏症、前庭性偏頭痛。\n• 慢性前庭症候群：數週到數月的平衡不良，沒有明確的發作。\n\n3. 周邊還是中樞？\n這是最重要的問題，而且現在就開始問。急性前庭症候群的原因分兩大類：\n• 周邊：迷路或前庭神經。前庭神經炎和迷路炎。很難受，但是良性。\n• 中樞：腦幹或小腦。後循環中風，偶爾是去髓鞘疾病。乍看可能一模一樣，而且可能致命。\n\n從病史來看，偏向中樞的特徵是：突然發生的頭痛或頸部疼痛、任何局部神經學症狀、即使有人扶也完全無法站立，以及年長病人有血管危險因子。她一個都沒有，而且上週感冒，這偏向周邊原因。但病史只能提高或降低懷疑，無法定案。把兩者分開的是 Step 2 的床邊檢查，而在頭兩天它比 MRI 更可靠。\n\n其他選項為什麼不對：\n(A) 她不是覺得快昏倒，而是覺得世界在動。暈厥前期不會造成眼震，也不會在轉頭時嘔吐；心臟檢查回答的是一個她沒有在問的問題。\n(C) 陣發性的發作之間會有空檔。她已經兩天沒有一刻停過，而 Dix-Hallpike 測的是她沒有的姿勢性眩暈。\n(D) 框架對了，反射動作錯了。中風確實是要擔心的中樞原因，但頭 48 小時內的 MRI 會漏掉一部分後顱窩梗塞，早期正常的影像可能給人錯誤的安心。在這個階段，床邊檢查比早期影像更敏感。先檢查；如果檢查結果指向中樞，或檢查結果無法判讀，再做影像。\n\nKeypoint：眩暈持續數天不停，就是急性前庭症候群；它的原因不是周邊就是中樞，而決定是哪一種的是床邊檢查，不是掃描機。\n\nReference: Strupp M, Bisdorff A, Furman J, et al. Acute unilateral vestibulopathy/vestibular neuritis: diagnostic criteria. J Vestib Res. 2022;32(5):389-406. Kattah JC, Talkad AV, Wang DZ, Hsieh YH, Newman-Toker DE. HINTS to diagnose stroke in the acute vestibular syndrome. Stroke. 2009;40(11):3504-3510."
     },
     {
-      "title": "Step 2/6: 眼震判讀與亞歷山大定律 (Nystagmus & Alexander's Law)",
-      "scenario": "病患意識清楚，無任何說話或吞嚥困難。你開始進行 HINTS 檢查 (Head Impulse, Nystagmus, Test of Skew)。你觀察到她有自發性的「向左打的水平扭轉型眼震 (Left-beating horizontal-torsional nystagmus)」。",
-      "media": "載入影片：向左打的自發性眼震 (Left-beating nystagmus)",
-      "question": "根據眼震慢相朝向病灶、快相朝向健康側的原則，這名病患的病灶可能在「右側」。此時若根據「亞歷山大定律 (Alexander’s Law)」，當病患眼睛看向哪一個方向時，眼震的強度會增加？",
+      "title": "Step 2/6：床邊的三件事",
+      "scenario": "你檢查她的眼睛。\n\n眼震\n    水平帶有旋轉成分，正視時快相向左。\n    向左看時較強，向右看時較弱但仍是向左跳。\n    她注視你的手指時會減弱。\n\n頭部脈衝測試\n    頭快速轉向右：眼睛跟著頭滑走，接著一個矯正性掃視把眼睛拉回你的鼻子。\n    頭轉向左：眼睛一直固定在你的鼻子上。\n\n垂直偏斜\n    交替遮蓋測試：沒有垂直方向的矯正動作。",
+      "media": "載入影片：你自己病人在 Frenzel 眼鏡下的眼震，10 秒，靜音，去識別化：向左跳的水平眼震，向左看時增強。說明文字：「眼震，正視與向左看。」",
+      "question": "HINTS 檢查顯示什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 向左看 (Looking to the left)",
-          "correct": true
+          "text": "(A) 中樞型態；她在做任何事之前需要緊急 MRI"
         },
         {
           "id": "B",
-          "text": "(B) 向右看 (Looking to the right)"
+          "text": "(B) 這些發現互相矛盾，無法判讀"
         },
         {
           "id": "C",
-          "text": "(C) 向上看 (Looking up)"
+          "text": "(C) 檢查正常；這個眩暈不是前庭來的"
+        },
+        {
+          "id": "D",
+          "text": "(D) 周邊型態：頭部脈衝測試異常、單一方向且遵守 Alexander 定律的眼震、沒有垂直偏斜",
+          "correct": true
         }
       ],
-      "feedback": "正確答案：A\n\n臨床解析： 根據亞歷山大定律 (Alexander's Law)，當眼睛注視著「眼震快相 (Fast Phase)」的方向時，眼震強度會增加。本例眼震向左打 (快相向左)，代表病灶在右側，且向左看時眼震會變大。"
+      "feedback": "正確答案：D\n\nHINTS 是三個床邊檢查，而這裡三個都指向同一個方向。\n\n頭部脈衝測試 (head impulse)。快速被動地轉頭，測試那一側的前庭眼反射 (VOR)。\n• 正常的一側：眼睛一直鎖定在目標上。\n• 弱的一側：眼睛跟著頭走，然後一個追趕性掃視 (catch-up saccade) 把眼睛拉回來。\n她的追趕性掃視出現在向右轉頭時，所以右側弱。注意這個陷阱：急性前庭症候群中頭部脈衝測試正常才是危險的結果，因為那表示周邊完好，原因在中樞。\n\n眼震 (nystagmus)。周邊型眼震只往一個方向跳，方向遠離弱的一側，並且遵守 Alexander 定律：\n• 看向快相方向時最強，\n• 看向另一邊時較弱，\n• 但永遠不會反轉方向，\n• 而且會被視覺注視抑制，這就是為什麼要用 Frenzel 眼鏡。\n她的眼震在每個注視方向都是向左跳，向左看時較強，注視時減弱。會改變方向、純垂直或純旋轉的眼震則是中樞型。\n\n垂直偏斜 (skew)。遮蓋測試出現垂直方向的眼位不正，是腦幹的徵象。她沒有。\n\n合起來看：頭部脈衝測試異常、單一方向眼震、沒有垂直偏斜。這是良性的組合。在原始研究中，HINTS 辨認中風比早期 MRI 更準確，早期 MRI 在頭 48 小時內會漏掉一些後顱窩梗塞；所以 HINTS 呈現中樞型態時，不能因為早期影像正常就放心。\n\n其他選項為什麼不對：\n(A) 中樞型態正好相反：頭部脈衝測試正常、會改變方向的眼震，或有垂直偏斜。她一個都沒有。\n(B) 三個發現彼此一致，也與 Alexander 定律一致。\n(C) 自發性眼震和追趕性掃視都不正常；它們是前庭周邊受損的徵象。\n\nKeypoint：轉頭時出現追趕性掃視、眼震只往一個方向跳且朝快相方向看時增強、沒有垂直偏斜，就是周邊型。急性前庭症候群中頭部脈衝測試正常，才是代表中風的發現。\n\nReference: Kattah JC, Talkad AV, Wang DZ, Hsieh YH, Newman-Toker DE. HINTS to diagnose stroke in the acute vestibular syndrome: three-step bedside oculomotor examination more sensitive than early MRI diffusion-weighted imaging. Stroke. 2009;40(11):3504-3510."
     },
     {
-      "title": "Step 3/6: 頭部脈衝測試的逆向思考 (The Head Impulse Test)",
-      "scenario": "你接著對她執行「頭部脈衝測試 (Head Impulse Test, HIT)」。當你快速將她的頭轉向右側時，她的眼睛跟著頭部轉動，接著出現了一個明顯的「校正性眼球跳動 (catch-up saccade)」才回到中心。",
-      "media": "載入圖片：執行 Head Impulse Test 時出現 Catch-up saccade 的圖解",
-      "question": "在評估這位急性持續性眩暈的病患時，觀察到這個「異常的 (Positive)」頭部脈衝測試結果，具有什麼重大的臨床意義？",
+      "title": "Step 3/6：音叉",
+      "scenario": "離開床邊之前，你拿出一支 512 Hz 音叉。\n\n    Weber     居中\n    Rinne     兩耳都是氣導大於骨導\n\n隔天早上，做了純音聽力圖。",
+      "media": "載入圖片：你自己病人的純音聽力圖，去識別化：兩側對稱、閾值正常。說明文字：「聽力圖。」",
+      "question": "你為什麼要檢查她的聽力？結果正常告訴你什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 強烈暗示病患發生了腦幹或小腦中風。"
+          "text": "(A) 為了區分迷路和神經：聽力正常表示耳蝸沒有受影響，這指向前庭神經，而不是整個迷路",
+          "correct": true
         },
         {
           "id": "B",
-          "text": "(B) 確認這是一起良性陣發性姿勢性眩暈 (BPPV)。"
+          "text": "(B) 聽力正常就排除了任何內耳原因，使眩暈成為中樞型"
         },
         {
           "id": "C",
-          "text": "(C) 強烈支持「周邊性前庭神經炎 (Peripheral etiology)」，而非中樞型中風。",
-          "correct": true
+          "text": "(C) 聽力和眩暈無關；音叉檢查是不必要的"
+        },
+        {
+          "id": "D",
+          "text": "(D) 今天聽力正常，就永久排除了梅尼爾氏症"
         }
       ],
-      "feedback": "正確答案：C\n\n臨床地雷 (HINTS is King)： 在急性持續眩暈中，單側頭部脈衝測試 (HIT) 異常（出現 catch-up saccade）代表同側周邊前庭功能低下，支持良性的周邊病灶 (如前庭神經炎)。相反地，如果 HIT 呈現「完全正常」，反而強烈暗示這是危險的中樞型中風！"
+      "feedback": "正確答案：A\n\n耳蝸和前庭迷路共用一個骨性囊、一套血液供應，以及部分的神經。音叉利用的正是這個共同的解剖構造：\n• 侵犯整個內耳的過程會連帶影響聽力：迷路炎、迷路梗塞、第一次梅尼爾氏症發作。\n• 只侷限在前庭神經的過程不會影響聽力。\n\n她兩側聽力都正常，所以耳蝸沒有受影響，病灶在前庭而不在耳蝸。\n\n實驗室檢查是補充細節，而不是改變診斷；它們之後才做，等她能忍受時：\n• 溫差測試 (caloric)：弱的一側反應減弱。\n• video head impulse test (vHIT)：測量每個半規管的 VOR 增益，並記錄追趕性掃視。\n• VEMP：告訴你牽涉的是上支、下支，還是兩者都有。\n\n其他選項為什麼不對：\n(B) 聽力正常不會使眩暈變成中樞型。前庭神經炎是急性前庭症候群最常見的周邊原因，依定義聽力就是正常的。\n(C) 在床邊，聽力就是你區分神經炎和迷路炎的方法。音叉只要三十秒，卻會改變診斷。\n(D) 一張正常的聽力圖不能排除梅尼爾氏症，它的診斷是靠一段時間內發作時有紀錄的低頻聽損；不過兩天持續不停的病程本來就不符合梅尼爾氏症。\n\nKeypoint：每一個急性眩暈都要檢查聽力；聽力保留代表是神經，聽力喪失代表是整個迷路。\n\nReference: Strupp M, Bisdorff A, Furman J, et al. Acute unilateral vestibulopathy/vestibular neuritis: diagnostic criteria. J Vestib Res. 2022;32(5):389-406."
     },
     {
-      "title": "Step 4/6: 聽力學與鑑別診斷 (Audiometry & Labyrinthitis)",
-      "scenario": "經過急診初步穩定後，你為她安排了純音聽力檢查 (PTA)。聽力圖顯示她的雙耳聽力「完全正常 (within normal limits)」。",
-      "media": "載入圖片：顯示雙耳正常聽力的純音聽力圖 (PTA)",
-      "question": "「沒有聽力喪失 (No hearing loss)」這個關鍵的陰性發現，能夠將此病例與下列哪一種同樣會產生急性眩暈的周邊性耳疾區分開來？",
+      "title": "Step 4/6：診斷",
+      "scenario": "目前為止你掌握的：\n\n    眩暈          持續不停，兩天\n    眼震          向左跳，只有一個方向\n    頭部脈衝      向右時出現追趕性掃視\n    垂直偏斜      沒有\n    聽力          正常，兩耳\n    神經學        沒有缺損，沒有頭痛\n\n前一週感冒。",
+      "media": "",
+      "question": "診斷是什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 前庭性偏頭痛 (Vestibular migraine)"
+          "text": "(A) 梅尼爾氏症"
         },
         {
           "id": "B",
-          "text": "(B) 良性陣發性姿勢性眩暈 (BPPV)"
+          "text": "(B) 良性陣發性姿勢性眩暈"
         },
         {
           "id": "C",
-          "text": "(C) 內耳迷路炎 (Labyrinthitis)",
+          "text": "(C) 迷路炎"
+        },
+        {
+          "id": "D",
+          "text": "(D) 前庭神經炎",
           "correct": true
         }
       ],
-      "feedback": "正確答案：C\n\n診斷關鍵： 內耳迷路炎 (Labyrinthitis) 與前庭神經炎 (Vestibular Neuritis) 的症狀極為相似，但最大的區別在於：如果該名女性同時伴隨了「患側聽力喪失 (hearing loss)」，診斷就會轉向內耳迷路炎。正常聽力成功排除了迷路炎。"
+      "feedback": "正確答案：D\n\n前庭神經炎是一側前庭神經急性、持續的功能喪失，通常是上支，耳蝸不受影響。她的表現就是教科書上的樣子：\n• 持續數天不停的眩暈，合併噁心和嘔吐，\n• 往弱的一側不穩，\n• 遵守 Alexander 定律的自發性單一方向眼震，\n• 弱的一側頭部脈衝測試異常，\n• 聽力正常，\n• 沒有中樞徵象，\n• 前一週有病毒性疾病。\n\n診斷是臨床診斷；vHIT 和溫差測試用來確認患側和嚴重程度。\n\n其他選項為什麼不對：\n(A) 梅尼爾氏症是陣發性的：眩暈持續數分鐘到數小時，合併波動的低頻聽損、耳鳴和耳悶脹，發作之間正常。持續兩天不停的眩暈、聽力正常，不是梅尼爾氏症的發作。\n(B) BPPV 很短暫，幾秒到一分鐘，由頭部位置誘發，休息時沒有自發性眼震。她兩樣都有。之後仍值得做 Dix-Hallpike，因為 BPPV 可能接在神經炎之後出現。\n(C) 迷路炎是同樣的急性表現再加上聽損，因為整個迷路都發炎了。她的聽力正常；這一個發現就把兩者分開，這也是 Step 3 重要的原因。\n\nKeypoint：持續數天不停的眩暈、周邊型 HINTS、聽力正常，就是前庭神經炎；加上聽損就是迷路炎；變成陣發性就是梅尼爾氏症或 BPPV。\n\nReference: Strupp M, Bisdorff A, Furman J, et al. Acute unilateral vestibulopathy/vestibular neuritis: diagnostic criteria. J Vestib Res. 2022;32(5):389-406."
     },
     {
-      "title": "Step 5/6: 卡路里測試與功能低下 (Caloric Test & Canal Paresis)",
-      "scenario": "為了進一步確診並量化前庭功能的受損程度，你安排了「卡路里測試 (Caloric Test)」。檢查結果發現，當對右耳進行灌注刺激時，眼震反應顯著減弱。",
-      "media": "載入圖片：Caloric Test 的眼震電圖 (ENG/VNG) 紀錄報告",
-      "question": "在判讀卡路里測試報告時，醫師必須計算下列哪一項數值，若該數值大於 25%，即代表右側前庭神經出現顯著的功能低下 (Vestibular hypofunction)？",
+      "title": "Step 5/6：哪一側",
+      "scenario": "第四天。她可以坐起來了。前庭檢查室的報告：\n\n溫差測試\n    右耳溫水與冷水反應合計 17 deg/s，左耳合計 51 deg/s\n    單側無力 50%，右耳\n    方向優勢 26%，偏向左\n\nvHIT\n    右側水平半規管增益 0.45，合併顯性與隱性掃視；左側半規管正常\n\nVEMP\n    cVEMP 兩側都有，對稱\n    oVEMP 右側消失",
+      "media": "載入圖片：這位病人的溫差測試報告，去識別化：每耳的雙溫反應、蝴蝶圖，以及分析結果顯示右側單側無力 50%、方向優勢 26% 偏向左。說明文字：「溫差測試。」",
+      "question": "受影響的是哪一側？哪些發現告訴你？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 視覺抑制指數 (Fixation Index, FI)"
+          "text": "(A) 左側，因為眼震向左跳"
         },
         {
           "id": "B",
-          "text": "(B) 方向優勢 (Directional Preponderance, DP)"
+          "text": "(B) 沒有 MRI 無法判定"
         },
         {
           "id": "C",
-          "text": "(C) 半規管麻痺指數 (Canal Paresis, CP)",
+          "text": "(C) 右側：眼震往遠離它的方向跳、頭部脈衝測試轉向它時異常、溫差測試在它這側弱，而右側 oVEMP 消失指向前庭上神經",
           "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) 兩側，因為溫差測試的不對稱低於 100%"
         }
       ],
-      "feedback": "正確答案：C\n\n判讀解析： 卡路里測試主要用來比較兩側水平半規管的功能。若計算出的半規管麻痺指數 (Canal Paresis, CP) 大於 25%，即證明該側存在明顯的單側前庭功能低下 (Unilateral vestibular hypofunction)。"
+      "feedback": "正確答案：C\n\n每一個發現都指向右側，而且每一個背後都有值得知道的理由。\n\n• 眼震往遠離弱側的方向跳。兩側迷路平常把眼睛推往相反方向，彼此抵消。失去右側後，完好的左側把眼睛慢慢推向右，而快速的矯正跳動，也就是我們拿來命名的那一相，往左。向左跳代表右側病灶。\n• 頭部脈衝測試在轉向弱側時異常。頭向右轉測試的是右側水平半規管，而她的追趕性掃視出現在向右轉頭時。\n• 溫差測試在弱側弱。右耳的溫水和冷水合計只產生每秒 17 度的眼震；左耳產生 51 度。這是右耳 50% 的單側無力，而大約超過 25% 就有意義。\n• 方向優勢指向同一個方向。四次灌注所產生的眼震，向左跳的比向右跳的多 26%。那是她 Step 2 的自發性向左跳眼震疊加到每一次反應上。它不是第二個病灶；它是同一個病灶從另一個角度看。\n• VEMP 在神經內定位。眼性 VEMP (oVEMP) 測的是橢圓囊和上支；頸性 VEMP (cVEMP) 測的是球囊和下支。她的 oVEMP 右側消失，cVEMP 正常。\n\n這個組合是前庭上神經炎，也是最常見的型態：上支支配水平和前半規管以及橢圓囊，並且走在一條較長、較窄的骨性通道中，一般認為這就是它比較常受侵犯的原因。\n\n其他選項為什麼不對：\n(A) 最常見的錯誤。快相是矯正，不是病灶；它往遠離受損側的方向跳。\n(B) 患側清楚寫在整個檢查和檢查室報告上。MRI 在周邊病灶的定位上沒有角色。\n(D) 單側無力是兩耳之間的不對稱。50% 是明確的單側缺損，而她左耳的反應正常，每秒 51 度。兩側喪失會是兩側反應都低、不對稱很小。\n\nKeypoint：眼震往遠離患側的方向跳、頭部脈衝測試轉向患側時失敗、溫差測試在患側弱；VEMP 告訴你是上支還是下支。\n\nReference: Strupp M, Bisdorff A, Furman J, et al. Acute unilateral vestibulopathy/vestibular neuritis: diagnostic criteria. J Vestib Res. 2022;32(5):389-406."
     },
     {
-      "title": "Step 6/6: 治療決策與前庭復健 (Management & Rehabilitation)",
-      "scenario": "確診為「右側急性前庭神經炎 (Acute Vestibular Neuritis)」。你正在與病患討論接下來的藥物治療與長期復健計畫。",
-      "media": "載入圖片：病患進行前庭復健運動 (VRT) 的示意圖",
-      "question": "關於前庭神經炎的立即性處置與長期復原計畫，下列哪一個醫療決策是最正確的？",
+      "title": "Step 6/6：現在與之後",
+      "scenario": "第四天。她可以坐起來了。\n轉頭時仍然噁心。\n可以走路，但要扶著牆。\n\n她問：「現在會怎樣？我會好起來嗎？」",
+      "media": "",
+      "question": "你現在要做什麼？之後要計畫什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 立即執行耳石復位術 (Epley Maneuver)，並要求長期絕對臥床休息 (Absolute bed rest)。"
+          "text": "(A) 支持性治療約一週：止吐藥和前庭鎮靜劑只在頭幾天使用，之後停掉；讓她起身活動；回診時評估她是否正在代償，並開始前庭復健",
+          "correct": true
         },
         {
           "id": "B",
-          "text": "(B) 長期開立前庭抑制劑 (Vestibular suppressants)，直到眩暈完全消失為止。"
+          "text": "(B) 一個療程的口服類固醇；不需要復健，因為神經會自己恢復"
         },
         {
           "id": "C",
-          "text": "(C) 急性期給予高劑量類固醇，症狀緩解後應盡早開始前庭復健治療 (Early VRT)。",
-          "correct": true
+          "text": "(C) 今天就開始前庭復健，並開前庭鎮靜劑讓她接下來一個月需要時服用"
+        },
+        {
+          "id": "D",
+          "text": "(D) 臥床休息，規律服用前庭鎮靜劑，直到眩暈完全停止"
         }
       ],
-      "feedback": "正確答案：C\n\n治療共識： 急性期給予高劑量類固醇 (High-dose Corticosteroids) 能幫助神經恢復；同時強烈建議盡早開始前庭復健治療 (Early Vestibular Rehabilitation Therapy, VRT) 以促進大腦的中樞代償。絕對臥床 (Absolute bed rest) 或長期使用前庭抑制劑反而會阻礙中樞神經系統的代償適應！另外，此病並非耳石脫落，所以 Epley Maneuver 是無效的。"
+      "feedback": "正確答案：A\n\n前庭神經炎的恢復，大部分不是神經癒合，而是大腦重新校準，去適應來自一側永久變弱的訊號，這就是中樞代償；而代償是由動作驅動的：每一次引發片刻眩暈的轉頭，都讓大腦看見它需要修正的不一致。計畫分兩個階段。\n\n現在，頭幾天：\n• 控制噁心，讓她能吃能喝。\n• 給前庭鎮靜劑（diphenidol 或 benzodiazepine），不超過大約 3 天。這些藥會壓低感覺上的不一致，但那個不一致正是大腦學習所需的訊號，所以過了急性期，它們會拖延代償。三天後停藥，之後只在需要時當作緊急救援使用，絕不規律服用。\n• 她一能站就讓她下床。\n• 類固醇是可選的：一個隨機試驗發現 methylprednisolone 改善了一年時的溫差測試恢復，但臨床上的好處不確定，所以是考慮使用，而非必須。\n\n之後，一週回診時：\n• 評估代償：自發性眼震逐漸消退、不用扶也能走路、能忍受轉頭。\n• 如果她自己正在代償，鼓勵活動，再安排回診。\n• 如果沒有，或她很焦慮、避免活動，轉介前庭復健：一套有結構的凝視穩定與平衡運動，可以縮短恢復時間，並降低慢性頭暈的風險。\n\n其他選項為什麼不對：\n(B) 類固醇頂多是一個選項，對代償毫無幫助。在那些無法自行代償的病人身上，省略復健正是把兩週的病變成六個月的病的原因。\n(C) 第四天開始復健沒問題，但一個月需要時服用的鎮靜劑會把它抵銷。過了急性期後的每一劑都會延遲代償。鎮靜劑是給頭幾天用的，之後就停。\n(D) 一次犯兩個錯。臥床休息剝奪了大腦驅動代償所需的動作，而規律服用鎮靜劑會阻斷大腦學習所需的感覺不一致。像 diphenidol 這類前庭鎮靜劑的作用就是壓低那個不一致，這正是為什麼它們不能定時規律給：使用超過幾天，它們會拖延代償、延長頭暈。它們是急性期的藥，過了急性期就只是救援用藥。\n\nKeypoint：鎮靜劑用幾天不是幾週，而且絕不定時規律服用；早期活動；一週時判斷她是否正在代償，如果沒有就轉介復健。\n\nReference: Strupp M, Zingler VC, Arbusow V, et al. Methylprednisolone, valacyclovir, or the combination for vestibular neuritis. N Engl J Med. 2004;351(4):354-361. Hall CD, Herdman SJ, Whitney SL, et al. Vestibular rehabilitation for peripheral vestibular hypofunction: an updated clinical practice guideline. J Neurol Phys Ther. 2022;46(2):118-177. Strupp M, Bisdorff A, Furman J, et al. Acute unilateral vestibulopathy/vestibular neuritis: diagnostic criteria. J Vestib Res. 2022;32(5):389-406."
     }
   ]
 }

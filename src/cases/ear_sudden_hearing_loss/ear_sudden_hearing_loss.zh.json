@@ -1,146 +1,171 @@
 {
-  "title": "世界突然安靜 the silent world",
-  "subtitle": "突發性感音神經性聽損評估與救援治療",
-  "description": "突發性感音神經性聽損的定義、預後因子、影像排除、類固醇、高壓氧與耳內注射治療。",
-  "estimatedTime": "20-30 分鐘",
+  "title": "一早醒來，一耳聽不見",
+  "subtitle": "一位醒來左耳就聽不見的女性，從音叉到助聽器",
+  "description": "在床邊區分感音神經性與傳導性、該開什麼檢查與不該開什麼、在治療窗口內治療、排除腫瘤、恢復停滯時的救援治療，以及恢復停止後該怎麼做。",
+  "estimatedTime": "15-20 分鐘",
   "difficulty": "中階",
   "tags": [
     "耳科",
-    "SSNHL",
-    "Steroid",
-    "HBOT"
+    "聽損",
+    "類固醇",
+    "AAO-HNSF 指引"
   ],
   "steps": [
     {
-      "title": "Step 1/6: 臨床表現與聽力學定義 (Clinical Presentation & Definition)",
-      "scenario": "一位 70 歲女性被送到急診，主訴從昨天開始「右耳突然聽不到」，伴隨左側耳鳴。急診已經做過 Brain CT 排除出血，純音聽力檢查 (PTA) 顯示右耳高達 95dB 的嚴重聽損，左耳為 60dB；鼓室圖 (Tympanogram) 為雙側 Type A (正常中耳壓力)。",
-      "media": "載入圖片：純音聽力圖 PTA，顯示右耳極重度感音神經性聽損",
-      "question": "根據目前臨床上對「突發性感音神經性聽損 (SSNHL)」的標準定義，下列何者正確？",
+      "title": "Step 1/6：音叉",
+      "scenario": "48 歲女性，早上 9 點到門診。\n\n    主訴              兩小時前醒來，左耳聽不到\n    耳悶脹            有，左側\n    耳鳴              有，左側，高頻的嘶嘶聲\n    眩暈              沒有\n    疼痛              沒有\n    耳漏              沒有\n    近期疾病          沒有\n    用藥              沒有\n    過去病史          沒有耳疾，以前沒發生過\n\n耳鏡：兩側耳膜正常，沒有耳垢，沒有積液。\n\n    Weber 512 Hz    偏向右側\n    Rinne           兩耳都是氣導大於骨導",
+      "media": "載入圖片：這位病人左耳的耳內視鏡影像，去識別化，不加標註：耳膜正常。說明文字：「左耳。」",
+      "question": "音叉告訴你什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 在 1 週內，單一頻率發生超過 20 分貝的聽力下降。"
+          "text": "(A) 問題在右耳，因為 Weber 偏向那一側"
         },
         {
           "id": "B",
-          "text": "(B) 在 24 小時內，伴隨耳膜破裂與大於 40 分貝的傳導性聽損。"
+          "text": "(B) 左耳傳導性聽損，可能是你漏看的耳垢或積液"
         },
         {
           "id": "C",
-          "text": "(C) 在 72 小時內，在連續 3 個聽力檢測頻率範圍中，發生大於 30 分貝的聽力下降。",
+          "text": "(C) 左耳感音神經性聽損：Weber 偏向較好的耳朵，而兩側 Rinne 都正常",
           "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) 沒有可靠的資訊；音叉無法定位聽損"
         }
       ],
-      "feedback": "正確答案：C\n\n臨床定義： SSNHL 是一個耳科急症，其標準定義為：Rapid onset（發作時間在 72 小時以內），且在聽力檢查中發現「連續三個頻率有超過 30 dB 的聽力下降」。這類疾病高達 99% 為單側發作，且大多找不出明確原因，歸類為 Idiopathic (ISSNHL)。"
+      "feedback": "正確答案：C\n\n耳膜正常時，第一個要做的判斷就是指引放在第一條的那一個：這是感音神經性還是傳導性？音叉一分鐘就能回答。\n\nWeber。音叉放在額頭上，聲音會在耳蝸較好的那一耳聽到，或在有傳導性阻塞的那一耳聽到，因為阻塞會把室內的噪音擋在外面。\n• 偏向較好的耳朵：對側是感音神經性聽損。\n• 偏向較差的耳朵：該側是傳導性聽損。\n她的偏向右側，而右耳沒有問題。所以是左側的耳蝸或神經失去了功能。\n\nRinne。氣導大於骨導是正常的，而在感音神經性聽損時仍然正常，因為兩條路徑一起下降。只有在有傳導性阻塞時才會反轉，變成骨導大於氣導。\n她的兩側都正常。沒有傳導性阻塞。\n\n兩側耳膜正常、Weber 偏離聽不到的那一耳、Rinne 正常：左側突發性感音神經性聽損 (sudden sensorineural hearing loss)。這是耳科急症，因為治療窗口很短，而且拖得越久預後越差。\n\n其他選項為什麼不對：\n(A) Weber 最常見的錯誤。感音神經性聽損時，聲音會偏向較好的耳朵。她在右耳聽到音叉，但問題不在那裡。\n(B) 傳導性聽損會讓 Weber 偏向左側，並讓左側 Rinne 反轉。兩者都沒有發生，而且耳膜正常。\n(D) 音叉正是回答感音神經性還是傳導性這個問題的工具，而指引的第一條就是要在病人就診時做出這個區分。\n\nKeypoint：耳膜正常、Weber 偏向好耳、Rinne 正常：突發性感音神經性聽損，而時間正在倒數。\n\nReference: Chandrasekhar SS, Tsai Do BS, Schwartz SR, et al. Clinical practice guideline: sudden hearing loss (update). Otolaryngol Head Neck Surg. 2019;161(1_suppl):S1-S45. doi:10.1177/0194599819859885. Key Action Statement 1."
     },
     {
-      "title": "Step 2/6: 預後因子的評估 (Prognostic Factors)",
-      "scenario": "在為這位 70 歲的婆婆解釋病情時，家屬非常焦慮地問：「醫師，媽媽的聽力有機會完全恢復嗎？」",
-      "media": "載入圖片：預後因子雷達圖 (年齡、暈眩、聽損程度、治療時機)",
-      "question": "根據文獻，評估 ISSNHL 的恢復機率時，這位患者具備了哪些強烈的「預後不良 (Poorer prognosis) 危險因子」？",
+      "title": "Step 2/6：今天要開什麼檢查",
+      "scenario": "左側感音神經性聽損，突然發生，就在今天早上。沒有眩暈，沒有臉部無力，沒有其他神經學症狀。右耳正常。第一次發作。\n\n她問需要做哪些檢查。",
+      "media": "",
+      "question": "今天你要開什麼檢查？哪些不開？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 只有女性性別與左耳原本就有聽損。"
-        },
-        {
-          "id": "B",
-          "text": "(B) 高於 60 歲 (年齡大)、伴隨暈眩 (Vertigo/dizziness)、以及極度嚴重的初始聽力喪失 (95 dB)。",
+          "text": "(A) 今天做純音聽力圖；不做 CT，不做常規抽血檢查",
           "correct": true
         },
         {
+          "id": "B",
+          "text": "(B) 先做頭部 CT 排除中風，再做聽力圖"
+        },
+        {
           "id": "C",
-          "text": "(C) 只有發作時間極短 (1天內就醫)。"
+          "text": "(C) 在任何治療之前，先做完整的抽血檢查，包括血脂、血糖、梅毒與自體免疫血清學"
+        },
+        {
+          "id": "D",
+          "text": "(D) 今天什麼都不做；兩週後回診，因為大部分突發性聽損會自己恢復"
         }
       ],
-      "feedback": "正確答案：B\n\n主治醫師的 Tip： 有四個關鍵因素會影響 ISSNHL 的恢復。越早治療預後越好；但「年齡大於 60 歲」、「伴隨暈眩 (Vertigo)」（約 30-40% 病患會有，通常預後較差），以及「嚴重的聽損 (95dB)」或 downward-sloping 聽力圖，都暗示著極差的預後。這位婆婆不幸具備了上述2項不良因子。"
+      "feedback": "正確答案：A\n\n聽力圖是做出診斷、也開始計時的檢查。突發性感音神經性聽損的定義是：在 72 小時內發生、連續三個頻率至少 30 dB 的聽力下降；指引要求在發作後 14 天內做聽力圖。今天就做。它能確認是感音神經性聽損、測量聽損的大小、建立之後每一張聽力圖都要拿來比較的基準，也會影響關於預後的說明。\n\n指引說不要做的兩件事。\n• 不做頭部 CT。它無法以有用的細節呈現耳蝸、神經或腦幹，不會改變處置，還會延誤治療。蝸後病變 (retrocochlear disease) 要用 MRI 來找，在 Step 4。\n• 不做常規實驗室檢查。對其他方面都健康、第一次單側聽損的病人，抽血不會改變你的處置。針對性的檢查是給病史指向某個方向的病人：雙側或反覆發作的聽損、全身性症狀，或已知的疾病。\n\n離開診間之前，確認會改變處置路徑的修飾因子：聽損是雙側的嗎？是反覆發作的嗎？有沒有眩暈或任何局部神經學徵象？她都沒有。單純的第一次單側聽損就走標準路徑。\n\n其他選項為什麼不對：\n(B) 沒有眩暈、沒有神經學徵象的單純突發性聽損，不是中風的表現，而且 CT 本來就是檢查後顱窩的錯誤工具。指引建議初步評估時不要做 CT。\n(C) 對第一次、單側、沒有併發症的聽損，常規的血清學和代謝篩檢不會改變處置。指引建議不要常規開立。\n(D) 有些確實會自己恢復，但在兩週內接受治療的病人恢復得比較好，而你無法事先知道她會是哪一種。等兩週，就把治療窗口用掉了。\n\nKeypoint：今天做聽力圖；不做 CT，不做常規抽血；問另一耳、以前的發作和神經學症狀。\n\nReference: Chandrasekhar SS, Tsai Do BS, Schwartz SR, et al. Otolaryngol Head Neck Surg. 2019;161(1_suppl):S1-S45. Key Action Statements 2, 3, 4 and 5."
     },
     {
-      "title": "Step 3/6: 影像學鑑別診斷 (Imaging & Differential Diagnosis)",
-      "scenario": "雖然急診已經做過 Brain CT 排除出血，但身為耳鼻喉科醫師，你必須排除導致單側感音神經性聽損的「非特發性、且具危險性的潛在病因 (retrocochlear lesions)」。",
-      "media": "載入圖片：小腦骨髓角 (CPA) 腫瘤的影像學特徵",
-      "question": "為了排除聽神經瘤 (Acoustic neuroma) 或多發性硬化症，下列哪一項是必備的影像學檢查黃金標準？",
+      "title": "Step 3/6：治療窗口",
+      "scenario": "聽力圖，當天：\n\n    左耳              感音神經性聽損，500 到 4000 Hz 平均 55 dB，所有頻率都受影響\n    右耳              正常\n    左耳語音辨識      64%\n\n確認為突發性感音神經性聽損。今天早上發作。她其他方面都健康，沒有糖尿病，沒有懷孕。",
+      "media": "載入圖片：這位病人的純音聽力圖，去識別化，不加標註。說明文字：「聽力圖，第 1 天。」",
+      "question": "你要提供什麼治療？最晚什麼時候開始？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 顳骨高解析度無顯影劑電腦斷層 (Non-contrast HRCT of Temporal bone)"
+          "text": "(A) 抗病毒藥和血管擴張劑，因為原因可能是病毒或血管"
         },
         {
           "id": "B",
-          "text": "(B) 頸部血管超音波 (Carotid echo)"
+          "text": "(B) 不治療；觀察兩週，沒有恢復才治療"
         },
         {
           "id": "C",
-          "text": "(C) 施打顯影劑的核磁共振造影 (MRI with gadolinium enhancement)",
+          "text": "(C) 靜脈注射抗生素並住院"
+        },
+        {
+          "id": "D",
+          "text": "(D) 現在就開始一個療程的全身性類固醇，在發作兩週內，並先說明它能做到和做不到的事",
           "correct": true
         }
       ],
-      "feedback": "正確答案：C\n\n診斷地雷： 大約 10-20% 的聽神經瘤 (Acoustic neuroma / vestibular schwannoma) 病人會以「突發性聽損」來表現。雖然整體比例不高，但為了排除這類致命腫瘤或中樞神經病變，打顯影劑的 MRI 是絕對必要的檢查。若病患有金屬植入物或幽閉恐懼症等 MRI 禁忌症，才退而求其次使用顯影劑 CT。"
+      "feedback": "正確答案：D\n\n類固醇是唯一有證據支持的初始治療，而這個證據與時間有關：在發作兩週內開始治療才看得到好處，過了之後好處就逐漸消失。指引把它列為選項 (option)，而非必須：證據是真的但不強，有些病人不治療也會恢復，而決定權屬於已經聽過這些數字的病人。所以提供治療和這段對話，都在今天進行。\n\n兩種途徑，作為第一線治療的證據支持相當：\n• 口服 prednisolone 或 prednisone，每天約每公斤 1 mg，最多 60 mg，使用 7 到 14 天，然後逐漸減量。更高的劑量沒有額外好處：一個 325 位病人的隨機試驗發現，每天 250 mg 比起 60 mg 沒有好處，副作用卻更多。\n• 鼓室內 (intratympanic) dexamethasone，經耳膜注射。一個隨機比較和一篇 Cochrane 回顧發現，作為初始治療時，兩種途徑的聽力結果沒有差異。它避免了全身暴露，因此對糖尿病病人或任何不應使用全身性類固醇的人是自然的選擇；但它不是第二線的替代品，而是另一種選擇。\n• 在有設備的地方，高壓氧 (hyperbaric oxygen) 合併類固醇是頭兩週內的另一個選項。\n\n要說什麼：大約三分之一到三分之二的病人不治療也會恢復部分聽力，類固醇會提高機率但不保證恢復，而不治療的另一面，就是接受自然發生的恢復程度。指引要求這段對話在開始治療之前進行，因為決定權在她。\n\n其他選項為什麼不對：\n(A) 抗病毒藥、血管擴張劑、血管活性藥物、血栓溶解劑和抗氧化劑都試過，沒有一種顯示有好處。指引建議不要常規開立。\n(B) 等到第 14 天才決定，就是等到窗口已經關閉。如果她在說明後拒絕類固醇，觀察是正當的選擇，但不是用來決定要不要用類固醇的方法。\n(C) 沒有感染。耳膜正常，沒有疼痛，沒有發燒，沒有耳漏。\n\nKeypoint：在兩週內提供類固醇，口服或鼓室內，並先讓病人聽過它能做到和做不到的事；超大劑量沒有額外好處，其他藥物都沒有證據。\n\nReference: Chandrasekhar SS, Tsai Do BS, Schwartz SR, et al. Otolaryngol Head Neck Surg. 2019;161(1_suppl):S1-S45. Key Action Statements 7, 8, 9 and 11. Rauch SD, Halpin CF, Antonelli PJ, et al. Oral vs intratympanic corticosteroid therapy for idiopathic sudden sensorineural hearing loss: a randomized trial. JAMA. 2011;305(20):2071-2079. Plontke SK, Meisner C, Agrawal S, et al. Intratympanic corticosteroids for sudden sensorineural hearing loss. Cochrane Database Syst Rev. 2022;7:CD008080. Plontke SK, Girndt M, Meisner C, et al. High-dose glucocorticoids for the treatment of sudden hearing loss (HODOKORT). NEJM Evid. 2024;3(1). Verify citation."
     },
     {
-      "title": "Step 4/6: 第一線藥物治療與監測 (Primary Medical Therapy)",
-      "scenario": "患者辦理住院。你決定給予她連續一週的靜脈注射/口服類固醇治療。",
-      "question": "目前對 ISSNHL 最廣泛接受的類固醇起始建議劑量為何？且在使用於這位 70 歲有高血壓 (158/77 mmHg) 的婆婆身上時，應特別監控什麼？",
+      "title": "Step 4/6：腫瘤的問題",
+      "scenario": "她當天就開始口服 prednisolone。\n\n一週回診時，她的聽力好了一點。她問還有沒有其他需要做的事。",
+      "media": "",
+      "question": "她需要影像檢查嗎？哪一種？",
       "options": [
         {
           "id": "A",
-          "text": "(A) Prednisolone 5 mg/kg/day，監控氣喘發作。"
+          "text": "(A) 不需要影像；聽損正在改善，所以不是腫瘤"
         },
         {
           "id": "B",
-          "text": "(B) Prednisolone 1 mg/kg/day (最高劑量通常為 60 mg/day)，使用 10-14 天；需嚴格監控血糖與血壓波動。",
+          "text": "(B) 內耳道與腦部的 gadolinium 顯影劑 MRI，找前庭神經鞘瘤和其他蝸後病變",
           "correct": true
         },
         {
           "id": "C",
-          "text": "(C) Dexamethasone 60 mg/day，使用 1 個月；需監控聽神經萎縮。"
+          "text": "(C) 顳骨 CT"
+        },
+        {
+          "id": "D",
+          "text": "(D) 只有聽損復發時才做影像"
         }
       ],
-      "feedback": "正確答案：B\n\n治療共識： 目前研究效果最好的全身性類固醇劑量為口服 Prednisolone 1 mg/kg/day (Max 60mg/day)，使用 10-14 天。由於高劑量類固醇會引起高血壓、高血糖 (即使原本無糖尿病)、失眠與胃潰瘍，在給予這類高齡患者時，強烈建議住院並密切監控血壓與血糖。"
+      "feedback": "正確答案：B\n\n大多數突發性感音神經性聽損是原發性的 (idiopathic)。少數是神經上某個東西的第一個徵象：前庭神經鞘瘤 (vestibular schwannoma)、腦膜瘤、去髓鞘斑塊、前下小腦動脈 (anterior inferior cerebellar artery) 供應區的小中風。比例很小，但不是零，而腫瘤如果找到是可以治療的。指引建議對每一位突發性感音神經性聽損的病人評估蝸後病變，而做這件事的檢查是內耳道與腦部的 gadolinium 顯影劑 MRI。不能做 MRI 的病人，則以聽性腦幹反應 (auditory brainstem response) 作為替代。\n\n關於時機和改善的兩件事。\n• MRI 不是急診檢查，也不會延誤治療；它在第一次就診時開立，在接下來幾週內完成。\n• 恢復不能排除腫瘤。有神經鞘瘤的病人，不論有沒有用類固醇，聽力都可能改善。不管聽力怎麼變化，影像都要做。\n\n其他選項為什麼不對：\n(A) 改善讓人對聽力放心，但不能讓人對神經放心。神經鞘瘤以突發性聽損、之後部分恢復來表現的情況夠常見，所以不能用改善來跳過掃描。\n(C) CT 看的是骨頭。神經鞘瘤位於內耳道和小腦橋腦角 (cerebellopontine angle)，是軟組織；小的神經鞘瘤 CT 會完全漏掉。指引建議不要用 CT 來回答這個問題。\n(D) 復發會提高懷疑，但建議是在第一次發作後就做影像，因為大多數合併突發性聽損的神經鞘瘤，就是以第一次發作來表現的。\n\nKeypoint：每一個突發性感音神經性聽損都要做內耳道顯影劑 MRI，不論聽力是否恢復。\n\nReference: Chandrasekhar SS, Tsai Do BS, Schwartz SR, et al. Otolaryngol Head Neck Surg. 2019;161(1_suppl):S1-S45. Key Action Statement 6."
     },
     {
-      "title": "Step 5/6: 輔助與救援治療 - 高壓氧 (Adjuvant Therapy: HBOT)",
-      "scenario": "由於患者的聽損非常嚴重，你同步為她安排了 5 次的高壓氧治療 (Hyperbaric oxygen therapy *5 sessions)。",
-      "media": "載入圖片：高壓氧艙 (Hyperbaric chamber) 治療情境",
-      "question": "高壓氧 (HBOT) 被認為能增加內耳組織氧氣，對抗 cochlear ischemia。但在安排患者進入高壓氧艙之前，你必須先警告她哪一個「最常見的副作用」？",
+      "title": "Step 5/6：恢復停滯時",
+      "scenario": "發作後四週。她已經完成口服類固醇療程。MRI 正常。\n\n    左耳聽力圖        平均 40 dB，從 55 改善\n    左耳語音辨識      76%，從 64% 改善\n\n她說比較好了，但還是不對勁，問還有沒有其他能做的。",
+      "media": "載入圖片：這位病人四週時的純音聽力圖，去識別化，不加標註，與第 1 天的聽力圖並列。說明文字：「第 1 天與第 4 週。」",
+      "question": "你現在要提供什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 永久性視網膜剝離"
+          "text": "(A) 第二個療程的口服類固醇，劑量更高"
         },
         {
           "id": "B",
-          "text": "(B) 中耳壓力無法平衡 (Difficulty equalizing pressure) 導致的耳悶痛或耳咽管功能障礙",
-          "correct": true
+          "text": "(B) 不再做什麼；部分恢復就是最終結果"
         },
         {
           "id": "C",
-          "text": "(C) 氣胸與肺部不可逆纖維化"
+          "text": "(C) 鼓室內類固醇作為救援治療，因為恢復不完全，而且她還在發作後六週內",
+          "correct": true
+        },
+        {
+          "id": "D",
+          "text": "(D) 抗病毒藥，因為類固醇沒有把事情做完"
         }
       ],
-      "feedback": "正確答案：B\n\n臨床衛教： 高壓氧治療十分耗時且昂貴，儘管嚴重併發症不常見，但高達 17%~45% 的病患會經歷「中耳壓力不平衡」或「耳咽管功能障礙 (Eustachian tube dysfunction)」，另外「幽閉恐懼症 (Claustrophobia)」也是常見導致治療中斷的原因。"
+      "feedback": "正確答案：C\n\n初始治療後恢復不完全，是指引從選項升級為建議 (recommendation) 的唯一情況：在發作後兩到六週的窗口內，提供鼓室內類固醇作為救援治療 (salvage)。dexamethasone 經耳膜注射到中耳，經由圓窗擴散進入耳蝸，在內耳達到全身給藥達不到的濃度，而且沒有全身性副作用。在門診就能做，通常是間隔幾天到一週、少數幾次的一系列注射。\n\n在有高壓氧艙的地方，高壓氧合併類固醇是第一個月內的另一個救援選項。較新的資料指向同一個方向，而且更明確：一個 2025 年的多中心世代研究發現，鼓室內救援治療與比觀察更好的恢復獨立相關；一篇 2025 年關於救援策略的統合分析發現，鼓室內類固醇和高壓氧，尤其是兩者合併，是最有效的選項，而且越早救援效果越好。窗口很重要；不要等到第六週才開始。\n\n怎樣算不完全：與另一耳相差 10 dB 以上，或語音辨識沒有恢復正常，或病人仍然察覺得到聽損。她三項都符合。\n\n其他選項為什麼不對：\n(A) 第二個全身性療程會再帶來第一次的副作用，卻沒有額外好處的證據，而且全身途徑正是已經試過的。救援治療的證據是針對鼓室內途徑。\n(B) 四週還在救援窗口內。在窗口關閉前就說結果是最終的，等於放棄一個有建議支持的治療。\n(D) 抗病毒藥在任何階段都沒有證據。指引建議不要使用。\n\nKeypoint：兩到六週時恢復不完全，就是鼓室內類固醇救援治療；不要重複口服療程，也不要太早宣告結束。\n\nReference: Chandrasekhar SS, Tsai Do BS, Schwartz SR, et al. Otolaryngol Head Neck Surg. 2019;161(1_suppl):S1-S45. Key Action Statements 9b and 10. Kitoh R, Takumi Y. Clinical impact of adherence to a standardized treatment algorithm for idiopathic sudden sensorineural hearing loss: a multicenter cohort study. Front Neurol. 2025. Complete citation. Meliante PG, D'Avino L, Barba G, et al. Salvage treatment strategies for refractory sudden sensorineural hearing loss: a comprehensive review and meta-analysis with practical recommendations. Front Neurol. 2025. Complete citation."
     },
     {
-      "title": "Step 6/6: 中耳內注射救援治療 (Salvage Therapy: IT Steroid)",
-      "scenario": "經過全身性類固醇與 5 次高壓氧治療後，患者只有「部分恢復 (poor response)」，右耳聽力依舊極差。此時，你向家屬提議進行「中耳腔內類固醇注射 (Intratympanic, IT steroid)」。",
-      "media": "載入圖片：顯微鏡下將細針穿透耳膜 (Transtympanic injection) 注入類固醇的示意圖",
-      "question": "關於使用 IT steroid 作為救援治療 (Salvage treatment)，其最大的優勢與最主要的併發症分別為何？",
+      "title": "Step 6/6：恢復停止時",
+      "scenario": "發作後六個月。第四到第六週之間做了三次鼓室內注射。MRI 是正常的。\n\n    左耳聽力圖        平均 35 dB，從第八週以來沒有變化\n    左耳語音辨識      80%\n    右耳              正常\n\n她說自己應付得來，但分辨不出聲音從哪裡來，在餐廳裡很吃力。",
+      "media": "",
+      "question": "你現在要做什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 優勢：可避免全身性類固醇的副作用 (如高血糖) 且讓內耳局部濃度更高；副作用：持續性的耳膜穿孔 (Persistent TM perforation)。",
+          "text": "(A) 記錄最終的聽力圖，說明進一步恢復的可能性不高，並轉介聽力復健：左耳戴助聽器，如果助聽器沒有幫助，就用 CROS 系統",
           "correct": true
         },
         {
           "id": "B",
-          "text": "(B) 優勢：只需注射一次即可保證聽力 100% 恢復；副作用：不可逆的顏面神經麻痺。"
+          "text": "(B) 再做一系列鼓室內注射"
         },
         {
           "id": "C",
-          "text": "(C) 優勢：健保完全給付且無痛；副作用：引發中耳膽脂瘤。"
+          "text": "(C) 重做 MRI，因為正常的掃描可能漏掉腫瘤"
+        },
+        {
+          "id": "D",
+          "text": "(D) 結束追蹤；單側 35 dB 的聽損不需要任何處理"
         }
       ],
-      "feedback": "正確答案：A\n\n術式解析： 當全身性類固醇無效 (refractory) 或是病人有嚴重糖尿病/高血壓不適合全身性給藥時，中耳腔內注射 (IT steroid) 是一個極佳的救援選項。它能直接提高內耳藥物濃度並避開全身性副作用。然而，它最主要的副作用是反覆注射導致的「持續性耳膜穿孔 (Persistent tympanic membrane perforation)」，以及暫時性的頭暈與疼痛。"
+      "feedback": "正確答案：A\n\n突發性感音神經性聽損的恢復發生在頭幾週，到三個月時基本上就完成了。她的聽力從第八週以來就沒有變動。指引要求在治療結束時以及發作後六個月內追蹤聽力圖，而這就是那一張：最終結果，記錄下來，與第一天比較，並照這樣向她說明。\n\n接著，對話的重點從恢復轉向復健；指引把它列為最後一條，因為它是最常被省略的一條。單側聽損並非小事。她失去了定位聲音、以及從背景噪音中分辨語音的能力，這正是她描述的情況。選項有：\n• 左耳戴傳統助聽器，如果殘存的聽力和辨識能力還可用就有效；她的可用。\n• CROS 或 BiCROS 系統，如果左耳無法用助聽器輔助，就把聽不到那一側的聲音傳到好的耳朵。\n• 骨導式聽覺裝置 (bone-conduction device)，或極重度聽損時的人工電子耳 (cochlear implant)；在 35 dB 的她兩者都不需要。\n• 嘈雜環境下的諮詢與溝通策略。\n\n其他選項為什麼不對：\n(B) 救援窗口幾個月前就關閉了，而她的聽力從第八週以來一直穩定。更多次注射會增加耳膜持續穿孔的風險，在這個階段卻沒有任何好處的證據。\n(C) 內耳道 gadolinium 顯影劑 MRI 是決定性的檢查，而它是正常的。沒有新的事件，就沒有理由重做。\n(D) 一側 35 dB、另一耳正常，造成的正是她描述的情況：無法定位聲音、在餐廳裡應付不來。這是影響她生活的聽損，也是助聽器能處理的聽損。\n\nKeypoint：六個月內做最終聽力圖；恢復停止後，工作就是復健，而單側聽損值得用助聽器輔助。\n\nReference: Chandrasekhar SS, Tsai Do BS, Schwartz SR, et al. Otolaryngol Head Neck Surg. 2019;161(1_suppl):S1-S45. Key Action Statements 12 and 13."
     }
   ]
 }

@@ -14,7 +14,7 @@ function stripAnswerPrefix(text, correctId) {
   const patterns = [
     new RegExp(`^\\s*正確答案(?:為|是)?\\s*[:：]?\\s*${answerPattern}\\s*[。\\.、：:]?\\s*`, 'i'),
     new RegExp(`^\\s*正解\\s*[:：]?\\s*${answerPattern}\\s*[。\\.、：:]?\\s*`, 'i'),
-    new RegExp(`^\\s*Correct\\s+answer\\s*[:：]?\\s*${answerPattern}\\s*[。\\.、：:]?\\s*`, 'i'),
+    new RegExp(`^\\s*(?:The\\s+)?Correct\\s+answer(?:\\s+is)?\\s*[:：]?\\s*${answerPattern}\\s*[。\\.、：:]?\\s*`, 'i'),
   ];
 
   return patterns.reduce((cleanText, pattern) => cleanText.replace(pattern, ''), text);

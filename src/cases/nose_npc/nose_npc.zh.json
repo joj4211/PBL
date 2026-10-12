@@ -1,4 +1,5 @@
 {
+  "id": "nose_npc",
   "title": "看不見的威脅：鼻咽癌",
   "subtitle": "一顆不痛的頸部腫塊，和一個安靜的鼻咽",
   "description": "一顆頸部腫塊加一隻塞住的耳朵、流行區的病理、EBV DNA、第 9 版的 MRI 分期、新的第 II 期怎麼選治療、以及推動降階治療的晚期併發症。",
@@ -91,33 +92,33 @@
     },
     {
       "title": "Step 4/7：讀 MRI",
-      "scenario": "顯影劑鼻咽與頸部 MRI 是局部分期的標準，因為 T 分期是由軟組織和骨髓決定的：咽旁脂肪面、翼肌、斜坡和岩尖的骨髓訊號、顱底的孔道。\n\n他的軸向和冠狀影像如圖。顯影的腫瘤填滿右側鼻咽。兩側咽旁脂肪面都保留。翼肌正常。斜坡和岩尖骨髓訊號正常。沒有神經周圍或顱內侵犯。",
-      "media": "載入圖片：這位病人的顯影劑、脂肪抑制 T1 鼻咽 MRI，軸向和冠狀，去識別化，不加標註。說明文字：「MRI，T1 post-contrast with fat suppression，軸向與冠狀。」",
-      "question": "這張 MRI 上哪一個發現決定他是 T1 而不是 T2？",
+      "scenario": "顯影劑鼻咽與頸部 MRI、PET/CT、胸部 CT 和肝臟超音波都做完了。報告摘要：\n\n    原發腫瘤    右側鼻咽，顯影腫塊 2.1 x 1.6 公分\n                兩側咽旁脂肪面保留\n                內側、外側翼肌正常\n                斜坡與岩尖骨髓訊號正常\n                翼板、蝶竇底完整\n                沒有神經周圍、眼眶或顱內侵犯\n    淋巴結      右側 level II   2.4 公分，圓形，中央壞死\n                左側 level II   1.3 公分，圓形，脂肪門消失\n                兩側都在環狀軟骨下緣以上\n                沒有淋巴結外侵犯（ENE）\n                沒有咽後、level IV 或 Vb 淋巴結\n    全身評估    PET/CT：鼻咽與頸部以外沒有 FDG 攝取病灶\n                胸部 CT、肝臟超音波、骨骼：沒有遠端轉移",
+      "media": "載入影像：這位病人的鼻咽 MRI，T1 加權、顯影後、脂肪抑制，軸向與冠狀，去識別化、無標註。圖說：「MRI，T1 顯影後脂肪抑制，軸向與冠狀。」",
+      "question": "依 AJCC 第 9 版，這位病人的 TNM 分期是什麼？",
       "options": [
         {
           "id": "A",
-          "text": "(A) 兩側咽旁脂肪面都保留",
+          "text": "(A) cT1 N2 M0",
           "correct": true
         },
         {
           "id": "B",
-          "text": "(B) 腫瘤在顯影劑下顯影"
+          "text": "(B) cT2 N2 M0"
         },
         {
           "id": "C",
-          "text": "(C) 斜坡骨髓訊號正常"
+          "text": "(C) cT1 N1 M0"
         },
         {
           "id": "D",
-          "text": "(D) 腫瘤只在右側"
+          "text": "(D) cT1 N3 M0"
         }
       ],
-      "feedback": "正確答案：A\n\nT 分期只問一個問題：腫瘤走出鼻咽多遠了？T1 是侷限在鼻咽，或只延伸到口咽或鼻腔、沒有咽旁侵犯。T2 是侵犯咽旁間隙、內側或外側翼肌、或椎前肌。T3 是骨頭：顱底、翼板、頸椎、鼻竇，而且第 9 版要求明確的侵犯證據。T4 是顱內、顱神經、下咽、眼眶、腮腺、或超過外側翼肌外緣。\n\nT1 和 T2 的界線是咽旁脂肪。在脂肪抑制、打完顯影劑的 T1 影像上，正常脂肪是黑的、腫瘤是亮的，所以穿過 pharyngobasilar fascia 進到咽旁間隙的腫瘤，會顯示為亮的組織取代鼻咽外側原本黑的脂肪。他的影像上兩側黑的脂肪都完整。這一個發現就是把他留在 T1 的東西。報告上其他所有的都在確認他不超過 T2：翼肌正常、骨髓正常、沒有神經周圍侵犯。\n\n這就是 MRI 的用處。CT 只看得到骨皮質，漏掉脂肪面、神經周圍侵犯和早期骨髓變化。骨掃描敏感但不特異，第 9 版沒有 MRI 或 PET 佐證不接受它當 T3 的證據。PET/CT 分期頸部和全身，不畫原發腫瘤的邊界。MRI 定義原發腫瘤，和治療計畫 CT 融合後畫出照射範圍。\n\n其他選項為什麼不對：\n(B) 所有鼻咽癌都會顯影。顯影告訴你腫瘤在哪裡，不是它走了多遠。\n(C) 斜坡骨髓正常排除 T3，對 T2 什麼都沒說；T2 是離鼻咽更近一步的軟組織問題。\n(D) 側別會記錄，對放射治療的照射範圍也重要，但它不是 T 的標準。腫瘤在一側、兩側、或跨過中線，只要沒離開鼻咽就是 T1。\n\nKeypoint：咽旁脂肪面決定 T1 還是 T2；骨髓訊號決定 T3；脂肪抑制的顯影劑 T1 是同時看得到兩者的序列。\n\nReference: Pan JJ, Mai HQ, Ng WT, et al. Ninth version of the AJCC and UICC nasopharyngeal cancer TNM staging classification. JAMA Oncol. 2024;10(12):1627-1635. doi:10.1001/jamaoncol.2024.4354. National Comprehensive Cancer Network. NCCN Clinical Practice Guidelines in Oncology: Head and Neck Cancers. Updated May 12, 2026. https://www.nccn.org/professionals/physician_gls/pdf/head-and-neck.pdf"
+      "feedback": "正確答案：A\n\n一個字母一個字母來。\n\nT。T 分期問的是腫瘤離開鼻咽走了多遠，不是腫瘤多大。T1 是侷限在鼻咽，或只延伸到口咽、鼻腔而沒有咽旁侵犯。T2 是侵犯咽旁空間、內側或外側翼肌、椎前肌。T3 是骨頭，第 9 版要求顱底、翼板、頸椎或副鼻竇有明確的侵犯。T4 是顱內、腦神經、下咽、眼眶、腮腺，或超過外側翼肌以外。T1 和 T2 的界線就是咽旁脂肪。在脂肪抑制的顯影後 T1 影像上，正常脂肪是暗的、腫瘤是亮的，所以穿過咽顱底筋膜的腫瘤會以顯影組織取代鼻咽外側那條暗的脂肪。他兩側脂肪面都完整，翼肌和骨髓正常：T1。2.1 公分是為了放療靶區而記錄的，不是 T 的判準。\n\nN。N 分期看的是側別、大小、位置和淋巴結外侵犯。N1 是單側頸部淋巴結，或單側／雙側咽後淋巴結，6 公分以下、在環狀軟骨下緣以上。N2 是雙側頸部淋巴結，6 公分以下、在環狀軟骨以上。N3 是任何淋巴結超過 6 公分，或延伸到環狀軟骨下緣以下，或第 9 版新增的影像上明顯淋巴結外侵犯。他兩側頸部各有一顆，都小於 6 公分、都在環狀軟骨以上、沒有 ENE：N2。把他從 N1 推到 N2 的是雙側，不是那顆 2.4 公分。\n\nM。PET/CT、胸部 CT、肝臟超音波和骨骼都沒有遠端病灶：M0。\n\ncT1 N2 M0。這是第幾期，要看你翻開哪一版，那是下一步。\n\n其他選項為什麼不對：\n(B) T2 需要腫瘤進到咽旁空間、翼肌或椎前肌。他兩側咽旁脂肪面都保留、翼肌正常。單靠大小永遠不會變成 T2。\n(C) N1 是單側頸部或咽後淋巴結。他頸部兩側各有一顆。雙側頸部淋巴結就是 N2，即使其中一側很小。\n(D) N3 需要淋巴結超過 6 公分、延伸到環狀軟骨下緣以下，或明顯的淋巴結外侵犯。他最大的淋巴結 2.4 公分、兩顆都在環狀軟骨以上、沒有 ENE。中央壞死是轉移的徵象，不是淋巴結外侵犯。\n\nKeypoint：T 看範圍不看大小，咽旁脂肪面決定 T1 還是 T2；N 看側別、大小、位置和 ENE，單是雙側就足以成為 N2；先定字母，再定分期。\n\nReference: Pan JJ, Mai HQ, Ng WT, et al. Ninth version of the AJCC and UICC nasopharyngeal cancer TNM staging classification. JAMA Oncol. 2024;10(12):1627-1635. doi:10.1001/jamaoncol.2024.4354. National Comprehensive Cancer Network. NCCN Clinical Practice Guidelines in Oncology: Head and Neck Cancers. Updated May 12, 2026. https://www.nccn.org/professionals/physician_gls/pdf/head-and-neck.pdf"
     },
     {
       "title": "Step 5/7：分期",
-      "scenario": "最終 TNM：cT1 N2 M0。原發腫瘤侷限在鼻咽，兩側 level II 淋巴結小於 6 公分、在環狀軟骨以上，沒有淋巴結外侵犯，沒有遠端轉移。\n\n一位受第 8 版訓練的同事說他是第 III 期。",
+      "scenario": "你在病歷上寫下 cT1 N2 M0。\n\n一位受第 8 版訓練的同事看到，說他是第 III 期。",
       "media": "載入圖片：你自己重繪的 AJCC 第 9 版鼻咽癌分期表，不要複製原圖：IA T1-2 N0；IB T1-2 N1；II T3 或 N2；III T4 或 N3；IVA M1 三個病灶以內；IVB M1 超過三個。不要標示任何一格。說明文字：「AJCC 第 9 版分期。」",
       "question": "用圖中第 9 版的分組，他是第幾期？為什麼跟同事說的不一樣？",
       "options": [

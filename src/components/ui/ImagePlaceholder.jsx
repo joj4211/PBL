@@ -36,6 +36,7 @@ export default function ImagePlaceholder({
   hotspotTask = false,
   hotspotTargets = [],
   userHotspots = [],
+  hotspotAnswered = false,
   onHotspotsLoaded,
   onUserHotspotsChange,
 }) {
@@ -269,7 +270,7 @@ export default function ImagePlaceholder({
   };
 
   const handleHotspotImageClick = (event) => {
-    if (!hotspotTask || !showImage) return;
+    if (!canClickHotspots) return;
 
     const point = getPointFromEvent(event);
 
@@ -297,9 +298,11 @@ export default function ImagePlaceholder({
     saveHotspots([]);
   };
 
-  const activeTargets = isAdmin ? adminHotspots : [];
+  // Learners see the target areas only after their answer is locked in.
+  const activeTargets = isAdmin || hotspotAnswered ? adminHotspots : [];
   const activeUserHotspots = isAdmin ? [] : userHotspots;
   const canInteractWithHotspots = hotspotTask && showImage;
+  const canClickHotspots = canInteractWithHotspots && (isAdmin || !hotspotAnswered);
 
   const handleDrop = (event) => {
     event.preventDefault();
@@ -338,7 +341,7 @@ export default function ImagePlaceholder({
             <button
               type="button"
               onClick={canInteractWithHotspots ? handleHotspotImageClick : () => setPreviewOpen(true)}
-              className={`relative block max-w-full ${canInteractWithHotspots ? 'cursor-crosshair' : 'cursor-zoom-in'}`}
+              className={`relative block max-w-full ${canClickHotspots ? 'cursor-crosshair' : canInteractWithHotspots ? 'cursor-default' : 'cursor-zoom-in'}`}
             >
               <img
                 src={resolvedSrc}
@@ -372,9 +375,11 @@ export default function ImagePlaceholder({
               ))}
             </button>
           </div>
-          {hotspotTask && (
+          {hotspotTask && (isAdmin || !hotspotAnswered) && (
             <div className="mt-2 text-center text-xs text-warm-500">
-              {isAdmin ? '點圖片標記 2 個正確答案範圍。' : '請在圖片上點選 2 個答案位置。'}
+              {isAdmin
+                ? '點圖片標記 2 個正確答案範圍。'
+                : lang === 'zh' ? '請在圖片上點選 2 個答案位置。' : 'Click the 2 answer locations on the image.'}
             </div>
           )}
           {isAdmin && hotspotTask && (
@@ -391,6 +396,11 @@ export default function ImagePlaceholder({
               {hotspotSaveState === 'saved' && <span className="text-sage-600">已儲存</span>}
               {hotspotError && <span className="text-red-500">{hotspotError}</span>}
             </div>
+          )}
+          {isAdmin && hotspotTask && adminHotspots.length < 2 && (
+            <p className="mt-2 text-center text-xs text-amber-600">
+              尚未標滿 2 個答案範圍，學員目前看到的是選項，不是點圖作答。
+            </p>
           )}
           <div className="text-center">{uploadControl}</div>
           {uploadFeedback}

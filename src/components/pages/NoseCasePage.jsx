@@ -99,6 +99,8 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
   // Learners fall back to the step's options until an admin has drawn both targets.
   const isNoseHotspotStep = isHotspotCandidateStep && (isAdmin || hotspotTargets.length === 2);
   const currentHotspotSelections = hotspotSelections[stepIndex] ?? [];
+  // Admins place targets rather than answer points, so only learners must click both before confirming.
+  const hotspotAnswerIncomplete = !isAdmin && currentHotspotSelections.length < 2;
   const isZh = lang === 'zh';
   const text = {
     back: isZh ? `返回${domainText.title}` : `Back to ${domainText.title}`,
@@ -111,6 +113,9 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
       : 'This field is reserved for future images, videos, or interactive media.',
     feedback: isZh ? '回饋' : 'Feedback',
     confirm: isZh ? '確認選擇' : 'Confirm',
+    hotspotProgress: (count) => isZh
+      ? `已點選 ${count} / 2。按「確認選擇」後會直接判定答案。`
+      : `${count} / 2 selected. Your answer is graded when you press Confirm.`,
     previous: isZh ? '上一步' : 'Previous',
     next: isZh ? '下一步' : 'Next',
     saving: isZh ? '儲存中...' : 'Saving...',
@@ -418,6 +423,7 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
                         hotspotTask: true,
                         hotspotTargets,
                         userHotspots: currentHotspotSelections,
+                        hotspotAnswered: Boolean(result),
                         onHotspotsLoaded: setHotspotTargets,
                         onUserHotspotsChange: (points) => {
                           setHotspotSelections((prev) => ({ ...prev, [stepIndex]: points }));
@@ -478,7 +484,7 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
 
                   {isNoseHotspotStep && !result && (
                     <p className="rounded-2xl border border-warm-200 bg-warm-50/70 px-4 py-3 text-xs text-warm-600 leading-relaxed">
-                      已點選 {currentHotspotSelections.length} / 2。按「下一步」後會直接判定答案。
+                      {text.hotspotProgress(currentHotspotSelections.length)}
                     </p>
                   )}
 
@@ -518,7 +524,7 @@ export default function NoseCasePage({ caseData, user, lang, isAdmin, onBack, on
                       <ChevronLeft className="inline w-4 h-4 mr-1" />
                       {text.previous}
                     </Button>
-                    <Button onClick={goNext} disabled={(!selectedAnswer && !isNoseHotspotStep) || saveState === 'saving'} className="w-full sm:w-auto">
+                    <Button onClick={goNext} disabled={(!selectedAnswer && (!isNoseHotspotStep || hotspotAnswerIncomplete)) || saveState === 'saving'} className="w-full sm:w-auto">
                       {saveState === 'saving' ? text.saving : isNoseHotspotStep && !selectedAnswer ? text.confirm : isLastStep ? text.finish : text.next}
                       <ChevronRight className="inline w-4 h-4 ml-1" />
                     </Button>

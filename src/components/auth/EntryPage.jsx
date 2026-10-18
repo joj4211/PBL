@@ -43,6 +43,10 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
 
   const isSignUp = mode === 'signUp';
   const roleOptions = ['主治醫師', '住院醫師', 'PGY', 'Clerk'];
+  const roleLabels = {
+    zh: {},
+    en: { 主治醫師: 'Attending physician', 住院醫師: 'Resident' },
+  }[lang];
   const statement = consent[lang];
   const text = {
     zh: {
@@ -166,7 +170,7 @@ export default function EntryPage({ onSignIn, onSignUp, loading }) {
                   <span className="text-xs font-semibold text-warm-600">{text.role}</span>
                   <select required value={medicalRole} onChange={(event) => setMedicalRole(event.target.value)} className="mt-1.5 w-full rounded-xl border-2 border-warm-200 bg-white/45 px-3 py-2.5 text-sm text-warm-800 outline-none">
                     <option value="">{text.rolePlaceholder}</option>
-                    {roleOptions.map((role) => <option key={role} value={role}>{role}</option>)}
+                    {roleOptions.map((role) => <option key={role} value={role}>{roleLabels[role] ?? role}</option>)}
                   </select>
                 </label>
 
